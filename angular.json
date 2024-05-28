@@ -1,0 +1,230 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "communist-web-shop-app": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/communist-web-shop-app",
+      "sourceRoot": "projects/communist-web-shop-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/communist-web-shop-app",
+            "index": "projects/communist-web-shop-app/src/index.html",
+            "browser": "projects/communist-web-shop-app/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/communist-web-shop-app/tsconfig.app.json",
+            "assets": [
+              "projects/communist-web-shop-app/src/favicon.ico",
+              "projects/communist-web-shop-app/src/assets"
+            ],
+            "styles": [
+              "projects/communist-web-shop-app/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "communist-web-shop-app:build:production"
+            },
+            "development": {
+              "buildTarget": "communist-web-shop-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "communist-web-shop-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/communist-web-shop-app/tsconfig.spec.json",
+            "assets": [
+              "projects/communist-web-shop-app/src/favicon.ico",
+              "projects/communist-web-shop-app/src/assets"
+            ],
+            "styles": [
+              "projects/communist-web-shop-app/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "logger": {
+      "projectType": "library",
+      "root": "projects/logger",
+      "sourceRoot": "projects/logger/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/logger/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/logger/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/logger/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/logger/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "localizer": {
+      "projectType": "library",
+      "root": "projects/localizer",
+      "sourceRoot": "projects/localizer/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/localizer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/localizer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/localizer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/localizer/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "keeper-master-data": {
+      "projectType": "library",
+      "root": "projects/keeper-master-data",
+      "sourceRoot": "projects/keeper-master-data/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/keeper-master-data/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/keeper-master-data/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/keeper-master-data/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/keeper-master-data/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "browser-local-storage": {
+      "projectType": "library",
+      "root": "projects/browser-local-storage",
+      "sourceRoot": "projects/browser-local-storage/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/browser-local-storage/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/browser-local-storage/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/browser-local-storage/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/browser-local-storage/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "56e0d951-d0b2-49f7-8a64-335ceb287326"
+  }
+}
