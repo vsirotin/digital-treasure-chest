@@ -1,24 +1,11 @@
 # KeeperMasterData
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+This TypeScript library supports the use and management of master data in web applications.
 
-## Code scaffolding
+Master data, contrary to business data, will rarely change. 
 
-Run `ng generate component component-name --project keeper-master-data` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project keeper-master-data`.
-> Note: Don't forget to add `--project keeper-master-data` or else it will be added to the default project in your `angular.json` file. 
+Upon request for a specific part of the master data, the library tries to find it in local storage. If not found, it will be requested from a given web resource, saved locally, and then returned to the caller. 
 
-## Build
+This library utilizes the **browser-local-storage** library from this collection.
 
-Run `ng build keeper-master-data` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build keeper-master-data`, go to the dist folder `cd dist/keeper-master-data` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test keeper-master-data` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Attention!** The library is not ready for use. Work in progress!

@@ -1,24 +1,9 @@
 # Localizer
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+This TypeScript library supports localization (using terms and texts in a given natural language) in web applications.
 
-## Code scaffolding
+Before the needed information for a component in a specific natural language is used, it can be requested as a JSON file from this library. The library will attempt to find it in local storage. If it is not found, it will be requested from a specified web resource.
 
-Run `ng generate component component-name --project localizer` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project localizer`.
-> Note: Don't forget to add `--project localizer` or else it will be added to the default project in your `angular.json` file. 
+This library utilizes the **browser-local-storage** library from this collection.
 
-## Build
-
-Run `ng build localizer` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build localizer`, go to the dist folder `cd dist/localizer` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test localizer` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Attention!** The library is not ready for use. Work in progress!

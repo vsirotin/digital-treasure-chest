@@ -1,24 +1,7 @@
 # Logger
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+This library is a very simple logger for TypeScript, akin to Log4J, but with very restricted functionality.
 
-## Code scaffolding
+This library allows outputting relevant information separated into classical levels (error, warning, info, debug) and configuring the output for a specific level, file, or a combination of both.
 
-Run `ng generate component component-name --project logger` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project logger`.
-> Note: Don't forget to add `--project logger` or else it will be added to the default project in your `angular.json` file. 
-
-## Build
-
-Run `ng build logger` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build logger`, go to the dist folder `cd dist/logger` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test logger` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Attention!** The library is not ready for use. Work in progress!
