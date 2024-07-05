@@ -1,4 +1,4 @@
-# Logger
+# Log4TS
 
 This library is a very simple logger for TypeScript, akin to Log4J, but with very restricted functionality.
 
