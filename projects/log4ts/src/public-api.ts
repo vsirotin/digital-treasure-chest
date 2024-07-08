@@ -1,6 +1,5 @@
 /*
- * Public API Surface of logger
+ * Public API Surface of log4ts
  */
 
-export * from './lib/logger.service';
-export * from './lib/logger.component';
+export * from './lib/logger';

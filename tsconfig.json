@@ -18,8 +18,8 @@
       "localizer": [
         "./dist/localizer"
       ],
-      "logger": [
-        "./dist/logger"
+      "log4ts": [
+        "./dist/log4ts"
       ]
     },
     "noFallthroughCasesInSwitch": true,
