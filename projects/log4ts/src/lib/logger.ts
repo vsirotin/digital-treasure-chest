@@ -20,34 +20,28 @@ export interface ILoggerInfo {
  */
 
   export interface ILogger extends ILoggerInfo{
-  
-    /**
-     * Logs a stack debug to the console.
-     * 
-     * @param {string} message - The message to include in the stack debug.
-     */
-    debug(message: string): void; 
+    debug(...args: any[]): void; 
   
     /**
      * Logs a message to the console.
      * 
      * @param {string} message - The message to log.
      */
-    log(message: string): void; 
+    log(...args: any[]): void; 
   
     /**
      * Logs a warning message to the console.
      * 
      * @param {string} message - The warning message to log.
      */
-    warn(message: string): void;
+    warn(...args: any[]): void;
     
     /**
      * Logs an error message to the console.
      * 
      * @param {string} message - The error message to log.
      */
-    error(message: string): void;
+    error(...args: any[]): void;
 
      /**
      * Sets the log level.
@@ -219,14 +213,14 @@ export interface ILoggerInfo {
     getLogLevel(): number { 
       return this.logLevel;
     }
-  
+
     /**
      * Logs a stack debug to the console.
      * 
      * @param {string} message - The message to include in the stack debug.
      */
-    debug(message: string) {
-      if(this.logLevel <= 0)console.debug(this.generateOutput(message));
+    debug(...args: any[]) {
+      if(this.logLevel <= 0)console.debug(this.generateOutput(args.join(' ')));
     }
   
     /**
@@ -234,8 +228,8 @@ export interface ILoggerInfo {
      * 
      * @param {string} message - The message to log.
      */
-    log(message: string) {
-      if(this.logLevel <= 1)console.log(this.generateOutput(message));
+    log(...args: any[]) {
+      if(this.logLevel <= 1)console.log(this.generateOutput(args.join(' ')));
     }
   
     /**
@@ -243,8 +237,8 @@ export interface ILoggerInfo {
      * 
      * @param {string} message - The warning message to log.
      */
-    warn(message: string) {
-      if(this.logLevel <= 2)console.warn(this.generateOutput(message));
+    warn(...args: any[]) {
+      if(this.logLevel <= 2)console.warn(this.generateOutput(args.join(' ')));
     }
     
     /**
@@ -252,8 +246,8 @@ export interface ILoggerInfo {
      * 
      * @param {string} message - The error message to log.
      */
-    error(message: string) {
-      if(this.logLevel <= 3)console.error(this.generateOutput(message));
+    error(...args: any[]) {
+      if(this.logLevel <= 3)console.error(this.generateOutput(args.join(' ')));
     }
 
     private generateOutput(message: string): string {

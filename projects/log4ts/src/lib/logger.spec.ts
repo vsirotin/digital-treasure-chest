@@ -40,6 +40,7 @@ describe('Logger', () => {
 
   it('should be created', () => {
     expect(logger).toBeTruthy();
+    
   });
 
   it('by default log level is 3', () => {
