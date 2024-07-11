@@ -18,13 +18,13 @@ export class Logger implements ILogger, ILoggerInfo {
    * @param path The path of the source file, inside that logger works.
    * @param logLevel The log level.
    * Log levels are as follows:
-   * 0 or negative - All messages are logged. (Default)
+   * 0 or negative - All messages are logged. 
    * 1 - Only warning, error, and log messages are logged.
-   * 2 - Only warning and error messages are logged.
+   * 2 - Only warning and error messages are logged. (Default)
    * 3 - Only error messages are logged.
    * 4 or greater - No messages are logged.
    */
-  constructor(readonly path: string, private logLevel: number) { }
+  constructor(readonly path: string, private logLevel : number = 2) { }
 
   /**
    * Sets the log level.

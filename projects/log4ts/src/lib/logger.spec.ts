@@ -44,17 +44,17 @@ describe('Logger', () => {
     
   });
 
-  it('by default log level is 3', () => {
+  it('by default log level is 2', () => {
     const currentLevel = logger.getLogLevel();
-    expect(currentLevel).toBe(3);
+    expect(currentLevel).toBe(2);
   });
 
-  it('by default only errors should be logged', () => {
+  it('by default only warnings and errors should be logged', () => {
     logger.log('test');
     expect(consoleSpyLog).not.toHaveBeenCalled();
     
     logger.warn('test'); 
-    expect(consoleSpyWarn).not.toHaveBeenCalled();
+    expect(consoleSpyWarn).toHaveBeenCalled();
 
     logger.error('test');
     expect(consoleSpyError).toHaveBeenCalledWith('x/y/z: test');
@@ -234,8 +234,10 @@ describe('Logger', () => {
   });
 
   it('by changing of log level with factory  in runtime correct behaviour', () => {
-
-    // Expected behaviout by tests below:
+    // The table below means:
+    // Rows: path by logger creation
+    // Collumns: path by setLogLevel. It set log lvel by all loggers with path that mathc to searchPath.
+    // Cell: '+' logger make output after setLogger, '-' not.
     //--------------------------------------------
     // path |*b/c | a* | *b* | e/b/c | x/y/z | * |
     //--------------------------------------------
@@ -272,7 +274,7 @@ describe('Logger', () => {
     loggerADC.log('test');
     expect(consoleSpyLog).toHaveBeenCalled();
     loggerEBC.warn('test');
-    expect(consoleSpyWarn).not.toHaveBeenCalled();
+    expect(consoleSpyWarn).toHaveBeenCalled();
     resetConsoleSpyies();
     LoggerFactory.recetDefaults();
 

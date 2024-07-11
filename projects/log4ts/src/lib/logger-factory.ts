@@ -1,6 +1,8 @@
 import { ILogger } from "./i-logger";
 import { Logger } from "./log4ts";
 
+const DEFAULT_LOG_LEVEL = 2;
+
   /**
    * LoggerFactory creats and configures loggers.
   */ 
@@ -24,7 +26,7 @@ import { Logger } from "./log4ts";
      * 
      * The log output will be generated as string <path><defaultPathPostfix><message> .
      */
-    private static defaultLogLeevl: number = 3;
+    private static defaultLogLeevl: number = DEFAULT_LOG_LEVEL;
 
     /**
      * Get or creates a new logger for given source path.
@@ -55,7 +57,7 @@ import { Logger } from "./log4ts";
      * Reset the default log level to 3 and default path postfix to ': '.
      */
     static recetDefaults(){
-      LoggerFactory.setDefaultLogLevel(3);
+      LoggerFactory.setDefaultLogLevel(DEFAULT_LOG_LEVEL);
       LoggerFactory.defaultPathPostfix = ': ';
     }
 
