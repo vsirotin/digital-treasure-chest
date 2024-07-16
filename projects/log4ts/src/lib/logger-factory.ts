@@ -1,5 +1,5 @@
 import { ILogger } from "./i-logger";
-import { Logger } from "./log4ts";
+import { Log4ts } from "./log4ts";
 
 const DEFAULT_LOG_LEVEL = 2;
 
@@ -36,7 +36,7 @@ const DEFAULT_LOG_LEVEL = 2;
     static getLogger(path: string): ILogger {
       let logger = LoggerFactory.loggers.get(path);
       if(logger == null){
-        logger = new Logger(path, LoggerFactory.defaultLogLeevl);
+        logger = new Log4ts(LoggerFactory.defaultLogLeevl, path);
         LoggerFactory.loggers.set(path, logger);
       }
       return logger;

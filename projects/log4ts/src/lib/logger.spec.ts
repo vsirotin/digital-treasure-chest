@@ -1,7 +1,8 @@
 import { LoggerFactory } from './logger-factory';
 import { ILogger } from "./i-logger";
+import { Log4ts } from './log4ts';
 
-describe('Logger', () => {
+describe('Log4ts', () => {
   let logger: ILogger;
   let consoleSpyLog: jasmine.Spy;
   let consoleSpyWarn: jasmine.Spy;
@@ -47,6 +48,55 @@ describe('Logger', () => {
   it('by default log level is 2', () => {
     const currentLevel = logger.getLogLevel();
     expect(currentLevel).toBe(2);
+  });
+
+  it('by naive using (without factoty) only warnings and errors should be logged', () => {
+    logger = new Log4ts();
+    logger.log('test');
+    expect(consoleSpyLog).not.toHaveBeenCalled();
+    
+    logger.warn('test'); 
+    expect(consoleSpyWarn).toHaveBeenCalled();
+
+    logger.error('test');
+    expect(consoleSpyError).toHaveBeenCalledWith('test');
+
+    logger.debug('test');
+    expect(consoleSpyDebug).not.toHaveBeenCalled();
+
+  });
+
+  it('by naive using with level 0  all levels should be logged (using parameter in constructor)', () => {
+    logger = new Log4ts(0);
+    logger.log('test');
+    expect(consoleSpyLog).toHaveBeenCalled();
+    
+    logger.warn('test'); 
+    expect(consoleSpyWarn).toHaveBeenCalled();
+
+    logger.error('test');
+    expect(consoleSpyError).toHaveBeenCalled();
+
+    logger.debug('test');
+    expect(consoleSpyDebug).toHaveBeenCalled();
+
+  });
+
+  it('by naive using with level 0  all levels should be logged (usinf setLogLevel)', () => {
+    logger = new Log4ts();
+    logger.setLogLevel(0);
+    logger.log('test');
+    expect(consoleSpyLog).toHaveBeenCalled();
+    
+    logger.warn('test'); 
+    expect(consoleSpyWarn).toHaveBeenCalled();
+
+    logger.error('test');
+    expect(consoleSpyError).toHaveBeenCalled();
+
+    logger.debug('test');
+    expect(consoleSpyDebug).toHaveBeenCalled();
+
   });
 
   it('by default only warnings and errors should be logged', () => {

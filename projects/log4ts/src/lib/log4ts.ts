@@ -11,11 +11,10 @@ import { LoggerFactory } from "./logger-factory";
 * warn() - Use to log warnings: unexpected situations, but not errors. After this situation application should work correctly.
 * error() - Use to log errors: unexpected situations, when application can't work correctly.
 */
-export class Logger implements ILogger, ILoggerInfo {
+export class Log4ts implements ILogger, ILoggerInfo {
 
   /**
-   * Creates a new instance of the Logger class.
-   * @param path The path of the source file, inside that logger works.
+   * Creates a new instance of the Log4ts class.
    * @param logLevel The log level.
    * Log levels are as follows:
    * 0 or negative - All messages are logged. 
@@ -23,8 +22,13 @@ export class Logger implements ILogger, ILoggerInfo {
    * 2 - Only warning and error messages are logged. (Default)
    * 3 - Only error messages are logged.
    * 4 or greater - No messages are logged.
+   * @param path The path of the source file, inside that logger works or some unic name.
    */
-  constructor(readonly path: string, private logLevel : number = 2) { }
+  constructor(private logLevel : number = 2, readonly path: string = "") { }
+
+  //second constructor with only log logLevel parameter:
+
+
 
   /**
    * Sets the log level.
@@ -77,6 +81,7 @@ export class Logger implements ILogger, ILoggerInfo {
   }
 
   private generateOutput(message: string): string {
-    return this.path + LoggerFactory.defaultPathPostfix + message;
+    const prefix = (this.path.length > 0)? this.path + LoggerFactory.defaultPathPostfix : "";
+    return prefix + message;
   }
 }
