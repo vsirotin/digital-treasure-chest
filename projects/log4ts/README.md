@@ -89,7 +89,7 @@ The table below shows the different uses of the lookup pattern (listed in the fi
 |-------|------|----|-----|-------|-------|---|
 | a/b/c | +    | +  | +   |   -   | -     | +|
 | a/d/c | -    | +  | +   |   -   | -     | + |
-| e/b/c | +    | -  | +   |   -   | -     | + |
+| e/b/c | +    | -  | +   |   +   | -     | + |
 
 
 You can find out further details of the library usage if you look through the texts of the library's tests in the file yourself: 
