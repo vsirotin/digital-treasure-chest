@@ -1,0 +1,47 @@
+  <div class="main-container" [class.my-is-mobile]="mobileQuery.matches">
+
+
+    <app-toolbar></app-toolbar>
+
+    <mat-sidenav-container class="main-sidenav-container">
+      <mat-sidenav #snav [opened]="isShowing"[mode]="mobileQuery.matches ? 'over' : 'side'"
+                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+          <mat-nav-list>
+            @for (nav of navItemsDefault; track nav.id) {
+              <a mat-list-item (click)="selectMenuItem(nav.id)">
+                  <button mat-icon-button class="custom-button mat-body-1">{{t(nav.id)}}
+                    <mat-icon color="primary" iconPosition="after">{{nav.icon}}</mat-icon>
+                  </button>
+              </a>
+            }
+          </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+<!--          
+        @switch (currentCommponent) { 
+          @case ("edit") {
+            <app-edit></app-edit>
+          } 
+          @case ("analysis") {
+            <app-analysis></app-analysis>
+          } 
+          @case ("import_export") {
+            <app-import-export></app-import-export>
+          } 
+          @case ("settings") {
+            <app-settings></app-settings>
+          } 
+          @case ("info") {
+            <app-info></app-info>
+          } 
+          @default {
+            <app-capture></app-capture>
+          } 
+        }
+-->
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+
+  </div>
