@@ -99,11 +99,6 @@ export class MainComponent implements OnInit, OnDestroy {
     // this.logger.debug("End of MainComponent.ngOnInit");
   }
 
-  t(id: string) {
-    const defaultLabel = this.navItemsDefault.find(item => item.id === id)?.label || id;
-    return "AAA"; //this.localizer.getTranslation(id, defaultLabel);
-  }
-
   selectMenuItem(id: string) {
  //   this.logger.
     console.debug("Start of MainComponent.selectMenuItem id=" + id);

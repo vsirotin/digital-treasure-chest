@@ -9,7 +9,7 @@
           <mat-nav-list>
             @for (nav of navItemsDefault; track nav.id) {
               <a mat-list-item (click)="selectMenuItem(nav.id)">
-                  <button mat-icon-button class="custom-button mat-body-1">{{t(nav.id)}}
+                  <button mat-icon-button class="custom-button mat-body-1">{{nav.label}}
                     <mat-icon color="primary" iconPosition="after">{{nav.icon}}</mat-icon>
                   </button>
               </a>
