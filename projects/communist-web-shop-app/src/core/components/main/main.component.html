@@ -17,29 +17,21 @@
           </mat-nav-list>
       </mat-sidenav>
 
-      <mat-sidenav-content>
-<!--          
+      <mat-sidenav-content>        
         @switch (currentCommponent) { 
-          @case ("edit") {
-            <app-edit></app-edit>
+          @case ("buying") {
+            <app-buying></app-buying>
           } 
-          @case ("analysis") {
-            <app-analysis></app-analysis>
-          } 
-          @case ("import_export") {
-            <app-import-export></app-import-export>
-          } 
-          @case ("settings") {
-            <app-settings></app-settings>
+          @case ("report") {
+            <app-report></app-report>
           } 
           @case ("info") {
             <app-info></app-info>
           } 
           @default {
-            <app-capture></app-capture>
+            <app-setting></app-setting>
           } 
         }
--->
       </mat-sidenav-content>
     </mat-sidenav-container>
 

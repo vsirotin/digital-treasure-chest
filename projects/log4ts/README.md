@@ -87,7 +87,7 @@ The table below shows the different uses of the lookup pattern (listed in the fi
 
 | path  | *b/c | a* | *b* | e/b/c | x/y/z | * |
 |-------|------|----|-----|-------|-------|---|
-| a/b/c | +    | +  | +   |   -   | -     | +|
+| a/b/c | +    | +  | +   |   -   | -     | + |
 | a/d/c | -    | +  | +   |   -   | -     | + |
 | e/b/c | +    | -  | +   |   +   | -     | + |
 

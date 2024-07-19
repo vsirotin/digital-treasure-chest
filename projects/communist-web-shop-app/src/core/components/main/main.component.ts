@@ -9,6 +9,12 @@ import { RouterModule } from '@angular/router';
 import { CommunicatorService } from '../toolbar/service/communicator.service'
 import { Subscription } from 'rxjs';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
+
+
+import { SettingComponent } from '../setting/setting.component';
+import { InfoComponent } from '../info/info.component';
+import { BuyingComponent } from '../buying/buying.component';
+import { ReportComponent } from '../report/report.component';
 // import { Logger } from '../../../shared/services/logging/logger';
 // import { Localizer } from '../../../shared/classes/localization/localizer';
 // import { ILanguageChangeNotificator } from '../../../shared/classes/localization/language-change-notificator';
@@ -27,6 +33,10 @@ export const MAIN_SOURCE_DIR = "assets/languages/core/components/main/lang/";
     MatListModule, 
     RouterModule,
     ToolbarComponent,
+    BuyingComponent,
+    ReportComponent,
+    SettingComponent,
+    InfoComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
@@ -41,17 +51,16 @@ export class MainComponent implements OnInit, OnDestroy {
 
   isShowing = false;
 
-  currentCommponent = "capture";
+  currentCommponent = "info";
 
   mobileQuery!: MediaQueryList;
 
   readonly navItemsDefault: Array<INavigationEntry> = [
-    {id: "capture", label: "Capture", icon: "feed"},
-    {id: "edit", label: "Edit", icon: "edit_square"},
-    {id: "analysis", label: "Analysis", icon: "area_chart"},
-    {id: "import_export", label: "Import/Export", icon: "app_shortcut"},
+
+    {id: "buying", label: "Buying", icon: "add_shopping_cart"},
+    {id: "report", label: "Report", icon: "feed"},
+    {id: "info", label: "Info", icon: "info_outline"},
     {id: "settings", label: "Settings", icon: "settings"},
-    {id: "info", label: "Info", icon: "help"}
   ];
 
   private _mobileQueryListener!: () => void;
@@ -96,7 +105,8 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   selectMenuItem(id: string) {
- //   this.logger.debug("Start of MainComponent.selectMenuItem id=" + id);
+ //   this.logger.
+    console.debug("Start of MainComponent.selectMenuItem id=" + id);
     this.currentCommponent = id;
     this.toggleMenu();
   }
