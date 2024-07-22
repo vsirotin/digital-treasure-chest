@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import { MediaMatcher } from '@angular/cdk/layout';
+import { MediaMatcher, BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatButtonModule}  from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
@@ -75,10 +75,12 @@ export class MainComponent implements OnInit, OnDestroy {
   constructor(private communicatorService: CommunicatorService,
    changeDetectorRef: ChangeDetectorRef, 
    media: MediaMatcher, 
+   private breakpointObserver: BreakpointObserver,
    private cdr: ChangeDetectorRef) {
 
     this.logger = LoggerFactory.getLogger("core/components/main/main.component");
-    this.logger.error("Start of MainComponent.constructor");
+    this.logger.setLogLevel(0);
+    this.logger.log("Start of MainComponent.constructor");
 
     this.subscriptionBtnClicked = this.communicatorService.buttonClicked$.subscribe(() => {
  //     this.logger.debug("Start of MainComponent.subscriptionBtnClicked");
@@ -96,7 +98,7 @@ export class MainComponent implements OnInit, OnDestroy {
 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+//    this.mobileQuery.addListener(this._mobileQueryListener);
 //    this.logger.debug("End of MainComponent.constructor"); 
   }
 
@@ -104,6 +106,9 @@ export class MainComponent implements OnInit, OnDestroy {
     // this.logger.debug("Start of MainComponent.ngOnInit");
     // await this.localizer.initializeLanguage();
     // this.logger.debug("End of MainComponent.ngOnInit");
+    const isLargeScreen = this.breakpointObserver.isMatched('(min-width: 600px)');
+    this.logger.log("ngOnInit", "isLargeScreen=", isLargeScreen);
+    this.isShowing = isLargeScreen;
   }
 
   selectMenuItem(id: string) {
