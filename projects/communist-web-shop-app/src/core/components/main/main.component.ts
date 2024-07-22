@@ -15,7 +15,9 @@ import { SettingComponent } from '../setting/setting.component';
 import { InfoComponent } from '../info/info.component';
 import { BuyingComponent } from '../buying/buying.component';
 import { ReportComponent } from '../report/report.component';
-// import { Logger } from '../../../shared/services/logging/logger';
+import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
+import { LocalizerService } from '@vsirotin/localizer';
+//import { Log4ts } from '../../../../../log4ts/src/lib/log4ts';
 // import { Localizer } from '../../../shared/classes/localization/localizer';
 // import { ILanguageChangeNotificator } from '../../../shared/classes/localization/language-change-notificator';
 // import { ILanguageDescription } from '../../../shared/classes/localization/language-description';
@@ -47,6 +49,8 @@ export class MainComponent implements OnInit, OnDestroy {
   private subscriptionBtnClicked: Subscription;
 //  private subscriptionLangChanged: Subscription;
 
+  logger : ILogger;
+
   showFiller = false;
 
   isShowing = false;
@@ -64,6 +68,7 @@ export class MainComponent implements OnInit, OnDestroy {
   ];
 
   private _mobileQueryListener!: () => void;
+  lovalizerService: LocalizerService = new LocalizerService(); //TODO: remove this line after experiment
   // localizer: Localizer = new Localizer(MAIN_SOURCE_DIR, 1, new Logger());
   // languageChangeNotificator: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
 
@@ -71,7 +76,9 @@ export class MainComponent implements OnInit, OnDestroy {
    changeDetectorRef: ChangeDetectorRef, 
    media: MediaMatcher, 
    private cdr: ChangeDetectorRef) {
-  //  this.logger.debug("Start of MainComponent.constructor");
+
+    this.logger = LoggerFactory.getLogger("core/components/main/main.component");
+    this.logger.error("Start of MainComponent.constructor");
 
     this.subscriptionBtnClicked = this.communicatorService.buttonClicked$.subscribe(() => {
  //     this.logger.debug("Start of MainComponent.subscriptionBtnClicked");

@@ -1,5 +1,5 @@
 {
-  "name": "browser-local-storage",
+  "name": "@vsirotin/browser-local-storage",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^17.3.0",

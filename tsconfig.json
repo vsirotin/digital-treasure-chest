@@ -9,17 +9,17 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "paths": {
-      "browser-local-storage": [
-        "./dist/browser-local-storage"
+      "@vsirotin/browser-local-storage": [
+        "./dist/@vsirotin/browser-local-storage"
       ],
-      "keeper-master-data": [
-        "./dist/keeper-master-data"
+      "@vsirotin/keeper-master-data": [
+        "./dist/@vsirotin/keeper-master-data"
       ],
-      "localizer": [
-        "./dist/localizer"
+      "@vsirotin/localizer": [
+        "./dist/@vsirotin/localizer"
       ],
-      "log4ts": [
-        "./dist/log4ts"
+      "@vsirotin/log4ts": [
+        "./dist/@vsirotin/log4ts"
       ]
     },
     "noFallthroughCasesInSwitch": true,
