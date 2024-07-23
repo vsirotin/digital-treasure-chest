@@ -2,5 +2,7 @@
  * Public API Surface of localizer
  */
 
-export * from './lib/localizer.service';
-export * from './lib/localizer.component';
+
+export * from './lib/language-change-notificator'
+export * from './lib/language-description';
+export * from './lib/localizer';

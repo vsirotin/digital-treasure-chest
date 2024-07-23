@@ -6,6 +6,7 @@
     "@angular/core": "^17.3.0"
   },
   "dependencies": {
+    "@vsirotin/log4ts": "^0.0.1",
     "tslib": "^2.3.0"
   },
   "sideEffects": false
