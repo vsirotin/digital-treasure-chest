@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 
-import { SettingComponent } from '../setting/setting.component';
+import { SettingsComponent } from '../settings/settings.component';
 import { InfoComponent } from '../info/info.component';
 import { BuyingComponent } from '../buying/buying.component';
 import { ReportComponent } from '../report/report.component';
@@ -37,7 +37,7 @@ export const MAIN_SOURCE_DIR = "assets/languages/core/components/main/lang/";
     ToolbarComponent,
     BuyingComponent,
     ReportComponent,
-    SettingComponent,
+    SettingsComponent,
     InfoComponent,
   ],
   templateUrl: './main.component.html',

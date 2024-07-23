@@ -1,0 +1,21 @@
+.settings-action-buttons {
+    padding-bottom: 20px;
+  }
+  
+  .settings-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .settings-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+  }
+
+  .settings-card {
+    max-width: 400px;
+  }
+
+  mat-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
