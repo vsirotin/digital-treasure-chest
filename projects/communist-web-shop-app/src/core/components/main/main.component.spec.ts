@@ -4,13 +4,10 @@ import { MainComponent } from './main.component';
 import { BrowserModule, By } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from "@angular/router/testing";
-import { Logger } from '../../../shared/services/logging/logger';
-import { LanguageData, Localizer } from '../../../shared/classes/localization/localizer';
 import { MAIN_SOURCE_DIR } from './main.component';
-import { ILanguageChangeNotificator } from '../../../shared/classes/localization/language-change-notificator';
 import { Observable, Subscription } from 'rxjs';
-import { ILanguageDescription } from '../../../shared/classes/localization/language-description';
-
+import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
+import { LanguageData, Localizer, ILanguageChangeNotificator, ILanguageDescription } from '@vsirotin/localizer';
 
 xdescribe('MainComponent', () => {
 
@@ -23,13 +20,13 @@ xdescribe('MainComponent', () => {
 
   beforeEach(async () => {
     localStorage.clear();
-    let logger: Logger = new Logger();
+    let logger: ILogger = LoggerFactory.getLogger("MainComponentTest");
     let localizer1 = new Localizer(MAIN_SOURCE_DIR, 1, logger);
     langSelectNotificationService = Localizer.languageChangeNotificator;
 
     await TestBed.configureTestingModule({
       imports: [MainComponent, BrowserModule, BrowserAnimationsModule, RouterTestingModule],
-      providers: [{provide: Localizer, useValue: localizer1}, {provide: Logger, useValue: logger}]
+      providers: [{provide: Localizer, useValue: localizer1}]
     })
     .compileComponents();
     

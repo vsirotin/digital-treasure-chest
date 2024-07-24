@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
-import { ILanguageChangeNotificator } from '../../../shared/classes/localization/language-change-notificator'
-import { SupportedLanguages } from '../../../shared/classes/localization/language-description';
-import { Localizer } from '../../../shared/classes/localization/localizer';
+import { ILanguageChangeNotificator, SupportedLanguages } from '@vsirotin/localizer';
+import { Localizer } from '@vsirotin/localizer';
 
 /**
  * @title Accordion with expand/collapse all toggles

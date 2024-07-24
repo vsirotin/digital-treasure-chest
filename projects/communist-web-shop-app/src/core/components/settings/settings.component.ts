@@ -8,12 +8,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { LanguageSelectionComponent } from '../language-selection/language-selection.component'
-import { ILanguageChangeNotificator } from '../../../shared/classes/localization/language-change-notificator';
-import { ILanguageDescription, SupportedLanguages } from '../../../shared/classes/localization/language-description';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { Localizer } from '../../../shared/classes/localization/localizer';
-import { Logger } from '../../../shared/services/logging/logger';
+import { Localizer } from '@vsirotin/localizer';
+import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
+import { LanguageSelectionComponent } from './language-selection/language-selection.component'
+import { ILanguageDescription, SupportedLanguages, ILanguageChangeNotificator } from '@vsirotin/localizer';
 
 export const SETTINGS_SOURCE_DIR = "assets/languages/features/components/settings/lang/";
 /**
@@ -40,6 +39,8 @@ export const SETTINGS_SOURCE_DIR = "assets/languages/features/components/setting
 export class SettingsComponent implements OnInit, OnDestroy  {
   @ViewChild(MatAccordion) accordion?: MatAccordion;
 
+  logger: ILogger = LoggerFactory.getLogger("SettingsComponent");
+
   private subscription: Subscription;
   readonly localizer: Localizer;
   private languageChangeNotificator: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
@@ -48,10 +49,10 @@ export class SettingsComponent implements OnInit, OnDestroy  {
   langEn: string = ""
   langEtfTag: string = "" 
 
-  constructor(private logger: Logger ) {
+  constructor( ) {
     this.logger.debug("Start of SettingsComponent.constructor");  
 
-    this.localizer =  new Localizer(SETTINGS_SOURCE_DIR, 1, logger);
+    this.localizer =  new Localizer(SETTINGS_SOURCE_DIR, 1, this.logger);
 
     this.setLanguageRelatedElements(this.localizer.currentLanguage as ILanguageDescription);
 

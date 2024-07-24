@@ -9,18 +9,12 @@ import { RouterModule } from '@angular/router';
 import { CommunicatorService } from '../toolbar/service/communicator.service'
 import { Subscription } from 'rxjs';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
-
-
 import { SettingsComponent } from '../settings/settings.component';
 import { InfoComponent } from '../info/info.component';
 import { BuyingComponent } from '../buying/buying.component';
 import { ReportComponent } from '../report/report.component';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
-import { LocalizerService } from '@vsirotin/localizer';
-//import { Log4ts } from '../../../../../log4ts/src/lib/log4ts';
-// import { Localizer } from '../../../shared/classes/localization/localizer';
-// import { ILanguageChangeNotificator } from '../../../shared/classes/localization/language-change-notificator';
-// import { ILanguageDescription } from '../../../shared/classes/localization/language-description';
+import { Localizer, ILanguageChangeNotificator, ILanguageDescription } from '@vsirotin/localizer';
 
 
 export const MAIN_SOURCE_DIR = "assets/languages/core/components/main/lang/";
@@ -38,7 +32,7 @@ export const MAIN_SOURCE_DIR = "assets/languages/core/components/main/lang/";
     BuyingComponent,
     ReportComponent,
     SettingsComponent,
-    InfoComponent,
+    InfoComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
@@ -47,9 +41,9 @@ export class MainComponent implements OnInit, OnDestroy {
   @ViewChild('snav') snav!: MatSidenavModule;
 
   private subscriptionBtnClicked: Subscription;
-//  private subscriptionLangChanged: Subscription;
+ private subscriptionLangChanged: Subscription;
 
-  logger : ILogger;
+  logger : ILogger = LoggerFactory.getLogger("MainComponent");
 
   showFiller = false;
 
@@ -68,52 +62,48 @@ export class MainComponent implements OnInit, OnDestroy {
   ];
 
   private _mobileQueryListener!: () => void;
-  lovalizerService: LocalizerService = new LocalizerService(); //TODO: remove this line after experiment
-  // localizer: Localizer = new Localizer(MAIN_SOURCE_DIR, 1, new Logger());
-  // languageChangeNotificator: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
+  localizer: Localizer = new Localizer(MAIN_SOURCE_DIR, 1);
+  languageChangeNotificator: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
 
   constructor(private communicatorService: CommunicatorService,
    changeDetectorRef: ChangeDetectorRef, 
    media: MediaMatcher, 
    private breakpointObserver: BreakpointObserver,
    private cdr: ChangeDetectorRef) {
-
-    this.logger = LoggerFactory.getLogger("core/components/main/main.component");
     this.logger.setLogLevel(0);
-    this.logger.log("Start of MainComponent.constructor");
+    this.logger.log("Start of constructor");
 
     this.subscriptionBtnClicked = this.communicatorService.buttonClicked$.subscribe(() => {
- //     this.logger.debug("Start of MainComponent.subscriptionBtnClicked");
+      this.logger.debug("Start of subscriptionBtnClicked");
       this.toggleMenu();
     });
 
-    // this.subscriptionLangChanged = this
-    // .languageChangeNotificator.selectionChanged$
-    // .subscribe((selectedLanguage: ILanguageDescription) => {
-    //   this.logger.debug("Start of MainComponent.subscriptionLangChanged selectedLanguage=" + JSON.stringify(selectedLanguage));
-    //   this.logger.debug("MainComponent.subscriptionLangChanged after resetNavItems");
-    //   this.cdr.detectChanges();
-    //   this.logger.debug("MainComponent.subscriptionLangChanged completed");
-    // }); 
+    this.subscriptionLangChanged = this
+    .languageChangeNotificator.selectionChanged$
+    .subscribe((selectedLanguage: ILanguageDescription) => {
+      this.logger.debug("Start of subscriptionLangChanged selectedLanguage=" + JSON.stringify(selectedLanguage));
+      this.logger.debug("subscriptionLangChanged after resetNavItems");
+      this.cdr.detectChanges();
+      this.logger.debug("subscriptionLangChanged completed");
+    }); 
 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
 //    this.mobileQuery.addListener(this._mobileQueryListener);
-//    this.logger.debug("End of MainComponent.constructor"); 
+//    this.logger.debug("End of constructor"); 
   }
 
   async ngOnInit() {
-    // this.logger.debug("Start of MainComponent.ngOnInit");
-    // await this.localizer.initializeLanguage();
-    // this.logger.debug("End of MainComponent.ngOnInit");
+    this.logger.debug("Start of ngOnInit");
+    await this.localizer.initializeLanguage();
+    this.logger.debug("End of ngOnInit");
     const isLargeScreen = this.breakpointObserver.isMatched('(min-width: 600px)');
     this.logger.log("ngOnInit", "isLargeScreen=", isLargeScreen);
     this.isShowing = isLargeScreen;
   }
 
   selectMenuItem(id: string) {
- //   this.logger.
-    console.debug("Start of MainComponent.selectMenuItem id=" + id);
+    console.debug("Start of selectMenuItem id=" + id);
     this.currentCommponent = id;
     this.toggleMenu();
   }

@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
-    "@angular/core": "^17.3.0"
+    "@angular/core": "^17.3.0",
+    "@vsirotin/log4ts": "^0.0.1"
   },
   "dependencies": {
-    "@vsirotin/log4ts": "^0.0.1",
     "tslib": "^2.3.0"
   },
   "sideEffects": false
