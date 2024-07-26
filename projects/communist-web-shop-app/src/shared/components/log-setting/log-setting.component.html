@@ -1,0 +1,23 @@
+<p>
+    {{ui.templateFieldName}}:
+  </p>
+  <p>  
+    <mat-form-field>
+      <mat-label>*</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </p>
+  <label id="logging-radio-group-label">{{ui.logLevelSetInvitation}} </label>
+  <mat-radio-group
+    aria-labelledby="logging-radio-group-label"
+    class="logging-radio-group"
+    [(ngModel)]="selectedLogLevel ">
+    @for (logLevel  of logLevels; track logLevel)  {
+      <mat-radio-button class="example-radio-button" [value]="logLevel.key" (change)="onDebugLevelChange($event)">
+        {{logLevel.value}}
+      </mat-radio-button>
+    }
+  </mat-radio-group>
+  <button mat-raised-button disabled disabledInteractive matTooltip="This is a tooltip!">
+    Update logging conditions
+  </button>
