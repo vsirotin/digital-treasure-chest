@@ -13,7 +13,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { Localizer } from '@vsirotin/localizer';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
-import { LanguageSelectionComponent } from './language-selection/language-selection.component'
+import { LanguageSelectionComponent } from '../../../shared/components/language-selection/language-selection.component'
 import { ILanguageDescription, SupportedLanguages, ILanguageChangeNotificator } from '@vsirotin/localizer';
 
 export const SETTINGS_SOURCE_DIR = "assets/languages/features/components/settings/lang/";
