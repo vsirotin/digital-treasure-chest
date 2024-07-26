@@ -2,16 +2,12 @@
   <mat-card-header>
     <mat-card-title>{{t('settings', 'Settings')}}</mat-card-title>
   </mat-card-header>
-<div class="settings-action-buttons">
-    <button mat-button (click)="accordion?.openAll()">{{t('expand_all', 'Expand All')}}</button>
-    <button mat-button (click)="accordion?.closeAll()">{{t('collapse_all', 'Collapse All')}}</button>
-  </div>
   <mat-accordion class="settings-headers-align" multi>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
           <mat-icon>language</mat-icon>
-          {{t('language', 'Language:')}}
+          {{uiItems.get('language')}}:
           </mat-panel-title>
         <mat-panel-description>
           <span width = "5px"></span>
@@ -25,37 +21,39 @@
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title>
-            <mat-icon>palette</mat-icon>
-            {{t('appearance', 'Appearance')}}
+            <mat-icon>list</mat-icon>
+             {{uiItems.get('logging')}}:
             </mat-panel-title>
           <mat-panel-description>
-            {{t('set_options_for_appearance', 'Set appearance options')}}
+            ({{ui.loggingExplanation}})
         </mat-panel-description>
       </mat-expansion-panel-header>
-  
-      <mat-form-field>
-        <mat-label>Country</mat-label>
-        <input matInput>
-      </mat-form-field>
+      <p>
+        {{ui.templateFieldName}}:
+      </p>
+      <p>  
+        <mat-form-field>
+          <mat-label>*</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </p>
+      <label id="logging-radio-group-label">{{ui.logLevelSetInvitation}} </label>
+      <mat-radio-group
+        aria-labelledby="logging-radio-group-label"
+        class="logging-radio-group"
+        [(ngModel)]="selectedLogLevel ">
+        @for (logLevel  of logLevels; track logLevel)  {
+          <mat-radio-button class="example-radio-button" [value]="logLevel.key" (change)="onDebugLevelChange($event)">
+            {{logLevel.value}}
+          </mat-radio-button>
+        }
+      </mat-radio-group>
+      <button mat-raised-button disabled disabledInteractive matTooltip="This is a tooltip!">
+        Update logging conditions
+      </button>
     </mat-expansion-panel>
   
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-icon>rule_folder</mat-icon>
-          {{t('rules', 'Rules')}}
-        </mat-panel-title>
-        <mat-panel-description>
-          {{t('set_rules', 'Set rules for automatic data deletion, etc.')}}      
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-  
-      <mat-form-field>
-        <mat-label>Date</mat-label>
-        <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
-      </mat-form-field>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-expansion-panel>
+
   </mat-accordion>
   <mat-card-footer>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
