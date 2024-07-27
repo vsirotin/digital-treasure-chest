@@ -28,7 +28,11 @@ const DEFAULT_LOG_LEVEL = new Map<string, string>( [
 export class LogSettingComponent {
   ui = {
     logLevelSetInvitation: "Set the logging level",
-    templateFieldName: "Logged file name(s) or template"
+    templateFieldName: "Logged file name(s) or template",
+    labelUpdate: "Update",
+    tooltiplUpdate: "Update logging settings",
+    labelReset: "Reset",
+    tooltiplReset: "Reset logging settings",
   }
 
   logger: ILogger = LoggerFactory.getLogger("LogSettingComponent");
