@@ -30,9 +30,7 @@ export class LogSettingComponent {
     logLevelSetInvitation: "Set the logging level",
     templateFieldName: "Logged file name(s) or template",
     labelUpdate: "Update",
-    tooltiplUpdate: "Update logging settings",
     labelReset: "Reset",
-    tooltiplReset: "Reset logging settings",
   }
 
   logger: ILogger = LoggerFactory.getLogger("LogSettingComponent");
