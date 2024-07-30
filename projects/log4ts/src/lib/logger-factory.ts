@@ -46,7 +46,7 @@ const DEFAULT_LOG_LEVEL = 2;
      * Set the default log level.
      * @param logLevel 
      */
-    static setDefaultLogLevel(logLevel: number){
+    static setLogLevelsByAllLoggers(logLevel: number){
       LoggerFactory.defaultLogLeevl = logLevel;
       LoggerFactory.loggers.forEach((logger, path) => {
             logger.setLogLevel(logLevel);
@@ -57,7 +57,7 @@ const DEFAULT_LOG_LEVEL = 2;
      * Reset the default log level to 3 and default path postfix to ': '.
      */
     static recetDefaults(){
-      LoggerFactory.setDefaultLogLevel(DEFAULT_LOG_LEVEL);
+      LoggerFactory.setLogLevelsByAllLoggers(DEFAULT_LOG_LEVEL);
       LoggerFactory.defaultPathPostfix = ': ';
     }
 

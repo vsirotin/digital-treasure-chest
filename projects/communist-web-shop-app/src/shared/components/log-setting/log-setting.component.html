@@ -5,7 +5,7 @@
 <p>  
   <mat-form-field>
     <mat-label>{{ui.templateHelpText}}</mat-label>
-    <input matInput [(ngModel)]="fileNameTemplate" class="custom-height">
+    <input matInput [(ngModel)]="fileNameTemplate" maxlength="30" placeholder="Ex. Nougat" (input)="onInput($event)"  class="custom-height"  >
   </mat-form-field>
 </p>
 <label id="logging-radio-group-label">{{ui.logLevelSetInvitation}} </label>
@@ -20,12 +20,12 @@
   }
 </mat-radio-group>
 <div class="align-right">
-  <button mat-raised-button [disabled]="isUpdateDisabled" disabledInteractive>
+  <button mat-raised-button [disabled]="isUpdateDisabled" disabledInteractive (click)="onUpdate()">
     {{ui.labelUpdate}}
   </button>
   <span class="spacer"></span>
     
-  <button mat-raised-button [disabled]="isResetDisabled" disabledInteractive>
+  <button mat-raised-button [disabled]="isResetDisabled" disabledInteractive (click)="onReset()">
     {{ui.labelReset}}
   </button>
 </div>
