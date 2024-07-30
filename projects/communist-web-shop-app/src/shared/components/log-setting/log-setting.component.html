@@ -1,26 +1,31 @@
+<mat-divider></mat-divider>
 <p>
-    {{ui.templateFieldName}}:
-  </p>
-  <p>  
-    <mat-form-field>
-      <mat-label>*</mat-label>
-      <input matInput>
-    </mat-form-field>
-  </p>
-  <label id="logging-radio-group-label">{{ui.logLevelSetInvitation}} </label>
-  <mat-radio-group
-    aria-labelledby="logging-radio-group-label"
-    class="logging-radio-group"
-    [(ngModel)]="selectedLogLevel ">
-    @for (logLevel  of logLevels; track logLevel)  {
-      <mat-radio-button class="example-radio-button" [value]="logLevel.key" (change)="onDebugLevelChange($event)">
-        {{logLevel.value}}
-      </mat-radio-button>
-    }
-  </mat-radio-group>
-  <button mat-raised-button disabled disabledInteractive>
+  {{ui.templateFieldName}}:
+</p>
+<p>  
+  <mat-form-field>
+    <mat-label>{{ui.templateHelpText}}</mat-label>
+    <input matInput [(ngModel)]="fileNameTemplate" class="custom-height">
+  </mat-form-field>
+</p>
+<label id="logging-radio-group-label">{{ui.logLevelSetInvitation}} </label>
+<mat-radio-group
+  aria-labelledby="logging-radio-group-label"
+  class="logging-radio-group"
+  [(ngModel)]="selectedLogLevel ">
+  @for (logLevel  of logLevels; track logLevel)  {
+    <mat-radio-button class="example-radio-button" [value]="logLevel.key" (change)="onDebugLevelChange($event)">
+      {{logLevel.value}}
+    </mat-radio-button>
+  }
+</mat-radio-group>
+<div class="align-right">
+  <button mat-raised-button [disabled]="isUpdateDisabled" disabledInteractive>
     {{ui.labelUpdate}}
   </button>
-  <button mat-raised-button disabled disabledInteractive>
+  <span class="spacer"></span>
+    
+  <button mat-raised-button [disabled]="isResetDisabled" disabledInteractive>
     {{ui.labelReset}}
   </button>
+</div>

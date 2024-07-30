@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatDividerModule } from '@angular/material/divider';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 
 const DEFAULT_LOG_LEVEL = new Map<string, string>( [
@@ -19,6 +20,7 @@ const DEFAULT_LOG_LEVEL = new Map<string, string>( [
   imports: [
     MatFormFieldModule,
     MatRadioModule,
+    MatDividerModule,
     FormsModule,
     MatInputModule,
   ],
@@ -29,9 +31,14 @@ export class LogSettingComponent {
   ui = {
     logLevelSetInvitation: "Set the logging level",
     templateFieldName: "Logged file name(s) or template",
+    templateHelpText: "e.g. */log*",
     labelUpdate: "Update",
     labelReset: "Reset",
   }
+
+  isUpdateDisabled = true;
+  isResetDisabled = false
+  fileNameTemplate = "";
 
   logger: ILogger = LoggerFactory.getLogger("LogSettingComponent");
 

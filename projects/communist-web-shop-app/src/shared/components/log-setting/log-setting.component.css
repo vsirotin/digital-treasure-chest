@@ -4,7 +4,16 @@
     margin: 15px 0;
     align-items: flex-start;
   }
-  
-  .example-radio-button {
-    margin: 5px;
+
+  .spacer {
+    width: 15px;
+    display: inline-block;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  .custom-height {
+    height: 120%;
   }

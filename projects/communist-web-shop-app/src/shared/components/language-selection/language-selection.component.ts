@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatDividerModule } from '@angular/material/divider';
 import { ILanguageChangeNotificator, SupportedLanguages } from '@vsirotin/localizer';
 import { Localizer } from '@vsirotin/localizer';
 
@@ -14,6 +15,7 @@ import { Localizer } from '@vsirotin/localizer';
   standalone: true,
   imports: [
     MatRadioModule, 
+    MatDividerModule,
     FormsModule
   ],
 })
