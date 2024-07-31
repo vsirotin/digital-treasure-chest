@@ -20,12 +20,12 @@
   }
 </mat-radio-group>
 <div class="align-right">
-  <button mat-raised-button [disabled]="isUpdateDisabled" disabledInteractive (click)="onUpdate()">
+  <button id="bt-update" mat-raised-button [disabled]="isUpdateDisabled" disabledInteractive (click)="onUpdate()">
     {{ui.labelUpdate}}
   </button>
   <span class="spacer"></span>
     
-  <button mat-raised-button [disabled]="isResetDisabled" disabledInteractive (click)="onReset()">
+  <button id="bt-reset" mat-raised-button [disabled]="isResetDisabled" disabledInteractive (click)="onReset()">
     {{ui.labelReset}}
   </button>
 </div>

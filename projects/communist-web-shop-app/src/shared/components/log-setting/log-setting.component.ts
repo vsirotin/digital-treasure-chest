@@ -7,11 +7,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 
 const DEFAULT_LOG_LEVEL = new Map<string, string>( [
-  ["set-off", "Loggin set off"], 
-  ["only-errors", "Only errrors"],
-  ["err-warn", "Errors and warnings"], 
+  ["err-debug", "Errors, warnings, logs and debug"],
   ["err-log", "Errors, warnings and logs"], 
-  ["err-debug", "Errors, warnings, logs and debug"]
+  ["err-warn", "Errors and warnings"],
+  ["only-errors", "Only errrors"],
+  ["set-off", "Loggin set off"], 
   ]);
 
 @Component({
@@ -51,7 +51,7 @@ export class LogSettingComponent {
   fileNameTemplate = this.initialFileNameTemplate;
   selectedLogLevel = this.initialLogLevel
 
-  logger: ILogger = LoggerFactory.getLogger("LogSettingComponent");
+  logger: ILogger = LoggerFactory.getLogger("shared/components/log-setting/log-setting.component.ts");
 
   logLevels : { key: string, value: string }[] = Array.from(DEFAULT_LOG_LEVEL, ([key, value]) => ({ key, value }));
 
@@ -63,12 +63,31 @@ export class LogSettingComponent {
 
 
   onDebugLevelChange(event: any) {
+    this.logger.debug("onDebugLevelChange: " + event);
     this.selectedLogLevel = event.value;
     this.logger.log("selectedLogLevel: " + this.selectedLogLevel);
     this.updateButtons();
   }
 
   onInput($event: Event) {
+    
+    let message = "";
+    const currentTarget = $event?.currentTarget as HTMLElement | null;
+
+    if(currentTarget) {
+      if ('inputType' in $event) {
+        const inputType = ($event as { inputType: string }).inputType;
+        message += " inputType=" + inputType;
+      }
+
+      if ( 'data' in $event) {
+        const data = ($event as { data: string }).data;
+        message +=  " data=" + data;
+      }
+    }
+
+    this.logger.debug("onInput: ", message);
+    
     this.updateButtons();
   }
 
@@ -80,7 +99,7 @@ export class LogSettingComponent {
 
     //find out the index of the selected log level
     const logLevel = this.logLevels.findIndex((logLevel) => logLevel.key === this.selectedLogLevel);
-    console.log("logLevel: " + logLevel);
+    this.logger.log("in onUpdate logLevel: " + logLevel);
     if(this.fileNameTemplate.length > 0) {
       LoggerFactory.setLogLevel(this.fileNameTemplate, logLevel);
       return;
@@ -95,7 +114,7 @@ export class LogSettingComponent {
   }
   
   private resetInitialValues() {
-    this.logger.log("Start of esetting initial values");
+    this.logger.debug("start of resetInitialValues");
     this.oldFileNameTemplate = this.initialFileNameTemplate;
     this.oldSelectedLogLevel = this.initialLogLevel;
 
@@ -104,6 +123,7 @@ export class LogSettingComponent {
   }
 
   private updateButtons() {
+    this.logger.debug("start of updateButtons");
     this.isUpdateDisabled =
       this.fileNameTemplate === this.oldFileNameTemplate &&
       this.selectedLogLevel === this.oldSelectedLogLevel;
