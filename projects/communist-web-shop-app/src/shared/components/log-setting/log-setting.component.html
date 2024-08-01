@@ -14,7 +14,7 @@
   class="logging-radio-group"
   [(ngModel)]="selectedLogLevel ">
   @for (logLevel  of logLevels; track logLevel)  {
-    <mat-radio-button class="example-radio-button" [value]="logLevel.key" (change)="onDebugLevelChange($event)">
+    <mat-radio-button class="radio-button" [value]="logLevel.key" (change)="onDebugLevelChange($event)">
       {{logLevel.value}}
     </mat-radio-button>
   }
