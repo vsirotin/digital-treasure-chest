@@ -11,7 +11,7 @@ const DEFAULT_LOG_LEVEL = new Map<string, string>( [
   ["err-log", "Errors, warnings and logs"], 
   ["err-warn", "Errors and warnings"],
   ["only-errors", "Only errrors"],
-  ["set-off", "Loggin set off"], 
+  ["set-off", "Logging set off"], 
   ]);
 
 @Component({
