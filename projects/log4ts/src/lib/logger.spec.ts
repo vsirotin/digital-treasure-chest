@@ -3,7 +3,8 @@ import { ILogger } from "./i-logger";
 import { Log4ts } from './log4ts';
 
 describe('Log4ts', () => {
-  let logger: ILogger;
+  let logger1: ILogger;
+  let logger2: ILogger;
   let consoleSpyLog: jasmine.Spy;
   let consoleSpyWarn: jasmine.Spy;
   let consoleSpyError: jasmine.Spy;
@@ -30,7 +31,7 @@ describe('Log4ts', () => {
   }
 
   beforeEach(() => {
-    logger = LoggerFactory.getLogger('x/y/z');
+    logger1 = LoggerFactory.getLogger('x/y/z');
     setConsoleSpyies();
   });
 
@@ -41,245 +42,245 @@ describe('Log4ts', () => {
 
 
   it('should be created', () => {
-    expect(logger).toBeTruthy();
+    expect(logger1).toBeTruthy();
     
   });
 
   it('by default log level is 2', () => {
-    const currentLevel = logger.getLogLevel();
+    const currentLevel = logger1.getLogLevel();
     expect(currentLevel).toBe(2);
   });
 
   it('by naive using (without factoty) only warnings and errors should be logged', () => {
-    logger = new Log4ts();
-    logger.log('test');
+    logger1 = new Log4ts();
+    logger1.log('test');
     expect(consoleSpyLog).not.toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalledWith('test');
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
 
   });
 
   it('by naive using with level 0  all levels should be logged (using parameter in constructor)', () => {
-    logger = new Log4ts(0);
-    logger.log('test');
+    logger1 = new Log4ts(0);
+    logger1.log('test');
     expect(consoleSpyLog).toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalled();
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).toHaveBeenCalled();
 
   });
 
   it('by naive using with level 0  all levels should be logged (usinf setLogLevel)', () => {
-    logger = new Log4ts();
-    logger.setLogLevel(0);
-    logger.log('test');
+    logger1 = new Log4ts();
+    logger1.setLogLevel(0);
+    logger1.log('test');
     expect(consoleSpyLog).toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalled();
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).toHaveBeenCalled();
 
   });
 
   it('by default only warnings and errors should be logged', () => {
-    logger.log('test');
+    logger1.log('test');
     expect(consoleSpyLog).not.toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalledWith('x/y/z: test');
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
 
   });
 
   it('by level 5 no levels should be logged', () => {
-    logger.setLogLevel(5);
-    logger.log('test');
+    logger1.setLogLevel(5);
+    logger1.log('test');
     expect(consoleSpyLog).not.toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).not.toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).not.toHaveBeenCalled();
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
 
   });
 
   it('by level 20 no levels should be logged', () => {
-    logger.setLogLevel(20);
-    logger.log('test');
+    logger1.setLogLevel(20);
+    logger1.log('test');
     expect(consoleSpyLog).not.toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).not.toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).not.toHaveBeenCalled();
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
 
   });
 
   it('by level 0  all levels should be logged', () => {
-    logger.setLogLevel(0);
-    logger.log('test');
+    logger1.setLogLevel(0);
+    logger1.log('test');
     expect(consoleSpyLog).toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalled();
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).toHaveBeenCalled();
 
   });
 
   it('by level -3  all levels should be logged', () => {
-    logger.setLogLevel(-3);
-    logger.log('test');
+    logger1.setLogLevel(-3);
+    logger1.log('test');
     expect(consoleSpyLog).toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalled();
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).toHaveBeenCalled();
 
   });
 
   it('by level 3  only errors should be logged', () => {
-    logger.setLogLevel(3);
+    logger1.setLogLevel(3);
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
 
-    logger.log('test');
+    logger1.log('test');
     expect(consoleSpyLog).not.toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).not.toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalled();
 
   });
 
   it('by level 2  only errors and warnings should be logged', () => {
-    logger.setLogLevel(2);
+    logger1.setLogLevel(2);
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
 
-    logger.log('test');
+    logger1.log('test');
     expect(consoleSpyLog).not.toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalled();
 
   });
 
   it('by level 1  errors, warnings and log should be logged', () => {
-    logger.setLogLevel(1);
+    logger1.setLogLevel(1);
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
 
-    logger.log('test');
+    logger1.log('test');
     expect(consoleSpyLog).toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalled();
 
   });
 
   it('by changing of log level in runtime correct behaviour', () => {
-    logger.setLogLevel(2);
+    logger1.setLogLevel(2);
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
 
-    logger.log('test');
+    logger1.log('test');
     expect(consoleSpyLog).not.toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalled();
 
-    let currentLevel = logger.getLogLevel();
+    let currentLevel = logger1.getLogLevel();
     expect(currentLevel).toBe(2);
 
-    logger.setLogLevel(1);
-    logger.debug('test');
+    logger1.setLogLevel(1);
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
 
-    logger.log('test');
+    logger1.log('test');
     expect(consoleSpyLog).toHaveBeenCalled();
     
-    logger.warn('test'); 
+    logger1.warn('test'); 
     expect(consoleSpyWarn).toHaveBeenCalled();
 
-    logger.error('test');
+    logger1.error('test');
     expect(consoleSpyError).toHaveBeenCalled();
 
-    currentLevel = logger.getLogLevel();
+    currentLevel = logger1.getLogLevel();
     expect(currentLevel).toBe(1);
 
   });
 
   it('by changing of log level in runtime correct behaviour', () => {
-    logger.setLogLevel(2);
+    logger1.setLogLevel(2);
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
   }); 
 
   it('by changing of default path postfix in runtime correct behaviour', () => {
-    logger.setLogLevel(2);
+    logger1.setLogLevel(2);
 
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
 
     LoggerFactory.defaultPathPostfix = '- ';
-    logger.debug('test');
+    logger1.debug('test');
     expect(consoleSpyDebug).not.toHaveBeenCalled();
   });
 
@@ -361,5 +362,31 @@ describe('Log4ts', () => {
     expect(consoleSpyWarn).toHaveBeenCalled();
     resetConsoleSpyies();
     LoggerFactory.recetDefaults();
+  });
+
+  describe('By using two loggers...', () => {
+
+    beforeEach(() => {
+      logger2 = LoggerFactory.getLogger('x/y/a');
+    });
+
+    it('common for both loggers path works correct...', () => {
+      LoggerFactory.setLogLevel('x/y/*', 3);
+      expect(logger1.getLogLevel()).toBe(3);
+      expect(logger2.getLogLevel()).toBe(3); 
+    });
+
+    it('relevant only for first path works correct...', () => {
+      LoggerFactory.setLogLevel('x/y/a', 3);
+      expect(logger1.getLogLevel()).toBe(2);
+      expect(logger2.getLogLevel()).toBe(3); 
+    });
+
+    it('relevant only for second path works correct...', () => {
+      LoggerFactory.setLogLevel('x/y/z', 3);
+      expect(logger1.getLogLevel()).toBe(3);
+      expect(logger2.getLogLevel()).toBe(2); 
+    });
+
   });
 });

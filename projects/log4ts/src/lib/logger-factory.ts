@@ -90,6 +90,7 @@ const DEFAULT_LOG_LEVEL = 2;
             if(LoggerFactory.containsPath(searchPath, path)){
                 logger.setLogLevel(logLevel);
             }
+            console.error("-----", path, " ", logger.getLogLevel());
         });
     }
 
