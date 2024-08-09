@@ -4,16 +4,25 @@ import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { DbAgent, IKeyValueDB } from "@vsirotin/browser-local-storage";
 import { ILanguageChangeNotificator, LanguageChangeNotificator } from "./language-change-notificator";
 
-
-
-
 export class LanguageData {
   constructor(public ietfTag: string) {}
 }
 
-
+/*
+  Localizer -Interface. Enables simple way to make your component multi-language-aware.
+  @param T - type of the language relevant items
+*/
 export interface ILocalizer<T> {
+
+  /*
+    Informs a calle about switching of the language relevant items because of the language change
+    @param T - type of the language relevant items
+  */
   languageSwitched$: Observable<T>;
+
+  /*
+    Should be called by callee to avoid memory leaks because running subscription of this class to the languageChangeNotificator
+  */
   destructor(): void;
 }
 const KEY_SAVING_LANGUAGE = "currentLanguage";
@@ -22,18 +31,14 @@ export class Localizer<T> implements ILocalizer<T> {
   private readonly subjectLanguageSwitcher = new Subject<T>();
 
   languageSwitched$ = this.subjectLanguageSwitcher.asObservable();
-
-   // static languageChangeNotificator: ILanguageChangeNotificator = new LanguageChangeNotificator(); 
-
+ 
    dbAgent: IKeyValueDB = new DbAgent();
    currentLanguage: LanguageData = new LanguageData(DEFAULT_LANG_TAG);
-   //currentLanguageRelevantItems: T = {} as T;
  
     private subject = new Subject<LanguageData>();
     languageChanged$ = this.subject.asObservable();
  
    private subscription: Subscription;
-   //private languageChange$: Observable<ILanguageDescription> = Localizer.languageChangeNotificator.selectionChanged$;
 
   logger: ILogger; 
   constructor(private componentCooordinate: string, private componentVersion : number, languageChangeNotificator: ILanguageChangeNotificator) {
@@ -48,43 +53,9 @@ export class Localizer<T> implements ILocalizer<T> {
       });
   }
 
-
- 
-
-  // constructor(private componentCooordinate: string,
-  //   private componentVersion : number,
-  //   private logger : ILogger = LoggerFactory.getLogger("@vsirtin/localizer")) { 
-  //   this.logger.debug("Start of Localizer.constructor"); 
-
-  //   this.subscription = this
-  //     .languageChange$
-  //     .subscribe((selectedLanguage: ILanguageDescription) => {
-  //       this.logger.debug("Start of subscription in Localizer.constructor this.currentLanguage=" 
-  //       + this.currentLanguage.ietfTag 
-  //       + " selectedLanguage=" + JSON.stringify(selectedLanguage)); 
-
-  //       this.setLanguage(selectedLanguage.ietfTag);
-  //     });
-  // }
-
-  private notifySwitchingOfCurrentLanguageRelevantItems(items: any) {
-    this.logger.debug("In notifySwitchingOfCurrentLanguageRelevantItems items=" + JSON.stringify(items));
-    this.subjectLanguageSwitcher.next(items);
-  }
-
-  async initializeLanguage() {
-    let savedLangEtfTag = this.dbAgent.get(KEY_SAVING_LANGUAGE);
-    this.logger.debug("In initializeLanguage  savedLangEtfTag=" + savedLangEtfTag);
-    if (savedLangEtfTag == null) {
-      savedLangEtfTag = navigator.language;
-    }
-
-    if (!inSupportedLanguages(savedLangEtfTag)) {
-      savedLangEtfTag = DEFAULT_LANG_TAG;
-    }
-
-    await this.switchLanguage(savedLangEtfTag);
-    this.currentLanguage = new LanguageData(savedLangEtfTag);
+  destructor() {
+    this.logger.debug("Start of Localizer.destructor");
+    this.subscription.unsubscribe();
   }
 
   private async switchLanguage(ietfTag: string) {
@@ -104,9 +75,6 @@ export class Localizer<T> implements ILocalizer<T> {
   private setDefaultLanguage() {
     this.logger.debug("Start of Localizer.setDefaultLanguage");
     this.currentLanguage = new LanguageData(DEFAULT_LANG_TAG);
-    // this.logger.debug("In setDefaultLanguage Language is DEFAULT_LANG_TAG, no need to fetch the language file");
-    // this.currentLanguageRelevantItems = new Map<string, string>();
-
   }
 
   private async loadLanguageRelevantItems() {
@@ -124,35 +92,32 @@ export class Localizer<T> implements ILocalizer<T> {
     };
 
 
-    private async loadLanguageRelevantItemsFromDb(): Promise<boolean> {
-        return new Promise((resolve) =>{
-          this.logger.debug("Start of Localizer.loadLanguageRelevantItemsFromDb componentCooordinate=" + this.componentCooordinate 
-            + " componentVersion=" + this.componentVersion);
-          
-          let key = this.generateKeyForLoadingLanguageRelevantItems();
-      
-          let res = this.dbAgent.get(key);
-          this.logger.debug("In Localizer.loadLanguageRelevantItemsFromDb (1) key=" + key + " res=" + res); 
-          if(res == null){
-            resolve(false);
-            return;
-          }  
-          
-          const jsonObject = JSON.parse(res as string);
-          if(jsonObject == null){
-            resolve(false);
-            return; 
-          }
-
- //         const map = new Map<string, string>(Object.entries(jsonObject));
- //         this.logger.debug("In Localizer.loadLanguageRelevantItemsFromDb (2) map=" + JSON.stringify(Object.fromEntries(map))); 
-
-          this.notifySwitchingOfCurrentLanguageRelevantItems(jsonObject as T);
-          resolve(true);
-      
+  private async loadLanguageRelevantItemsFromDb(): Promise<boolean> {
+      return new Promise((resolve) =>{
+        this.logger.debug("Start of Localizer.loadLanguageRelevantItemsFromDb componentCooordinate=" + this.componentCooordinate 
+          + " componentVersion=" + this.componentVersion);
+        
+        let key = this.generateKeyForLoadingLanguageRelevantItems();
+    
+        let res = this.dbAgent.get(key);
+        this.logger.debug("In Localizer.loadLanguageRelevantItemsFromDb (1) key=" + key + " res=" + res); 
+        if(res == null){
+          resolve(false);
+          return;
+        }  
+        
+        const jsonObject = JSON.parse(res as string);
+        if(jsonObject == null){
+          resolve(false);
+          return; 
         }
-      )
-    };
+
+        this.notifySwitchingOfCurrentLanguageRelevantItems(jsonObject as T);
+        resolve(true);
+    
+      }
+    )
+  };
     
   private async loadLanguageRelevantItemsFromServer() {
     let path = this.componentCooordinate + this.currentLanguage.ietfTag + ".json";
@@ -188,10 +153,12 @@ export class Localizer<T> implements ILocalizer<T> {
               + this.currentLanguage.ietfTag;
   }
 
-  destructor() {
-    this.logger.debug("Start of Localizer.destructor");
-    this.subscription.unsubscribe();
+
+  private notifySwitchingOfCurrentLanguageRelevantItems(items: any) {
+    this.logger.debug("In notifySwitchingOfCurrentLanguageRelevantItems items=" + JSON.stringify(items));
+    this.subjectLanguageSwitcher.next(items);
   }
+
 }
 
 

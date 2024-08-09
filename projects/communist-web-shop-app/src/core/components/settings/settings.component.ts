@@ -8,10 +8,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 import { LanguageSelectionComponent } from '../../../shared/components/language-selection/language-selection.component'
-import { ILanguageDescription, SupportedLanguages, ILanguageChangeNotificator, LanguageChangeNotificator, LanguageData, DEFAULT_LANG_TAG, inSupportedLanguages } from '@vsirotin/localizer';
 import { LogSettingComponent } from "../../../shared/components/log-setting/log-setting.component";
-import { Observable, Subject } from 'rxjs';
-import { DbAgent, IKeyValueDB } from '@vsirotin/browser-local-storage';
 import { LocalizerFactory, ILocalizer } from '@vsirotin/localizer';
 
 export const SETTINGS_SOURCE_DIR = "assets/languages/features/components/settings/lang/";
@@ -23,21 +20,6 @@ class UIItems {
   loggingExplanation: string = "Only for support purposes";
 }
 
-
-// const UI_ITEMS_DEFAULT = new Map<string, string> ( [
-//   ["language", "Language"],
-//   ["logging", "Logging"]
-// ]);
-
-
-
-
-
-
-
-/**
- * //TODO: Add documentation
- */
 @Component({
   selector: 'app-settings',
   standalone: true,
@@ -45,8 +27,6 @@ class UIItems {
     MatButtonModule,
     MatExpansionModule,
     MatIconModule,
-
-//   MatDatepickerModule,
     MatNativeDateModule,
     MatCardModule,
     MatProgressBarModule,
@@ -63,15 +43,10 @@ export class SettingsComponent implements  OnDestroy  {
 
   private subscription: Subscription;
   readonly localizer: ILocalizer<UIItems>;
-  //private languageChangeNotificator: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
 
   langOrigin: string = ""
   langEn: string = ""
   langEtfTag: string = "" 
-
-
-
-
 
   ui: UIItems = {
     settings: "Settings",
@@ -85,8 +60,6 @@ export class SettingsComponent implements  OnDestroy  {
     this.logger.debug("Start of SettingsComponent.constructor");  
 
     this.localizer  =  LocalizerFactory.createLocalizer(SETTINGS_SOURCE_DIR, 1);
-
-    //this.setLanguageRelatedElements(this.localizer.currentLanguage as ILanguageDescription);
 
     this.subscription = this
       .localizer.languageSwitched$
@@ -105,33 +78,9 @@ export class SettingsComponent implements  OnDestroy  {
     });
   }
 
-  // private setLanguageRelatedElements(selectedLanguage: ILanguageDescription) {
-  //   this.logger.debug("Start of SettingsComponent.setLanguageRelatedElements selectedLanguage=" + JSON.stringify(selectedLanguage));
-    
-  //   const langDescr = SupportedLanguages.filter((lang) => lang.ietfTag == selectedLanguage.ietfTag)[0];
-  //   this.langOrigin = langDescr.originalName;
-  //   this.langEn = langDescr.enName;
-  //   this.langEtfTag = langDescr.ietfTag;
-  // }
-
-  // async ngOnInit() {
-  //   this.logger.debug("Start of SettingsComponent.ngOnInit");
-  //   await this.localizer.initializeLanguage();
-  //   this.setLanguageRelatedElements(this.localizer.currentLanguage as ILanguageDescription);
-  //   this.logger.debug("End of SettingsComponent.ngOnInit");
-  // }
-
-
-
   ngOnDestroy() {
     this.logger.debug("Start of SettingsComponent.ngDestroy");
     this.subscription.unsubscribe();
     this.localizer.destructor();
   }
-
-
-  // t(key: string, defaultText: string): string {
-  //   return this.localizer.getTranslation(key, defaultText);
-  // }
-
 }
