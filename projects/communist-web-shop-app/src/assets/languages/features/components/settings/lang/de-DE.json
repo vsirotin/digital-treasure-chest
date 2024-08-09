@@ -1,0 +1,10 @@
+{
+"settings": "Einstellungen",
+ "expand_all": "Alles erweitern",
+ "collapse_all": "Alles reduzieren",
+ "language": "Sprache:",
+ "appearance": "Erscheinungsbild",
+ "set_options_for_appearance": "Erscheinungsoptionen setzen",
+ "rules": "Regeln",
+ "set_rules": "Regeln für automatische Datenlöschung festlegen usw."
+}

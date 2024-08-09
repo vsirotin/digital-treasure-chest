@@ -11,13 +11,20 @@ import { Subscription } from 'rxjs';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { SettingsComponent } from '../settings/settings.component';
 import { InfoComponent } from '../info/info.component';
-import { BuyingComponent } from '../buying/buying.component';
+import { ShoppingComponent } from '../shopping/shopping.component';
 import { ReportComponent } from '../report/report.component';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
-import { Localizer, ILanguageChangeNotificator, ILanguageDescription } from '@vsirotin/localizer';
+import { ILocalizer, ILanguageChangeNotificator, ILanguageDescription, LocalizerFactory } from '@vsirotin/localizer';
 
 
 export const MAIN_SOURCE_DIR = "assets/languages/core/components/main/lang/";
+
+interface IUIMainLanguageRelevantItems {
+  shopping: string;
+  report: string;
+  info: string;
+  settings: string;
+}
 
 @Component({
   selector: 'app-main',
@@ -29,7 +36,7 @@ export const MAIN_SOURCE_DIR = "assets/languages/core/components/main/lang/";
     MatListModule, 
     RouterModule,
     ToolbarComponent,
-    BuyingComponent,
+    ShoppingComponent,
     ReportComponent,
     SettingsComponent,
     InfoComponent
@@ -41,7 +48,7 @@ export class MainComponent implements OnInit, OnDestroy {
   @ViewChild('snav') snav!: MatSidenavModule;
 
   private subscriptionBtnClicked: Subscription;
- private subscriptionLangChanged: Subscription;
+// private subscriptionLangChanged: Subscription;
 
   logger : ILogger = LoggerFactory.getLogger("MainComponent");
 
@@ -55,15 +62,15 @@ export class MainComponent implements OnInit, OnDestroy {
 
   readonly navItemsDefault: Array<INavigationEntry> = [
 
-    {id: "buying", label: "Buying", icon: "add_shopping_cart"},
+    {id: "shopping", label: "shopping", icon: "add_shopping_cart"},
     {id: "report", label: "Report", icon: "feed"},
     {id: "info", label: "Info", icon: "info_outline"},
     {id: "settings", label: "Settings", icon: "settings"},
   ];
 
   private _mobileQueryListener!: () => void;
-  localizer: Localizer = new Localizer(MAIN_SOURCE_DIR, 1);
-  languageChangeNotificator: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
+  //localizer: ILocalizer<IUIMainLanguageRelevantItems> = LocalizerFactory.createLocalizer(MAIN_SOURCE_DIR, 1);
+  //languageChangeNotificator: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
 
   constructor(private communicatorService: CommunicatorService,
    changeDetectorRef: ChangeDetectorRef, 
@@ -78,14 +85,14 @@ export class MainComponent implements OnInit, OnDestroy {
       this.toggleMenu();
     });
 
-    this.subscriptionLangChanged = this
-    .languageChangeNotificator.selectionChanged$
-    .subscribe((selectedLanguage: ILanguageDescription) => {
-      this.logger.debug("Start of subscriptionLangChanged selectedLanguage=" + JSON.stringify(selectedLanguage));
-      this.logger.debug("subscriptionLangChanged after resetNavItems");
-      this.cdr.detectChanges();
-      this.logger.debug("subscriptionLangChanged completed");
-    }); 
+//     this.subscriptionLangChanged = this
+//     .localizer.languageSwitched$
+//     .subscribe((languageRelevantItems: IUIMainLanguageRelevantItems) => {
+//  //     this.logger.debug("Start of subscriptionLangChanged selectedLanguage=" + JSON.stringify(selectedLanguage));
+//       this.logger.debug("subscriptionLangChanged after resetNavItems");
+//       this.cdr.detectChanges();
+//       this.logger.debug("subscriptionLangChanged completed");
+//     }); 
 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -95,7 +102,7 @@ export class MainComponent implements OnInit, OnDestroy {
 
   async ngOnInit() {
     this.logger.debug("Start of ngOnInit");
-    await this.localizer.initializeLanguage();
+  //  await this.localizer.initializeLanguage();
     this.logger.debug("End of ngOnInit");
     const isLargeScreen = this.breakpointObserver.isMatched('(min-width: 600px)');
     this.logger.log("ngOnInit", "isLargeScreen=", isLargeScreen);

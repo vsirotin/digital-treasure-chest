@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
-import { ILanguageChangeNotificator, SupportedLanguages } from '@vsirotin/localizer';
-import { Localizer } from '@vsirotin/localizer';
+import { ILanguageChangeNotificator, LocalizerFactory, SupportedLanguages } from '@vsirotin/localizer';
 
 /**
  * @title Accordion with expand/collapse all toggles
@@ -26,7 +25,7 @@ export class LanguageSelectionComponent {
   selectedLangCode: string|null = null;
   supportedLanguages = SupportedLanguages;
 
-  private selectedLanguageService: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
+  private selectedLanguageService: ILanguageChangeNotificator = LocalizerFactory.languageChangeNotificator;
 
   constructor(){}
 

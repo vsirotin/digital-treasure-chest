@@ -1,24 +1,37 @@
 import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
 import { MatAccordion, MatExpansionModule} from '@angular/material/expansion';
-//import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { Localizer } from '@vsirotin/localizer';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 import { LanguageSelectionComponent } from '../../../shared/components/language-selection/language-selection.component'
-import { ILanguageDescription, SupportedLanguages, ILanguageChangeNotificator } from '@vsirotin/localizer';
+import { ILanguageDescription, SupportedLanguages, ILanguageChangeNotificator, LanguageChangeNotificator, LanguageData, DEFAULT_LANG_TAG, inSupportedLanguages } from '@vsirotin/localizer';
 import { LogSettingComponent } from "../../../shared/components/log-setting/log-setting.component";
+import { Observable, Subject } from 'rxjs';
+import { DbAgent, IKeyValueDB } from '@vsirotin/browser-local-storage';
+import { LocalizerFactory, ILocalizer } from '@vsirotin/localizer';
 
 export const SETTINGS_SOURCE_DIR = "assets/languages/features/components/settings/lang/";
 
-const UI_ITEMS_DEFAULT = new Map<string, string> ( [
-  ["language", "Language"],
-  ["logging", "Logging"]
-]);
+class UIItems {
+  settings: string = "Settings";
+  language: string= "Language";
+  logging: string = "Logging";
+  loggingExplanation: string = "Only for support purposes";
+}
+
+
+// const UI_ITEMS_DEFAULT = new Map<string, string> ( [
+//   ["language", "Language"],
+//   ["logging", "Logging"]
+// ]);
+
+
+
+
 
 
 
@@ -43,14 +56,14 @@ const UI_ITEMS_DEFAULT = new Map<string, string> ( [
   templateUrl: './settings.component.html',
   styleUrl: './settings.component.scss'
 })
-export class SettingsComponent implements OnInit, OnDestroy  {
+export class SettingsComponent implements  OnDestroy  {
   @ViewChild(MatAccordion) accordion?: MatAccordion;
 
   logger: ILogger = LoggerFactory.getLogger("SettingsComponent");
 
   private subscription: Subscription;
-  readonly localizer: Localizer;
-  private languageChangeNotificator: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
+  readonly localizer: ILocalizer<UIItems>;
+  //private languageChangeNotificator: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
 
   langOrigin: string = ""
   langEn: string = ""
@@ -58,10 +71,12 @@ export class SettingsComponent implements OnInit, OnDestroy  {
 
 
 
-  uiItems = UI_ITEMS_DEFAULT;
 
 
-  ui = {
+  ui: UIItems = {
+    settings: "Settings",
+    language:  "Language",
+    logging: "Logging",
     loggingExplanation: "Only for support purposes",
   }
 
@@ -69,36 +84,42 @@ export class SettingsComponent implements OnInit, OnDestroy  {
   constructor( ) {
     this.logger.debug("Start of SettingsComponent.constructor");  
 
-    this.localizer =  new Localizer(SETTINGS_SOURCE_DIR, 1, this.logger);
+    this.localizer  =  LocalizerFactory.createLocalizer(SETTINGS_SOURCE_DIR, 1);
 
-    this.setLanguageRelatedElements(this.localizer.currentLanguage as ILanguageDescription);
+    //this.setLanguageRelatedElements(this.localizer.currentLanguage as ILanguageDescription);
 
     this.subscription = this
-      .languageChangeNotificator.selectionChanged$
-      .subscribe((selectedLanguage: ILanguageDescription) => {
-      this.setLanguageRelatedElements(selectedLanguage);
+      .localizer.languageSwitched$
+      .subscribe((currentUiItems: UIItems) => {
+      this.logger.debug("In subscription currentUiItems=" + JSON.stringify(currentUiItems));
 
-      if (this.accordion) {
-        this.accordion.closeAll();
+      //This check is needed because of specific brhavenior of TypeScript
+      if(currentUiItems instanceof UIItems){
+        this.ui = currentUiItems;
+      }else{
+        this.logger.error("In subscription currentUiItems is not of type UIItems. UIItems=", 
+          JSON.stringify(this.ui), " currentUiItems=", JSON.stringify(currentUiItems));
       }
+      this.accordion?.closeAll();
+       
     });
   }
 
-  private setLanguageRelatedElements(selectedLanguage: ILanguageDescription) {
-    this.logger.debug("Start of SettingsComponent.setLanguageRelatedElements selectedLanguage=" + JSON.stringify(selectedLanguage));
+  // private setLanguageRelatedElements(selectedLanguage: ILanguageDescription) {
+  //   this.logger.debug("Start of SettingsComponent.setLanguageRelatedElements selectedLanguage=" + JSON.stringify(selectedLanguage));
     
-    const langDescr = SupportedLanguages.filter((lang) => lang.ietfTag == selectedLanguage.ietfTag)[0];
-    this.langOrigin = langDescr.originalName;
-    this.langEn = langDescr.enName;
-    this.langEtfTag = langDescr.ietfTag;
-  }
+  //   const langDescr = SupportedLanguages.filter((lang) => lang.ietfTag == selectedLanguage.ietfTag)[0];
+  //   this.langOrigin = langDescr.originalName;
+  //   this.langEn = langDescr.enName;
+  //   this.langEtfTag = langDescr.ietfTag;
+  // }
 
-  async ngOnInit() {
-    this.logger.debug("Start of SettingsComponent.ngOnInit");
-    await this.localizer.initializeLanguage();
-    this.setLanguageRelatedElements(this.localizer.currentLanguage as ILanguageDescription);
-    this.logger.debug("End of SettingsComponent.ngOnInit");
-  }
+  // async ngOnInit() {
+  //   this.logger.debug("Start of SettingsComponent.ngOnInit");
+  //   await this.localizer.initializeLanguage();
+  //   this.setLanguageRelatedElements(this.localizer.currentLanguage as ILanguageDescription);
+  //   this.logger.debug("End of SettingsComponent.ngOnInit");
+  // }
 
 
 
@@ -109,8 +130,8 @@ export class SettingsComponent implements OnInit, OnDestroy  {
   }
 
 
-  t(key: string, defaultText: string): string {
-    return this.localizer.getTranslation(key, defaultText);
-  }
+  // t(key: string, defaultText: string): string {
+  //   return this.localizer.getTranslation(key, defaultText);
+  // }
 
 }

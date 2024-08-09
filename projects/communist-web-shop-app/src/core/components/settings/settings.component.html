@@ -1,13 +1,13 @@
 <mat-card class="settings-card">
   <mat-card-header>
-    <mat-card-title>{{t('settings', 'Settings')}}</mat-card-title>
+    <mat-card-title>{{ui.settings}}</mat-card-title>
   </mat-card-header>
   <mat-accordion class="settings-headers-align" multi>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
           <mat-icon>language</mat-icon>
-          {{uiItems.get('language')}}:
+          {{ui.language}}:
           </mat-panel-title>
         <mat-panel-description>
           <span width = "5px"></span>
@@ -22,7 +22,7 @@
         <mat-expansion-panel-header>
           <mat-panel-title>
             <mat-icon>list</mat-icon>
-             {{uiItems.get('logging')}}:
+             {{ui.logging}}:
             </mat-panel-title>
           <mat-panel-description>
             ({{ui.loggingExplanation}})

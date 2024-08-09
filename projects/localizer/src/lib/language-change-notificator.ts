@@ -5,7 +5,7 @@ import { ILanguageDescription } from './language-description';
 export class LanguageChangeNotificator implements ILanguageChangeNotificator{
 
   private subject = new Subject<ILanguageDescription>();
-  selectionChanged$ = this.subject.asObservable();
+  selectionChanged$ : Observable<ILanguageDescription> = this.subject.asObservable();
 
   selectionChanged(selectedLanguage: ILanguageDescription) {
     this.subject.next(selectedLanguage);
