@@ -3,6 +3,7 @@ import { ILanguageDescription, inSupportedLanguages, DEFAULT_LANG_TAG } from './
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { DbAgent, IKeyValueDB } from "@vsirotin/browser-local-storage";
 import { ILanguageChangeNotificator, LanguageChangeNotificator } from "./language-change-notificator";
+import { IKeeperMasterDataKeyValue, KeeperMasterDataFactoryForLocalization } from "./keeper-master-data/i-keyed-keeper-master-data";
 
 export class LanguageData {
   constructor(public ietfTag: string) {}
@@ -31,6 +32,8 @@ export class Localizer<T> implements ILocalizer<T> {
   private readonly subjectLanguageSwitcher = new Subject<T>();
 
   languageSwitched$ = this.subjectLanguageSwitcher.asObservable();
+
+  keeperMasterData : IKeeperMasterDataKeyValue<T>;
  
    dbAgent: IKeyValueDB = new DbAgent();
    currentLanguage: LanguageData = new LanguageData(DEFAULT_LANG_TAG);
@@ -42,6 +45,8 @@ export class Localizer<T> implements ILocalizer<T> {
 
   logger: ILogger; 
   constructor(private componentCooordinate: string, private componentVersion : number, languageChangeNotificator: ILanguageChangeNotificator) {
+
+    this.keeperMasterData = KeeperMasterDataFactoryForLocalization.instance.createKeeperMasterDataKeyValue<T>(componentCooordinate, componentVersion);
 
     this.logger = LoggerFactory.getLogger("Localizer for " + componentCooordinate);
     this.logger.log("Localizer created for ", componentCooordinate);
@@ -62,13 +67,18 @@ export class Localizer<T> implements ILocalizer<T> {
     this.logger.debug("In switchLanguage ietfTag=" + ietfTag);
 
     this.currentLanguage = new LanguageData(ietfTag);
-    this.dbAgent.set(KEY_SAVING_LANGUAGE, this.currentLanguage.ietfTag);
+    //this.dbAgent.set(KEY_SAVING_LANGUAGE, this.currentLanguage.ietfTag);
 
     if(this.currentLanguage.ietfTag == DEFAULT_LANG_TAG) {
       this.setDefaultLanguage();
       return;
     }
-    await this.loadLanguageRelevantItems();
+    //await this.loadLanguageRelevantItems();
+    const data = await this.keeperMasterData.find(this.currentLanguage.ietfTag);
+    this.logger.debug("In switchLanguage data=" + JSON.stringify(data));
+    if(data){
+      this.notifySwitchingOfCurrentLanguageRelevantItems(data);
+    }   
     this.logger.debug("End of switchLanguage");
   }
 
@@ -76,7 +86,7 @@ export class Localizer<T> implements ILocalizer<T> {
     this.logger.debug("Start of Localizer.setDefaultLanguage");
     this.currentLanguage = new LanguageData(DEFAULT_LANG_TAG);
   }
-
+/*
   private async loadLanguageRelevantItems() {
     this.logger.debug("Start of Localizer.loadLanguageRelevantItems componentCooordinate=" + this.componentCooordinate);
     this.loadLanguageRelevantItemsFromDb()
@@ -153,7 +163,7 @@ export class Localizer<T> implements ILocalizer<T> {
               + this.currentLanguage.ietfTag;
   }
 
-
+*/
   private notifySwitchingOfCurrentLanguageRelevantItems(items: any) {
     this.logger.debug("In notifySwitchingOfCurrentLanguageRelevantItems items=" + JSON.stringify(items));
     this.subjectLanguageSwitcher.next(items);
