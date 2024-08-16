@@ -1,9 +1,10 @@
 import { Observable, Subject, Subscription } from "rxjs";
-import { ILanguageDescription, inSupportedLanguages, DEFAULT_LANG_TAG } from './language-description';
+import { ILanguageDescription, DEFAULT_LANG_TAG } from './language-description';
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { DbAgent, IKeyValueDB } from "@vsirotin/browser-local-storage";
 import { ILanguageChangeNotificator, LanguageChangeNotificator } from "./language-change-notificator";
-import { IKeeperMasterDataKeyValue, KeeperMasterDataFactoryForLocalization } from "./keeper-master-data/i-keyed-keeper-master-data";
+import { IKeeperMasterDataKeyValue } from "../../../keeper-master-data/src/lib/i-keyed-keeper-master-data";
+import { KeeperMasterDataFactoryForLocalization } from "./keeper-master-data/keeper-master-data-factory-for-localization";
 
 export class LanguageData {
   constructor(public ietfTag: string) {}
@@ -17,9 +18,9 @@ export interface ILocalizer<T> {
 
   /*
     Informs a calle about switching of the language relevant items because of the language change
-    @param T - type of the language relevant items
+    @param T - type of the language relevant items or string with the default language tag
   */
-  languageSwitched$: Observable<T>;
+  languageSwitched$: Observable<T|string>;
 
   /*
     Should be called by callee to avoid memory leaks because running subscription of this class to the languageChangeNotificator
@@ -29,7 +30,7 @@ export interface ILocalizer<T> {
 const KEY_SAVING_LANGUAGE = "currentLanguage";
 export class Localizer<T> implements ILocalizer<T> {
 
-  private readonly subjectLanguageSwitcher = new Subject<T>();
+  private readonly subjectLanguageSwitcher = new Subject<T|string>();
 
   languageSwitched$ = this.subjectLanguageSwitcher.asObservable();
 
@@ -77,7 +78,7 @@ export class Localizer<T> implements ILocalizer<T> {
     const data = await this.keeperMasterData.find(this.currentLanguage.ietfTag);
     this.logger.debug("In switchLanguage data=" + JSON.stringify(data));
     if(data){
-      this.notifySwitchingOfCurrentLanguageRelevantItems(data);
+      this.subjectLanguageSwitcher.next(data);
     }   
     this.logger.debug("End of switchLanguage");
   }
@@ -85,6 +86,7 @@ export class Localizer<T> implements ILocalizer<T> {
   private setDefaultLanguage() {
     this.logger.debug("Start of Localizer.setDefaultLanguage");
     this.currentLanguage = new LanguageData(DEFAULT_LANG_TAG);
+    this.subjectLanguageSwitcher.next(DEFAULT_LANG_TAG);
   }
 /*
   private async loadLanguageRelevantItems() {

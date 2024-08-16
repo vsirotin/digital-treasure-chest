@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs/internal/Subscription';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 import { LanguageSelectionComponent } from '../../../shared/components/language-selection/language-selection.component'
 import { LogSettingComponent } from "../../../shared/components/log-setting/log-setting.component";
-import { LocalizerFactory, ILocalizer } from '@vsirotin/localizer';
+import { LocalizerFactory, ILocalizer, DEFAULT_LANG_TAG } from '@vsirotin/localizer';
 
 export const SETTINGS_SOURCE_DIR = "assets/languages/features/components/settings/lang";
 
@@ -18,6 +18,13 @@ class UIItems {
   language: string= "Language";
   logging: string = "Logging";
   loggingExplanation: string = "Only for support purposes";
+}
+
+const DEFAUIL_UI_ITEMS: UIItems = {
+  settings: "Settings",
+  language:  "Language",
+  logging: "Logging",
+  loggingExplanation: "Only for support purposes",
 }
 
 @Component({
@@ -48,13 +55,7 @@ export class SettingsComponent implements  OnDestroy  {
   langEn: string = ""
   langEtfTag: string = "" 
 
-  ui: UIItems = {
-    settings: "Settings",
-    language:  "Language",
-    logging: "Logging",
-    loggingExplanation: "Only for support purposes",
-  }
-
+  ui: UIItems = DEFAUIL_UI_ITEMS;
 
   constructor( ) {
     this.logger.debug("Start of SettingsComponent.constructor");  
@@ -63,20 +64,31 @@ export class SettingsComponent implements  OnDestroy  {
 
     this.subscription = this
       .localizer.languageSwitched$
-      .subscribe((currentUiItems: UIItems) => {
-      this.logger.debug("In subscription currentUiItems=" + JSON.stringify(currentUiItems));
+      .subscribe((currentUiItems: UIItems|string) => {
+        this.logger.debug("In subscription currentUiItems=" + JSON.stringify(currentUiItems));
 
-      //This check is needed because of specific brhavenior of TypeScript
-      const diff = compareObjects(this.ui, currentUiItems);
-      if(diff.length == 0){
-        this.ui = currentUiItems;
-      }else{
-        this.logger.error("In subscription currentUiItems is not of type UIItems. UIItems=", 
-          JSON.stringify(this.ui), " currentUiItems=", JSON.stringify(currentUiItems), " diff=", diff);
-      }
-      this.accordion?.closeAll();
+        if(currentUiItems == DEFAULT_LANG_TAG) {
+         this.logger.debug("currentUiItems is set as DEFAULT_LANG_TAG");
+          this.ui = DEFAUIL_UI_ITEMS;
+          this.accordion?.closeAll();
+        }else{
+          this.setNewLanguage(currentUiItems);
+        }
+        this.accordion?.closeAll();
        
     });
+  }
+
+  private setNewLanguage(currentUiItems: string | UIItems) {
+     //This check is needed because of specific behavenior of TypeScript
+    const diff = compareObjects(this.ui, currentUiItems);
+    if (diff.length == 0) {
+      this.logger.debug("In currentUiItems is set as:", currentUiItems);
+      this.ui = currentUiItems as UIItems;
+    } else {
+      this.logger.error("In subscription currentUiItems is not of type UIItems. UIItems=",
+        JSON.stringify(this.ui), " currentUiItems=", JSON.stringify(currentUiItems), " diff=", diff);
+    }
   }
 
   ngOnDestroy() {
@@ -86,7 +98,13 @@ export class SettingsComponent implements  OnDestroy  {
   }
 }
 
-function compareObjects<A, B>(a: Object, b: Object): string {
+/*
+  * Compare the structure (not behaviour) of two objects and return a string with differences.
+  * @param a - first object to compare
+  * @param b - second object to compare
+  * @returns string with differences or empty string if objects are the same
+  */
+function compareObjects(a: Object, b: Object): string {
     const differences: string[] = [];
 
     const aKeys = Object.keys(a);
