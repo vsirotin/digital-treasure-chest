@@ -1,10 +1,10 @@
 import { Observable, Subject, Subscription } from "rxjs";
 import { ILanguageDescription, DEFAULT_LANG_TAG } from './language-description';
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
-import { DbAgent, IKeyValueDB } from "@vsirotin/browser-local-storage";
-import { ILanguageChangeNotificator, LanguageChangeNotificator } from "./language-change-notificator";
-import { IKeeperMasterDataKeyValue } from "../../../keeper-master-data/src/lib/i-keyed-keeper-master-data";
-import { KeeperMasterDataFactoryForLocalization } from "./keeper-master-data/keeper-master-data-factory-for-localization";
+import { ILanguageChangeNotificator } from "./language-change-notificator";
+
+import { IKeeperMasterDataKeyValue, KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion } from "@vsirotin/keeper-master-data";
+import { CurrentLanguageKeeper } from "./current-language-keeper";
 
 export class LanguageData {
   constructor(public ietfTag: string) {}
@@ -20,7 +20,7 @@ export interface ILocalizer<T> {
     Informs a calle about switching of the language relevant items because of the language change
     @param T - type of the language relevant items or string with the default language tag
   */
-  languageSwitched$: Observable<T|string>;
+  languageSwitched$: Observable<T>;
 
   /*
     Should be called by callee to avoid memory leaks because running subscription of this class to the languageChangeNotificator
@@ -30,28 +30,44 @@ export interface ILocalizer<T> {
 const KEY_SAVING_LANGUAGE = "currentLanguage";
 export class Localizer<T> implements ILocalizer<T> {
 
-  private readonly subjectLanguageSwitcher = new Subject<T|string>();
+  private readonly subjectLanguageSwitcher = new Subject<T>();
 
   languageSwitched$ = this.subjectLanguageSwitcher.asObservable();
 
   keeperMasterData : IKeeperMasterDataKeyValue<T>;
- 
-   dbAgent: IKeyValueDB = new DbAgent();
-   currentLanguage: LanguageData = new LanguageData(DEFAULT_LANG_TAG);
- 
-    private subject = new Subject<LanguageData>();
-    languageChanged$ = this.subject.asObservable();
- 
-   private subscription: Subscription;
+
+  currentLanguage: LanguageData = new LanguageData(DEFAULT_LANG_TAG);
+
+  private subject = new Subject<LanguageData>();
+  languageChanged$ = this.subject.asObservable();
+
+  private subscription: Subscription;
 
   logger: ILogger; 
-  constructor(private componentCooordinate: string, private componentVersion : number, languageChangeNotificator: ILanguageChangeNotificator) {
 
-    this.keeperMasterData = KeeperMasterDataFactoryForLocalization.instance.createKeeperMasterDataKeyValue<T>(componentCooordinate, componentVersion);
+  /*
+    Constructor. Creates an instance of the Localizer
+    @param componentCooordinate - a coordinate of the component. It is used to find corresponded ressources and to identify the component in the log messages
+    @param componentVersion - a version of the component. It is used to find corresponded ressources and to identify the component in the log messages
+    @param languageChangeNotificator - an instance of the languageChangeNotificator. It is used to subscribe to the language change events
+    @param currentLanguageData - a current language data in application
+    @param startLanguageRelevantItems - a start object with language relevant items.
+  */
+  constructor(private componentCooordinate: string, 
+    private componentVersion : number, 
+    private languageChangeNotificator: ILanguageChangeNotificator,
+    private currentLanguageTag: string,
+    private startLanguageRelevantItems: T) {
+
+    this.keeperMasterData = new KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion(componentCooordinate, componentVersion);
 
     this.logger = LoggerFactory.getLogger("Localizer for " + componentCooordinate);
     this.logger.log("Localizer created for ", componentCooordinate);
-        this.subscription = languageChangeNotificator.selectionChanged$
+
+
+    this.switchLanguage(currentLanguageTag);
+
+    this.subscription = languageChangeNotificator.selectionChanged$
       .subscribe((selectedLanguage: ILanguageDescription) => {
         this.logger.log("In subscription ", this.currentLanguage.ietfTag, " selectedLanguage=", JSON.stringify(selectedLanguage));
 
@@ -68,13 +84,11 @@ export class Localizer<T> implements ILocalizer<T> {
     this.logger.debug("In switchLanguage ietfTag=" + ietfTag);
 
     this.currentLanguage = new LanguageData(ietfTag);
-    //this.dbAgent.set(KEY_SAVING_LANGUAGE, this.currentLanguage.ietfTag);
 
     if(this.currentLanguage.ietfTag == DEFAULT_LANG_TAG) {
-      this.setDefaultLanguage();
+      this.subjectLanguageSwitcher.next(this.startLanguageRelevantItems);
       return;
     }
-    //await this.loadLanguageRelevantItems();
     const data = await this.keeperMasterData.find(this.currentLanguage.ietfTag);
     this.logger.debug("In switchLanguage data=" + JSON.stringify(data));
     if(data){
@@ -82,103 +96,4 @@ export class Localizer<T> implements ILocalizer<T> {
     }   
     this.logger.debug("End of switchLanguage");
   }
-
-  private setDefaultLanguage() {
-    this.logger.debug("Start of Localizer.setDefaultLanguage");
-    this.currentLanguage = new LanguageData(DEFAULT_LANG_TAG);
-    this.subjectLanguageSwitcher.next(DEFAULT_LANG_TAG);
-  }
-/*
-  private async loadLanguageRelevantItems() {
-    this.logger.debug("Start of Localizer.loadLanguageRelevantItems componentCooordinate=" + this.componentCooordinate);
-    this.loadLanguageRelevantItemsFromDb()
-    .then(
-      (dbLoadingResult)=>{ 
-        this.logger.debug("In Localizer.loadLanguageRelevantItems dbLoadingResult=" + dbLoadingResult);
-        if(!dbLoadingResult){
-          this.loadLanguageRelevantItemsFromServer()
-        }
-      }).catch((error) => {
-        this.logger.error("In Localizer.loadLanguageRelevantItems catch error=" + error);
-      });
-    };
-
-
-  private async loadLanguageRelevantItemsFromDb(): Promise<boolean> {
-      return new Promise((resolve) =>{
-        this.logger.debug("Start of Localizer.loadLanguageRelevantItemsFromDb componentCooordinate=" + this.componentCooordinate 
-          + " componentVersion=" + this.componentVersion);
-        
-        let key = this.generateKeyForLoadingLanguageRelevantItems();
-    
-        let res = this.dbAgent.get(key);
-        this.logger.debug("In Localizer.loadLanguageRelevantItemsFromDb (1) key=" + key + " res=" + res); 
-        if(res == null){
-          resolve(false);
-          return;
-        }  
-        
-        const jsonObject = JSON.parse(res as string);
-        if(jsonObject == null){
-          resolve(false);
-          return; 
-        }
-
-        this.notifySwitchingOfCurrentLanguageRelevantItems(jsonObject as T);
-        resolve(true);
-    
-      }
-    )
-  };
-    
-  private async loadLanguageRelevantItemsFromServer() {
-    let path = this.componentCooordinate + this.currentLanguage.ietfTag + ".json";
-    this.logger.debug("Localizer.loadLanguageRelevantItemsFromServer: Fetching from " + path);
-   await fetch(path)
-    .then(response => {
-      if (!response.ok) {
-        this.logger.warn("In Localizer.loadLanguageRelevantItemsFromServer HTTP error. Status=", 
-          response.status, "by fetching from ", path); 
-        this.setDefaultLanguage();
-      }
-      return response.json(); 
-    })
-    .then(data => {
-      this.logger.debug("Localizer.loadLanguageRelevantItemsFromServer: Data loaded from server=" + JSON.stringify(data));
-      this.notifySwitchingOfCurrentLanguageRelevantItems(data as T);
-      
-      let key = this.generateKeyForLoadingLanguageRelevantItems();
-
-      this.dbAgent.set(key, JSON.stringify(data));
-      this.subject.next(this.currentLanguage as LanguageData);
-      this.logger.debug("In Localizer.loadLanguageRelevantItemsFromServer after call next")
-    })
-    .catch(error => {
-      this.logger.error(" In Localizer.loadLanguageRelevantItemsFromServer: a problem with the fetch operation: error=" + error);  
-      this.setDefaultLanguage(); 
-    });
-  }
-  
-  private generateKeyForLoadingLanguageRelevantItems(): string {
-    return  this.componentCooordinate.replace("assets/languages/features/", "") 
-              + "-v" + this.componentVersion + "-" 
-              + this.currentLanguage.ietfTag;
-  }
-
-*/
-  private notifySwitchingOfCurrentLanguageRelevantItems(items: any) {
-    this.logger.debug("In notifySwitchingOfCurrentLanguageRelevantItems items=" + JSON.stringify(items));
-    this.subjectLanguageSwitcher.next(items);
-  }
-
 }
-
-
-
-
-
-
-
-
-
-

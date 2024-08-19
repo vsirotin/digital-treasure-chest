@@ -60,20 +60,15 @@ export class SettingsComponent implements  OnDestroy  {
   constructor( ) {
     this.logger.debug("Start of SettingsComponent.constructor");  
 
-    this.localizer  =  LocalizerFactory.createLocalizer(SETTINGS_SOURCE_DIR, 1);
+    this.localizer  =  LocalizerFactory.createLocalizer<UIItems>(SETTINGS_SOURCE_DIR, 1, this.ui);
 
     this.subscription = this
       .localizer.languageSwitched$
-      .subscribe((currentUiItems: UIItems|string) => {
+      .subscribe((currentUiItems: UIItems) => {
         this.logger.debug("In subscription currentUiItems=" + JSON.stringify(currentUiItems));
 
-        if(currentUiItems == DEFAULT_LANG_TAG) {
-         this.logger.debug("currentUiItems is set as DEFAULT_LANG_TAG");
-          this.ui = DEFAUIL_UI_ITEMS;
-          this.accordion?.closeAll();
-        }else{
-          this.setNewLanguage(currentUiItems);
-        }
+        this.setNewLanguage(currentUiItems);
+        
         this.accordion?.closeAll();
        
     });

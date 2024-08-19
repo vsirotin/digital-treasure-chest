@@ -5,14 +5,9 @@ import { WritableRepositoryAdapter } from "./i-repository-adapters";
     Implementation of WritableRepositoryAdapter for local storage based key-value repository.
 */
 
-export class LocalStorageKeyValueRepositoryAdapter implements WritableRepositoryAdapter {
-    private prefix: string;
-    private logger: ILogger;
-    constructor(private version: number, ...categories: string[]) {
-        this.prefix = categories.join("-") + "-v-" + version;
-        this.logger = LoggerFactory.getLogger("LocalStorageKeyValueRepositoryAdapter for " + this.prefix);
-        this.logger.log("LocalStorageKeyValueRepositoryAdapter created for ", this.prefix);
-    }
+export class LocalStorageKeyValueAdapter implements WritableRepositoryAdapter {
+
+    protected logger: ILogger = LoggerFactory.getLogger("LocalStorageKeyValueRepositoryAdapter");
 
     /*
         Fetch (load) an object from repository by key.
@@ -41,7 +36,7 @@ export class LocalStorageKeyValueRepositoryAdapter implements WritableRepository
 
     }
 
-    private generateStorageKey(key: string): string {
-        return this.prefix + "-" + key;
+    protected generateStorageKey(key: string): string {
+        return key;
     }
 }

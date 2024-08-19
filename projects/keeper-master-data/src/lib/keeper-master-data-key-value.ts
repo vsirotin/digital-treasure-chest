@@ -15,12 +15,12 @@ export class KeeperMasterDataKeyValue<T> implements IKeeperMasterDataKeyValue<T>
         @param componentVersion Component version
         @param repositoryAdapters Repository adapters. Should be ordered by probability of data presence.
     */
-    constructor(protected componentCoordinate: string, protected componentVersion: number, protected repositoryAdapters: IReadOnlyRepositoryAdapter[]) {
-        this.logger = LoggerFactory.getLogger("KeyedKeeperMasterData for " + componentCoordinate + " - " + componentVersion);
-        this.logger.log("KeyedKeeperMasterData created for ", componentCoordinate, ", ", componentVersion, " with ", repositoryAdapters.length, " child keepers");
+    constructor(protected repositoryAdapters: IReadOnlyRepositoryAdapter[]) {
+        this.logger = LoggerFactory.getLogger("KeeperMasterDataKeyValue");
         if (repositoryAdapters.length <= 0) {
-            throw new Error("childKeepers must have at least one element.");
+            throw new Error("repositoryAdapters must have at least one element.");
         }
+        this.logger.log("KeyedKeeperMasterData created");
     }
 
     private isWritableRepositoryAdapter(obj: any): obj is WritableRepositoryAdapter {

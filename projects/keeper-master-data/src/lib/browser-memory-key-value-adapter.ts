@@ -1,14 +1,15 @@
 import { WritableRepositoryAdapter } from "./i-repository-adapters";
-import { LocalStorageKeyValueRepositoryAdapter } from "./local-storage-key-value-repository-adapter";
+import { LocalStorageKeyValueAdapterWithNumberAndCategories } from "./local-storage-key-value-adapter-for-number-and-categories";
 
 /*
     Implementation of WritableRepositoryAdapter for browser memory based key-value repository.
 */
 
-export class BrowserMemorykeyValueRepositoryAdapter implements WritableRepositoryAdapter {
+export class BrowserMemorykeyValueAdapterWithNumberAndCategories implements WritableRepositoryAdapter {
     implementation: WritableRepositoryAdapter;
+    
     constructor(private version: number, ...categories: string[]) {
-        this.implementation = new LocalStorageKeyValueRepositoryAdapter(version, ...categories);
+        this.implementation = new LocalStorageKeyValueAdapterWithNumberAndCategories(version, ...categories);
     }
 
     /*

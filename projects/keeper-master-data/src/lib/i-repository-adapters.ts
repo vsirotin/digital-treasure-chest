@@ -21,12 +21,12 @@ export interface WritableRepositoryAdapter extends IReadOnlyRepositoryAdapter {
         @param key Key
         @param object Object
     */
-    fetch(key: string): Promise<Object | undefined>;
+    fetch(key: string): Promise<any | undefined>;
 
     /*
         Save an object to repository by key.
         @param key Key
         @param object Object
     */
-    saveObject(key: string, object: Object): Promise<void>;
+    saveObject(key: string, object: any): Promise<void>;
 }
