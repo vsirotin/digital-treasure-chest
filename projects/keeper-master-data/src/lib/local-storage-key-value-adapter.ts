@@ -1,11 +1,11 @@
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
-import { WritableRepositoryAdapter } from "./i-repository-adapters";
+import { WritableRepositoryAdapter, WritableRepositoryAdapterAsync } from "./i-repository-adapters";
 
 /*
     Implementation of WritableRepositoryAdapter for local storage based key-value repository.
 */
 
-export class LocalStorageKeyValueAdapter implements WritableRepositoryAdapter {
+export class LocalStorageKeyValueAdapter implements WritableRepositoryAdapter<string> {
 
     protected logger: ILogger = LoggerFactory.getLogger("LocalStorageKeyValueRepositoryAdapter");
 
@@ -14,14 +14,14 @@ export class LocalStorageKeyValueAdapter implements WritableRepositoryAdapter {
         @param key Key
         @param object Object
     */
-    async fetch(key: string): Promise<Object | undefined> {
+    fetch(key: string): string  {
         const storageKey = this.generateStorageKey(key);
         const res = localStorage.getItem(this.generateStorageKey(key));
         this.logger.log("In fetch storageKey=" + storageKey + " res=" + res);
-        if (res == null) {
-            return undefined;
+        if(res === null) {
+            return "";
         }
-        return JSON.parse(res as string);
+        return res;
     }
 
     /*

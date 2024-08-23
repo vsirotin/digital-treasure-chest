@@ -1,72 +1,138 @@
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
-import { IKeeperMasterDataKeyValue } from "./i-keyed-keeper-master-data";
-import { IReadOnlyRepositoryAdapter, WritableRepositoryAdapter } from "./i-repository-adapters";
+import { KeeperMasterDataAsync, KeeperMasterDataSync } from "./i-keyed-keeper-master-data";
+import { IRepositoryReader, RepositoryAdapter, RepositoryReaderAsync, RepositoryReaderSync, RepositoryWriterAsync, RepositoryWriterSync } from "./i-repository-adapters";
+
 
 /*
     Implementation of IKeeperMasterDataKeyValue with key-value based data model.
 */
 
-export class KeeperMasterDataKeyValue<T> implements IKeeperMasterDataKeyValue<T> {
+export class KeeperMasterDataKeyValueSync<T> extends KeeperMasterDataSync<T> {
+
     private logger: ILogger;
 
-    /*
-        Constructor. Creates an instance of KeeperMasterDataKeyValue.
-        @param componentCoordinate Component coordinate
-        @param componentVersion Component version
-        @param repositoryAdapters Repository adapters. Should be ordered by probability of data presence.
-    */
-    constructor(protected repositoryAdapters: IReadOnlyRepositoryAdapter[]) {
-        this.logger = LoggerFactory.getLogger("KeeperMasterDataKeyValue");
-        if (repositoryAdapters.length <= 0) {
-            throw new Error("repositoryAdapters must have at least one element.");
+
+    constructor(protected repositoryAdapter: RepositoryAdapter<T>, 
+        protected readers: IRepositoryReader<T>[] = []) {
+        super();
+        this.logger = LoggerFactory.getLogger("KeeperMasterDataKeyValueSync");
+        if(this.readers.find((reader) => {reader.isAsync})){
+            throw new Error("KeeperMasterDataKeyValueSync: Async reader found in the list of readers. Only sync readers are allowed.");
         }
         this.logger.log("KeyedKeeperMasterData created");
     }
 
-    private isWritableRepositoryAdapter(obj: any): obj is WritableRepositoryAdapter {
-        return typeof obj.saveObject === 'function';
+    override saveObjectSync(key: string, data: T): void {
+        this.logger.log("In saveObjectSync key=" + key + " data=" + data);
+        const writer = this.repositoryAdapter.writer as RepositoryWriterSync<T>;
+        writer.saveObjectSync(key, data);
     }
 
-    /*
-        Find a value by key in chain of repository accessors and save it, if possible in first of then, that is able to save it.
-        @param key Key
-        @returns Promise with value or undefined
-    */
-    async find(key: string): Promise<T | undefined> {
-        const n = this.repositoryAdapters.length;
-        const promises = [];
-        for (let i = 0; i < n; i++) {
-            let keeper = this.repositoryAdapters[i];
-            let promise = keeper.fetch(key).then((value: Object | undefined) => {
-                this.logger.debug("In find key=" + key + " value=" + JSON.stringify(value));
-                if (value) {
-                    //Try to find out a keeper to save the value
-                    for (let j = 0; j < i; j++) {
-                        let child = this.repositoryAdapters[j];
-                        if (this.isWritableRepositoryAdapter(child)) {
-                            const writableKeeper = child as WritableRepositoryAdapter;
-                            writableKeeper.saveObject(key, value).then(() => {
-                                this.logger.debug("In find key=" + key + " value=" + JSON.stringify(value) + " saved");
-                            });
-                            break;
-                        }
-                    }
-                    return value as T;
-                } else {
-                    return undefined;
-                }
 
-            });
-            promises.push(promise);
-        }
-        const results = await Promise.all(promises);
-        const result = results.find(value => value !== undefined);
+    override findSync(key: string): T|undefined {
+        this.logger.log("In findSync key=" + key);
 
-        if (result) {
+        const adapterReader = this.repositoryAdapter.reader as RepositoryReaderSync<T>;
+
+        let result = adapterReader.read(key);
+
+        if(result) {
+            this.logger.log("In findSync 1 key=", key, " result=", result);
             return result;
-        } else {
-            this.logger.warn("In find key=" + key + " value not found. Result undefined");
+        }
+
+        for(const reader of this.readers) {
+            const readerSync = reader as RepositoryReaderSync<T>;
+            result = readerSync.read(key);
+            if(result) {
+                //If we are heare, we have found the value is not keeped repositoryAdapter. So we need to save it in it.
+                if (this.repositoryAdapter.writer) {
+                    const writerSync = this.repositoryAdapter.writer as RepositoryWriterSync<T>;
+                    writerSync.saveObjectSync(key, result);             
+                }
+                return result;
+            }
+        }
+        this.logger.log("In findSync 2 key=", key, " result=", result);
+        return result;
+    }
+}
+
+export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
+    private logger: ILogger;
+
+
+    constructor(protected repositoryAdapter: RepositoryAdapter<T>, 
+        protected readers: IRepositoryReader<T>[] = []) {
+        super();
+        this.logger = LoggerFactory.getLogger("KeeperMasterDataKeyValueAsync");
+        this.logger.log("KeeperMasterDataKeyValueAsync created");
+    }
+
+    override async saveObjectAsync(key: string, data: T): Promise<void> {
+        const writer = this.repositoryAdapter.writer as RepositoryWriterAsync<T>;
+        return writer.saveObjectAsync(key, data);
+    }
+
+
+    override async findAsync(key: string): Promise<T|undefined> {
+
+        const adapterReader = this.repositoryAdapter.reader;
+
+        let result = await this.readDataWithSingleReader(key, adapterReader);
+
+        if(result) {
+            return result;
+        }
+
+        result = await this.readDataWithMultipleReadersRecurcively(key, this.readers);
+        if(result) {
+            //If we are heare, we have found the value is not keeped repositoryAdapter. So we need to save it in it.
+            if (this.repositoryAdapter.writer) {
+                const writer = this.repositoryAdapter.writer;
+                if (writer.isAsync) {
+                    const writerAsync = writer as RepositoryWriterAsync<T>;
+                    await writerAsync.saveObjectAsync(key, result);
+                }else {
+                    const writerSync = writer as RepositoryWriterSync<T>;
+                    writerSync.saveObjectSync(key, result);
+                }               
+            }
+        }
+
+        return result;
+    }
+
+
+
+    private async readDataWithSingleReader(key: string, reader: IRepositoryReader<T>): Promise<T | undefined> {
+        if (!reader.isAsync) {
+            const readerSync = reader as RepositoryReaderSync<T>;
+            return readerSync.read(key);
+        }
+        const readerAsync = reader as RepositoryReaderAsync<T>;
+        let result =  await readerAsync.fetch(key);
+        if (result) {
+             //If we are heare, we have found the value is not keeped repositoryAdapter. So we need to save it in it.
+             if (this.repositoryAdapter.writer) {
+                const writerSync = this.repositoryAdapter.writer as RepositoryWriterAsync<T>;
+                writerSync.saveObjectAsync(key, result);             
+             }
+            return result;
+        }
+        return result;
+        
+    }
+
+    private async readDataWithMultipleReadersRecurcively(key: string, readers: IRepositoryReader<T>[]): Promise<T | undefined> {
+        if (readers.length === 0) {
             return undefined;
         }
+        const reader = readers[0];
+        const result = await this.readDataWithSingleReader(key, reader);
+        if (result) {
+            return result;
+        }
+        return this.readDataWithMultipleReadersRecurcively(key, readers.slice(1));
     }
 }
