@@ -1,3 +1,5 @@
+import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
+
 /*
     API for a repository reader.
 */
@@ -87,12 +89,12 @@ export interface RepositoryAdapter<T>  {
     /*
         Repository reader.
     */
-    readonly reader: IRepositoryReader<T>;
+    reader: IRepositoryReader<T>;
 
     /*
         Repository writer.
     */
-    readonly writer: IRepositoryWiter<T>;
+    writer: IRepositoryWiter<T>;
     /*
         Shows if an adapter is async.
     */
@@ -102,29 +104,84 @@ export interface RepositoryAdapter<T>  {
     API for a synchronesly repository adapter.
 */
 export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
-    /*  
-        Repository reader.
-    */
-    abstract reader: RepositoryReaderSync<T>;
+    reader: RepositoryReaderSync<T>;
+    writer: RepositoryWriterSync<T>;
+
+    logger: ILogger = LoggerFactory.getLogger("RepositoryAdapterSync");
+
+    constructor(reader: RepositoryReaderSync<T>, writer: RepositoryWriterSync<T>) {
+        this.reader = reader;
+        this.writer = writer;
+    };
+    readonly isAsync: boolean = false;
 
     /*
-        Repository writer.
+        Save an object to repository by key synchronesly.
+        @param key Key
+        @param object Object
     */
-    abstract writer: RepositoryWriterSync<T>;
-    readonly isAsync: boolean = false;
+    saveObjectSync(key: string, object: any): void{
+        this.logger.log("In saveObjectSync key=" + key + " object=" + object);
+        this.writer.saveObjectSync(key, object);
+    }
+
+    /*
+        Read an object from repository by key synchronesly.
+        @param key Key
+        @returns Object
+    */
+    readSync(key: string): T|undefined{
+        const result = this.reader.readSync(key);
+        this.logger.log("In readSync key=" + key + " result=" + result);
+        return result;
+    }
+
+    /*
+        Remove an object from adapter's own storage by key synchronesly.
+        @param key  Key
+    */
+    abstract removeValueForkeySync(key: string): void;
 }
 /*
     API for an asynchronesly repository adapter.
 */
 export abstract class RepositoryAdapterAsync<T> implements RepositoryAdapter<T> {
-    /*  
-        Repository reader.
-    */
-    abstract reader: RepositoryReaderAsync<T>;
+    reader: RepositoryReaderAsync<T>;
+    writer: RepositoryWriterAsync<T>;
+
+    logger: ILogger = LoggerFactory.getLogger("RepositoryAdapterAsync");
+
+    constructor(reader: RepositoryReaderAsync<T>, writer: RepositoryWriterAsync<T>) {
+        this.reader = reader;
+        this.writer = writer;
+    };
+
+    readonly isAsync: boolean = true;
 
     /*
-        Repository writer.
-    */  
-    abstract writer: RepositoryWriterAsync<T>;
-    readonly isAsync: boolean = true;
+        Save an object to repository by key asynchronesly.
+        @param key Key
+        @param object Object
+    */
+    saveObjectAsync(key: string, object: any): Promise<void>{
+        this.logger.log("In saveObjectAsync key=" + key + " object=" + object);
+        return this.writer.saveObjectAsync(key, object);
+        
+    }
+
+    /*
+        Read an object from repository by key asynchronesly.
+        @param key Key
+        @returns Object
+    */
+    readAsync(key: string): Promise<T|undefined>{
+        this.logger.log("In readAsync key=" + key);
+        return this.reader.readAsync(key);
+    }
+
+    /*
+        Remove an object from adapter's own storage by key asynchronesly.
+        @param key  Key
+    */
+    abstract removeValueForkeyAsync(key: string): void;
 }

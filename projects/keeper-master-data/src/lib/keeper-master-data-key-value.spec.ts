@@ -1,4 +1,4 @@
-import { LoggerFactory } from "@vsirotin/log4ts";
+import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { KeeperMasterDataAsync, KeeperMasterDataSync } from "./i-keyed-keeper-master-data";
 import { RepositoryAdapterAsync, RepositoryAdapterSync, RepositoryReaderAsync, RepositoryReaderSync, RepositoryWriterAsync, RepositoryWriterSync } from "./i-repository-adapters";
 import { KeeperMasterDataKeyValueAsync, KeeperMasterDataKeyValueSync } from "./keeper-master-data-key-value";
@@ -6,14 +6,25 @@ import { KeeperMasterDataKeyValueAsync, KeeperMasterDataKeyValueSync } from "./k
 describe ('KeeperMasterDataKeyValue...', () => {
 
     describe ('KeeperMasterDataKeyValueSync...', () => {
-        let syncReader: RepositoryReaderSync<string>|undefined = undefined;
-        let syncWriter: RepositoryWriterSync<string>|undefined = undefined;
+        let syncReader: RepositoryReaderSync<string>;
+        let syncWriter: RepositoryWriterSync<string>;
         let value: string|undefined = undefined;
-        let adapterSync: RepositoryAdapterSync<string>|undefined = undefined;
-        let keeperSync: KeeperMasterDataSync<string>|undefined = undefined;
+        let adapterSync: RepositoryAdapterSync<string>;
+        let keeperSync: KeeperMasterDataSync<string>;
+        let testLogger : ILogger;
+
+        class TestAdapterSync extends RepositoryAdapterSync<string>{
+            override removeValueForkeySync(key: string): void {
+                throw new Error("Method not implemented.");
+            }
+            constructor(reader: RepositoryReaderSync<string>, writer: RepositoryWriterSync<string>){
+                super(reader, writer);
+            }
+        }
 
         beforeEach(() => {
             
+            testLogger = LoggerFactory.getLogger("KeeperMasterDataKeyValueSync");
 
             syncReader = {
                 isAsync: false,
@@ -27,11 +38,7 @@ describe ('KeeperMasterDataKeyValue...', () => {
                     value = val;
                 }
             };
-            adapterSync = {
-                isAsync: false,
-                reader: syncReader,
-                writer: syncWriter
-            };
+            adapterSync = new TestAdapterSync(syncReader, syncWriter);
 
             keeperSync = new KeeperMasterDataKeyValueSync<string>(adapterSync as RepositoryAdapterSync<string>);
            
@@ -39,11 +46,6 @@ describe ('KeeperMasterDataKeyValue...', () => {
 
         afterEach(() => {
             value = undefined;
-            syncReader = undefined;
-            syncReader = undefined;
-            syncWriter = undefined;
-            adapterSync = undefined;
-            keeperSync = undefined;
         });
 
         describe ('by creation without readers, only with adapter...', () => {
@@ -213,11 +215,20 @@ describe ('KeeperMasterDataKeyValue...', () => {
     });
 
     describe ('KeeperMasterDataKeyValueAync', () => {
-        let asyncReader: RepositoryReaderAsync<string>|undefined = undefined;
-        let asyncWriter: RepositoryWriterAsync<string>|undefined = undefined;
+        let asyncReader: RepositoryReaderAsync<string>;
+        let asyncWriter: RepositoryWriterAsync<string>;
         let valueA: string|undefined = undefined;
-        let adapterAsync: RepositoryAdapterAsync<string>|undefined = undefined;
-        let keeperAsync: KeeperMasterDataAsync<string>|undefined = undefined;
+        let adapterAsync: RepositoryAdapterAsync<string>;
+        let keeperAsync: KeeperMasterDataAsync<string>;
+
+        class TestAdapterAsync extends RepositoryAdapterAsync<string>{
+            override removeValueForkeyAsync(key: string): void {
+                throw new Error("Method not implemented.");
+            }
+            constructor(reader: RepositoryReaderAsync<string>, writer: RepositoryWriterAsync<string>){
+                super(reader, writer);
+            }
+        }
 
         beforeEach(() => {
             
@@ -234,11 +245,7 @@ describe ('KeeperMasterDataKeyValue...', () => {
                     return Promise.resolve();
                 }
             };
-            adapterAsync = {
-                isAsync: true,
-                reader: asyncReader,
-                writer: asyncWriter
-            };
+            adapterAsync = new TestAdapterAsync(asyncReader, asyncWriter);
 
             keeperAsync = new KeeperMasterDataKeyValueAsync<string>(adapterAsync as RepositoryAdapterAsync<string>);
            
@@ -246,11 +253,6 @@ describe ('KeeperMasterDataKeyValue...', () => {
 
         afterEach(() => {
             valueA = undefined;
-            asyncReader = undefined;
-            asyncReader = undefined;
-            asyncWriter = undefined;
-            adapterAsync = undefined;
-            keeperAsync = undefined;
         });
 
         describe ('by creation without readers, only with adapter...', () => {
@@ -303,11 +305,6 @@ describe ('KeeperMasterDataKeyValue...', () => {
 
             afterEach(() => {
                 valueA = undefined;
-                asyncReader = undefined;
-                asyncReader = undefined;
-                asyncWriter = undefined;
-                adapterAsync = undefined;
-                keeperAsync = undefined;
                 valueB = undefined;
                 asyncReader1 = undefined;
                 asyncWriter1 = undefined;
@@ -393,11 +390,6 @@ describe ('KeeperMasterDataKeyValue...', () => {
 
             afterEach(() => {
                 valueA = undefined;
-                asyncReader = undefined;
-                asyncReader = undefined;
-                asyncWriter = undefined;
-                adapterAsync = undefined;
-                keeperAsync = undefined;
                 value2 = undefined;
                 asyncReader1 = undefined;
                 asyncReader2 = undefined;
