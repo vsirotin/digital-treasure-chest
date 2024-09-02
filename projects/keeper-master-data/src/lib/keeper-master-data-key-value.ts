@@ -34,16 +34,16 @@ export class KeeperMasterDataKeyValueSync<T> extends KeeperMasterDataSync<T> {
 
         const adapterReader = this.repositoryAdapter.reader as RepositoryReaderSync<T>;
 
-        let result = adapterReader.read(key);
+        let result = adapterReader.readSync(key);
+        this.logger.log("In findSync 1 key=", key, " result=", result);
 
         if(result) {
-            this.logger.log("In findSync 1 key=", key, " result=", result);
             return result;
         }
 
         for(const reader of this.readers) {
             const readerSync = reader as RepositoryReaderSync<T>;
-            result = readerSync.read(key);
+            result = readerSync.readSync(key);
             if(result) {
                 //If we are heare, we have found the value is not keeped repositoryAdapter. So we need to save it in it.
                 if (this.repositoryAdapter.writer) {
@@ -108,10 +108,10 @@ export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
     private async readDataWithSingleReader(key: string, reader: IRepositoryReader<T>): Promise<T | undefined> {
         if (!reader.isAsync) {
             const readerSync = reader as RepositoryReaderSync<T>;
-            return readerSync.read(key);
+            return readerSync.readSync(key);
         }
         const readerAsync = reader as RepositoryReaderAsync<T>;
-        let result =  await readerAsync.fetch(key);
+        let result =  await readerAsync.readAsync(key);
         if (result) {
              //If we are heare, we have found the value is not keeped repositoryAdapter. So we need to save it in it.
              if (this.repositoryAdapter.writer) {
