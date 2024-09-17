@@ -1,33 +1,64 @@
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
-import { LocalStorageAdapter } from "./local-storage-adapter";
+import { RepositoryAdapterSync } from "../../i-repository-adapters";
+import { LocalStorageReader, LocalStorageWriter } from "./local-storage-adapter";
 
 /*
     Implementation of WritableRepositoryAdapter for local storage based key-value repository with version and hierarhy of categories.
 */
-export class LocalStorageAdapterWithVersionsAndCategories extends LocalStorageAdapter {
+export class LocalStorageAdapterWithVersionsAndCategories extends RepositoryAdapterSync<string> {
     private prefix: string;
 
     override logger: ILogger = LoggerFactory.getLogger("LocalStorageAdapterWithVersionsAndCategories");
 
     constructor(private version: number, ...categories: string[]) {
-        super();
+        super(new LocalStorageReaderWithVersionsAndCategories(version, ...categories), 
+        new LocalStorageWriterWithVersionsAndCategories(version, ...categories));
         this.prefix = categories.join("-") + "-v-" + version;
-        this.logger.log("LocalStorageAdapterWithVersionsAndCategories created for " + this.prefix);
+        this.logger.log(" created");
     }
 
-    override saveObjectSync(key: string, data: string): void {
-        super.saveObjectSync(this.generateStorageKey(key), data);
+
+    override removeValueForkeySync(key: string): void {
+        this.logger.log("removeValueForkeySync: key=" + key);
+        localStorage.removeItem(generateStorageKey(key, this.prefix));
+    }
+
+    
+}
+
+function generateStorageKey(key: string, prefix: string): string {
+    return prefix + "-" + key;
+}
+
+export class LocalStorageReaderWithVersionsAndCategories extends LocalStorageReader {
+    private prefix: string;
+
+    constructor(private version: number, ...categories: string[]) {
+        super();
+        this.prefix = categories.join("-") + "-v-" + version;
     }
 
     override readSync(key: string): string | undefined {
-        return super.readSync(this.generateStorageKey(key));
+        const generatedKey = generateStorageKey(key, this.prefix);
+        const result = super.readSync(generatedKey);
+        this.logger.log("readSync: generatedKey=" + generatedKey + ", result=" + result);
+        return result;
     }
 
-    override removeValueForkeySync(key: string): void {
-        super.removeValueForkeySync(this.generateStorageKey(key));
+}
+
+export class LocalStorageWriterWithVersionsAndCategories extends LocalStorageWriter {
+    private prefix: string;
+
+    constructor(private version: number, ...categories: string[]) {
+        super();
+        this.prefix = categories.join("-") + "-v-" + version;
     }
 
-    private generateStorageKey(key: string): string {
-        return this.prefix + "-" + key;
+    override saveObjectSync(key: string, data: string): void {
+        const generatedKey = generateStorageKey(key, this.prefix);
+        super.saveObjectSync(generatedKey, data);
+        this.logger.log("saveObjectSync: generatedKey=" + generatedKey + ", data=" + data);
     }
+
 }

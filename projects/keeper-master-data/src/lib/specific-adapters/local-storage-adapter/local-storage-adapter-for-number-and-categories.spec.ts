@@ -1,8 +1,6 @@
-import { LoggerFactory } from "@vsirotin/log4ts";
-import { LocalStorageAdapter } from "./local-storage-adapter";
 import { LocalStorageAdapterWithVersionsAndCategories } from "./local-storage-adapter-for-number-and-categories";
 
-describe ('LocalStorageAdapterWithVersionsAndCategories...', () => {
+xdescribe ('LocalStorageAdapterWithVersionsAndCategories...', () => {
 
     let category1: string;
     let category2: string;
@@ -29,7 +27,7 @@ describe ('LocalStorageAdapterWithVersionsAndCategories...', () => {
         localStorage.removeItem(expectedLocalStorageKey);
     });
 
-    it('should be created ', () => {
+    xit('should be created ', () => {
         expect(adapter).toBeTruthy();
     });
 

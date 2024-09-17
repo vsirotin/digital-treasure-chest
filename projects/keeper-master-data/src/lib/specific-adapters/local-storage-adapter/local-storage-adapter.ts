@@ -4,7 +4,7 @@ import { RepositoryAdapterSync, RepositoryReaderSync, RepositoryWriterSync } fro
 /*
     Implementation of RepositoryAdapter for local storage based key-value repository.
 */
-class LocalStorageReader implements RepositoryReaderSync<string> {
+export class LocalStorageReader implements RepositoryReaderSync<string> {
     protected logger: ILogger = LoggerFactory.getLogger("LocalStorageReader");
     
     /*
@@ -30,7 +30,7 @@ class LocalStorageReader implements RepositoryReaderSync<string> {
 /*
     Implementation of RepositoryWriter for local storage based key-value repository.
 */
-class LocalStorageWriter implements RepositoryWriterSync<string> {
+export class LocalStorageWriter implements RepositoryWriterSync<string> {
     protected logger: ILogger = LoggerFactory.getLogger("LocalStorageWriter");
 
     /*

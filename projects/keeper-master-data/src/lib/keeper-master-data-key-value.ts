@@ -1,6 +1,6 @@
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { KeeperMasterDataAsync, KeeperMasterDataSync } from "./i-keyed-keeper-master-data";
-import { IRepositoryReader, RepositoryAdapter, RepositoryReaderAsync, RepositoryReaderSync, RepositoryWriterAsync, RepositoryWriterSync } from "./i-repository-adapters";
+import { IRepositoryReader, RepositoryAdapter, RepositoryAdapterAsync, RepositoryAdapterSync, RepositoryReaderAsync, RepositoryReaderSync, RepositoryWriterAsync, RepositoryWriterSync } from "./i-repository-adapters";
 
 
 /*
@@ -24,18 +24,18 @@ export class KeeperMasterDataKeyValueSync<T> extends KeeperMasterDataSync<T> {
 
     override saveObjectSync(key: string, data: T): void {
         this.logger.log("In saveObjectSync key=" + key + " data=" + data);
-        const writer = this.repositoryAdapter.writer as RepositoryWriterSync<T>;
-        writer.saveObjectSync(key, data);
+        (this.repositoryAdapter as RepositoryAdapterSync<T>).saveObjectSync(key, data);
     }
 
 
     override findSync(key: string): T|undefined {
         this.logger.log("In findSync key=" + key);
 
-        const adapterReader = this.repositoryAdapter.reader as RepositoryReaderSync<T>;
+        //const adapterReader = this.repositoryAdapter.reader as RepositoryReaderSync<T>;
+        const adapterSync = this.repositoryAdapter as RepositoryAdapterSync<T>;
 
-        let result = adapterReader.readSync(key);
-        this.logger.log("In findSync 1 key=", key, " result=", result);
+        let result = adapterSync.readSync(key);
+        this.logger.log("In findSync after adapterSync.readSync key=", key, " result=", result);
 
         if(result) {
             return result;
@@ -44,16 +44,15 @@ export class KeeperMasterDataKeyValueSync<T> extends KeeperMasterDataSync<T> {
         for(const reader of this.readers) {
             const readerSync = reader as RepositoryReaderSync<T>;
             result = readerSync.readSync(key);
+            this.logger.log("In findSync after readerSync.readSync key=", key, " result=", result);
             if(result) {
                 //If we are heare, we have found the value is not keeped repositoryAdapter. So we need to save it in it.
-                if (this.repositoryAdapter.writer) {
-                    const writerSync = this.repositoryAdapter.writer as RepositoryWriterSync<T>;
-                    writerSync.saveObjectSync(key, result);             
-                }
-                return result;
+                adapterSync.saveObjectSync(key, result);             
+                this.logger.log("In findSync after adapterSync.saveObjectSync key=", key, " result=", result);
+                break;
             }
         }
-        this.logger.log("In findSync 2 key=", key, " result=", result);
+        this.logger.log("In findSync before return key=", key, " result=", result);
         return result;
     }
 }
@@ -70,69 +69,58 @@ export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
     }
 
     override async saveObjectAsync(key: string, data: T): Promise<void> {
-        const writer = this.repositoryAdapter.writer as RepositoryWriterAsync<T>;
-        return writer.saveObjectAsync(key, data);
+        this.logger.log("In saveObjectAsync key=" + key + " data=" + data);
+        return (this.repositoryAdapter as RepositoryAdapterAsync<T>).saveObjectAsync(key, data);
     }
 
 
     override async findAsync(key: string): Promise<T|undefined> {
+        this.logger.log("In findAsync key=" + key);
+        let result: Awaited<T>|undefined = undefined;
+        if(this.repositoryAdapter.isAsync) {
+           
+            const adapterAsync = this.repositoryAdapter as RepositoryAdapterAsync<T>;
 
-        const adapterReader = this.repositoryAdapter.reader;
-
-        let result = await this.readDataWithSingleReader(key, adapterReader);
-
-        if(result) {
-            return result;
-        }
-
-        result = await this.readDataWithMultipleReadersRecurcively(key, this.readers);
-        if(result) {
-            //If we are heare, we have found the value is not keeped repositoryAdapter. So we need to save it in it.
-            if (this.repositoryAdapter.writer) {
-                const writer = this.repositoryAdapter.writer;
-                if (writer.isAsync) {
-                    const writerAsync = writer as RepositoryWriterAsync<T>;
-                    await writerAsync.saveObjectAsync(key, result);
-                }else {
-                    const writerSync = writer as RepositoryWriterSync<T>;
-                    writerSync.saveObjectSync(key, result);
-                }               
+            result = await adapterAsync.readAsync(key);
+            this.logger.log("In findAsync 1 key=", key, " result=", result);
+    
+            if(result) {
+                return result;
+            }
+        }else {
+            const adapterSync = this.repositoryAdapter as RepositoryAdapterSync<T>;
+            result = Promise.resolve(adapterSync.readSync(key)) as Awaited<T>;
+            this.logger.log("In findAsync 2 key=", key, " result=", result);
+            if(result) {
+                return result;
             }
         }
 
+        for(const reader of this.readers) {
+            if(reader.isAsync) {
+                const readerAsync = reader as RepositoryReaderAsync<T>;
+                result =  await readerAsync.readAsync(key);
+                this.logger.log("In findAsync after readerAsync.readAsync key=", key, " result=", result);
+                if(result) {
+                    break;
+                }
+            } else {
+                const readerSync = reader as RepositoryReaderSync<T>;
+                const resultSync = readerSync.readSync(key);               
+                this.logger.log("In findSync after readerSync.readSync key=", key, " result=", result);
+                if(result) {
+                    result = Promise.resolve(resultSync) as Awaited<T>;
+                    break;
+                }
+            }
+        }
+        if(result) {
+            //If we are heare, we have found the value is not keeped repositoryAdapter. So we need to save it in it.
+           // await adapterAsync.saveObjectAsync(key, result);
+            this.logger.log("In findAsync after adapterAsync.saveObjectAsync key=", key, " result=", result);
+        }
+
         return result;
     }
 
-
-
-    private async readDataWithSingleReader(key: string, reader: IRepositoryReader<T>): Promise<T | undefined> {
-        if (!reader.isAsync) {
-            const readerSync = reader as RepositoryReaderSync<T>;
-            return readerSync.readSync(key);
-        }
-        const readerAsync = reader as RepositoryReaderAsync<T>;
-        let result =  await readerAsync.readAsync(key);
-        if (result) {
-             //If we are heare, we have found the value is not keeped repositoryAdapter. So we need to save it in it.
-             if (this.repositoryAdapter.writer) {
-                const writerSync = this.repositoryAdapter.writer as RepositoryWriterAsync<T>;
-                writerSync.saveObjectAsync(key, result);             
-             }
-            return result;
-        }
-        return result;
-        
-    }
-
-    private async readDataWithMultipleReadersRecurcively(key: string, readers: IRepositoryReader<T>[]): Promise<T | undefined> {
-        if (readers.length === 0) {
-            return undefined;
-        }
-        const reader = readers[0];
-        const result = await this.readDataWithSingleReader(key, reader);
-        if (result) {
-            return result;
-        }
-        return this.readDataWithMultipleReadersRecurcively(key, readers.slice(1));
-    }
 }

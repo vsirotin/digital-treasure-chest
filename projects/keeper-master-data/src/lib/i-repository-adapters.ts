@@ -86,33 +86,16 @@ export abstract class RepositoryWriterAsync<T> implements IRepositoryWiter<T> {
     API for a repository adapter.
 */
 export interface RepositoryAdapter<T>  {
-    /*
-        Repository reader.
-    */
-    reader: IRepositoryReader<T>;
-
-    /*
-        Repository writer.
-    */
-    writer: IRepositoryWiter<T>;
-    /*
-        Shows if an adapter is async.
-    */
     readonly isAsync: boolean;
 }
 /*
     API for a synchronesly repository adapter.
 */
 export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
-    reader: RepositoryReaderSync<T>;
-    writer: RepositoryWriterSync<T>;
 
     logger: ILogger = LoggerFactory.getLogger("RepositoryAdapterSync");
 
-    constructor(reader: RepositoryReaderSync<T>, writer: RepositoryWriterSync<T>) {
-        this.reader = reader;
-        this.writer = writer;
-    };
+    constructor(private reader: RepositoryReaderSync<T>, private writer: RepositoryWriterSync<T>) {};
     readonly isAsync: boolean = false;
 
     /*
@@ -146,15 +129,10 @@ export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
     API for an asynchronesly repository adapter.
 */
 export abstract class RepositoryAdapterAsync<T> implements RepositoryAdapter<T> {
-    reader: RepositoryReaderAsync<T>;
-    writer: RepositoryWriterAsync<T>;
 
     logger: ILogger = LoggerFactory.getLogger("RepositoryAdapterAsync");
 
-    constructor(reader: RepositoryReaderAsync<T>, writer: RepositoryWriterAsync<T>) {
-        this.reader = reader;
-        this.writer = writer;
-    };
+    constructor(private reader: RepositoryReaderAsync<T>, private writer: RepositoryWriterAsync<T>) {};
 
     readonly isAsync: boolean = true;
 

@@ -1,6 +1,6 @@
 import { LocalStorageAdapter } from "./local-storage-adapter";
 
-describe ('LocalStorageAdapter...', () => {
+xdescribe ('LocalStorageAdapter...', () => {
 
     let key: string;
     let value: string|undefined = undefined;

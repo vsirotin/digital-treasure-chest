@@ -1,14 +1,16 @@
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
-import { IReadOnlyRepositoryAdapterAsync } from "./i-repository-adapters";
+import { RepositoryReaderAsync } from "../i-repository-adapters";
 
 /*
     Implementation of IReadOnlyRepositoryAdapter for HTTP-based key-value repository.
 */
 
-export class HTTPKeyValueRepositoryAdapter implements IReadOnlyRepositoryAdapterAsync {
+export class HTTPKeyValueRepositoryReader  extends RepositoryReaderAsync<Object> {
+
 
     private logger: ILogger;
     constructor(private urlPrefix: string) {
+        super();
         this.logger = LoggerFactory.getLogger("HTTPKeyValueRepositoryAdapter for " + urlPrefix);
         this.logger.log("HTTPKeyValueRepositoryAdapter created for ", urlPrefix);
     }
@@ -18,7 +20,8 @@ export class HTTPKeyValueRepositoryAdapter implements IReadOnlyRepositoryAdapter
         @param key Key
         @param object Object
     */
-    async fetch(key: string): Promise<Object | undefined> {
+    override async readAsync(key: string): Promise<Object | undefined> {
+    
         let path = this.urlPrefix + key + ".json";
         this.logger.debug("Start of fetching from " + path);
         return await fetch(path)

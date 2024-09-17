@@ -51,6 +51,55 @@ describe('Log4ts', () => {
     expect(currentLevel).toBe(2);
   });
 
+  it('differen type should correct presented separate and in group', () => {
+    
+    logger1 = new Log4ts();
+    logger1.setLogLevel(0);
+
+    const s = 'test';
+    logger1.log(s);
+    expect(consoleSpyLog).toHaveBeenCalledWith("test");
+
+    const n = 123456789;
+    logger1.log(n);
+    expect(consoleSpyLog).toHaveBeenCalledWith("123456789");
+
+
+    const pi = 3.1415927;
+    logger1.log(pi);
+    expect(consoleSpyLog).toHaveBeenCalledWith("3.1415927");
+
+    const b = true;
+    logger1.log(b);
+    expect(consoleSpyLog).toHaveBeenCalledWith("true");
+
+    const a = [1, 2, 3];
+    logger1.log(a);
+    expect(consoleSpyLog).toHaveBeenCalledWith("[1,2,3]");
+
+    const o = {a: 1, b: 2, c: 3};
+    logger1.log(o);
+    expect(consoleSpyLog).toHaveBeenCalledWith('{"a":1,"b":2,"c":3}'); 
+
+    const f = function(a: number, b: number) { return a + b; };
+    logger1.log(f);
+    const expectation1 = f.toString(); 
+    expect(consoleSpyLog).toHaveBeenCalledWith(expectation1);
+
+    const u = undefined; 
+    logger1.log(u);
+    expect(consoleSpyLog).toHaveBeenCalledWith("undefined");
+
+    const nll = null; 
+    logger1.log(nll);
+    expect(consoleSpyLog).toHaveBeenCalledWith("null");
+
+    logger1.log(s, n, pi, b, a, o, f, u, nll);
+    const expectation2 = 'test1234567893.1415927true[1,2,3]{"a":1,"b":2,"c":3}' + expectation1 + 'undefinednull';
+    expect(consoleSpyLog).toHaveBeenCalledWith(expectation2); 
+
+  });
+
   it('by naive using (without factoty) only warnings and errors should be logged', () => {
     logger1 = new Log4ts();
     logger1.log('test');

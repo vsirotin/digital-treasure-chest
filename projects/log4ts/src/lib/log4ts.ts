@@ -51,7 +51,7 @@ export class Log4ts implements ILogger, ILoggerInfo {
   * @param {any[]} args - Information parts for log message.
   */
   debug(...args: any[]) {
-    if (this.logLevel <= 0) console.debug(this.generateOutput(args.join(' ')));
+    if (this.logLevel <= 0) console.debug(this.generateOutput(args));
   }
 
 
@@ -60,7 +60,7 @@ export class Log4ts implements ILogger, ILoggerInfo {
 * @param {any[]} args - Information parts for log message.
 */
   log(...args: any[]) {
-    if (this.logLevel <= 1) console.log(this.generateOutput(args.join(' ')));
+    if (this.logLevel <= 1) console.log(this.generateOutput(args));
   }
 
   /**
@@ -68,7 +68,7 @@ export class Log4ts implements ILogger, ILoggerInfo {
    *  @param {any[]} args - Information parts for log message.
   */
   warn(...args: any[]) {
-    if (this.logLevel <= 2) console.warn(this.generateOutput(args.join(' ')));
+    if (this.logLevel <= 2) console.warn(this.generateOutput(args));
   }
 
   /**
@@ -77,11 +77,36 @@ export class Log4ts implements ILogger, ILoggerInfo {
    *  @param {any[]} args - Information parts for log message.
   */
   error(...args: any[]) {
-    if (this.logLevel <= 3) console.error(this.generateOutput(args.join(' ')));
+    if (this.logLevel <= 3) console.error(this.generateOutput(args));
   }
 
-  private generateOutput(message: string): string {
+  private generateOutput(args: any[]): string {
     const prefix = (this.path.length > 0)? this.path + LoggerFactory.defaultPathPostfix : "";
-    return prefix + message;
+    const t = args.map((arg) => this.convertAragument(arg)).join('');
+    return prefix + t;
+  }
+
+  private  isObject(value: any): boolean {
+    const res = value !== null && typeof value === 'object';
+    console.warn("-------isObject: value=", value, " res=", res);
+    return res;
+  }
+
+  private convertAragument(arg: any): string {
+    if (this.isObject(arg)) {
+      return JSON.stringify(arg);
+    }
+
+    if(arg === undefined) {
+      return "undefined";
+    }
+
+    if(arg === null) {
+      return "null";
+    }
+
+    return arg;
   }
 }
+
+

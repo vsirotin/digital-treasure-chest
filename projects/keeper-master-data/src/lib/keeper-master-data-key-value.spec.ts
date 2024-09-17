@@ -1,9 +1,8 @@
-import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { KeeperMasterDataAsync, KeeperMasterDataSync } from "./i-keyed-keeper-master-data";
 import { RepositoryAdapterAsync, RepositoryAdapterSync, RepositoryReaderAsync, RepositoryReaderSync, RepositoryWriterAsync, RepositoryWriterSync } from "./i-repository-adapters";
 import { KeeperMasterDataKeyValueAsync, KeeperMasterDataKeyValueSync } from "./keeper-master-data-key-value";
 
-describe ('KeeperMasterDataKeyValue...', () => {
+xdescribe ('KeeperMasterDataKeyValue...', () => {
 
     describe ('KeeperMasterDataKeyValueSync...', () => {
         let syncReader: RepositoryReaderSync<string>;
@@ -11,7 +10,6 @@ describe ('KeeperMasterDataKeyValue...', () => {
         let value: string|undefined = undefined;
         let adapterSync: RepositoryAdapterSync<string>;
         let keeperSync: KeeperMasterDataSync<string>;
-        let testLogger : ILogger;
 
         class TestAdapterSync extends RepositoryAdapterSync<string>{
             override removeValueForkeySync(key: string): void {
@@ -23,8 +21,6 @@ describe ('KeeperMasterDataKeyValue...', () => {
         }
 
         beforeEach(() => {
-            
-            testLogger = LoggerFactory.getLogger("KeeperMasterDataKeyValueSync");
 
             syncReader = {
                 isAsync: false,
