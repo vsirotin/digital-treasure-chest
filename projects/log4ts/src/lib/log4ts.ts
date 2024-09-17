@@ -88,7 +88,6 @@ export class Log4ts implements ILogger, ILoggerInfo {
 
   private  isObject(value: any): boolean {
     const res = value !== null && typeof value === 'object';
-    console.warn("-------isObject: value=", value, " res=", res);
     return res;
   }
 

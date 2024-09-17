@@ -93,7 +93,7 @@ export interface RepositoryAdapter<T>  {
 */
 export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
 
-    logger: ILogger = LoggerFactory.getLogger("RepositoryAdapterSync");
+    private logger: ILogger = LoggerFactory.getLogger("RepositoryAdapterSync");
 
     constructor(private reader: RepositoryReaderSync<T>, private writer: RepositoryWriterSync<T>) {};
     readonly isAsync: boolean = false;
@@ -115,7 +115,7 @@ export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
     */
     readSync(key: string): T|undefined{
         const result = this.reader.readSync(key);
-        this.logger.log("In readSync key=" + key + " result=" + result);
+        this.logger.log("In readSync key=", key, " result=", result);
         return result;
     }
 
@@ -130,7 +130,7 @@ export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
 */
 export abstract class RepositoryAdapterAsync<T> implements RepositoryAdapter<T> {
 
-    logger: ILogger = LoggerFactory.getLogger("RepositoryAdapterAsync");
+    private logger: ILogger = LoggerFactory.getLogger("RepositoryAdapterAsync");
 
     constructor(private reader: RepositoryReaderAsync<T>, private writer: RepositoryWriterAsync<T>) {};
 

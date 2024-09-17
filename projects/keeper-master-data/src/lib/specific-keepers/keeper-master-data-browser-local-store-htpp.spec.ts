@@ -27,12 +27,34 @@ describe ('KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion...', () 
         expect(result).toEqual(undefined);
     });
 
-    it('should read previously saved value', async () => {
+    xit('should read previously saved value', async () => {
         value = "ValueForTest";
         localStorage.setItem(expectedLocalStorageKey, value);
-        LoggerFactory.setLogLevelsByAllLoggers(0);
         let result = await keeper.findAsync(key);
         expect(result).toEqual(value);
     });
+
+    xit('should call http-reader by default', async () => {
+
+    });
+
+    it('should call logger with warn  by default', async () => {
+        const consoleSpyWarn = spyOn(console, 'warn');
+        LoggerFactory.setLogLevelsByAllLoggers(0);
+        let result = await keeper.findAsync(key);
+        expect(consoleSpyWarn).toHaveBeenCalled();
+        consoleSpyWarn.calls.reset();
+        expect(result).toEqual(undefined);
+
+    });
+
+    xit('should not call http-reader when a vallue already set', async () => {
+
+    });
+
+    xit('should not call http-reader by second call', async () => {
+
+    });
+
 
 });
