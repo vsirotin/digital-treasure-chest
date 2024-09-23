@@ -14,7 +14,7 @@ export abstract class KeeperMasterDataAsync<T> implements IKeeperMasterData<T> {
         @param object Object
         @returns Promise
     */
-    abstract saveObjectAsync(key: string, data: T): Promise<void>;
+    abstract saveAsync(key: string, data: T): Promise<void>;
 
     /*
         Find an object in repository by key.
@@ -37,7 +37,7 @@ export abstract class KeeperMasterDataSync<T> implements IKeeperMasterData<T> {
         @param key Key
         @param object Object
     */
-    abstract saveObjectSync(key: string, data: T): void;
+    abstract saveSync(key: string, data: T): void;
 
     /*
         Find an object in repository by key.

@@ -1,6 +1,6 @@
 import { LocalStorageAdapter } from "./local-storage-adapter";
 
-xdescribe ('LocalStorageAdapter...', () => {
+describe ('LocalStorageAdapter...', () => {
 
     let key: string;
     let value: string|undefined = undefined;
@@ -24,19 +24,19 @@ xdescribe ('LocalStorageAdapter...', () => {
 
     it('should save and read value', () => {
         value = "valueForTest";
-        adapter.saveObjectSync(key, value);
+        adapter.saveSync(key, value);
         expect(adapter.readSync(key)).toEqual(value);
     });
 
     it('should save value with in local storage', () => {
         value = "valueForTest";
-        adapter.saveObjectSync(key, value);
+        adapter.saveSync(key, value);
         expect(localStorage.getItem(key)).toEqual(value);
     });
 
     it('should remove value from local storage', () => {
         value = "valueForTest";
-        adapter.saveObjectSync(key, value);
+        adapter.saveSync(key, value);
         expect(localStorage.getItem(key)).toEqual(value);
         adapter.removeValueForkeySync(key);
         expect(localStorage.getItem(key)).toBeNull();

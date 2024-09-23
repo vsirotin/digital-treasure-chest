@@ -38,8 +38,8 @@ export class LocalStorageWriter implements RepositoryWriterSync<string> {
         @param key Key
         @param data saved data as string
     */
-    saveObjectSync(key: string, data: string): void {
-        this.logger.log("In saveObjectSync key=", key, " data=", data);
+    saveSync(key: string, data: string): void {
+        this.logger.log("In saveSync key=", key, " data=", data);
         localStorage.setItem(key, data);
     }
 

@@ -18,9 +18,9 @@ const DEFAULT_LOG_LEVEL = 2;
     /**
      * The default log level.
      * Log levels are as follows:
-     * 0 or negative - All messages are logged. (Default)
+     * 0 or negative - All messages are logged. 
      * 1 - Only warning, error, and log messages are logged.
-     * 2 - Only warning and error messages are logged.
+     * 2 - Only warning and error messages are logged. (Default)
      * 3 - Only error messages are logged.  
      * 4 or greater - No messages are logged.
      * 
@@ -44,7 +44,12 @@ const DEFAULT_LOG_LEVEL = 2;
 
     /**
      * Set the default log level.
-     * @param logLevel 
+     * @param logLevel  Log levels are as follows:
+     * 0 or negative - All messages are logged. 
+     * 1 - Only warning, error, and log messages are logged.
+     * 2 - Only warning and error messages are logged. (Default)
+     * 3 - Only error messages are logged.  
+     * 4 or greater - No messages are logged.
      */
     static setLogLevelsByAllLoggers(logLevel: number){
       LoggerFactory.defaultLogLeevl = logLevel;

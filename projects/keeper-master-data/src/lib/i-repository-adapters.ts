@@ -27,7 +27,6 @@ export abstract class RepositoryReaderSync<T> implements IRepositoryReader<T> {
 /*
     API for asynchronesly repository reader.
 */
-
 export abstract class RepositoryReaderAsync<T> implements IRepositoryReader<T> {
     /*
         Read asynchronesly an object from repository by key.
@@ -61,7 +60,7 @@ export abstract class RepositoryWriterSync<T> implements IRepositoryWiter<T> {
         @param key Key
         @param object Object
     */
-    abstract saveObjectSync(key: string, data: T): void;
+    abstract saveSync(key: string, data: T): void;
 
     readonly isAsync: boolean = false;
 }
@@ -77,13 +76,14 @@ export abstract class RepositoryWriterAsync<T> implements IRepositoryWiter<T> {
         @param key Key
         @param object Object
     */
-    abstract saveObjectAsync(key: string, object: any): Promise<void>;
+    abstract saveAsync(key: string, object: any): Promise<void>;
 
     readonly isAsync: boolean = true;
 }
 
 /*
-    API for a repository adapter.
+    API for a repository adapter. 
+    An adapter connects a repository reader and a repository writer.
 */
 export interface RepositoryAdapter<T>  {
     readonly isAsync: boolean;
@@ -103,9 +103,9 @@ export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
         @param key Key
         @param object Object
     */
-    saveObjectSync(key: string, object: any): void{
-        this.logger.log("In saveObjectSync key=" + key + " object=" + object);
-        this.writer.saveObjectSync(key, object);
+    saveSync(key: string, object: any): void{
+        this.logger.log("In saveSync key=" + key + " object=" + object);
+        this.writer.saveSync(key, object);
     }
 
     /*
@@ -141,9 +141,9 @@ export abstract class RepositoryAdapterAsync<T> implements RepositoryAdapter<T> 
         @param key Key
         @param object Object
     */
-    saveObjectAsync(key: string, object: any): Promise<void>{
-        this.logger.log("In saveObjectAsync key=" + key + " object=" + object);
-        return this.writer.saveObjectAsync(key, object);
+    saveAsync(key: string, object: any): Promise<void>{
+        this.logger.log("In saveAsync key=" + key + " object=" + object);
+        return this.writer.saveAsync(key, object);
         
     }
 

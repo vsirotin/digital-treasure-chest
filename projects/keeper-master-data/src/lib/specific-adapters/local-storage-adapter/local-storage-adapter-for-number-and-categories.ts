@@ -3,7 +3,7 @@ import { RepositoryAdapterSync } from "../../i-repository-adapters";
 import { LocalStorageReader, LocalStorageWriter } from "./local-storage-adapter";
 
 /*
-    Implementation of WritableRepositoryAdapter for local storage based key-value repository with version and hierarhy of categories.
+    Implementation of RepositoryAdapter for local storage based key-value repository with versions and categories.
 */
 export class LocalStorageAdapterWithVersionsAndCategories extends RepositoryAdapterSync<string> {
     private prefix: string;
@@ -60,10 +60,10 @@ export class LocalStorageWriterWithVersionsAndCategories extends LocalStorageWri
         this.logger2.log(" created for prefix=", this.prefix);
     }
 
-    override saveObjectSync(key: string, data: string): void {
+    override saveSync(key: string, data: string): void {
         const generatedKey = generateStorageKey(key, this.prefix);
-        super.saveObjectSync(generatedKey, data);
-        this.logger2.log("saveObjectSync: generatedKey=", generatedKey, ", data=", data);
+        super.saveSync(generatedKey, data);
+        this.logger2.log("saveSync: generatedKey=", generatedKey, ", data=", data);
     }
 
 }

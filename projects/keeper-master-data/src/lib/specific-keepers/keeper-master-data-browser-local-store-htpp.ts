@@ -1,11 +1,11 @@
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
-import { KeeperMasterDataKeyValueAsync } from "../keeper-master-data-key-value";
+import { KeeperMasterDataKeyValueAsync } from "../keeper-master-data-key-value-async";
 import { LocalStorageAdapterWithVersionsAndCategories } from "../specific-adapters/local-storage-adapter/local-storage-adapter-for-number-and-categories";
-import { HTTPKeyValueRepositoryReader } from "../specific-adapters/http-key-value-repository-reader";
+import { HTTPKeyValueRepositoryReader } from "../specific-readers/http-key-value-repository-reader";
 
 
 /*
-    Factory of KeeperMasterData.
+    Keeper of KeeperMasterData for browser local storage with HTTP reader.
 */
 export class KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion<T> extends KeeperMasterDataKeyValueAsync<T> {
 

@@ -1,6 +1,6 @@
 import { LocalStorageAdapterWithVersionsAndCategories } from "./local-storage-adapter-for-number-and-categories";
 
-xdescribe ('LocalStorageAdapterWithVersionsAndCategories...', () => {
+describe ('LocalStorageAdapterWithVersionsAndCategories...', () => {
 
     let category1: string;
     let category2: string;
@@ -27,25 +27,25 @@ xdescribe ('LocalStorageAdapterWithVersionsAndCategories...', () => {
         localStorage.removeItem(expectedLocalStorageKey);
     });
 
-    xit('should be created ', () => {
+    it('should be created ', () => {
         expect(adapter).toBeTruthy();
     });
 
     it('should save and read value', () => {
         value = "ValueForTest";
-        adapter.saveObjectSync(key, value);
+        adapter.saveSync(key, value);
         expect(adapter.readSync(key)).toEqual(value);
     });
 
     it('should save value with in local storage', () => {
         value = "valueForTest";
-        adapter.saveObjectSync(key, value);
+        adapter.saveSync(key, value);
         expect(localStorage.getItem(expectedLocalStorageKey)).toEqual(value);
     });
 
     it('should remove value from local storage', () => {
         value = "valueForTest";
-        adapter.saveObjectSync(key, value);
+        adapter.saveSync(key, value);
         expect(localStorage.getItem(expectedLocalStorageKey)).toEqual(value);
         adapter.removeValueForkeySync(key);
         expect(localStorage.getItem(expectedLocalStorageKey)).toBeNull();
