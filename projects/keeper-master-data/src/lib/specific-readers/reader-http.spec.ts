@@ -1,4 +1,4 @@
-import { HTTPKeyValueRepositoryReader } from './http-key-value-repository-reader';
+import { HTTPKeyValueRepositoryReader } from './reader-http';
 
 describe('HTTPKeyValueRepositoryReader', () => {
     let reader: HTTPKeyValueRepositoryReader;

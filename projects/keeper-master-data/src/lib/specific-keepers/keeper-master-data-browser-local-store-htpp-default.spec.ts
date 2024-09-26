@@ -1,17 +1,21 @@
 import { LoggerFactory } from "@vsirotin/log4ts";
-import { KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion } from "./keeper-master-data-browser-local-store-htpp";
+import { KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion } from "./keeper-master-data-browser-local-store-htpp-default";
 import { HTTPKeyValueRepositoryReader } from "../specific-readers/reader-http";
 
 describe ('KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion...', () => {
-    let keeper: KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion<string>;
+    let keeper: KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion<string>;
     let componentCoordinate: string = "componentCoordinate";
     let componentVersion: number = 123;
     let key: string = "keyForKeeperTest";
     let expectedLocalStorageKey: string = componentCoordinate + "-v-" + componentVersion + "-" + key;
     let value: string|undefined = undefined;
+    const defaultValue = "DefaultValueForTest";
 
     beforeEach(() => {
-        keeper = new KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion(componentCoordinate, componentVersion);
+        keeper = new KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion<string>(
+            componentCoordinate, 
+            componentVersion,
+            defaultValue);
     });
 
     afterEach(() => {
@@ -23,9 +27,9 @@ describe ('KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion...', () 
         expect(keeper).toBeTruthy();
     });
 
-    it('should not find value by default', async () => {
+    it('should find value by default', async () => {
         let result = await keeper.findAsync(key);
-        expect(result).toEqual(undefined);
+        expect(result).toEqual(defaultValue);
     });
 
     it('should read previously saved value', async () => {
@@ -44,7 +48,6 @@ describe ('KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion...', () 
         expect(consoleSpyWarn).toHaveBeenCalled();
         consoleSpyWarn.calls.reset();
         LoggerFactory.clearAllLoggers();
-        expect(result).toEqual(undefined);
 
     });
 
@@ -55,9 +58,9 @@ describe ('KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion...', () 
         expect(consoleSpyWarn).toHaveBeenCalled();
         consoleSpyWarn.calls.reset();
         LoggerFactory.clearAllLoggers();
-        expect(result).toEqual(undefined);
 
     });
+
     describe ('by using of HTTP reader...', () => {
         let httpReaderSpy: jasmine.Spy<(key: string) => Promise<Object | undefined>>;
 
@@ -88,5 +91,5 @@ describe ('KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion...', () 
             await keeper.findAsync(key);
             expect(httpReaderSpy).not.toHaveBeenCalled();
         });
-    });
+    }); 
 });

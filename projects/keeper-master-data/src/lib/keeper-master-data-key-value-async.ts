@@ -1,6 +1,7 @@
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { KeeperMasterDataAsync } from "./i-keyed-keeper-master-data";
 import { RepositoryAdapter, IRepositoryReader, RepositoryAdapterSync, RepositoryAdapterAsync, RepositoryReaderAsync, RepositoryReaderSync } from "./i-repository-adapters";
+import { UntypedFormBuilder } from "@angular/forms";
 
 /*
     Implementation of IKeeperMasterDataKeyValue with key-value based data model.
@@ -76,20 +77,27 @@ export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
             } else {
                 const readerSync = reader as RepositoryReaderSync<T>;
                 const resultSync = readerSync.readSync(key);
-                this.logger.log("In findSync after readerSync.readSync key=", key, " result=", result);
-                if (result) {
+                this.logger.log("In findSync after readerSync.readSync key=", key, " rresultSync=", resultSync);
+                if (resultSync) {
                     result = Promise.resolve(resultSync) as Awaited<T>;
+                    this.logger.log("In findAsync after results.push result=", result);
                     break;
                 }
             }
         }
+
+
         if (result) {
             //If we are heare, we have found the value is not keeped repositoryAdapter. So we need to save it in it.
-            await this.saveAsync(key, result);
-            this.logger.log("In findAsync after call saveAsync");
+            const pureRsult = await result as T;
+            await this.saveAsync(key, pureRsult);
+            this.logger.log("In findAsync after call saveAsync key=", key, " pureRsult=", pureRsult);
+            return result;
         }
+        
 
-        return result;
+        this.logger.log("In findAsync 3 key=", key, " result undefined");
+        return undefined;
     }
 
 }

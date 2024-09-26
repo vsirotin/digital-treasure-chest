@@ -3,7 +3,7 @@ import { ILanguageDescription, DEFAULT_LANG_TAG } from './language-description';
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { ILanguageChangeNotificator } from "./language-change-notificator";
 
-import { IKeeperMasterDataKeyValue, KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion } from "@vsirotin/keeper-master-data";
+import { KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion } from "@vsirotin/keeper-master-data";
 import { CurrentLanguageKeeper } from "./current-language-keeper";
 
 export class LanguageData {
@@ -34,7 +34,7 @@ export class Localizer<T> implements ILocalizer<T> {
 
   languageSwitched$ = this.subjectLanguageSwitcher.asObservable();
 
-  keeperMasterData : IKeeperMasterDataKeyValue<T>;
+  keeperMasterData : KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion<T>;
 
   currentLanguage: LanguageData = new LanguageData(DEFAULT_LANG_TAG);
 
@@ -89,7 +89,7 @@ export class Localizer<T> implements ILocalizer<T> {
       this.subjectLanguageSwitcher.next(this.startLanguageRelevantItems);
       return;
     }
-    const data = await this.keeperMasterData.find(this.currentLanguage.ietfTag);
+    const data = await this.keeperMasterData.findAsync(this.currentLanguage.ietfTag);
     this.logger.debug("In switchLanguage data=" + JSON.stringify(data));
     if(data){
       this.subjectLanguageSwitcher.next(data);

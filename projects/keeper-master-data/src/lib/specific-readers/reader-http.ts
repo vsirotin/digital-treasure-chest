@@ -9,8 +9,8 @@ export class HTTPKeyValueRepositoryReader  extends RepositoryReaderAsync<Object>
     private logger: ILogger;
     constructor(private urlPrefix: string) {
         super();
-        this.logger = LoggerFactory.getLogger("HTTPKeyValueRepositoryAdapter for " + urlPrefix);
-        this.logger.log("HTTPKeyValueRepositoryAdapter created for ", urlPrefix);
+        this.logger = LoggerFactory.getLogger("HTTPKeyValueRepositoryReader for " + urlPrefix);
+        this.logger.log(" created for ", urlPrefix);
     }
 
     /*
@@ -36,7 +36,7 @@ export class HTTPKeyValueRepositoryReader  extends RepositoryReaderAsync<Object>
                 }
                 return response.json();
             }).catch((error) => {
-                this.logger.error("In fetch catch error=" + error);
+                this.logger.warn("In readAsync error=" + error);
                 return undefined;
             });
     }

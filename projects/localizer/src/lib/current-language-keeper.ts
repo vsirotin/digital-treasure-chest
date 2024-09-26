@@ -9,7 +9,7 @@ import { LanguageData } from "./localizer";
 export class CurrentLanguageKeeper {
 
     keeperMasterDataKeyValue: IKeeperMasterDataKeyValue<string>;
-    constructor(ietfTag: String){
+    constructor(ietfTag: string){
         this.keeperMasterDataKeyValue = new KeeperMasterDataKeyValue<string>([
           new LocalStorageKeyValueAdapter(),
           new BrowserLanguageInvestigator(),
