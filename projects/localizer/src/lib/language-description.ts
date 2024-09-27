@@ -5,8 +5,9 @@ export interface ILanguageDescription {
 }
 
 export const DEFAULT_LANG_TAG = "en-US";
+export const DEFAULT_LANG_DESCRIPTION: ILanguageDescription = { "enName": "English", "originalName": "English", "ietfTag": DEFAULT_LANG_TAG };
 
-export const SupportedLanguages: Array<ILanguageDescription> = [
+const SupportedLanguages: Array<ILanguageDescription> = [
   { "enName": "Arabic", "originalName": "العربية", "ietfTag": "ar-SA" },
   { "enName": "Bengali", "originalName": "বাংলা", "ietfTag": "bn-BD" },
   { "enName": "Bulgarian", "originalName": "български", "ietfTag": "bg-BG" },
@@ -49,9 +50,9 @@ export const SupportedLanguages: Array<ILanguageDescription> = [
   { "enName": "Vietnamese", "originalName": "Tiếng Việt", "ietfTag": "vi-VN" }
 ];
 
-export function inSupportedLanguages(ietfTag: string | null | undefined): boolean {
-  if ((ietfTag == null) || (ietfTag == undefined)) return false;
+export function getLanguageDescriptionForIetfTag(ietfTag: string | null | undefined): ILanguageDescription | null {
+  if ((ietfTag == null) || (ietfTag == undefined)) return null;
   let res = SupportedLanguages.filter((lang) => lang.ietfTag == ietfTag)[0];
-  if (res != undefined) return true;
-  return false;
+  if (res == undefined) return null;
+  return res;
 }

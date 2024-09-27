@@ -1,22 +1,20 @@
-import { IKeeperMasterDataKeyValue } from "@vsirotin/keeper-master-data";
+import { KeeperCurrentUserLanguage } from "@vsirotin/keeper-master-data";
 import { ILanguageChangeNotificator, LanguageChangeNotificator } from "./language-change-notificator";
-import {ILocalizer, LanguageData, Localizer } from "./localizer";
+import {ILocalizer, Localizer } from "./localizer";
 import { DEFAULT_LANG_TAG } from "./language-description";
-import { CurrentLanguageKeeper } from "./current-language-keeper";
 
 export class LocalizerFactory {
 
-    static languageChangeNotificator: ILanguageChangeNotificator = new LanguageChangeNotificator();
+  private static keeperCurrentLanguage = new KeeperCurrentUserLanguage("CurrentLanguage", DEFAULT_LANG_TAG);
+  static languageChangeNotificator: ILanguageChangeNotificator = 
+    new LanguageChangeNotificator(LocalizerFactory.keeperCurrentLanguage);
 
-    private static currentLanguageKeeper = new CurrentLanguageKeeper(DEFAULT_LANG_TAG);
-
-    private static async  getCurrentLanguage(): Promise<string> {
-      const res = await LocalizerFactory.currentLanguageKeeper.getCurrentLanguageTag();
-      return res as string;
-    }
-  
-    static async createLocalizer<T>(coordinate: string, version: number, intialItems: T): Promise<ILocalizer<T>> {
-      return new Localizer(coordinate, version, LocalizerFactory.languageChangeNotificator, await LocalizerFactory.getCurrentLanguage(), intialItems) as ILocalizer<T>;
-    }
+  static createLocalizer<T>(coordinate: string, version: number, intialItems: T): ILocalizer<T> {
+    return new Localizer(
+      coordinate, 
+      version, 
+      LocalizerFactory.languageChangeNotificator, 
+      LocalizerFactory.keeperCurrentLanguage.readCurrentLang(), intialItems);
   }
+}
 

@@ -32,14 +32,14 @@ describe ("KeeperCurrentUserLanguage..."    , () => {
 
     it('should write value in local storage by writing', () => {
         const value = "ValueForTest2";
-        keeper.writreCurrentLang(value);
+        keeper.writeCurrentLang(value);
         const result = localStorage.getItem(key) as string;
         expect(result).toEqual(value);
     });
 
     it('should read previously saved value', () => {
         const value = "ValueForTest2";
-        keeper.writreCurrentLang(value);
+        keeper.writeCurrentLang(value);
         const result = keeper.readCurrentLang();
         expect(result).toEqual(value);
     });

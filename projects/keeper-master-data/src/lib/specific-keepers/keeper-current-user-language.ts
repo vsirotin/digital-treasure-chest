@@ -19,22 +19,22 @@ export class KeeperCurrentUserLanguage  {
     /**
      * Create a keeper master data with key-value based data model.
      * @param key place in local storage, where to store the data.
-     * @param defaultData default data
+     * @param defaultLanguageTag default data
      */
-    constructor(private key: string, private defaultData: string) {
+    constructor(private key: string, private defaultLanguageTag: string) {
         this.keeperImpl = new KeeperMasterDataKeyValueSync(
             this.adapter, 
             [new ReaderBrowserLanguage(),
-            new ReaderDefault<string>(defaultData)
+            new ReaderDefault<string>(defaultLanguageTag)
         ]);
-        this.loggger.log(" created for ", key, " defaultData", defaultData);
+        this.loggger.log(" created for ", key, " defaultData", defaultLanguageTag);
     }
 
     readCurrentLang(): string   {
         return this.keeperImpl.findSync(this.key) as string;
     }
 
-    writreCurrentLang(lang: string): void {
+    writeCurrentLang(lang: string): void {
         this.keeperImpl.saveSync(this.key, lang);
     }
 
