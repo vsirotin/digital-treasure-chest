@@ -1,81 +1,77 @@
 import { Observable, Subject, Subscription } from "rxjs";
-import { ILanguageDescription, DEFAULT_LANG_TAG } from './language-description';
+import { ILanguageDescription, DEFAULT_LANG_TAG } from './language-change-notificator';
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { ILanguageChangeNotificator } from "./language-change-notificator";
 
-import { KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion } from "@vsirotin/keeper-master-data";
-import { CurrentLanguageKeeper } from "./current-language-keeper";
+import { KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion, KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion } from "@vsirotin/keeper-master-data";
 
-export class LanguageData {
-  constructor(public ietfTag: string) {}
+/* 
+  ILocalizationClient - Interface. Enables simple way to make your component multi-language-aware.
+  @param T - type of the language relevant items
+*/
+export interface ILocalizationClient<T>{
+  /*
+    Updates the language relevant items by client
+    @param data - an object with language relevant items
+  */
+  updateLocalization(data: T): void;
 }
+
 
 /*
   Localizer -Interface. Enables simple way to make your component multi-language-aware.
   @param T - type of the language relevant items
 */
-export interface ILocalizer<T> {
-
+export interface ILocalizer {
   /*
-    Informs a calle about switching of the language relevant items because of the language change
-    @param T - type of the language relevant items or string with the default language tag
+    Disposes the Localizer (its subscription to the language change events)
   */
-  languageSwitched$: Observable<T>;
-
-  /*
-    Should be called by callee to avoid memory leaks because running subscription of this class to the languageChangeNotificator
-  */
-  destructor(): void;
+  dispose(): void;
 }
-const KEY_SAVING_LANGUAGE = "currentLanguage";
-export class Localizer<T> implements ILocalizer<T> {
 
-  private readonly subjectLanguageSwitcher = new Subject<T>();
+/*
+  Localizer - Class. Enables simple way to make your component multi-language-aware.
+  @param T - type of the language relevant items
+*/
+export class Localizer<T> implements ILocalizer {
 
-  languageSwitched$ = this.subjectLanguageSwitcher.asObservable();
-
-  keeperMasterData : KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion<T>;
-
-  currentLanguage: LanguageData = new LanguageData(DEFAULT_LANG_TAG);
-
-  private subject = new Subject<LanguageData>();
-  languageChanged$ = this.subject.asObservable();
+  private keeperMasterData : KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion<T>;
 
   private subscription: Subscription;
 
-  logger: ILogger; 
+  private logger: ILogger; 
 
   /*
     Constructor. Creates an instance of the Localizer
     @param componentCooordinate - a coordinate of the component. It is used to find corresponded ressources and to identify the component in the log messages
     @param componentVersion - a version of the component. It is used to find corresponded ressources and to identify the component in the log messages
     @param languageChangeNotificator - an instance of the languageChangeNotificator. It is used to subscribe to the language change events
-    @param currentLanguageData - a current language data in application
     @param startLanguageRelevantItems - a start object with language relevant items.
+    @param client - a client, that need to update the language relevant items.
   */
   constructor(private componentCooordinate: string, 
     private componentVersion : number, 
     private languageChangeNotificator: ILanguageChangeNotificator,
-    private currentLanguageTag: string,
-    private startLanguageRelevantItems: T) {
+    private startLanguageRelevantItems: T,
+    private client: ILocalizationClient<T>) {
 
-    this.keeperMasterData = new KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion(componentCooordinate, componentVersion);
+    this.keeperMasterData = new KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion<T>(
+      componentCooordinate, componentVersion, startLanguageRelevantItems)
+    this.logger = LoggerFactory.getLogger("Localizer for " + componentCooordinate + " v." + componentVersion);
 
-    this.logger = LoggerFactory.getLogger("Localizer for " + componentCooordinate);
-    this.logger.log("Localizer created for ", componentCooordinate);
-
-
-    this.switchLanguage(currentLanguageTag);
-
+    this.logger.debug("before subscription");
     this.subscription = languageChangeNotificator.selectionChanged$
       .subscribe((selectedLanguage: ILanguageDescription) => {
-        this.logger.log("In subscription ", this.currentLanguage.ietfTag, " selectedLanguage=", JSON.stringify(selectedLanguage));
-
         this.switchLanguage(selectedLanguage.ietfTag);
       });
+
+      this.logger.log("created for startLanguageRelevantItems=", JSON.stringify(startLanguageRelevantItems));
   }
 
-  destructor() {
+  /*
+    Disposes the Localizer (its subscription to the language change events)
+  */
+  dispose() {
     this.logger.debug("Start of Localizer.destructor");
     this.subscription.unsubscribe();
   }
@@ -83,17 +79,12 @@ export class Localizer<T> implements ILocalizer<T> {
   private async switchLanguage(ietfTag: string) {
     this.logger.debug("In switchLanguage ietfTag=" + ietfTag);
 
-    this.currentLanguage = new LanguageData(ietfTag);
-
-    if(this.currentLanguage.ietfTag == DEFAULT_LANG_TAG) {
-      this.subjectLanguageSwitcher.next(this.startLanguageRelevantItems);
-      return;
-    }
-    const data = await this.keeperMasterData.findAsync(this.currentLanguage.ietfTag);
-    this.logger.debug("In switchLanguage data=" + JSON.stringify(data));
+    const data = await this.keeperMasterData.findAsync(ietfTag);
+    this.logger.debug("In switchLanguage data=", data);
     if(data){
-      this.subjectLanguageSwitcher.next(data);
+      this.client.updateLocalization(data);
+      return;
     }   
-    this.logger.debug("End of switchLanguage");
+    this.logger.error("In switchLanguage for key=", ietfTag, " data not found");
   }
 }

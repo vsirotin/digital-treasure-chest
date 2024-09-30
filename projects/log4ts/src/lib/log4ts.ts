@@ -86,15 +86,7 @@ export class Log4ts implements ILogger, ILoggerInfo {
     return prefix + t;
   }
 
-  private  isObject(value: any): boolean {
-    const res = value !== null && typeof value === 'object';
-    return res;
-  }
-
   private convertAragument(arg: any): string {
-    if (this.isObject(arg)) {
-      return JSON.stringify(arg);
-    }
 
     if(arg === undefined) {
       return "undefined";
@@ -102,6 +94,10 @@ export class Log4ts implements ILogger, ILoggerInfo {
 
     if(arg === null) {
       return "null";
+    }
+
+    if (typeof arg === 'object') {
+      return JSON.stringify(arg);
     }
 
     return arg;

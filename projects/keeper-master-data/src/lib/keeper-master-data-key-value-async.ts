@@ -65,7 +65,7 @@ export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
             }
         }
 
-        this.logger.log("In findAsync before starts call reades");
+        this.logger.log("In findAsync before starts call readers");
         for (const reader of this.readers) {
             if (reader.isAsync) {
                 const readerAsync = reader as RepositoryReaderAsync<T>;
@@ -77,7 +77,7 @@ export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
             } else {
                 const readerSync = reader as RepositoryReaderSync<T>;
                 const resultSync = readerSync.readSync(key);
-                this.logger.log("In findSync after readerSync.readSync key=", key, " rresultSync=", resultSync);
+                this.logger.log("In findSync after readerSync.readSync key=", key, " resultSync=", resultSync);
                 if (resultSync) {
                     result = Promise.resolve(resultSync) as Awaited<T>;
                     this.logger.log("In findAsync after results.push result=", result);

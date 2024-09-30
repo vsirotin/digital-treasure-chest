@@ -1,20 +1,21 @@
-import { KeeperCurrentUserLanguage } from "@vsirotin/keeper-master-data";
 import { ILanguageChangeNotificator, LanguageChangeNotificator } from "./language-change-notificator";
-import {ILocalizer, Localizer } from "./localizer";
-import { DEFAULT_LANG_TAG } from "./language-description";
+import {ILocalizationClient, ILocalizer, Localizer } from "./localizer";
 
 export class LocalizerFactory {
 
-  private static keeperCurrentLanguage = new KeeperCurrentUserLanguage("CurrentLanguage", DEFAULT_LANG_TAG);
   static languageChangeNotificator: ILanguageChangeNotificator = 
-    new LanguageChangeNotificator(LocalizerFactory.keeperCurrentLanguage);
+    new LanguageChangeNotificator();
 
-  static createLocalizer<T>(coordinate: string, version: number, intialItems: T): ILocalizer<T> {
+  static createLocalizer<T>(coordinate: string, 
+    version: number, 
+    intialItems: T, 
+    client: ILocalizationClient<T>): ILocalizer {
     return new Localizer(
       coordinate, 
       version, 
       LocalizerFactory.languageChangeNotificator, 
-      LocalizerFactory.keeperCurrentLanguage.readCurrentLang(), intialItems);
+      intialItems, 
+      client);
   }
 }
 

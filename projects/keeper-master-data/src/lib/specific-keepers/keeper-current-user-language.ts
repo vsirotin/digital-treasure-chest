@@ -14,7 +14,7 @@ export class KeeperCurrentUserLanguage  {
 
     private loggger: ILogger = LoggerFactory.getLogger("KeeperCurrentUserLanguage");
     private keeperImpl: KeeperMasterDataKeyValueSync<string>;
-    private adapter: LocalStorageAdapter = new LocalStorageAdapter();
+    private adapter: LocalStorageAdapter<string> = new LocalStorageAdapter<string>();
 
     /**
      * Create a keeper master data with key-value based data model.

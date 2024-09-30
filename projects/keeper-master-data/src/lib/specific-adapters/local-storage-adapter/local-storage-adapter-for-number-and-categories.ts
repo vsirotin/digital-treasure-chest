@@ -30,7 +30,7 @@ function generateStorageKey(key: string, prefix: string): string {
     return prefix + "-" + key;
 }
 
-export class LocalStorageReaderWithVersionsAndCategories extends LocalStorageReader {
+export class LocalStorageReaderWithVersionsAndCategories<T> extends LocalStorageReader<T> {
     private prefix: string;
     private logger1: ILogger = LoggerFactory.getLogger("LocalStorageReaderWithVersionsAndCategories");
 
@@ -40,7 +40,7 @@ export class LocalStorageReaderWithVersionsAndCategories extends LocalStorageRea
         this.logger1.log(" created for prefix=", this.prefix);
     }
 
-    override readSync(key: string): string | undefined {
+    override readSync(key: string): T | undefined {
         const generatedKey = generateStorageKey(key, this.prefix);
         const result = super.readSync(generatedKey);
         const isUnderfined = result === undefined;
@@ -50,7 +50,7 @@ export class LocalStorageReaderWithVersionsAndCategories extends LocalStorageRea
 
 }
 
-export class LocalStorageWriterWithVersionsAndCategories extends LocalStorageWriter {
+export class LocalStorageWriterWithVersionsAndCategories<T> extends LocalStorageWriter<T> {
     private prefix: string;
     private logger2: ILogger = LoggerFactory.getLogger("LocalStorageWriterWithVersionsAndCategories");
 
@@ -60,7 +60,7 @@ export class LocalStorageWriterWithVersionsAndCategories extends LocalStorageWri
         this.logger2.log(" created for prefix=", this.prefix);
     }
 
-    override saveSync(key: string, data: string): void {
+    override saveSync(key: string, data: T): void {
         const generatedKey = generateStorageKey(key, this.prefix);
         super.saveSync(generatedKey, data);
         this.logger2.log("saveSync: generatedKey=", generatedKey, ", data=", data);

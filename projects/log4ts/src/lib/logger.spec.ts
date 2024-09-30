@@ -98,6 +98,16 @@ describe('Log4ts', () => {
     const expectation2 = 'test1234567893.1415927true[1,2,3]{"a":1,"b":2,"c":3}' + expectation1 + 'undefinednull';
     expect(consoleSpyLog).toHaveBeenCalledWith(expectation2); 
 
+    class A {
+      a1 = 1;
+      b1 = "blabla";
+      c1 = o;
+    }
+
+    const ob = new A();
+    logger1.log(ob);
+    expect(consoleSpyLog).toHaveBeenCalledWith('{"a1":1,"b1":"blabla","c1":{"a":1,"b":2,"c":3}}');
+
   });
 
   it('by naive using (without factoty) only warnings and errors should be logged', () => {
