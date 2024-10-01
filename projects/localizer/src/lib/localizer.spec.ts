@@ -2,34 +2,28 @@ import { ILocalizationClient, ILocalizer, Localizer } from './localizer';
 import { Observable, Subject, Subscription } from 'rxjs';
 import { LocalizerFactory } from './localizer-factory';
 import { LoggerFactory } from '@vsirotin/log4ts';
+import { HTTPKeyValueRepositoryReader } from '@vsirotin/keeper-master-data';
 
 const loggerForTest = LoggerFactory.getLogger("Test for Localizer");
 LoggerFactory.setLogLevelsByAllLoggers(0);
-class TestItems1 {
+class TestItems {
   constructor(public settings: string = "Settings", public language: string= "Language"){};
 }
-
-class TestItems2 {
-  constructor(public logging: string = "Logging", public loggingExplanation: string = "Only for support purposes"){};
-}
-
 let subject1 = new Subject<void>();
-let subject2 = new Subject<void>();
-
-class LocalizationClient1 implements ILocalizationClient<TestItems1> {
+class LocalizationClient implements ILocalizationClient<TestItems> {
 
   private logger = LoggerFactory.getLogger("LocalizationClient1");
   private localizer: ILocalizer;
-  localizationData: TestItems1 | undefined = undefined;
+  localizationData: TestItems | undefined = undefined;
   constructor() {
     this.logger.debug("creation started");
-    this.localizer = LocalizerFactory.createLocalizer<TestItems1>("test1", 1, new TestItems1(), this);
+    this.localizer = LocalizerFactory.createLocalizer<TestItems>("test1", 1, new TestItems(), this);
     this.logger.debug("created");
   }
-  updateLocalization(data: TestItems1): void  {
+  updateLocalization(data: TestItems): void  {
     this.logger.debug("updateLocalization data=", data, " type=", typeof(data));
     this.localizationData = data;
-    subject1.next();
+    subject1.next(); //For test purposes
   }
 
   destuctor() {
@@ -37,130 +31,81 @@ class LocalizationClient1 implements ILocalizationClient<TestItems1> {
   }
 }
 
-class LocalizationClient2 implements ILocalizationClient<TestItems2> {
-
-  private localizer: ILocalizer;
-  localizationData: TestItems2 | undefined = undefined;
-  constructor() {
-    this.localizer = LocalizerFactory.createLocalizer<TestItems2>("test2", 1, new TestItems2(), this);
-  }
-  updateLocalization(data: TestItems2): void  {
-    this.localizationData = data;
-  }
-
-  destructor() {
-    this.localizer.dispose();
-  }
-}
-
 describe('Localizer...', () => {
 
-  let localizationClient1: LocalizationClient1 | undefined = undefined;
-  let localizationClient2: LocalizationClient2 | undefined = undefined;
-
-  let localizationDataForClient1 = undefined;
-  let localizationDataForClient2 = undefined;
-
-
+  let localizationClient: LocalizationClient | undefined = undefined;
 
   let subsciption1: Subscription;
 
-
-
-  beforeEach(() => {
-    
-    localizationClient1 = new LocalizationClient1();
-   // localizationClient2 = new LocalizationClient2();
-    
-  });
-
   afterEach(() => {
-    // localStorage.clear();
-    // localizationClient1?.destuctor();
-    // localizationClient1 = undefined;
+    localStorage.clear();
+    localizationClient?.destuctor();
+    localizationClient = undefined;
 
-    // localizationClient2?.destructor();
-    // localizationClient2 = undefined;
-
+    if(subsciption1) {
+      subsciption1.unsubscribe();
+    }
   });
 
-it('both localization clients should be created', () => {
-    expect(localizationClient1).toBeTruthy();
- //   expect(localizationClient2).toBeTruthy();
+it('client should be created', () => {
+  localizationClient = new LocalizationClient();
+  expect(localizationClient).toBeTruthy();
   });
 
   describe('by default...', () => {
-    it('both localization clients should be initialized with default language ', () => {
+    it('localization client should be initialized with default language ', (done) => {
       subsciption1 = subject1.subscribe(() => {
-        const expectedData = new TestItems1();
-        const actualData = localizationClient1?.localizationData;
-
-        // Ensure actualData is an instance of TestItems1
-        const actualDataInstance = Object.assign(new TestItems1(), actualData);
-
+        const expectedData = new TestItems();
+        const actualData = localizationClient?.localizationData;
+        const actualDataInstance = Object.assign(new TestItems(), actualData);
         expect(actualDataInstance).toEqual(expectedData);
+        done();
       });
-      //expect(localizationClient2?.localizationData).toEqual(new TestItems2());
-    });
-
-    xit('after disposing both localization clients will be no more updated ', () => {
-      //expect(localizer.currentLanguage?.ietfTag).toEqual(DEFAULT_LANG_TAG);
-    });
-  });
-
-  xdescribe('after change the language on de-DE...', () => {
-
-    xit('in already existed clients localization data for de-DE language will be updated', () => {
-      //expect(localizer.currentLanguage?.ietfTag).toEqual(DEFAULT_LANG_TAG);
-    });
-
-    xit('new created clients should be initialized with de-DE language ', () => {
-      //expect(localizer.currentLanguage?.ietfTag).toEqual(DEFAULT_LANG_TAG);
-    });
-
-    xit('for already existed clients after its re-creation localization data for de-DE language will be updated', () => {
-      //expect(localizer.currentLanguage?.ietfTag).toEqual(DEFAULT_LANG_TAG);
+      localizationClient = new LocalizationClient();
     });
 
   });
 
-  xit('by start both localizers ', () => {
-    //expect(localizer.currentLanguage?.ietfTag).toEqual(DEFAULT_LANG_TAG);
-  });
+  describe('after change the language on de-DE...', () => {
+    let httpReaderSpy: jasmine.Spy<(key: string) => Promise<Object | undefined>>;
+    const expectedValue = new TestItems("aa7", "bb7");
+    const newLocal = { "enName": "German", "originalName": "Deutsch", "ietfTag": "de-DE" };
 
+    beforeEach(() => {
+      httpReaderSpy = spyOn(HTTPKeyValueRepositoryReader.prototype, 'readAsync').and.returnValue(Promise.resolve(expectedValue));
+    });
 
-  // describe('after change the language on de-DE', () => {
-  //   let languageChanged$: Observable<LanguageData>;
+    afterEach(() => {
+      httpReaderSpy.calls.reset();
+    });
 
-  //   let subscription: Subscription;
-  //   let spy: jasmine.Spy;
-    
-  //   beforeEach(() => {  
-  //     languageChanged$ = localizer.languageChanged$;
-  //     langDescr = {"enName": "German", "originalName": "Deutsch", "ietfTag": "de-DE"};
+    it('in already existed clients localization data for de-DE language will be updated', (done) => {
+      localizationClient = new LocalizationClient();
+      subsciption1 = subject1.subscribe(() => {
+        const actualData = localizationClient?.localizationData;
+        const actualDataInstance = Object.assign(new TestItems(), actualData);
 
+        expect(actualDataInstance).toEqual(expectedValue);
+        done();
+      });
+
+      LocalizerFactory.languageChangeNotificator.selectionChanged(newLocal);
+    });
+
+    it('new created clients should be initialized with de-DE language ', (done) => {
+      LocalizerFactory.languageChangeNotificator.selectionChanged(newLocal);
       
-  //   });
+      subsciption1 = subject1.subscribe(() => {
+        const actualData = localizationClient?.localizationData;
+        const actualDataInstance = Object.assign(new TestItems(), actualData);
 
-  //   afterEach(() => {
-  //     subscription.unsubscribe();
-  //   });
-
-    // xit('the selected language should be de-DE, current language in localizer should be de-DE, the localizer should have languageMap for de-DE', (done) => { 
-    //   const mockResponseData = { "settings": "Einstellungen" }; 
-    //   //Not clear, how  to call this spy many times. Second call make timeout error.
-    //   spyOn(window, 'fetch').and.returnValue(Promise.resolve(new Response(JSON.stringify(mockResponseData))));
+        expect(actualDataInstance).toEqual(expectedValue);
+        done();
+      });
+      localizationClient = new LocalizationClient();
       
-    //   subscription = languageChanged$
-    //   .subscribe((languageTag: LanguageData) => {
-    //     expect(languageTag.ietfTag).toEqual("de-DE");
-    //     expect(localizer.currentLanguage?.ietfTag).toEqual("de-DE");
-    //     //expect(localizer.getTranslation('settings', 'not-exist')).toEqual("Einstellungen");
-    //     done();
-    //   });
-    //   langSelectNotificationService.selectionChanged(langDescr);
-    // });        
-  //});
+    });
+  });
 });
 
 

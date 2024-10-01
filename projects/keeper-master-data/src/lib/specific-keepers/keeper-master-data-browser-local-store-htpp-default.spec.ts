@@ -32,6 +32,13 @@ describe ('KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion...', () 
         expect(result).toEqual(defaultValue);
     });
 
+    it('should not save in local storage default', async () => {
+        let result = await keeper.findAsync(key);
+        expect(result).toEqual(defaultValue);
+        let result2 = localStorage.getItem(expectedLocalStorageKey);
+        expect(result2).toBeNull();
+    });
+
     it('should read previously saved value', async () => {
         value = "ValueForTest16";
         localStorage.setItem(expectedLocalStorageKey, value);
@@ -61,7 +68,7 @@ describe ('KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion...', () 
 
     });
 
-    describe ('by using of HTTP reader...', () => {
+    describe ('by using of HTTP reader, that returns no value ...', () => {
         let httpReaderSpy: jasmine.Spy<(key: string) => Promise<Object | undefined>>;
 
         beforeEach(() => {
@@ -90,6 +97,53 @@ describe ('KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion...', () 
             await keeper.saveAsync(key, value);
             await keeper.findAsync(key);
             expect(httpReaderSpy).not.toHaveBeenCalled();
+        });
+
+        it('should not save in local storage default', async () => {
+            let result = await keeper.findAsync(key);
+            expect(result).toEqual(defaultValue);
+            let result2 = localStorage.getItem(expectedLocalStorageKey);
+            expect(result2).toBeNull();
+        });
+    }); 
+
+    describe ('by using of HTTP reader, that returns some value ...', () => {
+        let httpReaderSpy: jasmine.Spy<(key: string) => Promise<Object | undefined>>;
+        const expectedValue = "ValueForTest19";
+
+        beforeEach(() => {
+            httpReaderSpy = spyOn(HTTPKeyValueRepositoryReader.prototype, 'readAsync').and.returnValue(Promise.resolve(expectedValue));
+        });
+
+        afterEach(() => {
+            httpReaderSpy.calls.reset();
+        });
+
+        it('should call http-reader by default', async () => {
+            await keeper.findAsync(key);
+            expect(httpReaderSpy).toHaveBeenCalledWith(key);
+            
+        });
+
+        it('should not call http-reader when a vallue already set', async () => {
+            value = "ValueForTest17";
+            localStorage.setItem(expectedLocalStorageKey, value);
+            await keeper.findAsync(key);
+            expect(httpReaderSpy).not.toHaveBeenCalled();
+        });
+    
+        it('should not call http-reader after save value', async () => {
+            value = "ValueForTest18"
+            await keeper.saveAsync(key, value);
+            await keeper.findAsync(key);
+            expect(httpReaderSpy).not.toHaveBeenCalled();
+        });
+
+        it('should save in local storage default', async () => {
+            let result = await keeper.findAsync(key);
+            expect(result).toEqual(expectedValue);
+            let result2 = localStorage.getItem(expectedLocalStorageKey);
+            expect(result2).toEqual(expectedValue);
         });
     }); 
 });

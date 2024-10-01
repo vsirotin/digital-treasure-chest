@@ -22,10 +22,17 @@ export class KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion
      */
     constructor(componentCoordinate: string, componentVersion: number, private defaultData: T) {
         super(new LocalStorageAdapterWithVersionsAndCategories(componentVersion, componentCoordinate), 
-        [new HTTPKeyValueRepositoryReader(componentCoordinate + "/" + componentVersion + "/"),
-        new ReaderDefault<T>(defaultData)
-        ]);
+        [new HTTPKeyValueRepositoryReader(componentCoordinate + "/" + componentVersion + "/")]);
         this.loggger.log(" created for ", componentCoordinate, " v.", componentVersion);
+    }
+
+    override async findAsync(key: string): Promise<T | undefined> {
+        let res = await super.findAsync(key);
+        if (res == undefined) {
+            this.loggger.log("Data not found in local storage, returns default.");
+            res = Promise.resolve(this.defaultData) as Awaited<T>;
+        }
+        return res;
     }
 
 }
