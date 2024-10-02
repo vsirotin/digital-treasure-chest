@@ -3,6 +3,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CommunicatorService } from './service/communicator.service'
+import { ILanguageDescription, LocalizerFactory } from '@vsirotin/localizer';
 
 @Component({
   selector: 'app-toolbar',
@@ -14,9 +15,19 @@ import { CommunicatorService } from './service/communicator.service'
   styleUrl: './toolbar.component.scss'
 })
 export class ToolbarComponent{
-  constructor(private communicatorService: CommunicatorService){} 
 
   title = 'CoWeShop';
+  originalName = "AA";
+  ietfTag = "BB";
+
+  constructor(private communicatorService: CommunicatorService){
+    LocalizerFactory.languageChangeNotificator.selectionChanged$.subscribe(
+      (languageDescription: ILanguageDescription) => {
+        this.originalName = languageDescription.originalName;
+        const len = languageDescription.ietfTag.length;
+        this.ietfTag = languageDescription.ietfTag.substring(len-2, len);
+    }); 
+}
 
   onClick() {
     this.communicatorService.buttonClicked()

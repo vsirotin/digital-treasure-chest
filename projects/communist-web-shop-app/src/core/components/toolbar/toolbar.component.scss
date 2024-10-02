@@ -1,9 +1,17 @@
 .my-spacer {
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
+}
 
-  .my-is-mobile .frame-toolbar {
-    position: fixed;
-    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-    z-index: 2;
-  }
+.my-is-mobile .frame-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+.left-margin {
+  margin-left: 1px;
+}
+
+.right-margin {
+  margin-right: 1px;
+}

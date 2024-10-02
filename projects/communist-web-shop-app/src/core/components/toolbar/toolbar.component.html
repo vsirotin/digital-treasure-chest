@@ -1,11 +1,15 @@
 <mat-toolbar color="primary" class="frame-toolbar">
-  <button mat-icon-button class="toolbar-icon" aria-label="Icon-button for navigation in app" (click)="onClick()">
-    <mat-icon>menu</mat-icon>
-  </button>
+  <button mat-icon-button class="toolbar-icon left-margin" aria-label="Icon-button with application logo">
+  <mat-icon>add_chart</mat-icon>
+</button>
+
   <span>{{title}}</span>
   <span class="my-spacer"></span>
-  
-  <button mat-icon-button class="toolbar-icon" aria-label="Icon-button with application logo">
-    <mat-icon>add_chart</mat-icon>
+  <span>{{originalName}} </span>
+  <span width = "5px"></span>
+  <span>({{ietfTag}})</span>
+
+  <button mat-icon-button class="toolbar-icon right-margin" aria-label="Icon-button for navigation in app" (click)="onClick()">
+    <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>

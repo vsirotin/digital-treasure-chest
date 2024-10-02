@@ -11,9 +11,8 @@
           </mat-panel-title>
         <mat-panel-description>
           <span width = "5px"></span>
+          {{langEn}}   
           {{langOrigin}}
-          <span width = "5px"></span>
-          {{langEn}}       
         </mat-panel-description>
         </mat-expansion-panel-header>
       <app-language-selection></app-language-selection>
@@ -28,11 +27,8 @@
             ({{ui.loggingExplanation}})
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <app-log-setting></app-log-setting>
-      
+      <app-log-setting></app-log-setting>     
     </mat-expansion-panel>
-  
-
   </mat-accordion>
   <mat-card-footer>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>

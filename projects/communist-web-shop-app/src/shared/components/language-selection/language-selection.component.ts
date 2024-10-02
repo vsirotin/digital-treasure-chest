@@ -30,8 +30,7 @@ export class LanguageSelectionComponent {
   constructor(){}
 
   onRadioChange() { 
-    let selLang = SupportedLanguages.filter((lang) => lang.ietfTag == this.selectedLangCode)[0];
-    this.selectedLanguageService.selectionChanged(selLang);
+    this.selectedLanguageService.selectionChanged(this.selectedLangCode);
   }
 }
 

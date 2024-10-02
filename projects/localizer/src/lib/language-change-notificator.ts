@@ -1,9 +1,10 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 import { KeeperCurrentUserLanguage } from '@vsirotin/keeper-master-data';
+import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 
 export interface ILanguageChangeNotificator {
   selectionChanged$: Observable<ILanguageDescription>;
-  selectionChanged(selectedLanguage: ILanguageDescription): void;
+  selectionChanged(ietfTag: string|null|undefined): void;
 }
 
 export interface ILanguageDescription {
@@ -15,7 +16,7 @@ export interface ILanguageDescription {
 export const DEFAULT_LANG_TAG = "en-US";
 export const DEFAULT_LANG_DESCRIPTION: ILanguageDescription = { "enName": "English", "originalName": "English", "ietfTag": DEFAULT_LANG_TAG };
 
-const SupportedLanguages: Array<ILanguageDescription> = [
+export const SupportedLanguages: Array<ILanguageDescription> = [
   { "enName": "Arabic", "originalName": "العربية", "ietfTag": "ar-SA" },
   { "enName": "Bengali", "originalName": "বাংলা", "ietfTag": "bn-BD" },
   { "enName": "Bulgarian", "originalName": "български", "ietfTag": "bg-BG" },
@@ -63,6 +64,7 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
   private keeperCurrentLanguageTag: KeeperCurrentUserLanguage= new KeeperCurrentUserLanguage("CurrentLanguage", DEFAULT_LANG_DESCRIPTION.ietfTag);
   private subject: BehaviorSubject<ILanguageDescription>;
   selectionChanged$ : Observable<ILanguageDescription>;
+  private logger: ILogger = LoggerFactory.getLogger("LanguageChangeNotificator");
 
   constructor() {
     const keepedLangTag = this.keeperCurrentLanguageTag.readCurrentLang();
@@ -70,18 +72,29 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
 
     this.subject = new BehaviorSubject<ILanguageDescription>(currentLanguageDescription);
     this.selectionChanged$ = this.subject.asObservable();
+    this.logger.log(" created. Current language is: ",currentLanguageDescription.enName);
   }
 
-  selectionChanged(selectedLanguage: ILanguageDescription) {
+  selectionChanged(ietfTag: string|null|undefined): void {
+    this.logger.log("selectionChanged called with ietfTag: ", ietfTag);
+    const selectedLanguage = this.getLanguageDescriptionForIetfTag(ietfTag);
     this.keeperCurrentLanguageTag.writeCurrentLang(selectedLanguage.ietfTag);
     this.subject.next(selectedLanguage);
   }
 
-  private getLanguageDescriptionForIetfTag(ietfTag: string ): ILanguageDescription {
-    if ((ietfTag == null) || (ietfTag == undefined)) return DEFAULT_LANG_DESCRIPTION;
-    let res = SupportedLanguages.filter((lang) => lang.ietfTag == ietfTag)[0];
-    if (res == undefined) return DEFAULT_LANG_DESCRIPTION;
-    return res;
+  private getLanguageDescriptionForIetfTag(ietfTag: string|null|undefined ): ILanguageDescription {
+    let res = DEFAULT_LANG_DESCRIPTION;
+    if ((ietfTag == null) || (ietfTag == undefined)) {
+      this.logger.warn("In getLanguageDescriptionForIetfTag  language tag is null or undefined. Returning default language.");
+      return res;
+    }
+    let res1 = SupportedLanguages.filter((lang) => lang.ietfTag == ietfTag)[0];
+    if (res1 == undefined)  {
+      this.logger.warn("In getLanguageDescriptionForIetfTag result of filtering is undefined. Returning default language.");
+      return res;
+    }
+    this.logger.log("In getLanguageDescriptionForIetfTag returning language: ", res1.enName);
+    return res1;
   }
 
 }

@@ -1,27 +1,19 @@
 import { ILocalizationClient, ILocalizer, Localizer } from './localizer';
-import { Observable, Subject, Subscription } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 import { LocalizerFactory } from './localizer-factory';
-import { LoggerFactory } from '@vsirotin/log4ts';
 import { HTTPKeyValueRepositoryReader } from '@vsirotin/keeper-master-data';
-
-const loggerForTest = LoggerFactory.getLogger("Test for Localizer");
-LoggerFactory.setLogLevelsByAllLoggers(0);
 class TestItems {
   constructor(public settings: string = "Settings", public language: string= "Language"){};
 }
 let subject1 = new Subject<void>();
 class LocalizationClient implements ILocalizationClient<TestItems> {
 
-  private logger = LoggerFactory.getLogger("LocalizationClient1");
   private localizer: ILocalizer;
   localizationData: TestItems | undefined = undefined;
   constructor() {
-    this.logger.debug("creation started");
     this.localizer = LocalizerFactory.createLocalizer<TestItems>("test1", 1, new TestItems(), this);
-    this.logger.debug("created");
   }
   updateLocalization(data: TestItems): void  {
-    this.logger.debug("updateLocalization data=", data, " type=", typeof(data));
     this.localizationData = data;
     subject1.next(); //For test purposes
   }
@@ -70,6 +62,7 @@ it('client should be created', () => {
     let httpReaderSpy: jasmine.Spy<(key: string) => Promise<Object | undefined>>;
     const expectedValue = new TestItems("aa7", "bb7");
     const newLocal = { "enName": "German", "originalName": "Deutsch", "ietfTag": "de-DE" };
+    const newIetfTag = newLocal.ietfTag;
 
     beforeEach(() => {
       httpReaderSpy = spyOn(HTTPKeyValueRepositoryReader.prototype, 'readAsync').and.returnValue(Promise.resolve(expectedValue));
@@ -89,11 +82,11 @@ it('client should be created', () => {
         done();
       });
 
-      LocalizerFactory.languageChangeNotificator.selectionChanged(newLocal);
+      LocalizerFactory.languageChangeNotificator.selectionChanged(newIetfTag);
     });
 
     it('new created clients should be initialized with de-DE language ', (done) => {
-      LocalizerFactory.languageChangeNotificator.selectionChanged(newLocal);
+      LocalizerFactory.languageChangeNotificator.selectionChanged(newIetfTag);
       
       subsciption1 = subject1.subscribe(() => {
         const actualData = localizationClient?.localizationData;
