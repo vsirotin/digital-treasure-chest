@@ -31,7 +31,7 @@ export class LogSettingComponent {
 
   ui = {
     logLevelSetInvitation: "Set the logging level",
-    templateFieldName: "Logged file name(s) or template",
+    templateFieldName: "Logged file name(s) or name pattern",
     templateHelpText: "e.g. */log*",
     labelUpdate: "Update",
     labelReset: "Reset",

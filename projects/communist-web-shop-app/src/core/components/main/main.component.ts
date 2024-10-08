@@ -11,16 +11,15 @@ import { Subscription } from 'rxjs';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { SettingsComponent } from '../settings/settings.component';
 import { InfoComponent } from '../info/info.component';
-import { ShoppingComponent } from '../shopping/shopping.component';
+import { SearchComponent } from '../search/search.component';
 import { ReportComponent } from '../report/report.component';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
-import { ILocalizer, ILanguageChangeNotificator, ILanguageDescription, LocalizerFactory } from '@vsirotin/localizer';
 
 
 export const MAIN_SOURCE_DIR = "assets/languages/core/components/main/lang/";
 
 interface IUIMainLanguageRelevantItems {
-  shopping: string;
+  search: string;
   report: string;
   info: string;
   settings: string;
@@ -36,7 +35,7 @@ interface IUIMainLanguageRelevantItems {
     MatListModule, 
     RouterModule,
     ToolbarComponent,
-    ShoppingComponent,
+    SearchComponent,
     ReportComponent,
     SettingsComponent,
     InfoComponent
@@ -62,7 +61,7 @@ export class MainComponent implements OnInit, OnDestroy {
 
   readonly navItemsDefault: Array<INavigationEntry> = [
 
-    {id: "shopping", label: "shopping", icon: "add_shopping_cart"},
+    {id: "search", label: "Search", icon: "add_chart"},
     {id: "report", label: "Report", icon: "feed"},
     {id: "info", label: "Info", icon: "info_outline"},
     {id: "settings", label: "Settings", icon: "settings"},

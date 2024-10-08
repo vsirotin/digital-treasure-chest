@@ -16,9 +16,9 @@ import { ILanguageDescription, LocalizerFactory } from '@vsirotin/localizer';
 })
 export class ToolbarComponent{
 
-  title = 'CoWeShop';
-  originalName = "AA";
-  ietfTag = "BB";
+  title = 'My digital jewelry box';
+  originalName = "";
+  ietfTag = "";
 
   constructor(private communicatorService: CommunicatorService){
     LocalizerFactory.languageChangeNotificator.selectionChanged$.subscribe(
