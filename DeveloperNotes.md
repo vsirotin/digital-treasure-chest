@@ -19,7 +19,7 @@ Behavior:
    - If the chest is empty, the app presents the search page.
    - Else, the app presents the report page.
 
-# 2. Shopping
+# 2. Search
 ## U2-1. Selection an numbers
 Behavior:
 1. Depending on the chest status:
