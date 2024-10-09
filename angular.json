@@ -3,29 +3,29 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "digital-trinket-box-app": {
+    "main-app": {
       "projectType": "application",
       "schematics": {},
-      "root": "projects/digital-trinket-box-app",
-      "sourceRoot": "projects/digital-trinket-box-app/src",
+      "root": "projects/main-app",
+      "sourceRoot": "projects/main-app/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/digital-trinket-box-app",
-            "index": "projects/digital-trinket-box-app/src/index.html",
-            "browser": "projects/digital-trinket-box-app/src/main.ts",
+            "outputPath": "dist/main-app",
+            "index": "projects/main-app/src/index.html",
+            "browser": "projects/main-app/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "projects/digital-trinket-box-app/tsconfig.app.json",
+            "tsConfig": "projects/main-app/tsconfig.app.json",
             "assets": [
-              "projects/digital-trinket-box-app/src/favicon.ico",
-              "projects/digital-trinket-box-app/src/assets"
+              "projects/main-app/src/favicon.ico",
+              "projects/main-app/src/assets"
             ],
             "styles": [
-              "projects/digital-trinket-box-app/src/styles.css"
+              "projects/main-app/src/styles.css"
             ],
             "scripts": []
           },
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "digital-trinket-box-app:build:production"
+              "buildTarget": "main-app:build:production"
             },
             "development": {
-              "buildTarget": "digital-trinket-box-app:build:development"
+              "buildTarget": "main-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "digital-trinket-box-app:build"
+            "buildTarget": "main-app:build"
           }
         },
         "test": {
@@ -78,13 +78,13 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "projects/digital-trinket-box-app/tsconfig.spec.json",
+            "tsConfig": "projects/main-app/tsconfig.spec.json",
             "assets": [
-              "projects/digital-trinket-box-app/src/favicon.ico",
-              "projects/digital-trinket-box-app/src/assets"
+              "projects/main-app/src/favicon.ico",
+              "projects/main-app/src/assets"
             ],
             "styles": [
-              "projects/digital-trinket-box-app/src/styles.css"
+              "projects/main-app/src/styles.css"
             ],
             "scripts": []
           }
