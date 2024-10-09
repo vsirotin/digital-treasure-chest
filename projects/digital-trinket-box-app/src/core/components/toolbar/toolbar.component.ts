@@ -16,7 +16,7 @@ import { ILanguageDescription, LocalizerFactory } from '@vsirotin/localizer';
 })
 export class ToolbarComponent{
 
-  title = 'My digital jewelry box';
+  title = 'Digital trinket box';
   originalName = "";
   ietfTag = "";
 

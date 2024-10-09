@@ -3,29 +3,29 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "communist-web-shop-app": {
+    "digital-trinket-box-app": {
       "projectType": "application",
       "schematics": {},
-      "root": "projects/communist-web-shop-app",
-      "sourceRoot": "projects/communist-web-shop-app/src",
+      "root": "projects/digital-trinket-box-app",
+      "sourceRoot": "projects/digital-trinket-box-app/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/communist-web-shop-app",
-            "index": "projects/communist-web-shop-app/src/index.html",
-            "browser": "projects/communist-web-shop-app/src/main.ts",
+            "outputPath": "dist/digital-trinket-box-app",
+            "index": "projects/digital-trinket-box-app/src/index.html",
+            "browser": "projects/digital-trinket-box-app/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "projects/communist-web-shop-app/tsconfig.app.json",
+            "tsConfig": "projects/digital-trinket-box-app/tsconfig.app.json",
             "assets": [
-              "projects/communist-web-shop-app/src/favicon.ico",
-              "projects/communist-web-shop-app/src/assets"
+              "projects/digital-trinket-box-app/src/favicon.ico",
+              "projects/digital-trinket-box-app/src/assets"
             ],
             "styles": [
-              "projects/communist-web-shop-app/src/styles.css"
+              "projects/digital-trinket-box-app/src/styles.css"
             ],
             "scripts": []
           },
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "communist-web-shop-app:build:production"
+              "buildTarget": "digital-trinket-box-app:build:production"
             },
             "development": {
-              "buildTarget": "communist-web-shop-app:build:development"
+              "buildTarget": "digital-trinket-box-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "communist-web-shop-app:build"
+            "buildTarget": "digital-trinket-box-app:build"
           }
         },
         "test": {
@@ -78,13 +78,13 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "projects/communist-web-shop-app/tsconfig.spec.json",
+            "tsConfig": "projects/digital-trinket-box-app/tsconfig.spec.json",
             "assets": [
-              "projects/communist-web-shop-app/src/favicon.ico",
-              "projects/communist-web-shop-app/src/assets"
+              "projects/digital-trinket-box-app/src/favicon.ico",
+              "projects/digital-trinket-box-app/src/assets"
             ],
             "styles": [
-              "projects/communist-web-shop-app/src/styles.css"
+              "projects/digital-trinket-box-app/src/styles.css"
             ],
             "scripts": []
           }
