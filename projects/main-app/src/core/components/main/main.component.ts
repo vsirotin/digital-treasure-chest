@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { MediaMatcher, BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatButtonModule}  from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -59,13 +60,18 @@ export class MainComponent implements OnInit, OnDestroy {
 
   mobileQuery!: MediaQueryList;
 
-  readonly navItemsDefault: Array<INavigationEntry> = [
+ ui : IMainUI = {
+    navItems: [
 
-    {id: "search", label: "Search", icon: "add_chart"},
-    {id: "report", label: "Report", icon: "feed"},
-    {id: "info", label: "Info", icon: "info_outline"},
-    {id: "settings", label: "Settings", icon: "settings"},
-  ];
+      {id: "search", label: "Search", icon: "add_chart"},
+      {id: "report", label: "Report", icon: "feed"},
+      {id: "info", label: "Info", icon: "info_outline"},
+      {id: "settings", label: "Settings", icon: "settings"},
+    ],
+    title: "Digital Treasure Chest AAAA",
+  };
+
+  
 
   private _mobileQueryListener!: () => void;
   //localizer: ILocalizer<IUIMainLanguageRelevantItems> = LocalizerFactory.createLocalizer(MAIN_SOURCE_DIR, 1);
@@ -75,9 +81,12 @@ export class MainComponent implements OnInit, OnDestroy {
    changeDetectorRef: ChangeDetectorRef, 
    media: MediaMatcher, 
    private breakpointObserver: BreakpointObserver,
-   private cdr: ChangeDetectorRef) {
+   private cdr: ChangeDetectorRef,
+   private titleService: Title) {
     this.logger.setLogLevel(0);
     this.logger.log("Start of constructor");
+
+    this.titleService.setTitle(this.ui.title); 
 
     this.subscriptionBtnClicked = this.communicatorService.buttonClicked$.subscribe(() => {
       this.logger.debug("Start of subscriptionBtnClicked");
@@ -131,6 +140,11 @@ interface INavigationEntry {
   id: string;
   label: string;
   icon: string;
+}
+
+interface IMainUI {
+  title: string;
+  navItems: Array<INavigationEntry>;
 }
 
 function deepCopyArray<T>(arr: Array<T>): Array<T> {

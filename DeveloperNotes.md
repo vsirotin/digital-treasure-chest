@@ -24,10 +24,10 @@ Behavior:
 Behavior:
 1. Depending on the chest status:
    - If the chest is not completelly filled, the app presents:
-     - list of selection criteries in current language. 
+     - list of selection criteria in current language. 
      - information, how many numbers are already is in chest and how many number the user can add into the chest.
     - Else recomendation (with button)  to go to chest and to remove some numbers from chest. In this case no next steps are possible. 
-2. User selects some criteries.
+2. User selects some criteria.
 3. After selection of each criteria app presents:
     - how many numbers from chest and "new" numbers matches to current combination of criterias
     - If selcted numbers can be add in chest, these numbers are presented as a list inclusive a numbers from chest, those match to selection criteria. Numbers from chest will be present diffferent as "new" numbers. A button "Add" will be in this case available, otherwise - not. 
@@ -37,7 +37,7 @@ Behavior:
 
 ## U2-3. Clear selection in chest
 Behavior:
-1. After user's click on "Clear criteries" selection criteries an selected numbers will be cleared. 
+1. After user's click on "Clear criteria" selection criteria an selected numbers will be cleared. 
 
 # Reporting
 ## U3-1. Show numbers in chest

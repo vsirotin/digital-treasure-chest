@@ -1,4 +1,4 @@
-# Communist Web Shop
+# Digital Treasure Chest
 
 This application is designed to fulfill the author's childhood dream - to give the people of Earth a store where all products will always be free and never run out.
 
