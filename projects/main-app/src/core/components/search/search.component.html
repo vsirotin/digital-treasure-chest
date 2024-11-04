@@ -1,13 +1,16 @@
+<div class="demo-section">
+
 <mat-selection-list #criterions>
     @for (criterion of criteria; track criterion; let i = $index) {
       <mat-list-option>{{criterion}}
-        <button mat-button class="rounded-button" (click)="openDialog(i)">{{buttonName}}</button>
+        <span></span>
+        <button mat-raised-button  (click)="openDialog(i)">{{buttonName}}</button>
     </mat-list-option>
 
       
     }
   </mat-selection-list>
-  
+  </div>
   <p>
     Options selected: {{criterions.selectedOptions.selected.length}}
   </p>

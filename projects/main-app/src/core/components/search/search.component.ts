@@ -2,12 +2,14 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-search',
   standalone: true,
   imports: [MatListModule,
     MatButtonModule, 
+    MatIconModule, 
     MatDialogModule
   ],
   templateUrl: './search.component.html',
@@ -17,7 +19,7 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 export class SearchComponent {
   criteria: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
 
-  buttonName = "(i)";
+  buttonName = "What is it?";
 
   onOptionClick(criterion: string): void {
     // Your function logic here
