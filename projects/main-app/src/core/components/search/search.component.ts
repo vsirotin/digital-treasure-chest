@@ -3,6 +3,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
+import { ITermExplanationDialogData, TermExplanationDialog } from './term-explanation-dialog/TermExplanationDialog';
 
 @Component({
   selector: 'app-search',
@@ -29,22 +30,20 @@ export class SearchComponent {
   readonly dialog = inject(MatDialog);
 
   openDialog(index: number): void {
-    console.log('Dialog opened:', index);
-    const dialogRef = this.dialog.open(DialogContentExampleDialog);
+
+    ;
+
+    const dialogRef = this.dialog.open(TermExplanationDialog);
+
+    const dialogData: ITermExplanationDialogData = {lang: "de-DE", term: "AAAAA"}
+    dialogRef.componentInstance.setData(dialogData);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
   }
-
-  
 }
 
-@Component({
-  selector: './search.dialog-content-example-dialog',
-  templateUrl: 'dialog-content-example-dialog.html',
-  standalone: true,
-  imports: [MatDialogModule, MatButtonModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-})
-export class DialogContentExampleDialog {}
+
+
+
