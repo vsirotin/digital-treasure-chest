@@ -1,4 +1,19 @@
+<h2>{{ui.title}}</h2>
+<p>{{ui.introduction}}</p>
+<hr>
 <div class="demo-section">
+
+<mat-form-field appearance="fill" class="min-max-field">
+  <input matInput type="number" [(ngModel)]="minValue" name="minValue" (ngModelChange)="validateInterval()">
+</mat-form-field>
+≤ X ≤
+<mat-form-field appearance="fill" class="min-max-field">
+  <input matInput type="number" [(ngModel)]="maxValue" name="maxValue" (ngModelChange)="validateInterval()">
+</mat-form-field>
+
+<div *ngIf="!isIntervalValid" class="error-message">
+  {{errorText}}
+</div>  
 
 <mat-selection-list #criterions>
     @for (criterion of criteria; track criterion; let i = $index) {

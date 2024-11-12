@@ -14,6 +14,15 @@
     box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
   }
 
+  .error-message {
+    color: red; 
+    font-style: italic; 
+  }
+
+  .min-max-field {
+    width: 70px; /* Adjust the width as needed */
+  }
+
 
   
  

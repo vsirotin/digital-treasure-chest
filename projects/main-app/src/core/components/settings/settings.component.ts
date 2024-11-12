@@ -20,7 +20,7 @@ class UIItems {
   loggingExplanation: string = "Only for support purposes";
 }
 
-const DEFAUIL_UI_ITEMS: UIItems = {
+export const DEFAUIL_UI_ITEMS: UIItems = {
   settings: "Settings",
   language:  "Language",
   logging: "Logging",
