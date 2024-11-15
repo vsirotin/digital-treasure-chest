@@ -15,17 +15,14 @@
   {{errorText}}
 </div>  
 
-<mat-selection-list #criterions>
-    @for (criterion of criteria; track criterion; let i = $index) {
-      <mat-list-option>{{criterion}}
-        <span></span>
-        <button mat-raised-button  (click)="openDialog(i)">{{buttonName}}</button>
-    </mat-list-option>
-
-      
+<mat-selection-list #criteria (selectionChange)="onSelectionChange($event)">
+    @for (criterion of ui.criteria; track criterion.id; let i = $index) {
+      <mat-list-option [value]="criterion">{{ui.prefix}}{{criterion.criteria}}</mat-list-option>
     }
-  </mat-selection-list>
-  </div>
-  <p>
-    Options selected: {{criterions.selectedOptions.selected.length}}
-  </p>
+</mat-selection-list>
+
+</div>
+<p>
+  <span></span>
+      <button mat-raised-button  (click)="openDialog()">{{ui.termExplanation}}</button>
+</p>

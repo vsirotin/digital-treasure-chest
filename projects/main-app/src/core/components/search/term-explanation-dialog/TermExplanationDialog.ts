@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy} from "@angular/core";
-import { MatButtonModule } from "@angular/material/button";
+import { MatListModule } from '@angular/material/list';import { MatButtonModule } from "@angular/material/button";
 import { MatDialogModule } from "@angular/material/dialog";
 
 
@@ -8,19 +8,30 @@ import { MatDialogModule } from "@angular/material/dialog";
   selector: './term-explanation-dialog',
   templateUrl: './term-explanation-dialog.html',
   standalone: true,
-  imports: [MatDialogModule, MatButtonModule],
+  imports: [MatListModule, MatDialogModule, MatButtonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrl: './term-explanation-dialog.css',
 })
 export class TermExplanationDialog {
-  term: string = "";
 
+  termExplanations?: ITermExplanation[];
+  title: string = '';
+  prefixToLink: string = '';
 
-  setData(data: ITermExplanationDialogData): void {
-    this.term = data.term;
+  setData(data: ISearcherUI): void {
+    this.termExplanations = data.explanations;
+    this.title = data.title;
+    this.prefixToLink = data.prefixToLink;
   }
 }
 
-export interface ITermExplanationDialogData {
-  lang: string;
+export interface ITermExplanation {
   term: string;
+  explanation: string;
+}
+
+export interface ISearcherUI {
+  title: string;
+  explanations: ITermExplanation[];
+  prefixToLink: string;
 }
