@@ -2,12 +2,12 @@
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>X</button>
 </mat-dialog-actions>
 <h2 mat-dialog-title>{{title}}</h2>
-<hr>
-<mat-dialog-content >
+ 
+<mat-dialog-content>
   @for (explanation of termExplanations; track explanation.term) {
      <h3 class="bold-text">{{explanation.term}}</h3>
      <p>{{explanation.explanation}}</p>
   }
-</mat-dialog-content>
-<hr>
+ 
+</mat-dialog-content> 
 <p>{{prefixToLink}} <a href="https://oeis.org/" target="_blank" rel="noopener noreferrer">The On-Line Encyclopedia of Integer Sequences (OEIS)</a></p>

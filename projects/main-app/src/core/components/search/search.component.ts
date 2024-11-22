@@ -3,6 +3,9 @@ import { MatListModule, MatSelectionListChange, MatSelectionList } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { MatAccordion, MatExpansionModule} from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ISearcherUI, ITermExplanation, TermExplanationDialog } from './term-explanation-dialog/TermExplanationDialog';
 import { FormsModule } from '@angular/forms';
 
@@ -19,6 +22,10 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule, 
     MatIconModule, 
     MatDialogModule,
+    MatAccordion, 
+    MatExpansionModule,
+    MatCardModule,
+    MatProgressBarModule,
     CommonModule,
     MatFormFieldModule,
     MatInputModule,
@@ -30,7 +37,10 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class SearchComponent {
   ui: ISearchUI = {
-    title: 'Search new numbers for your Digital Treasure Chet',
+    resultTitle: 'Your Digital Treasure Chet contain now the following numbers:',
+    noResults: 'No numbers selected',
+    listNumbersInTreasure: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    searchTitle: 'Search new numbers for your Digital Treasure Chet',
     introduction: 'Please select a criterions for search your favorite positive integer numbers (denoted below as X)',
     prefix: "It is ",
     errorTextMessage: 'Minimum and maximum values should be both positive integers less or equal 1000. Minimum value must be less than or equal to maximum value.',
@@ -128,7 +138,10 @@ interface ISearchEntry {
 }
 
 interface ISearchUI {
-  title: string;
+  resultTitle: string;
+  listNumbersInTreasure: Array<number>;
+  noResults: string;
+  searchTitle: string;
   introduction: string;
   prefix: string;
   errorTextMessage: string;

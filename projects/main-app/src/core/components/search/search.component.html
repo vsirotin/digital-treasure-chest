@@ -1,4 +1,48 @@
-<h2>{{ui.title}}</h2>
+
+<mat-card class="settings-card">
+  <mat-card-header>
+    <mat-card-title>SS</mat-card-title>
+  </mat-card-header>
+  <mat-accordion class="settings-headers-align" multi>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>language</mat-icon>
+          BB
+          </mat-panel-title>
+        <mat-panel-description>
+          <span width = "5px"></span>
+AA
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+    </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>list</mat-icon>
+            CC
+            </mat-panel-title>
+          <mat-panel-description>
+            DD
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+     
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-card-footer>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>
+
+
+<h2>{{ui.resultTitle}}</h2>
+@if (ui.listNumbersInTreasure.length == 0) {
+  <p>{{ui.noResults}}AA</p>
+}@else {
+  {{ui.listNumbersInTreasure.join(', ')}}
+
+}
+<h2>{{ui.searchTitle}}</h2>
 <p>{{ui.introduction}}</p>
 <hr>
 <div class="demo-section">

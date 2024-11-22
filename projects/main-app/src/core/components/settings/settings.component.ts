@@ -1,11 +1,10 @@
-import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewChild, OnDestroy } from '@angular/core';
 import { MatAccordion, MatExpansionModule} from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { Subscription } from 'rxjs/internal/Subscription';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 import { LanguageSelectionComponent } from '../../../shared/components/language-selection/language-selection.component'
 import { LogSettingComponent } from "../../../shared/components/log-setting/log-setting.component";
