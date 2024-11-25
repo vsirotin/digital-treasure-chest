@@ -1,72 +1,32 @@
 
 <mat-card class="settings-card">
-  <mat-card-header>
-    <mat-card-title>SS</mat-card-title>
-  </mat-card-header>
   <mat-accordion class="settings-headers-align" multi>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          <mat-icon>language</mat-icon>
-          BB
+          <mat-icon>feed</mat-icon>
           </mat-panel-title>
         <mat-panel-description>
-          <span width = "5px"></span>
-AA
+          {{ui.viewTitle}}
         </mat-panel-description>
         </mat-expansion-panel-header>
+        <app-chet-content-view></app-chet-content-view>
+        
+      
     </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title>
-            <mat-icon>list</mat-icon>
-            CC
+            <mat-icon>add_chart</mat-icon>
             </mat-panel-title>
           <mat-panel-description>
-            DD
+            {{ui.updateTitle}}
         </mat-panel-description>
       </mat-expansion-panel-header>
-     
+  <app-chet-content-update></app-chet-content-update>
     </mat-expansion-panel>
   </mat-accordion>
   <mat-card-footer>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   </mat-card-footer>
 </mat-card>
-
-
-<h2>{{ui.resultTitle}}</h2>
-@if (ui.listNumbersInTreasure.length == 0) {
-  <p>{{ui.noResults}}AA</p>
-}@else {
-  {{ui.listNumbersInTreasure.join(', ')}}
-
-}
-<h2>{{ui.searchTitle}}</h2>
-<p>{{ui.introduction}}</p>
-<hr>
-<div class="demo-section">
-
-<mat-form-field appearance="fill" class="min-max-field">
-  <input matInput type="number" [(ngModel)]="minValue" name="minValue" (ngModelChange)="validateInterval()">
-</mat-form-field>
-≤ X ≤
-<mat-form-field appearance="fill" class="min-max-field">
-  <input matInput type="number" [(ngModel)]="maxValue" name="maxValue" (ngModelChange)="validateInterval()">
-</mat-form-field>
-
-<div *ngIf="!isIntervalValid" class="error-message">
-  {{errorText}}
-</div>  
-
-<mat-selection-list #criteria (selectionChange)="onSelectionChange($event)">
-    @for (criterion of ui.criteria; track criterion.id; let i = $index) {
-      <mat-list-option [value]="criterion">{{ui.prefix}}{{criterion.criteria}}</mat-list-option>
-    }
-</mat-selection-list>
-
-</div>
-<p>
-  <span></span>
-      <button mat-raised-button  (click)="openDialog()">{{ui.termExplanation}}</button>
-</p>
