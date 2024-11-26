@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChetContentUpdateComponent } from './chet-content-update.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ChetContentUpdateComponent', () => {
   let component: ChetContentUpdateComponent;
@@ -8,7 +9,10 @@ describe('ChetContentUpdateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ChetContentUpdateComponent]
+      imports: [ChetContentUpdateComponent,
+          BrowserAnimationsModule
+  
+      ]
     })
     .compileComponents();
     

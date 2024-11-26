@@ -1,6 +1,27 @@
-export class Searcher {
+export interface ISearcher {
+  search(minValue: number, maxValue: number, criteriaIndexies: number []): number [];
+  isPythagoreanPrime(i: number): boolean;
+  isPrime(i: number): boolean;
+  isFibbonacci(i: number): boolean;
+  isTribonnaci(i: number): boolean;
+  isBell(i: number): boolean;
+  isCatalan(i: number): boolean;
+  isSophieGermain(i: number): boolean;
+  isSymmetrical(i: number): boolean;
+} 
 
-  primeNumbers: Set<number> = new Set<number>([ 1, 3, 5, 7, 11, 13, 17, 19, 
+export class Searcher implements ISearcher {
+
+  private static searcherInstance?: ISearcher = undefined;
+
+  static getSearcher(): ISearcher {
+    if (!Searcher.searcherInstance) {
+      Searcher.searcherInstance = new Searcher();
+    }
+    return Searcher.searcherInstance!!;
+  }
+
+  primeNumbers: Set<number> = new Set<number>([ 1, 2, 3, 5, 7, 11, 13, 17, 19, 
     23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 
     101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 
     211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 
@@ -35,7 +56,7 @@ export class Searcher {
     233, 239, 251, 281, 293, 359, 419, 431, 443, 491, 
     509, 593, 641, 653, 659, 683, 719, 743, 761, 809, 911, 953]);
   
-    symmetricalNumbers: Set<number> = new Set<number>(
+  symmetricalNumbers: Set<number> = new Set<number>(
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 
     11, 22, 33, 44, 55, 66, 77, 88, 99, 
     101, 111, 121, 131, 141, 151, 161, 171, 181, 191,
@@ -48,4 +69,98 @@ export class Searcher {
     808, 818, 828, 838, 848, 858, 868, 878, 888, 898,
     909, 919, 929, 939, 949, 959, 969, 979, 989, 999]);
 
+
+
+  private constructor() {}
+  isPythagoreanPrime(i: number): boolean {
+    return this.pythagorasPrimeNumbers.has(i);
   }
+  isPrime(i: number): boolean {
+    return this.primeNumbers.has(i);
+  }
+  isFibbonacci(i: number): boolean {
+    return this.fibbonacciNumbers.has(i);
+  }
+  isTribonnaci(i: number): boolean {
+    return this.tribonnaciNumbers.has(i);
+  }
+  isBell(i: number): boolean {
+    return this.bellNumbers.has(i);
+  }
+  isCatalan(i: number): boolean {
+   return this.catalanNumbers.has(i);
+  }
+  isSophieGermain(i: number): boolean {
+    return this.sophieGermainNumbers.has(i);
+  }
+  isSymmetrical(i: number): boolean {
+    return this.symmetricalNumbers.has(i);
+  }
+  
+  search(minValue: number, maxValue: number, criteriaIndexies: number[]): number[] {
+    let result: number[] = [];
+    for (let i = minValue; i <= maxValue; i++) {
+      let isMatch = false;
+      for (let j = 0; j < criteriaIndexies.length; j++) {
+        switch (criteriaIndexies[j]) {
+          case 0:
+            if (i % 2 == 0) { //even number
+              isMatch = true;
+            }
+            break;
+          case 1:
+            if (i % 2 != 0) { //odd number
+              isMatch = true;
+            }
+            break;
+          case 2:
+            if (this.primeNumbers.has(i)) {
+              isMatch = true;
+            }
+            break;
+          case 3:
+            if (this.pythagorasPrimeNumbers.has(i)) {
+              isMatch = true;
+            }
+            break;
+          case 4:
+            if (this.fibbonacciNumbers.has(i)) {
+              isMatch = true;
+            }
+            break;
+          case 5:
+            if (this.tribonnaciNumbers.has(i)) {
+              isMatch = true;
+            }
+            break;
+          case 6:
+            if (this.bellNumbers.has(i)) {
+              isMatch = true;
+            }
+            break;
+          case 7:
+            if (this.catalanNumbers.has(i)) {
+              isMatch = true;
+            }
+            break;
+          case 8:
+            if (this.sophieGermainNumbers.has(i)) {
+              isMatch = true;
+            }
+            break;
+          case 9:
+            if (this.symmetricalNumbers.has(i)) {
+              isMatch = true;
+            }
+            break;
+          default:
+            break;
+        }
+        if (isMatch) {
+          result.push
+        }
+      }
+    }
+    return result;
+  }; //end of search
+}

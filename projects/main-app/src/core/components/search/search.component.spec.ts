@@ -22,11 +22,11 @@ describe('SearchComponent...', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  describe('function validateIntervalIntern...', () => {
-/*     it('should return true if minValue is less than or equal to maxValue', () => {
-      expect(component.validateIntervalIntern(1, 2)).toBeTrue();
-    });
- */
+  // describe('function validateIntervalIntern...', () => {
+  //   it('should return true if minValue is less than or equal to maxValue', () => {
+  //     expect(component.validateIntervalIntern(1, 2)).toBeTrue();
+  //   });
+ 
     // it('should return false if minValue is greater than maxValue', () => {
     //   expect(component.validateIntervalIntern(2, 1)).toBeFalse();
     // });
@@ -45,5 +45,5 @@ describe('SearchComponent...', () => {
     //   expect(component.validateIntervalIntern(1001, 1002)).toBeFalse();
     //   expect(component.validateIntervalIntern(0, 1001)).toBeFalse();
     // });
-  });
+//  });
 });
