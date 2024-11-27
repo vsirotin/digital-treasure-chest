@@ -98,7 +98,7 @@ export class Searcher implements ISearcher {
   }
   
   search(minValue: number, maxValue: number, criteriaIndexies: number[]): number[] {
-    let result: number[] = [];
+    let result = new Set<number>();
     for (let i = minValue; i <= maxValue; i++) {
       let isMatch = false;
       for (let j = 0; j < criteriaIndexies.length; j++) {
@@ -157,10 +157,10 @@ export class Searcher implements ISearcher {
             break;
         }
         if (isMatch) {
-          result.push
+          result.add(i);
         }
       }
     }
-    return result;
+    return Array.from(result).sort((a, b) => a - b);
   }; //end of search
 }
