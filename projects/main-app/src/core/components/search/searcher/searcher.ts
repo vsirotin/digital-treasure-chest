@@ -1,27 +1,8 @@
-export interface ISearcher {
-  search(minValue: number, maxValue: number, criteriaIndexies: number []): number [];
-  isPythagoreanPrime(i: number): boolean;
-  isPrime(i: number): boolean;
-  isFibbonacci(i: number): boolean;
-  isTribonnaci(i: number): boolean;
-  isBell(i: number): boolean;
-  isCatalan(i: number): boolean;
-  isSophieGermain(i: number): boolean;
-  isSymmetrical(i: number): boolean;
-} 
 
-export class Searcher implements ISearcher {
 
-  private static searcherInstance?: ISearcher = undefined;
+export class Searcher  {
 
-  static getSearcher(): ISearcher {
-    if (!Searcher.searcherInstance) {
-      Searcher.searcherInstance = new Searcher();
-    }
-    return Searcher.searcherInstance!!;
-  }
-
-  primeNumbers: Set<number> = new Set<number>([ 1, 2, 3, 5, 7, 11, 13, 17, 19, 
+  private static primeNumbers: Set<number> = new Set<number>([ 1, 2, 3, 5, 7, 11, 13, 17, 19, 
     23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 
     101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 
     211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 
@@ -33,7 +14,7 @@ export class Searcher implements ISearcher {
     809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 
     907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997]);
   
-  pythagorasPrimeNumbers: Set<number> = new Set<number>([1, 5, 13, 17, 
+    private static pythagorasPrimeNumbers: Set<number> = new Set<number>([1, 5, 13, 17, 
     29, 37, 41, 53, 61, 73, 89, 97, 
     101, 109, 113, 137, 149, 157, 173, 181, 193, 197, 
     229, 233, 241, 257, 269, 277, 281, 293, 
@@ -45,18 +26,18 @@ export class Searcher implements ISearcher {
     809, 821, 829, 853, 857, 877, 881, 
     929, 937, 941, 953, 977, 997]);
 
-  fibbonacciNumbers: Set<number> = new Set<number>([0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]);
+    private static fibbonacciNumbers: Set<number> = new Set<number>([0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]);
   
-  tribonnaciNumbers: Set<number> = new Set<number>([0, 1, 2, 4, 7, 13, 24, 44, 81, 149, 274, 504, 927]);
+    private static tribonnaciNumbers: Set<number> = new Set<number>([0, 1, 2, 4, 7, 13, 24, 44, 81, 149, 274, 504, 927]);
   
-  bellNumbers: Set<number> = new Set<number>([1, 2, 5, 15, 52, 203, 877]);
+    private static bellNumbers: Set<number> = new Set<number>([1, 2, 5, 15, 52, 203, 877]);
   
-  catalanNumbers: Set<number> = new Set<number>([1, 2, 5, 14, 42, 132, 429]);
-  sophieGermainNumbers: Set<number> = new Set<number>([ 2, 3, 5, 11, 23, 29, 41, 53, 83, 89, 113, 131, 173, 179, 191, 
+    private static catalanNumbers: Set<number> = new Set<number>([1, 2, 5, 14, 42, 132, 429]);
+    private static sophieGermainNumbers: Set<number> = new Set<number>([ 2, 3, 5, 11, 23, 29, 41, 53, 83, 89, 113, 131, 173, 179, 191, 
     233, 239, 251, 281, 293, 359, 419, 431, 443, 491, 
     509, 593, 641, 653, 659, 683, 719, 743, 761, 809, 911, 953]);
   
-  symmetricalNumbers: Set<number> = new Set<number>(
+    private static symmetricalNumbers: Set<number> = new Set<number>(
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 
     11, 22, 33, 44, 55, 66, 77, 88, 99, 
     101, 111, 121, 131, 141, 151, 161, 171, 181, 191,
@@ -69,35 +50,40 @@ export class Searcher implements ISearcher {
     808, 818, 828, 838, 848, 858, 868, 878, 888, 898,
     909, 919, 929, 939, 949, 959, 969, 979, 989, 999]);
 
+  static isEven(i: number): boolean {
+    return i % 2 == 0;
+  }
 
+  static isOdd(i: number): boolean {
+    return !Searcher.isEven(i);
+  }
 
-  private constructor() {}
-  isPythagoreanPrime(i: number): boolean {
-    return this.pythagorasPrimeNumbers.has(i);
+  static isPythagoreanPrime(i: number): boolean {
+    return Searcher.pythagorasPrimeNumbers.has(i);
   }
-  isPrime(i: number): boolean {
-    return this.primeNumbers.has(i);
+  static isPrime(i: number): boolean {
+    return Searcher.primeNumbers.has(i);
   }
-  isFibbonacci(i: number): boolean {
-    return this.fibbonacciNumbers.has(i);
+  static isFibbonacci(i: number): boolean {
+    return Searcher.fibbonacciNumbers.has(i);
   }
-  isTribonnaci(i: number): boolean {
-    return this.tribonnaciNumbers.has(i);
+  static isTribonnaci(i: number): boolean {
+    return Searcher.tribonnaciNumbers.has(i);
   }
-  isBell(i: number): boolean {
-    return this.bellNumbers.has(i);
+  static isBell(i: number): boolean {
+    return Searcher.bellNumbers.has(i);
   }
-  isCatalan(i: number): boolean {
-   return this.catalanNumbers.has(i);
+  static isCatalan(i: number): boolean {
+   return Searcher.catalanNumbers.has(i);
   }
-  isSophieGermain(i: number): boolean {
-    return this.sophieGermainNumbers.has(i);
+  static isSophieGermain(i: number): boolean {
+    return Searcher.sophieGermainNumbers.has(i);
   }
-  isSymmetrical(i: number): boolean {
-    return this.symmetricalNumbers.has(i);
+  static isSymmetrical(i: number): boolean {
+    return Searcher.symmetricalNumbers.has(i);
   }
   
-  search(minValue: number, maxValue: number, criteriaIndexies: number[]): number[] {
+  static search(minValue: number, maxValue: number, criteriaIndexies: number[]): number[] {
     let result = new Set<number>();
     for (let i = minValue; i <= maxValue; i++) {
       let isMatch = false;
@@ -114,42 +100,42 @@ export class Searcher implements ISearcher {
             }
             break;
           case 2:
-            if (this.primeNumbers.has(i)) {
+            if (Searcher.primeNumbers.has(i)) {
               isMatch = true;
             }
             break;
           case 3:
-            if (this.pythagorasPrimeNumbers.has(i)) {
+            if (Searcher.pythagorasPrimeNumbers.has(i)) {
               isMatch = true;
             }
             break;
           case 4:
-            if (this.fibbonacciNumbers.has(i)) {
+            if (Searcher.fibbonacciNumbers.has(i)) {
               isMatch = true;
             }
             break;
           case 5:
-            if (this.tribonnaciNumbers.has(i)) {
+            if (Searcher.tribonnaciNumbers.has(i)) {
               isMatch = true;
             }
             break;
           case 6:
-            if (this.bellNumbers.has(i)) {
+            if (Searcher.bellNumbers.has(i)) {
               isMatch = true;
             }
             break;
           case 7:
-            if (this.catalanNumbers.has(i)) {
+            if (Searcher.catalanNumbers.has(i)) {
               isMatch = true;
             }
             break;
           case 8:
-            if (this.sophieGermainNumbers.has(i)) {
+            if (Searcher.sophieGermainNumbers.has(i)) {
               isMatch = true;
             }
             break;
           case 9:
-            if (this.symmetricalNumbers.has(i)) {
+            if (Searcher.symmetricalNumbers.has(i)) {
               isMatch = true;
             }
             break;
