@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class ChetContentViewComponent {
 
   ui: IChetViewUI = {
-    resultTitle: 'Your Digital Treasure Chet contain now the following numbers:',
+    resultTitle: 'Your Digital Treasure Chest contain now the following numbers:',
     noResults: 'No numbers selected',
     listNumbersInTreasure: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   };

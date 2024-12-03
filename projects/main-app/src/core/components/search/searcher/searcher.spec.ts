@@ -62,7 +62,7 @@ describe('Searcher', () => {
     });
 
     it('should return 1 element by interval 5 and odd criteria', () => {
-      const criteriaIndexies: number[] = [1]; 
+      const criteriaIndexies: number[] = [2]; 
       const res = Searcher.search(5, 5, criteriaIndexies);
      
       expect(res.length).toBe(1);
@@ -70,21 +70,27 @@ describe('Searcher', () => {
     });
 
     it('should return 1 element by interval 5 and odd criteria', () => {
-      const criteriaIndexies: number[] = [1]; 
+      const criteriaIndexies: number[] = [2]; 
       const res = Searcher.search(5, 5, criteriaIndexies);
       expect(res.length).toBe(1);
       expect(res[0]).toBe(5);
     });
 
-    it('should return 1 element by interval 977-989 and criteria: pythagorasPrimeNumbers, fibbonacciNumbers, symmetricalNumbers', () => {
-      const criteriaIndexies: number[] = [3, 4, 9]; 
+    it('should return 2 elements by interval 977-989 and criteria: odd numbers, symmetricalNumbers', () => {
+      const criteriaIndexies: number[] = [2, 10]; 
       const res = Searcher.search(977, 989, criteriaIndexies);
-      console.log("rs=", res);
-      expect(res.length).toBe(4);
-      expect(res[0]).toBe(977);
-      expect(res[1]).toBe(979); 
-      expect(res[2]).toBe(987);
-      expect(res[3]).toBe(989);
+      expect(res.length).toBe(2);
+      expect(res[0]).toBe(979); 
+      expect(res[1]).toBe(989);
+    });
+
+    it('should return 3 elements by interval 0-10 and criteria: primeNumbers, pythagorasPrimeNumbers, bellNumbers, catalanNumbers', () => {
+      const criteriaIndexies: number[] = [3, 5, 7, 8]; 
+      const res = Searcher.search(0, 10, criteriaIndexies);
+      expect(res.length).toBe(3);
+      expect(res[0]).toBe(1); 
+      expect(res[1]).toBe(2);
+      expect(res[2]).toBe(5);
     });
 
     

@@ -118,7 +118,6 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   selectMenuItem(id: string) {
-    console.debug("Start of selectMenuItem id=" + id);
     this.currentCommponent = id;
     this.toggleMenu();
   }

@@ -59,13 +59,11 @@ describe('LogSettingComponent', () => {
   async function getCheckedRadioButton(): Promise<string> {
 
     const res = radioButtons.find(async (radioButton) => {
-      console.log("In getCheckedRadioButton 1", await radioButton.getValue(), " - ", await radioButton.isChecked());
       if(await radioButton.isChecked()) return true;
       return false;
     });
 
     const id = (res instanceof MatRadioButtonHarness) ? await res.getValue() : "NOT_FOUND";
-    console.log("In getCheckedRadioButton 2", id);
     return id as string;
   }
 

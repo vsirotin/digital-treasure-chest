@@ -83,68 +83,79 @@ export class Searcher  {
     return Searcher.symmetricalNumbers.has(i);
   }
   
+  /**
+   * Search for numbers that match the criteria accordin AND logic.
+   * @param minValue 
+   * @param maxValue 
+   * @param criteriaIndexies 
+   * @returns 
+   */
   static search(minValue: number, maxValue: number, criteriaIndexies: number[]): number[] {
     let result = new Set<number>();
     for (let i = minValue; i <= maxValue; i++) {
-      let isMatch = false;
+      let isMatch = true;
       for (let j = 0; j < criteriaIndexies.length; j++) {
         switch (criteriaIndexies[j]) {
-          case 0:
-            if (i % 2 == 0) { //even number
-              isMatch = true;
-            }
-            break;
+          // this and other checks below using NOT logic.
           case 1:
-            if (i % 2 != 0) { //odd number
-              isMatch = true;
+            if (!Searcher.isEven(i)) { //even number
+              isMatch = false;
             }
             break;
           case 2:
-            if (Searcher.primeNumbers.has(i)) {
-              isMatch = true;
+            if (!Searcher.isOdd(i)) { //odd number
+              isMatch = false;
             }
             break;
           case 3:
-            if (Searcher.pythagorasPrimeNumbers.has(i)) {
-              isMatch = true;
+            if (!Searcher.primeNumbers.has(i)) {
+              isMatch = false;
             }
             break;
           case 4:
-            if (Searcher.fibbonacciNumbers.has(i)) {
-              isMatch = true;
+            if (!Searcher.pythagorasPrimeNumbers.has(i)) {
+              isMatch = false;
             }
             break;
           case 5:
-            if (Searcher.tribonnaciNumbers.has(i)) {
-              isMatch = true;
+            if (!Searcher.fibbonacciNumbers.has(i)) {
+              isMatch = false;
             }
             break;
           case 6:
-            if (Searcher.bellNumbers.has(i)) {
-              isMatch = true;
+            if (!Searcher.tribonnaciNumbers.has(i)) {
+              isMatch = false;
             }
             break;
           case 7:
-            if (Searcher.catalanNumbers.has(i)) {
-              isMatch = true;
+            if (!Searcher.bellNumbers.has(i)) {
+              isMatch = false;
             }
             break;
           case 8:
-            if (Searcher.sophieGermainNumbers.has(i)) {
-              isMatch = true;
+            if (!Searcher.catalanNumbers.has(i)) {
+              isMatch = false;
             }
             break;
           case 9:
-            if (Searcher.symmetricalNumbers.has(i)) {
-              isMatch = true;
+            if (!Searcher.sophieGermainNumbers.has(i)) {
+              isMatch = false;
+            }
+            break;
+          case 10:
+            if (!Searcher.symmetricalNumbers.has(i)) {
+              isMatch = false;
             }
             break;
           default:
             break;
+        } //end of switch
+        if (!isMatch) {
+          break;
         }
-        if (isMatch) {
-          result.add(i);
-        }
+      }//end of for j
+      if (isMatch) {
+        result.add(i);
       }
     }
     return Array.from(result).sort((a, b) => a - b);

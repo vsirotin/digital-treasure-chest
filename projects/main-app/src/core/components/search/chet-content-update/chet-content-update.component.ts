@@ -9,7 +9,8 @@ import { MatListModule, MatSelectionListChange, MatSelectionList } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
-import { ISearcherUI, TermExplanationDialog } from '../term-explanation-dialog/TermExplanationDialog';
+import { TermExplanationDialog } from '../term-explanation-dialog/TermExplanationDialog';
+import { Searcher } from '../searcher/searcher';
 
 @Component({
   selector: 'app-chet-content-update',
@@ -31,7 +32,7 @@ export class ChetContentUpdateComponent {
     searchTitle: 'Search new numbers for your Digital Treasure Chet',
     introduction: 'Please select a criterions for search your favorite positive integer numbers (denoted below as X)',
     prefix: "It is ",
-    errorTextMessage: 'Minimum and maximum values should be both positive integers less or equal 1000. Minimum value must be less than or equal to maximum value.',
+    errorTextMessage: 'Minimum and maximum values must integers between 0 and 1000, inclusive. Minimum value must be less than or equal to maximum value.',
     termExplanation: 'What do these terms mean?',
     criteria: [
       { id: 1, criteria: "an even number"},
@@ -49,36 +50,15 @@ export class ChetContentUpdateComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(TermExplanationDialog)
-
-    const dialogData: ISearcherUI = {
-      title: 'Terms explanation',
-      explanations: [
-        { term: 'Prime number', explanation: 'A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers. A natural number greater than 1 that is not prime is called a composite number.' },
-        { term: 'Pythagorean prime number', explanation: 'A Pythagorean prime is a prime number of the form 4n + 1. Pythagorean primes are exactly the odd prime numbers p for which 2 is a primitive root modulo p.' },
-        { term: 'Fibbonacci numbers', explanation: 'A sequence in which each number is the sum of the two preceding ones' },
-        { term: 'Tribonnaci numbers', explanation: 'A sequence of natural numbers that originally starts with the number 0 once and the number 1 twice. Subsequently, the sum of the three preceding numbers results in the number immediately following: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3' },
-        { term: 'Bell numbers', explanation: 'Bell number is the number of all unordered partitions of an n-element set, denoted by Bn, with B0=1 assumed by definition. Named after Eric Bell, who studied them in the 1930s.' },
-        { term: 'Catalan Numbers', explanation: 'Catalan numbers is a numerical sequence found in many combinatorial problems. They are named in honor of the Belgian mathematician Eugène Charles Catalan, although they were known to Leonard Euler.The nth Catalan number Cn can be defined in several equivalent ways, such as: 1) The number of partitions of a convex (n+2)-gon into triangles by non-intersecting diagonals. 2) The number of ways to connect 2n points on a circle of n by non-intersecting chords, etc.' },
-        { term: 'Sophie Germain numbers', explanation: 'A prime number Sophie Germain is such a prime number p that the number 2p+1 is also prime. The number 2p+1 associated with the prime number Sophie Germain is called a safe prime number. For example, 11 is Sophie Germain prime number, and 2 × 11 + 1 = 23 is the associated safe prime number.' },
-        { term: 'Symmetrical numbers', explanation: 'Symmetric numbers are 1) all one-digit numbers, 2) two-digit numbers of the form xx, and 3) three-digit numbers of the form xyx, where x, y are digits, and x cannot be 0.' }
-      ],
-      prefixToLink: 'More intersting information about magic numbers sequences see in Wikipedia and on site  '
-    }
-    dialogRef.componentInstance.setData(dialogData);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
   }
 
   errorText = '';
 
-
- 
-
   minValue: number = 0; // Initial minimum value
   maxValue: number = 1000; // Initial maximum value
   isIntervalValid: boolean = false; // Error flag for interval validation
+  criterionIds: number[] = []; // Selected criteria
+  searchResult: number[] = []; // Search result
 
   onOptionClick(criterion: string): void {
     // Your function logic here
@@ -91,17 +71,27 @@ export class ChetContentUpdateComponent {
 
 
   onSelectionChange(event: MatSelectionListChange): void {
-    const criterionIds = this.criteriaList.selectedOptions.selected
+    this.criterionIds = this.criteriaList.selectedOptions.selected
       .map(option => option.value.id).sort((a, b) => a - b);
-    console.log('Selected option:', criterionIds);
-    // Perform any additional actions based on the selected option
+    console.log('Selected option:', this.criterionIds);
+    this.processSearch();
+    console.log('Search result:', this.searchResult);
   }
 
   validateInterval(): void {
     this.isIntervalValid  =  this.validateIntervalIntern(this.minValue, this.maxValue);
     if(!this.isIntervalValid){
       this.errorText = this.ui.errorTextMessage;
+      return
     }
+    if(this.criterionIds.length >0 ){
+      this.processSearch();
+    }
+  }
+
+  private processSearch(): void {
+    this.searchResult = Searcher.search(this.minValue, this.maxValue, this.criterionIds);
+    console.log('Search result:', this.searchResult);
   }
 
   /**
@@ -112,7 +102,7 @@ export class ChetContentUpdateComponent {
    */
   validateIntervalIntern(minValue: number, maxValue: number): boolean{
     return (minValue <= maxValue)
-    && (minValue > 0) && (maxValue > 0)
+    && (minValue >= 0) && (maxValue >= 0)
     && (minValue <= 1000) && (maxValue <= 1000)
     &&Number.isInteger(Number(minValue))
     &&Number.isInteger(Number(maxValue));  
