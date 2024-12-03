@@ -1,15 +1,16 @@
 <mat-card appearance="outlined">
     <mat-card-header>
-      <mat-card-title>Chihuahua</mat-card-title>
+      <mat-card-title>{{ui.title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <p>{{longText}}</p>
+      <p>{{text1}}</p>
+      <p>{{text2}}</p>
     </mat-card-content>
     <mat-card-footer class="search-result-card-footer">
-      <mat-chip-set aria-label="Chihuahua traits">
-        <mat-chip>charming</mat-chip>
-        <mat-chip>graceful</mat-chip>
-        <mat-chip>sassy</mat-chip>
-      </mat-chip-set>
+      <div>
+        <button mat-raised-button (click)="buttonAdd()" [disabled]="!isButtonAddEnabled">{{ui.addItems}}</button>
+        <span class="button-spacer"></span>
+        <button mat-raised-button (click)="buttonReplace()" [disabled]="!isButtonReplaceEnabled">{{ui.replaceItems}}</button>
+      </div>
     </mat-card-footer>
   </mat-card>

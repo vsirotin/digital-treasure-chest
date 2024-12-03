@@ -1,5 +1,5 @@
 <h2>{{ui.searchTitle}}</h2>
-@if (!searchResultEmpty) {
+@if (searchResultCardIsVisible) {
   <app-serach-result-card [searchResult]="searchResult"></app-serach-result-card>
 }
 

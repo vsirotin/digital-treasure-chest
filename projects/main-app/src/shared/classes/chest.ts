@@ -1,9 +1,15 @@
 import { getMatFormFieldMissingControlError } from "@angular/material/form-field";
+import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
+import { BehaviorSubject, Observable } from "rxjs";
 
 export class Chest {
 
+    private static subject: BehaviorSubject<number[]>;
+    static chestChanged$ : Observable<number[]>;
+    private static logger: ILogger = LoggerFactory.getLogger("shared/classes/Chest");
+
     static maxCapacity: number = 10;
-    static items: Set<number> = new Set<number>();
+    static items: Set<number> = new Set<number>([2, 5]);
 
     private constructor(){}
 
@@ -15,9 +21,13 @@ export class Chest {
         return this.maxCapacity - this.items.size;
     }
 
+    static addItem(item: number): void {
+        Chest.items.add(item);
+    }
+
     static addItems(items: number[]): void {
-        if(this.getFreeCapacity() >= items.length) {
-            items.forEach(item => this.items.add(item));
+        if(Chest.getFreeCapacity() >= items.length) {
+            items.forEach(item => Chest.addItem(item));
         } 
     }
 

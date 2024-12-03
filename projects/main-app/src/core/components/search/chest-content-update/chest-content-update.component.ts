@@ -62,7 +62,7 @@ export class ChetContentUpdateComponent {
   isIntervalValid: boolean = false; // Error flag for interval validation
   criterionIds: number[] = []; // Selected criteria
   searchResult: number[] = []; // Search result
-  searchResultEmpty: boolean = true; // Flag for empty search result
+  searchResultCardIsVisible: boolean = false; 
 
   onOptionClick(criterion: string): void {
     // Your function logic here
@@ -94,7 +94,7 @@ export class ChetContentUpdateComponent {
   private processSearch(): void {
     this.searchResult = Searcher.search(this.minValue, this.maxValue, this.criterionIds);
     console.log('Search result:', this.searchResult);
-    this.searchResultEmpty = this.searchResult.length === 0;
+    this.searchResultCardIsVisible = true;
   }
 
   /**
