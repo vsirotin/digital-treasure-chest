@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChetContentUpdateComponent } from './chet-content-update.component';
+import { ChetContentUpdateComponent } from './chest-content-update.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ChetContentUpdateComponent', () => {

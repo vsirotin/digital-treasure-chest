@@ -91,6 +91,9 @@ export class Searcher  {
    * @returns 
    */
   static search(minValue: number, maxValue: number, criteriaIndexies: number[]): number[] {
+    if(criteriaIndexies.length == 0) {
+      return  [];
+    };
     let result = new Set<number>();
     for (let i = minValue; i <= maxValue; i++) {
       let isMatch = true;

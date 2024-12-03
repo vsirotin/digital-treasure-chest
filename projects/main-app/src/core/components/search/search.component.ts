@@ -3,8 +3,8 @@ import { MatAccordion, MatExpansionModule} from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import {ChetContentViewComponent} from './chet-content-view/chet-content-view.component';
-import {ChetContentUpdateComponent} from './chet-content-update/chet-content-update.component';
+import {ChetContentViewComponent} from './chest-content-view/chest-content-view.component';
+import {ChetContentUpdateComponent} from './chest-content-update/chest-content-update.component';
 
 @Component({
   selector: 'app-search',

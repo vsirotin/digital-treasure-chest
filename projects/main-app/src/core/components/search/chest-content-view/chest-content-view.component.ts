@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-chet-content-view',
   standalone: true,
   imports: [],
-  templateUrl: './chet-content-view.component.html',
-  styleUrl: './chet-content-view.component.css'
+  templateUrl: './chest-content-view.component.html',
+  styleUrl: './chest-content-view.component.css'
 })
 export class ChetContentViewComponent {
 

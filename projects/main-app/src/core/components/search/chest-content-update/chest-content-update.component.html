@@ -1,4 +1,8 @@
 <h2>{{ui.searchTitle}}</h2>
+@if (!searchResultEmpty) {
+  <app-serach-result-card [searchResult]="searchResult"></app-serach-result-card>
+}
+
 <p>{{ui.introduction}}</p>
 <hr>
 <div class="demo-section">

@@ -12,6 +12,8 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { TermExplanationDialog } from '../term-explanation-dialog/TermExplanationDialog';
 import { Searcher } from '../searcher/searcher';
 
+import { SerachResultCardComponent } from './search-result-card/search-result-card.component';
+
 @Component({
   selector: 'app-chet-content-update',
   standalone: true,
@@ -22,9 +24,10 @@ import { Searcher } from '../searcher/searcher';
     FormsModule,
     MatListModule,
     MatButtonModule, 
-    MatDialogModule],
-  templateUrl: './chet-content-update.component.html',
-  styleUrl: './chet-content-update.component.css'
+    MatDialogModule,
+    SerachResultCardComponent],
+  templateUrl: './chest-content-update.component.html',
+  styleUrl: './chest-content-update.component.css'
 })
 export class ChetContentUpdateComponent {
 
@@ -59,6 +62,7 @@ export class ChetContentUpdateComponent {
   isIntervalValid: boolean = false; // Error flag for interval validation
   criterionIds: number[] = []; // Selected criteria
   searchResult: number[] = []; // Search result
+  searchResultEmpty: boolean = true; // Flag for empty search result
 
   onOptionClick(criterion: string): void {
     // Your function logic here
@@ -73,9 +77,7 @@ export class ChetContentUpdateComponent {
   onSelectionChange(event: MatSelectionListChange): void {
     this.criterionIds = this.criteriaList.selectedOptions.selected
       .map(option => option.value.id).sort((a, b) => a - b);
-    console.log('Selected option:', this.criterionIds);
     this.processSearch();
-    console.log('Search result:', this.searchResult);
   }
 
   validateInterval(): void {
@@ -92,6 +94,7 @@ export class ChetContentUpdateComponent {
   private processSearch(): void {
     this.searchResult = Searcher.search(this.minValue, this.maxValue, this.criterionIds);
     console.log('Search result:', this.searchResult);
+    this.searchResultEmpty = this.searchResult.length === 0;
   }
 
   /**

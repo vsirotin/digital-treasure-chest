@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChetContentViewComponent } from './chet-content-view.component';
+import { ChetContentViewComponent } from './chest-content-view.component';
 
 describe('ChetContentViewComponent', () => {
   let component: ChetContentViewComponent;
