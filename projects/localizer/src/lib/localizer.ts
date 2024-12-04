@@ -1,5 +1,5 @@
-import { Observable, Subject, Subscription } from "rxjs";
-import { ILanguageDescription, DEFAULT_LANG_TAG } from './language-change-notificator';
+import { Observable,  Subscription } from "rxjs";
+import { ILanguageDescription } from './language-change-notificator';
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { ILanguageChangeNotificator } from "./language-change-notificator";
 

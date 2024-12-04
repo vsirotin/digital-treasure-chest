@@ -75,7 +75,7 @@ export class SerachResultCardComponent implements OnChanges {
   }
 
   buttonAdd(): void {
-    this.searchResult.forEach(item => Chest.addItem(item));
+    Chest.addItems(this.searchResult);
   }
 
   buttonReplace(): void {
