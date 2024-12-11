@@ -8,11 +8,11 @@
 <div class="demo-section">
 
 <mat-form-field appearance="fill" class="min-max-field">
-  <input matInput type="number" [(ngModel)]="minValue" name="minValue" (ngModelChange)="validateInterval()">
+  <input matInput type="number" [(ngModel)]="minValue" name="minValue" (ngModelChange)="intervalChanged()">
 </mat-form-field>
 ≤ X ≤
 <mat-form-field appearance="fill" class="min-max-field">
-  <input matInput type="number" [(ngModel)]="maxValue" name="maxValue" (ngModelChange)="validateInterval()">
+  <input matInput type="number" [(ngModel)]="maxValue" name="maxValue" (ngModelChange)="intervalChanged()">
 </mat-form-field>
 
 <div *ngIf="!isIntervalValid" class="error-message">

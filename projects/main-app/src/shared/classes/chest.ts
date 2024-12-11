@@ -9,12 +9,12 @@ export class Chest {
     private static logger: ILogger = LoggerFactory.getLogger("shared/classes/Chest");
 
     static maxCapacity: number = 10;
-    static items: Set<number> = new Set<number>([2, 5]);
+    private static items: Set<number> = new Set<number>([]);
 
     private constructor(){}
 
     static getItems(): number[] {
-        return Array.from(this.items);
+        return Array.from(this.items).sort((a, b) => a - b);
     }
 
     static getFreeCapacity(): number {
@@ -33,8 +33,16 @@ export class Chest {
         Chest.notifyNewState();
     }
 
+    static replaceCurrentItemsWithNew(items: number[]): void {
+        Chest.items.clear();
+        Chest.addItems(items);
+        Chest.notifyNewState();
+
+    }
+
+
     private static notifyNewState() {
-        const newState = Array.from(this.items);
+        const newState = Array.from(this.items).sort((a, b) => a - b);
         Chest.subject.next(newState);
         Chest.logger.log(`New chest state: ${Array.from(this.items)}`);
     }

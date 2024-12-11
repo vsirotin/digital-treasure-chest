@@ -5,7 +5,7 @@ import { LoggerFactory } from '@vsirotin/log4ts';
 describe('Chest', () => {
 
   beforeEach(() => {
-    Chest.items.clear(); // Clear items before each test
+    Chest.replaceCurrentItemsWithNew([]); // Clear items before each test
   });
 
   it('should return items as an array', () => {
@@ -21,6 +21,8 @@ describe('Chest', () => {
   it('should add items if there is enough free capacity', () => {
     Chest.addItems([12, 22, 32]);
     expect(Chest.getItems()).toEqual([12, 22, 32]);
+    Chest.addItems([42, 52, 62]);
+    expect(Chest.getItems()).toEqual([12, 22, 32, 42, 52, 62]);
   });
 
   it('should not add items if there is not enough free capacity (1)', () => {
@@ -39,6 +41,13 @@ describe('Chest', () => {
     Chest.addItems([15, 25, 35, 45, 55]);
     Chest.removeItems([25, 45]);
     expect(Chest.getItems()).toEqual([15, 35, 55]);
+  });
+
+  it('should replace items with new', () => {
+    Chest.addItems([16, 26, 36, 46, 56]);
+    expect(Chest.getItems()).toEqual([16, 26, 36, 46, 56]);
+    Chest.replaceCurrentItemsWithNew([66, 76]);
+    expect(Chest.getItems()).toEqual([66, 76]);
   });
 
   it('should notify about the new state by inserting new elements', () => {

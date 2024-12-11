@@ -1,29 +1,29 @@
 
 <mat-card class="settings-card">
   <mat-accordion class="settings-headers-align" multi>
-    <mat-expansion-panel>
+    <mat-expansion-panel #viewPanel>
       <mat-expansion-panel-header>
         <mat-panel-title>
           <mat-icon>feed</mat-icon>
-          </mat-panel-title>
+        </mat-panel-title>
         <mat-panel-description>
           {{ui.viewTitle}}
         </mat-panel-description>
-        </mat-expansion-panel-header>
-          <app-chet-content-view></app-chet-content-view> 
-      </mat-expansion-panel>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              <mat-icon>add_chart</mat-icon>
-              </mat-panel-title>
-            <mat-panel-description>
-              {{ui.updateTitle}}
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-        <app-chet-content-update></app-chet-content-update>
-      </mat-expansion-panel>
-    </mat-accordion>
+      </mat-expansion-panel-header>
+      <app-chet-content-view></app-chet-content-view> 
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>add_chart</mat-icon>
+          </mat-panel-title>
+        <mat-panel-description>
+          {{ui.updateTitle}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-chet-content-update></app-chet-content-update>
+    </mat-expansion-panel>
+  </mat-accordion>
   <mat-card-footer>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   </mat-card-footer>

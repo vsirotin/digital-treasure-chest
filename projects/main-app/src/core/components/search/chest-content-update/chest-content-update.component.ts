@@ -13,6 +13,7 @@ import { TermExplanationDialog } from '../term-explanation-dialog/TermExplanatio
 import { Searcher } from '../searcher/searcher';
 
 import { SerachResultCardComponent } from './search-result-card/search-result-card.component';
+import { Chest } from '../../../../shared/classes/chest';
 
 @Component({
   selector: 'app-chet-content-update',
@@ -51,6 +52,13 @@ export class ChetContentUpdateComponent {
     ],
   };
 
+  constructor() {
+    Chest.chestChanged$.subscribe((items: number[]) => {
+      this.searchResultCardIsVisible = false;
+    });
+  }
+
+
   openDialog(): void {
     const dialogRef = this.dialog.open(TermExplanationDialog)
   }
@@ -64,24 +72,20 @@ export class ChetContentUpdateComponent {
   searchResult: number[] = []; // Search result
   searchResultCardIsVisible: boolean = false; 
 
-  onOptionClick(criterion: string): void {
-    // Your function logic here
-    console.log('Option clicked:', criterion);
-  }
-
   readonly dialog = inject(MatDialog);
   @ViewChild('criteria') criteriaList!: MatSelectionList;
-
 
 
   onSelectionChange(event: MatSelectionListChange): void {
     this.criterionIds = this.criteriaList.selectedOptions.selected
       .map(option => option.value.id).sort((a, b) => a - b);
-    this.processSearch();
+    if(this.vaidateInput()){  
+      this.processSearch();
+    }
   }
 
-  validateInterval(): void {
-    this.isIntervalValid  =  this.validateIntervalIntern(this.minValue, this.maxValue);
+  intervalChanged(): void {
+    this.validateIntervalIntern(this.minValue, this.maxValue);
     if(!this.isIntervalValid){
       this.errorText = this.ui.errorTextMessage;
       return
@@ -91,9 +95,16 @@ export class ChetContentUpdateComponent {
     }
   }
 
+  vaidateInput(): boolean {
+    this.validateIntervalIntern(this.minValue, this.maxValue);
+    if(!this.isIntervalValid){
+      return false
+    }
+    return this.criterionIds.length >0 
+  }
+
   private processSearch(): void {
     this.searchResult = Searcher.search(this.minValue, this.maxValue, this.criterionIds);
-    console.log('Search result:', this.searchResult);
     this.searchResultCardIsVisible = true;
   }
 
@@ -103,12 +114,22 @@ export class ChetContentUpdateComponent {
    * @param maxValue Represents the maximum value of the interval
    * @returns true if the interval is valid, otherwise false
    */
-  validateIntervalIntern(minValue: number, maxValue: number): boolean{
-    return (minValue <= maxValue)
+  validateIntervalIntern(minValue: number, maxValue: number): void{
+    const res=  (minValue <= maxValue)
     && (minValue >= 0) && (maxValue >= 0)
     && (minValue <= 1000) && (maxValue <= 1000)
-    &&Number.isInteger(Number(minValue))
-    &&Number.isInteger(Number(maxValue));  
+    &&Number.isInteger(minValue)
+    &&Number.isInteger(maxValue);  
+
+    if(res){
+      this.errorText = '';
+      this.isIntervalValid = true;
+      return;
+    }
+
+    this.errorText = this.ui.errorTextMessage;
+    this.isIntervalValid = false;
+    
   }
 
 }

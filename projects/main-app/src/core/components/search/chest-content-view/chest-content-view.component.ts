@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Chest } from '../../../../shared/classes/chest';
 
 @Component({
   selector: 'app-chet-content-view',
@@ -11,14 +12,29 @@ export class ChetContentViewComponent {
 
   ui: IChetViewUI = {
     resultTitle: 'Your Digital Treasure Chest contain now the following numbers:',
-    noResults: 'No numbers selected',
-    listNumbersInTreasure: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    noResultsTitle: 'No items in your chest yet.',
+    listNumbersInTreasure: [],
+    clearButtonTitle: 'Clear the chest'
   };
+
+  isClearButtonEnabled: boolean = false;
+
+  constructor() { 
+    Chest.chestChanged$.subscribe((items: number[]) => {
+      this.ui.listNumbersInTreasure = items;
+      this.isClearButtonEnabled = items.length > 0;
+    });
+  }
+
+  clearChest() {
+    Chest.replaceCurrentItemsWithNew([]);
+  }
 
 }
 export interface IChetViewUI {
   resultTitle: string;
-  noResults: string;
+  noResultsTitle: string;
   listNumbersInTreasure: number[];
+  clearButtonTitle: string;
 }
 
