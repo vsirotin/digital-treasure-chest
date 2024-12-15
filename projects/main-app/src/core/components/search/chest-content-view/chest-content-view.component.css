@@ -1,0 +1,16 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust the gap between cards as needed */
+  justify-content: left; /* Center the cards within the container */
+}
+
+.number-card {
+  width: 200px; /* Set the fixed width */
+  height: 200px; /* Set the fixed height */
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

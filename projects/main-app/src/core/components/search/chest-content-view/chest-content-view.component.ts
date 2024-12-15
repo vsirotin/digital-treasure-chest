@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Chest } from '../../../../shared/classes/chest';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-chet-content-view',
   standalone: true,
-  imports: [],
+  imports: [MatCardModule],
   templateUrl: './chest-content-view.component.html',
   styleUrl: './chest-content-view.component.css'
 })
@@ -24,6 +25,11 @@ export class ChetContentViewComponent {
       this.ui.listNumbersInTreasure = items;
       this.isClearButtonEnabled = items.length > 0;
     });
+  }
+
+  getItemDetails(item: number): string[] {
+    // Example function that returns an array of strings for each item
+    return [`Detail 1 for item ${item}`, `Detail 2 for item ${item}`, `Detail 3 for item ${item}`];
   }
 
   clearChest() {

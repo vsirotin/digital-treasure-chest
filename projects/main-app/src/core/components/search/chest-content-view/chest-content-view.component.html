@@ -1,10 +1,22 @@
 
-@if (ui.listNumbersInTreasure.length == 0) {
-    <h2>{{ui.noResultsTitle}}</h2>
-}@else {
-  <h2>{{ui.resultTitle}}</h2>
-  {{ui.listNumbersInTreasure.join(', ')}}
-}
+<div class="card-container">
+  @for (item of ui.listNumbersInTreasure; track item) {
+    <mat-card class="number-card">
+
+      <mat-card-header>
+        <mat-card-title>{{item}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <ul>
+          @for (detail of getItemDetails(item); track detail) {
+            <li>{{detail}}</li>
+          }
+        </ul>
+      </mat-card-content>
+  </mat-card>
+  }
+</div>
+<hr>
 <div>
   <button mat-raised-button (click)="clearChest()" [disabled]="!isClearButtonEnabled">{{ui.clearButtonTitle}}</button>
 </div>
