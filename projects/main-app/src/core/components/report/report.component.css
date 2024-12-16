@@ -8,21 +8,27 @@
     background-position: top left;; /* Center the background image */
   }
 
+  @media (max-width: 908px), (max-height: 908px) {
+    .scrollable-container {
+      background-size: 454px 454px; /* Adjusted size of the background image */
+    }
+  }
+
   .centered-header {
     position: absolute; /* Set position to absolute for the header */
-    top: 25%; /* Position the header 100px below the upper boundary */
-    left: 50%; /* Center the header horizontally */
+    top: 150px; /* Position the header 100px below the upper boundary */
+    left: 230px; /* Center the header horizontally */
     transform: translateX(-50%); /* Adjust the position to truly center the header */
     text-align: center; /* Center the text within the header */
     color: brown; /* Set the text color (adjust as needed) */
-    font-size: 80px; /* Set the font size (adjust as needed) */
+    font-size: 60px; /* Set the font size (adjust as needed) */
     font-family: 'Great Vibes', cursive;
   }
 
   .centered-text{
     position: absolute; /* Set position to absolute for the header */
-    top: 35%; /* Position the header 100px below the upper boundary */
-    left: 50%; /* Center the header horizontally */
+    top: 200px; /* Position the header 100px below the upper boundary */
+    left: 230px; /* Center the header horizontally */
     transform: translateX(-50%); /* Adjust the position to truly center the header */
     text-align: center; /* Center the text within the header */
     color: brown; /* Set the text color (adjust as needed) */
@@ -32,8 +38,8 @@
 
   .numbers{
     position: absolute; /* Set position to absolute for the header */
-    top: 45%; /* Position the header 100px below the upper boundary */
-    left: 50%; /* Center the header horizontally */
+    top: 230px; /* Position the header 100px below the upper boundary */
+    left: 230px; /* Center the header horizontally */
     transform: translateX(-50%); /* Adjust the position to truly center the header */
     text-align: center; /* Center the text within the header */
     color: brown; /* Set the text color (adjust as needed) */
@@ -43,8 +49,8 @@
 
   .sigtanture{
     position: absolute; /* Set position to absolute for the header */
-    top: 55%; /* Position the header 100px below the upper boundary */
-    left: 50%; /* Center the header horizontally */
+    top: 250px; /* Position the header 100px below the upper boundary */
+    left: 200px; /* Center the header horizontally */
     transform: translateX(-50%); /* Adjust the position to truly center the header */
     text-align: center; /* Center the text within the header */
     color: brown; /* Set the text color (adjust as needed) */

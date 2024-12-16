@@ -1,9 +1,12 @@
   <div class="main-container" [class.my-is-mobile]="mobileQuery.matches">
-    <app-toolbar></app-toolbar>
+    <div class="frame-toolbar">
+      <app-toolbar></app-toolbar>
+    </div>
 
-    <mat-sidenav-container class="main-sidenav-container">
-      <mat-sidenav #snav [opened]="isShowing"[mode]="mobileQuery.matches ? 'over' : 'side'"
-                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+    <div class="scrollable-content">
+      <mat-sidenav-container class="main-sidenav-container">
+        <mat-sidenav #snav [opened]="isShowing"[mode]="mobileQuery.matches ? 'over' : 'side'"
+                    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
           <mat-nav-list>
             @for (nav of ui.navItems; track nav.id) {
               <a mat-list-item (click)="selectMenuItem(nav.id)">
@@ -12,27 +15,25 @@
                   </button>
               </a>
             }
-          </mat-nav-list>
-          
-      </mat-sidenav>
+          </mat-nav-list>          
+        </mat-sidenav>
 
-      <mat-sidenav-content>        
-        @switch (currentCommponent) { 
-          @case ("search") {
-            <app-search></app-search>
-          } 
-          @case ("report") {
-            <app-report></app-report>
-          } 
-          @case ("info") {
-            <app-info></app-info>
-          } 
-          @default {
-            <app-settings></app-settings>
-          } 
-        }
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-
-
+        <mat-sidenav-content>        
+          @switch (currentCommponent) { 
+            @case ("search") {
+              <app-search></app-search>
+            } 
+            @case ("report") {
+              <app-report></app-report>
+            } 
+            @case ("info") {
+              <app-info></app-info>
+            } 
+            @default {
+              <app-settings></app-settings>
+            } 
+          }
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
   </div>

@@ -1,21 +1,26 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  height: 100vh; /* Full viewport height */
 }
 
 .frame-toolbar {
   position: fixed;
-  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 2;
 }
 
 h1.my-app-name {
   margin-left: 8px;
+}
+
+.scrollable-content {
+  margin-top: 64px; /* Adjust based on the height of your toolbar */
+  overflow: auto; /* Enable scrolling */
+  flex: 1;
+  padding: 16px; /* Optional: Add padding for content */
 }
 
 .main-sidenav-container {
