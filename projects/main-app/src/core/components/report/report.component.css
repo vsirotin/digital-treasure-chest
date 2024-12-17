@@ -1,57 +1,50 @@
 .scrollable-container {
-    width: 100vw;
-    height: 100vh; 
-    overflow: auto; /* Enable both horizontal and vertical scrolling */
-    background-image: url('/assets/images/certificate.png');
-    background-size: 908px 908px;
-    background-repeat: no-repeat; 
-    background-position: top left;
-    padding-bottom: 650px; /* Height of the scrollbare area below image */
-    padding-right: 450px; /* Width of the scrollbare area right of image */
-  }
-/*
-  @media (min-width: 920px), (min-height: 920px) {
-    .scrollable-container {
-      width: 920px;
-      height: 920px;
-      background-size: 908px 908px; 
-    }
-  }
+  width: 100vw;
+  height: 100vh; 
+  overflow: auto; /* Enable both horizontal and vertical scrolling */
+  background-image: url('/assets/images/certificate.png');
+  background-size: 908px 908px;
+  background-repeat: no-repeat; 
+  background-position: top left;
+  padding-bottom: 650px; /* Height of the scrollbare area below image */
+  padding-right: 450px; /* Width of the scrollbare area right of image */
+}
 
-  .centered-header {
-    margin-bottom: 20px;
-    text-align: center;
-    color: brown; 
-    font-size: 60px; 
-    font-family: 'Great Vibes', cursive;
-  }
+.common-text {
+  position: absolute; 
+  left: 300px; 
+  color: brown; 
+  font-size: 20px; 
+  font-family: 'Great Vibes', cursive;
+  text-align: center; 
+  white-space: nowrap;
+}
 
-  .centered-text{
-    text-align: center; 
-    color: brown; 
-    font-size: 20px;
-    font-family: 'Great Vibes', cursive;
-    width: 10%; 
-    height: auto; 
-    white-space: pre-wrap; 
-    background: transparent; 
-    border: none; 
-    outline: none; 
-  }
+.centered-header {
+  top: 270px; 
+  left: 400px; 
+  font-size: 60px; 
+}
 
-  .numbers{
-    text-align: center; 
-    color: brown; 
-    font-size: 20px; 
-    font-family: 'Great Vibes', cursive;
-  }
 
-  .sigtanture{
-    text-align: center;
-    color: brown; 
-    font-size: 20px; 
-    font-family: 'Great Vibes', cursive;
-  }
+.centered-text1{
+  top: 350px; 
+}
+.centered-text2{
+  top: 380px; 
+}
+.centered-text3{
+  top: 410px; 
+}
 
-  */
+.numbers{
+  top: 440px; 
+}
+
+.sigtanture{
+  top: 490px; 
+  left: 450px;
+}
+
+  
   
