@@ -61,6 +61,7 @@ export class SerachResultCardComponent implements OnChanges {
   maxSearchLength = Chest.maxCapacity;
   intersection: number[] = [];
   unicElemntsInSearchResult: number[] = [];
+  commonElemntsInSearchResult: number[] = [];
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['searchResult']) {
@@ -109,16 +110,14 @@ export class SerachResultCardComponent implements OnChanges {
     }
 
     //below chest is not empty
-     this.findUnicElementsInSearchResult();
+    this.findUnicElementsInSearchResult();
 
-     if(this.intersection.length == 0) {
+    if(this.intersection.length == 0) {
       this.commonItems.overview = this.workpieces.intersectionIsEmpty;
-     }else {
+    }else {
       this.commonItems.overview = this.workpieces.intersectionIsNotEmpty;
-      this.commonItems.list = this.intersection.join(', ');
-
-      
-     }
+      this.commonItems.list = this.commonElemntsInSearchResult.join(', ') 
+    }
 
     if(this.unicElemntsInSearchResult.length == 0) {
       this.uniqueItems.overview = this.workpieces.unicItemsNotExist;
@@ -155,6 +154,7 @@ export class SerachResultCardComponent implements OnChanges {
     this.intersection =  Array.from(s2).sort((a, b) => a - b);
     const unics = this.searchResult.filter(x => !is.has(x))
     this.unicElemntsInSearchResult = unics.sort((a, b) => a - b);
+    this.commonElemntsInSearchResult = Array.from(is).sort((a, b) => a - b);
   }
 
 }

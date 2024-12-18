@@ -10,10 +10,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 import { TermExplanationDialog } from '../term-explanation-dialog/TermExplanationDialog';
-import { Searcher } from '../searcher/searcher';
+import { Searcher } from '../../../classes/searcher/searcher';
 
 import { SerachResultCardComponent } from './search-result-card/search-result-card.component';
 import { Chest } from '../../../../shared/classes/chest';
+import { NumberPropertiesNameHolder } from '../../../classes/number-expert/number-properties-name-holder';
 
 @Component({
   selector: 'app-chet-content-update',
@@ -35,21 +36,12 @@ export class ChetContentUpdateComponent {
   ui: ISearchUI = {
     searchTitle: 'Search new numbers for your Digital Treasure Chet',
     introduction: 'Please select a criterions for search your favorite positive integer numbers (denoted below as X)',
-    prefix: "It is ",
+
     errorTextMessage: 'Minimum and maximum values must integers between 0 and 1000, inclusive. Minimum value must be less than or equal to maximum value.',
     termExplanation: 'What do these terms mean?',
-    criteria: [
-      { id: 1, criteria: "an even number"},
-      { id: 2, criteria: "an  odd number" },
-      { id: 3, criteria: "a prime number" },
-      { id: 4, criteria: "a Pythagoras prime number" },
-      { id: 5, criteria: "a Fibbonacci number" },
-      { id: 6, criteria: "a Tribonnaci number" },
-      { id: 7, criteria: "a Bell's number" },
-      { id: 8, criteria: "a Catalan number" },
-      { id: 9, criteria: "a Sophie Germain's number" },
-      { id: 10, criteria: "a symmetrical number" }
-    ],
+
+    criteriaPrefix : NumberPropertiesNameHolder.criteriaPrefix,
+    criteriaMap: NumberPropertiesNameHolder.criteriaIndexedList
   };
 
   constructor() {
@@ -144,9 +136,9 @@ interface ISearchEntry {
 interface ISearchUI {
   searchTitle: string;
   introduction: string;
-  prefix: string;
+  criteriaPrefix: string;
   errorTextMessage: string;
   termExplanation: string;
-  criteria: Array<ISearchEntry>;
+  criteriaMap: Array<ISearchEntry>;
 }
 
