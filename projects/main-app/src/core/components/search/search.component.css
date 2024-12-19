@@ -1,27 +1,3 @@
-.rounded-button {
-    border-radius: 2px; 
-    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow to the left */
-    padding: 2px 2px; 
-    background-color: lightgrey; 
-    color: white; 
-    border: none; 
-    cursor: pointer; /* Change cursor to pointer */
-    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
-    width: 10px;
-  }
-  
-  .rounded-button:hover {
-    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
-  }
-
-  .error-message {
-    color: red; 
-    font-style: italic; 
-  }
-
-  .min-max-field {
-    width: 70px; /* Adjust the width as needed */
-  }
 
 
   

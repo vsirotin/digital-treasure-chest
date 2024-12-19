@@ -12,17 +12,17 @@
 
 .common-text {
   position: absolute; 
-  left: 300px; 
+  left: 220px; 
   color: brown; 
   font-size: 20px; 
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Lucida Handwriting', cursive;
   text-align: center; 
   white-space: nowrap;
 }
 
 .centered-header {
-  top: 270px; 
-  left: 400px; 
+  top: 280px; 
+  left: 350px; 
   font-size: 60px; 
 }
 
@@ -38,8 +38,8 @@
 }
 
 .centered-text4{
-  font-size: 30px; 
-  left: 280px; 
+  font-size: 20px; 
+  left: 220px; 
   top: 350px; 
 }
 
