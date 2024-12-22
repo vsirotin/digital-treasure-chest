@@ -4,8 +4,7 @@ import { BehaviorSubject, Observable, Subject } from "rxjs";
 
 export class Chest {
 
-    private static subject: Subject<number[]> = new Subject<number[]>();
-    static chestChanged$: Observable<number[]> =Chest.subject.asObservable();
+    static chestChanged$ = new Subject<number[]>();
     private static logger: ILogger = LoggerFactory.getLogger("shared/classes/Chest");
 
     static maxCapacity: number = 10;
@@ -43,7 +42,7 @@ export class Chest {
 
     private static notifyNewState() {
         const newState = Array.from(this.items).sort((a, b) => a - b);
-        Chest.subject.next(newState);
+        Chest.chestChanged$.next(newState);
         Chest.logger.log(`New chest state: ${Array.from(this.items)}`);
     }
 

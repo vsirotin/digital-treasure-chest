@@ -1,60 +1,56 @@
 .scrollable-container {
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: auto; /* Enable both horizontal and vertical scrolling */
-    background-image: url('/assets/images/certificate.png');
-    background-size: 908px 908px;
-    background-repeat: no-repeat; /* Do not repeat the background image */
-    background-position: top left;; /* Center the background image */
-  }
+  width: 100vw;
+  height: 100vh; 
+  overflow: auto; /* Enable both horizontal and vertical scrolling */
+  background-image: url('/assets/images/certificate.png');
+  background-size: 908px 908px;
+  background-repeat: no-repeat; 
+  background-position: top left;
+  padding-bottom: 650px; /* Height of the scrollbare area below image */
+  padding-right: 450px; /* Width of the scrollbare area right of image */
+}
 
-  @media (max-width: 908px), (max-height: 908px) {
-    .scrollable-container {
-      background-size: 454px 454px; /* Adjusted size of the background image */
-    }
-  }
+.common-text {
+  position: absolute; 
+  left: 220px; 
+  color: brown; 
+  font-size: 20px; 
+  font-family: 'Lucida Handwriting', cursive;
+  text-align: center; 
+  white-space: nowrap;
+}
 
-  .centered-header {
-    position: absolute; /* Set position to absolute for the header */
-    top: 150px; /* Position the header 100px below the upper boundary */
-    left: 230px; /* Center the header horizontally */
-    transform: translateX(-50%); /* Adjust the position to truly center the header */
-    text-align: center; /* Center the text within the header */
-    color: brown; /* Set the text color (adjust as needed) */
-    font-size: 60px; /* Set the font size (adjust as needed) */
-    font-family: 'Great Vibes', cursive;
-  }
+.centered-header {
+  top: 280px; 
+  left: 350px; 
+  font-size: 60px; 
+}
 
-  .centered-text{
-    position: absolute; /* Set position to absolute for the header */
-    top: 200px; /* Position the header 100px below the upper boundary */
-    left: 230px; /* Center the header horizontally */
-    transform: translateX(-50%); /* Adjust the position to truly center the header */
-    text-align: center; /* Center the text within the header */
-    color: brown; /* Set the text color (adjust as needed) */
-    font-size: 20px; /* Set the font size (adjust as needed) */
-    font-family: 'Great Vibes', cursive;
-  }
 
-  .numbers{
-    position: absolute; /* Set position to absolute for the header */
-    top: 230px; /* Position the header 100px below the upper boundary */
-    left: 230px; /* Center the header horizontally */
-    transform: translateX(-50%); /* Adjust the position to truly center the header */
-    text-align: center; /* Center the text within the header */
-    color: brown; /* Set the text color (adjust as needed) */
-    font-size: 20px; /* Set the font size (adjust as needed) */
-    font-family: 'Great Vibes', cursive;
-  }
+.centered-text1{
+  top: 350px; 
+}
+.centered-text2{
+  top: 380px; 
+}
+.centered-text3{
+  top: 410px; 
+}
 
-  .sigtanture{
-    position: absolute; /* Set position to absolute for the header */
-    top: 250px; /* Position the header 100px below the upper boundary */
-    left: 200px; /* Center the header horizontally */
-    transform: translateX(-50%); /* Adjust the position to truly center the header */
-    text-align: center; /* Center the text within the header */
-    color: brown; /* Set the text color (adjust as needed) */
-    font-size: 20px; /* Set the font size (adjust as needed) */
-    font-family: 'Great Vibes', cursive;
-  }
+.centered-text4{
+  font-size: 20px; 
+  left: 220px; 
+  top: 350px; 
+}
+
+.numbers{
+  top: 440px; 
+}
+
+.sigtanture{
+  top: 490px; 
+  left: 250px;
+}
+
+  
   

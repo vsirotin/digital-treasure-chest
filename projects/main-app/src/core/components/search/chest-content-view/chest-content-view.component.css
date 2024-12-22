@@ -2,15 +2,35 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px; /* Adjust the gap between cards as needed */
-  justify-content: left; /* Center the cards within the container */
+  justify-content: center; /* Center the cards within the container */
+  max-height: 100vh; /* Set the maximum height to the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .number-card {
-  width: 200px; /* Set the fixed width */
-  height: 200px; /* Set the fixed height */
+  width: 250px; /* Set the fixed width */
+  height: auto; /* Set the height to auto to fit content */
   box-sizing: border-box;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
+  padding: 1px; /* Add padding to the card */
+  background-color: #fff; /* Set background color */
+  border: 1px solid #ccc; /* Set border */
+  border-radius: 4px; /* Set border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  font-family: 'Lucida Handwriting', cursive;
+}
+
+.number-card ul {
+  width: 100%; /* Set the width of the list to 80% of the card */
+  padding-left: 2px; /* Add padding to create space for the bullet points */
+  list-style-position: inside; /* Position the bullet points inside the list item */
+  text-align: left; 
+}
+
+.number-card li {
+  margin-left: 2px; /* Add margin to create space between the bullet point and the text */
 }

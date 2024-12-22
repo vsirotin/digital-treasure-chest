@@ -1,6 +1,14 @@
-<div class="scrollable-container">
-    <p class="centered-header">Certificate</p>
-    <p class="centered-text">jhggjkhg jhhkj jhkjhkjozo kjhkho kjlkjlkiou  kkljlkpoi lkjljlkjpoi  lkjpo</p>
-    <p class="numbers">12,34 , 56  9998, 555</p>
-    <p class="sigtanture">Signature</p>
-</div>
+
+    <div class="scrollable-container"> 
+        @if (!numbersIsEmpty){
+            <p class="common-text centered-header">{{sertificate}}</p>
+            <p class="centered-text1 common-text">{{line1}}</p>
+            <p class="centered-text2 common-text">{{line2}}</p>
+            <p class="centered-text3 common-text">{{line3}}</p>
+            <p class="common-text numbers">{{numbers}}</p>
+            <p class="common-text sigtanture">{{signature}}</p>
+        }@else {
+            <p class="centered-text4 common-text">{{textForEmptyChest}}</p>
+        }
+    </div>
+

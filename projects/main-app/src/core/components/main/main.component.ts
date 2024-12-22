@@ -68,7 +68,7 @@ export class MainComponent implements OnInit, OnDestroy {
       {id: "info", label: "Info", icon: "info_outline"},
       {id: "settings", label: "Settings", icon: "settings"},
     ],
-    title: "Digital Treasure Chest AAAA",
+    title: "Digital Treasure Chest",
   };
 
   
@@ -104,7 +104,7 @@ export class MainComponent implements OnInit, OnDestroy {
 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-//    this.mobileQuery.addListener(this._mobileQueryListener);
+    this.mobileQuery.addListener(this._mobileQueryListener);
 //    this.logger.debug("End of constructor"); 
   }
 
