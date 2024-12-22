@@ -3,7 +3,6 @@
       <app-toolbar></app-toolbar>
     </div>
 
-    <div class="scrollable-conten">
       <mat-sidenav-container class="main-sidenav-container">
         <mat-sidenav #snav [opened]="isShowing"[mode]="mobileQuery.matches ? 'over' : 'side'"
                     [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
@@ -35,5 +34,4 @@
           }
         </mat-sidenav-content>
       </mat-sidenav-container>
-    </div>  
   </div>
