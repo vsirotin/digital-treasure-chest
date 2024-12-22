@@ -45,7 +45,7 @@ jobs:
         run: npm install
 
       - name: Build Angular App
-        run: npm run build main-app-- --configuration production --base-href /main-app/
+        run: npm run build main-app
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -57,5 +57,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          token: ${{ secrets.ITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
          
