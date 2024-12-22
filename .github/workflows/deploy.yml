@@ -1,9 +1,8 @@
-name: Deploy to GitHub Pages
+name: Deploy as statical application to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main  # Change this to your default branch if it's not 'main'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
