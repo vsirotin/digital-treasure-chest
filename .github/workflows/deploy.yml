@@ -15,14 +15,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '21'  # Specify the Node.js version you are using
+          node-version: '20'  # Specify the Node.js version you are using
 
       - name: Install dependencies
         run: npm install
         working-directory: projects/main-app
 
       - name: Build the application
-        run: npm run build --prod
+        run: npm run build main-app --prod
         working-directory: projects/main-app
 
       - name: Deploy to GitHub Pages
