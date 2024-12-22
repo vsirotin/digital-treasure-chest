@@ -45,13 +45,13 @@ jobs:
         run: npm install
 
       - name: Build Angular App
-        run: npm run build -- --configuration production --base-href /pritisan/
+        run: npm run build main-app-- --configuration production --base-href /main-app/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '/home/runner/work/pritisan/pritisan/dist/pritisan/browser'   
+          path: '/home/runner/work/projects/main-app/dist/main-app/browser'   
 
       - name: Deploy to GitHub Pages
         id: deployment
