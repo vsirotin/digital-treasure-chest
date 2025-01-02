@@ -45,7 +45,7 @@ jobs:
         run: npm install
 
       - name: Build Angular App
-        run: npm run build main-app -- --configuration production --base-href /digital-treasure-chest/
+        run: npm run build main-app -- --configuration production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
