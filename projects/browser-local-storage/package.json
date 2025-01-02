@@ -1,6 +1,6 @@
 {
   "name": "@vsirotin/browser-local-storage",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
@@ -8,5 +8,18 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "description": "This TypeScript library is a facade (wrapper) on native mechanisms for storing and retrieving data locally in a browser.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vsirotin/communist-web-shop/blob/27a176cca19c90156de625f77d0fd47f7d874774/projects/browser-local-storage"
+  },
+  "keywords": [
+    "local-storage",
+    "typescript",
+    "angular",
+    "javascript"
+  ],
+  "author": "Dr. Viktor Sirotin. www.sirotin.eu",
+  "license": "Apache-2.0"
 }

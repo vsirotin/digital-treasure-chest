@@ -4,6 +4,4 @@ This TypeScript library supports localization (using terms and texts in a given 
 
 Before the needed information for a component in a specific natural language is used, it can be requested as a JSON file from this library. The library will attempt to find it in local storage. If it is not found, it will be requested from a specified web resource.
 
-This library utilizes the **browser-local-storage** library from this collection.
 
-**Attention!** The library is not ready for use. Work in progress!
