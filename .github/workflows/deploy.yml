@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '/home/runner/work/projects/main-app/dist/main-app/browser'   
+          path: '/home/runner/work/digital-treasure-chest/digital-treasure-chest/dist/main-app/browser'   
 
       - name: Deploy to GitHub Pages
         id: deployment
