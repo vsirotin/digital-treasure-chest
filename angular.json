@@ -22,11 +22,7 @@
             "tsConfig": "projects/main-app/tsconfig.app.json",
             "assets": [
               "projects/main-app/src/favicon.ico",
-              {
-                "glob": "**/*",
-                "input": "projects/main-app/src/assets",
-                "output": "/digital-treasure-chest/assets/"
-              }
+              "projects/main-app/src/assets"
             ],
             "styles": [
               "projects/main-app/src/styles.css"
