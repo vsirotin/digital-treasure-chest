@@ -25,7 +25,7 @@
               {
                 "glob": "**/*",
                 "input": "projects/main-app/src/assets",
-                "output": "/digital-treasure-chest/assets/"
+                "output": "/assets/"
               }
             ],
             "styles": [
