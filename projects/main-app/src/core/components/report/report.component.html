@@ -1,5 +1,5 @@
 
-    <div class="scrollable-container"> 
+    <div class="scrollable-container" [ngStyle]="{'background-image': 'url(' + baseHref + 'assets/images/certificate.png)'}"> 
         @if (!numbersIsEmpty){
             <p class="common-text centered-header">{{sertificate}}</p>
             <p class="centered-text1 common-text">{{line1}}</p>
