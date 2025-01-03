@@ -31,12 +31,7 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/main-app/src/environments/environment.ts",
-                  "with": "projects/main-app/src/environments/environment.prod.ts"
-                }
-              ],
+
               "budgets": [
                 {
                   "type": "initial",
@@ -49,8 +44,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all",
-              "baseHref": "/digital-treasure-chest/"
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,

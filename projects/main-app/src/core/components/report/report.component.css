@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh; 
   overflow: auto; /* Enable both horizontal and vertical scrolling */
-  background-image: url('/assets/images/certificate.png');
+
   background-size: 908px 908px;
   background-repeat: no-repeat; 
   background-position: top left;
