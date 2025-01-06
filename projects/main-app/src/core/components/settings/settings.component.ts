@@ -8,7 +8,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 import { LanguageSelectionComponent } from '../../../shared/components/language-selection/language-selection.component'
 import { LogSettingComponent } from "../../../shared/components/log-setting/log-setting.component";
-import { LocalizerFactory, ILocalizer, DEFAULT_LANG_TAG, ILocalizationClient, ILanguageDescription } from '@vsirotin/localizer';
+import { LocalizerFactory, ILocalizer, ILocalizationClient, ILanguageDescription } from '@vsirotin/localizer';
+import { Subscription } from 'rxjs';
 
 export const SETTINGS_SOURCE_DIR = "assets/languages/features/components/settings/lang";
 
@@ -53,12 +54,13 @@ export class SettingsComponent implements  OnDestroy, ILocalizationClient<UIItem
   langEn: string = ""
 
   ui: UIItems = DEFAUIL_UI_ITEMS;
+  subscription: Subscription;
 
   constructor( ) {
     this.logger.debug("Start of SettingsComponent.constructor");  
 
     this.localizer  =  LocalizerFactory.createLocalizer<UIItems>(SETTINGS_SOURCE_DIR, 1, DEFAUIL_UI_ITEMS, this);
-    LocalizerFactory.languageChangeNotificator.selectionChanged$.subscribe(
+    this.subscription = LocalizerFactory.languageChangeNotificator.selectionChanged$.subscribe(
       (languageDescription: ILanguageDescription) => {
         this.langOrigin = languageDescription.originalName;
         this.langEn = languageDescription.enName;
@@ -73,6 +75,7 @@ export class SettingsComponent implements  OnDestroy, ILocalizationClient<UIItem
   ngOnDestroy() {
     this.logger.debug("Start of SettingsComponent.ngDestroy");
     this.localizer.dispose();
+    this.subscription.unsubscribe();
   }
 }
 
