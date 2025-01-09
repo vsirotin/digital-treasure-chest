@@ -7,7 +7,8 @@
     "start": "ts-node src/index.ts",
     "build": "tsc",
     "appversion": "ts-node src/index.ts --version",
-    "test": "karma start"
+    "test": "karma start",
+    "start-data": "ts-node src/index.ts --file=./test/input.txt --list=./test/lang-codes.txt --output-dir=./test/output"
   },
   "bin": {
     "lang-file-processor": "./dist/index.js"

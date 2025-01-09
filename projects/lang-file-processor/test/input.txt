@@ -1,0 +1,10 @@
+en-US
+{
+    "greeting": "Hello",
+    "talk": "How are you?"
+}
+de-DE
+{
+    "greeting": "Hi!",
+    "talk": "Wie geht es dir?"
+}

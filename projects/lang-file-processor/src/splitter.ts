@@ -17,11 +17,18 @@ export function splitFile(filePath: string, outputDir: string, listPath?: string
   if (listPath) {
     const listFileContent = fs.readFileSync(listPath, 'utf-8');
     languageCodes = listFileContent.split('\n').map(line => line.trim()).filter(line => line);
+    console.log("languageCodes found:", languageCodes);
+  }else{
+    console.log("No languageCodes found");
   }
 
   // Create the output directory if it doesn't exist
   if (!fs.existsSync(outputDir)) {
+    console.log("Creating output directory:", outputDir);
     fs.mkdirSync(outputDir, { recursive: true });
+  }else
+  {
+    console.log("Output directory already exists:", outputDir);
   }
 
   // Process the input file and write separate JSON files
@@ -35,6 +42,7 @@ export function splitFile(filePath: string, outputDir: string, listPath?: string
       if (currentLangCode) {
         const outputFilePath = path.join(outputDir, `${currentLangCode}.json`);
         fs.writeFileSync(outputFilePath, currentJsonObject, 'utf-8');
+        console.log("Writing file:", outputFilePath, "with content:", currentJsonObject);
       }
       currentLangCode = '';
       currentJsonObject = '';
