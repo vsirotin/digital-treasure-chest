@@ -21,12 +21,12 @@ export class FileProcessor {
       return;
     }
 
-    if (this.listPath && !this.compareLanguageCodes(filePath)) {
+    if (this.listPath && !this.compareLanguageCodes()) {
       this.logger.error('Language code comparison failed.');
       return;
     }
 
-    this.splitFile(filePath, outputDir);
+    this.writeOutputFiles(outputDir);
   }
 
 /**
@@ -43,8 +43,6 @@ export class FileProcessor {
  * The structure of the second and following objects will be compared with exampleObject.
  * All correct pairs will be saved in the mapLangToObject, where the key is a language-code and the value is an object.
  * 
- * If listPath is set, it reads its lines and tries to find language-codes. If the file does not exist or its content is not correct, the program writes an error message to the logger.
- * If successful, it compares the list of language-codes from the file and those found in the input file.
  * 
  * If the program finds some error, it writes a corresponding message to the logger, including the number of lines with errors in the input file, and cancels processing.
  * Otherwise, it logs the result of processing (the number of processed lines and found objects).
@@ -136,7 +134,22 @@ alyseSyntax(inputFilePath: string): boolean {
     }
   }
 
-  // If listPath is set, read and validate language codes from the list file
+  
+
+  // Log the result of processing
+  this.logger.log(`Processed ${lineNumber} lines and found ${this.mapLangToObject.size} objects.`);
+
+  return true;
+}
+
+/**
+ * Compares language-codes found in the input file with those from the list file.
+ * 
+ * If listPath is set, it reads its lines and tries to find language-codes. If the file does not exist or its content is not correct, the program writes an error message to the logger.
+ * If successful, it compares the list of language-codes from the file and those found in the input file.
+ */ 
+  compareLanguageCodes(): boolean {
+    // If listPath is set, read and validate language codes from the list file
   if (this.listPath) {
     try {
       const listFileContent = fs.readFileSync(this.listPath, 'utf-8');
@@ -154,63 +167,19 @@ alyseSyntax(inputFilePath: string): boolean {
     }
   }
 
-  // Log the result of processing
-  this.logger.log(`Processed ${lineNumber} lines and found ${this.mapLangToObject.size} objects.`);
-
-  return true;
-}
-
-  private compareLanguageCodes(filePath: string): boolean {
-    this.logger.log('Comparing language codes...');
-    const inputFileContent = fs.readFileSync(filePath, 'utf-8');
-    const lines = inputFileContent.split('\n');
-
-    const listFileContent = fs.readFileSync(this.listPath!, 'utf-8');
-    const languageCodes = listFileContent.split('\n').map(line => line.trim()).filter(line => line);
-
-    const extractedCodes = new Set<string>();
-    for (const line of lines) {
-      if (!line.trim().startsWith('{') && !line.trim().endsWith('}')) {
-        extractedCodes.add(line.trim());
-      }
-    }
-
-    for (const code of languageCodes) {
-      if (!extractedCodes.has(code)) {
-        this.logger.error(`Language code ${code} not found in the input file.`);
-        return false;
-      }
-    }
-
     return true;
   }
 
-  private splitFile(filePath: string, outputDir: string): void {
-    this.logger.log('Splitting file...');
-    const inputFileContent = fs.readFileSync(filePath, 'utf-8');
-    const lines = inputFileContent.split('\n');
-
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
+  /**
+   * Writes the objects from collected map into the output files.
+   * Each object is written into a separate file named as language-code.json.
+   */
+  writeOutputFiles(outputDir: string): void {
+    this.logger.log(`Start of writing ${this.mapLangToObject.size} output files to ${outputDir}.`);
+    for (const [langCode, object] of this.mapLangToObject) {
+      const outputFilePath = path.join(outputDir, `${langCode}.json`);
+      fs.writeFileSync(outputFilePath, JSON.stringify(object, null, 2));
     }
-
-    let currentLangCode = '';
-    let currentJsonObject = '';
-    for (const line of lines) {
-      if (line.trim().startsWith('{')) {
-        currentJsonObject += line + '\n';
-      } else if (line.trim().endsWith('}')) {
-        currentJsonObject += line + '\n';
-        if (currentLangCode) {
-          const outputFilePath = path.join(outputDir, `${currentLangCode}.json`);
-          fs.writeFileSync(outputFilePath, currentJsonObject, 'utf-8');
-        }
-        currentLangCode = '';
-        currentJsonObject = '';
-      } else {
-        currentLangCode = line.trim();
-        currentJsonObject = '';
-      }
-    }
+    this.logger.log('All output files have been written.');
   }
 }
