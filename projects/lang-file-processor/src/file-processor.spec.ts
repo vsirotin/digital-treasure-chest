@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { FileProcessor } from './splitter';
+import { FileProcessor } from './file-processor';
 
 describe('FileProcessor', () => {
   const testDir = path.join(__dirname, 'test-output');

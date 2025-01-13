@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { FileProcessor } from './splitter';
+import { FileProcessor } from './file-processor';
 import { version } from './version-info';
 
 
