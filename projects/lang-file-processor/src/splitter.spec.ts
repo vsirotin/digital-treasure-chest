@@ -1,8 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { splitFile } from './splitter';
+import { FileProcessor } from './splitter';
 
-describe('splitFile', () => {
+describe('FileProcessor', () => {
   const testDir = path.join(__dirname, 'test-output');
   const inputFilePath = path.join(__dirname, 'test-input.txt');
   const listFilePath = path.join(__dirname, 'test-list.txt');
@@ -38,8 +38,9 @@ de-DE
     fs.rmdirSync(testDir, { recursive: true });
   });
 
-  it('should split the input file into separate JSON files', () => {
-    splitFile(inputFilePath, testDir, listFilePath);
+  it('should process the input file and create separate JSON files', () => {
+    const processor = new FileProcessor(listFilePath);
+    processor.processFile(inputFilePath, testDir);
 
     const enUSFilePath = path.join(testDir, 'en-US.json');
     const deDEFilePath = path.join(testDir, 'de-DE.json');

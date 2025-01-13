@@ -1,15 +1,17 @@
 import { Command } from 'commander';
+import { FileProcessor } from './splitter';
 import { version } from './version-info';
-import { splitFile } from './splitter';
+
 
 const program = new Command();
-
+console.log('-----Start-------');
 program
   .version(version, '-v, --version', 'output the current version')
   .option('-f, --file <path>', 'path to a single file with multiple language-specific JSON objects')
   .option('-o, --output-dir <path>', 'path to directory for generated files')
   .option('-l, --list <path>', 'path to file with language codes (optional)')
   .action((options) => {
+    console.log(' Options:', options);
     if (!options.file || !options.outputDir) {
       console.log(`
 An application checks a single file with multiple language-specific JSON objects and writes their content in separate JSON files. Optionally, it checks also the completeness of a single file.
@@ -56,7 +58,8 @@ and de-DE.json with content:
 }
       `);
     } else {
-      splitFile(options.file, options.outputDir, options.list);
+      const processor = new FileProcessor(options.list);
+      processor.processFile(options.file, options.outputDir);
     }
   })
   .parse(process.argv);
