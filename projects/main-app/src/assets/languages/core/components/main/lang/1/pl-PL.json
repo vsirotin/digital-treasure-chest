@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Szukaj",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Raport",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informacje",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Ustawienia",
+      "icon": "settings"
+    }
+  ],
+  "title": "Cyfrowa skrzynia skarbów"
+}

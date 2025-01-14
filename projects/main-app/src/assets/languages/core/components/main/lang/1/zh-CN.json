@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "搜索",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "报告",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "信息",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "设置",
+      "icon": "settings"
+    }
+  ],
+  "title": "数字宝箱"
+}

@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Buscar",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Informe",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Info",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Configuración",
+      "icon": "settings"
+    }
+  ],
+  "title": "Cofre del tesoro digital"
+}

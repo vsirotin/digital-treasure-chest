@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Претрага",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Извештај",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Информације",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Подешавања",
+      "icon": "settings"
+    }
+  ],
+  "title": "Дигитално благо"
+}

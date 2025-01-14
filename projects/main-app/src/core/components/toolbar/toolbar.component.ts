@@ -18,9 +18,8 @@ import * as uiDefault from '../../../assets/languages/core/components/toolbar/la
 export class ToolbarComponent implements ILocalizationClient<IUIToolbar>{
 
   ui: IUIToolbar = (uiDefault as any).default;
-
-  //ui: IUIToolbar = {title: 'Digital Treasure Chest', ietfTag: "EN"};
-   private localizer: ILocalizer;
+  
+  private localizer: ILocalizer;
 
   constructor(private communicatorService: CommunicatorService){
     this.localizer = LocalizerFactory.createLocalizer<IUIToolbar>("assets/languages/core/components/toolbar/lang", 1, this.ui, this);

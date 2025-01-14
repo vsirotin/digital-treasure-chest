@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Поиск",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Отчет",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Информация",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Настройки",
+      "icon": "settings"
+    }
+  ],
+  "title": "Цифровой сундук"
+}

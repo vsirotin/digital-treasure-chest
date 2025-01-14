@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Tìm kiếm",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Báo cáo",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Thông tin",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Cài đặt",
+      "icon": "settings"
+    }
+  ],
+  "title": "Rương kho báu kỹ thuật số"
+}

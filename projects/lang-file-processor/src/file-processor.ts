@@ -56,6 +56,7 @@ alyseSyntax(inputFilePath: string): boolean {
   let currentLangCode = '';
   let currentObjectLines: string[] = [];
   let insideObject = false;
+  let braceLevel = 0;
   let lineNumber = 0;
 
   for (const line of lines) {
@@ -79,10 +80,11 @@ alyseSyntax(inputFilePath: string): boolean {
 
     // Check if the line starts an object
     if (trimmedLine.startsWith('{')) {
-      if (insideObject) {
-        this.logger.error(`Unexpected '{' at line ${lineNumber} while already inside an object.`);
-        return false;
-      }
+      // if (insideObject) {
+      //   this.logger.error(`Unexpected '{' at line ${lineNumber} while already inside an object.`);
+      //   return false;
+      // }
+      braceLevel++;
       insideObject = true;
       currentObjectLines.push(trimmedLine);
       continue;
@@ -90,7 +92,8 @@ alyseSyntax(inputFilePath: string): boolean {
 
     // Check if the line ends an object
     if (trimmedLine.endsWith('}')) {
-      if (!insideObject) {
+      braceLevel--;
+      if((!insideObject) || (braceLevel < 0)) {
         this.logger.error(`Unexpected '}' at line ${lineNumber} without starting an object.`);
         return false;
       }

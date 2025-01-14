@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Suche",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Bericht",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Info",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Einstellungen",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digitaler Schatzkasten"
+}

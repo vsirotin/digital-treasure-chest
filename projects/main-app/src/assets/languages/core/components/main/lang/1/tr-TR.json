@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Arama",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Rapor",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Bilgi",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Ayarlar",
+      "icon": "settings"
+    }
+  ],
+  "title": "Dijital hazine sandığı"
+}

@@ -1,200 +1,400 @@
 ar-SA
 {
-  "title": "كنز رقمي",
-  "ietfTag": "ar-SA"
+  "navItems": [
+    {"id": "search", "label": "بحث", "icon": "add_chart"},
+    {"id": "report", "label": "تقرير", "icon": "feed"},
+    {"id": "info", "label": "معلومات", "icon": "info_outline"},
+    {"id": "settings", "label": "الإعدادات", "icon": "settings"}
+  ],
+  "title": "كنز رقمي"
 }
 bn-BD
 {
-  "title": "ডিজিটাল ধন",
-  "ietfTag": "bn-BD"
+  "navItems": [
+    {"id": "search", "label": "অনুসন্ধান", "icon": "add_chart"},
+    {"id": "report", "label": "প্রতিবেদন", "icon": "feed"},
+    {"id": "info", "label": "তথ্য", "icon": "info_outline"},
+    {"id": "settings", "label": "সেটিংস", "icon": "settings"}
+  ],
+  "title": "ডিজিটাল ধন"
 }
 bg-BG
 {
-  "title": "Цифрово съкровище",
-  "ietfTag": "bg-BG"
+  "navItems": [
+    {"id": "search", "label": "Търсене", "icon": "add_chart"},
+    {"id": "report", "label": "Доклад", "icon": "feed"},
+    {"id": "info", "label": "Информация", "icon": "info_outline"},
+    {"id": "settings", "label": "Настройки", "icon": "settings"}
+  ],
+  "title": "Цифрово съкровище"
 }
 ca-ES
 {
-  "title": "Tresor digital",
-  "ietfTag": "ca-ES"
+  "navItems": [
+    {"id": "search", "label": "Cercar", "icon": "add_chart"},
+    {"id": "report", "label": "Informe", "icon": "feed"},
+    {"id": "info", "label": "Informació", "icon": "info_outline"},
+    {"id": "settings", "label": "Configuració", "icon": "settings"}
+  ],
+  "title": "Tresor digital"
 }
 zh-CN
 {
-  "title": "数字宝箱",
-  "ietfTag": "zh-CN"
+  "navItems": [
+    {"id": "search", "label": "搜索", "icon": "add_chart"},
+    {"id": "report", "label": "报告", "icon": "feed"},
+    {"id": "info", "label": "信息", "icon": "info_outline"},
+    {"id": "settings", "label": "设置", "icon": "settings"}
+  ],
+  "title": "数字宝箱"
 }
 hr-HR
 {
-  "title": "Digitalno blago",
-  "ietfTag": "hr-HR"
+  "navItems": [
+    {"id": "search", "label": "Pretraživanje", "icon": "add_chart"},
+    {"id": "report", "label": "Izvješće", "icon": "feed"},
+    {"id": "info", "label": "Informacije", "icon": "info_outline"},
+    {"id": "settings", "label": "Postavke", "icon": "settings"}
+  ],
+  "title": "Digitalno blago"
 }
 cs-CZ
 {
-  "title": "Digitální poklad",
-  "ietfTag": "cs-CZ"
+  "navItems": [
+    {"id": "search", "label": "Hledat", "icon": "add_chart"},
+    {"id": "report", "label": "Zpráva", "icon": "feed"},
+    {"id": "info", "label": "Informace", "icon": "info_outline"},
+    {"id": "settings", "label": "Nastavení", "icon": "settings"}
+  ],
+  "title": "Digitální poklad"
 }
 da-DK
 {
-  "title": "Digital skat",
-  "ietfTag": "da-DK"
+  "navItems": [
+    {"id": "search", "label": "Søg", "icon": "add_chart"},
+    {"id": "report", "label": "Rapport", "icon": "feed"},
+    {"id": "info", "label": "Info", "icon": "info_outline"},
+    {"id": "settings", "label": "Indstillinger", "icon": "settings"}
+  ],
+  "title": "Digital skat"
 }
 nl-NL
 {
-  "title": "Digitale schatkist",
-  "ietfTag": "nl-NL"
+  "navItems": [
+    {"id": "search", "label": "Zoeken", "icon": "add_chart"},
+    {"id": "report", "label": "Rapport", "icon": "feed"},
+    {"id": "info", "label": "Info", "icon": "info_outline"},
+    {"id": "settings", "label": "Instellingen", "icon": "settings"}
+  ],
+  "title": "Digitale schatkist"
 }
 en-US
 {
-  "title": "Digital Treasure Chest",
-  "ietfTag": "en-US"
+  "navItems": [
+    {"id": "search", "label": "Search", "icon": "add_chart"},
+    {"id": "report", "label": "Report", "icon": "feed"},
+    {"id": "info", "label": "Info", "icon": "info_outline"},
+    {"id": "settings", "label": "Settings", "icon": "settings"}
+  ],
+  "title": "Digital Treasure Chest"
 }
 et-EE
 {
-  "title": "Digitaalne aardelaegas",
-  "ietfTag": "et-EE"
+  "navItems": [
+    {"id": "search", "label": "Otsing", "icon": "add_chart"},
+    {"id": "report", "label": "Aruanne", "icon": "feed"},
+    {"id": "info", "label": "Teave", "icon": "info_outline"},
+    {"id": "settings", "label": "Seaded", "icon": "settings"}
+  ],
+  "title": "Digitaalne aardelaegas"
 }
 fi-FI
 {
-  "title": "Digitaalinen aarrearkku",
-  "ietfTag": "fi-FI"
+  "navItems": [
+    {"id": "search", "label": "Haku", "icon": "add_chart"},
+    {"id": "report", "label": "Raportti", "icon": "feed"},
+    {"id": "info", "label": "Tiedot", "icon": "info_outline"},
+    {"id": "settings", "label": "Asetukset", "icon": "settings"}
+  ],
+  "title": "Digitaalinen aarrearkku"
 }
 fr-FR
 {
-  "title": "Coffre aux trésors numérique",
-  "ietfTag": "fr-FR"
+  "navItems": [
+    {"id": "search", "label": "Recherche", "icon": "add_chart"},
+    {"id": "report", "label": "Rapport", "icon": "feed"},
+    {"id": "info", "label": "Info", "icon": "info_outline"},
+    {"id": "settings", "label": "Paramètres", "icon": "settings"}
+  ],
+  "title": "Coffre aux trésors numérique"
 }
 de-DE
 {
-  "title": "Digitaler Schatzkasten",
-  "ietfTag": "de-DE"
+  "navItems": [
+    {"id": "search", "label": "Suche", "icon": "add_chart"},
+    {"id": "report", "label": "Bericht", "icon": "feed"},
+    {"id": "info", "label": "Info", "icon": "info_outline"},
+    {"id": "settings", "label": "Einstellungen", "icon": "settings"}
+  ],
+  "title": "Digitaler Schatzkasten"
 }
 el-GR
 {
-  "title": "Ψηφιακός θησαυρός",
-  "ietfTag": "el-GR"
+  "navItems": [
+    {"id": "search", "label": "Αναζήτηση", "icon": "add_chart"},
+    {"id": "report", "label": "Αναφορά", "icon": "feed"},
+    {"id": "info", "label": "Πληροφορίες", "icon": "info_outline"},
+    {"id": "settings", "label": "Ρυθμίσεις", "icon": "settings"}
+  ],
+  "title": "Ψηφιακός θησαυρός"
 }
 he-IL
 {
-  "title": "אוצר דיגיטלי",
-  "ietfTag": "he-IL"
+  "navItems": [
+    {"id": "search", "label": "חיפוש", "icon": "add_chart"},
+    {"id": "report", "label": "דוח", "icon": "feed"},
+    {"id": "info", "label": "מידע", "icon": "info_outline"},
+    {"id": "settings", "label": "הגדרות", "icon": "settings"}
+  ],
+  "title": "אוצר דיגיטלי"
 }
 hu-HU
 {
-  "title": "Digitális kincsesláda",
-  "ietfTag": "hu-HU"
+  "navItems": [
+    {"id": "search", "label": "Keresés", "icon": "add_chart"},
+    {"id": "report", "label": "Jelentés", "icon": "feed"},
+    {"id": "info", "label": "Információ", "icon": "info_outline"},
+    {"id": "settings", "label": "Beállítások", "icon": "settings"}
+  ],
+  "title": "Digitális kincsesláda"
 }
 id-ID
 {
-  "title": "Petih digital",
-  "ietfTag": "id-ID"
+  "navItems": [
+    {"id": "search", "label": "Pencarian", "icon": "add_chart"},
+    {"id": "report", "label": "Laporan", "icon": "feed"},
+    {"id": "info", "label": "Info", "icon": "info_outline"},
+    {"id": "settings", "label": "Pengaturan", "icon": "settings"}
+  ],
+  "title": "Petih digital"
 }
 it-IT
 {
-  "title": "Scrigno digitale",
-  "ietfTag": "it-IT"
+  "navItems": [
+    {"id": "search", "label": "Cerca", "icon": "add_chart"},
+    {"id": "report", "label": "Rapporto", "icon": "feed"},
+    {"id": "info", "label": "Info", "icon": "info_outline"},
+    {"id": "settings", "label": "Impostazioni", "icon": "settings"}
+  ],
+  "title": "Scrigno digitale"
 }
 ja-JP
 {
-  "title": "デジタル宝箱",
-  "ietfTag": "ja-JP"
+  "navItems": [
+    {"id": "search", "label": "検索", "icon": "add_chart"},
+    {"id": "report", "label": "レポート", "icon": "feed"},
+    {"id": "info", "label": "情報", "icon": "info_outline"},
+    {"id": "settings", "label": "設定", "icon": "settings"}
+  ],
+  "title": "デジタル宝箱"
 }
 ko-KR
 {
-  "title": "디지털 보물 상자",
-  "ietfTag": "ko-KR"
+  "navItems": [
+    {"id": "search", "label": "검색", "icon": "add_chart"},
+    {"id": "report", "label": "보고서", "icon": "feed"},
+    {"id": "info", "label": "정보", "icon": "info_outline"},
+    {"id": "settings", "label": "설정", "icon": "settings"}
+  ],
+  "title": "디지털 보물 상자"
 }
 lv-LV
 {
-  "title": "Digitālā dārgumu lāde",
-  "ietfTag": "lv-LV"
+  "navItems": [
+    {"id": "search", "label": "Meklēt", "icon": "add_chart"},
+    {"id": "report", "label": "Ziņojums", "icon": "feed"},
+    {"id": "info", "label": "Informācija", "icon": "info_outline"},
+    {"id": "settings", "label": "Iestatījumi", "icon": "settings"}
+  ],
+  "title": "Digitālā dārgumu lāde"
 }
 lt-LT
 {
-  "title": "Skaitmeninė lobis",
-  "ietfTag": "lt-LT"
+  "navItems": [
+    {"id": "search", "label": "Paieška", "icon": "add_chart"},
+    {"id": "report", "label": "Ataskaita", "icon": "feed"},
+    {"id": "info", "label": "Informacija", "icon": "info_outline"},
+    {"id": "settings", "label": "Nustatymai", "icon": "settings"}
+  ],
+  "title": "Skaitmeninė lobis"
 }
 no-NO
 {
-  "title": "Digital skattejakt",
-  "ietfTag": "no-NO"
+  "navItems": [
+    {"id": "search", "label": "Søk", "icon": "add_chart"},
+    {"id": "report", "label": "Rapport", "icon": "feed"},
+    {"id": "info", "label": "Informasjon", "icon": "info_outline"},
+    {"id": "settings", "label": "Innstillinger", "icon": "settings"}
+  ],
+  "title": "Digital skattejakt"
 }
 nb-NO
 {
-  "title": "Digital skattejakt",
-  "ietfTag": "nb-NO"
+  "navItems": [
+    {"id": "search", "label": "Søk", "icon": "add_chart"},
+    {"id": "report", "label": "Rapport", "icon": "feed"},
+    {"id": "info", "label": "Informasjon", "icon": "info_outline"},
+    {"id": "settings", "label": "Innstillinger", "icon": "settings"}
+  ],
+  "title": "Digital skattejakt"
 }
 fa-IR
 {
-  "title": "صندوق گنج دیجیتال",
-  "ietfTag": "fa-IR"
+  "navItems": [
+    {"id": "search", "label": "جستجو", "icon": "add_chart"},
+    {"id": "report", "label": "گزارش", "icon": "feed"},
+    {"id": "info", "label": "اطلاعات", "icon": "info_outline"},
+    {"id": "settings", "label": "تنظیمات", "icon": "settings"}
+  ],
+  "title": "صندوق گنج دیجیتال"
 }
 pl-PL
 {
-  "title": "Cyfrowa skrzynia skarbów",
-  "ietfTag": "pl-PL"
+  "navItems": [
+    {"id": "search", "label": "Szukaj", "icon": "add_chart"},
+    {"id": "report", "label": "Raport", "icon": "feed"},
+    {"id": "info", "label": "Informacje", "icon": "info_outline"},
+    {"id": "settings", "label": "Ustawienia", "icon": "settings"}
+  ],
+  "title": "Cyfrowa skrzynia skarbów"
 }
 pt-PT
 {
-  "title": "Cofre digital",
-  "ietfTag": "pt-PT"
+  "navItems": [
+    {"id": "search", "label": "Procurar", "icon": "add_chart"},
+    {"id": "report", "label": "Relatório", "icon": "feed"},
+    {"id": "info", "label": "Informação", "icon": "info_outline"},
+    {"id": "settings", "label": "Configurações", "icon": "settings"}
+  ],
+  "title": "Cofre digital"
 }
 pa-IN
 {
-  "title": "ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨਾ",
-  "ietfTag": "pa-IN"
+  "navItems": [
+    {"id": "search", "label": "ਖੋਜੋ", "icon": "add_chart"},
+    {"id": "report", "label": "ਰਿਪੋਰਟ", "icon": "feed"},
+    {"id": "info", "label": "ਜਾਣਕਾਰੀ", "icon": "info_outline"},
+    {"id": "settings", "label": "ਸੈਟਿੰਗਸ", "icon": "settings"}
+  ],
+  "title": "ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨਾ"
 }
 ro-RO
 {
-  "title": "Cufăr digital",
-  "ietfTag": "ro-RO"
+  "navItems": [
+    {"id": "search", "label": "Căutare", "icon": "add_chart"},
+    {"id": "report", "label": "Raport", "icon": "feed"},
+    {"id": "info", "label": "Informații", "icon": "info_outline"},
+    {"id": "settings", "label": "Setări", "icon": "settings"}
+  ],
+  "title": "Cufăr digital"
 }
 ru-RU
 {
-  "title": "Цифровой сундук",
-  "ietfTag": "ru-RU"
+  "navItems": [
+    {"id": "search", "label": "Поиск", "icon": "add_chart"},
+    {"id": "report", "label": "Отчет", "icon": "feed"},
+    {"id": "info", "label": "Информация", "icon": "info_outline"},
+    {"id": "settings", "label": "Настройки", "icon": "settings"}
+  ],
+  "title": "Цифровой сундук"
 }
 sr-RS
 {
-  "title": "Дигитално благо",
-  "ietfTag": "sr-RS"
+  "navItems": [
+    {"id": "search", "label": "Претрага", "icon": "add_chart"},
+    {"id": "report", "label": "Извештај", "icon": "feed"},
+    {"id": "info", "label": "Информације", "icon": "info_outline"},
+    {"id": "settings", "label": "Подешавања", "icon": "settings"}
+  ],
+  "title": "Дигитално благо"
 }
 sk-SK
 {
-  "title": "Digitálna pokladnica",
-  "ietfTag": "sk-SK"
+  "navItems": [
+    {"id": "search", "label": "Hľadať", "icon": "add_chart"},
+    {"id": "report", "label": "Správa", "icon": "feed"},
+    {"id": "info", "label": "Informácie", "icon": "info_outline"},
+    {"id": "settings", "label": "Nastavenia", "icon": "settings"}
+  ],
+  "title": "Digitálna pokladnica"
 }
 sl-SI
 {
-  "title": "Digitalna skrinja z zakladi",
-  "ietfTag": "sl-SI"
+  "navItems": [
+    {"id": "search", "label": "Iskanje", "icon": "add_chart"},
+    {"id": "report", "label": "Poročilo", "icon": "feed"},
+    {"id": "info", "label": "Informacije", "icon": "info_outline"},
+    {"id": "settings", "label": "Nastavitve", "icon": "settings"}
+  ],
+  "title": "Digitalna skrinja z zakladi"
 }
 es-ES
 {
-  "title": "Cofre del tesoro digital",
-  "ietfTag": "es-ES"
+  "navItems": [
+    {"id": "search", "label": "Buscar", "icon": "add_chart"},
+    {"id": "report", "label": "Informe", "icon": "feed"},
+    {"id": "info", "label": "Info", "icon": "info_outline"},
+    {"id": "settings", "label": "Configuración", "icon": "settings"}
+  ],
+  "title": "Cofre del tesoro digital"
 }
 sv-SE
 {
-  "title": "Digital skattkista",
-  "ietfTag": "sv-SE"
+  "navItems": [
+    {"id": "search", "label": "Sök", "icon": "add_chart"},
+    {"id": "report", "label": "Rapport", "icon": "feed"},
+    {"id": "info", "label": "Info", "icon": "info_outline"},
+    {"id": "settings", "label": "Inställningar", "icon": "settings"}
+  ],
+  "title": "Digital skattkista"
 }
 th-TH
 {
-  "title": "หีบสมบัติดิจิทัล",
-  "ietfTag": "th-TH"
+  "navItems": [
+    {"id": "search", "label": "ค้นหา", "icon": "add_chart"},
+    {"id": "report", "label": "รายงาน", "icon": "feed"},
+    {"id": "info", "label": "ข้อมูล", "icon": "info_outline"},
+    {"id": "settings", "label": "การตั้งค่า", "icon": "settings"}
+  ],
+  "title": "หีบสมบัติดิจิทัล"
 }
 tr-TR
 {
-  "title": "Dijital hazine sandığı",
-  "ietfTag": "tr-TR"
+  "navItems": [
+    {"id": "search", "label": "Arama", "icon": "add_chart"},
+    {"id": "report", "label": "Rapor", "icon": "feed"},
+    {"id": "info", "label": "Bilgi", "icon": "info_outline"},
+    {"id": "settings", "label": "Ayarlar", "icon": "settings"}
+  ],
+  "title": "Dijital hazine sandığı"
 }
 uk-UA
 {
-  "title": "Цифрова скарбниця",
-  "ietfTag": "uk-UA"
+  "navItems": [
+    {"id": "search", "label": "Пошук", "icon": "add_chart"},
+    {"id": "report", "label": "Звіт", "icon": "feed"},
+    {"id": "info", "label": "Інформація", "icon": "info_outline"},
+    {"id": "settings", "label": "Налаштування", "icon": "settings"}
+  ],
+  "title": "Цифрова скарбниця"
 }
 vi-VN
 {
-  "title": "Rương kho báu kỹ thuật số",
-  "ietfTag": "vi-VN"
+  "navItems": [
+    {"id": "search", "label": "Tìm kiếm", "icon": "add_chart"},
+    {"id": "report", "label": "Báo cáo", "icon": "feed"},
+    {"id": "info", "label": "Thông tin", "icon": "info_outline"},
+    {"id": "settings", "label": "Cài đặt", "icon": "settings"}
+  ],
+  "title": "Rương kho báu kỹ thuật số"
 }

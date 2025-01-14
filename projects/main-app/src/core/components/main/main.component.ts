@@ -15,9 +15,11 @@ import { InfoComponent } from '../info/info.component';
 import { SearchComponent } from '../search/search.component';
 import { ReportComponent } from '../report/report.component';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
+import * as uiDefault from '../../../assets/languages/core/components/main/lang/1/en-US.json';
+import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
 
 
-export const MAIN_SOURCE_DIR = "assets/languages/core/components/main/lang/";
+export const MAIN_SOURCE_DIR = "assets/languages/core/components/main/lang";
 
 interface IUIMainLanguageRelevantItems {
   search: string;
@@ -44,11 +46,10 @@ interface IUIMainLanguageRelevantItems {
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
-export class MainComponent implements OnInit, OnDestroy {
+export class MainComponent implements OnInit, OnDestroy, ILocalizationClient<IMainUI> {
   @ViewChild('snav') snav!: MatSidenavModule;
 
   private subscriptionBtnClicked: Subscription;
-// private subscriptionLangChanged: Subscription;
 
   logger : ILogger = LoggerFactory.getLogger("MainComponent");
 
@@ -60,22 +61,10 @@ export class MainComponent implements OnInit, OnDestroy {
 
   mobileQuery!: MediaQueryList;
 
- ui : IMainUI = {
-    navItems: [
-
-      {id: "search", label: "Search", icon: "add_chart"},
-      {id: "report", label: "Report", icon: "feed"},
-      {id: "info", label: "Info", icon: "info_outline"},
-      {id: "settings", label: "Settings", icon: "settings"},
-    ],
-    title: "Digital Treasure Chest",
-  };
-
-  
+  ui: IMainUI = (uiDefault as any).default;
 
   private _mobileQueryListener!: () => void;
-  //localizer: ILocalizer<IUIMainLanguageRelevantItems> = LocalizerFactory.createLocalizer(MAIN_SOURCE_DIR, 1);
-  //languageChangeNotificator: ILanguageChangeNotificator = Localizer.languageChangeNotificator;
+  private localizer: ILocalizer;
 
   constructor(private communicatorService: CommunicatorService,
    changeDetectorRef: ChangeDetectorRef, 
@@ -83,7 +72,7 @@ export class MainComponent implements OnInit, OnDestroy {
    private breakpointObserver: BreakpointObserver,
    private cdr: ChangeDetectorRef,
    private titleService: Title) {
-    this.logger.setLogLevel(0);
+    this.localizer = LocalizerFactory.createLocalizer<IMainUI>(MAIN_SOURCE_DIR, 1, this.ui, this);
     this.logger.log("Start of constructor");
 
     this.titleService.setTitle(this.ui.title); 
@@ -93,24 +82,17 @@ export class MainComponent implements OnInit, OnDestroy {
       this.toggleMenu();
     });
 
-//     this.subscriptionLangChanged = this
-//     .localizer.languageSwitched$
-//     .subscribe((languageRelevantItems: IUIMainLanguageRelevantItems) => {
-//  //     this.logger.debug("Start of subscriptionLangChanged selectedLanguage=" + JSON.stringify(selectedLanguage));
-//       this.logger.debug("subscriptionLangChanged after resetNavItems");
-//       this.cdr.detectChanges();
-//       this.logger.debug("subscriptionLangChanged completed");
-//     }); 
 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-//    this.logger.debug("End of constructor"); 
+  }
+  updateLocalization(data: IMainUI): void {
+    this.ui  = data;
   }
 
   async ngOnInit() {
     this.logger.debug("Start of ngOnInit");
-  //  await this.localizer.initializeLanguage();
     this.logger.debug("End of ngOnInit");
     const isLargeScreen = this.breakpointObserver.isMatched('(min-width: 600px)');
     this.logger.log("ngOnInit", "isLargeScreen=", isLargeScreen);

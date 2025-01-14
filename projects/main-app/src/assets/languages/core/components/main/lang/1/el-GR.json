@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Αναζήτηση",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Αναφορά",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Πληροφορίες",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Ρυθμίσεις",
+      "icon": "settings"
+    }
+  ],
+  "title": "Ψηφιακός θησαυρός"
+}

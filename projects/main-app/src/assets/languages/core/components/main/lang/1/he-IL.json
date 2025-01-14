@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "חיפוש",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "דוח",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "מידע",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "הגדרות",
+      "icon": "settings"
+    }
+  ],
+  "title": "אוצר דיגיטלי"
+}

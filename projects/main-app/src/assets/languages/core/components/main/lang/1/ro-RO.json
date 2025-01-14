@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Căutare",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Raport",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informații",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Setări",
+      "icon": "settings"
+    }
+  ],
+  "title": "Cufăr digital"
+}

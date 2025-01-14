@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Search",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Report",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Info",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Settings",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digital Treasure Chest"
+}

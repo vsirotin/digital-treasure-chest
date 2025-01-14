@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Zoeken",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Rapport",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Info",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Instellingen",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digitale schatkist"
+}
