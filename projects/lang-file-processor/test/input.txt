@@ -1,400 +1,240 @@
 ar-SA
 {
-  "navItems": [
-    {"id": "search", "label": "بحث", "icon": "add_chart"},
-    {"id": "report", "label": "تقرير", "icon": "feed"},
-    {"id": "info", "label": "معلومات", "icon": "info_outline"},
-    {"id": "settings", "label": "الإعدادات", "icon": "settings"}
-  ],
-  "title": "كنز رقمي"
+  "resultTitle": "كنزك الرقمي يحتوي الآن على الأرقام التالية:",
+  "noResultsTitle": "لا توجد عناصر في صندوقك حتى الآن.",
+  "clearButtonTitle": "إفراغ الصندوق"
 }
 bn-BD
 {
-  "navItems": [
-    {"id": "search", "label": "অনুসন্ধান", "icon": "add_chart"},
-    {"id": "report", "label": "প্রতিবেদন", "icon": "feed"},
-    {"id": "info", "label": "তথ্য", "icon": "info_outline"},
-    {"id": "settings", "label": "সেটিংস", "icon": "settings"}
-  ],
-  "title": "ডিজিটাল ধন"
+  "resultTitle": "আপনার ডিজিটাল ধন এখন নিম্নলিখিত সংখ্যা ধারণ করে:",
+  "noResultsTitle": "আপনার চেস্টে এখনও কোন আইটেম নেই।",
+  "clearButtonTitle": "চেস্ট পরিষ্কার করুন"
 }
 bg-BG
 {
-  "navItems": [
-    {"id": "search", "label": "Търсене", "icon": "add_chart"},
-    {"id": "report", "label": "Доклад", "icon": "feed"},
-    {"id": "info", "label": "Информация", "icon": "info_outline"},
-    {"id": "settings", "label": "Настройки", "icon": "settings"}
-  ],
-  "title": "Цифрово съкровище"
+  "resultTitle": "Вашето цифрово съкровище сега съдържа следните числа:",
+  "noResultsTitle": "Все още няма елементи в сандъка ви.",
+  "clearButtonTitle": "Изчисти сандъка"
 }
 ca-ES
 {
-  "navItems": [
-    {"id": "search", "label": "Cercar", "icon": "add_chart"},
-    {"id": "report", "label": "Informe", "icon": "feed"},
-    {"id": "info", "label": "Informació", "icon": "info_outline"},
-    {"id": "settings", "label": "Configuració", "icon": "settings"}
-  ],
-  "title": "Tresor digital"
+  "resultTitle": "El teu tresor digital ara conté els següents números:",
+  "noResultsTitle": "Encara no hi ha articles al teu cofre.",
+  "clearButtonTitle": "Buida el cofre"
 }
 zh-CN
 {
-  "navItems": [
-    {"id": "search", "label": "搜索", "icon": "add_chart"},
-    {"id": "report", "label": "报告", "icon": "feed"},
-    {"id": "info", "label": "信息", "icon": "info_outline"},
-    {"id": "settings", "label": "设置", "icon": "settings"}
-  ],
-  "title": "数字宝箱"
+  "resultTitle": "您的数字宝箱现在包含以下数字：",
+  "noResultsTitle": "您的箱子中还没有项目。",
+  "clearButtonTitle": "清空箱子"
 }
 hr-HR
 {
-  "navItems": [
-    {"id": "search", "label": "Pretraživanje", "icon": "add_chart"},
-    {"id": "report", "label": "Izvješće", "icon": "feed"},
-    {"id": "info", "label": "Informacije", "icon": "info_outline"},
-    {"id": "settings", "label": "Postavke", "icon": "settings"}
-  ],
-  "title": "Digitalno blago"
+  "resultTitle": "Vaša digitalna blaga sada sadrže sljedeće brojeve:",
+  "noResultsTitle": "Još nema stavki u vašoj škrinji.",
+  "clearButtonTitle": "Očistite škrinju"
 }
 cs-CZ
 {
-  "navItems": [
-    {"id": "search", "label": "Hledat", "icon": "add_chart"},
-    {"id": "report", "label": "Zpráva", "icon": "feed"},
-    {"id": "info", "label": "Informace", "icon": "info_outline"},
-    {"id": "settings", "label": "Nastavení", "icon": "settings"}
-  ],
-  "title": "Digitální poklad"
+  "resultTitle": "Vaše digitální poklady nyní obsahují následující čísla:",
+  "noResultsTitle": "Ve vaší truhle ještě nejsou žádné položky.",
+  "clearButtonTitle": "Vyprázdnit truhlu"
 }
 da-DK
 {
-  "navItems": [
-    {"id": "search", "label": "Søg", "icon": "add_chart"},
-    {"id": "report", "label": "Rapport", "icon": "feed"},
-    {"id": "info", "label": "Info", "icon": "info_outline"},
-    {"id": "settings", "label": "Indstillinger", "icon": "settings"}
-  ],
-  "title": "Digital skat"
+  "resultTitle": "Din digitale skattekiste indeholder nu følgende tal:",
+  "noResultsTitle": "Der er endnu ingen genstande i din kiste.",
+  "clearButtonTitle": "Ryd kisten"
 }
 nl-NL
 {
-  "navItems": [
-    {"id": "search", "label": "Zoeken", "icon": "add_chart"},
-    {"id": "report", "label": "Rapport", "icon": "feed"},
-    {"id": "info", "label": "Info", "icon": "info_outline"},
-    {"id": "settings", "label": "Instellingen", "icon": "settings"}
-  ],
-  "title": "Digitale schatkist"
+  "resultTitle": "Uw digitale schatkist bevat nu de volgende nummers:",
+  "noResultsTitle": "Er zijn nog geen items in je kist.",
+  "clearButtonTitle": "Maak de kist leeg"
 }
 en-US
 {
-  "navItems": [
-    {"id": "search", "label": "Search", "icon": "add_chart"},
-    {"id": "report", "label": "Report", "icon": "feed"},
-    {"id": "info", "label": "Info", "icon": "info_outline"},
-    {"id": "settings", "label": "Settings", "icon": "settings"}
-  ],
-  "title": "Digital Treasure Chest"
+  "resultTitle": "Your Digital Treasure Chest contain now the following numbers:",
+  "noResultsTitle": "No items in your chest yet.",
+  "clearButtonTitle": "Clear the chest"
 }
 et-EE
 {
-  "navItems": [
-    {"id": "search", "label": "Otsing", "icon": "add_chart"},
-    {"id": "report", "label": "Aruanne", "icon": "feed"},
-    {"id": "info", "label": "Teave", "icon": "info_outline"},
-    {"id": "settings", "label": "Seaded", "icon": "settings"}
-  ],
-  "title": "Digitaalne aardelaegas"
+  "resultTitle": "Teie digitaalne aardelaegas sisaldab nüüd järgmisi numbreid:",
+  "noResultsTitle": "Teie kirstus pole veel ühtegi eset.",
+  "clearButtonTitle": "Tühjenda kirst"
 }
 fi-FI
 {
-  "navItems": [
-    {"id": "search", "label": "Haku", "icon": "add_chart"},
-    {"id": "report", "label": "Raportti", "icon": "feed"},
-    {"id": "info", "label": "Tiedot", "icon": "info_outline"},
-    {"id": "settings", "label": "Asetukset", "icon": "settings"}
-  ],
-  "title": "Digitaalinen aarrearkku"
+  "resultTitle": "Digitaalinen aarrearkkusi sisältää nyt seuraavat numerot:",
+  "noResultsTitle": "Arkussasi ei ole vielä yhtään kohdetta.",
+  "clearButtonTitle": "Tyhjennä arkku"
 }
 fr-FR
 {
-  "navItems": [
-    {"id": "search", "label": "Recherche", "icon": "add_chart"},
-    {"id": "report", "label": "Rapport", "icon": "feed"},
-    {"id": "info", "label": "Info", "icon": "info_outline"},
-    {"id": "settings", "label": "Paramètres", "icon": "settings"}
-  ],
-  "title": "Coffre aux trésors numérique"
+  "resultTitle": "Votre coffre aux trésors numérique contient maintenant les numéros suivants :",
+  "noResultsTitle": "Aucun article dans votre coffre pour l'instant.",
+  "clearButtonTitle": "Vider le coffre"
 }
 de-DE
 {
-  "navItems": [
-    {"id": "search", "label": "Suche", "icon": "add_chart"},
-    {"id": "report", "label": "Bericht", "icon": "feed"},
-    {"id": "info", "label": "Info", "icon": "info_outline"},
-    {"id": "settings", "label": "Einstellungen", "icon": "settings"}
-  ],
-  "title": "Digitaler Schatzkasten"
+  "resultTitle": "Ihre digitale Schatzkiste enthält jetzt die folgenden Zahlen:",
+  "noResultsTitle": "Noch keine Gegenstände in Ihrer Truhe.",
+  "clearButtonTitle": "Truhe leeren"
 }
 el-GR
 {
-  "navItems": [
-    {"id": "search", "label": "Αναζήτηση", "icon": "add_chart"},
-    {"id": "report", "label": "Αναφορά", "icon": "feed"},
-    {"id": "info", "label": "Πληροφορίες", "icon": "info_outline"},
-    {"id": "settings", "label": "Ρυθμίσεις", "icon": "settings"}
-  ],
-  "title": "Ψηφιακός θησαυρός"
+  "resultTitle": "Το ψηφιακό θησαυροφυλάκιό σας περιέχει τώρα τους ακόλουθους αριθμούς:",
+  "noResultsTitle": "Δεν υπάρχουν αντικείμενα στο στήθος σας ακόμα.",
+  "clearButtonTitle": "Άδεια στο στήθος"
 }
 he-IL
 {
-  "navItems": [
-    {"id": "search", "label": "חיפוש", "icon": "add_chart"},
-    {"id": "report", "label": "דוח", "icon": "feed"},
-    {"id": "info", "label": "מידע", "icon": "info_outline"},
-    {"id": "settings", "label": "הגדרות", "icon": "settings"}
-  ],
-  "title": "אוצר דיגיטלי"
+  "resultTitle": "אוצר דיגיטלי שלך מכיל כעת את המספרים הבאים:",
+  "noResultsTitle": "אין פריטים בארון שלך עדיין.",
+  "clearButtonTitle": "נקה את הארון"
 }
 hu-HU
 {
-  "navItems": [
-    {"id": "search", "label": "Keresés", "icon": "add_chart"},
-    {"id": "report", "label": "Jelentés", "icon": "feed"},
-    {"id": "info", "label": "Információ", "icon": "info_outline"},
-    {"id": "settings", "label": "Beállítások", "icon": "settings"}
-  ],
-  "title": "Digitális kincsesláda"
+  "resultTitle": "A digitális kincsesládád most a következő számokat tartalmazza:",
+  "noResultsTitle": "Még nincsenek elemek a ládádban.",
+  "clearButtonTitle": "Üríteni a ládát"
 }
 id-ID
 {
-  "navItems": [
-    {"id": "search", "label": "Pencarian", "icon": "add_chart"},
-    {"id": "report", "label": "Laporan", "icon": "feed"},
-    {"id": "info", "label": "Info", "icon": "info_outline"},
-    {"id": "settings", "label": "Pengaturan", "icon": "settings"}
-  ],
-  "title": "Petih digital"
+  "resultTitle": "Petih digital Anda sekarang berisi angka-angka berikut:",
+  "noResultsTitle": "Belum ada item di peti Anda.",
+  "clearButtonTitle": "Bersihkan peti"
 }
 it-IT
 {
-  "navItems": [
-    {"id": "search", "label": "Cerca", "icon": "add_chart"},
-    {"id": "report", "label": "Rapporto", "icon": "feed"},
-    {"id": "info", "label": "Info", "icon": "info_outline"},
-    {"id": "settings", "label": "Impostazioni", "icon": "settings"}
-  ],
-  "title": "Scrigno digitale"
+  "resultTitle": "Il tuo Scrigno digitale contiene ora i seguenti numeri:",
+  "noResultsTitle": "Ancora nessun elemento nel tuo scrigno.",
+  "clearButtonTitle": "Svuota lo scrigno"
 }
 ja-JP
 {
-  "navItems": [
-    {"id": "search", "label": "検索", "icon": "add_chart"},
-    {"id": "report", "label": "レポート", "icon": "feed"},
-    {"id": "info", "label": "情報", "icon": "info_outline"},
-    {"id": "settings", "label": "設定", "icon": "settings"}
-  ],
-  "title": "デジタル宝箱"
+  "resultTitle": "あなたのデジタル宝箱には現在以下の番号が含まれています：",
+  "noResultsTitle": "あなたの宝箱にはまだアイテムがありません。",
+  "clearButtonTitle": "宝箱をクリアする"
 }
 ko-KR
 {
-  "navItems": [
-    {"id": "search", "label": "검색", "icon": "add_chart"},
-    {"id": "report", "label": "보고서", "icon": "feed"},
-    {"id": "info", "label": "정보", "icon": "info_outline"},
-    {"id": "settings", "label": "설정", "icon": "settings"}
-  ],
-  "title": "디지털 보물 상자"
+  "resultTitle": "당신의 디지털 보물 상자에는 이제 다음 숫자가 포함되어 있습니다:",
+  "noResultsTitle": "상자에 아직 항목이 없습니다.",
+  "clearButtonTitle": "상자를 비우다"
 }
 lv-LV
 {
-  "navItems": [
-    {"id": "search", "label": "Meklēt", "icon": "add_chart"},
-    {"id": "report", "label": "Ziņojums", "icon": "feed"},
-    {"id": "info", "label": "Informācija", "icon": "info_outline"},
-    {"id": "settings", "label": "Iestatījumi", "icon": "settings"}
-  ],
-  "title": "Digitālā dārgumu lāde"
+  "resultTitle": "Jūsu digitālā dārgumu lāde tagad satur šādus numurus:",
+  "noResultsTitle": "Jūsu lāde vēl nav priekšmetu.",
+  "clearButtonTitle": "Notīrīt lādi"
 }
 lt-LT
 {
-  "navItems": [
-    {"id": "search", "label": "Paieška", "icon": "add_chart"},
-    {"id": "report", "label": "Ataskaita", "icon": "feed"},
-    {"id": "info", "label": "Informacija", "icon": "info_outline"},
-    {"id": "settings", "label": "Nustatymai", "icon": "settings"}
-  ],
-  "title": "Skaitmeninė lobis"
+  "resultTitle": "Jūsų skaitmeninė lobis dabar turi šiuos numerius:",
+  "noResultsTitle": "Jūsų krūtinėje dar nėra daiktų.",
+  "clearButtonTitle": "Išvalyti krūtinę"
 }
 no-NO
 {
-  "navItems": [
-    {"id": "search", "label": "Søk", "icon": "add_chart"},
-    {"id": "report", "label": "Rapport", "icon": "feed"},
-    {"id": "info", "label": "Informasjon", "icon": "info_outline"},
-    {"id": "settings", "label": "Innstillinger", "icon": "settings"}
-  ],
-  "title": "Digital skattejakt"
+  "resultTitle": "Din digitale skattejakt inneholder nå følgende tall:",
+  "noResultsTitle": "Ingen gjenstander i kisten ennå.",
+  "clearButtonTitle": "Tøm kisten"
 }
 nb-NO
 {
-  "navItems": [
-    {"id": "search", "label": "Søk", "icon": "add_chart"},
-    {"id": "report", "label": "Rapport", "icon": "feed"},
-    {"id": "info", "label": "Informasjon", "icon": "info_outline"},
-    {"id": "settings", "label": "Innstillinger", "icon": "settings"}
-  ],
-  "title": "Digital skattejakt"
+  "resultTitle": "Din digitale skattejakt inneholder nå følgende tall:",
+  "noResultsTitle": "Ingen gjenstander i kisten ennå.",
+  "clearButtonTitle": "Tøm kisten"
 }
 fa-IR
 {
-  "navItems": [
-    {"id": "search", "label": "جستجو", "icon": "add_chart"},
-    {"id": "report", "label": "گزارش", "icon": "feed"},
-    {"id": "info", "label": "اطلاعات", "icon": "info_outline"},
-    {"id": "settings", "label": "تنظیمات", "icon": "settings"}
-  ],
-  "title": "صندوق گنج دیجیتال"
+  "resultTitle": "صندوق گنج دیجیتال شما اکنون حاوی اعداد زیر است:",
+  "noResultsTitle": "هنوز هیچ موردی در صندوق شما وجود ندارد.",
+  "clearButtonTitle": "صندوق را خالی کنید"
 }
 pl-PL
 {
-  "navItems": [
-    {"id": "search", "label": "Szukaj", "icon": "add_chart"},
-    {"id": "report", "label": "Raport", "icon": "feed"},
-    {"id": "info", "label": "Informacje", "icon": "info_outline"},
-    {"id": "settings", "label": "Ustawienia", "icon": "settings"}
-  ],
-  "title": "Cyfrowa skrzynia skarbów"
+  "resultTitle": "Twoja cyfrowa skrzynia skarbów zawiera teraz następujące liczby:",
+  "noResultsTitle": "W twojej skrzyni nie ma jeszcze żadnych przedmiotów.",
+  "clearButtonTitle": "Wyczyść skrzynię"
 }
 pt-PT
 {
-  "navItems": [
-    {"id": "search", "label": "Procurar", "icon": "add_chart"},
-    {"id": "report", "label": "Relatório", "icon": "feed"},
-    {"id": "info", "label": "Informação", "icon": "info_outline"},
-    {"id": "settings", "label": "Configurações", "icon": "settings"}
-  ],
-  "title": "Cofre digital"
+  "resultTitle": "Seu cofre digital agora contém os seguintes números:",
+  "noResultsTitle": "Ainda não há itens no seu cofre.",
+  "clearButtonTitle": "Limpar o cofre"
 }
 pa-IN
 {
-  "navItems": [
-    {"id": "search", "label": "ਖੋਜੋ", "icon": "add_chart"},
-    {"id": "report", "label": "ਰਿਪੋਰਟ", "icon": "feed"},
-    {"id": "info", "label": "ਜਾਣਕਾਰੀ", "icon": "info_outline"},
-    {"id": "settings", "label": "ਸੈਟਿੰਗਸ", "icon": "settings"}
-  ],
-  "title": "ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨਾ"
+  "resultTitle": "ਤੁਹਾਡੀ ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨੇ ਦੀ ਸੰਦਰਫਿਲਡਿੰਗ ਹੁਣ ਹੇਠ ਲਿਖੇ ਨੰਬਰਾਂ ਨੂੰ ਧਾਰਨ ਕਰਦੀ ਹੈ:",
+  "noResultsTitle": "ਤੁਹਾਡੇ ਛੇਤ ਵਿੱਚ ਅਜੇ ਤਕ ਕੋਈ ਆਈਟਮ ਨਹੀਂ ਹਨ।",
+  "clearButtonTitle": "ਛੇਤ ਨੂੰ ਸਾਫ ਕਰੋ"
 }
 ro-RO
 {
-  "navItems": [
-    {"id": "search", "label": "Căutare", "icon": "add_chart"},
-    {"id": "report", "label": "Raport", "icon": "feed"},
-    {"id": "info", "label": "Informații", "icon": "info_outline"},
-    {"id": "settings", "label": "Setări", "icon": "settings"}
-  ],
-  "title": "Cufăr digital"
+  "resultTitle": "Cufărul digital conține acum următoarele numere:",
+  "noResultsTitle": "Nu există articole în cufărul dvs. încă.",
+  "clearButtonTitle": "Goliți cufărul"
 }
 ru-RU
 {
-  "navItems": [
-    {"id": "search", "label": "Поиск", "icon": "add_chart"},
-    {"id": "report", "label": "Отчет", "icon": "feed"},
-    {"id": "info", "label": "Информация", "icon": "info_outline"},
-    {"id": "settings", "label": "Настройки", "icon": "settings"}
-  ],
-  "title": "Цифровой сундук"
+  "resultTitle": "Ваш цифровой сундук теперь содержит следующие числа:",
+  "noResultsTitle": "В вашем сундуке еще нет предметов.",
+  "clearButtonTitle": "Очистить сундук"
 }
 sr-RS
 {
-  "navItems": [
-    {"id": "search", "label": "Претрага", "icon": "add_chart"},
-    {"id": "report", "label": "Извештај", "icon": "feed"},
-    {"id": "info", "label": "Информације", "icon": "info_outline"},
-    {"id": "settings", "label": "Подешавања", "icon": "settings"}
-  ],
-  "title": "Дигитално благо"
+  "resultTitle": "Ваша дигитална благо сада садржи следеће бројеве:",
+  "noResultsTitle": "Још нема ставки у вашем сандуку.",
+  "clearButtonTitle": "Очисти сандук"
 }
 sk-SK
 {
-  "navItems": [
-    {"id": "search", "label": "Hľadať", "icon": "add_chart"},
-    {"id": "report", "label": "Správa", "icon": "feed"},
-    {"id": "info", "label": "Informácie", "icon": "info_outline"},
-    {"id": "settings", "label": "Nastavenia", "icon": "settings"}
-  ],
-  "title": "Digitálna pokladnica"
+  "resultTitle": "Vaša digitálna pokladnica teraz obsahuje nasledujúce čísla:",
+  "noResultsTitle": "Ešte nemáte žiadne položky v truhlici.",
+  "clearButtonTitle": "Vyprázdniť truhlu"
 }
 sl-SI
 {
-  "navItems": [
-    {"id": "search", "label": "Iskanje", "icon": "add_chart"},
-    {"id": "report", "label": "Poročilo", "icon": "feed"},
-    {"id": "info", "label": "Informacije", "icon": "info_outline"},
-    {"id": "settings", "label": "Nastavitve", "icon": "settings"}
-  ],
-  "title": "Digitalna skrinja z zakladi"
+  "resultTitle": "Vaša digitalna skrinja z zakladi zdaj vsebuje naslednje številke:",
+  "noResultsTitle": "V vaši skrinji še ni predmetov.",
+  "clearButtonTitle": "Izpraznite skrinjo"
 }
 es-ES
 {
-  "navItems": [
-    {"id": "search", "label": "Buscar", "icon": "add_chart"},
-    {"id": "report", "label": "Informe", "icon": "feed"},
-    {"id": "info", "label": "Info", "icon": "info_outline"},
-    {"id": "settings", "label": "Configuración", "icon": "settings"}
-  ],
-  "title": "Cofre del tesoro digital"
+  "resultTitle": "Tu cofre del tesoro digital ahora contiene los siguientes números:",
+  "noResultsTitle": "Aún no hay elementos en tu cofre.",
+  "clearButtonTitle": "Vaciar el cofre"
 }
 sv-SE
 {
-  "navItems": [
-    {"id": "search", "label": "Sök", "icon": "add_chart"},
-    {"id": "report", "label": "Rapport", "icon": "feed"},
-    {"id": "info", "label": "Info", "icon": "info_outline"},
-    {"id": "settings", "label": "Inställningar", "icon": "settings"}
-  ],
-  "title": "Digital skattkista"
+  "resultTitle": "Din digitala skattkista innehåller nu följande nummer:",
+  "noResultsTitle": "Inga föremål i din kista än.",
+  "clearButtonTitle": "Töm kistan"
 }
 th-TH
 {
-  "navItems": [
-    {"id": "search", "label": "ค้นหา", "icon": "add_chart"},
-    {"id": "report", "label": "รายงาน", "icon": "feed"},
-    {"id": "info", "label": "ข้อมูล", "icon": "info_outline"},
-    {"id": "settings", "label": "การตั้งค่า", "icon": "settings"}
-  ],
-  "title": "หีบสมบัติดิจิทัล"
+  "resultTitle": "หีบสมบัติดิจิทัลของคุณตอนนี้มีตัวเลขต่อไปนี้:",
+  "noResultsTitle": "ยังไม่มีรายการในหีบของคุณ",
+  "clearButtonTitle": "ล้างหีบ"
 }
 tr-TR
 {
-  "navItems": [
-    {"id": "search", "label": "Arama", "icon": "add_chart"},
-    {"id": "report", "label": "Rapor", "icon": "feed"},
-    {"id": "info", "label": "Bilgi", "icon": "info_outline"},
-    {"id": "settings", "label": "Ayarlar", "icon": "settings"}
-  ],
-  "title": "Dijital hazine sandığı"
+  "resultTitle": "Dijital hazine sandığınız şimdi aşağıdaki sayıları içeriyor:",
+  "noResultsTitle": "Henüz sandığınızda öğe yok.",
+  "clearButtonTitle": "Sandığı Temizle"
 }
 uk-UA
 {
-  "navItems": [
-    {"id": "search", "label": "Пошук", "icon": "add_chart"},
-    {"id": "report", "label": "Звіт", "icon": "feed"},
-    {"id": "info", "label": "Інформація", "icon": "info_outline"},
-    {"id": "settings", "label": "Налаштування", "icon": "settings"}
-  ],
-  "title": "Цифрова скарбниця"
+  "resultTitle": "Ваша цифрова скарбниця тепер містить такі номери:",
+  "noResultsTitle": "У вашій скрині ще немає предметів.",
+  "clearButtonTitle": "Очистити скриню"
 }
 vi-VN
 {
-  "navItems": [
-    {"id": "search", "label": "Tìm kiếm", "icon": "add_chart"},
-    {"id": "report", "label": "Báo cáo", "icon": "feed"},
-    {"id": "info", "label": "Thông tin", "icon": "info_outline"},
-    {"id": "settings", "label": "Cài đặt", "icon": "settings"}
-  ],
-  "title": "Rương kho báu kỹ thuật số"
+  "resultTitle": "Rương kho báu kỹ thuật số của bạn hiện chứa các số sau:",
+  "noResultsTitle": "Chưa có mục nào trong rương của bạn.",
+  "clearButtonTitle": "Xóa rương"
 }
