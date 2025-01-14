@@ -26,7 +26,7 @@ export class ChetContentViewComponent implements ILocalizationClient<IChetViewUI
 
   constructor() { 
 
-      this.localizer = LocalizerFactory.createLocalizer<IChetViewUI>("assets/languages/core/components/search/chest-content-view/lang", 1, this.ui, this);
+    this.localizer = LocalizerFactory.createLocalizer<IChetViewUI>("assets/languages/core/components/search/chest-content-view/lang", 1, this.ui, this);
 
     Chest.chestChanged$.subscribe((items: number[]) => {
       this.listNumbersInTreasure = items;

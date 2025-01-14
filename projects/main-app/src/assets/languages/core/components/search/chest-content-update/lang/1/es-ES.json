@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Busca nuevos números para tu Cofre del Tesoro Digital",
+  "introduction": "Por favor, selecciona criterios para buscar tus números enteros positivos favoritos (denotados a continuación como X)",
+  "errorTextMessage": "Los valores mínimos y máximos deben ser enteros entre 0 y 1000, inclusive. El valor mínimo debe ser menor o igual al valor máximo.",
+  "termExplanation": "¿Qué significan estos términos?"
+}

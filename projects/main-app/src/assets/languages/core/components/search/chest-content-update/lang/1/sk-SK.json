@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Hľadať nové čísla pre vašu Digitálnu pokladnicu",
+  "introduction": "Prosím, vyberte kritériá pre vyhľadávanie vašich obľúbených kladných celých čísel (označených nižšie ako X)",
+  "errorTextMessage": "Minimálne a maximálne hodnoty musia byť celé čísla medzi 0 a 1000 vrátane. Minimálna hodnota musí byť menšia alebo rovná maximálnej hodnote.",
+  "termExplanation": "Čo znamenajú tieto termíny?"
+}

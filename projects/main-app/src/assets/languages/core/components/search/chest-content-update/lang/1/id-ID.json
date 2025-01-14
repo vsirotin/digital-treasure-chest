@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Cari angka baru untuk Petih Digital Anda",
+  "introduction": "Silakan pilih kriteria untuk mencari angka bulat positif favorit Anda (disebutkan di bawah sebagai X)",
+  "errorTextMessage": "Nilai minimum dan maksimum harus berupa bilangan bulat antara 0 dan 1000, termasuk. Nilai minimum harus kurang dari atau sama dengan nilai maksimum.",
+  "termExplanation": "Apa arti istilah-istilah ini?"
+}

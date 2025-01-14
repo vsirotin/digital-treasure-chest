@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Zoek nieuwe nummers voor je digitale schatkist",
+  "introduction": "Selecteer alstublieft criteria voor het zoeken naar je favoriete positieve gehele getallen (hieronder aangeduid als X)",
+  "errorTextMessage": "Minimum- en maximumwaarden moeten gehele getallen zijn tussen 0 en 1000, inclusief. De minimumwaarde moet kleiner zijn dan of gelijk aan de maximumwaarde.",
+  "termExplanation": "Wat betekenen deze termen?"
+}

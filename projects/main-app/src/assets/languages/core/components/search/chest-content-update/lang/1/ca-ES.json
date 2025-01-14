@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Cerca de nous números per al teu tresor digital",
+  "introduction": "Si us plau, selecciona un criteris per buscar els teus números enters positius favorits (denotats a continuació com X)",
+  "errorTextMessage": "Els valors mínims i màxims han de ser nombres enters entre 0 i 1000, inclusius. El valor mínim ha de ser menor o igual al valor màxim.",
+  "termExplanation": "Què signifiquen aquests termes?"
+}

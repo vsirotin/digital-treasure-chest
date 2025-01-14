@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Søg nye numre til din digitale skattekiste",
+  "introduction": "Vælg venligst kriterier for at søge dine yndlings positive heltal (angivet nedenfor som X)",
+  "errorTextMessage": "Minimums- og maksimumsværdierne skal være heltal mellem 0 og 1000, inklusive. Minimumsværdien skal være mindre end eller lig med maksimumsværdien.",
+  "termExplanation": "Hvad betyder disse termer?"
+}

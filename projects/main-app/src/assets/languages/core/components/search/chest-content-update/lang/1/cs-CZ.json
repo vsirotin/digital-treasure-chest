@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Hledejte nové čísla pro vaši digitální truhlu pokladů",
+  "introduction": "Prosím, vyberte kritéria pro vyhledávání vašich oblíbených kladných celých čísel (označených níže jako X)",
+  "errorTextMessage": "Minimální a maximální hodnoty musí být celá čísla mezi 0 a 1000 včetně. Minimální hodnota musí být menší nebo rovna maximální hodnotě.",
+  "termExplanation": "Co znamenají tyto termíny?"
+}

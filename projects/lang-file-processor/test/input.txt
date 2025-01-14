@@ -1,240 +1,282 @@
 ar-SA
 {
-  "resultTitle": "كنزك الرقمي يحتوي الآن على الأرقام التالية:",
-  "noResultsTitle": "لا توجد عناصر في صندوقك حتى الآن.",
-  "clearButtonTitle": "إفراغ الصندوق"
+  "searchTitle": "ابحث عن أرقام جديدة لصدرك الرقمي",
+  "introduction": "يرجى اختيار المعايير للبحث عن أرقامك الصحيحة المفضلة (يشار إليها أدناه بـ X)",
+  "errorTextMessage": "يجب أن تكون القيم الدنيا والقصوى أعدادًا صحيحة بين 0 و 1000، بما في ذلك. يجب أن تكون القيمة الدنيا أقل من أو تساوي القيمة القصوى.",
+  "termExplanation": "ماذا تعني هذه المصطلحات؟"
 }
 bn-BD
 {
-  "resultTitle": "আপনার ডিজিটাল ধন এখন নিম্নলিখিত সংখ্যা ধারণ করে:",
-  "noResultsTitle": "আপনার চেস্টে এখনও কোন আইটেম নেই।",
-  "clearButtonTitle": "চেস্ট পরিষ্কার করুন"
+  "searchTitle": "আপনার ডিজিটাল ধনের জন্য নতুন নম্বরগুলি অনুসন্ধান করুন",
+  "introduction": "আপনার প্রিয় ধনাত্মক পূর্ণসংখ্যার সংখ্যা খুঁজতে মানদণ্ড নির্বাচন করুন (নিচে X হিসাবে উল্লেখ করা হয়েছে)",
+  "errorTextMessage": "ন্যূনতম এবং সর্বাধিক মান অবশ্যই 0 এবং 1000 এর মধ্যে পূর্ণসংখ্যা হতে হবে, অন্তর্ভুক্ত। সর্বনিম্ন মান সর্বাধিক মানের চেয়ে কম বা সমান হতে হবে।",
+  "termExplanation": "এই শর্তগুলি কী বোঝায়?"
 }
 bg-BG
 {
-  "resultTitle": "Вашето цифрово съкровище сега съдържа следните числа:",
-  "noResultsTitle": "Все още няма елементи в сандъка ви.",
-  "clearButtonTitle": "Изчисти сандъка"
+  "searchTitle": "Търсене на нови числа за вашето дигитално съкровище",
+  "introduction": "Моля, изберете критерии за търсене на любимите ви положителни цели числа (обозначени по-долу като X)",
+  "errorTextMessage": "Минималните и максималните стойности трябва да са цели числа между 0 и 1000 включително. Минималната стойност трябва да бъде по-малка или равна на максималната стойност.",
+  "termExplanation": "Какво означават тези термини?"
 }
 ca-ES
 {
-  "resultTitle": "El teu tresor digital ara conté els següents números:",
-  "noResultsTitle": "Encara no hi ha articles al teu cofre.",
-  "clearButtonTitle": "Buida el cofre"
+  "searchTitle": "Cerca de nous números per al teu tresor digital",
+  "introduction": "Si us plau, selecciona un criteris per buscar els teus números enters positius favorits (denotats a continuació com X)",
+  "errorTextMessage": "Els valors mínims i màxims han de ser nombres enters entre 0 i 1000, inclusius. El valor mínim ha de ser menor o igual al valor màxim.",
+  "termExplanation": "Què signifiquen aquests termes?"
 }
 zh-CN
 {
-  "resultTitle": "您的数字宝箱现在包含以下数字：",
-  "noResultsTitle": "您的箱子中还没有项目。",
-  "clearButtonTitle": "清空箱子"
+  "searchTitle": "为您的数字宝藏箱搜索新数字",
+  "introduction": "请选择搜索您喜欢的正整数（以下称为X）的标准",
+  "errorTextMessage": "最小值和最大值必须是0到1000之间的整数，包括。 最小值必须小于或等于最大值。",
+  "termExplanation": "这些术语是什么意思？"
 }
 hr-HR
 {
-  "resultTitle": "Vaša digitalna blaga sada sadrže sljedeće brojeve:",
-  "noResultsTitle": "Još nema stavki u vašoj škrinji.",
-  "clearButtonTitle": "Očistite škrinju"
+  "searchTitle": "Pretraži nove brojeve za svoju digitalnu blagu",
+  "introduction": "Molimo odaberite kriterije za pretragu vaših omiljenih pozitivnih cijelih brojeva (označenih ispod kao X)",
+  "errorTextMessage": "Minimalne i maksimalne vrijednosti moraju biti cijeli brojevi između 0 i 1000, uključivo. Minimalna vrijednost mora biti manja ili jednaka maksimalnoj vrijednosti.",
+  "termExplanation": "Što znače ovi pojmovi?"
 }
 cs-CZ
 {
-  "resultTitle": "Vaše digitální poklady nyní obsahují následující čísla:",
-  "noResultsTitle": "Ve vaší truhle ještě nejsou žádné položky.",
-  "clearButtonTitle": "Vyprázdnit truhlu"
+  "searchTitle": "Hledejte nové čísla pro vaši digitální truhlu pokladů",
+  "introduction": "Prosím, vyberte kritéria pro vyhledávání vašich oblíbených kladných celých čísel (označených níže jako X)",
+  "errorTextMessage": "Minimální a maximální hodnoty musí být celá čísla mezi 0 a 1000 včetně. Minimální hodnota musí být menší nebo rovna maximální hodnotě.",
+  "termExplanation": "Co znamenají tyto termíny?"
 }
 da-DK
 {
-  "resultTitle": "Din digitale skattekiste indeholder nu følgende tal:",
-  "noResultsTitle": "Der er endnu ingen genstande i din kiste.",
-  "clearButtonTitle": "Ryd kisten"
+  "searchTitle": "Søg nye numre til din digitale skattekiste",
+  "introduction": "Vælg venligst kriterier for at søge dine yndlings positive heltal (angivet nedenfor som X)",
+  "errorTextMessage": "Minimums- og maksimumsværdierne skal være heltal mellem 0 og 1000, inklusive. Minimumsværdien skal være mindre end eller lig med maksimumsværdien.",
+  "termExplanation": "Hvad betyder disse termer?"
 }
 nl-NL
 {
-  "resultTitle": "Uw digitale schatkist bevat nu de volgende nummers:",
-  "noResultsTitle": "Er zijn nog geen items in je kist.",
-  "clearButtonTitle": "Maak de kist leeg"
+  "searchTitle": "Zoek nieuwe nummers voor je digitale schatkist",
+  "introduction": "Selecteer alstublieft criteria voor het zoeken naar je favoriete positieve gehele getallen (hieronder aangeduid als X)",
+  "errorTextMessage": "Minimum- en maximumwaarden moeten gehele getallen zijn tussen 0 en 1000, inclusief. De minimumwaarde moet kleiner zijn dan of gelijk aan de maximumwaarde.",
+  "termExplanation": "Wat betekenen deze termen?"
 }
 en-US
 {
-  "resultTitle": "Your Digital Treasure Chest contain now the following numbers:",
-  "noResultsTitle": "No items in your chest yet.",
-  "clearButtonTitle": "Clear the chest"
+  "searchTitle": "Search new numbers for your Digital Treasure Chest",
+  "introduction": "Please select a criteria for searching your favorite positive integer numbers (denoted below as X)",
+  "errorTextMessage": "Minimum and maximum values must be integers between 0 and 1000, inclusive. Minimum value must be less than or equal to maximum value.",
+  "termExplanation": "What do these terms mean?"
 }
 et-EE
 {
-  "resultTitle": "Teie digitaalne aardelaegas sisaldab nüüd järgmisi numbreid:",
-  "noResultsTitle": "Teie kirstus pole veel ühtegi eset.",
-  "clearButtonTitle": "Tühjenda kirst"
+  "searchTitle": "Otsige oma digitaalse aardelaeka jaoks uusi numbreid",
+  "introduction": "Valige palun kriteeriumid oma lemmik positiivsete täisarvude otsimiseks (mida allpool tähistatakse tähega X)",
+  "errorTextMessage": "Minimaal- ja maksimaalväärtused peavad olema vahemikus 0 kuni 1000, kaasa arvatud. Minimaalväärtus peab olema väiksem või võrdne maksimaalväärtusega.",
+  "termExplanation": "Mida need terminid tähendavad?"
 }
 fi-FI
 {
-  "resultTitle": "Digitaalinen aarrearkkusi sisältää nyt seuraavat numerot:",
-  "noResultsTitle": "Arkussasi ei ole vielä yhtään kohdetta.",
-  "clearButtonTitle": "Tyhjennä arkku"
+  "searchTitle": "Etsi uusia numeroita digitaaliseen aarrearkkuusi",
+  "introduction": "Valitse kriteerit etsiäksesi suosikki positiivisia kokonaislukuja (merkitty alla X)",
+  "errorTextMessage": "Pienimpien ja suurimpien arvojen on oltava kokonaislukuja välillä 0–1000. Pienin arvo on oltava pienempi tai sama kuin suurin arvo.",
+  "termExplanation": "Mitä nämä termit tarkoittavat?"
 }
 fr-FR
 {
-  "resultTitle": "Votre coffre aux trésors numérique contient maintenant les numéros suivants :",
-  "noResultsTitle": "Aucun article dans votre coffre pour l'instant.",
-  "clearButtonTitle": "Vider le coffre"
+  "searchTitle": "Rechercher de nouveaux numéros pour votre coffre aux trésors numérique",
+  "introduction": "Veuillez sélectionner des critères pour rechercher vos numéros entiers positifs préférés (indiqués ci-dessous comme X)",
+  "errorTextMessage": "Les valeurs minimales et maximales doivent être des entiers entre 0 et 1000, inclus. La valeur minimale doit être inférieure ou égale à la valeur maximale.",
+  "termExplanation": "Que signifient ces termes?"
 }
 de-DE
 {
-  "resultTitle": "Ihre digitale Schatzkiste enthält jetzt die folgenden Zahlen:",
-  "noResultsTitle": "Noch keine Gegenstände in Ihrer Truhe.",
-  "clearButtonTitle": "Truhe leeren"
+  "searchTitle": "Suchen Sie neue Nummern für Ihre digitale Schatzkiste",
+  "introduction": "Bitte wählen Sie Kriterien für die Suche nach Ihren bevorzugten positiven ganzen Zahlen (unten als X bezeichnet)",
+  "errorTextMessage": "Minimale und maximale Werte müssen ganze Zahlen zwischen 0 und 1000 sein, einschließlich. Der Mindestwert muss kleiner oder gleich dem Höchstwert sein.",
+  "termExplanation": "Was bedeuten diese Begriffe?"
 }
 el-GR
 {
-  "resultTitle": "Το ψηφιακό θησαυροφυλάκιό σας περιέχει τώρα τους ακόλουθους αριθμούς:",
-  "noResultsTitle": "Δεν υπάρχουν αντικείμενα στο στήθος σας ακόμα.",
-  "clearButtonTitle": "Άδεια στο στήθος"
+  "searchTitle": "Αναζητήστε νέους αριθμούς για το Ψηφιακό σας θησαυρό",
+  "introduction": "Επιλέξτε κριτήρια για να αναζητήσετε τους αγαπημένους σας θετικούς ακέραιους αριθμούς (σημειώνονται παρακάτω ως X)",
+  "errorTextMessage": "Οι ελάχιστες και μέγιστες τιμές πρέπει να είναι ακέραιοι αριθμοί μεταξύ 0 και 1000, συμπεριλαμβανομένων. Η ελάχιστη τιμή πρέπει να είναι μικρότερη ή ίση με τη μέγιστη τιμή.",
+  "termExplanation": "Τι σημαίνουν αυτοί οι όροι;"
 }
 he-IL
 {
-  "resultTitle": "אוצר דיגיטלי שלך מכיל כעת את המספרים הבאים:",
-  "noResultsTitle": "אין פריטים בארון שלך עדיין.",
-  "clearButtonTitle": "נקה את הארון"
+  "searchTitle": "חפש מספרים חדשים לאוצר הדיגיטלי שלך",
+  "introduction": "בחר בבקשה קריטריונים לחיפוש המספרים החיוביים השלמים המועדפים עליך (מצוינים למטה כ- X)",
+  "errorTextMessage": "ערכים מינימליים ומקסימליים חייבים להיות מספרים שלמים בין 0 ל- 1000, כולל. הערך המינימלי חייב להיות קטן או שווה לערך המקסימלי.",
+  "termExplanation": "מה המשמעות של המונחים האלה?"
 }
 hu-HU
 {
-  "resultTitle": "A digitális kincsesládád most a következő számokat tartalmazza:",
-  "noResultsTitle": "Még nincsenek elemek a ládádban.",
-  "clearButtonTitle": "Üríteni a ládát"
+  "searchTitle": "Keressen új számokat a digitális kincsesládájához",
+  "introduction": "Kérjük, válasszon kritériumokat kedvenc pozitív egész számok kereséséhez (alább X-ként jelölve)",
+  "errorTextMessage": "A minimum és maximum értékeknek 0 és 1000 közötti egész számoknak kell lenniük, beleértve. A minimum értéknek kisebbnek vagy egyenlőnek kell lennie a maximum értékkel.",
+  "termExplanation": "Mit jelentenek ezek a kifejezések?"
 }
 id-ID
 {
-  "resultTitle": "Petih digital Anda sekarang berisi angka-angka berikut:",
-  "noResultsTitle": "Belum ada item di peti Anda.",
-  "clearButtonTitle": "Bersihkan peti"
+  "searchTitle": "Cari angka baru untuk Petih Digital Anda",
+  "introduction": "Silakan pilih kriteria untuk mencari angka bulat positif favorit Anda (disebutkan di bawah sebagai X)",
+  "errorTextMessage": "Nilai minimum dan maksimum harus berupa bilangan bulat antara 0 dan 1000, termasuk. Nilai minimum harus kurang dari atau sama dengan nilai maksimum.",
+  "termExplanation": "Apa arti istilah-istilah ini?"
 }
 it-IT
 {
-  "resultTitle": "Il tuo Scrigno digitale contiene ora i seguenti numeri:",
-  "noResultsTitle": "Ancora nessun elemento nel tuo scrigno.",
-  "clearButtonTitle": "Svuota lo scrigno"
+  "searchTitle": "Cerca nuovi numeri per il tuo Scrigno Digitale",
+  "introduction": "Seleziona i criteri per cercare i tuoi numeri interi positivi preferiti (denotati sotto come X)",
+  "errorTextMessage": "I valori minimi e massimi devono essere numeri interi tra 0 e 1000, inclusi. Il valore minimo deve essere minore o uguale al valore massimo.",
+  "termExplanation": "Cosa significano questi termini?"
 }
 ja-JP
 {
-  "resultTitle": "あなたのデジタル宝箱には現在以下の番号が含まれています：",
-  "noResultsTitle": "あなたの宝箱にはまだアイテムがありません。",
-  "clearButtonTitle": "宝箱をクリアする"
+  "searchTitle": "あなたのデジタル宝箱に新しい数字を検索",
+  "introduction": "あなたの好きな正の整数を検索するための基準を選択してください（以下Xと表記）",
+  "errorTextMessage": "最小値および最大値は0から1000までの整数でなければなりません。最小値は最大値以下である必要があります。",
+  "termExplanation": "これらの用語はどういう意味ですか？"
 }
 ko-KR
 {
-  "resultTitle": "당신의 디지털 보물 상자에는 이제 다음 숫자가 포함되어 있습니다:",
-  "noResultsTitle": "상자에 아직 항목이 없습니다.",
-  "clearButtonTitle": "상자를 비우다"
+  "searchTitle": "디지털 보물 상자에 새로운 숫자 검색",
+  "introduction": "좋아하는 양의 정수를 검색하기 위한 기준을 선택하세요 (아래에서 X로 표시)",
+  "errorTextMessage": "최소값 및 최대값은 0에서 1000 사이의 정수여야 합니다. 최소값은 최대값보다 작거나 같아야 합니다.",
+  "termExplanation": "이 용어들은 무엇을 의미합니까?"
 }
 lv-LV
 {
-  "resultTitle": "Jūsu digitālā dārgumu lāde tagad satur šādus numurus:",
-  "noResultsTitle": "Jūsu lāde vēl nav priekšmetu.",
-  "clearButtonTitle": "Notīrīt lādi"
+  "searchTitle": "Meklējiet jaunus numurus savai Digitālajai dārgumu lādei",
+  "introduction": "Lūdzu, izvēlieties kritērijus, lai meklētu savus iecienītākos pozitīvos veselus skaitļus (atzīmēti zemāk kā X)",
+  "errorTextMessage": "Minimālajām un maksimālajām vērtībām jābūt veseliem skaitļiem no 0 līdz 1000, ieskaitot. Minimālajai vērtībai jābūt mazākai vai vienādai ar maksimālo vērtību.",
+  "termExplanation": "Ko nozīmē šie termini?"
 }
 lt-LT
 {
-  "resultTitle": "Jūsų skaitmeninė lobis dabar turi šiuos numerius:",
-  "noResultsTitle": "Jūsų krūtinėje dar nėra daiktų.",
-  "clearButtonTitle": "Išvalyti krūtinę"
+  "searchTitle": "Ieškokite naujų skaičių savo skaitmeninei lobiui",
+  "introduction": "Pasirinkite kriterijus, kad ieškotumėte mėgstamiausių teigiamų sveikųjų skaičių (pažymėtų žemiau kaip X)",
+  "errorTextMessage": "Mažiausios ir didžiausios vertės turi būti sveikieji skaičiai nuo 0 iki 1000, įskaitant. Mažiausia vertė turi būti mažesnė arba lygi didžiausiajai vertei.",
+  "termExplanation": "Ką reiškia šie terminai?"
 }
 no-NO
 {
-  "resultTitle": "Din digitale skattejakt inneholder nå følgende tall:",
-  "noResultsTitle": "Ingen gjenstander i kisten ennå.",
-  "clearButtonTitle": "Tøm kisten"
+  "searchTitle": "Søk etter nye tall for din Digitale Skattkiste",
+  "introduction": "Velg kriterier for å søke etter dine favoritt positive heltall (angitt nedenfor som X)",
+  "errorTextMessage": "Minimums- og maksimumsverdiene må være heltall mellom 0 og 1000, inkludert. Minimumsverdien må være mindre enn eller lik maksimumsverdien.",
+  "termExplanation": "Hva betyr disse termene?"
 }
 nb-NO
 {
-  "resultTitle": "Din digitale skattejakt inneholder nå følgende tall:",
-  "noResultsTitle": "Ingen gjenstander i kisten ennå.",
-  "clearButtonTitle": "Tøm kisten"
+  "searchTitle": "Søk etter nye tall for din Digitale Skattkiste",
+  "introduction": "Velg kriterier for å søke etter dine favoritt positive heltall (angitt nedenfor som X)",
+  "errorTextMessage": "Minimums- og maksimumsverdiene må være heltall mellom 0 og 1000, inkludert. Minimumsverdien må være mindre enn eller lik maksimumsverdien.",
+  "termExplanation": "Hva betyr disse termene?"
 }
 fa-IR
 {
-  "resultTitle": "صندوق گنج دیجیتال شما اکنون حاوی اعداد زیر است:",
-  "noResultsTitle": "هنوز هیچ موردی در صندوق شما وجود ندارد.",
-  "clearButtonTitle": "صندوق را خالی کنید"
+  "searchTitle": "جستجوی اعداد جدید برای صندوق گنج دیجیتال شما",
+  "introduction": "لطفاً معیارهایی را برای جستجوی اعداد صحیح مثبت مورد علاقه خود انتخاب کنید (در زیر به عنوان X ذکر شده است)",
+  "errorTextMessage": "حداقل و حداکثر مقادیر باید اعداد صحیح بین 0 و 1000 باشند. مقدار حداقل باید کمتر یا مساوی مقدار حداکثر باشد.",
+  "termExplanation": "این اصطلاحات به چه معنا هستند؟"
 }
 pl-PL
 {
-  "resultTitle": "Twoja cyfrowa skrzynia skarbów zawiera teraz następujące liczby:",
-  "noResultsTitle": "W twojej skrzyni nie ma jeszcze żadnych przedmiotów.",
-  "clearButtonTitle": "Wyczyść skrzynię"
+  "searchTitle": "Szukaj nowych liczb do swojej Cyfrowej Skrzyni Skarbów",
+  "introduction": "Wybierz kryteria wyszukiwania swoich ulubionych dodatnich liczb całkowitych (oznaczonych poniżej jako X)",
+  "errorTextMessage": "Wartości minimalne i maksymalne muszą być liczbami całkowitymi w zakresie od 0 do 1000, włącznie. Wartość minimalna musi być mniejsza lub równa wartości maksymalnej.",
+  "termExplanation": "Co oznaczają te terminy?"
 }
 pt-PT
 {
-  "resultTitle": "Seu cofre digital agora contém os seguintes números:",
-  "noResultsTitle": "Ainda não há itens no seu cofre.",
-  "clearButtonTitle": "Limpar o cofre"
+  "searchTitle": "Pesquise novos números para o seu Cofre Digital",
+  "introduction": "Por favor, selecione um critério para pesquisar seus números inteiros positivos favoritos (denotados abaixo como X)",
+  "errorTextMessage": "Os valores mínimo e máximo devem ser inteiros entre 0 e 1000, inclusive. O valor mínimo deve ser menor ou igual ao valor máximo.",
+  "termExplanation": "O que significam esses termos?"
 }
 pa-IN
 {
-  "resultTitle": "ਤੁਹਾਡੀ ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨੇ ਦੀ ਸੰਦਰਫਿਲਡਿੰਗ ਹੁਣ ਹੇਠ ਲਿਖੇ ਨੰਬਰਾਂ ਨੂੰ ਧਾਰਨ ਕਰਦੀ ਹੈ:",
-  "noResultsTitle": "ਤੁਹਾਡੇ ਛੇਤ ਵਿੱਚ ਅਜੇ ਤਕ ਕੋਈ ਆਈਟਮ ਨਹੀਂ ਹਨ।",
-  "clearButtonTitle": "ਛੇਤ ਨੂੰ ਸਾਫ ਕਰੋ"
+  "searchTitle": "ਆਪਣੇ ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨੇ ਲਈ ਨੰਬਰ ਖੋਜੋ",
+  "introduction": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਮਨਪਸੰਦ ਧਨਾਤਮਕ ਪੂਰਨ ਅੰਕਾਂ ਦੀ ਖੋਜ ਕਰਨ ਲਈ ਮਾਪਦੰਡ ਚੁਣੋ (ਹੇਠਾਂ X ਵਜੋਂ ਦਰਸਾਇਆ ਗਿਆ)",
+  "errorTextMessage": "ਘੱਟੋ-ਘੱਟ ਅਤੇ ਵੱਧ ਤੋਂ ਵੱਧ ਮੁੱਲ 0 ਅਤੇ 1000 ਦੇ ਵਿਚਕਾਰ ਪੂਰਨ ਅੰਕ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ। ਘੱਟੋ-ਘੱਟ ਮੁੱਲ ਵੱਧ ਤੋਂ ਵੱਧ ਮੁੱਲ ਤੋਂ ਘਟ ਜਾਂ ਬਰਾਬਰ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।",
+  "termExplanation": "ਇਹ ਸ਼ਬਦ ਕੀ ਮਤਲਬ ਹੈ?"
 }
 ro-RO
 {
-  "resultTitle": "Cufărul digital conține acum următoarele numere:",
-  "noResultsTitle": "Nu există articole în cufărul dvs. încă.",
-  "clearButtonTitle": "Goliți cufărul"
+  "searchTitle": "Căutați numere noi pentru Cufărul vostru Digital",
+  "introduction": "Vă rugăm să selectați criterii pentru a căuta numerele voastre întregi pozitive preferate (denotate mai jos ca X)",
+  "errorTextMessage": "Valorile minime și maxime trebuie să fie numere întregi între 0 și 1000, inclusiv. Valoarea minimă trebuie să fie mai mică sau egală cu valoarea maximă.",
+  "termExplanation": "Ce înseamnă acești termeni?"
 }
 ru-RU
 {
-  "resultTitle": "Ваш цифровой сундук теперь содержит следующие числа:",
-  "noResultsTitle": "В вашем сундуке еще нет предметов.",
-  "clearButtonTitle": "Очистить сундук"
+  "searchTitle": "Поиск новых чисел для вашего Цифрового сундука",
+  "introduction": "Пожалуйста, выберите критерии для поиска ваших любимых положительных целых чисел (обозначенных ниже как X)",
+  "errorTextMessage": "Минимальные и максимальные значения должны быть целыми числами от 0 до 1000 включительно. Минимальное значение должно быть меньше или равно максимальному значению.",
+  "termExplanation": "Что означают эти термины?"
 }
 sr-RS
 {
-  "resultTitle": "Ваша дигитална благо сада садржи следеће бројеве:",
-  "noResultsTitle": "Још нема ставки у вашем сандуку.",
-  "clearButtonTitle": "Очисти сандук"
+  "searchTitle": "Претражите нове бројеве за ваше Дигитално Благо",
+  "introduction": "Молимо одаберите критеријуме за претрагу ваших омиљених позитивних целих бројева (означених испод као X)",
+  "errorTextMessage": "Минималне и максималне вредности морају бити цели бројеви између 0 и 1000, укључујући. Минимална вредност мора бити мања или једнака максималној вредности.",
+  "termExplanation": "Шта значе ови термини?"
 }
 sk-SK
 {
-  "resultTitle": "Vaša digitálna pokladnica teraz obsahuje nasledujúce čísla:",
-  "noResultsTitle": "Ešte nemáte žiadne položky v truhlici.",
-  "clearButtonTitle": "Vyprázdniť truhlu"
+  "searchTitle": "Hľadať nové čísla pre vašu Digitálnu pokladnicu",
+  "introduction": "Prosím, vyberte kritériá pre vyhľadávanie vašich obľúbených kladných celých čísel (označených nižšie ako X)",
+  "errorTextMessage": "Minimálne a maximálne hodnoty musia byť celé čísla medzi 0 a 1000 vrátane. Minimálna hodnota musí byť menšia alebo rovná maximálnej hodnote.",
+  "termExplanation": "Čo znamenajú tieto termíny?"
 }
 sl-SI
 {
-  "resultTitle": "Vaša digitalna skrinja z zakladi zdaj vsebuje naslednje številke:",
-  "noResultsTitle": "V vaši skrinji še ni predmetov.",
-  "clearButtonTitle": "Izpraznite skrinjo"
+  "searchTitle": "Poiščite nove številke za vašo Digitalno skrinjo z zakladi",
+  "introduction": "Prosimo, izberite kriterije za iskanje vaših priljubljenih pozitivnih celih števil (označenih spodaj kot X)",
+  "errorTextMessage": "Najmanjše in največje vrednosti morajo biti cela števila med 0 in 1000, vključno. Najmanjša vrednost mora biti manjša ali enaka največji vrednosti.",
+  "termExplanation": "Kaj pomenijo ti izrazi?"
 }
 es-ES
 {
-  "resultTitle": "Tu cofre del tesoro digital ahora contiene los siguientes números:",
-  "noResultsTitle": "Aún no hay elementos en tu cofre.",
-  "clearButtonTitle": "Vaciar el cofre"
+  "searchTitle": "Busca nuevos números para tu Cofre del Tesoro Digital",
+  "introduction": "Por favor, selecciona criterios para buscar tus números enteros positivos favoritos (denotados a continuación como X)",
+  "errorTextMessage": "Los valores mínimos y máximos deben ser enteros entre 0 y 1000, inclusive. El valor mínimo debe ser menor o igual al valor máximo.",
+  "termExplanation": "¿Qué significan estos términos?"
 }
 sv-SE
 {
-  "resultTitle": "Din digitala skattkista innehåller nu följande nummer:",
-  "noResultsTitle": "Inga föremål i din kista än.",
-  "clearButtonTitle": "Töm kistan"
+  "searchTitle": "Sök nya nummer till din Digitala Skattkista",
+  "introduction": "Välj kriterier för att söka efter dina favoritpositiva heltal (betecknade nedan som X)",
+  "errorTextMessage": "Minsta och största värden måste vara heltal mellan 0 och 1000, inklusive. Minsta värdet måste vara mindre än eller lika med största värdet.",
+  "termExplanation": "Vad betyder dessa termer?"
 }
 th-TH
 {
-  "resultTitle": "หีบสมบัติดิจิทัลของคุณตอนนี้มีตัวเลขต่อไปนี้:",
-  "noResultsTitle": "ยังไม่มีรายการในหีบของคุณ",
-  "clearButtonTitle": "ล้างหีบ"
+  "searchTitle": "ค้นหาหมายเลขใหม่สำหรับหีบสมบัติดิจิทัลของคุณ",
+  "introduction": "โปรดเลือกเกณฑ์สำหรับการค้นหาจำนวนเต็มบวกที่คุณชื่นชอบ (ระบุไว้ด้านล่างเป็น X)",
+  "errorTextMessage": "ค่าต่ำสุดและค่าสูงสุดต้องเป็นจำนวนเต็มระหว่าง 0 ถึง 1000 รวมทั้งสิ้น ค่าต่ำสุดต้องน้อยกว่าหรือเท่ากับค่าสูงสุด",
+  "termExplanation": "ข้อกำหนดเหล่านี้หมายความว่าอย่างไร?"
 }
 tr-TR
 {
-  "resultTitle": "Dijital hazine sandığınız şimdi aşağıdaki sayıları içeriyor:",
-  "noResultsTitle": "Henüz sandığınızda öğe yok.",
-  "clearButtonTitle": "Sandığı Temizle"
+  "searchTitle": "Dijital Hazine Sandığınız için yeni numaralar arayın",
+  "introduction": "En sevdiğiniz pozitif tam sayı numaralarını aramak için lütfen kriterleri seçin (aşağıda X olarak belirtilmiştir)",
+  "errorTextMessage": "Minimum ve maksimum değerler 0 ile 1000 arasında tamsayılar olmalıdır. Minimum değer, maksimum değerden küçük veya ona eşit olmalıdır.",
+  "termExplanation": "Bu terimler ne anlama geliyor?"
 }
 uk-UA
 {
-  "resultTitle": "Ваша цифрова скарбниця тепер містить такі номери:",
-  "noResultsTitle": "У вашій скрині ще немає предметів.",
-  "clearButtonTitle": "Очистити скриню"
+  "searchTitle": "Шукайте нові номери для вашої Цифрової скарбниці",
+  "introduction": "Будь ласка, виберіть критерії для пошуку улюблених позитивних цілих чисел (позначених нижче як X)",
+  "errorTextMessage": "Мінімальні та максимальні значення повинні бути цілими числами від 0 до 1000 включно. Мінімальне значення повинно бути меншим або рівним максимальному значенню.",
+  "termExplanation": "Що означають ці терміни?"
 }
 vi-VN
 {
-  "resultTitle": "Rương kho báu kỹ thuật số của bạn hiện chứa các số sau:",
-  "noResultsTitle": "Chưa có mục nào trong rương của bạn.",
-  "clearButtonTitle": "Xóa rương"
+  "searchTitle": "Tìm kiếm số mới cho Rương kho báu Kỹ thuật số của bạn",
+  "introduction": "Vui lòng chọn tiêu chí để tìm kiếm số nguyên dương yêu thích của bạn (được ký hiệu bên dưới là X)",
+  "errorTextMessage": "Các giá trị tối thiểu và tối đa phải là số nguyên từ 0 đến 1000, bao gồm. Giá trị tối thiểu phải nhỏ hơn hoặc bằng giá trị tối đa.",
+  "termExplanation": "Những thuật ngữ này có nghĩa là gì?"
 }
+
+

@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Cerca nuovi numeri per il tuo Scrigno Digitale",
+  "introduction": "Seleziona i criteri per cercare i tuoi numeri interi positivi preferiti (denotati sotto come X)",
+  "errorTextMessage": "I valori minimi e massimi devono essere numeri interi tra 0 e 1000, inclusi. Il valore minimo deve essere minore o uguale al valore massimo.",
+  "termExplanation": "Cosa significano questi termini?"
+}

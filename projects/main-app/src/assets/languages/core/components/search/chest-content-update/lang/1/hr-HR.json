@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Pretraži nove brojeve za svoju digitalnu blagu",
+  "introduction": "Molimo odaberite kriterije za pretragu vaših omiljenih pozitivnih cijelih brojeva (označenih ispod kao X)",
+  "errorTextMessage": "Minimalne i maksimalne vrijednosti moraju biti cijeli brojevi između 0 i 1000, uključivo. Minimalna vrijednost mora biti manja ili jednaka maksimalnoj vrijednosti.",
+  "termExplanation": "Što znače ovi pojmovi?"
+}

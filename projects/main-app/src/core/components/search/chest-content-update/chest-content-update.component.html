@@ -20,8 +20,8 @@
 </div>  
 
 <mat-selection-list #criteria (selectionChange)="onSelectionChange($event)">
-    @for (criterion of ui.criteriaMap; track criterion.id; let i = $index) {
-      <mat-list-option [value]="criterion">{{ui.criteriaPrefix}}{{criterion.criteria}}</mat-list-option>
+    @for (criterion of criteriaMap; track criterion.id; let i = $index) {
+      <mat-list-option [value]="criterion">{{criteriaPrefix}}{{criterion.criteria}}</mat-list-option>
     }
 </mat-selection-list>
 

@@ -1,0 +1,6 @@
+{
+  "searchTitle": "为您的数字宝藏箱搜索新数字",
+  "introduction": "请选择搜索您喜欢的正整数（以下称为X）的标准",
+  "errorTextMessage": "最小值和最大值必须是0到1000之间的整数，包括。 最小值必须小于或等于最大值。",
+  "termExplanation": "这些术语是什么意思？"
+}

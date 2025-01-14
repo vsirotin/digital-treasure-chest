@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Rechercher de nouveaux numéros pour votre coffre aux trésors numérique",
+  "introduction": "Veuillez sélectionner des critères pour rechercher vos numéros entiers positifs préférés (indiqués ci-dessous comme X)",
+  "errorTextMessage": "Les valeurs minimales et maximales doivent être des entiers entre 0 et 1000, inclus. La valeur minimale doit être inférieure ou égale à la valeur maximale.",
+  "termExplanation": "Que signifient ces termes?"
+}

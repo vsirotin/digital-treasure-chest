@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Poiščite nove številke za vašo Digitalno skrinjo z zakladi",
+  "introduction": "Prosimo, izberite kriterije za iskanje vaših priljubljenih pozitivnih celih števil (označenih spodaj kot X)",
+  "errorTextMessage": "Najmanjše in največje vrednosti morajo biti cela števila med 0 in 1000, vključno. Najmanjša vrednost mora biti manjša ali enaka največji vrednosti.",
+  "termExplanation": "Kaj pomenijo ti izrazi?"
+}

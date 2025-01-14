@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Søk etter nye tall for din Digitale Skattkiste",
+  "introduction": "Velg kriterier for å søke etter dine favoritt positive heltall (angitt nedenfor som X)",
+  "errorTextMessage": "Minimums- og maksimumsverdiene må være heltall mellom 0 og 1000, inkludert. Minimumsverdien må være mindre enn eller lik maksimumsverdien.",
+  "termExplanation": "Hva betyr disse termene?"
+}

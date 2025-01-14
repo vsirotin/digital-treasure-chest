@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Tìm kiếm số mới cho Rương kho báu Kỹ thuật số của bạn",
+  "introduction": "Vui lòng chọn tiêu chí để tìm kiếm số nguyên dương yêu thích của bạn (được ký hiệu bên dưới là X)",
+  "errorTextMessage": "Các giá trị tối thiểu và tối đa phải là số nguyên từ 0 đến 1000, bao gồm. Giá trị tối thiểu phải nhỏ hơn hoặc bằng giá trị tối đa.",
+  "termExplanation": "Những thuật ngữ này có nghĩa là gì?"
+}
