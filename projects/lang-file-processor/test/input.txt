@@ -1,280 +1,200 @@
 ar-SA
 {
-"settings": "الإعدادات",
-"language": "اللغة",
-"logging": "تسجيل",
-"loggingExplanation": "فقط لأغراض الدعم"
+  "title": "كنز رقمي",
+  "ietfTag": "ar-SA"
 }
 bn-BD
 {
-"settings": "সেটিংস",
-"language": "ভাষা",
-"logging": "লগিং",
-"loggingExplanation": "শুধুমাত্র সমর্থনের জন্য"
+  "title": "ডিজিটাল ধন",
+  "ietfTag": "bn-BD"
 }
 bg-BG
 {
-"settings": "Настройки",
-"language": "Език",
-"logging": "Водене на дневник",
-"loggingExplanation": "Само за целите на поддръжка"
+  "title": "Цифрово съкровище",
+  "ietfTag": "bg-BG"
 }
 ca-ES
 {
-"settings": "Configuració",
-"language": "Idioma",
-"logging": "Registre",
-"loggingExplanation": "Només per a finalitats de suport"
+  "title": "Tresor digital",
+  "ietfTag": "ca-ES"
 }
 zh-CN
 {
-"settings": "设置",
-"language": "语言",
-"logging": "记录",
-"loggingExplanation": "仅用于支持目的"
+  "title": "数字宝箱",
+  "ietfTag": "zh-CN"
 }
 hr-HR
 {
-"settings": "Postavke",
-"language": "Jezik",
-"logging": "Zapisivanje",
-"loggingExplanation": "Samo za potrebe podrške"
+  "title": "Digitalno blago",
+  "ietfTag": "hr-HR"
 }
 cs-CZ
 {
-"settings": "Nastavení",
-"language": "Jazyk",
-"logging": "Protokolování",
-"loggingExplanation": "Pouze pro účely podpory"
+  "title": "Digitální poklad",
+  "ietfTag": "cs-CZ"
 }
 da-DK
 {
-"settings": "Indstillinger",
-"language": "Sprog",
-"logging": "Logning",
-"loggingExplanation": "Kun til supportformål"
+  "title": "Digital skat",
+  "ietfTag": "da-DK"
 }
 nl-NL
 {
-"settings": "Instellingen",
-"language": "Taal",
-"logging": "Loggen",
-"loggingExplanation": "Alleen voor ondersteuningsdoeleinden"
+  "title": "Digitale schatkist",
+  "ietfTag": "nl-NL"
 }
 en-US
 {
-"settings": "Settings",
-"language": "Language",
-"logging": "Logging",
-"loggingExplanation": "Only for support purposes"
+  "title": "Digital Treasure Chest",
+  "ietfTag": "en-US"
 }
 et-EE
 {
-"settings": "Seaded",
-"language": "Keel",
-"logging": "Logimine",
-"loggingExplanation": "Ainult tugieesmärkidel"
+  "title": "Digitaalne aardelaegas",
+  "ietfTag": "et-EE"
 }
 fi-FI
 {
-"settings": "Asetukset",
-"language": "Kieli",
-"logging": "Lokitus",
-"loggingExplanation": "Vain tukitarkoituksiin"
+  "title": "Digitaalinen aarrearkku",
+  "ietfTag": "fi-FI"
 }
 fr-FR
 {
-"settings": "Paramètres",
-"language": "Langue",
-"logging": "Journalisation",
-"loggingExplanation": "Uniquement à des fins de support"
+  "title": "Coffre aux trésors numérique",
+  "ietfTag": "fr-FR"
 }
 de-DE
 {
-"settings": "Einstellungen",
-"language": "Sprache",
-"logging": "Protokollierung",
-"loggingExplanation": "Nur zu Supportzwecken"
+  "title": "Digitaler Schatzkasten",
+  "ietfTag": "de-DE"
 }
 el-GR
 {
-"settings": "Ρυθμίσεις",
-"language": "Γλώσσα",
-"logging": "Καταγραφή",
-"loggingExplanation": "Μόνο για σκοπούς υποστήριξης"
+  "title": "Ψηφιακός θησαυρός",
+  "ietfTag": "el-GR"
 }
 he-IL
 {
-"settings": "הגדרות",
-"language": "שפה",
-"logging": "רישום",
-"loggingExplanation": "לצורכי תמיכה בלבד"
+  "title": "אוצר דיגיטלי",
+  "ietfTag": "he-IL"
 }
 hu-HU
 {
-"settings": "Beállítások",
-"language": "Nyelv",
-"logging": "Naplózás",
-"loggingExplanation": "Csak támogatási célokra"
+  "title": "Digitális kincsesláda",
+  "ietfTag": "hu-HU"
 }
 id-ID
 {
-"settings": "Pengaturan",
-"language": "Bahasa",
-"logging": "Pencatatan",
-"loggingExplanation": "Hanya untuk keperluan dukungan"
+  "title": "Petih digital",
+  "ietfTag": "id-ID"
 }
 it-IT
 {
-"settings": "Impostazioni",
-"language": "Lingua",
-"logging": "Registrazione",
-"loggingExplanation": "Solo per scopi di supporto"
+  "title": "Scrigno digitale",
+  "ietfTag": "it-IT"
 }
 ja-JP
 {
-"settings": "設定",
-"language": "言語",
-"logging": "ログ記録",
-"loggingExplanation": "サポートのためだけ"
+  "title": "デジタル宝箱",
+  "ietfTag": "ja-JP"
 }
 ko-KR
 {
-"settings": "설정",
-"language": "언어",
-"logging": "로깅",
-"loggingExplanation": "지원 목적에만 사용"
+  "title": "디지털 보물 상자",
+  "ietfTag": "ko-KR"
 }
 lv-LV
 {
-"settings": "Iestatījumi",
-"language": "Valoda",
-"logging": "Reģistrēšana",
-"loggingExplanation": "Tikai atbalsta mērķiem"
+  "title": "Digitālā dārgumu lāde",
+  "ietfTag": "lv-LV"
 }
 lt-LT
 {
-"settings": "Nustatymai",
-"language": "Kalba",
-"logging": "Žurnalavimas",
-"loggingExplanation": "Tik palaikymo tikslams"
+  "title": "Skaitmeninė lobis",
+  "ietfTag": "lt-LT"
 }
 no-NO
 {
-"settings": "Innstillinger",
-"language": "Språk",
-"logging": "Logging",
-"loggingExplanation": "Kun til støtteformål"
+  "title": "Digital skattejakt",
+  "ietfTag": "no-NO"
 }
 nb-NO
 {
-"settings": "Innstillinger",
-"language": "Språk",
-"logging": "Logging",
-"loggingExplanation": "Kun til støtteformål"
+  "title": "Digital skattejakt",
+  "ietfTag": "nb-NO"
 }
 fa-IR
 {
-"settings": "تنظیمات",
-"language": "زبان",
-"logging": "ورود",
-"loggingExplanation": "فقط برای اهداف پشتیبانی"
+  "title": "صندوق گنج دیجیتال",
+  "ietfTag": "fa-IR"
 }
 pl-PL
 {
-"settings": "Ustawienia",
-"language": "Język",
-"logging": "Rejestrowanie",
-"loggingExplanation": "Tylko do celów wsparcia"
+  "title": "Cyfrowa skrzynia skarbów",
+  "ietfTag": "pl-PL"
 }
 pt-PT
 {
-"settings": "Configurações",
-"language": "Idioma",
-"logging": "Registo",
-"loggingExplanation": "Apenas para fins de suporte"
+  "title": "Cofre digital",
+  "ietfTag": "pt-PT"
 }
 pa-IN
 {
-"settings": "ਸੈਟਿੰਗਸ",
-"language": "ਭਾਸ਼ਾ",
-"logging": "ਲਾਗਿੰਗ",
-"loggingExplanation": "ਕੇਵਲ ਸਹਾਇਤਾ ਲਈ"
+  "title": "ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨਾ",
+  "ietfTag": "pa-IN"
 }
 ro-RO
 {
-"settings": "Setări",
-"language": "Limbă",
-"logging": "Înregistrare",
-"loggingExplanation": "Doar în scopuri de asistență"
+  "title": "Cufăr digital",
+  "ietfTag": "ro-RO"
 }
 ru-RU
 {
-"settings": "Настройки",
-"language": "Язык",
-"logging": "Ведение журнала",
-"loggingExplanation": "Только для целей поддержки"
+  "title": "Цифровой сундук",
+  "ietfTag": "ru-RU"
 }
 sr-RS
 {
-"settings": "Подешавања",
-"language": "Језик",
-"logging": "Евидентирање",
-"loggingExplanation": "Само у сврху подршке"
+  "title": "Дигитално благо",
+  "ietfTag": "sr-RS"
 }
 sk-SK
 {
-"settings": "Nastavenia",
-"language": "Jazyk",
-"logging": "Protokolovanie",
-"loggingExplanation": "Iba na podporné účely"
+  "title": "Digitálna pokladnica",
+  "ietfTag": "sk-SK"
 }
 sl-SI
 {
-"settings": "Nastavitve",
-"language": "Jezik",
-"logging": "Beleženje",
-"loggingExplanation": "Samo za namene podpore"
+  "title": "Digitalna skrinja z zakladi",
+  "ietfTag": "sl-SI"
 }
 es-ES
 {
-"settings": "Configuración",
-"language": "Idioma",
-"logging": "Registro",
-"loggingExplanation": "Solo para fines de soporte"
+  "title": "Cofre del tesoro digital",
+  "ietfTag": "es-ES"
 }
 sv-SE
 {
-"settings": "Inställningar",
-"language": "Språk",
-"logging": "Loggning",
-"loggingExplanation": "Endast för supportändamål"
+  "title": "Digital skattkista",
+  "ietfTag": "sv-SE"
 }
 th-TH
 {
-"settings": "การตั้งค่า",
-"language": "ภาษา",
-"logging": "การบันทึก",
-"loggingExplanation": "เฉพาะเพื่อวัตถุประสงค์ในการสนับสนุนเท่านั้น"
+  "title": "หีบสมบัติดิจิทัล",
+  "ietfTag": "th-TH"
 }
 tr-TR
 {
-"settings": "Ayarlar",
-"language": "Dil",
-"logging": "Günlük kaydı",
-"loggingExplanation": "Yalnızca destek amaçlı"
+  "title": "Dijital hazine sandığı",
+  "ietfTag": "tr-TR"
 }
 uk-UA
 {
-"settings": "Налаштування",
-"language": "Мова",
-"logging": "Ведення журналу",
-"loggingExplanation": "Тільки для цілей підтримки"
+  "title": "Цифрова скарбниця",
+  "ietfTag": "uk-UA"
 }
 vi-VN
 {
-"settings": "Cài đặt",
-"language": "Ngôn ngữ",
-"logging": "Ghi nhật ký",
-"loggingExplanation": "Chỉ cho mục đích hỗ trợ"
+  "title": "Rương kho báu kỹ thuật số",
+  "ietfTag": "vi-VN"
 }

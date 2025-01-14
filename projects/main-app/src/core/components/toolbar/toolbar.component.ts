@@ -3,7 +3,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CommunicatorService } from './service/communicator.service'
-import { ILanguageDescription, LocalizerFactory } from '@vsirotin/localizer';
+import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
+import * as uiDefault from '../../../assets/languages/core/components/toolbar/lang/1/en-US.json';
 
 @Component({
   selector: 'app-toolbar',
@@ -14,23 +15,27 @@ import { ILanguageDescription, LocalizerFactory } from '@vsirotin/localizer';
   templateUrl: './toolbar.component.html',
   styleUrl: './toolbar.component.scss'
 })
-export class ToolbarComponent{
+export class ToolbarComponent implements ILocalizationClient<IUIToolbar>{
 
-  title = 'Digital Treasure Chest';
-  originalName = "";
-  ietfTag = "";
+  ui: IUIToolbar = (uiDefault as any).default;
+
+  //ui: IUIToolbar = {title: 'Digital Treasure Chest', ietfTag: "EN"};
+   private localizer: ILocalizer;
 
   constructor(private communicatorService: CommunicatorService){
-    LocalizerFactory.languageChangeNotificator.selectionChanged$.subscribe(
-      (languageDescription: ILanguageDescription) => {
-        this.originalName = languageDescription.originalName;
-        const len = languageDescription.ietfTag.length;
-        this.ietfTag = languageDescription.ietfTag.substring(len-2, len);
-    }); 
-}
+    this.localizer = LocalizerFactory.createLocalizer<IUIToolbar>("assets/languages/core/components/toolbar/lang", 1, this.ui, this);
+  }
+  updateLocalization(data: IUIToolbar): void {
+    this.ui  = data;
+  }
 
   onClick() {
     this.communicatorService.buttonClicked()
   }
 
+}
+
+interface IUIToolbar {
+  title: string;
+  ietfTag: string;
 }
