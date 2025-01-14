@@ -1,10 +1,280 @@
+ar-SA
+{
+"settings": "الإعدادات",
+"language": "اللغة",
+"logging": "تسجيل",
+"loggingExplanation": "فقط لأغراض الدعم"
+}
+bn-BD
+{
+"settings": "সেটিংস",
+"language": "ভাষা",
+"logging": "লগিং",
+"loggingExplanation": "শুধুমাত্র সমর্থনের জন্য"
+}
+bg-BG
+{
+"settings": "Настройки",
+"language": "Език",
+"logging": "Водене на дневник",
+"loggingExplanation": "Само за целите на поддръжка"
+}
+ca-ES
+{
+"settings": "Configuració",
+"language": "Idioma",
+"logging": "Registre",
+"loggingExplanation": "Només per a finalitats de suport"
+}
+zh-CN
+{
+"settings": "设置",
+"language": "语言",
+"logging": "记录",
+"loggingExplanation": "仅用于支持目的"
+}
+hr-HR
+{
+"settings": "Postavke",
+"language": "Jezik",
+"logging": "Zapisivanje",
+"loggingExplanation": "Samo za potrebe podrške"
+}
+cs-CZ
+{
+"settings": "Nastavení",
+"language": "Jazyk",
+"logging": "Protokolování",
+"loggingExplanation": "Pouze pro účely podpory"
+}
+da-DK
+{
+"settings": "Indstillinger",
+"language": "Sprog",
+"logging": "Logning",
+"loggingExplanation": "Kun til supportformål"
+}
+nl-NL
+{
+"settings": "Instellingen",
+"language": "Taal",
+"logging": "Loggen",
+"loggingExplanation": "Alleen voor ondersteuningsdoeleinden"
+}
 en-US
 {
-    "greeting": "Hello",
-    "talk": "How are you?"
+"settings": "Settings",
+"language": "Language",
+"logging": "Logging",
+"loggingExplanation": "Only for support purposes"
+}
+et-EE
+{
+"settings": "Seaded",
+"language": "Keel",
+"logging": "Logimine",
+"loggingExplanation": "Ainult tugieesmärkidel"
+}
+fi-FI
+{
+"settings": "Asetukset",
+"language": "Kieli",
+"logging": "Lokitus",
+"loggingExplanation": "Vain tukitarkoituksiin"
+}
+fr-FR
+{
+"settings": "Paramètres",
+"language": "Langue",
+"logging": "Journalisation",
+"loggingExplanation": "Uniquement à des fins de support"
 }
 de-DE
 {
-    "greeting": "Hi!",
-    "talk": "Wie geht es dir?"
+"settings": "Einstellungen",
+"language": "Sprache",
+"logging": "Protokollierung",
+"loggingExplanation": "Nur zu Supportzwecken"
+}
+el-GR
+{
+"settings": "Ρυθμίσεις",
+"language": "Γλώσσα",
+"logging": "Καταγραφή",
+"loggingExplanation": "Μόνο για σκοπούς υποστήριξης"
+}
+he-IL
+{
+"settings": "הגדרות",
+"language": "שפה",
+"logging": "רישום",
+"loggingExplanation": "לצורכי תמיכה בלבד"
+}
+hu-HU
+{
+"settings": "Beállítások",
+"language": "Nyelv",
+"logging": "Naplózás",
+"loggingExplanation": "Csak támogatási célokra"
+}
+id-ID
+{
+"settings": "Pengaturan",
+"language": "Bahasa",
+"logging": "Pencatatan",
+"loggingExplanation": "Hanya untuk keperluan dukungan"
+}
+it-IT
+{
+"settings": "Impostazioni",
+"language": "Lingua",
+"logging": "Registrazione",
+"loggingExplanation": "Solo per scopi di supporto"
+}
+ja-JP
+{
+"settings": "設定",
+"language": "言語",
+"logging": "ログ記録",
+"loggingExplanation": "サポートのためだけ"
+}
+ko-KR
+{
+"settings": "설정",
+"language": "언어",
+"logging": "로깅",
+"loggingExplanation": "지원 목적에만 사용"
+}
+lv-LV
+{
+"settings": "Iestatījumi",
+"language": "Valoda",
+"logging": "Reģistrēšana",
+"loggingExplanation": "Tikai atbalsta mērķiem"
+}
+lt-LT
+{
+"settings": "Nustatymai",
+"language": "Kalba",
+"logging": "Žurnalavimas",
+"loggingExplanation": "Tik palaikymo tikslams"
+}
+no-NO
+{
+"settings": "Innstillinger",
+"language": "Språk",
+"logging": "Logging",
+"loggingExplanation": "Kun til støtteformål"
+}
+nb-NO
+{
+"settings": "Innstillinger",
+"language": "Språk",
+"logging": "Logging",
+"loggingExplanation": "Kun til støtteformål"
+}
+fa-IR
+{
+"settings": "تنظیمات",
+"language": "زبان",
+"logging": "ورود",
+"loggingExplanation": "فقط برای اهداف پشتیبانی"
+}
+pl-PL
+{
+"settings": "Ustawienia",
+"language": "Język",
+"logging": "Rejestrowanie",
+"loggingExplanation": "Tylko do celów wsparcia"
+}
+pt-PT
+{
+"settings": "Configurações",
+"language": "Idioma",
+"logging": "Registo",
+"loggingExplanation": "Apenas para fins de suporte"
+}
+pa-IN
+{
+"settings": "ਸੈਟਿੰਗਸ",
+"language": "ਭਾਸ਼ਾ",
+"logging": "ਲਾਗਿੰਗ",
+"loggingExplanation": "ਕੇਵਲ ਸਹਾਇਤਾ ਲਈ"
+}
+ro-RO
+{
+"settings": "Setări",
+"language": "Limbă",
+"logging": "Înregistrare",
+"loggingExplanation": "Doar în scopuri de asistență"
+}
+ru-RU
+{
+"settings": "Настройки",
+"language": "Язык",
+"logging": "Ведение журнала",
+"loggingExplanation": "Только для целей поддержки"
+}
+sr-RS
+{
+"settings": "Подешавања",
+"language": "Језик",
+"logging": "Евидентирање",
+"loggingExplanation": "Само у сврху подршке"
+}
+sk-SK
+{
+"settings": "Nastavenia",
+"language": "Jazyk",
+"logging": "Protokolovanie",
+"loggingExplanation": "Iba na podporné účely"
+}
+sl-SI
+{
+"settings": "Nastavitve",
+"language": "Jezik",
+"logging": "Beleženje",
+"loggingExplanation": "Samo za namene podpore"
+}
+es-ES
+{
+"settings": "Configuración",
+"language": "Idioma",
+"logging": "Registro",
+"loggingExplanation": "Solo para fines de soporte"
+}
+sv-SE
+{
+"settings": "Inställningar",
+"language": "Språk",
+"logging": "Loggning",
+"loggingExplanation": "Endast för supportändamål"
+}
+th-TH
+{
+"settings": "การตั้งค่า",
+"language": "ภาษา",
+"logging": "การบันทึก",
+"loggingExplanation": "เฉพาะเพื่อวัตถุประสงค์ในการสนับสนุนเท่านั้น"
+}
+tr-TR
+{
+"settings": "Ayarlar",
+"language": "Dil",
+"logging": "Günlük kaydı",
+"loggingExplanation": "Yalnızca destek amaçlı"
+}
+uk-UA
+{
+"settings": "Налаштування",
+"language": "Мова",
+"logging": "Ведення журналу",
+"loggingExplanation": "Тільки для цілей підтримки"
+}
+vi-VN
+{
+"settings": "Cài đặt",
+"language": "Ngôn ngữ",
+"logging": "Ghi nhật ký",
+"loggingExplanation": "Chỉ cho mục đích hỗ trợ"
 }

@@ -24,22 +24,5 @@
       "preLaunchTask": "npm: test keeper-master-data",
       "url": "http://localhost:9876/debug.html"
     },
-        {
-      "name": "debug file-splitter",
-      "type": "node",
-      "request": "launch",
-      "program": "${workspaceFolder}/projects/lang-file-processor/src/index.ts",
-      "args": [
-        "--file=${workspaceFolder}/projects/lang-file-processor/test/input.txt",
-        "--list=${workspaceFolder}/projects/lang-file-processor/test/lang-codes.txt",
-        "--output-dir=${workspaceFolder}/projects/lang-file-processor/test/output"
-      ],
-      "outFiles": [
-        "${workspaceFolder}/dist/@vsirotin/lang-file-processor/**/*.js"
-      ],
-      "preLaunchTask": "tsc: build - tsconfig.json"
-    }
-
-    
   ]
 }
