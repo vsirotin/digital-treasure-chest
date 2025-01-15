@@ -1,0 +1,38 @@
+{
+  "title": "Penjelasan Istilah",
+  "explanations": [
+    {
+      "term": "Bilangan Prima",
+      "explanation": "Bilangan prima adalah bilangan asli yang lebih besar dari 1 yang bukan merupakan hasil kali dari dua bilangan asli yang lebih kecil. Bilangan asli yang lebih besar dari 1 yang bukan bilangan prima disebut bilangan komposit."
+    },
+    {
+      "term": "Bilangan Prima Pythagoras",
+      "explanation": "Bilangan prima Pythagoras adalah bilangan prima yang berbentuk 4n + 1. Bilangan prima Pythagoras adalah bilangan prima ganjil p yang 2 adalah akar primitif modulo p."
+    },
+    {
+      "term": "Bilangan Fibonacci",
+      "explanation": "Deret di mana setiap bilangan adalah jumlah dari dua bilangan sebelumnya."
+    },
+    {
+      "term": "Bilangan Tribonacci",
+      "explanation": "Deret bilangan asli yang dimulai dengan angka 0 satu kali dan angka 1 dua kali. Kemudian, jumlah dari tiga bilangan sebelumnya menghasilkan bilangan berikutnya: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bilangan Bell",
+      "explanation": "Bilangan Bell adalah jumlah partisi tidak terurut dari himpunan n elemen, yang dilambangkan sebagai Bn, dengan asumsi bahwa B0=1. Dinamakan untuk menghormati Eric Bell, yang mempelajarinya pada tahun 1930-an."
+    },
+    {
+      "term": "Bilangan Catalan",
+      "explanation": "Bilangan Catalan adalah deret numerik yang muncul dalam banyak masalah kombinatorik. Mereka dinamai untuk menghormati matematikawan Belgia Eugène Charles Catalan, meskipun mereka dikenal oleh Leonhard Euler. Bilangan Catalan ke-n Cn dapat didefinisikan dengan beberapa cara yang setara, seperti: 1) Jumlah partisi dari poligon konveks (n+2)-sisi menjadi segitiga menggunakan diagonal yang tidak tumpang tindih. 2) Jumlah cara menghubungkan 2n titik pada lingkaran dengan n akord yang tidak tumpang tindih, dll."
+    },
+    {
+      "term": "Bilangan Sophie Germain",
+      "explanation": "Bilangan prima Sophie Germain adalah bilangan prima p yang bilangan 2p+1 juga merupakan bilangan prima. Bilangan 2p+1 yang terkait dengan bilangan prima Sophie Germain disebut bilangan prima aman. Misalnya, 11 adalah bilangan prima Sophie Germain, dan 2 × 11 + 1 = 23 adalah bilangan prima aman yang terkait."
+    },
+    {
+      "term": "Bilangan Simetris",
+      "explanation": "Bilangan simetris adalah: 1) semua bilangan satu digit, 2) bilangan dua digit berbentuk xx, dan 3) bilangan tiga digit berbentuk xyx, di mana x dan y adalah digit, dan x tidak bisa 0."
+    }
+  ],
+  "prefixToLink": "Anda dapat menemukan lebih banyak informasi menarik tentang deret bilangan ajaib di Wikipedia dan di situs web "
+}

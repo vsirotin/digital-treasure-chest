@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { MatListModule, MatSelectionListChange, MatSelectionList } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { TermExplanationDialog } from '../term-explanation-dialog/TermExplanationDialog';
+import { TermExplanationDialog } from '../term-explanation-dialog/term-explanation-dialog';
 import { Searcher } from '../../../classes/searcher/searcher';
 import { SerachResultCardComponent } from './search-result-card/search-result-card.component';
 import { Chest } from '../../../../shared/classes/chest';

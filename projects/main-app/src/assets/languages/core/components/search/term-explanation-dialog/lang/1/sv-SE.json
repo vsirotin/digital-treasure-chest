@@ -1,0 +1,38 @@
+{
+  "title": "Förklaring av termer",
+  "explanations": [
+    {
+      "term": "Primtal",
+      "explanation": "Ett primtal är ett naturligt tal större än 1 som inte är produkten av två mindre naturliga tal. Ett naturligt tal större än 1 som inte är ett primtal kallas ett sammansatt tal."
+    },
+    {
+      "term": "Pythagoreiskt primtal",
+      "explanation": "Ett pythagoreiskt primtal är ett primtal av formen 4n + 1. Pythagoreiska primtal är exakt de udda primtalen p för vilka 2 är en primitiv rot modulo p."
+    },
+    {
+      "term": "Fibonacci-tal",
+      "explanation": "En sekvens där varje tal är summan av de två föregående."
+    },
+    {
+      "term": "Tribonacci-tal",
+      "explanation": "En sekvens av naturliga tal som börjar med talet 0 en gång och talet 1 två gånger. Sedan är summan av de tre föregående talen det omedelbart följande talet: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bell-tal",
+      "explanation": "Bell-talet är antalet oordnade partitioner av en mängd med n element, betecknat som Bn, med antagandet att B0=1. Uppkallat efter Eric Bell, som studerade dem på 1930-talet."
+    },
+    {
+      "term": "Catalan-tal",
+      "explanation": "Catalan-tal är en numerisk sekvens som förekommer i många kombinatoriska problem. De är uppkallade efter den belgiska matematikern Eugène Charles Catalan, även om de var kända för Leonhard Euler. Det n:te Catalan-talet Cn kan definieras på flera ekvivalenta sätt, till exempel: 1) Antalet partitioner av en konvex (n+2)-gon i trianglar med hjälp av icke-överlappande diagonaler. 2) Antalet sätt att ansluta 2n punkter på en cirkel med hjälp av n icke-överlappande ackord, etc."
+    },
+    {
+      "term": "Sophie Germain-tal",
+      "explanation": "Ett Sophie Germain-primtal är ett sådant primtal p att talet 2p+1 också är ett primtal. Talet 2p+1 som är associerat med ett Sophie Germain-primtal kallas ett säkert primtal. Till exempel är 11 ett Sophie Germain-primtal, och 2 × 11 + 1 = 23 är det associerade säkra primtalet."
+    },
+    {
+      "term": "Symmetriska tal",
+      "explanation": "Symmetriska tal är: 1) alla ensiffriga tal, 2) tvåsiffriga tal av formen xx, och 3) tresiffriga tal av formen xyx, där x och y är siffror, och x kan inte vara 0."
+    }
+  ],
+  "prefixToLink": "För mer intressant information om magiska talföljder, se Wikipedia och webbplatsen "
+}

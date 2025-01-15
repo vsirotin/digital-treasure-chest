@@ -1,0 +1,38 @@
+{
+  "title": "Explanation of Terms",
+  "explanations": [
+    {
+      "term": "Prime Number",
+      "explanation": "A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers. A natural number greater than 1 that is not prime is called a composite number."
+    },
+    {
+      "term": "Pythagorean Prime",
+      "explanation": "A Pythagorean prime is a prime number of the form 4n + 1. Pythagorean primes are exactly those odd prime numbers p for which 2 is a primitive root modulo p."
+    },
+    {
+      "term": "Fibonacci Numbers",
+      "explanation": "A sequence in which each number is the sum of the two preceding ones."
+    },
+    {
+      "term": "Tribonacci Numbers",
+      "explanation": "A sequence of natural numbers that starts with the number 0 once and the number 1 twice. Subsequently, the sum of the three preceding numbers leads to the next number: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bell Numbers",
+      "explanation": "The Bell number is the number of ways to partition a set of n elements, denoted as Bn, with the assumption that B0=1. Named after Eric Bell, who studied them in the 1930s."
+    },
+    {
+      "term": "Catalan Numbers",
+      "explanation": "Catalan numbers are a sequence of natural numbers that appear in various combinatorial problems. They are named after the Belgian mathematician Eugène Charles Catalan, although they were known to Leonhard Euler. The n-th Catalan number Cn can be defined in several equivalent ways, such as: 1) The number of ways to divide a convex (n+2)-gon into triangles using non-intersecting diagonals. 2) The number of ways to connect 2n points on a circle using n non-intersecting chords, etc."
+    },
+    {
+      "term": "Sophie Germain Primes",
+      "explanation": "A Sophie Germain prime is a prime number p such that 2p+1 is also a prime number. The number 2p+1 associated with a Sophie Germain prime is called a safe prime. For example, 11 is a Sophie Germain prime, and 2 × 11 + 1 = 23 is the associated safe prime."
+    },
+    {
+      "term": "Symmetric Numbers",
+      "explanation": "Symmetric numbers are: 1) all single-digit numbers, 2) two-digit numbers of the form xx, and 3) three-digit numbers of the form xyx, where x and y are digits, and x cannot be 0."
+    }
+  ],
+  "prefixToLink": "For more interesting information about magical number sequences, see Wikipedia and the website "
+}

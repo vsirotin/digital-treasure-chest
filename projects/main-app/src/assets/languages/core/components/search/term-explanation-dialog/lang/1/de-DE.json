@@ -1,0 +1,38 @@
+{
+  "title": "Erklärung der Begriffe",
+  "explanations": [
+    {
+      "term": "Primzahl",
+      "explanation": "Eine Primzahl ist eine natürliche Zahl größer als 1, die nicht das Produkt von zwei kleineren natürlichen Zahlen ist. Eine natürliche Zahl größer als 1, die keine Primzahl ist, wird zusammengesetzte Zahl genannt."
+    },
+    {
+      "term": "Pythagoreische Primzahl",
+      "explanation": "Eine pythagoreische Primzahl ist eine Primzahl der Form 4n + 1. Pythagoreische Primzahlen sind genau die ungeraden Primzahlen p, für die 2 eine primitive Wurzel modulo p ist."
+    },
+    {
+      "term": "Fibonacci-Zahlen",
+      "explanation": "Eine Folge, in der jede Zahl die Summe der beiden vorhergehenden ist."
+    },
+    {
+      "term": "Tribonacci-Zahlen",
+      "explanation": "Eine Folge natürlicher Zahlen, die mit der Zahl 0 einmal und der Zahl 1 zweimal beginnt. Anschließend führt die Summe der drei vorhergehenden Zahlen zur nächsten Zahl: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bell-Zahlen",
+      "explanation": "Die Bell-Zahl ist die Anzahl der Möglichkeiten, eine Menge von n Elementen zu partitionieren, bezeichnet als Bn, mit der Annahme, dass B0=1. Benannt nach Eric Bell, der sie in den 1930er Jahren untersuchte."
+    },
+    {
+      "term": "Catalan-Zahlen",
+      "explanation": "Catalan-Zahlen sind eine Folge natürlicher Zahlen, die in verschiedenen kombinatorischen Problemen auftreten. Sie sind nach dem belgischen Mathematiker Eugène Charles Catalan benannt, obwohl sie Leonhard Euler bekannt waren. Die n-te Catalan-Zahl Cn kann auf mehrere äquivalente Weisen definiert werden, wie zum Beispiel: 1) Die Anzahl der Möglichkeiten, ein konvexes (n+2)-Eck in Dreiecke zu unterteilen, indem nicht schneidende Diagonalen verwendet werden. 2) Die Anzahl der Möglichkeiten, 2n Punkte auf einem Kreis mit n nicht schneidenden Akkorden zu verbinden, usw."
+    },
+    {
+      "term": "Sophie Germain Primzahlen",
+      "explanation": "Eine Sophie Germain Primzahl ist eine Primzahl p, bei der die Zahl 2p+1 ebenfalls eine Primzahl ist. Die Zahl 2p+1, die mit einer Sophie Germain Primzahl verbunden ist, wird sichere Primzahl genannt. Zum Beispiel ist 11 eine Sophie Germain Primzahl, und 2 × 11 + 1 = 23 ist die zugehörige sichere Primzahl."
+    },
+    {
+      "term": "Symmetrische Zahlen",
+      "explanation": "Symmetrische Zahlen sind: 1) alle einstelligen Zahlen, 2) zweistellige Zahlen der Form xx und 3) dreistellige Zahlen der Form xyx, wobei x und y Ziffern sind und x nicht 0 sein kann."
+    }
+  ],
+  "prefixToLink": "Weitere interessante Informationen über magische Zahlenfolgen finden Sie auf Wikipedia und auf der Website "
+}

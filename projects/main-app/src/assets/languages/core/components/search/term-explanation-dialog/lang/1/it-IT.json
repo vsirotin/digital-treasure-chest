@@ -1,0 +1,38 @@
+{
+  "title": "Spiegazione dei termini",
+  "explanations": [
+    {
+      "term": "Numero primo",
+      "explanation": "Un numero primo è un numero naturale maggiore di 1 che non è il prodotto di due numeri naturali più piccoli. Un numero naturale maggiore di 1 che non è primo si chiama numero composto."
+    },
+    {
+      "term": "Numero primo pitagorico",
+      "explanation": "Un numero primo pitagorico è un numero primo della forma 4n + 1. I numeri primi pitagorici sono esattamente quei numeri primi dispari p per i quali 2 è una radice primitiva modulo p."
+    },
+    {
+      "term": "Numeri di Fibonacci",
+      "explanation": "Una sequenza in cui ogni numero è la somma dei due numeri precedenti."
+    },
+    {
+      "term": "Numeri di Tribonacci",
+      "explanation": "Una sequenza di numeri naturali che inizia con il numero 0 una volta e il numero 1 due volte. Successivamente, la somma dei tre numeri precedenti dà il numero successivo: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Numeri di Bell",
+      "explanation": "Il numero di Bell è il numero di partizioni non ordinate di un insieme di n elementi, indicato come Bn, con l'assunzione che B0=1. Chiamato così in onore di Eric Bell, che li studiò negli anni '30."
+    },
+    {
+      "term": "Numeri di Catalan",
+      "explanation": "I numeri di Catalan sono una sequenza numerica che appare in molti problemi combinatori. Sono chiamati così in onore del matematico belga Eugène Charles Catalan, sebbene fossero noti a Leonhard Euler. Il numero di Catalan n-esimo Cn può essere definito in diversi modi equivalenti, come ad esempio: 1) Il numero di partizioni di un poligono convesso (n+2)-lati in triangoli utilizzando diagonali non sovrapposte. 2) Il numero di modi per collegare 2n punti su un cerchio con n corde non sovrapposte, ecc."
+    },
+    {
+      "term": "Numeri di Sophie Germain",
+      "explanation": "Un numero primo di Sophie Germain è un numero primo p tale che il numero 2p+1 è anche un numero primo. Il numero 2p+1 associato a un numero primo di Sophie Germain è chiamato numero primo sicuro. Ad esempio, 11 è un numero primo di Sophie Germain, e 2 × 11 + 1 = 23 è il numero primo sicuro associato."
+    },
+    {
+      "term": "Numeri simmetrici",
+      "explanation": "I numeri simmetrici sono: 1) tutti i numeri a una cifra, 2) numeri a due cifre della forma xx, e 3) numeri a tre cifre della forma xyx, dove x e y sono cifre, e x non può essere 0."
+    }
+  ],
+  "prefixToLink": "Puoi trovare ulteriori informazioni interessanti sulle sequenze numeriche magiche su Wikipedia e sul sito web "
+}

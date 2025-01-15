@@ -1,0 +1,38 @@
+{
+  "title": "Explicació dels termes",
+  "explanations": [
+    {
+      "term": "Nombre primer",
+      "explanation": "Un nombre primer és un nombre natural més gran que 1 que no és producte de dos nombres naturals més petits. Un nombre natural més gran que 1 que no és primer es diu nombre compost."
+    },
+    {
+      "term": "Nombre primer pitagòric",
+      "explanation": "Un nombre primer pitagòric és un nombre primer de la forma 4n + 1. Els nombres primers pitagòrics són exactament els nombres primers senars p per als quals 2 és una arrel primitiva mòdul p."
+    },
+    {
+      "term": "Nombres de Fibonacci",
+      "explanation": "Una seqüència en la qual cada nombre és la suma dels dos precedents"
+    },
+    {
+      "term": "Nombres de Tribonaccis",
+      "explanation": "Una seqüència de nombres naturals que originalment comença amb el número 0 una vegada i el número 1 dues vegades. Posteriorment, la suma dels tres nombres precedents resulta en el nombre immediatament següent: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3"
+    },
+    {
+      "term": "Nombres de Bell",
+      "explanation": "El nombre de Bell és el nombre de totes les particions desordenades d'un conjunt de n elements, denotat per Bn, amb B0=1 assumit per definició. Anomenats en honor a Eric Bell, que els va estudiar als anys trenta."
+    },
+    {
+      "term": "Nombres de Català",
+      "explanation": "Els nombres de Català són una seqüència numèrica que es troba en molts problemes combinatoris. Es diuen així en honor del matemàtic belga Eugène Charles Catalan, tot i que eren coneguts per Leonard Euler. El nombre de Català n Cn es pot definir de diverses maneres equivalents, com ara: 1) El nombre de particions d'un (n+2)-gon convex en triangles per diagonals no intersectants. 2) El nombre de maneres de connectar 2n punts en un cercle de n per cordes no intersectants, etc."
+    },
+    {
+      "term": "Nombres de Sophie Germain",
+      "explanation": "Un nombre primer Sophie Germain és un nombre primer p tal que el nombre 2p+1 també és primer. El nombre 2p+1 associat al nombre primer Sophie Germain es diu nombre primer segur. Per exemple, 11 és nombre primer Sophie Germain, i 2 × 11 + 1 = 23 és el nombre primer segur associat."
+    },
+    {
+      "term": "Nombres simètrics",
+      "explanation": "Els nombres simètrics són: 1) tots els nombres d'una xifra, 2) nombres de dues xifres de la forma xx, i 3) nombres de tres xifres de la forma xyx, on x, y són dígits, i x no pot ser 0."
+    }
+  ],
+  "prefixToLink": "Per a més informació interessant sobre les seqüències de nombres màgics vegeu a la Viquipèdia i a la pàgina "
+}

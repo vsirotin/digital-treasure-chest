@@ -1,0 +1,38 @@
+{
+  "title": "Explicația termenilor",
+  "explanations": [
+    {
+      "term": "Număr prim",
+      "explanation": "Un număr prim este un număr natural mai mare decât 1 care nu este produsul a două numere naturale mai mici. Un număr natural mai mare decât 1 care nu este prim se numește număr compus."
+    },
+    {
+      "term": "Număr prim pitagoreic",
+      "explanation": "Un număr prim pitagoreic este un număr prim de forma 4n + 1. Numerele prime pitagoreice sunt exact acele numere prime impare p pentru care 2 este o rădăcină primitivă modulo p."
+    },
+    {
+      "term": "Numerele Fibonacci",
+      "explanation": "O secvență în care fiecare număr este suma celor două numere anterioare."
+    },
+    {
+      "term": "Numerele Tribonacci",
+      "explanation": "O secvență de numere naturale care începe cu numărul 0 o dată și numărul 1 de două ori. Apoi, suma celor trei numere anterioare dă următorul număr: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Numerele Bell",
+      "explanation": "Numărul Bell este numărul de partiții neordonate ale unui set de n elemente, denotat ca Bn, cu presupunerea că B0=1. Numit după Eric Bell, care le-a studiat în anii 1930."
+    },
+    {
+      "term": "Numerele Catalan",
+      "explanation": "Numerele Catalan sunt o secvență numerică care apare în multe probleme combinatorice. Sunt numite în onoarea matematicianului belgian Eugène Charles Catalan, deși erau cunoscute de Leonhard Euler. Al n-lea număr Catalan Cn poate fi definit în mai multe moduri echivalente, cum ar fi: 1) Numărul de partiții ale unui (n+2)-gon convex în triunghiuri folosind diagonale neintersectate. 2) Numărul de moduri de a conecta 2n puncte pe un cerc folosind n corzi neintersectate, etc."
+    },
+    {
+      "term": "Numerele Sophie Germain",
+      "explanation": "Un număr prim Sophie Germain este un număr prim p astfel încât numărul 2p+1 este de asemenea prim. Numărul 2p+1 asociat cu un număr prim Sophie Germain se numește număr prim sigur. De exemplu, 11 este un număr prim Sophie Germain, iar 2 × 11 + 1 = 23 este numărul prim sigur asociat."
+    },
+    {
+      "term": "Numere simetrice",
+      "explanation": "Numerele simetrice sunt: 1) toate numerele de o cifră, 2) numerele de două cifre de forma xx și 3) numerele de trei cifre de forma xyx, unde x și y sunt cifre, iar x nu poate fi 0."
+    }
+  ],
+  "prefixToLink": "Pentru mai multe informații interesante despre secvențele numerice magice, consultați Wikipedia și site-ul "
+}

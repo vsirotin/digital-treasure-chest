@@ -1,0 +1,38 @@
+{
+  "title": "Termien selitys",
+  "explanations": [
+    {
+      "term": "Alkuluku",
+      "explanation": "Alkuluku on luonnollinen luku, joka on suurempi kuin 1 ja joka ei ole kahden pienemmän luonnollisen luvun tulo. Luonnollinen luku, joka on suurempi kuin 1 ja joka ei ole alkuluku, kutsutaan yhdistetyksi luvuksi."
+    },
+    {
+      "term": "Pythagoraan alkuluku",
+      "explanation": "Pythagoraan alkuluku on alkuluku muodossa 4n + 1. Pythagoraan alkuluvut ovat täsmälleen ne parittomat alkuluvut p, joille 2 on primitiivinen juuri modulo p."
+    },
+    {
+      "term": "Fibonaccin luvut",
+      "explanation": "Jono, jossa kukin luku on kahden edellisen summa."
+    },
+    {
+      "term": "Tribonaccin luvut",
+      "explanation": "Luonnollisten lukujen jono, joka alkaa numerolla 0 kerran ja numerolla 1 kahdesti. Tämän jälkeen kolmen edellisen luvun summa johtaa seuraavaan lukuun: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bellin luvut",
+      "explanation": "Bellin luku on tapojen määrä, joilla voidaan jakaa n-elementtinen joukko, merkittynä Bn, oletuksella, että B0=1. Nimetty Eric Bellin mukaan, joka tutki niitä 1930-luvulla."
+    },
+    {
+      "term": "Catalanin luvut",
+      "explanation": "Catalanin luvut ovat luonnollisten lukujen jono, joka esiintyy monissa kombinatorisissa ongelmissa. Ne on nimetty belgialaisen matemaatikon Eugène Charles Catalanin mukaan, vaikka ne olivat tunnettuja Leonhard Eulerille. N-t Catalanin luku Cn voidaan määritellä useilla ekvivalenttisilla tavoilla, kuten: 1) Tapojen määrä, joilla voidaan jakaa kovera (n+2)-kulmio kolmioiksi käyttämällä ei-leikkaavia diagonaaleja. 2) Tapojen määrä, joilla voidaan yhdistää 2n pistettä ympyrässä käyttämällä n ei-leikkaavaa jännettä jne."
+    },
+    {
+      "term": "Sophie Germainin alkuluvut",
+      "explanation": "Sophie Germainin alkuluku on sellainen alkuluku p, että luku 2p+1 on myös alkuluku. Luku 2p+1, joka liittyy Sophie Germainin alkulukuun, kutsutaan turvalliseksi alkuluvuksi. Esimerkiksi 11 on Sophie Germainin alkuluku ja 2 × 11 + 1 = 23 on siihen liittyvä turvallinen alkuluku."
+    },
+    {
+      "term": "Symmetriset luvut",
+      "explanation": "Symmetriset luvut ovat: 1) kaikki yksinumeroiset luvut, 2) kaksinumeroiset luvut muodossa xx ja 3) kolminumeroiset luvut muodossa xyx, joissa x ja y ovat numeroita, ja x ei voi olla 0."
+    }
+  ],
+  "prefixToLink": "Lisätietoja maagisista lukujonoista löytyy Wikipediasta ja verkkosivustolta "
+}
