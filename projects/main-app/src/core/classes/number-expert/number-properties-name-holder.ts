@@ -6,8 +6,6 @@ export class NumberPropertiesNameHolder implements ILocalizationClient<INumberPr
 
   data : INumberPropertiesNameHolder = (uiDefault as any).default;
 
-
-
   constructor() {
       this.localizer = LocalizerFactory.createLocalizer<INumberPropertiesNameHolder>("assets/languages/core/classes/number-expert/lang", 1, this.data, this);
   }
