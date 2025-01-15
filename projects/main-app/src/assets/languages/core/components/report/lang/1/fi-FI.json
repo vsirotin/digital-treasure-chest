@@ -1,0 +1,8 @@
+{
+  "sertificate": "Todistus",
+  "line1": "Tämä todistus vahvistaa",
+  "line2": "että tämän todistuksen haltija on seuraavien merkittävien numeroiden laillinen virtuaalinen omistaja:",
+  "line3": "seuraavien merkittävien numeroiden laillinen virtuaalinen omistaja:",
+  "signature": "Kaikkien numeroiden mestari ja herra Numericus Incalculable",
+  "textForEmptyChest": "Arkku on tyhjä. Täytä se numeroilla."
+}

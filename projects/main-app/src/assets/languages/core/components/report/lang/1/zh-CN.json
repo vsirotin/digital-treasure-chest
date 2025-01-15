@@ -1,0 +1,8 @@
+{
+  "sertificate": "证书",
+  "line1": "此证书确认",
+  "line2": "此证书的持有人是以下显著数字的合法虚拟所有者：",
+  "line3": "以下显著数字的合法虚拟所有者：",
+  "signature": "所有数字的主人和领主 Numericus Incalculable",
+  "textForEmptyChest": "箱子是空的。请用数字填满它。"
+}

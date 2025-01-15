@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Chest } from '../../../shared/classes/chest';
 import { environment } from '../../../environments/environment';
 import { CommonModule } from '@angular/common';
+import * as uiDefault from '../../../assets/languages/core/components/report/lang/1/en-US.json';
+import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
 
 @Component({
   selector: 'app-report',
@@ -10,27 +12,37 @@ import { CommonModule } from '@angular/common';
   templateUrl: './report.component.html',
   styleUrl: './report.component.css'
 })
-export class ReportComponent {
-  sertificate: string = "Certificate";
-  line1: string = "This certificate confirms";
-  line2: string = "that the bearer of this certificate is the legal virtual owner";
-  line3: string = "of the following remarkable numbers:";
+export class ReportComponent implements ILocalizationClient<IReportUI> {
   numbers: string = "";
-  signature: string = "Master and Lord of All Numbers Numericus Incalculable";
-  textForEmptyChest: string = "The chest is empty. Please fill it with numbers.";
   numbersIsEmpty: boolean = true;
 
+  ui: IReportUI = (uiDefault as any).default;
+
   baseHref: string = environment.baseHref;
+  private localizer: ILocalizer;
 
   constructor() { 
+    this.localizer = LocalizerFactory.createLocalizer<IReportUI>("assets/languages/core/components/report/lang", 1, this.ui, this);
     this.updateNumbers(Chest.getItems());
     Chest.chestChanged$.subscribe((items: number[]) => {
       this.updateNumbers(items);
     });
+  }
+  updateLocalization(data: IReportUI): void {
+    this.ui = data;
   }
 
   private updateNumbers(items: number[]) {
     this.numbersIsEmpty = items.length == 0;
     this.numbers = items.join(", ");
   }
+}
+
+interface IReportUI {
+  sertificate: string;
+  line1: string;
+  line2: string;
+  line3: string;
+  signature: string;
+  textForEmptyChest: string;
 }
