@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Ez egy ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "páros szám"
+    },
+    {
+      "id": 2,
+      "criteria": "páratlan szám"
+    },
+    {
+      "id": 3,
+      "criteria": "prímszám"
+    },
+    {
+      "id": 4,
+      "criteria": "Püthagorasz prímszám"
+    },
+    {
+      "id": 5,
+      "criteria": "Fibonacci-szám"
+    },
+    {
+      "id": 6,
+      "criteria": "Tribonacci-szám"
+    },
+    {
+      "id": 7,
+      "criteria": "Bell-szám"
+    },
+    {
+      "id": 8,
+      "criteria": "Catalan-szám"
+    },
+    {
+      "id": 9,
+      "criteria": "Sophie Germain-szám"
+    },
+    {
+      "id": 10,
+      "criteria": "szimmetrikus szám"
+    }
+  ]
+}

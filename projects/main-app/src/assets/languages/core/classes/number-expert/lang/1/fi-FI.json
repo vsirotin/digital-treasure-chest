@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Se on ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "parillinen luku"
+    },
+    {
+      "id": 2,
+      "criteria": "pariton luku"
+    },
+    {
+      "id": 3,
+      "criteria": "alkuluku"
+    },
+    {
+      "id": 4,
+      "criteria": "Pythagoraan alkuluku"
+    },
+    {
+      "id": 5,
+      "criteria": "Fibonaccin luku"
+    },
+    {
+      "id": 6,
+      "criteria": "Tribonaccin luku"
+    },
+    {
+      "id": 7,
+      "criteria": "Bellin luku"
+    },
+    {
+      "id": 8,
+      "criteria": "Catalanin luku"
+    },
+    {
+      "id": 9,
+      "criteria": "Sophie Germainin luku"
+    },
+    {
+      "id": 10,
+      "criteria": "symmetrinen luku"
+    }
+  ]
+}

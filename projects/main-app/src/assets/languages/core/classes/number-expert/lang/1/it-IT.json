@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "È ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "un numero pari"
+    },
+    {
+      "id": 2,
+      "criteria": "un numero dispari"
+    },
+    {
+      "id": 3,
+      "criteria": "un numero primo"
+    },
+    {
+      "id": 4,
+      "criteria": "un numero primo di Pitagora"
+    },
+    {
+      "id": 5,
+      "criteria": "un numero di Fibonacci"
+    },
+    {
+      "id": 6,
+      "criteria": "un numero di Tribonacci"
+    },
+    {
+      "id": 7,
+      "criteria": "un numero di Bell"
+    },
+    {
+      "id": 8,
+      "criteria": "un numero di Catalano"
+    },
+    {
+      "id": 9,
+      "criteria": "un numero di Sophie Germain"
+    },
+    {
+      "id": 10,
+      "criteria": "un numero simmetrico"
+    }
+  ]
+}

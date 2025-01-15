@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Det er ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "et lige tal"
+    },
+    {
+      "id": 2,
+      "criteria": "et ulige tal"
+    },
+    {
+      "id": 3,
+      "criteria": "et primtal"
+    },
+    {
+      "id": 4,
+      "criteria": "et Pythagoras primtal"
+    },
+    {
+      "id": 5,
+      "criteria": "et Fibonaccital"
+    },
+    {
+      "id": 6,
+      "criteria": "et Tribonaccital"
+    },
+    {
+      "id": 7,
+      "criteria": "et Bell's tal"
+    },
+    {
+      "id": 8,
+      "criteria": "et Catalansk tal"
+    },
+    {
+      "id": 9,
+      "criteria": "et Sophie Germain's tal"
+    },
+    {
+      "id": 10,
+      "criteria": "et symmetrisk tal"
+    }
+  ]
+}

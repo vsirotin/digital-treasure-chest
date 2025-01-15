@@ -1,282 +1,643 @@
 ar-SA
 {
-  "searchTitle": "ابحث عن أرقام جديدة لصدرك الرقمي",
-  "introduction": "يرجى اختيار المعايير للبحث عن أرقامك الصحيحة المفضلة (يشار إليها أدناه بـ X)",
-  "errorTextMessage": "يجب أن تكون القيم الدنيا والقصوى أعدادًا صحيحة بين 0 و 1000، بما في ذلك. يجب أن تكون القيمة الدنيا أقل من أو تساوي القيمة القصوى.",
-  "termExplanation": "ماذا تعني هذه المصطلحات؟"
+  "criteriaPrefix": "إنه ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "عدد زوجي" },
+    { "id": 2, "criteria": "عدد فردي" },
+    { "id": 3, "criteria": "عدد أولي" },
+    { "id": 4, "criteria": "عدد أولي فيثاغورس" },
+    { "id": 5, "criteria": "عدد فيبوناتشي" },
+    { "id": 6, "criteria": "عدد تريبوناتشي" },
+    { "id": 7, "criteria": "عدد بيل" },
+    { "id": 8, "criteria": "عدد كاتالان" },
+    { "id": 9, "criteria": "عدد صوفي جيرمان" },
+    { "id": 10, "criteria": "عدد متماثل" }
+  ]
 }
 bn-BD
 {
-  "searchTitle": "আপনার ডিজিটাল ধনের জন্য নতুন নম্বরগুলি অনুসন্ধান করুন",
-  "introduction": "আপনার প্রিয় ধনাত্মক পূর্ণসংখ্যার সংখ্যা খুঁজতে মানদণ্ড নির্বাচন করুন (নিচে X হিসাবে উল্লেখ করা হয়েছে)",
-  "errorTextMessage": "ন্যূনতম এবং সর্বাধিক মান অবশ্যই 0 এবং 1000 এর মধ্যে পূর্ণসংখ্যা হতে হবে, অন্তর্ভুক্ত। সর্বনিম্ন মান সর্বাধিক মানের চেয়ে কম বা সমান হতে হবে।",
-  "termExplanation": "এই শর্তগুলি কী বোঝায়?"
+  "criteriaPrefix": "এটি ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "একটি জোড় সংখ্যা" },
+    { "id": 2, "criteria": "একটি বিজোড় সংখ্যা" },
+    { "id": 3, "criteria": "একটি মৌলিক সংখ্যা" },
+    { "id": 4, "criteria": "একটি পিথাগোরাস মৌলিক সংখ্যা" },
+    { "id": 5, "criteria": "একটি ফিবোনাচ্চি সংখ্যা" },
+    { "id": 6, "criteria": "একটি ট্রিবোনাচ্চি সংখ্যা" },
+    { "id": 7, "criteria": "একটি বেলের সংখ্যা" },
+    { "id": 8, "criteria": "একটি কাতালান সংখ্যা" },
+    { "id": 9, "criteria": "একটি সোফি জার্মান সংখ্যা" },
+    { "id": 10, "criteria": "একটি প্রতিসম সংখ্যা" }
+  ]
 }
 bg-BG
 {
-  "searchTitle": "Търсене на нови числа за вашето дигитално съкровище",
-  "introduction": "Моля, изберете критерии за търсене на любимите ви положителни цели числа (обозначени по-долу като X)",
-  "errorTextMessage": "Минималните и максималните стойности трябва да са цели числа между 0 и 1000 включително. Минималната стойност трябва да бъде по-малка или равна на максималната стойност.",
-  "termExplanation": "Какво означават тези термини?"
+  "criteriaPrefix": "То е ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "четно число" },
+    { "id": 2, "criteria": "нечетно число" },
+    { "id": 3, "criteria": "просто число" },
+    { "id": 4, "criteria": "число на Питагор" },
+    { "id": 5, "criteria": "число на Фибоначи" },
+    { "id": 6, "criteria": "число на Трибоначи" },
+    { "id": 7, "criteria": "число на Бел" },
+    { "id": 8, "criteria": "число на Каталан" },
+    { "id": 9, "criteria": "число на Софи Жермен" },
+    { "id": 10, "criteria": "симетрично число" }
+  ]
 }
 ca-ES
 {
-  "searchTitle": "Cerca de nous números per al teu tresor digital",
-  "introduction": "Si us plau, selecciona un criteris per buscar els teus números enters positius favorits (denotats a continuació com X)",
-  "errorTextMessage": "Els valors mínims i màxims han de ser nombres enters entre 0 i 1000, inclusius. El valor mínim ha de ser menor o igual al valor màxim.",
-  "termExplanation": "Què signifiquen aquests termes?"
+  "criteriaPrefix": "És ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "un nombre parell" },
+    { "id": 2, "criteria": "un nombre senar" },
+    { "id": 3, "criteria": "un nombre primer" },
+    { "id": 4, "criteria": "un nombre primer de Pitàgores" },
+    { "id": 5, "criteria": "un nombre de Fibonacci" },
+    { "id": 6, "criteria": "un nombre de Tribonacci" },
+    { "id": 7, "criteria": "un nombre de Bell" },
+    { "id": 8, "criteria": "un nombre de Català" },
+    { "id": 9, "criteria": "un nombre de Sophie Germain" },
+    { "id": 10, "criteria": "un nombre simètric" }
+  ]
 }
 zh-CN
 {
-  "searchTitle": "为您的数字宝藏箱搜索新数字",
-  "introduction": "请选择搜索您喜欢的正整数（以下称为X）的标准",
-  "errorTextMessage": "最小值和最大值必须是0到1000之间的整数，包括。 最小值必须小于或等于最大值。",
-  "termExplanation": "这些术语是什么意思？"
+  "criteriaPrefix": "这是 ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "一个偶数" },
+    { "id": 2, "criteria": "一个奇数" },
+    { "id": 3, "criteria": "一个素数" },
+    { "id": 4, "criteria": "一个毕达哥拉斯素数" },
+    { "id": 5, "criteria": "一个斐波那契数" },
+    { "id": 6, "criteria": "一个三波那契数" },
+    { "id": 7, "criteria": "一个贝尔数" },
+    { "id": 8, "criteria": "一个加泰罗尼亚数" },
+    { "id": 9, "criteria": "一个索菲热尔曼数" },
+    { "id": 10, "criteria": "一个对称数" }
+  ]
 }
 hr-HR
 {
-  "searchTitle": "Pretraži nove brojeve za svoju digitalnu blagu",
-  "introduction": "Molimo odaberite kriterije za pretragu vaših omiljenih pozitivnih cijelih brojeva (označenih ispod kao X)",
-  "errorTextMessage": "Minimalne i maksimalne vrijednosti moraju biti cijeli brojevi između 0 i 1000, uključivo. Minimalna vrijednost mora biti manja ili jednaka maksimalnoj vrijednosti.",
-  "termExplanation": "Što znače ovi pojmovi?"
+  "criteriaPrefix": "To je ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "paran broj" },
+    { "id": 2, "criteria": "neparan broj" },
+    { "id": 3, "criteria": "prosti broj" },
+    { "id": 4, "criteria": "Pitagorin prosti broj" },
+    { "id": 5, "criteria": "Fibonaccijev broj" },
+    { "id": 6, "criteria": "Tribonaccijev broj" },
+    { "id": 7, "criteria": "Bellov broj" },
+    { "id": 8, "criteria": "Catalanov broj" },
+    { "id": 9, "criteria": "broj Sophie Germain" },
+    { "id": 10, "criteria": "simetričan broj" }
+  ]
 }
 cs-CZ
 {
-  "searchTitle": "Hledejte nové čísla pro vaši digitální truhlu pokladů",
-  "introduction": "Prosím, vyberte kritéria pro vyhledávání vašich oblíbených kladných celých čísel (označených níže jako X)",
-  "errorTextMessage": "Minimální a maximální hodnoty musí být celá čísla mezi 0 a 1000 včetně. Minimální hodnota musí být menší nebo rovna maximální hodnotě.",
-  "termExplanation": "Co znamenají tyto termíny?"
+  "criteriaPrefix": "Je to ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "sudé číslo" },
+    { "id": 2, "criteria": "liché číslo" },
+    { "id": 3, "criteria": "prvočíslo" },
+    { "id": 4, "criteria": "Pythagorovo prvočíslo" },
+    { "id": 5, "criteria": "Fibonacciho číslo" },
+    { "id": 6, "criteria": "Tribonacciho číslo" },
+    { "id": 7, "criteria": "Bellovo číslo" },
+    { "id": 8, "criteria": "Catalanovo číslo" },
+    { "id": 9, "criteria": "číslo Sophie Germain" },
+    { "id": 10, "criteria": "symetrické číslo" }
+  ]
 }
 da-DK
 {
-  "searchTitle": "Søg nye numre til din digitale skattekiste",
-  "introduction": "Vælg venligst kriterier for at søge dine yndlings positive heltal (angivet nedenfor som X)",
-  "errorTextMessage": "Minimums- og maksimumsværdierne skal være heltal mellem 0 og 1000, inklusive. Minimumsværdien skal være mindre end eller lig med maksimumsværdien.",
-  "termExplanation": "Hvad betyder disse termer?"
+  "criteriaPrefix": "Det er ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "et lige tal" },
+    { "id": 2, "criteria": "et ulige tal" },
+    { "id": 3, "criteria": "et primtal" },
+    { "id": 4, "criteria": "et Pythagoras primtal" },
+    { "id": 5, "criteria": "et Fibonaccital" },
+    { "id": 6, "criteria": "et Tribonaccital" },
+    { "id": 7, "criteria": "et Bell's tal" },
+    { "id": 8, "criteria": "et Catalansk tal" },
+    { "id": 9, "criteria": "et Sophie Germain's tal" },
+    { "id": 10, "criteria": "et symmetrisk tal" }
+  ]
 }
 nl-NL
 {
-  "searchTitle": "Zoek nieuwe nummers voor je digitale schatkist",
-  "introduction": "Selecteer alstublieft criteria voor het zoeken naar je favoriete positieve gehele getallen (hieronder aangeduid als X)",
-  "errorTextMessage": "Minimum- en maximumwaarden moeten gehele getallen zijn tussen 0 en 1000, inclusief. De minimumwaarde moet kleiner zijn dan of gelijk aan de maximumwaarde.",
-  "termExplanation": "Wat betekenen deze termen?"
+  "criteriaPrefix": "Het is ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "een even getal" },
+    { "id": 2, "criteria": "een oneven getal" },
+    { "id": 3, "criteria": "een priemgetal" },
+    { "id": 4, "criteria": "een Pythagoras priemgetal" },
+    { "id": 5, "criteria": "een Fibonacciget" },
+    { "id": 6, "criteria": "een Tribonacciget" },
+    { "id": 7, "criteria": "een Bell-getal" },
+    { "id": 8, "criteria": "een Catalan-getal" },
+    { "id": 9, "criteria": "een Sophie Germain-getal" },
+    { "id": 10, "criteria": "een symmetrisch getal" }
+  ]
 }
 en-US
 {
-  "searchTitle": "Search new numbers for your Digital Treasure Chest",
-  "introduction": "Please select a criteria for searching your favorite positive integer numbers (denoted below as X)",
-  "errorTextMessage": "Minimum and maximum values must be integers between 0 and 1000, inclusive. Minimum value must be less than or equal to maximum value.",
-  "termExplanation": "What do these terms mean?"
+  "criteriaPrefix": "It is ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "an even number" },
+    { "id": 2, "criteria": "an odd number" },
+    { "id": 3, "criteria": "a prime number" },
+    { "id": 4, "criteria": "a Pythagoras prime number" },
+    { "id": 5, "criteria": "a Fibonacci number" },
+    { "id": 6, "criteria": "a Tribonacci number" },
+    { "id": 7, "criteria": "a Bell's number" },
+    { "id": 8, "criteria": "a Catalan number" },
+    { "id": 9, "criteria": "a Sophie Germain's number" },
+    { "id": 10, "criteria": "a symmetrical number" }
+  ]
 }
 et-EE
 {
-  "searchTitle": "Otsige oma digitaalse aardelaeka jaoks uusi numbreid",
-  "introduction": "Valige palun kriteeriumid oma lemmik positiivsete täisarvude otsimiseks (mida allpool tähistatakse tähega X)",
-  "errorTextMessage": "Minimaal- ja maksimaalväärtused peavad olema vahemikus 0 kuni 1000, kaasa arvatud. Minimaalväärtus peab olema väiksem või võrdne maksimaalväärtusega.",
-  "termExplanation": "Mida need terminid tähendavad?"
+  "criteriaPrefix": "See on ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "paarisarv" },
+    { "id": 2, "criteria": "paaritu arv" },
+    { "id": 3, "criteria": "algorav" },
+    { "id": 4, "criteria": "Pythagorase algarv" },
+    { "id": 5, "criteria": "Fibonacci arv" },
+    { "id": 6, "criteria": "Tribonacci arv" },
+    { "id": 7, "criteria": "Bell'i arv" },
+    { "id": 8, "criteria": "Catalani arv" },
+    { "id": 9, "criteria": "Sophie Germain'i arv" },
+    { "id": 10, "criteria": "sümmeetriline arv" }
+  ]
 }
 fi-FI
 {
-  "searchTitle": "Etsi uusia numeroita digitaaliseen aarrearkkuusi",
-  "introduction": "Valitse kriteerit etsiäksesi suosikki positiivisia kokonaislukuja (merkitty alla X)",
-  "errorTextMessage": "Pienimpien ja suurimpien arvojen on oltava kokonaislukuja välillä 0–1000. Pienin arvo on oltava pienempi tai sama kuin suurin arvo.",
-  "termExplanation": "Mitä nämä termit tarkoittavat?"
+  "criteriaPrefix": "Se on ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "parillinen luku" },
+    { "id": 2, "criteria": "pariton luku" },
+    { "id": 3, "criteria": "alkuluku" },
+    { "id": 4, "criteria": "Pythagoraan alkuluku" },
+    { "id": 5, "criteria": "Fibonaccin luku" },
+    { "id": 6, "criteria": "Tribonaccin luku" },
+    { "id": 7, "criteria": "Bellin luku" },
+    { "id": 8, "criteria": "Catalanin luku" },
+    { "id": 9, "criteria": "Sophie Germainin luku" },
+    { "id": 10, "criteria": "symmetrinen luku" }
+  ]
 }
 fr-FR
 {
-  "searchTitle": "Rechercher de nouveaux numéros pour votre coffre aux trésors numérique",
-  "introduction": "Veuillez sélectionner des critères pour rechercher vos numéros entiers positifs préférés (indiqués ci-dessous comme X)",
-  "errorTextMessage": "Les valeurs minimales et maximales doivent être des entiers entre 0 et 1000, inclus. La valeur minimale doit être inférieure ou égale à la valeur maximale.",
-  "termExplanation": "Que signifient ces termes?"
+  "criteriaPrefix": "C'est ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "un nombre pair" },
+    { "id": 2, "criteria": "un nombre impair" },
+    { "id": 3, "criteria": "un nombre premier" },
+    { "id": 4, "criteria": "un nombre premier de Pythagore" },
+    { "id": 5, "criteria": "un nombre de Fibonacci" },
+    { "id": 6, "criteria": "un nombre de Tribonacci" },
+    { "id": 7, "criteria": "un nombre de Bell" },
+    { "id": 8, "criteria": "un nombre de Catalan" },
+    { "id": 9, "criteria": "un nombre de Sophie Germain" },
+    { "id": 10, "criteria": "un nombre symétrique" }
+  ]
 }
 de-DE
 {
-  "searchTitle": "Suchen Sie neue Nummern für Ihre digitale Schatzkiste",
-  "introduction": "Bitte wählen Sie Kriterien für die Suche nach Ihren bevorzugten positiven ganzen Zahlen (unten als X bezeichnet)",
-  "errorTextMessage": "Minimale und maximale Werte müssen ganze Zahlen zwischen 0 und 1000 sein, einschließlich. Der Mindestwert muss kleiner oder gleich dem Höchstwert sein.",
-  "termExplanation": "Was bedeuten diese Begriffe?"
+  "criteriaPrefix": "Es ist ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "eine gerade Zahl" },
+    { "id": 2, "criteria": "eine ungerade Zahl" },
+    { "id": 3, "criteria": "eine Primzahl" },
+    { "id": 4, "criteria": "eine Pythagoras-Primzahl" },
+    { "id": 5, "criteria": "eine Fibonacci-Zahl" },
+    { "id": 6, "criteria": "eine Tribonacci-Zahl" },
+    { "id": 7, "criteria": "eine Bell-Zahl" },
+    { "id": 8, "criteria": "eine Catalan-Zahl" },
+    { "id": 9, "criteria": "eine Sophie Germain-Primzahl" },
+    { "id": 10, "criteria": "eine symmetrische Zahl" }
+  ]
 }
 el-GR
 {
-  "searchTitle": "Αναζητήστε νέους αριθμούς για το Ψηφιακό σας θησαυρό",
-  "introduction": "Επιλέξτε κριτήρια για να αναζητήσετε τους αγαπημένους σας θετικούς ακέραιους αριθμούς (σημειώνονται παρακάτω ως X)",
-  "errorTextMessage": "Οι ελάχιστες και μέγιστες τιμές πρέπει να είναι ακέραιοι αριθμοί μεταξύ 0 και 1000, συμπεριλαμβανομένων. Η ελάχιστη τιμή πρέπει να είναι μικρότερη ή ίση με τη μέγιστη τιμή.",
-  "termExplanation": "Τι σημαίνουν αυτοί οι όροι;"
+  "criteriaPrefix": "Είναι ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "ένας ζυγός αριθμός" },
+    { "id": 2, "criteria": "ένας περιττός αριθμός" },
+    { "id": 3, "criteria": "ένας πρώτος αριθμός" },
+    { "id": 4, "criteria": "ένας πρώτος αριθμός του Πυθαγόρα" },
+    { "id": 5, "criteria": "ένας αριθμός Fibonacci" },
+    { "id": 6, "criteria": "ένας αριθμός Tribonacci" },
+    { "id": 7, "criteria": "ένας αριθμός του Bell" },
+    { "id": 8, "criteria": "ένας αριθμός του Catalan" },
+    { "id": 9, "criteria": "ένας αριθμός της Sophie Germain" },
+    { "id": 10, "criteria": "ένας συμμετρικός αριθμός" }
+  ]
 }
 he-IL
 {
-  "searchTitle": "חפש מספרים חדשים לאוצר הדיגיטלי שלך",
-  "introduction": "בחר בבקשה קריטריונים לחיפוש המספרים החיוביים השלמים המועדפים עליך (מצוינים למטה כ- X)",
-  "errorTextMessage": "ערכים מינימליים ומקסימליים חייבים להיות מספרים שלמים בין 0 ל- 1000, כולל. הערך המינימלי חייב להיות קטן או שווה לערך המקסימלי.",
-  "termExplanation": "מה המשמעות של המונחים האלה?"
+  "criteriaPrefix": "זהו ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "מספר זוגי" },
+    { "id": 2, "criteria": "מספר אי-זוגי" },
+    { "id": 3, "criteria": "מספר ראשוני" },
+    { "id": 4, "criteria": "מספר ראשוני של פיתגורס" },
+    { "id": 5, "criteria": "מספר של פיבונאצ'י" },
+    { "id": 6, "criteria": "מספר של טריבונאצ'י" },
+    { "id": 7, "criteria": "מספר של בל" },
+    { "id": 8, "criteria": "מספר של קטלאן" },
+    { "id": 9, "criteria": "מספר של סופי ז'רמן" },
+    { "id": 10, "criteria": "מספר סימטרי" }
+  ]
 }
 hu-HU
 {
-  "searchTitle": "Keressen új számokat a digitális kincsesládájához",
-  "introduction": "Kérjük, válasszon kritériumokat kedvenc pozitív egész számok kereséséhez (alább X-ként jelölve)",
-  "errorTextMessage": "A minimum és maximum értékeknek 0 és 1000 közötti egész számoknak kell lenniük, beleértve. A minimum értéknek kisebbnek vagy egyenlőnek kell lennie a maximum értékkel.",
-  "termExplanation": "Mit jelentenek ezek a kifejezések?"
+  "criteriaPrefix": "Ez egy ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "páros szám" },
+    { "id": 2, "criteria": "páratlan szám" },
+    { "id": 3, "criteria": "prímszám" },
+    { "id": 4, "criteria": "Püthagorasz prímszám" },
+    { "id": 5, "criteria": "Fibonacci-szám" },
+    { "id": 6, "criteria": "Tribonacci-szám" },
+    { "id": 7, "criteria": "Bell-szám" },
+    { "id": 8, "criteria": "Catalan-szám" },
+    { "id": 9, "criteria": "Sophie Germain-szám" },
+    { "id": 10, "criteria": "szimmetrikus szám" }
+  ]
 }
 id-ID
 {
-  "searchTitle": "Cari angka baru untuk Petih Digital Anda",
-  "introduction": "Silakan pilih kriteria untuk mencari angka bulat positif favorit Anda (disebutkan di bawah sebagai X)",
-  "errorTextMessage": "Nilai minimum dan maksimum harus berupa bilangan bulat antara 0 dan 1000, termasuk. Nilai minimum harus kurang dari atau sama dengan nilai maksimum.",
-  "termExplanation": "Apa arti istilah-istilah ini?"
+  "criteriaPrefix": "Ini adalah ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "bilangan genap" },
+    { "id": 2, "criteria": "bilangan ganjil" },
+    { "id": 3, "criteria": "bilangan prima" },
+    { "id": 4, "criteria": "bilangan prima Pythagoras" },
+    { "id": 5, "criteria": "bilangan Fibonacci" },
+    { "id": 6, "criteria": "bilangan Tribonacci" },
+    { "id": 7, "criteria": "bilangan Bell" },
+    { "id": 8, "criteria": "bilangan Catalan" },
+    { "id": 9, "criteria": "bilangan Sophie Germain" },
+    { "id": 10, "criteria": "bilangan simetris" }
+  ]
 }
 it-IT
 {
-  "searchTitle": "Cerca nuovi numeri per il tuo Scrigno Digitale",
-  "introduction": "Seleziona i criteri per cercare i tuoi numeri interi positivi preferiti (denotati sotto come X)",
-  "errorTextMessage": "I valori minimi e massimi devono essere numeri interi tra 0 e 1000, inclusi. Il valore minimo deve essere minore o uguale al valore massimo.",
-  "termExplanation": "Cosa significano questi termini?"
+  "criteriaPrefix": "È ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "un numero pari" },
+    { "id": 2, "criteria": "un numero dispari" },
+    { "id": 3, "criteria": "un numero primo" },
+    { "id": 4, "criteria": "un numero primo di Pitagora" },
+    { "id": 5, "criteria": "un numero di Fibonacci" },
+    { "id": 6, "criteria": "un numero di Tribonacci" },
+    { "id": 7, "criteria": "un numero di Bell" },
+    { "id": 8, "criteria": "un numero di Catalano" },
+    { "id": 9, "criteria": "un numero di Sophie Germain" },
+    { "id": 10, "criteria": "un numero simmetrico" }
+  ]
 }
 ja-JP
 {
-  "searchTitle": "あなたのデジタル宝箱に新しい数字を検索",
-  "introduction": "あなたの好きな正の整数を検索するための基準を選択してください（以下Xと表記）",
-  "errorTextMessage": "最小値および最大値は0から1000までの整数でなければなりません。最小値は最大値以下である必要があります。",
-  "termExplanation": "これらの用語はどういう意味ですか？"
+  "criteriaPrefix": "それは ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "偶数" },
+    { "id": 2, "criteria": "奇数" },
+    { "id": 3, "criteria": "素数" },
+    { "id": 4, "criteria": "ピタゴラス素数" },
+    { "id": 5, "criteria": "フィボナッチ数" },
+    { "id": 6, "criteria": "トリボナッチ数" },
+    { "id": 7, "criteria": "ベル数" },
+    { "id": 8, "criteria": "カタラン数" },
+    { "id": 9, "criteria": "ソフィージェルマン数" },
+    { "id": 10, "criteria": "対称数" }
+  ]
 }
 ko-KR
 {
-  "searchTitle": "디지털 보물 상자에 새로운 숫자 검색",
-  "introduction": "좋아하는 양의 정수를 검색하기 위한 기준을 선택하세요 (아래에서 X로 표시)",
-  "errorTextMessage": "최소값 및 최대값은 0에서 1000 사이의 정수여야 합니다. 최소값은 최대값보다 작거나 같아야 합니다.",
-  "termExplanation": "이 용어들은 무엇을 의미합니까?"
+  "criteriaPrefix": "이것은 ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "짝수" },
+    { "id": 2, "criteria": "홀수" },
+    { "id": 3, "criteria": "소수" },
+    { "id": 4, "criteria": "피타고라스 소수" },
+    { "id": 5, "criteria": "피보나치 수" },
+    { "id": 6, "criteria": "트리보나치 수" },
+    { "id": 7, "criteria": "벨 수" },
+    { "id": 8, "criteria": "카탈란 수" },
+    { "id": 9, "criteria": "소피 제르맹 수" },
+    { "id": 10, "criteria": "대칭 수" }
+  ]
 }
 lv-LV
 {
-  "searchTitle": "Meklējiet jaunus numurus savai Digitālajai dārgumu lādei",
-  "introduction": "Lūdzu, izvēlieties kritērijus, lai meklētu savus iecienītākos pozitīvos veselus skaitļus (atzīmēti zemāk kā X)",
-  "errorTextMessage": "Minimālajām un maksimālajām vērtībām jābūt veseliem skaitļiem no 0 līdz 1000, ieskaitot. Minimālajai vērtībai jābūt mazākai vai vienādai ar maksimālo vērtību.",
-  "termExplanation": "Ko nozīmē šie termini?"
+  "criteriaPrefix": "Tas ir ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "pāra skaitlis" },
+    { "id": 2, "criteria": "nepāra skaitlis" },
+    { "id": 3, "criteria": "pirmskaitlis" },
+    { "id": 4, "criteria": "Pitagora pirmskaitlis" },
+    { "id": 5, "criteria": "Fibonacci skaitlis" },
+    { "id": 6, "criteria": "Tribonacci skaitlis" },
+    { "id": 7, "criteria": "Bella skaitlis" },
+    { "id": 8, "criteria": "Catalana skaitlis" },
+    { "id": 9, "criteria": "Sofijas Žermēna skaitlis" },
+    { "id": 10, "criteria": "simetrisks skaitlis" }
+  ]
 }
 lt-LT
 {
-  "searchTitle": "Ieškokite naujų skaičių savo skaitmeninei lobiui",
-  "introduction": "Pasirinkite kriterijus, kad ieškotumėte mėgstamiausių teigiamų sveikųjų skaičių (pažymėtų žemiau kaip X)",
-  "errorTextMessage": "Mažiausios ir didžiausios vertės turi būti sveikieji skaičiai nuo 0 iki 1000, įskaitant. Mažiausia vertė turi būti mažesnė arba lygi didžiausiajai vertei.",
-  "termExplanation": "Ką reiškia šie terminai?"
+  "criteriaPrefix": "Tai yra ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "lyginis skaičius" },
+    { "id": 2, "criteria": "nelyginis skaičius" },
+    { "id": 3, "criteria": "pirminis skaičius" },
+    { "id": 4, "criteria": "Pitagoro pirminis skaičius" },
+    { "id": 5, "criteria": "Fibonaci skaičius" },
+    { "id": 6, "criteria": "Tribonaci skaičius" },
+    { "id": 7, "criteria": "Belo skaičius" },
+    { "id": 8, "criteria": "Catalano skaičius" },
+    { "id": 9, "criteria": "Sofijos Žermeno skaičius" },
+    { "id": 10, "criteria": "simetrinis skaičius" }
+  ]
 }
 no-NO
 {
-  "searchTitle": "Søk etter nye tall for din Digitale Skattkiste",
-  "introduction": "Velg kriterier for å søke etter dine favoritt positive heltall (angitt nedenfor som X)",
-  "errorTextMessage": "Minimums- og maksimumsverdiene må være heltall mellom 0 og 1000, inkludert. Minimumsverdien må være mindre enn eller lik maksimumsverdien.",
-  "termExplanation": "Hva betyr disse termene?"
+  "criteriaPrefix": "Det er ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "et partall" },
+    { "id": 2, "criteria": "et oddetall" },
+    { "id": 3, "criteria": "et primtall" },
+    { "id": 4, "criteria": "et Pythagoras primtall" },
+    { "id": 5, "criteria": "et Fibonacci-tall" },
+    { "id": 6, "criteria": "et Tribonacci-tall" },
+    { "id": 7, "criteria": "et Bell-tall" },
+    { "id": 8, "criteria": "et Catalan-tall" },
+    { "id": 9, "criteria": "et Sophie Germain-tall" },
+    { "id": 10, "criteria": "et symmetrisk tall" }
+  ]
 }
 nb-NO
 {
-  "searchTitle": "Søk etter nye tall for din Digitale Skattkiste",
-  "introduction": "Velg kriterier for å søke etter dine favoritt positive heltall (angitt nedenfor som X)",
-  "errorTextMessage": "Minimums- og maksimumsverdiene må være heltall mellom 0 og 1000, inkludert. Minimumsverdien må være mindre enn eller lik maksimumsverdien.",
-  "termExplanation": "Hva betyr disse termene?"
+  "criteriaPrefix": "Det er ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "et partall" },
+    { "id": 2, "criteria": "et oddetall" },
+    { "id": 3, "criteria": "et primtall" },
+    { "id": 4, "criteria": "et Pythagoras primtall" },
+    { "id": 5, "criteria": "et Fibonacci-tall" },
+    { "id": 6, "criteria": "et Tribonacci-tall" },
+    { "id": 7, "criteria": "et Bell-tall" },
+    { "id": 8, "criteria": "et Catalan-tall" },
+    { "id": 9, "criteria": "et Sophie Germain-tall" },
+    { "id": 10, "criteria": "et symmetrisk tall" }
+  ]
 }
 fa-IR
 {
-  "searchTitle": "جستجوی اعداد جدید برای صندوق گنج دیجیتال شما",
-  "introduction": "لطفاً معیارهایی را برای جستجوی اعداد صحیح مثبت مورد علاقه خود انتخاب کنید (در زیر به عنوان X ذکر شده است)",
-  "errorTextMessage": "حداقل و حداکثر مقادیر باید اعداد صحیح بین 0 و 1000 باشند. مقدار حداقل باید کمتر یا مساوی مقدار حداکثر باشد.",
-  "termExplanation": "این اصطلاحات به چه معنا هستند؟"
+  "criteriaPrefix": "این است ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "عدد زوج" },
+    { "id": 2, "criteria": "عدد فرد" },
+    { "id": 3, "criteria": "عدد اول" },
+    { "id": 4, "criteria": "عدد اول فیثاغورث" },
+    { "id": 5, "criteria": "عدد فیبوناچی" },
+    { "id": 6, "criteria": "عدد تریبوناچی" },
+    { "id": 7, "criteria": "عدد بل" },
+    { "id": 8, "criteria": "عدد کاتالان" },
+    { "id": 9, "criteria": "عدد سوفی ژرمن" },
+    { "id": 10, "criteria": "عدد متقارن" }
+  ]
 }
 pl-PL
 {
-  "searchTitle": "Szukaj nowych liczb do swojej Cyfrowej Skrzyni Skarbów",
-  "introduction": "Wybierz kryteria wyszukiwania swoich ulubionych dodatnich liczb całkowitych (oznaczonych poniżej jako X)",
-  "errorTextMessage": "Wartości minimalne i maksymalne muszą być liczbami całkowitymi w zakresie od 0 do 1000, włącznie. Wartość minimalna musi być mniejsza lub równa wartości maksymalnej.",
-  "termExplanation": "Co oznaczają te terminy?"
+  "criteriaPrefix": "To jest ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "liczba parzysta" },
+    { "id": 2, "criteria": "liczba nieparzysta" },
+    { "id": 3, "criteria": "liczba pierwsza" },
+    { "id": 4, "criteria": "liczba pierwsza Pitagorasa" },
+    { "id": 5, "criteria": "liczba Fibonacciego" },
+    { "id": 6, "criteria": "liczba Tribonacciego" },
+    { "id": 7, "criteria": "liczba Bella" },
+    { "id": 8, "criteria": "liczba Catalana" },
+    { "id": 9, "criteria": "liczba Sophie Germain" },
+    { "id": 10, "criteria": "liczba symetryczna" }
+  ]
 }
 pt-PT
 {
-  "searchTitle": "Pesquise novos números para o seu Cofre Digital",
-  "introduction": "Por favor, selecione um critério para pesquisar seus números inteiros positivos favoritos (denotados abaixo como X)",
-  "errorTextMessage": "Os valores mínimo e máximo devem ser inteiros entre 0 e 1000, inclusive. O valor mínimo deve ser menor ou igual ao valor máximo.",
-  "termExplanation": "O que significam esses termos?"
+  "criteriaPrefix": "É ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "um número par" },
+    { "id": 2, "criteria": "um número ímpar" },
+    { "id": 3, "criteria": "um número primo" },
+    { "id": 4, "criteria": "um número primo de Pitágoras" },
+    { "id": 5, "criteria": "um número de Fibonacci" },
+    { "id": 6, "criteria": "um número de Tribonacci" },
+    { "id": 7, "criteria": "um número de Bell" },
+    { "id": 8, "criteria": "um número de Catalan" },
+    { "id": 9, "criteria": "um número de Sophie Germain" },
+    { "id": 10, "criteria": "um número simétrico" }
+  ]
 }
 pa-IN
 {
-  "searchTitle": "ਆਪਣੇ ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨੇ ਲਈ ਨੰਬਰ ਖੋਜੋ",
-  "introduction": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਮਨਪਸੰਦ ਧਨਾਤਮਕ ਪੂਰਨ ਅੰਕਾਂ ਦੀ ਖੋਜ ਕਰਨ ਲਈ ਮਾਪਦੰਡ ਚੁਣੋ (ਹੇਠਾਂ X ਵਜੋਂ ਦਰਸਾਇਆ ਗਿਆ)",
-  "errorTextMessage": "ਘੱਟੋ-ਘੱਟ ਅਤੇ ਵੱਧ ਤੋਂ ਵੱਧ ਮੁੱਲ 0 ਅਤੇ 1000 ਦੇ ਵਿਚਕਾਰ ਪੂਰਨ ਅੰਕ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ। ਘੱਟੋ-ਘੱਟ ਮੁੱਲ ਵੱਧ ਤੋਂ ਵੱਧ ਮੁੱਲ ਤੋਂ ਘਟ ਜਾਂ ਬਰਾਬਰ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।",
-  "termExplanation": "ਇਹ ਸ਼ਬਦ ਕੀ ਮਤਲਬ ਹੈ?"
+  "criteriaPrefix": "ਇਹ ਹੈ ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "ਇੱਕ ਜੋੜੀ ਸੰਖਿਆ" },
+    { "id": 2, "criteria": "ਇੱਕ ਵਿਹਾਂ ਸੰਖਿਆ" },
+    { "id": 3, "criteria": "ਇੱਕ ਪ੍ਰਾਈਮ ਨੰਬਰ" },
+    { "id": 4, "criteria": "ਇੱਕ ਪਾਈਥਾਗੋਰਸ ਪ੍ਰਾਈਮ ਨੰਬਰ" },
+    { "id": 5, "criteria": "ਇੱਕ ਫਿਬੋਨਾਚੀ ਨੰਬਰ" },
+    { "id": 6, "criteria": "ਇੱਕ ਟ੍ਰਿਬੋਨਾਚੀ ਨੰਬਰ" },
+    { "id": 7, "criteria": "ਇੱਕ ਬੇਲ ਦਾ ਨੰਬਰ" },
+    { "id": 8, "criteria": "ਇੱਕ ਕੈਟਲਾਨ ਨੰਬਰ" },
+    { "id": 9, "criteria": "ਇੱਕ ਸੋਫੀ ਜਰਮੈਨ ਦੀ ਸੰਖਿਆ" },
+    { "id": 10, "criteria": "ਇੱਕ ਸਮਮਿਤੀ ਸੰਖਿਆ" }
+  ]
 }
 ro-RO
 {
-  "searchTitle": "Căutați numere noi pentru Cufărul vostru Digital",
-  "introduction": "Vă rugăm să selectați criterii pentru a căuta numerele voastre întregi pozitive preferate (denotate mai jos ca X)",
-  "errorTextMessage": "Valorile minime și maxime trebuie să fie numere întregi între 0 și 1000, inclusiv. Valoarea minimă trebuie să fie mai mică sau egală cu valoarea maximă.",
-  "termExplanation": "Ce înseamnă acești termeni?"
+  "criteriaPrefix": "Este ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "un număr par" },
+    { "id": 2, "criteria": "un număr impar" },
+    { "id": 3, "criteria": "un număr prim" },
+    { "id": 4, "criteria": "un număr prim al lui Pitagora" },
+    { "id": 5, "criteria": "un număr Fibonacci" },
+    { "id": 6, "criteria": "un număr Tribonacci" },
+    { "id": 7, "criteria": "un număr Bell" },
+    { "id": 8, "criteria": "un număr Catalan" },
+    { "id": 9, "criteria": "un număr Sophie Germain" },
+    { "id": 10, "criteria": "un număr simetric" }
+  ]
 }
 ru-RU
 {
-  "searchTitle": "Поиск новых чисел для вашего Цифрового сундука",
-  "introduction": "Пожалуйста, выберите критерии для поиска ваших любимых положительных целых чисел (обозначенных ниже как X)",
-  "errorTextMessage": "Минимальные и максимальные значения должны быть целыми числами от 0 до 1000 включительно. Минимальное значение должно быть меньше или равно максимальному значению.",
-  "termExplanation": "Что означают эти термины?"
+  "criteriaPrefix": "Это ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "четное число" },
+    { "id": 2, "criteria": "нечетное число" },
+    { "id": 3, "criteria": "простое число" },
+    { "id": 4, "criteria": "простое число Пифагора" },
+    { "id": 5, "criteria": "число Фибоначчи" },
+    { "id": 6, "criteria": "число Трибоначчи" },
+    { "id": 7, "criteria": "число Белла" },
+    { "id": 8, "criteria": "число Каталана" },
+    { "id": 9, "criteria": "число Софи Жермен" },
+    { "id": 10, "criteria": "симметричное число" }
+  ]
 }
 sr-RS
 {
-  "searchTitle": "Претражите нове бројеве за ваше Дигитално Благо",
-  "introduction": "Молимо одаберите критеријуме за претрагу ваших омиљених позитивних целих бројева (означених испод као X)",
-  "errorTextMessage": "Минималне и максималне вредности морају бити цели бројеви између 0 и 1000, укључујући. Минимална вредност мора бити мања или једнака максималној вредности.",
-  "termExplanation": "Шта значе ови термини?"
+  "criteriaPrefix": "То је ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "паран број" },
+    { "id": 2, "criteria": "непаран број" },
+    { "id": 3, "criteria": "прост број" },
+    { "id": 4, "criteria": "питагорејски прост број" },
+    { "id": 5, "criteria": "Фибоначијев број" },
+    { "id": 6, "criteria": "Трибоначијев број" },
+    { "id": 7, "criteria": "Белов број" },
+    { "id": 8, "criteria": "Каталанов број" },
+    { "id": 9, "criteria": "број Софи Жермен" },
+    { "id": 10, "criteria": "симетричан број" }
+  ]
 }
 sk-SK
 {
-  "searchTitle": "Hľadať nové čísla pre vašu Digitálnu pokladnicu",
-  "introduction": "Prosím, vyberte kritériá pre vyhľadávanie vašich obľúbených kladných celých čísel (označených nižšie ako X)",
-  "errorTextMessage": "Minimálne a maximálne hodnoty musia byť celé čísla medzi 0 a 1000 vrátane. Minimálna hodnota musí byť menšia alebo rovná maximálnej hodnote.",
-  "termExplanation": "Čo znamenajú tieto termíny?"
+  "criteriaPrefix": "Je to ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "párne číslo" },
+    { "id": 2, "criteria": "nepárne číslo" },
+    { "id": 3, "criteria": "prvočíslo" },
+    { "id": 4, "criteria": "Pytagorovo prvočíslo" },
+    { "id": 5, "criteria": "Fibonacciho číslo" },
+    { "id": 6, "criteria": "Tribonacciho číslo" },
+    { "id": 7, "criteria": "Bellovo číslo" },
+    { "id": 8, "criteria": "Catalanovo číslo" },
+    { "id": 9, "criteria": "Sophie Germain číslo" },
+    { "id": 10, "criteria": "symetrické číslo" }
+  ]
 }
 sl-SI
 {
-  "searchTitle": "Poiščite nove številke za vašo Digitalno skrinjo z zakladi",
-  "introduction": "Prosimo, izberite kriterije za iskanje vaših priljubljenih pozitivnih celih števil (označenih spodaj kot X)",
-  "errorTextMessage": "Najmanjše in največje vrednosti morajo biti cela števila med 0 in 1000, vključno. Najmanjša vrednost mora biti manjša ali enaka največji vrednosti.",
-  "termExplanation": "Kaj pomenijo ti izrazi?"
+  "criteriaPrefix": "To je ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "sodo število" },
+    { "id": 2, "criteria": "liho število" },
+    { "id": 3, "criteria": "praštevil" },
+    { "id": 4, "criteria": "Pitagorovo praštevil" },
+    { "id": 5, "criteria": "Fibonaccijevo število" },
+    { "id": 6, "criteria": "Tribonaccijevo število" },
+    { "id": 7, "criteria": "Bellovo število" },
+    { "id": 8, "criteria": "Catalanovo število" },
+    { "id": 9, "criteria": "Sophie Germainovo število" },
+    { "id": 10, "criteria": "simetrično število" }
+  ]
 }
 es-ES
 {
-  "searchTitle": "Busca nuevos números para tu Cofre del Tesoro Digital",
-  "introduction": "Por favor, selecciona criterios para buscar tus números enteros positivos favoritos (denotados a continuación como X)",
-  "errorTextMessage": "Los valores mínimos y máximos deben ser enteros entre 0 y 1000, inclusive. El valor mínimo debe ser menor o igual al valor máximo.",
-  "termExplanation": "¿Qué significan estos términos?"
+  "criteriaPrefix": "Es ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "un número par" },
+    { "id": 2, "criteria": "un número impar" },
+    { "id": 3, "criteria": "un número primo" },
+    { "id": 4, "criteria": "un número primo de Pitágoras" },
+    { "id": 5, "criteria": "un número de Fibonacci" },
+    { "id": 6, "criteria": "un número de Tribonacci" },
+    { "id": 7, "criteria": "un número de Bell" },
+    { "id": 8, "criteria": "un número de Catalán" },
+    { "id": 9, "criteria": "un número de Sophie Germain" },
+    { "id": 10, "criteria": "un número simétrico" }
+  ]
 }
 sv-SE
 {
-  "searchTitle": "Sök nya nummer till din Digitala Skattkista",
-  "introduction": "Välj kriterier för att söka efter dina favoritpositiva heltal (betecknade nedan som X)",
-  "errorTextMessage": "Minsta och största värden måste vara heltal mellan 0 och 1000, inklusive. Minsta värdet måste vara mindre än eller lika med största värdet.",
-  "termExplanation": "Vad betyder dessa termer?"
+  "criteriaPrefix": "Det är ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "ett jämnt tal" },
+    { "id": 2, "criteria": "ett udda tal" },
+    { "id": 3, "criteria": "ett primtal" },
+    { "id": 4, "criteria": "ett Pythagoras primtal" },
+    { "id": 5, "criteria": "ett Fibonaccital" },
+    { "id": 6, "criteria": "ett Tribonaccital" },
+    { "id": 7, "criteria": "ett Belltal" },
+    { "id": 8, "criteria": "ett Catalantal" },
+    { "id": 9, "criteria": "ett Sophie Germain-tal" },
+    { "id": 10, "criteria": "ett symmetriskt tal" }
+  ]
 }
 th-TH
 {
-  "searchTitle": "ค้นหาหมายเลขใหม่สำหรับหีบสมบัติดิจิทัลของคุณ",
-  "introduction": "โปรดเลือกเกณฑ์สำหรับการค้นหาจำนวนเต็มบวกที่คุณชื่นชอบ (ระบุไว้ด้านล่างเป็น X)",
-  "errorTextMessage": "ค่าต่ำสุดและค่าสูงสุดต้องเป็นจำนวนเต็มระหว่าง 0 ถึง 1000 รวมทั้งสิ้น ค่าต่ำสุดต้องน้อยกว่าหรือเท่ากับค่าสูงสุด",
-  "termExplanation": "ข้อกำหนดเหล่านี้หมายความว่าอย่างไร?"
+  "criteriaPrefix": "มันคือ ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "เลขคู่" },
+    { "id": 2, "criteria": "เลขคี่" },
+    { "id": 3, "criteria": "จำนวนเฉพาะ" },
+    { "id": 4, "criteria": "จำนวนเฉพาะปิทากอรัส" },
+    { "id": 5, "criteria": "เลขฟีโบนักชี" },
+    { "id": 6, "criteria": "เลขทริโบนักชี" },
+    { "id": 7, "criteria": "เลขของเบลล์" },
+    { "id": 8, "criteria": "เลขคาทาลัน" },
+    { "id": 9, "criteria": "เลขของโซฟี เจอร์แมง" },
+    { "id": 10, "criteria": "เลขสมมาตร" }
+  ]
 }
 tr-TR
 {
-  "searchTitle": "Dijital Hazine Sandığınız için yeni numaralar arayın",
-  "introduction": "En sevdiğiniz pozitif tam sayı numaralarını aramak için lütfen kriterleri seçin (aşağıda X olarak belirtilmiştir)",
-  "errorTextMessage": "Minimum ve maksimum değerler 0 ile 1000 arasında tamsayılar olmalıdır. Minimum değer, maksimum değerden küçük veya ona eşit olmalıdır.",
-  "termExplanation": "Bu terimler ne anlama geliyor?"
+  "criteriaPrefix": "Bu ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "çift bir sayı" },
+    { "id": 2, "criteria": "tek bir sayı" },
+    { "id": 3, "criteria": "asal bir sayı" },
+    { "id": 4, "criteria": "Pythagoras asal sayısı" },
+    { "id": 5, "criteria": "Fibonacci sayısı" },
+    { "id": 6, "criteria": "Tribonacci sayısı" },
+    { "id": 7, "criteria": "Bell sayısı" },
+    { "id": 8, "criteria": "Catalan sayısı" },
+    { "id": 9, "criteria": "Sophie Germain sayısı" },
+    { "id": 10, "criteria": "simetrik bir sayı" }
+  ]
 }
 uk-UA
 {
-  "searchTitle": "Шукайте нові номери для вашої Цифрової скарбниці",
-  "introduction": "Будь ласка, виберіть критерії для пошуку улюблених позитивних цілих чисел (позначених нижче як X)",
-  "errorTextMessage": "Мінімальні та максимальні значення повинні бути цілими числами від 0 до 1000 включно. Мінімальне значення повинно бути меншим або рівним максимальному значенню.",
-  "termExplanation": "Що означають ці терміни?"
+  "criteriaPrefix": "Це ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "парне число" },
+    { "id": 2, "criteria": "непарне число" },
+    { "id": 3, "criteria": "просте число" },
+    { "id": 4, "criteria": "просте число Піфагора" },
+    { "id": 5, "criteria": "число Фібоначчі" },
+    { "id": 6, "criteria": "число Трибоначчі" },
+    { "id": 7, "criteria": "число Белла" },
+    { "id": 8, "criteria": "число Каталана" },
+    { "id": 9, "criteria": "число Софі Жермен" },
+    { "id": 10, "criteria": "симетричне число" }
+  ]
 }
 vi-VN
 {
-  "searchTitle": "Tìm kiếm số mới cho Rương kho báu Kỹ thuật số của bạn",
-  "introduction": "Vui lòng chọn tiêu chí để tìm kiếm số nguyên dương yêu thích của bạn (được ký hiệu bên dưới là X)",
-  "errorTextMessage": "Các giá trị tối thiểu và tối đa phải là số nguyên từ 0 đến 1000, bao gồm. Giá trị tối thiểu phải nhỏ hơn hoặc bằng giá trị tối đa.",
-  "termExplanation": "Những thuật ngữ này có nghĩa là gì?"
+  "criteriaPrefix": "Nó là ",
+  "criteriaIndexedList": [
+    { "id": 1, "criteria": "số chẵn" },
+    { "id": 2, "criteria": "số lẻ" },
+    { "id": 3, "criteria": "số nguyên tố" },
+    { "id": 4, "criteria": "số nguyên tố Pythagoras" },
+    { "id": 5, "criteria": "số Fibonacci" },
+    { "id": 6, "criteria": "số Tribonacci" },
+    { "id": 7, "criteria": "số Bell" },
+    { "id": 8, "criteria": "số Catalan" },
+    { "id": 9, "criteria": "số Sophie Germain" },
+    { "id": 10, "criteria": "số đối xứng" }
+  ]
 }
+
 
 

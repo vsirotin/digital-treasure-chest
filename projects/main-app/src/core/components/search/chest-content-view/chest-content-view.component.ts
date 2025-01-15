@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Chest } from '../../../../shared/classes/chest';
 import { MatCardModule } from '@angular/material/card';
 import { NumberExpert } from '../../../classes/number-expert/number-expert';
-import { NumberPropertiesNameHolder } from '../../../classes/number-expert/number-properties-name-holder';
+import { ISearchEntry, NumberPropertiesNameHolder } from '../../../classes/number-expert/number-properties-name-holder';
 import * as uiDefault from '../../../../assets/languages/core/components/search/chest-content-view/lang/1/en-US.json';
 import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
 
@@ -20,7 +20,10 @@ export class ChetContentViewComponent implements ILocalizationClient<IChetViewUI
   listNumbersInTreasure: number[] = [];
 
   isClearButtonEnabled: boolean = false;
-  prefix: string = NumberPropertiesNameHolder.criteriaPrefix;
+
+  numberPropertiesNameHolder: NumberPropertiesNameHolder = new NumberPropertiesNameHolder();
+  criteriaPrefix: string;
+  criteriaMap: ISearchEntry[];
 
   private localizer: ILocalizer;
 
@@ -28,6 +31,9 @@ export class ChetContentViewComponent implements ILocalizationClient<IChetViewUI
 
     this.localizer = LocalizerFactory.createLocalizer<IChetViewUI>("assets/languages/core/components/search/chest-content-view/lang", 1, this.ui, this);
 
+    this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
+    this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
+   
     Chest.chestChanged$.subscribe((items: number[]) => {
       this.listNumbersInTreasure = items;
       this.isClearButtonEnabled = items.length > 0;
@@ -35,11 +41,14 @@ export class ChetContentViewComponent implements ILocalizationClient<IChetViewUI
   }
   updateLocalization(data: IChetViewUI): void {
     this.ui = data;
+
+    this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
+    this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
   }
 
   getItemDetails(item: number): string[] {
     const result : string[] = [];
-    NumberPropertiesNameHolder.criteriaIndexedList.forEach((pair) => {
+    this.criteriaMap.forEach((pair) => {
 
       const id = pair.id;
       if ((id == 1) && (NumberExpert.isEven(item))) {

@@ -1,15 +1,38 @@
-export class NumberPropertiesNameHolder {
-    static criteriaPrefix = "It is ";
-    static criteriaIndexedList = [
-      { id: 1, criteria: "an even number"},
-      { id: 2, criteria: "an  odd number" },
-      { id: 3, criteria: "a prime number" },
-      { id: 4, criteria: "a Pythagoras prime number" },
-      { id: 5, criteria: "a Fibbonacci number" },
-      { id: 6, criteria: "a Tribonnaci number" },
-      { id: 7, criteria: "a Bell's number" },
-      { id: 8, criteria: "a Catalan number" },
-      { id: 9, criteria: "a Sophie Germain's number" },
-      { id: 10, criteria: "a symmetrical number" }
-    ];
+import * as uiDefault from '../../../assets/languages/core/classes/number-expert/lang/1/en-US.json';
+import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
+export class NumberPropertiesNameHolder implements ILocalizationClient<INumberPropertiesNameHolder> {
+
+  localizer: ILocalizer;
+
+  data : INumberPropertiesNameHolder = (uiDefault as any).default;
+
+
+
+  constructor() {
+      this.localizer = LocalizerFactory.createLocalizer<INumberPropertiesNameHolder>("assets/languages/core/classes/number-expert/lang", 1, this.data, this);
+  }
+  
+  updateLocalization(data: INumberPropertiesNameHolder): void {
+    this.data = data;
+  }
+
+  getCriteriaPrefix(): string {
+    return this.data.criteriaPrefix;
+  }
+  getCriteriaIndexedList(): ISearchEntry[] {
+    return this.data.criteriaIndexedList;
+  }
+
 }
+
+
+export interface ISearchEntry {
+  id: number;
+  criteria: string;
+}
+
+interface INumberPropertiesNameHolder {
+  criteriaPrefix: string;
+  criteriaIndexedList: ISearchEntry[];
+}
+

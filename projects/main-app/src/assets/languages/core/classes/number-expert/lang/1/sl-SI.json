@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "To je ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "sodo število"
+    },
+    {
+      "id": 2,
+      "criteria": "liho število"
+    },
+    {
+      "id": 3,
+      "criteria": "praštevil"
+    },
+    {
+      "id": 4,
+      "criteria": "Pitagorovo praštevil"
+    },
+    {
+      "id": 5,
+      "criteria": "Fibonaccijevo število"
+    },
+    {
+      "id": 6,
+      "criteria": "Tribonaccijevo število"
+    },
+    {
+      "id": 7,
+      "criteria": "Bellovo število"
+    },
+    {
+      "id": 8,
+      "criteria": "Catalanovo število"
+    },
+    {
+      "id": 9,
+      "criteria": "Sophie Germainovo število"
+    },
+    {
+      "id": 10,
+      "criteria": "simetrično število"
+    }
+  ]
+}

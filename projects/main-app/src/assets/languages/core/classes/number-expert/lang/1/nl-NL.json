@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Het is ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "een even getal"
+    },
+    {
+      "id": 2,
+      "criteria": "een oneven getal"
+    },
+    {
+      "id": 3,
+      "criteria": "een priemgetal"
+    },
+    {
+      "id": 4,
+      "criteria": "een Pythagoras priemgetal"
+    },
+    {
+      "id": 5,
+      "criteria": "een Fibonacciget"
+    },
+    {
+      "id": 6,
+      "criteria": "een Tribonacciget"
+    },
+    {
+      "id": 7,
+      "criteria": "een Bell-getal"
+    },
+    {
+      "id": 8,
+      "criteria": "een Catalan-getal"
+    },
+    {
+      "id": 9,
+      "criteria": "een Sophie Germain-getal"
+    },
+    {
+      "id": 10,
+      "criteria": "een symmetrisch getal"
+    }
+  ]
+}

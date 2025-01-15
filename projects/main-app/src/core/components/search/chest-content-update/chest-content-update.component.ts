@@ -10,7 +10,7 @@ import { TermExplanationDialog } from '../term-explanation-dialog/TermExplanatio
 import { Searcher } from '../../../classes/searcher/searcher';
 import { SerachResultCardComponent } from './search-result-card/search-result-card.component';
 import { Chest } from '../../../../shared/classes/chest';
-import { NumberPropertiesNameHolder } from '../../../classes/number-expert/number-properties-name-holder';
+import { ISearchEntry, NumberPropertiesNameHolder } from '../../../classes/number-expert/number-properties-name-holder';
 import * as uiDefault from '../../../../assets/languages/core/components/search/chest-content-view/lang/1/en-US.json';
 import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
 
@@ -33,20 +33,28 @@ export class ChetContentUpdateComponent implements ILocalizationClient<ISearchUI
 
   ui: ISearchUI = (uiDefault as any).default;
 
-  criteriaPrefix = NumberPropertiesNameHolder.criteriaPrefix;
-  criteriaMap = NumberPropertiesNameHolder.criteriaIndexedList;
+  numberPropertiesNameHolder: NumberPropertiesNameHolder = new NumberPropertiesNameHolder();
+
+  criteriaPrefix: string;
+  criteriaMap: ISearchEntry[];
 
   private localizer: ILocalizer;
 
   constructor() {
     this.localizer = LocalizerFactory.createLocalizer<ISearchUI>("assets/languages/core/components/search/chest-content-update/lang", 1, this.ui, this);
 
+    this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
+    this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
+    
     Chest.chestChanged$.subscribe((items: number[]) => {
       this.searchResultCardIsVisible = false;
     });
   }
   updateLocalization(data: ISearchUI): void {
     this.ui = data;
+
+    this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
+    this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
   }
 
 
@@ -124,14 +132,6 @@ export class ChetContentUpdateComponent implements ILocalizationClient<ISearchUI
   }
 
 }
-
-
-interface ISearchEntry {
-  id: number;
-  criteria: string;
-  explanation?: string;
-}
-
 interface ISearchUI {
   searchTitle: string;
   introduction: string;
