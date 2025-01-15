@@ -89,6 +89,7 @@ export class MainComponent implements OnInit, OnDestroy, ILocalizationClient<IMa
   }
   updateLocalization(data: IMainUI): void {
     this.ui  = data;
+    this.titleService.setTitle(this.ui.title); 
   }
 
   async ngOnInit() {
