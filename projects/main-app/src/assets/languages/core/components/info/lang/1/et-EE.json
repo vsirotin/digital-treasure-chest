@@ -1,0 +1,10 @@
+{
+  "greeting": "Tere tulemast digitaalsesse aardekirstu!",
+  "overview": "See rakendus võimaldab teil saada hindamatute aarete omanikuks ja neid turvaliselt salvestada, kuid samal ajal tasuta.",
+  "explanation": "Need aarded on imelised numbrid. Ja saate neid salvestada oma brauseri mällu.",
+  "howToUse": "Saate valida need aarded otsingulehel. Määrake intervall ja numbrite omadused, mida soovite omada. Kui liiga palju numbreid vastab nendele kriteeriumidele ja kõik ei mahu teie aardekirstu, muutke valikukriteeriume.",
+  "whereExplanation": "Valikulehe allosas näete lühikirjeldust valitud numbrite märkimisväärsetest omadustest.",
+  "certificate": "Seejärel näete nende numbrite täidetud ja allkirjastatud omanditunnistust.",
+  "settings": "Seadete leht aitab teil määrata soovitud keele, kui see ei juhtunud automaatselt.",
+  "wisch": "Soovime teile meeldivat aega oma numbrite valimisel ja edasist naudingut nende aarete omamisel!"
+}

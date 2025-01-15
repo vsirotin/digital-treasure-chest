@@ -1,0 +1,10 @@
+{
+  "greeting": "¡Bienvenido a la caja del tesoro digital!",
+  "overview": "Esta aplicación te permitirá convertirte en propietario de tesoros invaluables y almacenarlos de forma segura, pero al mismo tiempo de forma gratuita.",
+  "explanation": "Estos tesoros son números maravillosos. Y puedes almacenarlos en la memoria de tu navegador.",
+  "howToUse": "Puedes seleccionar estos tesoros en la página de búsqueda. Especifica el intervalo y las propiedades de los números que te gustaría poseer. Si demasiados números cumplen con estos criterios y todos ellos no caben en tu caja del tesoro, cambia los criterios de selección.",
+  "whereExplanation": "En la parte inferior de la página de selección, puedes ver una breve descripción de las propiedades notables de los números que eliges.",
+  "certificate": "Luego puedes ver un certificado de propiedad completado y firmado para esos números.",
+  "settings": "La página de configuración te ayudará a configurar el idioma deseado si no se hizo automáticamente.",
+  "wisch": "¡Te deseamos un tiempo agradable seleccionando tus números y un mayor disfrute al poseer estos tesoros!"
+}

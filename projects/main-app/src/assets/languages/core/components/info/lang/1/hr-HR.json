@@ -1,0 +1,10 @@
+{
+  "greeting": "Dobrodošli u digitalnu škrinju s blagom!",
+  "overview": "Ova aplikacija će vam omogućiti da postanete vlasnik neprocjenjivih blaga i da ih sigurno pohranite, ali istovremeno besplatno.",
+  "explanation": "Ova blaga su prekrasni brojevi. I možete ih pohraniti u memoriju vašeg preglednika.",
+  "howToUse": "Možete odabrati ova blaga na stranici za pretraživanje. Navedite interval i svojstva brojeva koje želite posjedovati. Ako previše brojeva ispunjava ove kriterije i svi ne stanu u vašu škrinju s blagom, promijenite kriterije odabira.",
+  "whereExplanation": "Na dnu stranice za odabir možete vidjeti kratak opis izvanrednih svojstava brojeva koje odaberete.",
+  "certificate": "Zatim možete vidjeti dovršenu i potpisanu potvrdu o vlasništvu za te brojeve.",
+  "settings": "Stranica s postavkama pomoći će vam postaviti željeni jezik ako se to nije dogodilo automatski.",
+  "wisch": "Želimo vam ugodno vrijeme u odabiru vaših brojeva i daljnje uživanje u posjedovanju tih blaga!"
+}

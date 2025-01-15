@@ -1,0 +1,10 @@
+{
+  "greeting": "Velkommen til den digitale skattekisten!",
+  "overview": "Denne applikasjonen vil tillate deg å bli eier av uvurderlige skatter og lagre dem sikkert, men samtidig gratis.",
+  "explanation": "Disse skattene er fantastiske tall. Og du kan lagre dem i minnet til nettleseren din.",
+  "howToUse": "Du kan velge disse skattene på søkesiden. Spesifiser intervallet og egenskapene til tallene du ønsker å eie. Hvis for mange tall oppfyller disse kriteriene og alle ikke passer i skattekisten din, endre utvalgskriteriene.",
+  "whereExplanation": "På bunnen av utvalgssiden kan du se en kort beskrivelse av de bemerkelsesverdige egenskapene til tallene du velger.",
+  "certificate": "Deretter kan du se et utfylt og signert eiersertifikat for disse tallene.",
+  "settings": "Innstillingssiden vil hjelpe deg med å sette ønsket språk hvis det ikke skjedde automatisk.",
+  "wisch": "Vi ønsker deg en hyggelig tid med å velge tallene dine og videre glede av å eie disse skattene!"
+}

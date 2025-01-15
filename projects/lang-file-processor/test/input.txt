@@ -1,233 +1,468 @@
 en-US
 {
-    "viewTemplate": "Your chest contains X numbers",
-    "updateTitle": "Search new numbers for your Digital Treasure Chest"
+  "greeting": "Welcome to the digital treasure box!",
+  "overview": "This application will allow you to become an owner in priceless treasures and store them securely, but at the same time for free.",
+  "explanation": "These treasures are wonderful numbers. And you can store them in the memory of your browser.",
+  "howToUse": "You can select these treasures on the search page. Specify the interval and properties of the numbers you would like to possess. If too many numbers meet these criteria and all of them do not fit in your treasure chest, change the selection criteria.",
+  "whereExplanation": "At the bottom of the selection page, you can see a brief description of the remarkable properties of the numbers you choose.",
+  "certificate": "Then you can see a completed and signed certificate of ownership for those numbers.",
+  "settings": "The settings page will help you to set the desired language if it did not happen automatically.",
+  "wisch": "We wish you a pleasant time in selecting your numbers and further enjoyment in owning these treasures!"
 }
 
 ar-SA
 {
-  "viewTemplate": "صندوقك يحتوي على X أرقام",
-  "updateTitle": "ابحث عن أرقام جديدة لصندوق الكنز الرقمي الخاص بك"
+  "greeting": "مرحبًا بك في صندوق الكنز الرقمي!",
+  "overview": "سيسمح لك هذا التطبيق بأن تصبح مالكًا للكنوز التي لا تقدر بثمن وتخزينها بأمان، ولكن في نفس الوقت مجانًا.",
+  "explanation": "هذه الكنوز هي أرقام رائعة. ويمكنك تخزينها في ذاكرة متصفحك.",
+  "howToUse": "يمكنك اختيار هذه الكنوز في صفحة البحث. حدد الفاصل الزمني وخصائص الأرقام التي ترغب في امتلاكها. إذا كانت هناك العديد من الأرقام التي تفي بهذه المعايير ولا تتسع جميعها في صندوق الكنز الخاص بك، فقم بتغيير معايير الاختيار.",
+  "whereExplanation": "في أسفل صفحة الاختيار، يمكنك رؤية وصف موجز للخصائص الرائعة للأرقام التي تختارها.",
+  "certificate": "ثم يمكنك رؤية شهادة الملكية المكتملة والموقعة لتلك الأرقام.",
+  "settings": "ستساعدك صفحة الإعدادات في ضبط اللغة المطلوبة إذا لم يحدث ذلك تلقائيًا.",
+  "wisch": "نتمنى لك وقتًا ممتعًا في اختيار أرقامك والاستمتاع بامتلاك هذه الكنوز!"
 }
 
 bn-BD
 {
-  "viewTemplate": "আপনার চেস্টে X সংখ্যা রয়েছে",
-  "updateTitle": "আপনার ডিজিটাল ট্রেজার চেস্টের জন্য নতুন সংখ্যা অনুসন্ধান করুন"
+  "greeting": "ডিজিটাল ট্রেজার বক্সে আপনাকে স্বাগতম!",
+  "overview": "এই অ্যাপ্লিকেশনটি আপনাকে অমূল্য ধনসম্পদের মালিক হতে এবং সেগুলি নিরাপদে সংরক্ষণ করতে দেবে, তবে একই সাথে বিনামূল্যে।",
+  "explanation": "এই ধনসম্পদগুলি চমৎকার সংখ্যা। এবং আপনি সেগুলি আপনার ব্রাউজারের মেমরিতে সংরক্ষণ করতে পারেন।",
+  "howToUse": "আপনি অনুসন্ধান পৃষ্ঠায় এই ধনসম্পদগুলি নির্বাচন করতে পারেন। আপনি যে সংখ্যাগুলি পেতে চান তার ব্যবধান এবং বৈশিষ্ট্যগুলি নির্দিষ্ট করুন। যদি অনেক সংখ্যক এই মানদণ্ডগুলি পূরণ করে এবং সমস্তগুলি আপনার ট্রেজার চেস্টে ফিট না করে, তবে নির্বাচন মানদণ্ড পরিবর্তন করুন।",
+  "whereExplanation": "নির্বাচন পৃষ্ঠার নীচে, আপনি আপনার নির্বাচিত সংখ্যাগুলির অসাধারণ বৈশিষ্ট্যগুলির একটি সংক্ষিপ্ত বিবরণ দেখতে পারেন।",
+  "certificate": "তারপরে আপনি সেই সংখ্যাগুলির জন্য সম্পূর্ণ এবং স্বাক্ষরিত মালিকানা শংসাপত্র দেখতে পারেন।",
+  "settings": "যদি এটি স্বয়ংক্রিয়ভাবে না ঘটে তবে পছন্দসই ভাষা সেট করতে সেটিংস পৃষ্ঠা আপনাকে সহায়তা করবে।",
+  "wisch": "আমরা আপনাকে আপনার সংখ্যাগুলি নির্বাচন করার সময় একটি আনন্দদায়ক সময় এবং এই ধনসম্পদগুলি মালিকানার আরও উপভোগ কামনা করি!"
 }
 
 bg-BG
 {
-  "viewTemplate": "Вашият сандък съдържа X числа",
-  "updateTitle": "Търсете нови числа за вашия цифров съкровищен сандък"
+  "greeting": "Добре дошли в цифровата съкровищница!",
+  "overview": "Това приложение ще ви позволи да станете собственик на безценни съкровища и да ги съхранявате сигурно, но в същото време безплатно.",
+  "explanation": "Тези съкровища са прекрасни числа. И можете да ги съхранявате в паметта на вашия браузър.",
+  "howToUse": "Можете да изберете тези съкровища на страницата за търсене. Посочете интервала и свойствата на числата, които искате да притежавате. Ако твърде много числа отговарят на тези критерии и всички те не се побират в съкровищницата ви, променете критериите за избор.",
+  "whereExplanation": "В долната част на страницата за избор можете да видите кратко описание на забележителните свойства на избраните от вас числа.",
+  "certificate": "След това можете да видите завършен и подписан сертификат за собственост за тези числа.",
+  "settings": "Страницата с настройки ще ви помогне да зададете желания език, ако това не се случи автоматично.",
+  "wisch": "Желаем ви приятно време при избора на вашите числа и по-нататъшно удоволствие от притежаването на тези съкровища!"
 }
 
 ca-ES
 {
-  "viewTemplate": "El teu cofre conté X números",
-  "updateTitle": "Cerca nous números per al teu Cofre del Tresor Digital"
+  "greeting": "Benvingut a la caixa del tresor digital!",
+  "overview": "Aquesta aplicació et permetrà convertir-te en propietari de tresors inestimables i emmagatzemar-los de manera segura, però al mateix temps de manera gratuïta.",
+  "explanation": "Aquests tresors són números meravellosos. I els pots emmagatzemar a la memòria del teu navegador.",
+  "howToUse": "Pots seleccionar aquests tresors a la pàgina de cerca. Especifica l'interval i les propietats dels números que t'agradaria posseir. Si hi ha massa números que compleixen aquests criteris i tots no caben a la teva caixa del tresor, canvia els criteris de selecció.",
+  "whereExplanation": "A la part inferior de la pàgina de selecció, pots veure una breu descripció de les propietats notables dels números que tries.",
+  "certificate": "Després pots veure un certificat de propietat completat i signat per a aquests números.",
+  "settings": "La pàgina de configuració t'ajudarà a establir l'idioma desitjat si no s'ha fet automàticament.",
+  "wisch": "Et desitgem un temps agradable en la selecció dels teus números i un major gaudi en la possessió d'aquests tresors!"
 }
 
 zh-CN
 {
-  "viewTemplate": "你的箱子里有 X 个数字",
-  "updateTitle": "为你的数字宝箱搜索新数字"
+  "greeting": "欢迎来到数字宝箱！",
+  "overview": "这个应用程序将允许您成为无价之宝的拥有者，并安全地存储它们，但同时是免费的。",
+  "explanation": "这些宝藏是奇妙的数字。您可以将它们存储在浏览器的内存中。",
+  "howToUse": "您可以在搜索页面上选择这些宝藏。指定您希望拥有的数字的间隔和属性。如果有太多数字符合这些标准，并且所有这些数字都不适合您的宝箱，请更改选择标准。",
+  "whereExplanation": "在选择页面的底部，您可以看到所选数字的显著属性的简要说明。",
+  "certificate": "然后，您可以看到这些数字的完整和签名的所有权证书。",
+  "settings": "如果没有自动发生，设置页面将帮助您设置所需的语言。",
+  "wisch": "我们希望您在选择数字时度过愉快的时光，并在拥有这些宝藏时进一步享受！"
 }
 
 hr-HR
 {
-  "viewTemplate": "Vaša škrinja sadrži X brojeva",
-  "updateTitle": "Potražite nove brojeve za svoju Digitalnu Škrinju s Blagom"
+  "greeting": "Dobrodošli u digitalnu škrinju s blagom!",
+  "overview": "Ova aplikacija će vam omogućiti da postanete vlasnik neprocjenjivih blaga i da ih sigurno pohranite, ali istovremeno besplatno.",
+  "explanation": "Ova blaga su prekrasni brojevi. I možete ih pohraniti u memoriju vašeg preglednika.",
+  "howToUse": "Možete odabrati ova blaga na stranici za pretraživanje. Navedite interval i svojstva brojeva koje želite posjedovati. Ako previše brojeva ispunjava ove kriterije i svi ne stanu u vašu škrinju s blagom, promijenite kriterije odabira.",
+  "whereExplanation": "Na dnu stranice za odabir možete vidjeti kratak opis izvanrednih svojstava brojeva koje odaberete.",
+  "certificate": "Zatim možete vidjeti dovršenu i potpisanu potvrdu o vlasništvu za te brojeve.",
+  "settings": "Stranica s postavkama pomoći će vam postaviti željeni jezik ako se to nije dogodilo automatski.",
+  "wisch": "Želimo vam ugodno vrijeme u odabiru vaših brojeva i daljnje uživanje u posjedovanju tih blaga!"
 }
 
 cs-CZ
 {
-  "viewTemplate": "Vaše truhla obsahuje X čísel",
-  "updateTitle": "Hledejte nová čísla pro svou Digitální Truhlu s Pokladem"
+  "greeting": "Vítejte v digitální truhle s pokladem!",
+  "overview": "Tato aplikace vám umožní stát se vlastníkem neocenitelných pokladů a bezpečně je uložit, ale zároveň zdarma.",
+  "explanation": "Tyto poklady jsou úžasná čísla. A můžete je uložit do paměti svého prohlížeče.",
+  "howToUse": "Můžete vybrat tyto poklady na stránce vyhledávání. Zadejte interval a vlastnosti čísel, která byste chtěli vlastnit. Pokud příliš mnoho čísel splňuje tato kritéria a všechna se nevejdou do vaší truhly s pokladem, změňte kritéria výběru.",
+  "whereExplanation": "Na spodní části stránky výběru můžete vidět stručný popis pozoruhodných vlastností vybraných čísel.",
+  "certificate": "Poté můžete vidět dokončený a podepsaný certifikát vlastnictví pro tato čísla.",
+  "settings": "Stránka nastavení vám pomůže nastavit požadovaný jazyk, pokud se tak nestalo automaticky.",
+  "wisch": "Přejeme vám příjemný čas při výběru vašich čísel a další potěšení z vlastnictví těchto pokladů!"
 }
 
 da-DK
 {
-  "viewTemplate": "Din kiste indeholder X numre",
-  "updateTitle": "Søg efter nye numre til din Digitale Skattekiste"
+  "greeting": "Velkommen til den digitale skattekiste!",
+  "overview": "Denne applikation giver dig mulighed for at blive ejer af uvurderlige skatte og opbevare dem sikkert, men samtidig gratis.",
+  "explanation": "Disse skatte er vidunderlige tal. Og du kan opbevare dem i hukommelsen på din browser.",
+  "howToUse": "Du kan vælge disse skatte på søgesiden. Angiv intervallet og egenskaberne for de tal, du gerne vil eje. Hvis for mange tal opfylder disse kriterier, og alle ikke passer i din skattekiste, skal du ændre udvælgelseskriterierne.",
+  "whereExplanation": "I bunden af udvælgelsessiden kan du se en kort beskrivelse af de bemærkelsesværdige egenskaber ved de tal, du vælger.",
+  "certificate": "Derefter kan du se et udfyldt og underskrevet ejerskabsbevis for disse tal.",
+  "settings": "Indstillingssiden hjælper dig med at indstille det ønskede sprog, hvis det ikke skete automatisk.",
+  "wisch": "Vi ønsker dig en behagelig tid med at vælge dine tal og yderligere nydelse ved at eje disse skatte!"
 }
 
 nl-NL
 {
-  "viewTemplate": "Je kist bevat X nummers",
-  "updateTitle": "Zoek nieuwe nummers voor je Digitale Schatkist"
+  "greeting": "Welkom bij de digitale schatkist!",
+  "overview": "Met deze applicatie kun je eigenaar worden van onschatbare schatten en ze veilig opslaan, maar tegelijkertijd gratis.",
+  "explanation": "Deze schatten zijn prachtige getallen. En je kunt ze opslaan in het geheugen van je browser.",
+  "howToUse": "Je kunt deze schatten selecteren op de zoekpagina. Geef het interval en de eigenschappen van de getallen op die je wilt bezitten. Als te veel getallen aan deze criteria voldoen en ze allemaal niet in je schatkist passen, wijzig dan de selectiecriteria.",
+  "whereExplanation": "Onderaan de selecteerpagina kun je een korte beschrijving zien van de opmerkelijke eigenschappen van de getallen die je kiest.",
+  "certificate": "Daarna kun je een voltooid en ondertekend eigendomscertificaat voor die getallen zien.",
+  "settings": "De instellingenpagina helpt je de gewenste taal in te stellen als dit niet automatisch is gebeurd.",
+  "wisch": "We wensen je een prettige tijd bij het selecteren van je getallen en verder plezier bij het bezitten van deze schatten!"
 }
 
 et-EE
 {
-  "viewTemplate": "Teie kirst sisaldab X numbrit",
-  "updateTitle": "Otsige oma Digitaalse Aardekirstu jaoks uusi numbreid"
+  "greeting": "Tere tulemast digitaalsesse aardekirstu!",
+  "overview": "See rakendus võimaldab teil saada hindamatute aarete omanikuks ja neid turvaliselt salvestada, kuid samal ajal tasuta.",
+  "explanation": "Need aarded on imelised numbrid. Ja saate neid salvestada oma brauseri mällu.",
+  "howToUse": "Saate valida need aarded otsingulehel. Määrake intervall ja numbrite omadused, mida soovite omada. Kui liiga palju numbreid vastab nendele kriteeriumidele ja kõik ei mahu teie aardekirstu, muutke valikukriteeriume.",
+  "whereExplanation": "Valikulehe allosas näete lühikirjeldust valitud numbrite märkimisväärsetest omadustest.",
+  "certificate": "Seejärel näete nende numbrite täidetud ja allkirjastatud omanditunnistust.",
+  "settings": "Seadete leht aitab teil määrata soovitud keele, kui see ei juhtunud automaatselt.",
+  "wisch": "Soovime teile meeldivat aega oma numbrite valimisel ja edasist naudingut nende aarete omamisel!"
 }
 
 fi-FI
 {
-  "viewTemplate": "Arkussasi on X numeroa",
-  "updateTitle": "Etsi uusia numeroita Digitaaliseen Aarrearkkuusi"
+  "greeting": "Tervetuloa digitaaliseen aarrearkkuun!",
+  "overview": "Tämä sovellus antaa sinun tulla korvaamattomien aarteiden omistajaksi ja tallentaa ne turvallisesti, mutta samalla ilmaiseksi.",
+  "explanation": "Nämä aarteet ovat upeita numeroita. Ja voit tallentaa ne selaimesi muistiin.",
+  "howToUse": "Voit valita nämä aarteet hakusivulla. Määritä niiden numeroiden väli ja ominaisuudet, jotka haluat omistaa. Jos liian monet numerot täyttävät nämä kriteerit ja kaikki eivät mahdu aarrearkkuusi, muuta valintakriteerejä.",
+  "whereExplanation": "Valintasivun alaosassa näet lyhyen kuvauksen valitsemiesi numeroiden merkittävistä ominaisuuksista.",
+  "certificate": "Sitten näet näiden numeroiden täytetyn ja allekirjoitetun omistustodistuksen.",
+  "settings": "Asetussivu auttaa sinua asettamaan halutun kielen, jos se ei tapahtunut automaattisesti.",
+  "wisch": "Toivotamme sinulle miellyttävää aikaa numeroiden valinnassa ja edelleen nauttimista näiden aarteiden omistamisesta!"
 }
 
 fr-FR
 {
-  "viewTemplate": "Votre coffre contient X numéros",
-  "updateTitle": "Recherchez de nouveaux numéros pour votre Coffre au Trésor Numérique"
+  "greeting": "Bienvenue dans la boîte à trésors numérique!",
+  "overview": "Cette application vous permettra de devenir propriétaire de trésors inestimables et de les stocker en toute sécurité, mais en même temps gratuitement.",
+  "explanation": "Ces trésors sont des nombres merveilleux. Et vous pouvez les stocker dans la mémoire de votre navigateur.",
+  "howToUse": "Vous pouvez sélectionner ces trésors sur la page de recherche. Spécifiez l'intervalle et les propriétés des nombres que vous souhaitez posséder. Si trop de nombres répondent à ces critères et que tous ne tiennent pas dans votre coffre au trésor, modifiez les critères de sélection.",
+  "whereExplanation": "En bas de la page de sélection, vous pouvez voir une brève description des propriétés remarquables des nombres que vous choisissez.",
+  "certificate": "Ensuite, vous pouvez voir un certificat de propriété complété et signé pour ces nombres.",
+  "settings": "La page des paramètres vous aidera à définir la langue souhaitée si cela ne s'est pas fait automatiquement.",
+  "wisch": "Nous vous souhaitons un agréable moment dans la sélection de vos nombres et un plaisir supplémentaire à posséder ces trésors!"
 }
 
 de-DE
 {
-  "viewTemplate": "Ihre Truhe enthält X Zahlen",
-  "updateTitle": "Suchen Sie nach neuen Zahlen für Ihre Digitale Schatztruhe"
+  "greeting": "Willkommen in der digitalen Schatzkiste!",
+  "overview": "Diese Anwendung ermöglicht es Ihnen, Besitzer von unbezahlbaren Schätzen zu werden und sie sicher zu speichern, aber gleichzeitig kostenlos.",
+  "explanation": "Diese Schätze sind wunderbare Zahlen. Und Sie können sie im Speicher Ihres Browsers speichern.",
+  "howToUse": "Sie können diese Schätze auf der Suchseite auswählen. Geben Sie das Intervall und die Eigenschaften der Zahlen an, die Sie besitzen möchten. Wenn zu viele Zahlen diese Kriterien erfüllen und alle nicht in Ihre Schatzkiste passen, ändern Sie die Auswahlkriterien.",
+  "whereExplanation": "Am unteren Rand der Auswahlliste können Sie eine kurze Beschreibung der bemerkenswerten Eigenschaften der von Ihnen ausgewählten Zahlen sehen.",
+  "certificate": "Dann können Sie ein ausgefülltes und unterschriebenes Eigentumszertifikat für diese Zahlen sehen.",
+  "settings": "Die Einstellungsseite hilft Ihnen, die gewünschte Sprache einzustellen, falls dies nicht automatisch geschehen ist.",
+  "wisch": "Wir wünschen Ihnen eine angenehme Zeit bei der Auswahl Ihrer Zahlen und weiterhin viel Freude am Besitz dieser Schätze!"
 }
 
 el-GR
 {
-  "viewTemplate": "Το σεντούκι σας περιέχει X αριθμούς",
-  "updateTitle": "Αναζητήστε νέους αριθμούς για το Ψηφιακό Σεντούκι Θησαυρού σας"
+  "greeting": "Καλώς ήρθατε στο ψηφιακό κουτί θησαυρού!",
+  "overview": "Αυτή η εφαρμογή θα σας επιτρέψει να γίνετε ιδιοκτήτης ανεκτίμητων θησαυρών και να τους αποθηκεύσετε με ασφάλεια, αλλά ταυτόχρονα δωρεάν.",
+  "explanation": "Αυτοί οι θησαυροί είναι υπέροχοι αριθμοί. Και μπορείτε να τους αποθηκεύσετε στη μνήμη του προγράμματος περιήγησής σας.",
+  "howToUse": "Μπορείτε να επιλέξετε αυτούς τους θησαυρούς στη σελίδα αναζήτησης. Καθορίστε το διάστημα και τις ιδιότητες των αριθμών που θα θέλατε να κατέχετε. Εάν πάρα πολλοί αριθμοί πληρούν αυτά τα κριτήρια και όλοι δεν χωρούν στο κουτί θησαυρού σας, αλλάξτε τα κριτήρια επιλογής.",
+  "whereExplanation": "Στο κάτω μέρος της σελίδας επιλογής, μπορείτε να δείτε μια σύντομη περιγραφή των αξιοσημείωτων ιδιοτήτων των αριθμών που επιλέγετε.",
+  "certificate": "Στη συνέχεια, μπορείτε να δείτε ένα ολοκληρωμένο και υπογεγραμμένο πιστοποιητικό ιδιοκτησίας για αυτούς τους αριθμούς.",
+  "settings": "Η σελίδα ρυθμίσεων θα σας βοηθήσει να ορίσετε την επιθυμητή γλώσσα εάν δεν έγινε αυτόματα.",
+  "wisch": "Σας ευχόμαστε ευχάριστο χρόνο στην επιλογή των αριθμών σας και περαιτέρω απόλαυση στην κατοχή αυτών των θησαυρών!"
 }
 
 he-IL
 {
-  "viewTemplate": "התיבה שלך מכילה X מספרים",
-  "updateTitle": "חפש מספרים חדשים לתיבת האוצר הדיגיטלית שלך"
+  "greeting": "ברוכים הבאים לקופסת האוצר הדיגיטלית!",
+  "overview": "אפליקציה זו תאפשר לך להפוך לבעלים של אוצרות יקרי ערך ולאחסן אותם בצורה מאובטחת, אך באותו זמן בחינם.",
+  "explanation": "האוצרות האלה הם מספרים נפלאים. ואתה יכול לאחסן אותם בזיכרון של הדפדפן שלך.",
+  "howToUse": "אתה יכול לבחור את האוצרות האלה בדף החיפוש. ציין את הטווח והתכונות של המספרים שברצונך להחזיק. אם יותר מדי מספרים עומדים בקריטריונים האלה וכולם לא מתאימים לקופסת האוצר שלך, שנה את קריטריוני הבחירה.",
+  "whereExplanation": "בתחתית דף הבחירה, תוכל לראות תיאור קצר של התכונות הבולטות של המספרים שאתה בוחר.",
+  "certificate": "לאחר מכן תוכל לראות תעודת בעלות מלאה וחתומה עבור המספרים האלה.",
+  "settings": "דף ההגדרות יעזור לך להגדיר את השפה הרצויה אם זה לא קרה אוטומטית.",
+  "wisch": "אנו מאחלים לך זמן נעים בבחירת המספרים שלך והנאה נוספת מהבעלות על האוצרות האלה!"
 }
 
 hu-HU
 {
-  "viewTemplate": "A ládád X számot tartalmaz",
-  "updateTitle": "Keressen új számokat a Digitális Kincsesládádhoz"
+  "greeting": "Üdvözöljük a digitális kincsesládában!",
+  "overview": "Ez az alkalmazás lehetővé teszi, hogy felbecsülhetetlen értékű kincsek tulajdonosa legyen, és biztonságosan tárolja őket, de ugyanakkor ingyenesen.",
+  "explanation": "Ezek a kincsek csodálatos számok. És tárolhatja őket a böngészője memóriájában.",
+  "howToUse": "Kiválaszthatja ezeket a kincseket a keresési oldalon. Adja meg az intervallumot és a számok tulajdonságait, amelyeket birtokolni szeretne. Ha túl sok szám felel meg ezeknek a kritériumoknak, és mindegyik nem fér el a kincsesládájában, változtassa meg a kiválasztási kritériumokat.",
+  "whereExplanation": "A kiválasztási oldal alján láthatja a kiválasztott számok figyelemre méltó tulajdonságainak rövid leírását.",
+  "certificate": "Ezután láthatja a számokhoz tartozó kitöltött és aláírt tulajdonosi igazolást.",
+  "settings": "A beállítások oldal segít beállítani a kívánt nyelvet, ha ez nem történt meg automatikusan.",
+  "wisch": "Kellemes időtöltést kívánunk a számok kiválasztásában és további élvezetet ezeknek a kincseknek a birtoklásában!"
 }
 
 id-ID
 {
-  "viewTemplate": "Petimu berisi X angka",
-  "updateTitle": "Cari angka baru untuk Peti Harta Karun Digital Anda"
+  "greeting": "Selamat datang di kotak harta karun digital!",
+  "overview": "Aplikasi ini akan memungkinkan Anda menjadi pemilik harta karun yang tak ternilai dan menyimpannya dengan aman, tetapi pada saat yang sama gratis.",
+  "explanation": "Harta karun ini adalah angka-angka yang luar biasa. Dan Anda dapat menyimpannya di memori browser Anda.",
+  "howToUse": "Anda dapat memilih harta karun ini di halaman pencarian. Tentukan interval dan properti angka yang ingin Anda miliki. Jika terlalu banyak angka memenuhi kriteria ini dan semuanya tidak muat di kotak harta karun Anda, ubah kriteria pemilihan.",
+  "whereExplanation": "Di bagian bawah halaman pemilihan, Anda dapat melihat deskripsi singkat tentang sifat luar biasa dari angka-angka yang Anda pilih.",
+  "certificate": "Kemudian Anda dapat melihat sertifikat kepemilikan yang telah diisi dan ditandatangani untuk angka-angka tersebut.",
+  "settings": "Halaman pengaturan akan membantu Anda mengatur bahasa yang diinginkan jika tidak terjadi secara otomatis.",
+  "wisch": "Kami berharap Anda menikmati waktu yang menyenangkan dalam memilih angka-angka Anda dan lebih menikmati memiliki harta karun ini!"
 }
 
 it-IT
 {
-  "viewTemplate": "Il tuo forziere contiene X numeri",
-  "updateTitle": "Cerca nuovi numeri per il tuo Forziere del Tesoro Digitale"
+  "greeting": "Benvenuto nella scatola del tesoro digitale!",
+  "overview": "Questa applicazione ti permetterà di diventare proprietario di tesori inestimabili e di conservarli in sicurezza, ma allo stesso tempo gratuitamente.",
+  "explanation": "Questi tesori sono numeri meravigliosi. E puoi conservarli nella memoria del tuo browser.",
+  "howToUse": "Puoi selezionare questi tesori nella pagina di ricerca. Specifica l'intervallo e le proprietà dei numeri che desideri possedere. Se troppi numeri soddisfano questi criteri e tutti non entrano nella tua scatola del tesoro, cambia i criteri di selezione.",
+  "whereExplanation": "In fondo alla pagina di selezione, puoi vedere una breve descrizione delle proprietà notevoli dei numeri che scegli.",
+  "certificate": "Poi puoi vedere un certificato di proprietà completato e firmato per quei numeri.",
+  "settings": "La pagina delle impostazioni ti aiuterà a impostare la lingua desiderata se non è avvenuto automaticamente.",
+  "wisch": "Ti auguriamo un piacevole tempo nella selezione dei tuoi numeri e ulteriore divertimento nel possedere questi tesori!"
 }
 
 ja-JP
 {
-  "viewTemplate": "あなたのチェストには X 個の数字が含まれています",
-  "updateTitle": "デジタルトレジャーチェストの新しい番号を検索"
+  "greeting": "デジタル宝箱へようこそ！",
+  "overview": "このアプリケーションは、あなたが貴重な宝物の所有者になり、それらを安全に保管することを可能にしますが、同時に無料です。",
+  "explanation": "これらの宝物は素晴らしい数字です。そして、あなたはそれらをブラウザのメモリに保存することができます。",
+  "howToUse": "検索ページでこれらの宝物を選択できます。所有したい数字の範囲とプロパティを指定します。これらの基準を満たす数字が多すぎて、すべてが宝箱に収まらない場合は、選択基準を変更します。",
+  "whereExplanation": "選択ページの下部に、選択した数字の注目すべき特性の簡単な説明が表示されます。",
+  "certificate": "その後、これらの数字の所有権証明書が完成し、署名されたものを見ることができます。",
+  "settings": "設定ページは、希望する言語を自動的に設定しなかった場合に設定するのに役立ちます。",
+  "wisch": "数字を選択する際に楽しい時間を過ごし、これらの宝物を所有することをさらに楽しんでください！"
 }
 
 lv-LV
 {
-  "viewTemplate": "Jūsu lāde satur X numurus",
-  "updateTitle": "Meklējiet jaunus numurus savam Digitālajam Dārgumu Lādei"
+  "greeting": "Laipni lūdzam digitālajā dārgumu kastē!",
+  "overview": "Šī lietotne ļaus jums kļūt par nenovērtējamu dārgumu īpašnieku un tos droši uzglabāt, bet tajā pašā laikā bez maksas.",
+  "explanation": "Šie dārgumi ir brīnišķīgi skaitļi. Un jūs varat tos uzglabāt savas pārlūkprogrammas atmiņā.",
+  "howToUse": "Jūs varat izvēlēties šos dārgumus meklēšanas lapā. Norādiet intervālu un skaitļu īpašības, kuras vēlaties iegūt. Ja pārāk daudz skaitļu atbilst šiem kritērijiem un visi neietilpst jūsu dārgumu kastē, mainiet atlases kritērijus.",
+  "whereExplanation": "Atlases lapas apakšā varat redzēt īsu aprakstu par izvēlēto skaitļu ievērojamajām īpašībām.",
+  "certificate": "Pēc tam jūs varat redzēt aizpildītu un parakstītu īpašumtiesību sertifikātu šiem skaitļiem.",
+  "settings": "Iestatījumu lapa palīdzēs jums iestatīt vēlamo valodu, ja tas nenotika automātiski.",
+  "wisch": "Mēs novēlam jums patīkamu laiku, izvēloties savus skaitļus, un turpmāku prieku, iegūstot šos dārgumus!"
 }
 
 lt-LT
 {
-  "viewTemplate": "Jūsų skrynia turi X numerius",
-  "updateTitle": "Ieškokite naujų numerių savo Skaitmeninei Lobių Skryniai"
+  "greeting": "Sveiki atvykę į skaitmeninę lobio dėžę!",
+  "overview": "Ši programa leis jums tapti neįkainojamų lobių savininku ir saugiai juos laikyti, tačiau tuo pačiu metu nemokamai.",
+  "explanation": "Šie lobiai yra nuostabūs skaičiai. Ir jūs galite juos laikyti savo naršyklės atmintyje.",
+  "howToUse": "Galite pasirinkti šiuos lobius paieškos puslapyje. Nurodykite intervalą ir skaičių savybes, kurias norėtumėte turėti. Jei per daug skaičių atitinka šiuos kriterijus ir visi netelpa į jūsų lobio dėžę, pakeiskite atrankos kriterijus.",
+  "whereExplanation": "Atrankos puslapio apačioje galite pamatyti trumpą pasirinktų skaičių išskirtinių savybių aprašymą.",
+  "certificate": "Tada galite pamatyti užpildytą ir pasirašytą šių skaičių nuosavybės sertifikatą.",
+  "settings": "Nustatymų puslapis padės jums nustatyti norimą kalbą, jei tai neįvyko automatiškai.",
+  "wisch": "Linkime jums malonaus laiko renkantis savo skaičius ir tolesnio malonumo turint šiuos lobius!"
 }
 
 no-NO
 {
-  "viewTemplate": "Kisten din inneholder X tall",
-  "updateTitle": "Søk etter nye tall til din Digitale Skattekiste"
+  "greeting": "Velkommen til den digitale skattekisten!",
+  "overview": "Denne applikasjonen vil tillate deg å bli eier av uvurderlige skatter og lagre dem sikkert, men samtidig gratis.",
+  "explanation": "Disse skattene er fantastiske tall. Og du kan lagre dem i minnet til nettleseren din.",
+  "howToUse": "Du kan velge disse skattene på søkesiden. Spesifiser intervallet og egenskapene til tallene du ønsker å eie. Hvis for mange tall oppfyller disse kriteriene og alle ikke passer i skattekisten din, endre utvalgskriteriene.",
+  "whereExplanation": "På bunnen av utvalgssiden kan du se en kort beskrivelse av de bemerkelsesverdige egenskapene til tallene du velger.",
+  "certificate": "Deretter kan du se et utfylt og signert eiersertifikat for disse tallene.",
+  "settings": "Innstillingssiden vil hjelpe deg med å sette ønsket språk hvis det ikke skjedde automatisk.",
+  "wisch": "Vi ønsker deg en hyggelig tid med å velge tallene dine og videre glede av å eie disse skattene!"
 }
 
 nb-NO
 {
-  "viewTemplate": "Kisten din inneholder X tall",
-  "updateTitle": "Søk etter nye tall til din Digitale Skattekiste"
+  "greeting": "Velkommen til den digitale skattekisten!",
+  "overview": "Denne applikasjonen vil tillate deg å bli eier av uvurderlige skatter og lagre dem sikkert, men samtidig gratis.",
+  "explanation": "Disse skattene er fantastiske tall. Og du kan lagre dem i minnet til nettleseren din.",
+  "howToUse": "Du kan velge disse skattene på søkesiden. Spesifiser intervallet og egenskapene til tallene du ønsker å eie. Hvis for mange tall oppfyller disse kriteriene og alle ikke passer i skattekisten din, endre utvalgskriteriene.",
+  "whereExplanation": "På bunnen av utvalgssiden kan du se en kort beskrivelse av de bemerkelsesverdige egenskapene til tallene du velger.",
+  "certificate": "Deretter kan du se et utfylt og signert eiersertifikat for disse tallene.",
+  "settings": "Innstillingssiden vil hjelpe deg med å sette ønsket språk hvis det ikke skjedde automatisk.",
+  "wisch": "Vi ønsker deg en hyggelig tid med å velge tallene dine og videre glede av å eie disse skattene!"
 }
 
 fa-IR
 {
-  "viewTemplate": "صندوق شما حاوی X عدد است",
-  "updateTitle": "به دنبال اعداد جدید برای صندوق گنج دیجیتال خود باشید"
+  "greeting": "به جعبه گنج دیجیتال خوش آمدید!",
+  "overview": "این برنامه به شما امکان می‌دهد صاحب گنج‌های بی‌قیمت شوید و آنها را به‌طور ایمن ذخیره کنید، اما در عین حال به‌طور رایگان.",
+  "explanation": "این گنج‌ها اعداد شگفت‌انگیزی هستند. و شما می‌توانید آنها را در حافظه مرورگر خود ذخیره کنید.",
+  "howToUse": "می‌توانید این گنج‌ها را در صفحه جستجو انتخاب کنید. بازه و ویژگی‌های اعدادی را که می‌خواهید داشته باشید مشخص کنید. اگر تعداد زیادی عدد این معیارها را برآورده کنند و همه آنها در جعبه گنج شما جا نشوند، معیارهای انتخاب را تغییر دهید.",
+  "whereExplanation": "در پایین صفحه انتخاب، می‌توانید توضیح مختصری از ویژگی‌های قابل توجه اعدادی که انتخاب می‌کنید را ببینید.",
+  "certificate": "سپس می‌توانید گواهی مالکیت تکمیل شده و امضا شده برای آن اعداد را ببینید.",
+  "settings": "صفحه تنظیمات به شما کمک می‌کند زبان مورد نظر را تنظیم کنید اگر به‌طور خودکار تنظیم نشده باشد.",
+  "wisch": "ما برای شما زمان خوشی را در انتخاب اعدادتان و لذت بیشتر از داشتن این گنج‌ها آرزو می‌کنیم!"
 }
 
 pl-PL
 {
-  "viewTemplate": "Twoja skrzynia zawiera X liczb",
-  "updateTitle": "Szukaj nowych liczb do swojej Cyfrowej Skrzyni Skarbów"
+  "greeting": "Witamy w cyfrowej skrzyni skarbów!",
+  "overview": "Ta aplikacja pozwoli ci zostać właścicielem bezcennych skarbów i przechowywać je bezpiecznie, ale jednocześnie za darmo.",
+  "explanation": "Te skarby to wspaniałe liczby. I możesz je przechowywać w pamięci swojej przeglądarki.",
+  "howToUse": "Możesz wybrać te skarby na stronie wyszukiwania. Określ przedział i właściwości liczb, które chcesz posiadać. Jeśli zbyt wiele liczb spełnia te kryteria i wszystkie nie mieszczą się w twojej skrzyni skarbów, zmień kryteria wyboru.",
+  "whereExplanation": "Na dole strony wyboru możesz zobaczyć krótki opis niezwykłych właściwości wybranych liczb.",
+  "certificate": "Następnie możesz zobaczyć wypełniony i podpisany certyfikat własności dla tych liczb.",
+  "settings": "Strona ustawień pomoże ci ustawić żądany język, jeśli nie zostało to zrobione automatycznie.",
+  "wisch": "Życzymy miłego czasu przy wyborze swoich liczb i dalszej radości z posiadania tych skarbów!"
 }
 
 pt-PT
 {
-  "viewTemplate": "O seu baú contém X números",
-  "updateTitle": "Procure novos números para o seu Baú do Tesouro Digital"
+  "greeting": "Bem-vindo à caixa do tesouro digital!",
+  "overview": "Esta aplicação permitirá que você se torne proprietário de tesouros inestimáveis e os armazene com segurança, mas ao mesmo tempo gratuitamente.",
+  "explanation": "Esses tesouros são números maravilhosos. E você pode armazená-los na memória do seu navegador.",
+  "howToUse": "Você pode selecionar esses tesouros na página de pesquisa. Especifique o intervalo e as propriedades dos números que você gostaria de possuir. Se muitos números atenderem a esses critérios e todos eles não couberem na sua caixa do tesouro, altere os critérios de seleção.",
+  "whereExplanation": "Na parte inferior da página de seleção, você pode ver uma breve descrição das propriedades notáveis dos números que você escolhe.",
+  "certificate": "Então você pode ver um certificado de propriedade preenchido e assinado para esses números.",
+  "settings": "A página de configurações ajudará você a definir o idioma desejado, se isso não acontecer automaticamente.",
+  "wisch": "Desejamos a você um tempo agradável na seleção de seus números e mais prazer em possuir esses tesouros!"
 }
 
 pa-IN
 {
-  "viewTemplate": "ਤੁਹਾਡੀ ਛਾਤੀ ਵਿੱਚ X ਨੰਬਰ ਹਨ",
-  "updateTitle": "ਆਪਣੇ ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨੇ ਦੇ ਸੰਦ ਲਈ ਨਵੇਂ ਨੰਬਰ ਖੋਜੋ"
+  "greeting": "ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨੇ ਦੇ ਸੰਦ ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ!",
+  "overview": "ਇਹ ਐਪਲੀਕੇਸ਼ਨ ਤੁਹਾਨੂੰ ਬੇਮੁੱਲ ਖਜ਼ਾਨਿਆਂ ਦਾ ਮਾਲਕ ਬਣਨ ਦੀ ਆਗਿਆ ਦੇਵੇਗੀ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਤੌਰ 'ਤੇ ਸਟੋਰ ਕਰਨ ਦੀ ਆਗਿਆ ਦੇਵੇਗੀ, ਪਰ ਇੱਕੋ ਸਮੇਂ ਮੁਫ਼ਤ ਵਿੱਚ.",
+  "explanation": "ਇਹ ਖਜ਼ਾਨੇ ਸ਼ਾਨਦਾਰ ਨੰਬਰ ਹਨ. ਅਤੇ ਤੁਸੀਂ ਉਨ੍ਹਾਂ ਨੂੰ ਆਪਣੇ ਬ੍ਰਾਊਜ਼ਰ ਦੀ ਯਾਦ ਵਿੱਚ ਸਟੋਰ ਕਰ ਸਕਦੇ ਹੋ.",
+  "howToUse": "ਤੁਸੀਂ ਇਹ ਖਜ਼ਾਨੇ ਖੋਜ ਪੰਨੇ 'ਤੇ ਚੁਣ ਸਕਦੇ ਹੋ. ਉਹ ਅੰਕੜੇ ਅਤੇ ਸੰਪਤੀਆਂ ਦਰਸਾਓ ਜੋ ਤੁਸੀਂ ਰੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ. ਜੇ ਬਹੁਤ ਸਾਰੇ ਅੰਕੜੇ ਇਹ ਮਾਪਦੰਡ ਪੂਰੇ ਕਰਦੇ ਹਨ ਅਤੇ ਸਾਰੇ ਤੁਹਾਡੇ ਖਜ਼ਾਨੇ ਦੇ ਸੰਦ ਵਿੱਚ ਨਹੀਂ ਆਉਂਦੇ, ਤਾਂ ਚੋਣ ਮਾਪਦੰਡ ਬਦਲੋ.",
+  "whereExplanation": "ਚੋਣ ਪੰਨੇ ਦੇ ਹੇਠਾਂ, ਤੁਸੀਂ ਚੁਣੇ ਗਏ ਅੰਕੜਿਆਂ ਦੀਆਂ ਸ਼ਾਨਦਾਰ ਸੰਪਤੀਆਂ ਦਾ ਸੰਖੇਪ ਵੇਰਵਾ ਦੇਖ ਸਕਦੇ ਹੋ.",
+  "certificate": "ਫਿਰ ਤੁਸੀਂ ਉਹਨਾਂ ਅੰਕੜਿਆਂ ਲਈ ਭਰਿਆ ਅਤੇ ਦਸਤਖਤ ਕੀਤਾ ਹੋਇਆ ਮਾਲਕੀ ਸਰਟੀਫਿਕੇਟ ਦੇਖ ਸਕਦੇ ਹੋ.",
+  "settings": "ਸੈਟਿੰਗ ਪੰਨਾ ਤੁਹਾਨੂੰ ਚਾਹੀਦਾ ਭਾਸ਼ਾ ਸੈਟ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰੇਗਾ ਜੇ ਇਹ ਸਵੈਚਾਲਿਤ ਤੌਰ 'ਤੇ ਨਹੀਂ ਹੋਇਆ.",
+  "wisch": "ਅਸੀਂ ਤੁਹਾਨੂੰ ਆਪਣੇ ਅੰਕੜਿਆਂ ਦੀ ਚੋਣ ਵਿੱਚ ਸੁਖਦਾਈ ਸਮਾਂ ਅਤੇ ਇਹਨਾਂ ਖਜ਼ਾਨਿਆਂ ਦੇ ਮਾਲਕ ਹੋਣ ਵਿੱਚ ਹੋਰ ਮਜ਼ਾ ਲੈਣ ਦੀ ਕਾਮਨਾ ਕਰਦੇ ਹਾਂ!"
 }
 
 ro-RO
 {
-  "viewTemplate": "Cufărul tău conține X numere",
-  "updateTitle": "Căutați numere noi pentru Cufărul tău Digital de Comori"
+  "greeting": "Bine ați venit în cutia de comori digitală!",
+  "overview": "Această aplicație vă va permite să deveniți proprietarul unor comori neprețuite și să le stocați în siguranță, dar în același timp gratuit.",
+  "explanation": "Aceste comori sunt numere minunate. Și le puteți stoca în memoria browserului dvs.",
+  "howToUse": "Puteți selecta aceste comori pe pagina de căutare. Specificați intervalul și proprietățile numerelor pe care doriți să le dețineți. Dacă prea multe numere îndeplinesc aceste criterii și toate nu încap în cutia dvs. de comori, schimbați criteriile de selecție.",
+  "whereExplanation": "În partea de jos a paginii de selecție, puteți vedea o scurtă descriere a proprietăților remarcabile ale numerelor pe care le alegeți.",
+  "certificate": "Apoi puteți vedea un certificat de proprietate completat și semnat pentru acele numere.",
+  "settings": "Pagina de setări vă va ajuta să setați limba dorită dacă acest lucru nu s-a întâmplat automat.",
+  "wisch": "Vă dorim un timp plăcut în selectarea numerelor dvs. și o bucurie continuă în deținerea acestor comori!"
 }
 
 ru-RU
 {
-  "viewTemplate": "Ваш сундук содержит X чисел",
-  "updateTitle": "Ищите новые числа для вашего Цифрового Сундука с Сокровищами"
+  "greeting": "Добро пожаловать в цифровую сокровищницу!",
+  "overview": "Это приложение позволит вам стать владельцем бесценных сокровищ и хранить их в безопасности, но при этом бесплатно.",
+  "explanation": "Эти сокровища - замечательные числа. И вы можете хранить их в памяти вашего браузера.",
+  "howToUse": "Вы можете выбрать эти сокровища на странице поиска. Укажите интервал и свойства чисел, которые вы хотели бы иметь. Если слишком много чисел соответствуют этим критериям и все они не помещаются в вашу сокровищницу, измените критерии выбора.",
+  "whereExplanation": "Внизу страницы выбора вы можете увидеть краткое описание замечательных свойств выбранных вами чисел.",
+  "certificate": "Затем вы можете увидеть заполненный и подписанный сертификат владения этими числами.",
+  "settings": "Страница настроек поможет вам установить желаемый язык, если это не произошло автоматически.",
+  "wisch": "Мы желаем вам приятного времени при выборе ваших чисел и дальнейшего удовольствия от обладания этими сокровищами!"
 }
 
 sr-RS
 {
-  "viewTemplate": "Ваш сандук садржи X бројева",
-  "updateTitle": "Тражите нове бројеве за ваш Дигитални Сандук са Благом"
+  "greeting": "Добродошли у дигиталну кутију са благом!",
+  "overview": "Ова апликација ће вам омогућити да постанете власник непроцењивих блага и да их безбедно чувате, али у исто време бесплатно.",
+  "explanation": "Ова блага су дивни бројеви. И можете их чувати у меморији вашег прегледача.",
+  "howToUse": "Можете изабрати ова блага на страници за претрагу. Наведите интервал и својства бројева које желите да поседујете. Ако превише бројева испуњава ове критеријуме и сви они не стану у вашу кутију са благом, промените критеријуме избора.",
+  "whereExplanation": "На дну странице за избор можете видети кратак опис изванредних својстава бројева које одаберете.",
+  "certificate": "Затим можете видети попуњен и потписан сертификат о власништву за те бројеве.",
+  "settings": "Страница са подешавањима ће вам помоћи да подесите жељени језик ако то није учињено аутоматски.",
+  "wisch": "Желимо вам пријатно време у одабиру ваших бројева и даље уживање у поседовању ових блага!"
 }
 
 sk-SK
 {
-  "viewTemplate": "Vaša truhlica obsahuje X čísel",
-  "updateTitle": "Hľadajte nové čísla pre svoju Digitálnu Truhlicu s Pokladom"
+  "greeting": "Vitajte v digitálnej truhlici s pokladmi!",
+  "overview": "Táto aplikácia vám umožní stať sa vlastníkom neoceniteľných pokladov a bezpečne ich uložiť, ale zároveň zadarmo.",
+  "explanation": "Tieto poklady sú úžasné čísla. A môžete ich uložiť do pamäte vášho prehliadača.",
+  "howToUse": "Tieto poklady môžete vybrať na stránke vyhľadávania. Zadajte interval a vlastnosti čísel, ktoré by ste chceli vlastniť. Ak príliš veľa čísel spĺňa tieto kritériá a všetky sa nezmestia do vašej truhlice s pokladmi, zmeňte kritériá výberu.",
+  "whereExplanation": "Na spodnej časti stránky výberu môžete vidieť stručný popis pozoruhodných vlastností vybraných čísel.",
+  "certificate": "Potom môžete vidieť vyplnený a podpísaný certifikát vlastníctva týchto čísel.",
+  "settings": "Stránka nastavení vám pomôže nastaviť požadovaný jazyk, ak sa tak nestalo automaticky.",
+  "wisch": "Prajeme vám príjemný čas pri výbere vašich čísel a ďalšie potešenie z vlastníctva týchto pokladov!"
 }
 
 sl-SI
 {
-  "viewTemplate": "Vaša skrinja vsebuje X številk",
-  "updateTitle": "Poiščite nove številke za svojo Digitalno Skrinjo z Zakladom"
+  "greeting": "Dobrodošli v digitalni skrinji z zakladi!",
+  "overview": "Ta aplikacija vam bo omogočila, da postanete lastnik neprecenljivih zakladov in jih varno shranite, vendar hkrati brezplačno.",
+  "explanation": "Ti zakladi so čudovite številke. In jih lahko shranite v pomnilnik svojega brskalnika.",
+  "howToUse": "Te zaklade lahko izberete na strani za iskanje. Določite interval in lastnosti številk, ki jih želite imeti. Če preveč številk izpolnjuje te kriterije in vse ne ustrezajo vaši skrinji z zakladi, spremenite kriterije izbire.",
+  "whereExplanation": "Na dnu strani za izbiro lahko vidite kratek opis izjemnih lastnosti izbranih številk.",
+  "certificate": "Nato lahko vidite izpolnjen in podpisan certifikat o lastništvu za te številke.",
+  "settings": "Stran z nastavitvami vam bo pomagala nastaviti želeni jezik, če se to ni zgodilo samodejno.",
+  "wisch": "Želimo vam prijeten čas pri izbiri vaših številk in nadaljnje uživanje v lastništvu teh zakladov!"
 }
 
 es-ES
 {
-  "viewTemplate": "Tu cofre contiene X números",
-  "updateTitle": "Busca nuevos números para tu Cofre del Tesoro Digital"
+  "greeting": "¡Bienvenido a la caja del tesoro digital!",
+  "overview": "Esta aplicación te permitirá convertirte en propietario de tesoros invaluables y almacenarlos de forma segura, pero al mismo tiempo de forma gratuita.",
+  "explanation": "Estos tesoros son números maravillosos. Y puedes almacenarlos en la memoria de tu navegador.",
+  "howToUse": "Puedes seleccionar estos tesoros en la página de búsqueda. Especifica el intervalo y las propiedades de los números que te gustaría poseer. Si demasiados números cumplen con estos criterios y todos ellos no caben en tu caja del tesoro, cambia los criterios de selección.",
+  "whereExplanation": "En la parte inferior de la página de selección, puedes ver una breve descripción de las propiedades notables de los números que eliges.",
+  "certificate": "Luego puedes ver un certificado de propiedad completado y firmado para esos números.",
+  "settings": "La página de configuración te ayudará a configurar el idioma deseado si no se hizo automáticamente.",
+  "wisch": "¡Te deseamos un tiempo agradable seleccionando tus números y un mayor disfrute al poseer estos tesoros!"
 }
 
 sv-SE
 {
-  "viewTemplate": "Din kista innehåller X nummer",
-  "updateTitle": "Sök efter nya nummer till din Digitala Skattkista"
+  "greeting": "Välkommen till den digitala skattkistan!",
+  "overview": "Denna applikation låter dig bli ägare till ovärderliga skatter och lagra dem säkert, men samtidigt gratis.",
+  "explanation": "Dessa skatter är underbara nummer. Och du kan lagra dem i minnet på din webbläsare.",
+  "howToUse": "Du kan välja dessa skatter på söksidan. Ange intervallet och egenskaperna för de nummer du vill äga. Om för många nummer uppfyller dessa kriterier och alla inte får plats i din skattkista, ändra urvalskriterierna.",
+  "whereExplanation": "Längst ner på urvalssidan kan du se en kort beskrivning av de anmärkningsvärda egenskaperna hos de nummer du väljer.",
+  "certificate": "Sedan kan du se ett ifyllt och undertecknat ägarcertifikat för dessa nummer.",
+  "settings": "Inställningssidan hjälper dig att ställa in önskat språk om det inte hände automatiskt.",
+  "wisch": "Vi önskar dig en trevlig tid när du väljer dina nummer och ytterligare njutning av att äga dessa skatter!"
 }
 
 th-TH
 {
-  "viewTemplate": "หีบของคุณมี X หมายเลข",
-  "updateTitle": "ค้นหาหมายเลขใหม่สำหรับหีบสมบัติดิจิทัลของคุณ"
+  "greeting": "ยินดีต้อนรับสู่กล่องสมบัติดิจิทัล!",
+  "overview": "แอปพลิเคชันนี้จะช่วยให้คุณเป็นเจ้าของสมบัติล้ำค่าและเก็บรักษาไว้อย่างปลอดภัย แต่ในขณะเดียวกันก็ฟรี",
+  "explanation": "สมบัติเหล่านี้คือตัวเลขที่ยอดเยี่ยม และคุณสามารถเก็บไว้ในหน่วยความจำของเบราว์เซอร์ของคุณ",
+  "howToUse": "คุณสามารถเลือกสมบัติเหล่านี้ได้ในหน้าค้นหา ระบุช่วงและคุณสมบัติของตัวเลขที่คุณต้องการเป็นเจ้าของ หากมีตัวเลขมากเกินไปที่ตรงตามเกณฑ์เหล่านี้และทั้งหมดไม่พอดีกับกล่องสมบัติของคุณ ให้เปลี่ยนเกณฑ์การเลือก",
+  "whereExplanation": "ที่ด้านล่างของหน้าเลือก คุณสามารถดูคำอธิบายสั้น ๆ เกี่ยวกับคุณสมบัติที่โดดเด่นของตัวเลขที่คุณเลือก",
+  "certificate": "จากนั้นคุณสามารถดูใบรับรองความเป็นเจ้าของที่กรอกและลงนามแล้วสำหรับตัวเลขเหล่านั้น",
+  "settings": "หน้าการตั้งค่าจะช่วยให้คุณตั้งค่าภาษาที่ต้องการหากไม่ได้ตั้งค่าโดยอัตโนมัติ",
+  "wisch": "เราขอให้คุณมีช่วงเวลาที่ดีในการเลือกหมายเลขของคุณและเพลิดเพลินกับการเป็นเจ้าของสมบัติเหล่านี้ต่อไป!"
 }
 
 tr-TR
 {
-  "viewTemplate": "Sandığınızda X sayı var",
-  "updateTitle": "Dijital Hazine Sandığınız için yeni sayılar arayın"
+  "greeting": "Dijital hazine kutusuna hoş geldiniz!",
+  "overview": "Bu uygulama, paha biçilmez hazinelerin sahibi olmanızı ve onları güvenli bir şekilde saklamanızı sağlar, ancak aynı zamanda ücretsizdir.",
+  "explanation": "Bu hazineler harika sayılardır. Ve onları tarayıcınızın belleğinde saklayabilirsiniz.",
+  "howToUse": "Bu hazineleri arama sayfasında seçebilirsiniz. Sahip olmak istediğiniz sayıların aralığını ve özelliklerini belirtin. Çok fazla sayı bu kriterleri karşılıyorsa ve hepsi hazine kutunuza sığmıyorsa, seçim kriterlerini değiştirin.",
+  "whereExplanation": "Seçim sayfasının altında, seçtiğiniz sayıların dikkate değer özelliklerinin kısa bir açıklamasını görebilirsiniz.",
+  "certificate": "Daha sonra bu sayılar için doldurulmuş ve imzalanmış bir mülkiyet sertifikası görebilirsiniz.",
+  "settings": "Ayarlar sayfası, istenen dili otomatik olarak ayarlanmamışsa ayarlamanıza yardımcı olacaktır.",
+  "wisch": "Sayılarınızı seçerken keyifli zaman geçirmenizi ve bu hazinelere sahip olmaktan daha fazla keyif almanızı dileriz!"
 }
 
 uk-UA
 {
-  "viewTemplate": "Ваш скриня містить X чисел",
-  "updateTitle": "Шукайте нові числа для вашої Цифрової Скрині зі Скарбами"
+  "greeting": "Ласкаво просимо до цифрової скрині зі скарбами!",
+  "overview": "Ця програма дозволить вам стати власником безцінних скарбів і зберігати їх у безпеці, але при цьому безкоштовно.",
+  "explanation": "Ці скарби - чудові числа. І ви можете зберігати їх у пам'яті вашого браузера.",
+  "howToUse": "Ви можете вибрати ці скарби на сторінці пошуку. Вкажіть інтервал і властивості чисел, які ви хотіли б мати. Якщо занадто багато чисел відповідають цим критеріям і всі вони не поміщаються у вашу скриню зі скарбами, змініть критерії вибору.",
+  "whereExplanation": "У нижній частині сторінки вибору ви можете побачити короткий опис чудових властивостей вибраних вами чисел.",
+  "certificate": "Потім ви можете побачити заповнений і підписаний сертифікат власності на ці числа.",
+  "settings": "Сторінка налаштувань допоможе вам встановити бажану мову, якщо це не сталося автоматично.",
+  "wisch": "Бажаємо вам приємного часу у виборі ваших чисел і подальшого задоволення від володіння цими скарбами!"
 }
 
 vi-VN
 {
-  "viewTemplate": "Rương của bạn chứa X số",
-  "updateTitle": "Tìm kiếm số mới cho Rương Kho Báu Kỹ Thuật Số của bạn"
+  "greeting": "Chào mừng bạn đến với hộp kho báu kỹ thuật số!",
+  "overview": "Ứng dụng này sẽ cho phép bạn trở thành chủ sở hữu của những kho báu vô giá và lưu trữ chúng một cách an toàn, nhưng đồng thời miễn phí.",
+  "explanation": "Những kho báu này là những con số tuyệt vời. Và bạn có thể lưu trữ chúng trong bộ nhớ của trình duyệt của bạn.",
+  "howToUse": "Bạn có thể chọn những kho báu này trên trang tìm kiếm. Chỉ định khoảng và thuộc tính của các con số mà bạn muốn sở hữu. Nếu quá nhiều con số đáp ứng các tiêu chí này và tất cả chúng không vừa trong hộp kho báu của bạn, hãy thay đổi tiêu chí lựa chọn.",
+  "whereExplanation": "Ở cuối trang lựa chọn, bạn có thể thấy mô tả ngắn gọn về các thuộc tính đáng chú ý của các con số mà bạn chọn.",
+  "certificate": "Sau đó, bạn có thể thấy chứng chỉ sở hữu đã hoàn thành và ký tên cho những con số đó.",
+  "settings": "Trang cài đặt sẽ giúp bạn thiết lập ngôn ngữ mong muốn nếu nó không được thiết lập tự động.",
+  "wisch": "Chúng tôi chúc bạn có thời gian vui vẻ khi chọn các con số của mình và tiếp tục tận hưởng việc sở hữu những kho báu này!"
 }
+

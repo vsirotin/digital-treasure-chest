@@ -1,0 +1,10 @@
+{
+  "greeting": "Bienvenue dans la boîte à trésors numérique!",
+  "overview": "Cette application vous permettra de devenir propriétaire de trésors inestimables et de les stocker en toute sécurité, mais en même temps gratuitement.",
+  "explanation": "Ces trésors sont des nombres merveilleux. Et vous pouvez les stocker dans la mémoire de votre navigateur.",
+  "howToUse": "Vous pouvez sélectionner ces trésors sur la page de recherche. Spécifiez l'intervalle et les propriétés des nombres que vous souhaitez posséder. Si trop de nombres répondent à ces critères et que tous ne tiennent pas dans votre coffre au trésor, modifiez les critères de sélection.",
+  "whereExplanation": "En bas de la page de sélection, vous pouvez voir une brève description des propriétés remarquables des nombres que vous choisissez.",
+  "certificate": "Ensuite, vous pouvez voir un certificat de propriété complété et signé pour ces nombres.",
+  "settings": "La page des paramètres vous aidera à définir la langue souhaitée si cela ne s'est pas fait automatiquement.",
+  "wisch": "Nous vous souhaitons un agréable moment dans la sélection de vos nombres et un plaisir supplémentaire à posséder ces trésors!"
+}

@@ -1,0 +1,10 @@
+{
+  "greeting": "Välkommen till den digitala skattkistan!",
+  "overview": "Denna applikation låter dig bli ägare till ovärderliga skatter och lagra dem säkert, men samtidigt gratis.",
+  "explanation": "Dessa skatter är underbara nummer. Och du kan lagra dem i minnet på din webbläsare.",
+  "howToUse": "Du kan välja dessa skatter på söksidan. Ange intervallet och egenskaperna för de nummer du vill äga. Om för många nummer uppfyller dessa kriterier och alla inte får plats i din skattkista, ändra urvalskriterierna.",
+  "whereExplanation": "Längst ner på urvalssidan kan du se en kort beskrivning av de anmärkningsvärda egenskaperna hos de nummer du väljer.",
+  "certificate": "Sedan kan du se ett ifyllt och undertecknat ägarcertifikat för dessa nummer.",
+  "settings": "Inställningssidan hjälper dig att ställa in önskat språk om det inte hände automatiskt.",
+  "wisch": "Vi önskar dig en trevlig tid när du väljer dina nummer och ytterligare njutning av att äga dessa skatter!"
+}

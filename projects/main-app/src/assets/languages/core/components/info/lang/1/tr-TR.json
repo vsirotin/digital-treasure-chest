@@ -1,0 +1,10 @@
+{
+  "greeting": "Dijital hazine kutusuna hoş geldiniz!",
+  "overview": "Bu uygulama, paha biçilmez hazinelerin sahibi olmanızı ve onları güvenli bir şekilde saklamanızı sağlar, ancak aynı zamanda ücretsizdir.",
+  "explanation": "Bu hazineler harika sayılardır. Ve onları tarayıcınızın belleğinde saklayabilirsiniz.",
+  "howToUse": "Bu hazineleri arama sayfasında seçebilirsiniz. Sahip olmak istediğiniz sayıların aralığını ve özelliklerini belirtin. Çok fazla sayı bu kriterleri karşılıyorsa ve hepsi hazine kutunuza sığmıyorsa, seçim kriterlerini değiştirin.",
+  "whereExplanation": "Seçim sayfasının altında, seçtiğiniz sayıların dikkate değer özelliklerinin kısa bir açıklamasını görebilirsiniz.",
+  "certificate": "Daha sonra bu sayılar için doldurulmuş ve imzalanmış bir mülkiyet sertifikası görebilirsiniz.",
+  "settings": "Ayarlar sayfası, istenen dili otomatik olarak ayarlanmamışsa ayarlamanıza yardımcı olacaktır.",
+  "wisch": "Sayılarınızı seçerken keyifli zaman geçirmenizi ve bu hazinelere sahip olmaktan daha fazla keyif almanızı dileriz!"
+}

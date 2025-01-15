@@ -1,0 +1,10 @@
+{
+  "greeting": "Üdvözöljük a digitális kincsesládában!",
+  "overview": "Ez az alkalmazás lehetővé teszi, hogy felbecsülhetetlen értékű kincsek tulajdonosa legyen, és biztonságosan tárolja őket, de ugyanakkor ingyenesen.",
+  "explanation": "Ezek a kincsek csodálatos számok. És tárolhatja őket a böngészője memóriájában.",
+  "howToUse": "Kiválaszthatja ezeket a kincseket a keresési oldalon. Adja meg az intervallumot és a számok tulajdonságait, amelyeket birtokolni szeretne. Ha túl sok szám felel meg ezeknek a kritériumoknak, és mindegyik nem fér el a kincsesládájában, változtassa meg a kiválasztási kritériumokat.",
+  "whereExplanation": "A kiválasztási oldal alján láthatja a kiválasztott számok figyelemre méltó tulajdonságainak rövid leírását.",
+  "certificate": "Ezután láthatja a számokhoz tartozó kitöltött és aláírt tulajdonosi igazolást.",
+  "settings": "A beállítások oldal segít beállítani a kívánt nyelvet, ha ez nem történt meg automatikusan.",
+  "wisch": "Kellemes időtöltést kívánunk a számok kiválasztásában és további élvezetet ezeknek a kincseknek a birtoklásában!"
+}
