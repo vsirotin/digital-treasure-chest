@@ -3,17 +3,17 @@
       <mat-card-title>{{title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      @if(allItems.overview.length > 0){
-        <p>{{allItems.overview}}</p>
-        <p>{{allItems.list}}</p>
+      @if(ui.allItems.overview.length > 0){
+        <p>{{ui.allItems.overview}}</p>
+        <p>{{ui.allItems.list}}</p>
       }
-      @if(commonItems.overview.length > 0){
-        <p>{{commonItems.overview}}</p>
-        <p>{{commonItems.list}}</p>
+      @if(ui.commonItems.overview.length > 0){
+        <p>{{ui.commonItems.overview}}</p>
+        <p>{{ui.commonItems.list}}</p>
       }
-      @if(uniqueItems.overview.length > 0){
-        <p>{{uniqueItems.overview}}</p>
-        <p>{{uniqueItems.list}}</p>
+      @if(ui.uniqueItems.overview.length > 0){
+        <p>{{ui.uniqueItems.overview}}</p>
+        <p>{{ui.uniqueItems.list}}</p>
       }
       @if(recomendation.length > 0){
         <p>{{recomendation}}</p>

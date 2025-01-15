@@ -1,0 +1,35 @@
+{
+    "allItems":  {
+      "overview": "All items",
+      "list": "All items in the search result are unique."
+    },
+    "commonItems": {
+      "overview": "Common items",
+      "list": "The search result contains items that are already in the chest."
+    },
+    "uniqueItems": {    
+      "overview": "Unique items",
+      "list": "The search result contains items that are not in the chest."
+    },
+    
+    "workpieces":   {
+      "title": "Search results",
+      "tooManyItems": "The search result for your criteria contains too many numbers. Please define your criteria a little more precisely.",
+      "firstNumbersText": "The first numbers are",
+      "searchResultOkLength": "Your search result is:",
+  
+      "recomendationNewSearch": "Please define your criteria in other way.",
+      "recomendationAdd": "Congratulations! You can add selected numbers to Chest.",
+      "recomendationReplace": "You can replace the old items in the chest with the new ones.",
+      "recomendationAddUnic": "You can add unic numbers to Chest.",
+  
+      "intersectionIsEmpty": "The search result contains no numbers that are already in the chest.",
+      "intersectionIsNotEmpty": "The search result contains following numbers that are already in the chest:",
+      "emptyResult": "Your criteria seems to be contradictory. No items found. Please try again with other criteria.",
+      "unicItemsExist": "Items in search result that are not in the chest:",
+      "unicItemsNotExist": "All items in the search result are already in the chest.",
+      
+      "replaceItems":"Replace old items in chests with new ones.",
+      "addItems": "Add new items to chests."
+    }
+  }

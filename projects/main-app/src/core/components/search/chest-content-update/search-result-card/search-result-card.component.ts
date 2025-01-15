@@ -2,6 +2,8 @@ import {ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges} fro
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
 import { Chest } from '../../../../../shared/classes/chest';
+import * as uiDefault from '../../../../../assets/languages/core/components/search/chest-content-update/search-result-card/lang/1/en-US.json';
+import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
 
 @Component({
   selector: 'app-serach-result-card',
@@ -15,22 +17,21 @@ export class SerachResultCardComponent implements OnChanges {
 
   @Input() searchResult: number[] = [];
    
-  allItems: IOverviewedList = {
+  ui: ISearchResultCard = {
+  allItems:  {
     overview: 'All items',
     list: 'All items in the search result are unique.'
-  }; 
-  commonItems: IOverviewedList = {
+  },
+  commonItems: {
     overview: 'Common items',
     list: 'The search result contains items that are already in the chest.'
-  };
-  uniqueItems: IOverviewedList = {    
+  },
+  uniqueItems: {    
     overview: 'Unique items',
     list: 'The search result contains items that are not in the chest.'
-  };
-  recomendation: string = '';
+  },
   
-  
-  workpieces : ISearchResultCardWorkpieces =  {
+  workpieces:   {
     title : 'Search results',
     tooManyItems: 'The search result for your criteria contains too many numbers. Please define your criteria a little more precisely.',
     firstNumbersText: 'The first numbers are',
@@ -49,11 +50,14 @@ export class SerachResultCardComponent implements OnChanges {
     
     replaceItems :'Replace old items in chests with new ones.',
     addItems : 'Add new items to chests.'
-  };
+  }
+};
 
-  title = this.workpieces.title;  
-  addItems = this.workpieces.addItems;
-  replaceItems = this.workpieces.replaceItems;
+  recomendation: string = '';
+
+  title = this.ui.workpieces.title;  
+  addItems = this.ui.workpieces.addItems;
+  replaceItems = this.ui.workpieces.replaceItems;
 
   isButtonAddEnabled = false;
   isButtonReplaceEnabled = false;
@@ -73,12 +77,12 @@ export class SerachResultCardComponent implements OnChanges {
 
   private updateContent(): void {
 
-    this.allItems.overview = '';
-    this.allItems.list = '';
-    this.commonItems.overview = '';
-    this.commonItems.list = '';
-    this.uniqueItems.overview = '';
-    this.uniqueItems.list = '';
+    this.ui.allItems.overview = '';
+    this.ui.allItems.list = '';
+    this.ui.commonItems.overview = '';
+    this.ui.commonItems.list = '';
+    this.ui.uniqueItems.overview = '';
+    this.ui.uniqueItems.list = '';
     this.recomendation = '';
     this.isButtonAddEnabled = false;
     this.isButtonReplaceEnabled = false;
@@ -86,25 +90,25 @@ export class SerachResultCardComponent implements OnChanges {
     // this.findUnicElementsInSearchResult();
 
     if(this.searchResult.length == 0) {
-    this.allItems.overview = this.workpieces.emptyResult;
-    this.recomendation = this.workpieces.recomendationNewSearch;
+    this.ui.allItems.overview = this.ui.workpieces.emptyResult;
+    this.recomendation = this.ui.workpieces.recomendationNewSearch;
     return;
     }
 
     //Below search result is not empty
 
     if(this.searchResult.length > this.maxSearchLength) {
-      this.allItems.overview = this.workpieces.tooManyItems;
-      this.allItems.list = this.workpieces.firstNumbersText + `: ${this.searchResult.slice(0, this.maxSearchLength).join(', ')}...`;
+      this.ui.allItems.overview = this.ui.workpieces.tooManyItems;
+      this.ui.allItems.list = this.ui.workpieces.firstNumbersText + `: ${this.searchResult.slice(0, this.maxSearchLength).join(', ')}...`;
       return;
     }
 
     //Below a search result is not too big
-    this.allItems.overview = this.allItems.list = this.workpieces.searchResultOkLength;
-    this.allItems.list = this.searchResult.join(', ');
+    this.ui.allItems.overview = this.ui.allItems.list = this.ui.workpieces.searchResultOkLength;
+    this.ui.allItems.list = this.searchResult.join(', ');
     
     if(Chest.getItems().length == 0) {
-      this.recomendation = this.workpieces.recomendationAdd;
+      this.recomendation = this.ui.workpieces.recomendationAdd;
       this.isButtonAddEnabled = true;
       return;
     }
@@ -113,30 +117,30 @@ export class SerachResultCardComponent implements OnChanges {
     this.findUnicElementsInSearchResult();
 
     if(this.intersection.length == 0) {
-      this.commonItems.overview = this.workpieces.intersectionIsEmpty;
+      this.ui.commonItems.overview = this.ui.workpieces.intersectionIsEmpty;
     }else {
-      this.commonItems.overview = this.workpieces.intersectionIsNotEmpty;
-      this.commonItems.list = this.commonElemntsInSearchResult.join(', ') 
+      this.ui.commonItems.overview = this.ui.workpieces.intersectionIsNotEmpty;
+      this.ui.commonItems.list = this.commonElemntsInSearchResult.join(', ') 
     }
 
     if(this.unicElemntsInSearchResult.length == 0) {
-      this.uniqueItems.overview = this.workpieces.unicItemsNotExist;
-      this.recomendation = this.workpieces.recomendationNewSearch;
+      this.ui.uniqueItems.overview = this.ui.workpieces.unicItemsNotExist;
+      this.recomendation = this.ui.workpieces.recomendationNewSearch;
     return;
     }
 
-    this.uniqueItems.overview = this.workpieces.unicItemsExist;
-    this.uniqueItems.list = this.unicElemntsInSearchResult.join(', ');
+    this.ui.uniqueItems.overview = this.ui.workpieces.unicItemsExist;
+    this.ui.uniqueItems.list = this.unicElemntsInSearchResult.join(', ');
 
     this.isButtonReplaceEnabled = true;
       
     if(this.unicElemntsInSearchResult.length <= Chest.getFreeCapacity()) {
-      this.recomendation = this.workpieces.recomendationAddUnic;
+      this.recomendation = this.ui.workpieces.recomendationAddUnic;
       this.isButtonAddEnabled = true;
       return;
     }
 
-    this.recomendation = this.workpieces.recomendationReplace;   
+    this.recomendation = this.ui.workpieces.recomendationReplace;   
   }
 
   buttonAdd(): void {
@@ -184,4 +188,11 @@ interface ISearchResultCardWorkpieces {
 
   replaceItems: string;
   addItems: string;
+}
+
+interface ISearchResultCard {
+  workpieces: ISearchResultCardWorkpieces;
+  allItems: IOverviewedList;
+  commonItems: IOverviewedList;
+  uniqueItems: IOverviewedList;
 }
