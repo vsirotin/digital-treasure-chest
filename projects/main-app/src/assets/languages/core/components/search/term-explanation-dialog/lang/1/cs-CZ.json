@@ -1,0 +1,38 @@
+{
+  "title": "Vysvětlení pojmů",
+  "explanations": [
+    {
+      "term": "Prvočíslo",
+      "explanation": "Prvočíslo je přirozené číslo větší než 1, které není součinem dvou menších přirozených čísel. Přirozené číslo větší než 1, které není prvočíslo, se nazývá složené číslo."
+    },
+    {
+      "term": "Pythagorovo prvočíslo",
+      "explanation": "Pythagorovo prvočíslo je prvočíslo tvaru 4n + 1. Pythagorova prvočísla jsou přesně ta lichá prvočísla p, pro která je 2 primitivním kořenem modulo p."
+    },
+    {
+      "term": "Fibonacciho čísla",
+      "explanation": "Řada, ve které je každé číslo součtem dvou předcházejících."
+    },
+    {
+      "term": "Tribonacciho čísla",
+      "explanation": "Řada přirozených čísel, která začíná číslem 0 jednou a číslem 1 dvakrát. Následně součet tří předcházejících čísel vede k číslu následujícím: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bellova čísla",
+      "explanation": "Bellovo číslo je počet všech neuspořádaných rozdělení n-prvkové množiny, označených jako Bn, s předpokladem, že B0=1. Pojmenované podle Erica Bella, který je zkoumal ve 30. letech 20. století."
+    },
+    {
+      "term": "Catalanova čísla",
+      "explanation": "Catalanova čísla jsou číselná řada, která se objevuje v mnoha kombinatorických problémech. Jsou pojmenována na počest belgického matematika Eugèna Charlese Catalana, ačkoli byla známa Leonardu Eulerovi. N-té Catalanovo číslo Cn může být definováno několika ekvivalentními způsoby, jako například: 1) Počet rozdělení konvexního (n+2)-úhelníku na trojúhelníky pomocí neprolínajících se diagonál. 2) Počet způsobů, jak propojit 2n bodů na kruhu pomocí n neprolínajících se akordů, atd."
+    },
+    {
+      "term": "Čísla Sophie Germain",
+      "explanation": "Prvočíslo Sophie Germain je takové prvočíslo p, že číslo 2p+1 je také prvočíslo. Číslo 2p+1 spojené s prvočíslem Sophie Germain se nazývá bezpečné prvočíslo. Například 11 je prvočíslo Sophie Germain, a 2 × 11 + 1 = 23 je spojené bezpečné prvočíslo."
+    },
+    {
+      "term": "Symetrická čísla",
+      "explanation": "Symetrická čísla jsou: 1) všechna jednočíselná čísla, 2) dvoučíselná čísla tvaru xx, a 3) tříčíselná čísla tvaru xyx, kde x, y jsou číslice, a x nemůže být 0."
+    }
+  ],
+  "prefixToLink": "Více zajímavých informací o magických číselných posloupnostech naleznete na Wikipedii a na stránce "
+}

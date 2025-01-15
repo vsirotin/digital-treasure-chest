@@ -1,0 +1,38 @@
+{
+  "title": "Terminų paaiškinimas",
+  "explanations": [
+    {
+      "term": "Pirminis skaičius",
+      "explanation": "Pirminis skaičius yra natūralus skaičius, didesnis nei 1, kuris nėra dviejų mažesnių natūralių skaičių sandauga. Natūralus skaičius, didesnis nei 1, kuris nėra pirminis skaičius, vadinamas sudėtiniu skaičiumi."
+    },
+    {
+      "term": "Pitagoro pirminis skaičius",
+      "explanation": "Pitagoro pirminis skaičius yra pirminis skaičius, kurio forma yra 4n + 1. Pitagoro pirminiai skaičiai yra būtent tie nelyginiai pirminiai skaičiai p, kuriems 2 yra primityvus šaknis modulo p."
+    },
+    {
+      "term": "Fibonacio skaičiai",
+      "explanation": "Sekos, kurioje kiekvienas skaičius yra dviejų ankstesnių skaičių suma."
+    },
+    {
+      "term": "Tribonačio skaičiai",
+      "explanation": "Natūralių skaičių seka, kuri prasideda skaičiumi 0 vieną kartą ir skaičiumi 1 du kartus. Vėliau trijų ankstesnių skaičių suma sudaro kitą skaičių: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Belo skaičiai",
+      "explanation": "Belo skaičius yra n-elementų rinkinio neįrikiuotų padalijimų skaičius, žymimas Bn, su prielaida, kad B0=1. Pavadintas Eriko Belo garbei, kuris juos tyrinėjo 20-ojo amžiaus 30-aisiais."
+    },
+    {
+      "term": "Katalano skaičiai",
+      "explanation": "Katalano skaičiai yra skaičių seka, kuri pasirodo daugelyje kombinatorikos problemų. Jie pavadinti Belgijos matematiko Eugène Charles Catalan garbei, nors juos žinojo Leonardas Eileris. N-tasis Katalano skaičius Cn gali būti apibrėžtas keliais lygiaverčiais būdais, pavyzdžiui: 1) Konveksinio (n+2)-daugiasienio padalijimų į trikampius skaičius, naudojant nesikertančias įstrižaines. 2) Būdų skaičius, kaip sujungti 2n taškus apskritime, naudojant n nesikertančias akordas ir kt."
+    },
+    {
+      "term": "Sophie Germain skaičiai",
+      "explanation": "Sophie Germain pirminis skaičius yra toks pirminis skaičius p, kad skaičius 2p+1 taip pat yra pirminis skaičius. Skaičius 2p+1, susijęs su Sophie Germain pirminiu skaičiumi, vadinamas saugiu pirminiu skaičiumi. Pavyzdžiui, 11 yra Sophie Germain pirminis skaičius, o 2 × 11 + 1 = 23 yra susijęs saugus pirminis skaičius."
+    },
+    {
+      "term": "Simetriniai skaičiai",
+      "explanation": "Simetriniai skaičiai yra: 1) visi vieno skaitmens skaičiai, 2) dviejų skaitmenų skaičiai formos xx, ir 3) trijų skaitmenų skaičiai formos xyx, kur x ir y yra skaitmenys, o x negali būti 0."
+    }
+  ],
+  "prefixToLink": "Daugiau įdomios informacijos apie magiškas skaičių sekas rasite Vikipedijoje ir svetainėje "
+}

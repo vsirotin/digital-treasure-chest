@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Otsige oma digitaalse aardelaeka jaoks uusi numbreid",
+  "introduction": "Valige palun kriteeriumid oma lemmik positiivsete täisarvude otsimiseks (mida allpool tähistatakse tähega X)",
+  "errorTextMessage": "Minimaal- ja maksimaalväärtused peavad olema vahemikus 0 kuni 1000, kaasa arvatud. Minimaalväärtus peab olema väiksem või võrdne maksimaalväärtusega.",
+  "termExplanation": "Mida need terminid tähendavad?"
+}

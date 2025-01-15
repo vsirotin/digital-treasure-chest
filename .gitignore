@@ -41,3 +41,7 @@ testem.log
 .DS_Store
 Thumbs.db
 TODO.md
+projects/lang-file-processor/node_modules/*
+projects/lang-file-processor/dist/*
+projects/lang-file-processor/test/output/*
+projects/lang-file-processor/test/input.txt

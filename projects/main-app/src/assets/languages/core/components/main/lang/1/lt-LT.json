@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Paieška",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Ataskaita",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informacija",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Nustatymai",
+      "icon": "settings"
+    }
+  ],
+  "title": "Skaitmeninė lobis"
+}

@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Sök nya nummer till din Digitala Skattkista",
+  "introduction": "Välj kriterier för att söka efter dina favoritpositiva heltal (betecknade nedan som X)",
+  "errorTextMessage": "Minsta och största värden måste vara heltal mellan 0 och 1000, inklusive. Minsta värdet måste vara mindre än eller lika med största värdet.",
+  "termExplanation": "Vad betyder dessa termer?"
+}

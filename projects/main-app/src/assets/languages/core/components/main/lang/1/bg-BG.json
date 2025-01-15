@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Търсене",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Доклад",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Информация",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Настройки",
+      "icon": "settings"
+    }
+  ],
+  "title": "Цифрово съкровище"
+}

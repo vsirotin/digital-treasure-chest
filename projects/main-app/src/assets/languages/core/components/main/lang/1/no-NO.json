@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Søk",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Rapport",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informasjon",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Innstillinger",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digital skattejakt"
+}

@@ -1,0 +1,10 @@
+{
+  "greeting": "Witamy w cyfrowej skrzyni skarbów!",
+  "overview": "Ta aplikacja pozwoli ci zostać właścicielem bezcennych skarbów i przechowywać je bezpiecznie, ale jednocześnie za darmo.",
+  "explanation": "Te skarby to wspaniałe liczby. I możesz je przechowywać w pamięci swojej przeglądarki.",
+  "howToUse": "Możesz wybrać te skarby na stronie wyszukiwania. Określ przedział i właściwości liczb, które chcesz posiadać. Jeśli zbyt wiele liczb spełnia te kryteria i wszystkie nie mieszczą się w twojej skrzyni skarbów, zmień kryteria wyboru.",
+  "whereExplanation": "Na dole strony wyboru możesz zobaczyć krótki opis niezwykłych właściwości wybranych liczb.",
+  "certificate": "Następnie możesz zobaczyć wypełniony i podpisany certyfikat własności dla tych liczb.",
+  "settings": "Strona ustawień pomoże ci ustawić żądany język, jeśli nie zostało to zrobione automatycznie.",
+  "wisch": "Życzymy miłego czasu przy wyborze swoich liczb i dalszej radości z posiadania tych skarbów!"
+}

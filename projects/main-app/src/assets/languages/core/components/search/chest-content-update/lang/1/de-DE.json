@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Suchen Sie neue Nummern für Ihre digitale Schatzkiste",
+  "introduction": "Bitte wählen Sie Kriterien für die Suche nach Ihren bevorzugten positiven ganzen Zahlen (unten als X bezeichnet)",
+  "errorTextMessage": "Minimale und maximale Werte müssen ganze Zahlen zwischen 0 und 1000 sein, einschließlich. Der Mindestwert muss kleiner oder gleich dem Höchstwert sein.",
+  "termExplanation": "Was bedeuten diese Begriffe?"
+}

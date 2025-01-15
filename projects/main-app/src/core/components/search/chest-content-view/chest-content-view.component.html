@@ -1,12 +1,12 @@
 
 <div class="card-container">
-  @for (item of ui.listNumbersInTreasure; track item) {
+  @for (item of listNumbersInTreasure; track item) {
     <mat-card class="number-card">
 
       <mat-card-header>
         <mat-card-title>{{item}}</mat-card-title>
       </mat-card-header>
-      <p>{{prefix}}</p>
+      <p>{{criteriaPrefix}}</p>
       <mat-card-content>
         <ul>
           @for (detail of getItemDetails(item); track detail) {

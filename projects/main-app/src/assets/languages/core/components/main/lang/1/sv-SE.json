@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Sök",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Rapport",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Info",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Inställningar",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digital skattkista"
+}

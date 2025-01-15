@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Det er ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "et partall"
+    },
+    {
+      "id": 2,
+      "criteria": "et oddetall"
+    },
+    {
+      "id": 3,
+      "criteria": "et primtall"
+    },
+    {
+      "id": 4,
+      "criteria": "et Pythagoras primtall"
+    },
+    {
+      "id": 5,
+      "criteria": "et Fibonacci-tall"
+    },
+    {
+      "id": 6,
+      "criteria": "et Tribonacci-tall"
+    },
+    {
+      "id": 7,
+      "criteria": "et Bell-tall"
+    },
+    {
+      "id": 8,
+      "criteria": "et Catalan-tall"
+    },
+    {
+      "id": 9,
+      "criteria": "et Sophie Germain-tall"
+    },
+    {
+      "id": 10,
+      "criteria": "et symmetrisk tall"
+    }
+  ]
+}

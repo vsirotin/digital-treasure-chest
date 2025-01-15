@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Det är ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "ett jämnt tal"
+    },
+    {
+      "id": 2,
+      "criteria": "ett udda tal"
+    },
+    {
+      "id": 3,
+      "criteria": "ett primtal"
+    },
+    {
+      "id": 4,
+      "criteria": "ett Pythagoras primtal"
+    },
+    {
+      "id": 5,
+      "criteria": "ett Fibonaccital"
+    },
+    {
+      "id": 6,
+      "criteria": "ett Tribonaccital"
+    },
+    {
+      "id": 7,
+      "criteria": "ett Belltal"
+    },
+    {
+      "id": 8,
+      "criteria": "ett Catalantal"
+    },
+    {
+      "id": 9,
+      "criteria": "ett Sophie Germain-tal"
+    },
+    {
+      "id": 10,
+      "criteria": "ett symmetriskt tal"
+    }
+  ]
+}

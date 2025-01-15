@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Meklēt",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Ziņojums",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informācija",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Iestatījumi",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digitālā dārgumu lāde"
+}

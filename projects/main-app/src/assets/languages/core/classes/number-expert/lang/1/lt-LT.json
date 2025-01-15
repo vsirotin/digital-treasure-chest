@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Tai yra ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "lyginis skaičius"
+    },
+    {
+      "id": 2,
+      "criteria": "nelyginis skaičius"
+    },
+    {
+      "id": 3,
+      "criteria": "pirminis skaičius"
+    },
+    {
+      "id": 4,
+      "criteria": "Pitagoro pirminis skaičius"
+    },
+    {
+      "id": 5,
+      "criteria": "Fibonaci skaičius"
+    },
+    {
+      "id": 6,
+      "criteria": "Tribonaci skaičius"
+    },
+    {
+      "id": 7,
+      "criteria": "Belo skaičius"
+    },
+    {
+      "id": 8,
+      "criteria": "Catalano skaičius"
+    },
+    {
+      "id": 9,
+      "criteria": "Sofijos Žermeno skaičius"
+    },
+    {
+      "id": 10,
+      "criteria": "simetrinis skaičius"
+    }
+  ]
+}

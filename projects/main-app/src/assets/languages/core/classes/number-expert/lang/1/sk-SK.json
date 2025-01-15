@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Je to ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "párne číslo"
+    },
+    {
+      "id": 2,
+      "criteria": "nepárne číslo"
+    },
+    {
+      "id": 3,
+      "criteria": "prvočíslo"
+    },
+    {
+      "id": 4,
+      "criteria": "Pytagorovo prvočíslo"
+    },
+    {
+      "id": 5,
+      "criteria": "Fibonacciho číslo"
+    },
+    {
+      "id": 6,
+      "criteria": "Tribonacciho číslo"
+    },
+    {
+      "id": 7,
+      "criteria": "Bellovo číslo"
+    },
+    {
+      "id": 8,
+      "criteria": "Catalanovo číslo"
+    },
+    {
+      "id": 9,
+      "criteria": "Sophie Germain číslo"
+    },
+    {
+      "id": 10,
+      "criteria": "symetrické číslo"
+    }
+  ]
+}

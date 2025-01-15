@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Meklējiet jaunus numurus savai Digitālajai dārgumu lādei",
+  "introduction": "Lūdzu, izvēlieties kritērijus, lai meklētu savus iecienītākos pozitīvos veselus skaitļus (atzīmēti zemāk kā X)",
+  "errorTextMessage": "Minimālajām un maksimālajām vērtībām jābūt veseliem skaitļiem no 0 līdz 1000, ieskaitot. Minimālajai vērtībai jābūt mazākai vai vienādai ar maksimālo vērtību.",
+  "termExplanation": "Ko nozīmē šie termini?"
+}

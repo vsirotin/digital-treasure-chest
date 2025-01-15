@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "それは ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "偶数"
+    },
+    {
+      "id": 2,
+      "criteria": "奇数"
+    },
+    {
+      "id": 3,
+      "criteria": "素数"
+    },
+    {
+      "id": 4,
+      "criteria": "ピタゴラス素数"
+    },
+    {
+      "id": 5,
+      "criteria": "フィボナッチ数"
+    },
+    {
+      "id": 6,
+      "criteria": "トリボナッチ数"
+    },
+    {
+      "id": 7,
+      "criteria": "ベル数"
+    },
+    {
+      "id": 8,
+      "criteria": "カタラン数"
+    },
+    {
+      "id": 9,
+      "criteria": "ソフィージェルマン数"
+    },
+    {
+      "id": 10,
+      "criteria": "対称数"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "ค้นหา",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "รายงาน",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "ข้อมูล",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "การตั้งค่า",
+      "icon": "settings"
+    }
+  ],
+  "title": "หีบสมบัติดิจิทัล"
+}

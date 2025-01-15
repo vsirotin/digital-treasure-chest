@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "这是 ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "一个偶数"
+    },
+    {
+      "id": 2,
+      "criteria": "一个奇数"
+    },
+    {
+      "id": 3,
+      "criteria": "一个素数"
+    },
+    {
+      "id": 4,
+      "criteria": "一个毕达哥拉斯素数"
+    },
+    {
+      "id": 5,
+      "criteria": "一个斐波那契数"
+    },
+    {
+      "id": 6,
+      "criteria": "一个三波那契数"
+    },
+    {
+      "id": 7,
+      "criteria": "一个贝尔数"
+    },
+    {
+      "id": 8,
+      "criteria": "一个加泰罗尼亚数"
+    },
+    {
+      "id": 9,
+      "criteria": "一个索菲热尔曼数"
+    },
+    {
+      "id": 10,
+      "criteria": "一个对称数"
+    }
+  ]
+}

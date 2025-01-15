@@ -1,0 +1,38 @@
+{
+  "title": "Verklaring van termen",
+  "explanations": [
+    {
+      "term": "Priemgetal",
+      "explanation": "Een priemgetal is een natuurlijk getal groter dan 1 dat geen product is van twee kleinere natuurlijke getallen. Een natuurlijk getal groter dan 1 dat geen priemgetal is, wordt een samengesteld getal genoemd."
+    },
+    {
+      "term": "Pythagorisch priemgetal",
+      "explanation": "Een pythagorisch priemgetal is een priemgetal van de vorm 4n + 1. Pythagorische priemgetallen zijn precies de oneven priemgetallen p waarvoor 2 een primitieve wortel modulo p is."
+    },
+    {
+      "term": "Fibonacci getallen",
+      "explanation": "Een reeks waarin elk getal de som is van de twee voorgaande getallen."
+    },
+    {
+      "term": "Tribonacci getallen",
+      "explanation": "Een reeks natuurlijke getallen die oorspronkelijk begint met het getal 0 één keer en het getal 1 twee keer. Vervolgens is de som van de drie voorgaande getallen het onmiddellijk volgende getal: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bell getallen",
+      "explanation": "Het aantal Bell getallen is het aantal niet-geordende partitities van een n-elementenverzameling, aangegeven met Bn, met B0=1 zoals verondersteld door definitie. Genoemd naar Eric Bell, die ze in de jaren dertig van de vorige eeuw bestudeerde."
+    },
+    {
+      "term": "Catalan getallen",
+      "explanation": "Catalan getallen is een numerieke reeks die voorkomt in veel combinatorische problemen. Ze zijn genoemd ter ere van de Belgische wiskundige Eugène Charles Catalan, hoewel ze bekend waren bij Leonard Euler. Het n-de Catalan getal Cn kan op verschillende gelijkwaardige manieren worden gedefinieerd, zoals: 1) Het aantal partities van een convexe (n+2)-hoek in driehoeken door niet-snijdende diagonalen. 2) Het aantal manieren om 2n punten op een cirkel van n te verbinden door niet-snijdende koorden, enz."
+    },
+    {
+      "term": "Sophie Germain getallen",
+      "explanation": "Een priemgetal Sophie Germain is zo'n priemgetal p dat het getal 2p+1 ook een priemgetal is. Het getal 2p+1 geassocieerd met het priemgetal Sophie Germain wordt een veilig priemgetal genoemd. Bijvoorbeeld, 11 is een Sophie Germain priemgetal, en 2 × 11 + 1 = 23 is het bijbehorende veilige priemgetal."
+    },
+    {
+      "term": "Symmetrische getallen",
+      "explanation": "Symmetrische getallen zijn: 1) alle cijfers van één cijfer, 2) twee-cijferige getallen van de vorm xx, en 3) drie-cijferige getallen van de vorm xyx, waarbij x en y cijfers zijn, en x kan niet 0 zijn."
+    }
+  ],
+  "prefixToLink": "Meer interessante informatie over magische nummerreeksen zie in Wikipedia en op de site "
+}

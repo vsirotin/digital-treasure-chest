@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "بحث",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "تقرير",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "معلومات",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "الإعدادات",
+      "icon": "settings"
+    }
+  ],
+  "title": "كنز رقمي"
+}

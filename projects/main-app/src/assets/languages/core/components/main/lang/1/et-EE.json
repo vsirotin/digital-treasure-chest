@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Otsing",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Aruanne",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Teave",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Seaded",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digitaalne aardelaegas"
+}

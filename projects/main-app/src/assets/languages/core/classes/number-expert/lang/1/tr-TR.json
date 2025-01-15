@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Bu ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "çift bir sayı"
+    },
+    {
+      "id": 2,
+      "criteria": "tek bir sayı"
+    },
+    {
+      "id": 3,
+      "criteria": "asal bir sayı"
+    },
+    {
+      "id": 4,
+      "criteria": "Pythagoras asal sayısı"
+    },
+    {
+      "id": 5,
+      "criteria": "Fibonacci sayısı"
+    },
+    {
+      "id": 6,
+      "criteria": "Tribonacci sayısı"
+    },
+    {
+      "id": 7,
+      "criteria": "Bell sayısı"
+    },
+    {
+      "id": 8,
+      "criteria": "Catalan sayısı"
+    },
+    {
+      "id": 9,
+      "criteria": "Sophie Germain sayısı"
+    },
+    {
+      "id": 10,
+      "criteria": "simetrik bir sayı"
+    }
+  ]
+}

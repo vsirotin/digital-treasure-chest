@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "이것은 ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "짝수"
+    },
+    {
+      "id": 2,
+      "criteria": "홀수"
+    },
+    {
+      "id": 3,
+      "criteria": "소수"
+    },
+    {
+      "id": 4,
+      "criteria": "피타고라스 소수"
+    },
+    {
+      "id": 5,
+      "criteria": "피보나치 수"
+    },
+    {
+      "id": 6,
+      "criteria": "트리보나치 수"
+    },
+    {
+      "id": 7,
+      "criteria": "벨 수"
+    },
+    {
+      "id": 8,
+      "criteria": "카탈란 수"
+    },
+    {
+      "id": 9,
+      "criteria": "소피 제르맹 수"
+    },
+    {
+      "id": 10,
+      "criteria": "대칭 수"
+    }
+  ]
+}

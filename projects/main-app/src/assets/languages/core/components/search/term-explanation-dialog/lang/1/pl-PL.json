@@ -1,0 +1,38 @@
+{
+  "title": "Wyjaśnienie terminów",
+  "explanations": [
+    {
+      "term": "Liczba pierwsza",
+      "explanation": "Liczba pierwsza to liczba naturalna większa od 1, która nie jest iloczynem dwóch mniejszych liczb naturalnych. Liczba naturalna większa od 1, która nie jest liczbą pierwszą, nazywana jest liczbą złożoną."
+    },
+    {
+      "term": "Liczba pierwsza Pitagorejska",
+      "explanation": "Liczba pierwsza Pitagorejska to liczba pierwsza w postaci 4n + 1. Liczby pierwsze Pitagorejskie to dokładnie te nieparzyste liczby pierwsze p, dla których 2 jest pierwiastkiem pierwotnym modulo p."
+    },
+    {
+      "term": "Liczby Fibonacciego",
+      "explanation": "Ciąg, w którym każda liczba jest sumą dwóch poprzednich liczb."
+    },
+    {
+      "term": "Liczby Tribonacciego",
+      "explanation": "Ciąg liczb naturalnych, który zaczyna się od liczby 0 raz i liczby 1 dwa razy. Następnie suma trzech poprzednich liczb daje kolejną liczbę: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Liczby Bella",
+      "explanation": "Liczba Bella to liczba wszystkich nieuporządkowanych podziałów zbioru n-elementowego, oznaczona jako Bn, z założeniem, że B0=1. Nazwana na cześć Erica Bella, który badał je w latach 30. XX wieku."
+    },
+    {
+      "term": "Liczby Catalana",
+      "explanation": "Liczby Catalana to ciąg liczbowy, który pojawia się w wielu problemach kombinatorycznych. Nazwane na cześć belgijskiego matematyka Eugène'a Charlesa Catalana, choć były znane Leonardowi Eulerowi. n-ta liczba Catalana Cn może być zdefiniowana na kilka równoważnych sposobów, takich jak: 1) Liczba podziałów wypukłego (n+2)-kąta na trójkąty za pomocą nieprzecinających się przekątnych. 2) Liczba sposobów połączenia 2n punktów na okręgu za pomocą n nieprzecinających się akordów, itp."
+    },
+    {
+      "term": "Liczby Sophie Germain",
+      "explanation": "Liczba pierwsza Sophie Germain to taka liczba pierwsza p, że liczba 2p+1 jest również liczbą pierwszą. Liczba 2p+1 związana z liczbą pierwszą Sophie Germain nazywana jest bezpieczną liczbą pierwszą. Na przykład 11 jest liczbą pierwszą Sophie Germain, a 2 × 11 + 1 = 23 jest związaną bezpieczną liczbą pierwszą."
+    },
+    {
+      "term": "Liczby symetryczne",
+      "explanation": "Liczby symetryczne to: 1) wszystkie liczby jednocyfrowe, 2) liczby dwucyfrowe w postaci xx, oraz 3) liczby trzycyfrowe w postaci xyx, gdzie x i y są cyframi, a x nie może być 0."
+    }
+  ],
+  "prefixToLink": "Więcej interesujących informacji o magicznych ciągach liczbowych znajdziesz na Wikipedii i na stronie "
+}

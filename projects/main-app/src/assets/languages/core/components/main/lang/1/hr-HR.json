@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Pretraživanje",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Izvješće",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informacije",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Postavke",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digitalno blago"
+}

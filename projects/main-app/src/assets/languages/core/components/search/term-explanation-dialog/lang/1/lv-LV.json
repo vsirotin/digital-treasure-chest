@@ -1,0 +1,38 @@
+{
+  "title": "Terminu skaidrojums",
+  "explanations": [
+    {
+      "term": "Primskaitlis",
+      "explanation": "Primskaitlis ir dabisks skaitlis, kas ir lielāks par 1 un nav divu mazāku dabisko skaitļu reizinājums. Dabisks skaitlis, kas ir lielāks par 1 un nav primskaitlis, tiek saukts par saliktu skaitli."
+    },
+    {
+      "term": "Pitagora primskaitlis",
+      "explanation": "Pitagora primskaitlis ir primskaitlis, kas ir 4n + 1 formā. Pitagora primskaitļi ir tieši tie nepāra primskaitļi p, kuriem 2 ir primitīva sakne modulo p."
+    },
+    {
+      "term": "Fibonači skaitļi",
+      "explanation": "Secība, kurā katrs skaitlis ir divu iepriekšējo skaitļu summa."
+    },
+    {
+      "term": "Tribonači skaitļi",
+      "explanation": "Dabisko skaitļu secība, kas sākas ar skaitli 0 vienu reizi un skaitli 1 divas reizes. Pēc tam trīs iepriekšējo skaitļu summa veido nākamo skaitli: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bela skaitļi",
+      "explanation": "Bela skaitlis ir n-elementu kopas nešķiroto sadalījumu skaits, ko apzīmē ar Bn, pieņemot, ka B0=1. Nosaukts par godu Ērikam Belam, kurš tos pētīja 20. gadsimta 30. gados."
+    },
+    {
+      "term": "Katalāna skaitļi",
+      "explanation": "Katalāna skaitļi ir skaitļu secība, kas parādās daudzos kombinatorikas problēmās. Tie ir nosaukti par godu Beļģijas matemātiķim Eugēnam Šarlam Katalānam, lai gan tie bija zināmi Leonhardam Eileram. N-tā Katalāna skaitļa Cn var definēt vairākos ekvivalentos veidos, piemēram: 1) Konveksa (n+2)-daudzstūra sadalījumu trijstūros, izmantojot nešķērsojošas diagonāles. 2) Veidu skaits, kā savienot 2n punktus uz apļa, izmantojot n nešķērsojošas akordes, utt."
+    },
+    {
+      "term": "Sofijas Žermēnas skaitļi",
+      "explanation": "Sofijas Žermēnas primskaitlis ir tāds primskaitlis p, ka skaitlis 2p+1 arī ir primskaitlis. Skaitlis 2p+1, kas saistīts ar Sofijas Žermēnas primskaitli, tiek saukts par drošu primskaitli. Piemēram, 11 ir Sofijas Žermēnas primskaitlis, un 2 × 11 + 1 = 23 ir saistītais drošais primskaitlis."
+    },
+    {
+      "term": "Simetriski skaitļi",
+      "explanation": "Simetriski skaitļi ir: 1) visi vienciparu skaitļi, 2) divciparu skaitļi formā xx, un 3) trīsciparu skaitļi formā xyx, kur x un y ir cipari, un x nevar būt 0."
+    }
+  ],
+  "prefixToLink": "Vairāk interesantas informācijas par maģiskajām skaitļu secībām var atrast Vikipēdijā un vietnē "
+}

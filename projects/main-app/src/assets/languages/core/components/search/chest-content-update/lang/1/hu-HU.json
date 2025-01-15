@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Keressen új számokat a digitális kincsesládájához",
+  "introduction": "Kérjük, válasszon kritériumokat kedvenc pozitív egész számok kereséséhez (alább X-ként jelölve)",
+  "errorTextMessage": "A minimum és maximum értékeknek 0 és 1000 közötti egész számoknak kell lenniük, beleértve. A minimum értéknek kisebbnek vagy egyenlőnek kell lennie a maximum értékkel.",
+  "termExplanation": "Mit jelentenek ezek a kifejezések?"
+}

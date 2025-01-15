@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Είναι ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "ένας ζυγός αριθμός"
+    },
+    {
+      "id": 2,
+      "criteria": "ένας περιττός αριθμός"
+    },
+    {
+      "id": 3,
+      "criteria": "ένας πρώτος αριθμός"
+    },
+    {
+      "id": 4,
+      "criteria": "ένας πρώτος αριθμός του Πυθαγόρα"
+    },
+    {
+      "id": 5,
+      "criteria": "ένας αριθμός Fibonacci"
+    },
+    {
+      "id": 6,
+      "criteria": "ένας αριθμός Tribonacci"
+    },
+    {
+      "id": 7,
+      "criteria": "ένας αριθμός του Bell"
+    },
+    {
+      "id": 8,
+      "criteria": "ένας αριθμός του Catalan"
+    },
+    {
+      "id": 9,
+      "criteria": "ένας αριθμός της Sophie Germain"
+    },
+    {
+      "id": 10,
+      "criteria": "ένας συμμετρικός αριθμός"
+    }
+  ]
+}

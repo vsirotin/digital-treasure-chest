@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "C'est ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "un nombre pair"
+    },
+    {
+      "id": 2,
+      "criteria": "un nombre impair"
+    },
+    {
+      "id": 3,
+      "criteria": "un nombre premier"
+    },
+    {
+      "id": 4,
+      "criteria": "un nombre premier de Pythagore"
+    },
+    {
+      "id": 5,
+      "criteria": "un nombre de Fibonacci"
+    },
+    {
+      "id": 6,
+      "criteria": "un nombre de Tribonacci"
+    },
+    {
+      "id": 7,
+      "criteria": "un nombre de Bell"
+    },
+    {
+      "id": 8,
+      "criteria": "un nombre de Catalan"
+    },
+    {
+      "id": 9,
+      "criteria": "un nombre de Sophie Germain"
+    },
+    {
+      "id": 10,
+      "criteria": "un nombre symétrique"
+    }
+  ]
+}

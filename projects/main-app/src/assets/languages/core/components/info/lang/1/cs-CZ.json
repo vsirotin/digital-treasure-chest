@@ -1,0 +1,10 @@
+{
+  "greeting": "Vítejte v digitální truhle s pokladem!",
+  "overview": "Tato aplikace vám umožní stát se vlastníkem neocenitelných pokladů a bezpečně je uložit, ale zároveň zdarma.",
+  "explanation": "Tyto poklady jsou úžasná čísla. A můžete je uložit do paměti svého prohlížeče.",
+  "howToUse": "Můžete vybrat tyto poklady na stránce vyhledávání. Zadejte interval a vlastnosti čísel, která byste chtěli vlastnit. Pokud příliš mnoho čísel splňuje tato kritéria a všechna se nevejdou do vaší truhly s pokladem, změňte kritéria výběru.",
+  "whereExplanation": "Na spodní části stránky výběru můžete vidět stručný popis pozoruhodných vlastností vybraných čísel.",
+  "certificate": "Poté můžete vidět dokončený a podepsaný certifikát vlastnictví pro tato čísla.",
+  "settings": "Stránka nastavení vám pomůže nastavit požadovaný jazyk, pokud se tak nestalo automaticky.",
+  "wisch": "Přejeme vám příjemný čas při výběru vašich čísel a další potěšení z vlastnictví těchto pokladů!"
+}

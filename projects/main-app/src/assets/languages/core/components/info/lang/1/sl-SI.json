@@ -1,0 +1,10 @@
+{
+  "greeting": "Dobrodošli v digitalni skrinji z zakladi!",
+  "overview": "Ta aplikacija vam bo omogočila, da postanete lastnik neprecenljivih zakladov in jih varno shranite, vendar hkrati brezplačno.",
+  "explanation": "Ti zakladi so čudovite številke. In jih lahko shranite v pomnilnik svojega brskalnika.",
+  "howToUse": "Te zaklade lahko izberete na strani za iskanje. Določite interval in lastnosti številk, ki jih želite imeti. Če preveč številk izpolnjuje te kriterije in vse ne ustrezajo vaši skrinji z zakladi, spremenite kriterije izbire.",
+  "whereExplanation": "Na dnu strani za izbiro lahko vidite kratek opis izjemnih lastnosti izbranih številk.",
+  "certificate": "Nato lahko vidite izpolnjen in podpisan certifikat o lastništvu za te številke.",
+  "settings": "Stran z nastavitvami vam bo pomagala nastaviti želeni jezik, če se to ni zgodilo samodejno.",
+  "wisch": "Želimo vam prijeten čas pri izbiri vaših številk in nadaljnje uživanje v lastništvu teh zakladov!"
+}

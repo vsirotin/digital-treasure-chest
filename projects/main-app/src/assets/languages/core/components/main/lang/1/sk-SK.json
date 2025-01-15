@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Hľadať",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Správa",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informácie",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Nastavenia",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digitálna pokladnica"
+}

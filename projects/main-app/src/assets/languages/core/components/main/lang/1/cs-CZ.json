@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Hledat",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Zpráva",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informace",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Nastavení",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digitální poklad"
+}

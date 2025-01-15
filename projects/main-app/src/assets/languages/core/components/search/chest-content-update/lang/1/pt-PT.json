@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Pesquise novos números para o seu Cofre Digital",
+  "introduction": "Por favor, selecione um critério para pesquisar seus números inteiros positivos favoritos (denotados abaixo como X)",
+  "errorTextMessage": "Os valores mínimo e máximo devem ser inteiros entre 0 e 1000, inclusive. O valor mínimo deve ser menor ou igual ao valor máximo.",
+  "termExplanation": "O que significam esses termos?"
+}

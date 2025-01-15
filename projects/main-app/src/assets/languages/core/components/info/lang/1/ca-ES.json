@@ -1,0 +1,10 @@
+{
+  "greeting": "Benvingut a la caixa del tresor digital!",
+  "overview": "Aquesta aplicació et permetrà convertir-te en propietari de tresors inestimables i emmagatzemar-los de manera segura, però al mateix temps de manera gratuïta.",
+  "explanation": "Aquests tresors són números meravellosos. I els pots emmagatzemar a la memòria del teu navegador.",
+  "howToUse": "Pots seleccionar aquests tresors a la pàgina de cerca. Especifica l'interval i les propietats dels números que t'agradaria posseir. Si hi ha massa números que compleixen aquests criteris i tots no caben a la teva caixa del tresor, canvia els criteris de selecció.",
+  "whereExplanation": "A la part inferior de la pàgina de selecció, pots veure una breu descripció de les propietats notables dels números que tries.",
+  "certificate": "Després pots veure un certificat de propietat completat i signat per a aquests números.",
+  "settings": "La pàgina de configuració t'ajudarà a establir l'idioma desitjat si no s'ha fet automàticament.",
+  "wisch": "Et desitgem un temps agradable en la selecció dels teus números i un major gaudi en la possessió d'aquests tresors!"
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Forklaring af vilkår",
+  "explanations": [
+    {
+      "term": "Primtal",
+      "explanation": "Et primtal er et naturligt tal større end 1, som ikke er et produkt af to mindre naturlige tal. Et naturligt tal større end 1, som ikke er et primtal, kaldes et sammensat tal."
+    },
+    {
+      "term": "Pythagoræisk primtal",
+      "explanation": "Et pythagoræisk primtal er et primtal af formen 4n + 1. Pythagoræiske primtal er præcis de ulige primtal p, hvor 2 er en primitiv rod modulo p."
+    },
+    {
+      "term": "Fibonacci tal",
+      "explanation": "En sekvens, hvor hvert tal er summen af de to foregående tal."
+    },
+    {
+      "term": "Tribonacci tal",
+      "explanation": "En sekvens af naturlige tal, der oprindeligt starter med tallet 0 én gang og tallet 1 to gange. Efterfølgende er summen af de tre foregående tal tallet umiddelbart efter: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bell tal",
+      "explanation": "Bell tal er antallet af alle uordnede partitioner af et sæt med n elementer, betegnet med Bn, med B0=1 defineret ved definition. Opkaldt efter Eric Bell, som studerede dem i 1930'erne."
+    },
+    {
+      "term": "Catalan tal",
+      "explanation": "Catalan tal er en numerisk sekvens, der findes i mange kombinatoriske problemer. De er opkaldt efter den belgiske matematiker Eugène Charles Catalan, selvom de var kendt af Leonard Euler. Det n-te Catalan tal Cn kan defineres på flere ækvivalente måder, såsom: 1) Antallet af partitioner af en konveks (n+2)-gon i trekanter ved ikke-skærende diagonaler. 2) Antallet af måder at forbinde 2n punkter på en cirkel med n ved ikke-skærende akkorder, osv."
+    },
+    {
+      "term": "Sophie Germain tal",
+      "explanation": "Et Sophie Germain primtal er et primtal p, hvor tallet 2p+1 også er et primtal. Tallet 2p+1, der er forbundet med Sophie Germain primtallet, kaldes et sikkert primtal. For eksempel er 11 et Sophie Germain primtal, og 2 × 11 + 1 = 23 er det tilhørende sikre primtal."
+    },
+    {
+      "term": "Symmetriske tal",
+      "explanation": "Symmetriske tal er: 1) alle tal med én cifre, 2) to-cifrede tal af formen xx, og 3) tre-cifrede tal af formen xyx, hvor x og y er cifre, og x kan ikke være 0."
+    }
+  ],
+  "prefixToLink": "Mere interessant information om magiske tal sekvenser se på Wikipedia og på hjemmesiden "
+}

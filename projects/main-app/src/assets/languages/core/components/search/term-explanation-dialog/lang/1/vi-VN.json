@@ -1,0 +1,38 @@
+{
+  "title": "Giải thích các thuật ngữ",
+  "explanations": [
+    {
+      "term": "Số nguyên tố",
+      "explanation": "Số nguyên tố là một số tự nhiên lớn hơn 1 mà không phải là tích của hai số tự nhiên nhỏ hơn. Một số tự nhiên lớn hơn 1 mà không phải là số nguyên tố được gọi là số hợp."
+    },
+    {
+      "term": "Số nguyên tố Pythagoras",
+      "explanation": "Số nguyên tố Pythagoras là một số nguyên tố có dạng 4n + 1. Các số nguyên tố Pythagoras chính là những số nguyên tố lẻ p mà 2 là căn nguyên thủy theo modulo p."
+    },
+    {
+      "term": "Số Fibonacci",
+      "explanation": "Một dãy số trong đó mỗi số là tổng của hai số trước đó."
+    },
+    {
+      "term": "Số Tribonacci",
+      "explanation": "Một dãy số tự nhiên bắt đầu với số 0 một lần và số 1 hai lần. Sau đó, tổng của ba số trước đó dẫn đến số tiếp theo: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Số Bell",
+      "explanation": "Số Bell là số lượng các phân hoạch không có thứ tự của một tập hợp n phần tử, được ký hiệu là Bn, với giả định rằng B0=1. Được đặt tên theo Eric Bell, người đã nghiên cứu chúng vào những năm 1930."
+    },
+    {
+      "term": "Số Catalan",
+      "explanation": "Số Catalan là một dãy số xuất hiện trong nhiều bài toán tổ hợp. Chúng được đặt tên để vinh danh nhà toán học người Bỉ Eugène Charles Catalan, mặc dù chúng đã được biết đến bởi Leonhard Euler. Số Catalan thứ n Cn có thể được định nghĩa theo nhiều cách tương đương, chẳng hạn như: 1) Số lượng phân hoạch của một đa giác lồi (n+2) thành các tam giác bằng cách sử dụng các đường chéo không cắt nhau. 2) Số cách kết nối 2n điểm trên một vòng tròn bằng n dây cung không cắt nhau, v.v."
+    },
+    {
+      "term": "Số Sophie Germain",
+      "explanation": "Số nguyên tố Sophie Germain là một số nguyên tố p sao cho số 2p+1 cũng là số nguyên tố. Số 2p+1 liên quan đến số nguyên tố Sophie Germain được gọi là số nguyên tố an toàn. Ví dụ, 11 là một số nguyên tố Sophie Germain, và 2 × 11 + 1 = 23 là số nguyên tố an toàn liên quan."
+    },
+    {
+      "term": "Số đối xứng",
+      "explanation": "Số đối xứng là: 1) tất cả các số có một chữ số, 2) các số có hai chữ số dạng xx, và 3) các số có ba chữ số dạng xyx, trong đó x và y là các chữ số, và x không thể là 0."
+    }
+  ],
+  "prefixToLink": "Để biết thêm thông tin thú vị về các dãy số ma thuật, hãy xem Wikipedia và trang web "
+}

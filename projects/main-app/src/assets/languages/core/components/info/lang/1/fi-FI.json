@@ -1,0 +1,10 @@
+{
+  "greeting": "Tervetuloa digitaaliseen aarrearkkuun!",
+  "overview": "Tämä sovellus antaa sinun tulla korvaamattomien aarteiden omistajaksi ja tallentaa ne turvallisesti, mutta samalla ilmaiseksi.",
+  "explanation": "Nämä aarteet ovat upeita numeroita. Ja voit tallentaa ne selaimesi muistiin.",
+  "howToUse": "Voit valita nämä aarteet hakusivulla. Määritä niiden numeroiden väli ja ominaisuudet, jotka haluat omistaa. Jos liian monet numerot täyttävät nämä kriteerit ja kaikki eivät mahdu aarrearkkuusi, muuta valintakriteerejä.",
+  "whereExplanation": "Valintasivun alaosassa näet lyhyen kuvauksen valitsemiesi numeroiden merkittävistä ominaisuuksista.",
+  "certificate": "Sitten näet näiden numeroiden täytetyn ja allekirjoitetun omistustodistuksen.",
+  "settings": "Asetussivu auttaa sinua asettamaan halutun kielen, jos se ei tapahtunut automaattisesti.",
+  "wisch": "Toivotamme sinulle miellyttävää aikaa numeroiden valinnassa ja edelleen nauttimista näiden aarteiden omistamisesta!"
+}

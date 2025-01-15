@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Search new numbers for your Digital Treasure Chest",
+  "introduction": "Please select a criteria for searching your favorite positive integer numbers (denoted below as X)",
+  "errorTextMessage": "Minimum and maximum values must be integers between 0 and 1000, inclusive. Minimum value must be less than or equal to maximum value.",
+  "termExplanation": "What do these terms mean?"
+}

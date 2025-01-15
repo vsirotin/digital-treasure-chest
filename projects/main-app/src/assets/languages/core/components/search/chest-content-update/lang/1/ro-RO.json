@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Căutați numere noi pentru Cufărul vostru Digital",
+  "introduction": "Vă rugăm să selectați criterii pentru a căuta numerele voastre întregi pozitive preferate (denotate mai jos ca X)",
+  "errorTextMessage": "Valorile minime și maxime trebuie să fie numere întregi între 0 și 1000, inclusiv. Valoarea minimă trebuie să fie mai mică sau egală cu valoarea maximă.",
+  "termExplanation": "Ce înseamnă acești termeni?"
+}

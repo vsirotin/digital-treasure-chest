@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Recherche",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Rapport",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Info",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Paramètres",
+      "icon": "settings"
+    }
+  ],
+  "title": "Coffre aux trésors numérique"
+}

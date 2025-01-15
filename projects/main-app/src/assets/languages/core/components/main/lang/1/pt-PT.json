@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Procurar",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Relatório",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informação",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Configurações",
+      "icon": "settings"
+    }
+  ],
+  "title": "Cofre digital"
+}

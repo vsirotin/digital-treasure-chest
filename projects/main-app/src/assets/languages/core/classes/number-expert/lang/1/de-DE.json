@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Es ist ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "eine gerade Zahl"
+    },
+    {
+      "id": 2,
+      "criteria": "eine ungerade Zahl"
+    },
+    {
+      "id": 3,
+      "criteria": "eine Primzahl"
+    },
+    {
+      "id": 4,
+      "criteria": "eine Pythagoras-Primzahl"
+    },
+    {
+      "id": 5,
+      "criteria": "eine Fibonacci-Zahl"
+    },
+    {
+      "id": 6,
+      "criteria": "eine Tribonacci-Zahl"
+    },
+    {
+      "id": 7,
+      "criteria": "eine Bell-Zahl"
+    },
+    {
+      "id": 8,
+      "criteria": "eine Catalan-Zahl"
+    },
+    {
+      "id": 9,
+      "criteria": "eine Sophie Germain-Primzahl"
+    },
+    {
+      "id": 10,
+      "criteria": "eine symmetrische Zahl"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "این است ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "عدد زوج"
+    },
+    {
+      "id": 2,
+      "criteria": "عدد فرد"
+    },
+    {
+      "id": 3,
+      "criteria": "عدد اول"
+    },
+    {
+      "id": 4,
+      "criteria": "عدد اول فیثاغورث"
+    },
+    {
+      "id": 5,
+      "criteria": "عدد فیبوناچی"
+    },
+    {
+      "id": 6,
+      "criteria": "عدد تریبوناچی"
+    },
+    {
+      "id": 7,
+      "criteria": "عدد بل"
+    },
+    {
+      "id": 8,
+      "criteria": "عدد کاتالان"
+    },
+    {
+      "id": 9,
+      "criteria": "عدد سوفی ژرمن"
+    },
+    {
+      "id": 10,
+      "criteria": "عدد متقارن"
+    }
+  ]
+}

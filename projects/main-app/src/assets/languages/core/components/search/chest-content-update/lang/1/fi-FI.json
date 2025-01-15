@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Etsi uusia numeroita digitaaliseen aarrearkkuusi",
+  "introduction": "Valitse kriteerit etsiäksesi suosikki positiivisia kokonaislukuja (merkitty alla X)",
+  "errorTextMessage": "Pienimpien ja suurimpien arvojen on oltava kokonaislukuja välillä 0–1000. Pienin arvo on oltava pienempi tai sama kuin suurin arvo.",
+  "termExplanation": "Mitä nämä termit tarkoittavat?"
+}

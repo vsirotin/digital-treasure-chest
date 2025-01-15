@@ -1,0 +1,399 @@
+en-US
+{
+    "sertificate":  "Certificate",
+    "line1": "This certificate confirms",
+    "line2":  "that the bearer of this certificate is the legal virtual owner",
+    "line3":  "of the following remarkable numbers:",
+    "signature":  "Master and Lord of All Numbers Numericus Incalculable",
+    "textForEmptyChest": "The chest is empty. Please fill it with numbers."
+}
+
+ar-SA
+{
+    "sertificate": "شهادة",
+    "line1": "تشهد هذه الشهادة",
+    "line2": "أن حامل هذه الشهادة هو المالك الافتراضي القانوني",
+    "line3": "للأرقام الرائعة التالية:",
+    "signature": "سيد ورب جميع الأرقام Numericus Incalculable",
+    "textForEmptyChest": "الصندوق فارغ. يرجى ملؤه بالأرقام."
+}
+
+bn-BD
+{
+    "sertificate": "সার্টিফিকেট",
+    "line1": "এই সার্টিফিকেট নিশ্চিত করে",
+    "line2": "যে এই সার্টিফিকেটের বাহক হলেন আইনি ভার্চুয়াল মালিক",
+    "line3": "নিম্নলিখিত অসাধারণ সংখ্যার:",
+    "signature": "সকল সংখ্যার মাস্টার এবং লর্ড Numericus Incalculable",
+    "textForEmptyChest": "বাক্সটি খালি। অনুগ্রহ করে এটি সংখ্যায় পূর্ণ করুন।"
+}
+
+bg-BG
+{
+    "sertificate": "Сертификат",
+    "line1": "Този сертификат потвърждава",
+    "line2": "че притежателят на този сертификат е законният виртуален собственик",
+    "line3": "на следните забележителни числа:",
+    "signature": "Господар и Лорд на всички числа Numericus Incalculable",
+    "textForEmptyChest": "Сандъкът е празен. Моля, напълнете го с числа."
+}
+
+ca-ES
+{
+    "sertificate": "Certificat",
+    "line1": "Aquest certificat confirma",
+    "line2": "que el portador d'aquest certificat és el propietari virtual legal",
+    "line3": "dels següents números remarcables:",
+    "signature": "Mestre i Senyor de Tots els Números Numericus Incalculable",
+    "textForEmptyChest": "El cofre està buit. Si us plau, ompliu-lo amb números."
+}
+
+zh-CN
+{
+    "sertificate": "证书",
+    "line1": "此证书确认",
+    "line2": "此证书的持有人是以下显著数字的合法虚拟所有者：",
+    "line3": "以下显著数字的合法虚拟所有者：",
+    "signature": "所有数字的主人和领主 Numericus Incalculable",
+    "textForEmptyChest": "箱子是空的。请用数字填满它。"
+}
+
+hr-HR
+{
+    "sertificate": "Potvrda",
+    "line1": "Ova potvrda potvrđuje",
+    "line2": "da je nositelj ove potvrde zakoniti virtualni vlasnik",
+    "line3": "sljedećih izvanrednih brojeva:",
+    "signature": "Gospodar i Gospodar svih brojeva Numericus Incalculable",
+    "textForEmptyChest": "Škrinja je prazna. Molimo vas da je napunite brojevima."
+}
+
+cs-CZ
+{
+    "sertificate": "Certifikát",
+    "line1": "Tento certifikát potvrzuje",
+    "line2": "že držitel tohoto certifikátu je zákonným virtuálním vlastníkem",
+    "line3": "následujících pozoruhodných čísel:",
+    "signature": "Mistr a Pán všech čísel Numericus Incalculable",
+    "textForEmptyChest": "Truhla je prázdná. Prosím, naplňte ji čísly."
+}
+
+da-DK
+{
+    "sertificate": "Certifikat",
+    "line1": "Dette certifikat bekræfter",
+    "line2": "at indehaveren af dette certifikat er den lovlige virtuelle ejer",
+    "line3": "af følgende bemærkelsesværdige tal:",
+    "signature": "Mester og Herre over alle tal Numericus Incalculable",
+    "textForEmptyChest": "Kisten er tom. Fyld den venligst med tal."
+}
+
+nl-NL
+{
+    "sertificate": "Certificaat",
+    "line1": "Dit certificaat bevestigt",
+    "line2": "dat de drager van dit certificaat de wettelijke virtuele eigenaar is",
+    "line3": "van de volgende opmerkelijke nummers:",
+    "signature": "Meester en Heer van Alle Nummers Numericus Incalculable",
+    "textForEmptyChest": "De kist is leeg. Vul het alstublieft met nummers."
+}
+
+en-US
+{
+    "sertificate": "Certificate",
+    "line1": "This certificate confirms",
+    "line2": "that the bearer of this certificate is the legal virtual owner",
+    "line3": "of the following remarkable numbers:",
+    "signature": "Master and Lord of All Numbers Numericus Incalculable",
+    "textForEmptyChest": "The chest is empty. Please fill it with numbers."
+}
+
+et-EE
+{
+    "sertificate": "Sertifikaat",
+    "line1": "See sertifikaat kinnitab",
+    "line2": "et selle sertifikaadi omanik on järgmiste tähelepanuväärsete numbrite seaduslik virtuaalne omanik:",
+    "line3": "järgmiste tähelepanuväärsete numbrite seaduslik virtuaalne omanik:",
+    "signature": "Kõigi numbrite meister ja isand Numericus Incalculable",
+    "textForEmptyChest": "Kirst on tühi. Palun täitke see numbritega."
+}
+
+fi-FI
+{
+    "sertificate": "Todistus",
+    "line1": "Tämä todistus vahvistaa",
+    "line2": "että tämän todistuksen haltija on seuraavien merkittävien numeroiden laillinen virtuaalinen omistaja:",
+    "line3": "seuraavien merkittävien numeroiden laillinen virtuaalinen omistaja:",
+    "signature": "Kaikkien numeroiden mestari ja herra Numericus Incalculable",
+    "textForEmptyChest": "Arkku on tyhjä. Täytä se numeroilla."
+}
+
+fr-FR
+{
+    "sertificate": "Certificat",
+    "line1": "Ce certificat confirme",
+    "line2": "que le porteur de ce certificat est le propriétaire virtuel légal",
+    "line3": "des numéros remarquables suivants :",
+    "signature": "Maître et Seigneur de Tous les Nombres Numericus Incalculable",
+    "textForEmptyChest": "Le coffre est vide. Veuillez le remplir de numéros."
+}
+
+de-DE
+{
+    "sertificate": "Zertifikat",
+    "line1": "Dieses Zertifikat bestätigt",
+    "line2": "dass der Inhaber dieses Zertifikats der rechtmäßige virtuelle Eigentümer",
+    "line3": "der folgenden bemerkenswerten Zahlen ist:",
+    "signature": "Meister und Herr aller Zahlen Numericus Incalculable",
+    "textForEmptyChest": "Die Truhe ist leer. Bitte füllen Sie sie mit Zahlen."
+}
+
+el-GR
+{
+    "sertificate": "Πιστοποιητικό",
+    "line1": "Αυτό το πιστοποιητικό επιβεβαιώνει",
+    "line2": "ότι ο κάτοχος αυτού του πιστοποιητικού είναι ο νόμιμος εικονικός ιδιοκτήτης",
+    "line3": "των ακόλουθων αξιοσημείωτων αριθμών:",
+    "signature": "Κύριος και Άρχοντας όλων των Αριθμών Numericus Incalculable",
+    "textForEmptyChest": "Το σεντούκι είναι άδειο. Παρακαλώ γεμίστε το με αριθμούς."
+}
+
+he-IL
+{
+    "sertificate": "תעודה",
+    "line1": "תעודה זו מאשרת",
+    "line2": "כי נושא תעודה זו הוא הבעלים הווירטואלי החוקי",
+    "line3": "של המספרים הבולטים הבאים:",
+    "signature": "מאסטר ואדון כל המספרים Numericus Incalculable",
+    "textForEmptyChest": "התיבה ריקה. אנא מלאו אותה במספרים."
+}
+
+hu-HU
+{
+    "sertificate": "Tanúsítvány",
+    "line1": "Ez a tanúsítvány megerősíti",
+    "line2": "hogy ennek a tanúsítványnak a birtokosa a következő figyelemre méltó számok törvényes virtuális tulajdonosa:",
+    "line3": "a következő figyelemre méltó számok törvényes virtuális tulajdonosa:",
+    "signature": "Minden szám mestere és ura Numericus Incalculable",
+    "textForEmptyChest": "A láda üres. Kérjük, töltse meg számokkal."
+}
+
+id-ID
+{
+    "sertificate": "Sertifikat",
+    "line1": "Sertifikat ini mengkonfirmasi",
+    "line2": "bahwa pemegang sertifikat ini adalah pemilik virtual yang sah",
+    "line3": "dari angka-angka luar biasa berikut:",
+    "signature": "Master dan Lord dari Semua Angka Numericus Incalculable",
+    "textForEmptyChest": "Petinya kosong. Silakan isi dengan angka."
+}
+
+it-IT
+{
+    "sertificate": "Certificato",
+    "line1": "Questo certificato conferma",
+    "line2": "che il portatore di questo certificato è il legittimo proprietario virtuale",
+    "line3": "dei seguenti numeri notevoli:",
+    "signature": "Maestro e Signore di Tutti i Numeri Numericus Incalculable",
+    "textForEmptyChest": "Il forziere è vuoto. Si prega di riempirlo con numeri."
+}
+
+ja-JP
+{
+    "sertificate": "証明書",
+    "line1": "この証明書は確認します",
+    "line2": "この証明書の保持者が以下の注目すべき数字の法的仮想所有者であることを",
+    "line3": "以下の注目すべき数字の法的仮想所有者であることを",
+    "signature": "すべての数字のマスターおよびロード Numericus Incalculable",
+    "textForEmptyChest": "チェストは空です。数字で満たしてください。"
+}
+
+lv-LV
+{
+    "sertificate": "Sertifikāts",
+    "line1": "Šis sertifikāts apstiprina",
+    "line2": "ka šī sertifikāta turētājs ir šādu ievērojamu skaitļu likumīgais virtuālais īpašnieks:",
+    "line3": "šādu ievērojamu skaitļu likumīgais virtuālais īpašnieks:",
+    "signature": "Visu skaitļu meistars un kungs Numericus Incalculable",
+    "textForEmptyChest": "Lāde ir tukša. Lūdzu, piepildiet to ar skaitļiem."
+}
+
+lt-LT
+{
+    "sertificate": "Sertifikatas",
+    "line1": "Šis sertifikatas patvirtina",
+    "line2": "kad šio sertifikato turėtojas yra šių išskirtinių skaičių teisėtas virtualus savininkas:",
+    "line3": "šių išskirtinių skaičių teisėtas virtualus savininkas:",
+    "signature": "Visų skaičių meistras ir valdovas Numericus Incalculable",
+    "textForEmptyChest": "Skrynia yra tuščia. Prašome užpildyti ją skaičiais."
+}
+
+no-NO
+{
+    "sertificate": "Sertifikat",
+    "line1": "Dette sertifikatet bekrefter",
+    "line2": "at innehaveren av dette sertifikatet er den lovlige virtuelle eieren",
+    "line3": "av følgende bemerkelsesverdige tall:",
+    "signature": "Mester og Herre over Alle Tall Numericus Incalculable",
+    "textForEmptyChest": "Kisten er tom. Vennligst fyll den med tall."
+}
+
+nb-NO
+{
+    "sertificate": "Sertifikat",
+    "line1": "Dette sertifikatet bekrefter",
+    "line2": "at innehaveren av dette sertifikatet er den lovlige virtuelle eieren",
+    "line3": "av følgende bemerkelsesverdige tall:",
+    "signature": "Mester og Herre over Alle Tall Numericus Incalculable",
+    "textForEmptyChest": "Kisten er tom. Vennligst fyll den med tall."
+}
+
+fa-IR
+{
+    "sertificate": "گواهی",
+    "line1": "این گواهی تأیید می کند",
+    "line2": "که دارنده این گواهی مالک قانونی مجازی",
+    "line3": "اعداد قابل توجه زیر است:",
+    "signature": "استاد و ارباب همه اعداد Numericus Incalculable",
+    "textForEmptyChest": "صندوق خالی است. لطفاً آن را با اعداد پر کنید."
+}
+
+pl-PL
+{
+    "sertificate": "Certyfikat",
+    "line1": "Ten certyfikat potwierdza",
+    "line2": "że posiadacz tego certyfikatu jest prawnym wirtualnym właścicielem",
+    "line3": "następujących niezwykłych liczb:",
+    "signature": "Mistrz i Pan Wszystkich Liczb Numericus Incalculable",
+    "textForEmptyChest": "Skrzynia jest pusta. Proszę wypełnić ją liczbami."
+}
+
+pt-PT
+{
+    "sertificate": "Certificado",
+    "line1": "Este certificado confirma",
+    "line2": "que o portador deste certificado é o proprietário virtual legal",
+    "line3": "dos seguintes números notáveis:",
+    "signature": "Mestre e Senhor de Todos os Números Numericus Incalculable",
+    "textForEmptyChest": "O baú está vazio. Por favor, preencha-o com números."
+}
+
+pa-IN
+{
+    "sertificate": "ਸਰਟੀਫਿਕੇਟ",
+    "line1": "ਇਹ ਸਰਟੀਫਿਕੇਟ ਪੁਸ਼ਟੀ ਕਰਦਾ ਹੈ",
+    "line2": "ਕਿ ਇਸ ਸਰਟੀਫਿਕੇਟ ਦਾ ਧਾਰਕ ਕਾਨੂੰਨੀ ਵਰਚੁਅਲ ਮਾਲਕ ਹੈ",
+    "line3": "ਹੇਠ ਲਿਖੇ ਸ਼ਾਨਦਾਰ ਨੰਬਰਾਂ ਦਾ:",
+    "signature": "ਸਾਰੇ ਨੰਬਰਾਂ ਦੇ ਮਾਸਟਰ ਅਤੇ ਲਾਰਡ Numericus Incalculable",
+    "textForEmptyChest": "ਸੰਦ ਖਾਲੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਇਸਨੂੰ ਨੰਬਰਾਂ ਨਾਲ ਭਰੋ।"
+}
+
+ro-RO
+{
+    "sertificate": "Certificat",
+    "line1": "Acest certificat confirmă",
+    "line2": "că deținătorul acestui certificat este proprietarul virtual legal",
+    "line3": "al următoarelor numere remarcabile:",
+    "signature": "Maestru și Lord al Tuturor Numerelor Numericus Incalculable",
+    "textForEmptyChest": "Cufărul este gol. Vă rugăm să-l umpleți cu numere."
+}
+
+ru-RU
+{
+    "sertificate": "Сертификат",
+    "line1": "Этот сертификат подтверждает",
+    "line2": "что владелец этого сертификата является законным виртуальным владельцем",
+    "line3": "следующих замечательных чисел:",
+    "signature": "Мастер и Владыка всех чисел Numericus Incalculable",
+    "textForEmptyChest": "Сундук пуст. Пожалуйста, заполните его числами."
+}
+
+sr-RS
+{
+    "sertificate": "Сертификат",
+    "line1": "Овај сертификат потврђује",
+    "line2": "да је носилац овог сертификата законити виртуелни власник",
+    "line3": "следећих изванредних бројева:",
+    "signature": "Мајстор и Господар свих бројева Numericus Incalculable",
+    "textForEmptyChest": "Сандук је празан. Молимо вас да га напуните бројевима."
+}
+
+sk-SK
+{
+    "sertificate": "Certifikát",
+    "line1": "Tento certifikát potvrdzuje",
+    "line2": "že držiteľ tohto certifikátu je zákonným virtuálnym vlastníkom",
+    "line3": "nasledujúcich pozoruhodných čísel:",
+    "signature": "Majster a Pán všetkých čísel Numericus Incalculable",
+    "textForEmptyChest": "Truhlica je prázdna. Prosím, naplňte ju číslami."
+}
+
+sl-SI
+{
+    "sertificate": "Certifikat",
+    "line1": "Ta certifikat potrjuje",
+    "line2": "da je imetnik tega certifikata zakoniti virtualni lastnik",
+    "line3": "naslednjih izjemnih številk:",
+    "signature": "Mojster in Gospod vseh številk Numericus Incalculable",
+    "textForEmptyChest": "Skrinja je prazna. Prosimo, napolnite jo s številkami."
+}
+
+es-ES
+{
+    "sertificate": "Certificado",
+    "line1": "Este certificado confirma",
+    "line2": "que el portador de este certificado es el propietario virtual legal",
+    "line3": "de los siguientes números notables:",
+    "signature": "Maestro y Señor de Todos los Números Numericus Incalculable",
+    "textForEmptyChest": "El cofre está vacío. Por favor, llénelo con números."
+}
+
+sv-SE
+{
+    "sertificate": "Certifikat",
+    "line1": "Detta certifikat bekräftar",
+    "line2": "att innehavaren av detta certifikat är den lagliga virtuella ägaren",
+    "line3": "av följande anmärkningsvärda nummer:",
+    "signature": "Mästare och Herre över Alla Nummer Numericus Incalculable",
+    "textForEmptyChest": "Kistan är tom. Fyll den med nummer."
+}
+
+th-TH
+{
+    "sertificate": "ใบรับรอง",
+    "line1": "ใบรับรองนี้ยืนยันว่า",
+    "line2": "ผู้ถือใบรับรองนี้เป็นเจ้าของเสมือนตามกฎหมาย",
+    "line3": "ของหมายเลขที่น่าทึ่งต่อไปนี้:",
+    "signature": "เจ้าแห่งตัวเลขทั้งหมด Numericus Incalculable",
+    "textForEmptyChest": "หีบว่างเปล่า กรุณาเติมตัวเลข"
+}
+
+tr-TR
+{
+    "sertificate": "Sertifika",
+    "line1": "Bu sertifika doğrular",
+    "line2": "bu sertifikanın sahibinin yasal sanal sahibi olduğunu",
+    "line3": "aşağıdaki dikkat çekici numaraların:",
+    "signature": "Tüm Numaraların Efendisi ve Sahibi Numericus Incalculable",
+    "textForEmptyChest": "Sandık boş. Lütfen sayılarla doldurun."
+}
+
+uk-UA
+{
+    "sertificate": "Сертифікат",
+    "line1": "Цей сертифікат підтверджує",
+    "line2": "що власник цього сертифіката є законним віртуальним власником",
+    "line3": "наступних видатних чисел:",
+    "signature": "Майстер і Володар всіх чисел Numericus Incalculable",
+    "textForEmptyChest": "Скриня порожня. Будь ласка, заповніть її числами."
+}
+
+vi-VN
+{
+    "sertificate": "Chứng chỉ",
+    "line1": "Chứng chỉ này xác nhận",
+    "line2": "rằng người sở hữu chứng chỉ này là chủ sở hữu hợp pháp",
+    "line3": "của các con số đáng chú ý sau:",
+    "signature": "Chủ nhân và Chúa tể của tất cả các con số Numericus Incalculable",
+    "textForEmptyChest": "Rương trống. Vui lòng điền vào các con số."
+}

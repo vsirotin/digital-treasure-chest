@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Iskanje",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Poročilo",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informacije",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Nastavitve",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digitalna skrinja z zakladi"
+}

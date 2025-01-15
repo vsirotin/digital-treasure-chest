@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Cercar",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Informe",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Informació",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Configuració",
+      "icon": "settings"
+    }
+  ],
+  "title": "Tresor digital"
+}

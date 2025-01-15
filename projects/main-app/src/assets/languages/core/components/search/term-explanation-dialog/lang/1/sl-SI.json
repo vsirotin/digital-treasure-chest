@@ -1,0 +1,38 @@
+{
+  "title": "Pojasnilo pojmov",
+  "explanations": [
+    {
+      "term": "Praštevilka",
+      "explanation": "Praštevilka je naravno število večje od 1, ki ni produkt dveh manjših naravnih števil. Naravno število večje od 1, ki ni praštevilo, se imenuje sestavljeno število."
+    },
+    {
+      "term": "Pitagorejsko praštevilo",
+      "explanation": "Pitagorejsko praštevilo je praštevilo oblike 4n + 1. Pitagorejska praštevila so točno tista liha praštevila p, za katera je 2 primitivni koren modulo p."
+    },
+    {
+      "term": "Fibonaccijeva števila",
+      "explanation": "Zaporedje, v katerem je vsako število vsota dveh prejšnjih."
+    },
+    {
+      "term": "Tribonaccijeva števila",
+      "explanation": "Zaporedje naravnih števil, ki se začne s številom 0 enkrat in številom 1 dvakrat. Nato vsota treh prejšnjih števil vodi do naslednjega števila: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bellova števila",
+      "explanation": "Bellovo število je število vseh neurejenih razdelitev n-elementnega množice, označenih kot Bn, s predpostavko, da je B0=1. Poimenovano po Ericu Bellu, ki jih je preučeval v 30. letih 20. stoletja."
+    },
+    {
+      "term": "Catalanova števila",
+      "explanation": "Catalanova števila so številčni niz, ki se pojavlja v mnogih kombinatoričnih problemih. Poimenovana so v čast belgijskega matematika Eugèna Charlesa Catalana, čeprav so bila znana Leonardu Eulerju. n-to Catalanovo število Cn je mogoče definirati na več enakovrednih načinov, kot na primer: 1) Število razdelitev konveksnega (n+2)-kotnika na trikotnike z uporabo neprekrivajočih se diagonal. 2) Število načinov, kako povezati 2n točk na krogu z uporabo n neprekrivajočih se akordov, itd."
+    },
+    {
+      "term": "Sophie Germainova števila",
+      "explanation": "Praštevilka Sophie Germain je takšno praštevilo p, da je število 2p+1 tudi praštevilo. Število 2p+1, povezano s praštevilko Sophie Germain, se imenuje varno praštevilo. Na primer, 11 je praštevilka Sophie Germain, in 2 × 11 + 1 = 23 je povezano varno praštevilo."
+    },
+    {
+      "term": "Simetrična števila",
+      "explanation": "Simetrična števila so: 1) vsa enoštevilčna števila, 2) dvomestna števila oblike xx, in 3) trimestna števila oblike xyx, kjer sta x in y številki, in x ne more biti 0."
+    }
+  ],
+  "prefixToLink": "Za več zanimivih informacij o magičnih številskih zaporedjih glejte Wikipedijo in spletno stran "
+}

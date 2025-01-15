@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Keresés",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Jelentés",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Információ",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Beállítások",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digitális kincsesláda"
+}

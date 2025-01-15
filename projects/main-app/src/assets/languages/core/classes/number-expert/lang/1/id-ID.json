@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Ini adalah ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "bilangan genap"
+    },
+    {
+      "id": 2,
+      "criteria": "bilangan ganjil"
+    },
+    {
+      "id": 3,
+      "criteria": "bilangan prima"
+    },
+    {
+      "id": 4,
+      "criteria": "bilangan prima Pythagoras"
+    },
+    {
+      "id": 5,
+      "criteria": "bilangan Fibonacci"
+    },
+    {
+      "id": 6,
+      "criteria": "bilangan Tribonacci"
+    },
+    {
+      "id": 7,
+      "criteria": "bilangan Bell"
+    },
+    {
+      "id": 8,
+      "criteria": "bilangan Catalan"
+    },
+    {
+      "id": 9,
+      "criteria": "bilangan Sophie Germain"
+    },
+    {
+      "id": 10,
+      "criteria": "bilangan simetris"
+    }
+  ]
+}

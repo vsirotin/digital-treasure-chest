@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "See on ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "paarisarv"
+    },
+    {
+      "id": 2,
+      "criteria": "paaritu arv"
+    },
+    {
+      "id": 3,
+      "criteria": "algorav"
+    },
+    {
+      "id": 4,
+      "criteria": "Pythagorase algarv"
+    },
+    {
+      "id": 5,
+      "criteria": "Fibonacci arv"
+    },
+    {
+      "id": 6,
+      "criteria": "Tribonacci arv"
+    },
+    {
+      "id": 7,
+      "criteria": "Bell'i arv"
+    },
+    {
+      "id": 8,
+      "criteria": "Catalani arv"
+    },
+    {
+      "id": 9,
+      "criteria": "Sophie Germain'i arv"
+    },
+    {
+      "id": 10,
+      "criteria": "sümmeetriline arv"
+    }
+  ]
+}

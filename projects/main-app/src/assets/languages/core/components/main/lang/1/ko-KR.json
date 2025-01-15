@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "검색",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "보고서",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "정보",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "설정",
+      "icon": "settings"
+    }
+  ],
+  "title": "디지털 보물 상자"
+}

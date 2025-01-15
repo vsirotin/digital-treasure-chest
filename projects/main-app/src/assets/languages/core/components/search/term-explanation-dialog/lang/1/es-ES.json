@@ -1,0 +1,38 @@
+{
+  "title": "Explicación de términos",
+  "explanations": [
+    {
+      "term": "Número primo",
+      "explanation": "Un número primo es un número natural mayor que 1 que no es el producto de dos números naturales más pequeños. Un número natural mayor que 1 que no es primo se llama número compuesto."
+    },
+    {
+      "term": "Número primo pitagórico",
+      "explanation": "Un número primo pitagórico es un número primo de la forma 4n + 1. Los números primos pitagóricos son exactamente aquellos números primos impares p para los cuales 2 es una raíz primitiva módulo p."
+    },
+    {
+      "term": "Números de Fibonacci",
+      "explanation": "Una secuencia en la que cada número es la suma de los dos anteriores."
+    },
+    {
+      "term": "Números de Tribonacci",
+      "explanation": "Una secuencia de números naturales que comienza con el número 0 una vez y el número 1 dos veces. Luego, la suma de los tres números anteriores da el siguiente número: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Números de Bell",
+      "explanation": "El número de Bell es el número de particiones no ordenadas de un conjunto de n elementos, denotado como Bn, con la suposición de que B0=1. Nombrado en honor a Eric Bell, quien los estudió en la década de 1930."
+    },
+    {
+      "term": "Números de Catalan",
+      "explanation": "Los números de Catalan son una secuencia numérica que aparece en muchos problemas combinatorios. Llevan el nombre del matemático belga Eugène Charles Catalan, aunque eran conocidos por Leonhard Euler. El n-ésimo número de Catalan Cn puede definirse de varias maneras equivalentes, como por ejemplo: 1) El número de particiones de un (n+2)-gono convexo en triángulos mediante diagonales no superpuestas. 2) El número de formas de conectar 2n puntos en un círculo mediante n acordes no superpuestos, etc."
+    },
+    {
+      "term": "Números de Sophie Germain",
+      "explanation": "Un número primo de Sophie Germain es un número primo p tal que el número 2p+1 también es primo. El número 2p+1 asociado con un número primo de Sophie Germain se llama número primo seguro. Por ejemplo, 11 es un número primo de Sophie Germain, y 2 × 11 + 1 = 23 es el número primo seguro asociado."
+    },
+    {
+      "term": "Números simétricos",
+      "explanation": "Los números simétricos son: 1) todos los números de un solo dígito, 2) números de dos dígitos de la forma xx, y 3) números de tres dígitos de la forma xyx, donde x e y son dígitos, y x no puede ser 0."
+    }
+  ],
+  "prefixToLink": "Puede encontrar más información interesante sobre secuencias numéricas mágicas en Wikipedia y en el sitio web "
+}

@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Dijital Hazine Sandığınız için yeni numaralar arayın",
+  "introduction": "En sevdiğiniz pozitif tam sayı numaralarını aramak için lütfen kriterleri seçin (aşağıda X olarak belirtilmiştir)",
+  "errorTextMessage": "Minimum ve maksimum değerler 0 ile 1000 arasında tamsayılar olmalıdır. Minimum değer, maksimum değerden küçük veya ona eşit olmalıdır.",
+  "termExplanation": "Bu terimler ne anlama geliyor?"
+}

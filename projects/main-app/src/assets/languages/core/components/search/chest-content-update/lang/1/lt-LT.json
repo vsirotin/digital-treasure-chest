@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Ieškokite naujų skaičių savo skaitmeninei lobiui",
+  "introduction": "Pasirinkite kriterijus, kad ieškotumėte mėgstamiausių teigiamų sveikųjų skaičių (pažymėtų žemiau kaip X)",
+  "errorTextMessage": "Mažiausios ir didžiausios vertės turi būti sveikieji skaičiai nuo 0 iki 1000, įskaitant. Mažiausia vertė turi būti mažesnė arba lygi didžiausiajai vertei.",
+  "termExplanation": "Ką reiškia šie terminai?"
+}

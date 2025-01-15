@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "To je ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "paran broj"
+    },
+    {
+      "id": 2,
+      "criteria": "neparan broj"
+    },
+    {
+      "id": 3,
+      "criteria": "prosti broj"
+    },
+    {
+      "id": 4,
+      "criteria": "Pitagorin prosti broj"
+    },
+    {
+      "id": 5,
+      "criteria": "Fibonaccijev broj"
+    },
+    {
+      "id": 6,
+      "criteria": "Tribonaccijev broj"
+    },
+    {
+      "id": 7,
+      "criteria": "Bellov broj"
+    },
+    {
+      "id": 8,
+      "criteria": "Catalanov broj"
+    },
+    {
+      "id": 9,
+      "criteria": "broj Sophie Germain"
+    },
+    {
+      "id": 10,
+      "criteria": "simetričan broj"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Nó là ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "số chẵn"
+    },
+    {
+      "id": 2,
+      "criteria": "số lẻ"
+    },
+    {
+      "id": 3,
+      "criteria": "số nguyên tố"
+    },
+    {
+      "id": 4,
+      "criteria": "số nguyên tố Pythagoras"
+    },
+    {
+      "id": 5,
+      "criteria": "số Fibonacci"
+    },
+    {
+      "id": 6,
+      "criteria": "số Tribonacci"
+    },
+    {
+      "id": 7,
+      "criteria": "số Bell"
+    },
+    {
+      "id": 8,
+      "criteria": "số Catalan"
+    },
+    {
+      "id": 9,
+      "criteria": "số Sophie Germain"
+    },
+    {
+      "id": 10,
+      "criteria": "số đối xứng"
+    }
+  ]
+}

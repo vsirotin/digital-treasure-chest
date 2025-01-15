@@ -1,10 +1,10 @@
 {
   "greeting": "Willkommen in der digitalen Schatzkiste!",
-  "overview": "Diese Anwendung ermöglicht es Ihnen, Besitzer von unbezahlbaren Schätzen zu werden und sie sicher, aber gleichzeitig kostenlos zu speichern.",
+  "overview": "Diese Anwendung ermöglicht es Ihnen, Besitzer von unbezahlbaren Schätzen zu werden und sie sicher zu speichern, aber gleichzeitig kostenlos.",
   "explanation": "Diese Schätze sind wunderbare Zahlen. Und Sie können sie im Speicher Ihres Browsers speichern.",
-  "howToUse": "Sie können diese Schätze auf der Suchseite auswählen. Geben Sie das Intervall und die Eigenschaften der Zahlen an, die Sie besitzen möchten. Wenn zu viele Zahlen diese Kriterien erfüllen und nicht alle in Ihre Schatzkiste passen, ändern Sie die Auswahlkriterien.",
-  "whereExplanation": "Am unteren Rand der Auswahlseite können Sie eine kurze Beschreibung der bemerkenswerten Eigenschaften der von Ihnen gewählten Zahlen sehen.",
-  "certificate": "Dann können Sie ein ausgefülltes und unterschriebenes Zertifikat für den Besitz dieser Zahlen sehen.",
+  "howToUse": "Sie können diese Schätze auf der Suchseite auswählen. Geben Sie das Intervall und die Eigenschaften der Zahlen an, die Sie besitzen möchten. Wenn zu viele Zahlen diese Kriterien erfüllen und alle nicht in Ihre Schatzkiste passen, ändern Sie die Auswahlkriterien.",
+  "whereExplanation": "Am unteren Rand der Auswahlliste können Sie eine kurze Beschreibung der bemerkenswerten Eigenschaften der von Ihnen ausgewählten Zahlen sehen.",
+  "certificate": "Dann können Sie ein ausgefülltes und unterschriebenes Eigentumszertifikat für diese Zahlen sehen.",
   "settings": "Die Einstellungsseite hilft Ihnen, die gewünschte Sprache einzustellen, falls dies nicht automatisch geschehen ist.",
   "wisch": "Wir wünschen Ihnen eine angenehme Zeit bei der Auswahl Ihrer Zahlen und weiterhin viel Freude am Besitz dieser Schätze!"
 }

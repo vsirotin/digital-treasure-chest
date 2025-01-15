@@ -1,0 +1,38 @@
+{
+  "title": "Objašnjenje pojmova",
+  "explanations": [
+    {
+      "term": "Prosti broj",
+      "explanation": "Prosti broj je prirodni broj veći od 1 koji nije proizvod dvaju manjih prirodnih brojeva. Prirodni broj veći od 1 koji nije prost naziva se složeni broj."
+    },
+    {
+      "term": "Pitagorijin prosti broj",
+      "explanation": "Pitagorijin prosti broj je prosti broj oblika 4n + 1. Pitagorijini prosti brojevi su točno oni neparni prosti brojevi p za koje je 2 primitivni korijen modulo p."
+    },
+    {
+      "term": "Fibonaccijevi brojevi",
+      "explanation": "Niz u kojem je svaki broj zbroj prethodna dva broja."
+    },
+    {
+      "term": "Tribonaccijevi brojevi",
+      "explanation": "Niz prirodnih brojeva koji započinje brojem 0 jednom i brojem 1 dva puta. Naknadno, zbroj tri prethodna broja rezultira brojem odmah nakon: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bellovi brojevi",
+      "explanation": "Bellov broj je broj svih neuređenih particija skupa od n elemenata, označen s Bn, s pretpostavkom da je B0=1. Imenovani su po Ericu Bellu, koji ih je proučavao 1930-ih godina."
+    },
+    {
+      "term": "Katalanovi brojevi",
+      "explanation": "Katalanovi brojevi su brojčani niz koji se pojavljuje u mnogim kombinatoričkim problemima. Nazvani su u čast belgijskog matematičara Eugènea Charlesa Catalana, iako su bili poznati Leonardu Euleru. N-ti Katalanov broj Cn može se definirati na nekoliko ekvivalentnih načina, kao što su: 1) Broj particija konveksnog (n+2)-ogona na trokute pomoću neprolazećih dijagonala. 2) Broj načina povezivanja 2n točaka na krugu s n pomoću neprolazećih akorda, itd."
+    },
+    {
+      "term": "Sophie Germain prosti brojevi",
+      "explanation": "Prosti broj Sophie Germain je prosti broj p za koji je broj 2p+1 također prost. Broj 2p+1 povezan s prostim brojem Sophie Germain naziva se sigurnim prostim brojem. Na primjer, 11 je Sophie Germain prosti broj, a 2 × 11 + 1 = 23 je povezani sigurni prosti broj."
+    },
+    {
+      "term": "Simetrični brojevi",
+      "explanation": "Simetrični brojevi su: 1) svi jednoznamenkasti brojevi, 2) dvoznamenkasti brojevi oblika xx, i 3) troznamenkasti brojevi oblika xyx, gdje su x i y znamenke, a x ne može biti 0."
+    }
+  ],
+  "prefixToLink": "Više zanimljivih informacija o magičnim brojevima potražite na Wikipediji i na stranici "
+}

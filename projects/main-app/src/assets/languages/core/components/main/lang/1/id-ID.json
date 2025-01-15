@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Pencarian",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Laporan",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Info",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Pengaturan",
+      "icon": "settings"
+    }
+  ],
+  "title": "Petih digital"
+}

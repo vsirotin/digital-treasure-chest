@@ -1,0 +1,38 @@
+{
+  "title": "Terimlerin Açıklaması",
+  "explanations": [
+    {
+      "term": "Asal sayı",
+      "explanation": "Asal sayı, 1'den büyük ve iki daha küçük doğal sayının çarpımı olmayan bir doğal sayıdır. 1'den büyük ve asal olmayan bir doğal sayıya bileşik sayı denir."
+    },
+    {
+      "term": "Pisagor asal sayısı",
+      "explanation": "Pisagor asal sayısı, 4n + 1 biçiminde bir asal sayıdır. Pisagor asal sayıları, 2'nin p modülünde bir kök olduğu tek asal sayılar p'dir."
+    },
+    {
+      "term": "Fibonacci sayıları",
+      "explanation": "Her sayının önceki iki sayının toplamı olduğu bir dizi."
+    },
+    {
+      "term": "Tribonacci sayıları",
+      "explanation": "0 sayısı bir kez ve 1 sayısı iki kez başlayan doğal sayıların bir dizisi. Daha sonra, önceki üç sayının toplamı bir sonraki sayıya yol açar: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3"
+    },
+    {
+      "term": "Bell sayıları",
+      "explanation": "Bell sayısı, Bn olarak belirtilen n elemanlı bir kümenin sırasız bölümlerinin sayısıdır ve B0=1 varsayımıyla. 1930'larda onları inceleyen Eric Bell'in adını almıştır."
+    },
+    {
+      "term": "Catalan sayıları",
+      "explanation": "Catalan sayıları, birçok kombinatoryal problemde ortaya çıkan bir sayı dizisidir. Belçikalı matematikçi Eugène Charles Catalan'ın onuruna adlandırılmıştır, ancak Leonhard Euler tarafından biliniyordu. n'inci Catalan sayısı Cn, örneğin: 1) Bir konveks (n+2)-gonun üçgenlere bölünme sayısı, örtüşmeyen köşegenler kullanılarak. 2) 2n noktayı bir dairede n örtüşmeyen akor kullanarak bağlama yollarının sayısı, vb. gibi birkaç eşdeğer şekilde tanımlanabilir."
+    },
+    {
+      "term": "Sophie Germain sayıları",
+      "explanation": "Sophie Germain asal sayısı, 2p+1 sayısının da asal olduğu bir asal sayı p'dir. Sophie Germain asal sayısı ile ilişkili 2p+1 sayısına güvenli asal sayı denir. Örneğin, 11 bir Sophie Germain asal sayısıdır ve 2 × 11 + 1 = 23 ilişkili güvenli asal sayıdır."
+    },
+    {
+      "term": "Simetrik sayılar",
+      "explanation": "Simetrik sayılar şunlardır: 1) tüm tek basamaklı sayılar, 2) xx biçimindeki iki basamaklı sayılar ve 3) xyx biçimindeki üç basamaklı sayılar, burada x ve y rakamdır ve x 0 olamaz."
+    }
+  ],
+  "prefixToLink": "Büyülü sayı dizileri hakkında daha fazla ilginç bilgi için Wikipedia ve web sitesine bakın "
+}

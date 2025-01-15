@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Cerca",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Rapporto",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Info",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Impostazioni",
+      "icon": "settings"
+    }
+  ],
+  "title": "Scrigno digitale"
+}

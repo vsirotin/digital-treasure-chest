@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "অনুসন্ধান",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "প্রতিবেদন",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "তথ্য",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "সেটিংস",
+      "icon": "settings"
+    }
+  ],
+  "title": "ডিজিটাল ধন"
+}

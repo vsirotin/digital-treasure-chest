@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "ਖੋਜੋ",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "ਰਿਪੋਰਟ",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "ਜਾਣਕਾਰੀ",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "ਸੈਟਿੰਗਸ",
+      "icon": "settings"
+    }
+  ],
+  "title": "ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨਾ"
+}

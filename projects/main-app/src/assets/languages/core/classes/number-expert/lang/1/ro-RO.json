@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Este ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "un număr par"
+    },
+    {
+      "id": 2,
+      "criteria": "un număr impar"
+    },
+    {
+      "id": 3,
+      "criteria": "un număr prim"
+    },
+    {
+      "id": 4,
+      "criteria": "un număr prim al lui Pitagora"
+    },
+    {
+      "id": 5,
+      "criteria": "un număr Fibonacci"
+    },
+    {
+      "id": 6,
+      "criteria": "un număr Tribonacci"
+    },
+    {
+      "id": 7,
+      "criteria": "un număr Bell"
+    },
+    {
+      "id": 8,
+      "criteria": "un număr Catalan"
+    },
+    {
+      "id": 9,
+      "criteria": "un număr Sophie Germain"
+    },
+    {
+      "id": 10,
+      "criteria": "un număr simetric"
+    }
+  ]
+}

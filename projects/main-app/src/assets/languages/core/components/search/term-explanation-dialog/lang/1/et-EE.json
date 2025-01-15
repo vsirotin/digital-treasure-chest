@@ -1,0 +1,38 @@
+{
+  "title": "Terminoloogia selgitus",
+  "explanations": [
+    {
+      "term": "Algorütm",
+      "explanation": "Algorütm on loomulik arv, mis on suurem kui 1 ja mis ei ole kahe väiksema loomuliku arvu korrutis. Loomulik arv, mis on suurem kui 1 ja mis ei ole algorütm, nimetatakse liitarvuks."
+    },
+    {
+      "term": "Pythagorase algorütm",
+      "explanation": "Pythagorase algorütm on algorütm kujul 4n + 1. Pythagorase algorütmid on täpselt need paaritud algorütmid p, mille puhul 2 on primitiivne juur mooduli p järgi."
+    },
+    {
+      "term": "Fibonacci arvud",
+      "explanation": "Jada, milles iga arv on kahe eelneva summa."
+    },
+    {
+      "term": "Tribonacci arvud",
+      "explanation": "Loomulike arvude jada, mis algab numbriga 0 üks kord ja numbriga 1 kaks korda. Seejärel viib kolme eelneva arvu summa järgmise arvuni: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Belli arvud",
+      "explanation": "Belli arv on viiside arv, kuidas jagada n-elemendiline hulk, tähistatud kui Bn, eeldusel, et B0=1. Nimetatud Eric Belli järgi, kes uuris neid 1930ndatel."
+    },
+    {
+      "term": "Catalani arvud",
+      "explanation": "Catalani arvud on loomulike arvude jada, mis esineb mitmesugustes kombinatoorikaprobleemides. Need on nimetatud Belgia matemaatiku Eugène Charles Catalani järgi, kuigi need olid teada Leonhard Eulerile. N-t Catalani arvu Cn saab määratleda mitmel ekvivalentsel viisil, näiteks: 1) Viiside arv, kuidas jagada kumer (n+2)-nurk kolmnurkadeks, kasutades mitte-lõikavaid diagonaale. 2) Viiside arv, kuidas ühendada 2n punkti ringil, kasutades n mitte-lõikavat akordi jne."
+    },
+    {
+      "term": "Sophie Germaini algorütmid",
+      "explanation": "Sophie Germaini algorütm on selline algorütm p, et arv 2p+1 on samuti algorütm. Arv 2p+1, mis on seotud Sophie Germaini algorütmiga, nimetatakse turvaliseks algorütmiks. Näiteks 11 on Sophie Germaini algorütm ja 2 × 11 + 1 = 23 on seotud turvaline algorütm."
+    },
+    {
+      "term": "Sümmeetrilised arvud",
+      "explanation": "Sümmeetrilised arvud on: 1) kõik ühekohalised arvud, 2) kahekohalised arvud kujul xx ja 3) kolmekohalised arvud kujul xyx, kus x ja y on numbrid ning x ei saa olla 0."
+    }
+  ],
+  "prefixToLink": "Rohkem huvitavat teavet maagiliste arvujadade kohta leiate Wikipediast ja veebisaidilt "
+}

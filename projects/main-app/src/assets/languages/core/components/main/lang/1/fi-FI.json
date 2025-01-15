@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Haku",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Raportti",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Tiedot",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Asetukset",
+      "icon": "settings"
+    }
+  ],
+  "title": "Digitaalinen aarrearkku"
+}

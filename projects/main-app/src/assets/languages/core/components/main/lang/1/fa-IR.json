@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "جستجو",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "گزارش",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "اطلاعات",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "تنظیمات",
+      "icon": "settings"
+    }
+  ],
+  "title": "صندوق گنج دیجیتال"
+}

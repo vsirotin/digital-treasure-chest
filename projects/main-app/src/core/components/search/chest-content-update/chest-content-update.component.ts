@@ -1,20 +1,18 @@
 import { Component, inject, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { MatFormFieldModule } from '@angular/material/form-field';
-
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatListModule, MatSelectionListChange, MatSelectionList } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-
-import { TermExplanationDialog } from '../term-explanation-dialog/TermExplanationDialog';
+import { TermExplanationDialog } from '../term-explanation-dialog/term-explanation-dialog';
 import { Searcher } from '../../../classes/searcher/searcher';
-
 import { SerachResultCardComponent } from './search-result-card/search-result-card.component';
 import { Chest } from '../../../../shared/classes/chest';
-import { NumberPropertiesNameHolder } from '../../../classes/number-expert/number-properties-name-holder';
+import { ISearchEntry, NumberPropertiesNameHolder } from '../../../classes/number-expert/number-properties-name-holder';
+import * as uiDefault from '../../../../assets/languages/core/components/search/chest-content-view/lang/1/en-US.json';
+import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
 
 @Component({
   selector: 'app-chet-content-update',
@@ -31,23 +29,32 @@ import { NumberPropertiesNameHolder } from '../../../classes/number-expert/numbe
   templateUrl: './chest-content-update.component.html',
   styleUrl: './chest-content-update.component.css'
 })
-export class ChetContentUpdateComponent {
+export class ChetContentUpdateComponent implements ILocalizationClient<ISearchUI> {
 
-  ui: ISearchUI = {
-    searchTitle: 'Search new numbers for your Digital Treasure Chet',
-    introduction: 'Please select a criterions for search your favorite positive integer numbers (denoted below as X)',
+  ui: ISearchUI = (uiDefault as any).default;
 
-    errorTextMessage: 'Minimum and maximum values must integers between 0 and 1000, inclusive. Minimum value must be less than or equal to maximum value.',
-    termExplanation: 'What do these terms mean?',
+  numberPropertiesNameHolder: NumberPropertiesNameHolder = new NumberPropertiesNameHolder();
 
-    criteriaPrefix : NumberPropertiesNameHolder.criteriaPrefix,
-    criteriaMap: NumberPropertiesNameHolder.criteriaIndexedList
-  };
+  criteriaPrefix: string;
+  criteriaMap: ISearchEntry[];
+
+  private localizer: ILocalizer;
 
   constructor() {
+    this.localizer = LocalizerFactory.createLocalizer<ISearchUI>("assets/languages/core/components/search/chest-content-update/lang", 1, this.ui, this);
+
+    this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
+    this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
+    
     Chest.chestChanged$.subscribe((items: number[]) => {
       this.searchResultCardIsVisible = false;
     });
+  }
+  updateLocalization(data: ISearchUI): void {
+    this.ui = data;
+
+    this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
+    this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
   }
 
 
@@ -125,20 +132,10 @@ export class ChetContentUpdateComponent {
   }
 
 }
-
-
-interface ISearchEntry {
-  id: number;
-  criteria: string;
-  explanation?: string;
-}
-
 interface ISearchUI {
   searchTitle: string;
   introduction: string;
-  criteriaPrefix: string;
   errorTextMessage: string;
   termExplanation: string;
-  criteriaMap: Array<ISearchEntry>;
 }
 

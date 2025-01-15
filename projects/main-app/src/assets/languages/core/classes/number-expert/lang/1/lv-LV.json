@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "Tas ir ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "pāra skaitlis"
+    },
+    {
+      "id": 2,
+      "criteria": "nepāra skaitlis"
+    },
+    {
+      "id": 3,
+      "criteria": "pirmskaitlis"
+    },
+    {
+      "id": 4,
+      "criteria": "Pitagora pirmskaitlis"
+    },
+    {
+      "id": 5,
+      "criteria": "Fibonacci skaitlis"
+    },
+    {
+      "id": 6,
+      "criteria": "Tribonacci skaitlis"
+    },
+    {
+      "id": 7,
+      "criteria": "Bella skaitlis"
+    },
+    {
+      "id": 8,
+      "criteria": "Catalana skaitlis"
+    },
+    {
+      "id": 9,
+      "criteria": "Sofijas Žermēna skaitlis"
+    },
+    {
+      "id": 10,
+      "criteria": "simetrisks skaitlis"
+    }
+  ]
+}

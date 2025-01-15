@@ -10,22 +10,17 @@ import { LanguageSelectionComponent } from '../../../shared/components/language-
 import { LogSettingComponent } from "../../../shared/components/log-setting/log-setting.component";
 import { LocalizerFactory, ILocalizer, ILocalizationClient, ILanguageDescription } from '@vsirotin/localizer';
 import { Subscription } from 'rxjs';
+import * as uiItems from '../../../assets/languages/features/components/settings/lang/1/en-US.json';
 
 export const SETTINGS_SOURCE_DIR = "assets/languages/features/components/settings/lang";
 
-class UIItems {
-  settings: string = "Settings";
-  language: string= "Language";
-  logging: string = "Logging";
-  loggingExplanation: string = "Only for support purposes";
+interface UIItems {
+  settings: string;
+  language: string;
+  logging: string;
+  loggingExplanation: string;
 }
 
-export const DEFAUIL_UI_ITEMS: UIItems = {
-  settings: "Settings",
-  language:  "Language",
-  logging: "Logging",
-  loggingExplanation: "Only for support purposes",
-}
 
 @Component({
   selector: 'app-settings',
@@ -53,13 +48,13 @@ export class SettingsComponent implements  OnDestroy, ILocalizationClient<UIItem
   langOrigin: string = ""
   langEn: string = ""
 
-  ui: UIItems = DEFAUIL_UI_ITEMS;
+  ui: UIItems = (uiItems as any).default;
   subscription: Subscription;
 
   constructor( ) {
     this.logger.debug("Start of SettingsComponent.constructor");  
 
-    this.localizer  =  LocalizerFactory.createLocalizer<UIItems>(SETTINGS_SOURCE_DIR, 1, DEFAUIL_UI_ITEMS, this);
+    this.localizer  =  LocalizerFactory.createLocalizer<UIItems>(SETTINGS_SOURCE_DIR, 1, this.ui, this);
     this.subscription = LocalizerFactory.languageChangeNotificator.selectionChanged$.subscribe(
       (languageDescription: ILanguageDescription) => {
         this.langOrigin = languageDescription.originalName;

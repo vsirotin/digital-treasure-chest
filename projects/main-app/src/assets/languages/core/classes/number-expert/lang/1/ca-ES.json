@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "És ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "un nombre parell"
+    },
+    {
+      "id": 2,
+      "criteria": "un nombre senar"
+    },
+    {
+      "id": 3,
+      "criteria": "un nombre primer"
+    },
+    {
+      "id": 4,
+      "criteria": "un nombre primer de Pitàgores"
+    },
+    {
+      "id": 5,
+      "criteria": "un nombre de Fibonacci"
+    },
+    {
+      "id": 6,
+      "criteria": "un nombre de Tribonacci"
+    },
+    {
+      "id": 7,
+      "criteria": "un nombre de Bell"
+    },
+    {
+      "id": 8,
+      "criteria": "un nombre de Català"
+    },
+    {
+      "id": 9,
+      "criteria": "un nombre de Sophie Germain"
+    },
+    {
+      "id": 10,
+      "criteria": "un nombre simètric"
+    }
+  ]
+}

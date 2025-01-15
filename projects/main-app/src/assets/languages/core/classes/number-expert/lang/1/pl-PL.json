@@ -1,0 +1,45 @@
+{
+  "criteriaPrefix": "To jest ",
+  "criteriaIndexedList": [
+    {
+      "id": 1,
+      "criteria": "liczba parzysta"
+    },
+    {
+      "id": 2,
+      "criteria": "liczba nieparzysta"
+    },
+    {
+      "id": 3,
+      "criteria": "liczba pierwsza"
+    },
+    {
+      "id": 4,
+      "criteria": "liczba pierwsza Pitagorasa"
+    },
+    {
+      "id": 5,
+      "criteria": "liczba Fibonacciego"
+    },
+    {
+      "id": 6,
+      "criteria": "liczba Tribonacciego"
+    },
+    {
+      "id": 7,
+      "criteria": "liczba Bella"
+    },
+    {
+      "id": 8,
+      "criteria": "liczba Catalana"
+    },
+    {
+      "id": 9,
+      "criteria": "liczba Sophie Germain"
+    },
+    {
+      "id": 10,
+      "criteria": "liczba symetryczna"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "searchTitle": "Szukaj nowych liczb do swojej Cyfrowej Skrzyni Skarbów",
+  "introduction": "Wybierz kryteria wyszukiwania swoich ulubionych dodatnich liczb całkowitych (oznaczonych poniżej jako X)",
+  "errorTextMessage": "Wartości minimalne i maksymalne muszą być liczbami całkowitymi w zakresie od 0 do 1000, włącznie. Wartość minimalna musi być mniejsza lub równa wartości maksymalnej.",
+  "termExplanation": "Co oznaczają te terminy?"
+}

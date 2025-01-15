@@ -1,0 +1,38 @@
+{
+  "title": "Fogalmak magyarázata",
+  "explanations": [
+    {
+      "term": "Prímszám",
+      "explanation": "A prímszám egy olyan természetes szám, amely nagyobb, mint 1, és nem két kisebb természetes szám szorzata. Egy természetes szám, amely nagyobb, mint 1, és nem prímszám, összetett számnak nevezzük."
+    },
+    {
+      "term": "Püthagoraszi prímszám",
+      "explanation": "A püthagoraszi prímszám egy olyan prímszám, amely a 4n + 1 alakú. A püthagoraszi prímszámok pontosan azok a páratlan prímszámok p, amelyekre 2 primitív gyök modulo p."
+    },
+    {
+      "term": "Fibonacci-számok",
+      "explanation": "Egy sorozat, amelyben minden szám az előző két szám összege."
+    },
+    {
+      "term": "Tribonacci-számok",
+      "explanation": "Egy természetes számok sorozata, amely eredetileg a 0 számmal kezdődik egyszer, és az 1 számmal kétszer. Ezután az előző három szám összege adja a következő számot: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bell-számok",
+      "explanation": "A Bell-számok egy n elemű halmaz nem rendezett partícióinak száma, amelyet Bn-nek jelölünk, azzal a feltételezéssel, hogy B0=1. Eric Bell tiszteletére nevezték el, aki az 1930-as években tanulmányozta őket."
+    },
+    {
+      "term": "Catalan-számok",
+      "explanation": "A Catalan-számok egy numerikus sorozat, amely sok kombinatorikai problémában megjelenik. A belga matematikus Eugène Charles Catalan tiszteletére nevezték el őket, bár Leonhard Euler ismerte őket. Az n-edik Catalan-szám Cn több egyenértékű módon is meghatározható, például: 1) Egy konvex (n+2)-szög partícióinak száma háromszögekre nem átfedő átlókkal. 2) Az n nem átfedő húr segítségével 2n pont összekapcsolásának száma egy körben, stb."
+    },
+    {
+      "term": "Sophie Germain prímszámok",
+      "explanation": "A Sophie Germain prímszám egy olyan prímszám p, amelyre a 2p+1 szám is prímszám. A Sophie Germain prímszámhoz kapcsolódó 2p+1 számot biztonságos prímszámnak nevezzük. Például a 11 egy Sophie Germain prímszám, és a 2 × 11 + 1 = 23 a hozzá tartozó biztonságos prímszám."
+    },
+    {
+      "term": "Szimmetrikus számok",
+      "explanation": "A szimmetrikus számok: 1) minden egyjegyű szám, 2) kétjegyű számok xx alakban, és 3) háromjegyű számok xyx alakban, ahol x és y számjegyek, és x nem lehet 0."
+    }
+  ],
+  "prefixToLink": "További érdekes információk a mágikus számsorozatokról a Wikipédián és a weboldalon találhatók "
+}

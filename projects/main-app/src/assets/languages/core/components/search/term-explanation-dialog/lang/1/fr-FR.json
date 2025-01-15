@@ -1,0 +1,38 @@
+{
+  "title": "Explication des termes",
+  "explanations": [
+    {
+      "term": "Nombre premier",
+      "explanation": "Un nombre premier est un nombre naturel supérieur à 1 qui n'est pas le produit de deux nombres naturels plus petits. Un nombre naturel supérieur à 1 qui n'est pas premier est appelé nombre composé."
+    },
+    {
+      "term": "Nombre premier de Pythagore",
+      "explanation": "Un nombre premier de Pythagore est un nombre premier de la forme 4n + 1. Les nombres premiers de Pythagore sont exactement ces nombres premiers impairs p pour lesquels 2 est une racine primitive modulo p."
+    },
+    {
+      "term": "Nombres de Fibonacci",
+      "explanation": "Une séquence dans laquelle chaque nombre est la somme des deux précédents."
+    },
+    {
+      "term": "Nombres de Tribonacci",
+      "explanation": "Une séquence de nombres naturels qui commence par le nombre 0 une fois et le nombre 1 deux fois. Ensuite, la somme des trois nombres précédents donne le nombre suivant: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Nombres de Bell",
+      "explanation": "Le nombre de Bell est le nombre de façons de partitionner un ensemble de n éléments, noté Bn, avec l'hypothèse que B0=1. Nommé en l'honneur d'Eric Bell, qui les a étudiés dans les années 1930."
+    },
+    {
+      "term": "Nombres de Catalan",
+      "explanation": "Les nombres de Catalan sont une séquence de nombres naturels qui apparaissent dans divers problèmes combinatoires. Ils sont nommés d'après le mathématicien belge Eugène Charles Catalan, bien qu'ils étaient connus de Leonhard Euler. Le n-ième nombre de Catalan Cn peut être défini de plusieurs manières équivalentes, telles que: 1) Le nombre de façons de diviser un (n+2)-gone convexe en triangles en utilisant des diagonales non intersectantes. 2) Le nombre de façons de connecter 2n points sur un cercle en utilisant n accords non intersectants, etc."
+    },
+    {
+      "term": "Nombres de Sophie Germain",
+      "explanation": "Un nombre premier de Sophie Germain est un nombre premier p tel que le nombre 2p+1 est également un nombre premier. Le nombre 2p+1 associé à un nombre premier de Sophie Germain est appelé nombre premier sûr. Par exemple, 11 est un nombre premier de Sophie Germain, et 2 × 11 + 1 = 23 est le nombre premier sûr associé."
+    },
+    {
+      "term": "Nombres symétriques",
+      "explanation": "Les nombres symétriques sont: 1) tous les nombres à un chiffre, 2) les nombres à deux chiffres de la forme xx, et 3) les nombres à trois chiffres de la forme xyx, où x et y sont des chiffres, et x ne peut pas être 0."
+    }
+  ],
+  "prefixToLink": "Pour plus d'informations intéressantes sur les séquences de nombres magiques, consultez Wikipédia et le site web "
+}

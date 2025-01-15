@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "検索",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "レポート",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "情報",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "設定",
+      "icon": "settings"
+    }
+  ],
+  "title": "デジタル宝箱"
+}

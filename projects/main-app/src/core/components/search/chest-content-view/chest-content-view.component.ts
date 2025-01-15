@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { Chest } from '../../../../shared/classes/chest';
 import { MatCardModule } from '@angular/material/card';
 import { NumberExpert } from '../../../classes/number-expert/number-expert';
-import { NumberPropertiesNameHolder } from '../../../classes/number-expert/number-properties-name-holder';
+import { ISearchEntry, NumberPropertiesNameHolder } from '../../../classes/number-expert/number-properties-name-holder';
+import * as uiDefault from '../../../../assets/languages/core/components/search/chest-content-view/lang/1/en-US.json';
+import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
 
 @Component({
   selector: 'app-chet-content-view',
@@ -11,29 +13,42 @@ import { NumberPropertiesNameHolder } from '../../../classes/number-expert/numbe
   templateUrl: './chest-content-view.component.html',
   styleUrl: './chest-content-view.component.css'
 })
-export class ChetContentViewComponent {
+export class ChetContentViewComponent implements ILocalizationClient<IChetViewUI> {
 
-  ui: IChetViewUI = {
-    resultTitle: 'Your Digital Treasure Chest contain now the following numbers:',
-    noResultsTitle: 'No items in your chest yet.',
-    listNumbersInTreasure: [],
-    clearButtonTitle: 'Clear the chest'
-  };
+  ui: IChetViewUI = (uiDefault as any).default;
+
+  listNumbersInTreasure: number[] = [];
 
   isClearButtonEnabled: boolean = false;
-  prefix: string = NumberPropertiesNameHolder.criteriaPrefix;
+
+  numberPropertiesNameHolder: NumberPropertiesNameHolder = new NumberPropertiesNameHolder();
+  criteriaPrefix: string;
+  criteriaMap: ISearchEntry[];
+
+  private localizer: ILocalizer;
 
   constructor() { 
+
+    this.localizer = LocalizerFactory.createLocalizer<IChetViewUI>("assets/languages/core/components/search/chest-content-view/lang", 1, this.ui, this);
+
+    this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
+    this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
+   
     Chest.chestChanged$.subscribe((items: number[]) => {
-      this.ui.listNumbersInTreasure = items;
+      this.listNumbersInTreasure = items;
       this.isClearButtonEnabled = items.length > 0;
     });
-    //TODO add subscription to the event of the language change for prefix
+  }
+  updateLocalization(data: IChetViewUI): void {
+    this.ui = data;
+
+    this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
+    this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
   }
 
   getItemDetails(item: number): string[] {
     const result : string[] = [];
-    NumberPropertiesNameHolder.criteriaIndexedList.forEach((pair) => {
+    this.criteriaMap.forEach((pair) => {
 
       const id = pair.id;
       if ((id == 1) && (NumberExpert.isEven(item))) {
@@ -100,6 +115,5 @@ export class ChetContentViewComponent {
 export interface IChetViewUI {
   resultTitle: string;
   noResultsTitle: string;
-  listNumbersInTreasure: number[];
   clearButtonTitle: string;
 }

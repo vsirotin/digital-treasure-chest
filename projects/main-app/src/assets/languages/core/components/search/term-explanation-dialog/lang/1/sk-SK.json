@@ -1,0 +1,38 @@
+{
+  "title": "Vysvetlenie pojmov",
+  "explanations": [
+    {
+      "term": "Prvočíslo",
+      "explanation": "Prvočíslo je prirodzené číslo väčšie ako 1, ktoré nie je súčinom dvoch menších prirodzených čísel. Prirodzené číslo väčšie ako 1, ktoré nie je prvočíslo, sa nazýva zložené číslo."
+    },
+    {
+      "term": "Pytagorovo prvočíslo",
+      "explanation": "Pytagorovo prvočíslo je prvočíslo tvaru 4n + 1. Pytagorove prvočísla sú presne tie nepárne prvočísla p, pre ktoré je 2 primitívnym koreňom modulo p."
+    },
+    {
+      "term": "Fibonacciho čísla",
+      "explanation": "Rad, v ktorom je každé číslo súčtom dvoch predchádzajúcich."
+    },
+    {
+      "term": "Tribonacciho čísla",
+      "explanation": "Rad prirodzených čísel, ktorý začína číslom 0 raz a číslom 1 dvakrát. Následne súčet troch predchádzajúcich čísel vedie k nasledujúcemu číslu: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3."
+    },
+    {
+      "term": "Bellove čísla",
+      "explanation": "Bellovo číslo je počet všetkých neusporiadaných rozdelení n-prvkového množstva, označených ako Bn, s predpokladom, že B0=1. Pomenované podľa Erica Bella, ktorý ich skúmal v 30. rokoch 20. storočia."
+    },
+    {
+      "term": "Catalanove čísla",
+      "explanation": "Catalanove čísla sú číselný rad, ktorý sa objavuje v mnohých kombinatorických problémoch. Sú pomenované na počesť belgického matematika Eugèna Charlesa Catalana, hoci boli známe Leonardovi Eulerovi. n-té Catalanovo číslo Cn môže byť definované niekoľkými ekvivalentnými spôsobmi, ako napríklad: 1) Počet rozdelení konvexného (n+2)-uholníka na trojuholníky pomocou neprekrývajúcich sa diagonál. 2) Počet spôsobov, ako spojiť 2n bodov na kruhu pomocou n neprekrývajúcich sa akordov, atď."
+    },
+    {
+      "term": "Sophie Germainove čísla",
+      "explanation": "Prvočíslo Sophie Germain je také prvočíslo p, že číslo 2p+1 je tiež prvočíslo. Číslo 2p+1 spojené s prvočíslom Sophie Germain sa nazýva bezpečné prvočíslo. Napríklad 11 je prvočíslo Sophie Germain, a 2 × 11 + 1 = 23 je spojené bezpečné prvočíslo."
+    },
+    {
+      "term": "Symetrické čísla",
+      "explanation": "Symetrické čísla sú: 1) všetky jednočíselné čísla, 2) dvojčíselné čísla tvaru xx, a 3) trojčíselné čísla tvaru xyx, kde x, y sú číslice, a x nemôže byť 0."
+    }
+  ],
+  "prefixToLink": "Viac zaujímavých informácií o magických číselných postupnostiach nájdete na Wikipédii a na stránke "
+}

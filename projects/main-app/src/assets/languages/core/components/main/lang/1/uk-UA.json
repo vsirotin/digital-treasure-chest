@@ -1,0 +1,25 @@
+{
+  "navItems": [
+    {
+      "id": "search",
+      "label": "Пошук",
+      "icon": "add_chart"
+    },
+    {
+      "id": "report",
+      "label": "Звіт",
+      "icon": "feed"
+    },
+    {
+      "id": "info",
+      "label": "Інформація",
+      "icon": "info_outline"
+    },
+    {
+      "id": "settings",
+      "label": "Налаштування",
+      "icon": "settings"
+    }
+  ],
+  "title": "Цифрова скарбниця"
+}
