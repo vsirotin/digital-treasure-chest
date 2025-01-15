@@ -6,6 +6,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {ChetContentViewComponent} from './chest-content-view/chest-content-view.component';
 import {ChetContentUpdateComponent} from './chest-content-update/chest-content-update.component';
 import { Chest } from '../../../shared/classes/chest';
+import * as uiDefault from '../../../assets/languages/core/components/search/lang/1/en-US.json';
+import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
 
 @Component({
   selector: 'app-search',
@@ -23,40 +25,39 @@ import { Chest } from '../../../shared/classes/chest';
   styleUrl: './search.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchComponent {
-@ViewChild('viewPanel') viewPanel!: MatExpansionPanel;
+export class SearchComponent implements ILocalizationClient<ISerachUI> {
+  @ViewChild('viewPanel') viewPanel!: MatExpansionPanel;
 
-ui: ISerachUI = {
-  chetNumbers: [],
-  viewTemplate: 'Your chet contains X numbers',
-  viewTitle: "",
-  updateTitle: 'Search new numbers for your Digital Treasure Chet',
-};
+  ui: ISerachUI = (uiDefault as any).default;
 
+  chetNumbers: number[] = [];
+  viewTitle: string = "";
 
+  private localizer: ILocalizer;
 
-constructor() { 
-  this.updateViewTitle();
-  Chest.chestChanged$.subscribe((items: number[]) => {
-    this.ui.chetNumbers = items;
+  constructor() { 
+    this.localizer = LocalizerFactory.createLocalizer<ISerachUI>("assets/languages/core/components/search/lang", 1, this.ui, this);
     this.updateViewTitle();
-    if(items.length > 0) {
-      this.viewPanel.open();
-    }
-  });
-}
-
-
+    Chest.chestChanged$.subscribe((items: number[]) => {
+      this.chetNumbers = items;
+      this.updateViewTitle();
+      if(items.length > 0) {
+        this.viewPanel.open();
+      }
+    });
+  }
+  updateLocalization(data: ISerachUI): void {
+    this.ui = data;
+    this.updateViewTitle();
+  }
 
   private updateViewTitle() {
-    this.ui.viewTitle = this.ui.viewTemplate.replace('X', this.ui.chetNumbers.length.toString());
+    this.viewTitle = this.ui.viewTemplate.replace('X', this.chetNumbers.length.toString());
   }
 }
 
 interface ISerachUI {
-  chetNumbers: number[];
   viewTemplate: string
-  viewTitle: string;
   updateTitle: string;
 }
 

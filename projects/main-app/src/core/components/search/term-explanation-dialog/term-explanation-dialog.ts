@@ -4,8 +4,6 @@ import { MatDialogModule } from "@angular/material/dialog";
 import * as uiDefault from '../../../../assets/languages/core/components/search/term-explanation-dialog/lang/1/en-US.json';
 import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/localizer';
 
-
-
 @Component({
   selector: './term-explanation-dialog',
   templateUrl: './term-explanation-dialog.html',

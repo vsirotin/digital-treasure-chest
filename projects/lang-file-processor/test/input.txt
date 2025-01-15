@@ -1,693 +1,233 @@
-ar-SA
-{
-  "title": "تفسير المصطلحات",
-  "explanations": [
-    { "term": "عدد أولي", "explanation": "العدد الأولي هو عدد طبيعي أكبر من 1 ليس نتاج عددين طبيعيين أصغر. العدد الطبيعي الأكبر من 1 الذي ليس أولياً يُسمى عدداً مركباً." },
-    { "term": "عدد فيثاغورسي أولي", "explanation": "العدد الأولي فيثاغورس هو عدد أولي من الشكل 4ن + 1. الأعداد الأولية فيثاغورس هي بالضبط الأعداد الأولية الفردية ب التي يكون 2 جذرًا بدائيًا لها." },
-    { "term": "أعداد فيبوناتشي", "explanation": "تتابع يتم فيه إضافة كل عدد إلى العددين السابقين له." },
-    { "term": "أعداد تريبوناتشي", "explanation": "تتابع الأعداد الطبيعية الذي يبدأ بالعدد 0 مرة واحدة والعدد 1 مرتين. بعد ذلك، يُحسب كل عدد بجمع الثلاثة أعداد السابقة له مباشرة: T0=0، T1=T2=1، Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "أعداد بل", "explanation": "عدد بل هو عدد جميع الأقسام غير المرتبة لمجموعة من n عنصرًا، يرمز له ب Bn، و B0=1 مفترضًا بالتعريف. سمي على اسم إريك بل، الذي درسها في الثلاثينيات." },
-    { "term": "أعداد كاتالان", "explanation": "أعداد كاتالان هي تتابع عددي يظهر في العديد من مشاكل التوافقيات. سميت تكريماً للرياضي البلجيكي يوجين تشارلز كاتالان، رغم أنها كانت معروفة لدى ليونارد أويلر. العدد كاتالان n يمكن تعريفه بطرق مكافئة متعددة، مثل: 1) عدد الأقسام لمضلع محدب (n+2) إلى مثلثات بواسطة أقطار غير متقاطعة. 2) عدد الطرق لتوصيل 2ن نقطة على دائرة من n بوتر غير متقاطع، إلخ." },
-    { "term": "أعداد صوفي جيرمان", "explanation": "العدد الأولي صوفي جيرمان هو العدد الأولي ب الذي يكون العدد 2ب+1 هو عدد أولي أيضاً. العدد 2ب+1 المرتبط بالعدد الأولي صوفي جيرمان يسمى عدداً أولياً آمناً. على سبيل المثال، 11 هو عدد أولي صوفي جيرمان، و 2 × 11 + 1 = 23 هو العدد الأولي الآمن المرتبط به." },
-    { "term": "أعداد متناظرة", "explanation": "الأعداد المتناظرة هي: 1) جميع الأعداد ذات رقم واحد، 2) الأعداد المكونة من رقمين من الشكل xx، و 3) الأعداد المكونة من ثلاثة أرقام من الشكل xyx، حيث x و y أرقام و x لا يمكن أن يكون 0." }
-  ],
-  "prefixToLink": "لمزيد من المعلومات المثيرة عن تتابعات الأعداد السحرية يمكنكم زيارة ويكيبيديا والموقع"
-}
-bn-BD
-{
-  "title": "শর্ত ব্যাখ্যা",
-  "explanations": [
-    { "term": "মৌলিক সংখ্যা", "explanation": "মৌলিক সংখ্যা হল প্রাকৃতিক সংখ্যা যা 1 এর চেয়ে বড় এবং এটি দুটি ছোট প্রাকৃতিক সংখ্যার গুণফল নয়। 1 এর চেয়ে বড় যা মৌলিক নয় এমন একটি প্রাকৃতিক সংখ্যাকে যৌগিক সংখ্যা বলা হয়।" },
-    { "term": "পিথাগোরিয়ান মৌলিক সংখ্যা", "explanation": "একটি পিথাগোরিয়ান মৌলিক সংখ্যা হল 4n + 1 এর আকারের একটি মৌলিক সংখ্যা। পিথাগোরিয়ান মৌলিক সংখ্যা হল সঠিকভাবে বিজোড় মৌলিক সংখ্যা p যার জন্য 2 একটি প্রিমিটিভ রুট মডুলো p।" },
-    { "term": "ফিবোনাচি সংখ্যা", "explanation": "একটি অনুক্রম যেখানে প্রতিটি সংখ্যা দুটি পূর্ববর্তী সংখ্যার যোগফল" },
-    { "term": "ট্রিবোনাচি সংখ্যা", "explanation": "প্রাকৃতিক সংখ্যার একটি ক্রম যা মূলত 0 একবার এবং 1 দুইবার দিয়ে শুরু হয়। পরে, তিনটি পূর্ববর্তী সংখ্যার যোগফলটি অবিলম্বে অনুসরণ করে সংখ্যা ফলাফলের ফলাফল: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3" },
-    { "term": "বেল সংখ্যা", "explanation": "বেল সংখ্যা হল একটি n-উপাদান সেটের সমস্ত অর্ডারহীন পার্টিশনের সংখ্যা, Bn দ্বারা সূচিত, B0=1 যা সংজ্ঞা দ্বারা অনুমিত। এরিক বেলের নামে নামকরণ করা হয়েছে, যিনি 1930 এর দশকে তাদের পড়াশোনা করেছিলেন।" },
-    { "term": "ক্যাটালান সংখ্যা", "explanation": "ক্যাটালান সংখ্যা হল অনেক সমন্বয় সমস্যার মধ্যে পাওয়া একটি সংখ্যাসূচক ক্রম। তারা বেলজিয়ান গণিতবিদ ইউজেন চার্লস কাতালানের সম্মানে নামকরণ করা হয়েছে, যদিও তারা লিওনার্ড ইউলারের কাছে পরিচিত ছিল। এন ক্যাটালান সংখ্যা Cn একাধিক সমতুল্য উপায়ে সংজ্ঞায়িত করা যেতে পারে, যেমন: 1) অবিচ্ছিন্ন কর্ড দ্বারা ত্রিভুজগুলিতে একটি উত্তল (n+2)-গণ বিভাগগুলির সংখ্যা। 2) একটি বৃত্তের 2n পয়েন্টগুলিকে n দ্বারা অ-ছেদকারী কর্ড দ্বারা সংযোগ করার সংখ্যা।" },
-    { "term": "সোফি জার্মেইন সংখ্যা", "explanation": "একটি মৌলিক সংখ্যা সোফি জার্মেইন হল এমন একটি মৌলিক সংখ্যা p যে সংখ্যা 2p+1 এবং মৌলিক। প্রাইম নাম্বার সোফি জার্মেইনের সাথে সম্পর্কিত সংখ্যা 2p+1 কে সেফ প্রাইম নাম্বার বলা হয়। উদাহরণস্বরূপ, 11 হল সোফি জার্মেইন মৌলিক সংখ্যা, এবং 2 × 11 + 1 = 23 হল সংশ্লিষ্ট নিরাপদ মৌলিক সংখ্যা।" },
-    { "term": "সমমিত সংখ্যা", "explanation": "সমমিত সংখ্যা হল 1) সমস্ত এক অঙ্কের সংখ্যা, 2) xx আকারের দুটি সংখ্যার সংখ্যা, এবং 3) xyx আকারের তিনটি সংখ্যার সংখ্যা, যেখানে x, y হল অঙ্ক এবং x 0 হতে পারে না।" }
-  ],
-  "prefixToLink": "যাদুর সংখ্যা ক্রম সম্পর্কে আরও আকর্ষণীয় তথ্য উইকিপিডিয়া এবং সাইটে দেখুন "
-}
-bg-BG
-{
-  "title": "Обяснение на термините",
-  "explanations": [
-    { "term": "Просто число", "explanation": "Просто число е естествено число по-голямо от 1, което не е произведение на две по-малки естествени числа. Естествено число по-голямо от 1, което не е просто, се нарича съставно число." },
-    { "term": "Питагорейско просто число", "explanation": "Питагорейско просто число е просто число от вида 4n + 1. Питагорейските прости числа са точно нечетните прости числа p, за които 2 е примитивен корен по модул p." },
-    { "term": "Числа на Фибоначи", "explanation": "Последователност, в която всяко число е сума от двете предходни." },
-    { "term": "Числа на Трибоначи", "explanation": "Последователност от естествени числа, която първоначално започва с числото 0 веднъж и числото 1 два пъти. След това сумата от трите предходни числа води до числото, което веднага следва: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Числа на Бел", "explanation": "Числото на Бел е броят на всички неупорядъчени разпределения на множество от n елементи, обозначено с Bn, с B0=1, прието по дефиниция. Наречени са в чест на Ерик Бел, който ги е изучавал през 1930-те години." },
-    { "term": "Числа на Каталана", "explanation": "Числата на Каталана са числов ред, който се среща в много комбинаторни проблеми. Наречени са в чест на белгийския математик Южен Шарл Каталан, въпреки че са били известни на Леонард Ойлер. n-тото число на Каталана Cn може да бъде дефинирано по няколко равностойни начина, като: 1) Броят на разпределенията на изпъкнал (n+2)-ъгълник в триъгълници чрез неразрязващи се диагонали. 2) Броят на начините за свързване на 2n точки на кръг чрез неразрязващи се акорди и др." },
-    { "term": "Числа на Софи Жермен", "explanation": "Просто число на Софи Жермен е такова просто число p, че числото 2p+1 също е просто. Числото 2p+1, свързано с просто число на Софи Жермен, се нарича безопасно просто число. Например, 11 е просто число на Софи Жермен, и 2 × 11 + 1 = 23 е свързаното безопасно просто число." },
-    { "term": "Симетрични числа", "explanation": "Симетричните числа са: 1) всички едноцифрени числа, 2) двуцифрени числа от вида xx, и 3) трицифрени числа от вида xyx, където x и y са цифри, и x не може да бъде 0." }
-  ],
-  "prefixToLink": "Повече интересна информация за магически редове от числа вижте в Уикипедия и на сайта"
-}
-ca-ES
-{
-  "title": "Explicació dels termes",
-  "explanations": [
-    { "term": "Nombre primer", "explanation": "Un nombre primer és un nombre natural més gran que 1 que no és producte de dos nombres naturals més petits. Un nombre natural més gran que 1 que no és primer es diu nombre compost." },
-    { "term": "Nombre primer pitagòric", "explanation": "Un nombre primer pitagòric és un nombre primer de la forma 4n + 1. Els nombres primers pitagòrics són exactament els nombres primers senars p per als quals 2 és una arrel primitiva mòdul p." },
-    { "term": "Nombres de Fibonacci", "explanation": "Una seqüència en la qual cada nombre és la suma dels dos precedents" },
-    { "term": "Nombres de Tribonaccis", "explanation": "Una seqüència de nombres naturals que originalment comença amb el número 0 una vegada i el número 1 dues vegades. Posteriorment, la suma dels tres nombres precedents resulta en el nombre immediatament següent: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3" },
-    { "term": "Nombres de Bell", "explanation": "El nombre de Bell és el nombre de totes les particions desordenades d'un conjunt de n elements, denotat per Bn, amb B0=1 assumit per definició. Anomenats en honor a Eric Bell, que els va estudiar als anys trenta." },
-    { "term": "Nombres de Català", "explanation": "Els nombres de Català són una seqüència numèrica que es troba en molts problemes combinatoris. Es diuen així en honor del matemàtic belga Eugène Charles Catalan, tot i que eren coneguts per Leonard Euler. El nombre de Català n Cn es pot definir de diverses maneres equivalents, com ara: 1) El nombre de particions d'un (n+2)-gon convex en triangles per diagonals no intersectants. 2) El nombre de maneres de connectar 2n punts en un cercle de n per cordes no intersectants, etc." },
-    { "term": "Nombres de Sophie Germain", "explanation": "Un nombre primer Sophie Germain és un nombre primer p tal que el nombre 2p+1 també és primer. El nombre 2p+1 associat al nombre primer Sophie Germain es diu nombre primer segur. Per exemple, 11 és nombre primer Sophie Germain, i 2 × 11 + 1 = 23 és el nombre primer segur associat." },
-    { "term": "Nombres simètrics", "explanation": "Els nombres simètrics són: 1) tots els nombres d'una xifra, 2) nombres de dues xifres de la forma xx, i 3) nombres de tres xifres de la forma xyx, on x, y són dígits, i x no pot ser 0." }
-  ],
-  "prefixToLink": "Per a més informació interessant sobre les seqüències de nombres màgics vegeu a la Viquipèdia i a la pàgina "
-}
-zh-CN
-{
-  "title": "术语解释",
-  "explanations": [
-    { "term": "质数", "explanation": "质数是大于1的自然数，它不是两个较小自然数的乘积。大于1的自然数，不是质数，称为合数。" },
-    { "term": "毕达哥拉斯素数", "explanation": "毕达哥拉斯素数是形如4n + 1的素数。毕达哥拉斯素数正是2是模p的本原根的奇素数p。" },
-    { "term": "斐波那契数", "explanation": "序列中每个数都是前两个数的和" },
-    { "term": "三波那契数", "explanation": "最初从数字0开始一次，数字1开始两次的自然数序列。随后，前三个数之和就是紧接着的数：T0=0，T1=T2=1，Tn=Tn-1 + Tn-2 + Tn-3" },
-    { "term": "贝尔数", "explanation": "贝尔数是n元素集合的所有无序分区的数量，记为Bn，定义假设B0=1。以埃里克·贝尔命名，他在20世纪30年代研究了这些数字。" },
-    { "term": "卡塔兰数", "explanation": "卡塔兰数是在许多组合问题中找到的数列。它们是以比利时数学家尤金·查尔斯·卡塔兰的名字命名的，尽管它们在莱昂哈德·欧拉那里很出名。第n个卡塔兰数Cn可以通过几种等价的方式定义，例如：1）通过不相交的对角线将凸（n+2）-gon分割成三角形的数量。 2）通过不相交的弦将n个圆上的2n个点连接起来的方法数，等等。" },
-    { "term": "索菲热尔曼质数", "explanation": "索菲热尔曼质数是这样的质数p，使得2p+1也是质数。与索菲热尔曼质数关联的2p+1被称为安全质数。例如，11是索菲热尔曼素数，2 × 11 + 1 = 23是关联的安全质数。" },
-    { "term": "对称数", "explanation": "对称数是：1）所有一位数，2）形如xx的两位数，和3）形如xyx的三位数，其中x，y是数字，且x不能为0。" }
-  ],
-  "prefixToLink": "更多关于魔术数字序列的有趣信息，请参阅维基百科和网站 "
-}
-hr-HR
-{
-  "title": "Objašnjenje pojmova",
-  "explanations": [
-    { "term": "Prosti broj", "explanation": "Prosti broj je prirodni broj veći od 1 koji nije proizvod dvaju manjih prirodnih brojeva. Prirodni broj veći od 1 koji nije prost naziva se složeni broj." },
-    { "term": "Pitagorijin prosti broj", "explanation": "Pitagorijin prosti broj je prosti broj oblika 4n + 1. Pitagorijini prosti brojevi su točno oni neparni prosti brojevi p za koje je 2 primitivni korijen modulo p." },
-    { "term": "Fibonaccijevi brojevi", "explanation": "Niz u kojem je svaki broj zbroj prethodna dva broja." },
-    { "term": "Tribonaccijevi brojevi", "explanation": "Niz prirodnih brojeva koji započinje brojem 0 jednom i brojem 1 dva puta. Naknadno, zbroj tri prethodna broja rezultira brojem odmah nakon: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bellovi brojevi", "explanation": "Bellov broj je broj svih neuređenih particija skupa od n elemenata, označen s Bn, s pretpostavkom da je B0=1. Imenovani su po Ericu Bellu, koji ih je proučavao 1930-ih godina." },
-    { "term": "Katalanovi brojevi", "explanation": "Katalanovi brojevi su brojčani niz koji se pojavljuje u mnogim kombinatoričkim problemima. Nazvani su u čast belgijskog matematičara Eugènea Charlesa Catalana, iako su bili poznati Leonardu Euleru. N-ti Katalanov broj Cn može se definirati na nekoliko ekvivalentnih načina, kao što su: 1) Broj particija konveksnog (n+2)-ogona na trokute pomoću neprolazećih dijagonala. 2) Broj načina povezivanja 2n točaka na krugu s n pomoću neprolazećih akorda, itd." },
-    { "term": "Sophie Germain prosti brojevi", "explanation": "Prosti broj Sophie Germain je prosti broj p za koji je broj 2p+1 također prost. Broj 2p+1 povezan s prostim brojem Sophie Germain naziva se sigurnim prostim brojem. Na primjer, 11 je Sophie Germain prosti broj, a 2 × 11 + 1 = 23 je povezani sigurni prosti broj." },
-    { "term": "Simetrični brojevi", "explanation": "Simetrični brojevi su: 1) svi jednoznamenkasti brojevi, 2) dvoznamenkasti brojevi oblika xx, i 3) troznamenkasti brojevi oblika xyx, gdje su x i y znamenke, a x ne može biti 0." }
-  ],
-  "prefixToLink": "Više zanimljivih informacija o magičnim brojevima potražite na Wikipediji i na stranici "
-}
-cs-CZ
-{
-  "title": "Vysvětlení pojmů",
-  "explanations": [
-    { "term": "Prvočíslo", "explanation": "Prvočíslo je přirozené číslo větší než 1, které není součinem dvou menších přirozených čísel. Přirozené číslo větší než 1, které není prvočíslo, se nazývá složené číslo." },
-    { "term": "Pythagorovo prvočíslo", "explanation": "Pythagorovo prvočíslo je prvočíslo tvaru 4n + 1. Pythagorova prvočísla jsou přesně ta lichá prvočísla p, pro která je 2 primitivním kořenem modulo p." },
-    { "term": "Fibonacciho čísla", "explanation": "Řada, ve které je každé číslo součtem dvou předcházejících." },
-    { "term": "Tribonacciho čísla", "explanation": "Řada přirozených čísel, která začíná číslem 0 jednou a číslem 1 dvakrát. Následně součet tří předcházejících čísel vede k číslu následujícím: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bellova čísla", "explanation": "Bellovo číslo je počet všech neuspořádaných rozdělení n-prvkové množiny, označených jako Bn, s předpokladem, že B0=1. Pojmenované podle Erica Bella, který je zkoumal ve 30. letech 20. století." },
-    { "term": "Catalanova čísla", "explanation": "Catalanova čísla jsou číselná řada, která se objevuje v mnoha kombinatorických problémech. Jsou pojmenována na počest belgického matematika Eugèna Charlese Catalana, ačkoli byla známa Leonardu Eulerovi. N-té Catalanovo číslo Cn může být definováno několika ekvivalentními způsoby, jako například: 1) Počet rozdělení konvexního (n+2)-úhelníku na trojúhelníky pomocí neprolínajících se diagonál. 2) Počet způsobů, jak propojit 2n bodů na kruhu pomocí n neprolínajících se akordů, atd." },
-    { "term": "Čísla Sophie Germain", "explanation": "Prvočíslo Sophie Germain je takové prvočíslo p, že číslo 2p+1 je také prvočíslo. Číslo 2p+1 spojené s prvočíslem Sophie Germain se nazývá bezpečné prvočíslo. Například 11 je prvočíslo Sophie Germain, a 2 × 11 + 1 = 23 je spojené bezpečné prvočíslo." },
-    { "term": "Symetrická čísla", "explanation": "Symetrická čísla jsou: 1) všechna jednočíselná čísla, 2) dvoučíselná čísla tvaru xx, a 3) tříčíselná čísla tvaru xyx, kde x, y jsou číslice, a x nemůže být 0." }
-  ],
-  "prefixToLink": "Více zajímavých informací o magických číselných posloupnostech naleznete na Wikipedii a na stránce "
-}
-da-DK
-{
-  "title": "Forklaring af vilkår",
-  "explanations": [
-    { "term": "Primtal", "explanation": "Et primtal er et naturligt tal større end 1, som ikke er et produkt af to mindre naturlige tal. Et naturligt tal større end 1, som ikke er et primtal, kaldes et sammensat tal." },
-    { "term": "Pythagoræisk primtal", "explanation": "Et pythagoræisk primtal er et primtal af formen 4n + 1. Pythagoræiske primtal er præcis de ulige primtal p, hvor 2 er en primitiv rod modulo p." },
-    { "term": "Fibonacci tal", "explanation": "En sekvens, hvor hvert tal er summen af de to foregående tal." },
-    { "term": "Tribonacci tal", "explanation": "En sekvens af naturlige tal, der oprindeligt starter med tallet 0 én gang og tallet 1 to gange. Efterfølgende er summen af de tre foregående tal tallet umiddelbart efter: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bell tal", "explanation": "Bell tal er antallet af alle uordnede partitioner af et sæt med n elementer, betegnet med Bn, med B0=1 defineret ved definition. Opkaldt efter Eric Bell, som studerede dem i 1930'erne." },
-    { "term": "Catalan tal", "explanation": "Catalan tal er en numerisk sekvens, der findes i mange kombinatoriske problemer. De er opkaldt efter den belgiske matematiker Eugène Charles Catalan, selvom de var kendt af Leonard Euler. Det n-te Catalan tal Cn kan defineres på flere ækvivalente måder, såsom: 1) Antallet af partitioner af en konveks (n+2)-gon i trekanter ved ikke-skærende diagonaler. 2) Antallet af måder at forbinde 2n punkter på en cirkel med n ved ikke-skærende akkorder, osv." },
-    { "term": "Sophie Germain tal", "explanation": "Et Sophie Germain primtal er et primtal p, hvor tallet 2p+1 også er et primtal. Tallet 2p+1, der er forbundet med Sophie Germain primtallet, kaldes et sikkert primtal. For eksempel er 11 et Sophie Germain primtal, og 2 × 11 + 1 = 23 er det tilhørende sikre primtal." },
-    { "term": "Symmetriske tal", "explanation": "Symmetriske tal er: 1) alle tal med én cifre, 2) to-cifrede tal af formen xx, og 3) tre-cifrede tal af formen xyx, hvor x og y er cifre, og x kan ikke være 0." }
-  ],
-  "prefixToLink": "Mere interessant information om magiske tal sekvenser se på Wikipedia og på hjemmesiden "
-}
-nl-NL
-{
-  "title": "Verklaring van termen",
-  "explanations": [
-    { "term": "Priemgetal", "explanation": "Een priemgetal is een natuurlijk getal groter dan 1 dat geen product is van twee kleinere natuurlijke getallen. Een natuurlijk getal groter dan 1 dat geen priemgetal is, wordt een samengesteld getal genoemd." },
-    { "term": "Pythagorisch priemgetal", "explanation": "Een pythagorisch priemgetal is een priemgetal van de vorm 4n + 1. Pythagorische priemgetallen zijn precies de oneven priemgetallen p waarvoor 2 een primitieve wortel modulo p is." },
-    { "term": "Fibonacci getallen", "explanation": "Een reeks waarin elk getal de som is van de twee voorgaande getallen." },
-    { "term": "Tribonacci getallen", "explanation": "Een reeks natuurlijke getallen die oorspronkelijk begint met het getal 0 één keer en het getal 1 twee keer. Vervolgens is de som van de drie voorgaande getallen het onmiddellijk volgende getal: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bell getallen", "explanation": "Het aantal Bell getallen is het aantal niet-geordende partitities van een n-elementenverzameling, aangegeven met Bn, met B0=1 zoals verondersteld door definitie. Genoemd naar Eric Bell, die ze in de jaren dertig van de vorige eeuw bestudeerde." },
-    { "term": "Catalan getallen", "explanation": "Catalan getallen is een numerieke reeks die voorkomt in veel combinatorische problemen. Ze zijn genoemd ter ere van de Belgische wiskundige Eugène Charles Catalan, hoewel ze bekend waren bij Leonard Euler. Het n-de Catalan getal Cn kan op verschillende gelijkwaardige manieren worden gedefinieerd, zoals: 1) Het aantal partities van een convexe (n+2)-hoek in driehoeken door niet-snijdende diagonalen. 2) Het aantal manieren om 2n punten op een cirkel van n te verbinden door niet-snijdende koorden, enz." },
-    { "term": "Sophie Germain getallen", "explanation": "Een priemgetal Sophie Germain is zo'n priemgetal p dat het getal 2p+1 ook een priemgetal is. Het getal 2p+1 geassocieerd met het priemgetal Sophie Germain wordt een veilig priemgetal genoemd. Bijvoorbeeld, 11 is een Sophie Germain priemgetal, en 2 × 11 + 1 = 23 is het bijbehorende veilige priemgetal." },
-    { "term": "Symmetrische getallen", "explanation": "Symmetrische getallen zijn: 1) alle cijfers van één cijfer, 2) twee-cijferige getallen van de vorm xx, en 3) drie-cijferige getallen van de vorm xyx, waarbij x en y cijfers zijn, en x kan niet 0 zijn." }
-  ],
-  "prefixToLink": "Meer interessante informatie over magische nummerreeksen zie in Wikipedia en op de site "
-}
 en-US
 {
-  "title": "Explanation of Terms",
-  "explanations": [
-    { "term": "Prime Number", "explanation": "A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers. A natural number greater than 1 that is not prime is called a composite number." },
-    { "term": "Pythagorean Prime", "explanation": "A Pythagorean prime is a prime number of the form 4n + 1. Pythagorean primes are exactly those odd prime numbers p for which 2 is a primitive root modulo p." },
-    { "term": "Fibonacci Numbers", "explanation": "A sequence in which each number is the sum of the two preceding ones." },
-    { "term": "Tribonacci Numbers", "explanation": "A sequence of natural numbers that starts with the number 0 once and the number 1 twice. Subsequently, the sum of the three preceding numbers leads to the next number: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bell Numbers", "explanation": "The Bell number is the number of ways to partition a set of n elements, denoted as Bn, with the assumption that B0=1. Named after Eric Bell, who studied them in the 1930s." },
-    { "term": "Catalan Numbers", "explanation": "Catalan numbers are a sequence of natural numbers that appear in various combinatorial problems. They are named after the Belgian mathematician Eugène Charles Catalan, although they were known to Leonhard Euler. The n-th Catalan number Cn can be defined in several equivalent ways, such as: 1) The number of ways to divide a convex (n+2)-gon into triangles using non-intersecting diagonals. 2) The number of ways to connect 2n points on a circle using n non-intersecting chords, etc." },
-    { "term": "Sophie Germain Primes", "explanation": "A Sophie Germain prime is a prime number p such that 2p+1 is also a prime number. The number 2p+1 associated with a Sophie Germain prime is called a safe prime. For example, 11 is a Sophie Germain prime, and 2 × 11 + 1 = 23 is the associated safe prime." },
-    { "term": "Symmetric Numbers", "explanation": "Symmetric numbers are: 1) all single-digit numbers, 2) two-digit numbers of the form xx, and 3) three-digit numbers of the form xyx, where x and y are digits, and x cannot be 0." }
-  ],
-  "prefixToLink": "For more interesting information about magical number sequences, see Wikipedia and the website "
+    "viewTemplate": "Your chest contains X numbers",
+    "updateTitle": "Search new numbers for your Digital Treasure Chest"
+}
+
+ar-SA
+{
+  "viewTemplate": "صندوقك يحتوي على X أرقام",
+  "updateTitle": "ابحث عن أرقام جديدة لصندوق الكنز الرقمي الخاص بك"
+}
+
+bn-BD
+{
+  "viewTemplate": "আপনার চেস্টে X সংখ্যা রয়েছে",
+  "updateTitle": "আপনার ডিজিটাল ট্রেজার চেস্টের জন্য নতুন সংখ্যা অনুসন্ধান করুন"
+}
+
+bg-BG
+{
+  "viewTemplate": "Вашият сандък съдържа X числа",
+  "updateTitle": "Търсете нови числа за вашия цифров съкровищен сандък"
+}
+
+ca-ES
+{
+  "viewTemplate": "El teu cofre conté X números",
+  "updateTitle": "Cerca nous números per al teu Cofre del Tresor Digital"
+}
+
+zh-CN
+{
+  "viewTemplate": "你的箱子里有 X 个数字",
+  "updateTitle": "为你的数字宝箱搜索新数字"
+}
+
+hr-HR
+{
+  "viewTemplate": "Vaša škrinja sadrži X brojeva",
+  "updateTitle": "Potražite nove brojeve za svoju Digitalnu Škrinju s Blagom"
+}
+
+cs-CZ
+{
+  "viewTemplate": "Vaše truhla obsahuje X čísel",
+  "updateTitle": "Hledejte nová čísla pro svou Digitální Truhlu s Pokladem"
+}
+
+da-DK
+{
+  "viewTemplate": "Din kiste indeholder X numre",
+  "updateTitle": "Søg efter nye numre til din Digitale Skattekiste"
+}
+
+nl-NL
+{
+  "viewTemplate": "Je kist bevat X nummers",
+  "updateTitle": "Zoek nieuwe nummers voor je Digitale Schatkist"
 }
 
 et-EE
 {
-  "title": "Terminoloogia selgitus",
-  "explanations": [
-    { "term": "Algorütm", "explanation": "Algorütm on loomulik arv, mis on suurem kui 1 ja mis ei ole kahe väiksema loomuliku arvu korrutis. Loomulik arv, mis on suurem kui 1 ja mis ei ole algorütm, nimetatakse liitarvuks." },
-    { "term": "Pythagorase algorütm", "explanation": "Pythagorase algorütm on algorütm kujul 4n + 1. Pythagorase algorütmid on täpselt need paaritud algorütmid p, mille puhul 2 on primitiivne juur mooduli p järgi." },
-    { "term": "Fibonacci arvud", "explanation": "Jada, milles iga arv on kahe eelneva summa." },
-    { "term": "Tribonacci arvud", "explanation": "Loomulike arvude jada, mis algab numbriga 0 üks kord ja numbriga 1 kaks korda. Seejärel viib kolme eelneva arvu summa järgmise arvuni: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Belli arvud", "explanation": "Belli arv on viiside arv, kuidas jagada n-elemendiline hulk, tähistatud kui Bn, eeldusel, et B0=1. Nimetatud Eric Belli järgi, kes uuris neid 1930ndatel." },
-    { "term": "Catalani arvud", "explanation": "Catalani arvud on loomulike arvude jada, mis esineb mitmesugustes kombinatoorikaprobleemides. Need on nimetatud Belgia matemaatiku Eugène Charles Catalani järgi, kuigi need olid teada Leonhard Eulerile. N-t Catalani arvu Cn saab määratleda mitmel ekvivalentsel viisil, näiteks: 1) Viiside arv, kuidas jagada kumer (n+2)-nurk kolmnurkadeks, kasutades mitte-lõikavaid diagonaale. 2) Viiside arv, kuidas ühendada 2n punkti ringil, kasutades n mitte-lõikavat akordi jne." },
-    { "term": "Sophie Germaini algorütmid", "explanation": "Sophie Germaini algorütm on selline algorütm p, et arv 2p+1 on samuti algorütm. Arv 2p+1, mis on seotud Sophie Germaini algorütmiga, nimetatakse turvaliseks algorütmiks. Näiteks 11 on Sophie Germaini algorütm ja 2 × 11 + 1 = 23 on seotud turvaline algorütm." },
-    { "term": "Sümmeetrilised arvud", "explanation": "Sümmeetrilised arvud on: 1) kõik ühekohalised arvud, 2) kahekohalised arvud kujul xx ja 3) kolmekohalised arvud kujul xyx, kus x ja y on numbrid ning x ei saa olla 0." }
-  ],
-  "prefixToLink": "Rohkem huvitavat teavet maagiliste arvujadade kohta leiate Wikipediast ja veebisaidilt "
+  "viewTemplate": "Teie kirst sisaldab X numbrit",
+  "updateTitle": "Otsige oma Digitaalse Aardekirstu jaoks uusi numbreid"
 }
 
 fi-FI
 {
-  "title": "Termien selitys",
-  "explanations": [
-    { "term": "Alkuluku", "explanation": "Alkuluku on luonnollinen luku, joka on suurempi kuin 1 ja joka ei ole kahden pienemmän luonnollisen luvun tulo. Luonnollinen luku, joka on suurempi kuin 1 ja joka ei ole alkuluku, kutsutaan yhdistetyksi luvuksi." },
-    { "term": "Pythagoraan alkuluku", "explanation": "Pythagoraan alkuluku on alkuluku muodossa 4n + 1. Pythagoraan alkuluvut ovat täsmälleen ne parittomat alkuluvut p, joille 2 on primitiivinen juuri modulo p." },
-    { "term": "Fibonaccin luvut", "explanation": "Jono, jossa kukin luku on kahden edellisen summa." },
-    { "term": "Tribonaccin luvut", "explanation": "Luonnollisten lukujen jono, joka alkaa numerolla 0 kerran ja numerolla 1 kahdesti. Tämän jälkeen kolmen edellisen luvun summa johtaa seuraavaan lukuun: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bellin luvut", "explanation": "Bellin luku on tapojen määrä, joilla voidaan jakaa n-elementtinen joukko, merkittynä Bn, oletuksella, että B0=1. Nimetty Eric Bellin mukaan, joka tutki niitä 1930-luvulla." },
-    { "term": "Catalanin luvut", "explanation": "Catalanin luvut ovat luonnollisten lukujen jono, joka esiintyy monissa kombinatorisissa ongelmissa. Ne on nimetty belgialaisen matemaatikon Eugène Charles Catalanin mukaan, vaikka ne olivat tunnettuja Leonhard Eulerille. N-t Catalanin luku Cn voidaan määritellä useilla ekvivalenttisilla tavoilla, kuten: 1) Tapojen määrä, joilla voidaan jakaa kovera (n+2)-kulmio kolmioiksi käyttämällä ei-leikkaavia diagonaaleja. 2) Tapojen määrä, joilla voidaan yhdistää 2n pistettä ympyrässä käyttämällä n ei-leikkaavaa jännettä jne." },
-    { "term": "Sophie Germainin alkuluvut", "explanation": "Sophie Germainin alkuluku on sellainen alkuluku p, että luku 2p+1 on myös alkuluku. Luku 2p+1, joka liittyy Sophie Germainin alkulukuun, kutsutaan turvalliseksi alkuluvuksi. Esimerkiksi 11 on Sophie Germainin alkuluku ja 2 × 11 + 1 = 23 on siihen liittyvä turvallinen alkuluku." },
-    { "term": "Symmetriset luvut", "explanation": "Symmetriset luvut ovat: 1) kaikki yksinumeroiset luvut, 2) kaksinumeroiset luvut muodossa xx ja 3) kolminumeroiset luvut muodossa xyx, joissa x ja y ovat numeroita, ja x ei voi olla 0." }
-  ],
-  "prefixToLink": "Lisätietoja maagisista lukujonoista löytyy Wikipediasta ja verkkosivustolta "
+  "viewTemplate": "Arkussasi on X numeroa",
+  "updateTitle": "Etsi uusia numeroita Digitaaliseen Aarrearkkuusi"
 }
 
 fr-FR
 {
-  "title": "Explication des termes",
-  "explanations": [
-    { "term": "Nombre premier", "explanation": "Un nombre premier est un nombre naturel supérieur à 1 qui n'est pas le produit de deux nombres naturels plus petits. Un nombre naturel supérieur à 1 qui n'est pas premier est appelé nombre composé." },
-    { "term": "Nombre premier de Pythagore", "explanation": "Un nombre premier de Pythagore est un nombre premier de la forme 4n + 1. Les nombres premiers de Pythagore sont exactement ces nombres premiers impairs p pour lesquels 2 est une racine primitive modulo p." },
-    { "term": "Nombres de Fibonacci", "explanation": "Une séquence dans laquelle chaque nombre est la somme des deux précédents." },
-    { "term": "Nombres de Tribonacci", "explanation": "Une séquence de nombres naturels qui commence par le nombre 0 une fois et le nombre 1 deux fois. Ensuite, la somme des trois nombres précédents donne le nombre suivant: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Nombres de Bell", "explanation": "Le nombre de Bell est le nombre de façons de partitionner un ensemble de n éléments, noté Bn, avec l'hypothèse que B0=1. Nommé en l'honneur d'Eric Bell, qui les a étudiés dans les années 1930." },
-    { "term": "Nombres de Catalan", "explanation": "Les nombres de Catalan sont une séquence de nombres naturels qui apparaissent dans divers problèmes combinatoires. Ils sont nommés d'après le mathématicien belge Eugène Charles Catalan, bien qu'ils étaient connus de Leonhard Euler. Le n-ième nombre de Catalan Cn peut être défini de plusieurs manières équivalentes, telles que: 1) Le nombre de façons de diviser un (n+2)-gone convexe en triangles en utilisant des diagonales non intersectantes. 2) Le nombre de façons de connecter 2n points sur un cercle en utilisant n accords non intersectants, etc." },
-    { "term": "Nombres de Sophie Germain", "explanation": "Un nombre premier de Sophie Germain est un nombre premier p tel que le nombre 2p+1 est également un nombre premier. Le nombre 2p+1 associé à un nombre premier de Sophie Germain est appelé nombre premier sûr. Par exemple, 11 est un nombre premier de Sophie Germain, et 2 × 11 + 1 = 23 est le nombre premier sûr associé." },
-    { "term": "Nombres symétriques", "explanation": "Les nombres symétriques sont: 1) tous les nombres à un chiffre, 2) les nombres à deux chiffres de la forme xx, et 3) les nombres à trois chiffres de la forme xyx, où x et y sont des chiffres, et x ne peut pas être 0." }
-  ],
-  "prefixToLink": "Pour plus d'informations intéressantes sur les séquences de nombres magiques, consultez Wikipédia et le site web "
+  "viewTemplate": "Votre coffre contient X numéros",
+  "updateTitle": "Recherchez de nouveaux numéros pour votre Coffre au Trésor Numérique"
 }
 
 de-DE
 {
-  "title": "Erklärung der Begriffe",
-  "explanations": [
-    { "term": "Primzahl", "explanation": "Eine Primzahl ist eine natürliche Zahl größer als 1, die nicht das Produkt von zwei kleineren natürlichen Zahlen ist. Eine natürliche Zahl größer als 1, die keine Primzahl ist, wird zusammengesetzte Zahl genannt." },
-    { "term": "Pythagoreische Primzahl", "explanation": "Eine pythagoreische Primzahl ist eine Primzahl der Form 4n + 1. Pythagoreische Primzahlen sind genau die ungeraden Primzahlen p, für die 2 eine primitive Wurzel modulo p ist." },
-    { "term": "Fibonacci-Zahlen", "explanation": "Eine Folge, in der jede Zahl die Summe der beiden vorhergehenden ist." },
-    { "term": "Tribonacci-Zahlen", "explanation": "Eine Folge natürlicher Zahlen, die mit der Zahl 0 einmal und der Zahl 1 zweimal beginnt. Anschließend führt die Summe der drei vorhergehenden Zahlen zur nächsten Zahl: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bell-Zahlen", "explanation": "Die Bell-Zahl ist die Anzahl der Möglichkeiten, eine Menge von n Elementen zu partitionieren, bezeichnet als Bn, mit der Annahme, dass B0=1. Benannt nach Eric Bell, der sie in den 1930er Jahren untersuchte." },
-    { "term": "Catalan-Zahlen", "explanation": "Catalan-Zahlen sind eine Folge natürlicher Zahlen, die in verschiedenen kombinatorischen Problemen auftreten. Sie sind nach dem belgischen Mathematiker Eugène Charles Catalan benannt, obwohl sie Leonhard Euler bekannt waren. Die n-te Catalan-Zahl Cn kann auf mehrere äquivalente Weisen definiert werden, wie zum Beispiel: 1) Die Anzahl der Möglichkeiten, ein konvexes (n+2)-Eck in Dreiecke zu unterteilen, indem nicht schneidende Diagonalen verwendet werden. 2) Die Anzahl der Möglichkeiten, 2n Punkte auf einem Kreis mit n nicht schneidenden Akkorden zu verbinden, usw." },
-    { "term": "Sophie Germain Primzahlen", "explanation": "Eine Sophie Germain Primzahl ist eine Primzahl p, bei der die Zahl 2p+1 ebenfalls eine Primzahl ist. Die Zahl 2p+1, die mit einer Sophie Germain Primzahl verbunden ist, wird sichere Primzahl genannt. Zum Beispiel ist 11 eine Sophie Germain Primzahl, und 2 × 11 + 1 = 23 ist die zugehörige sichere Primzahl." },
-    { "term": "Symmetrische Zahlen", "explanation": "Symmetrische Zahlen sind: 1) alle einstelligen Zahlen, 2) zweistellige Zahlen der Form xx und 3) dreistellige Zahlen der Form xyx, wobei x und y Ziffern sind und x nicht 0 sein kann." }
-  ],
-  "prefixToLink": "Weitere interessante Informationen über magische Zahlenfolgen finden Sie auf Wikipedia und auf der Website "
+  "viewTemplate": "Ihre Truhe enthält X Zahlen",
+  "updateTitle": "Suchen Sie nach neuen Zahlen für Ihre Digitale Schatztruhe"
 }
 
 el-GR
 {
-  "title": "Επεξήγηση όρων",
-  "explanations": [
-    { "term": "Πρώτος αριθμός", "explanation": "Ένας πρώτος αριθμός είναι ένας φυσικός αριθμός μεγαλύτερος από το 1 που δεν είναι το γινόμενο δύο μικρότερων φυσικών αριθμών. Ένας φυσικός αριθμός μεγαλύτερος από το 1 που δεν είναι πρώτος αριθμός ονομάζεται σύνθετος αριθμός." },
-    { "term": "Πυθαγόρειος πρώτος αριθμός", "explanation": "Ένας πυθαγόρειος πρώτος αριθμός είναι ένας πρώτος αριθμός της μορφής 4n + 1. Οι πυθαγόρειοι πρώτοι αριθμοί είναι ακριβώς οι περιττοί πρώτοι αριθμοί p για τους οποίους το 2 είναι πρωτόγονη ρίζα modulo p." },
-    { "term": "Αριθμοί Fibonacci", "explanation": "Μια ακολουθία στην οποία κάθε αριθμός είναι το άθροισμα των δύο προηγούμενων αριθμών." },
-    { "term": "Αριθμοί Tribonacci", "explanation": "Μια ακολουθία φυσικών αριθμών που ξεκινά με τον αριθμό 0 μία φορά και τον αριθμό 1 δύο φορές. Στη συνέχεια, το άθροισμα των τριών προηγούμενων αριθμών δίνει τον αμέσως επόμενο αριθμό: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Αριθμοί Bell", "explanation": "Ο αριθμός Bell είναι ο αριθμός των μη διατεταγμένων διαμερίσεων ενός συνόλου n στοιχείων, που υποδηλώνεται ως Bn, με την υπόθεση ότι B0=1. Ονομάστηκε προς τιμήν του Eric Bell, ο οποίος τους μελέτησε τη δεκαετία του 1930." },
-    { "term": "Αριθμοί Catalan", "explanation": "Οι αριθμοί Catalan είναι μια αριθμητική ακολουθία που εμφανίζεται σε πολλά συνδυαστικά προβλήματα. Ονομάστηκαν προς τιμήν του Βέλγου μαθηματικού Eugène Charles Catalan, αν και ήταν γνωστοί στον Leonhard Euler. Ο n-οστός αριθμός Catalan Cn μπορεί να οριστεί με διάφορους ισοδύναμους τρόπους, όπως: 1) Ο αριθμός των διαμερίσεων ενός κυρτού (n+2)-γώνου σε τρίγωνα με μη επικαλυπτόμενες διαγώνιες. 2) Ο αριθμός των τρόπων σύνδεσης 2n σημείων σε έναν κύκλο με n μη επικαλυπτόμενες χορδές, κ.λπ." },
-    { "term": "Αριθμοί Sophie Germain", "explanation": "Ένας πρώτος αριθμός Sophie Germain είναι ένας πρώτος αριθμός p τέτοιος ώστε ο αριθμός 2p+1 να είναι επίσης πρώτος αριθμός. Ο αριθμός 2p+1 που σχετίζεται με έναν πρώτο αριθμό Sophie Germain ονομάζεται ασφαλής πρώτος αριθμός. Για παράδειγμα, το 11 είναι ένας πρώτος αριθμός Sophie Germain, και το 2 × 11 + 1 = 23 είναι ο αντίστοιχος ασφαλής πρώτος αριθμός." },
-    { "term": "Συμμετρικοί αριθμοί", "explanation": "Οι συμμετρικοί αριθμοί είναι: 1) όλοι οι μονοψήφιοι αριθμοί, 2) διψήφιοι αριθμοί της μορφής xx, και 3) τριψήφιοι αριθμοί της μορφής xyx, όπου x και y είναι ψηφία, και το x δεν μπορεί να είναι 0." }
-  ],
-  "prefixToLink": "Μπορείτε να βρείτε περισσότερες ενδιαφέρουσες πληροφορίες για μαγικές αριθμητικές ακολουθίες στη Wikipedia και στον ιστότοπο "
+  "viewTemplate": "Το σεντούκι σας περιέχει X αριθμούς",
+  "updateTitle": "Αναζητήστε νέους αριθμούς για το Ψηφιακό Σεντούκι Θησαυρού σας"
 }
 
 he-IL
 {
-  "title": "הסבר על מונחים",
-  "explanations": [
-    { "term": "מספר ראשוני", "explanation": "מספר ראשוני הוא מספר טבעי גדול מ-1 שאינו מכפלה של שני מספרים טבעיים קטנים יותר. מספר טבעי גדול מ-1 שאינו ראשוני נקרא מספר מורכב." },
-    { "term": "מספר ראשוני פיתגוראי", "explanation": "מספר ראשוני פיתגוראי הוא מספר ראשוני מהצורה 4n + 1. מספרים ראשוניים פיתגוראיים הם בדיוק המספרים הראשוניים האי-זוגיים p שעבורם 2 הוא שורש פרימיטיבי מודולו p." },
-    { "term": "מספרי פיבונאצ'י", "explanation": "סדרה שבה כל מספר הוא סכום של שני המספרים הקודמים." },
-    { "term": "מספרי טריבונאצ'י", "explanation": "סדרה של מספרים טבעיים שמתחילה במספר 0 פעם אחת ובמספר 1 פעמיים. לאחר מכן, סכום שלושת המספרים הקודמים נותן את המספר הבא: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "מספרי בל", "explanation": "מספר בל הוא מספר החלוקות הלא מסודרות של קבוצה של n אלמנטים, המסומן כ-Bn, בהנחה ש-B0=1. נקרא על שם אריק בל, שחקר אותם בשנות ה-30 של המאה ה-20." },
-    { "term": "מספרי קטלן", "explanation": "מספרי קטלן הם סדרה מספרית שמופיעה בהרבה בעיות קומבינטוריות. הם נקראים על שם המתמטיקאי הבלגי אז'ן שארל קטלן, אם כי הם היו ידועים לליאונרד אוילר. המספר ה-n של קטלן Cn יכול להיות מוגדר בכמה דרכים שוות ערך, כגון: 1) מספר החלוקות של מצולע קמור (n+2)-צלעות למשולשים באמצעות אלכסונים שאינם חוצים. 2) מספר הדרכים לחבר 2n נקודות במעגל באמצעות n מיתרים שאינם חוצים, וכו'." },
-    { "term": "מספרי סופי ז'רמן", "explanation": "מספר ראשוני סופי ז'רמן הוא מספר ראשוני p כזה שהמספר 2p+1 הוא גם מספר ראשוני. המספר 2p+1 הקשור למספר ראשוני סופי ז'רמן נקרא מספר ראשוני בטוח. לדוגמה, 11 הוא מספר ראשוני סופי ז'רמן, ו-2 × 11 + 1 = 23 הוא המספר הראשוני הבטוח הקשור." },
-    { "term": "מספרים סימטריים", "explanation": "מספרים סימטריים הם: 1) כל המספרים בעלי ספרה אחת, 2) מספרים בעלי שתי ספרות מהצורה xx, ו-3) מספרים בעלי שלוש ספרות מהצורה xyx, כאשר x ו-y הם ספרות, ו-x לא יכול להיות 0." }
-  ],
-  "prefixToLink": "ניתן למצוא מידע מעניין נוסף על סדרות מספרים קסומות בוויקיפדיה ובאתר "
+  "viewTemplate": "התיבה שלך מכילה X מספרים",
+  "updateTitle": "חפש מספרים חדשים לתיבת האוצר הדיגיטלית שלך"
 }
 
 hu-HU
 {
-  "title": "Fogalmak magyarázata",
-  "explanations": [
-    { "term": "Prímszám", "explanation": "A prímszám egy olyan természetes szám, amely nagyobb, mint 1, és nem két kisebb természetes szám szorzata. Egy természetes szám, amely nagyobb, mint 1, és nem prímszám, összetett számnak nevezzük." },
-    { "term": "Püthagoraszi prímszám", "explanation": "A püthagoraszi prímszám egy olyan prímszám, amely a 4n + 1 alakú. A püthagoraszi prímszámok pontosan azok a páratlan prímszámok p, amelyekre 2 primitív gyök modulo p." },
-    { "term": "Fibonacci-számok", "explanation": "Egy sorozat, amelyben minden szám az előző két szám összege." },
-    { "term": "Tribonacci-számok", "explanation": "Egy természetes számok sorozata, amely eredetileg a 0 számmal kezdődik egyszer, és az 1 számmal kétszer. Ezután az előző három szám összege adja a következő számot: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bell-számok", "explanation": "A Bell-számok egy n elemű halmaz nem rendezett partícióinak száma, amelyet Bn-nek jelölünk, azzal a feltételezéssel, hogy B0=1. Eric Bell tiszteletére nevezték el, aki az 1930-as években tanulmányozta őket." },
-    { "term": "Catalan-számok", "explanation": "A Catalan-számok egy numerikus sorozat, amely sok kombinatorikai problémában megjelenik. A belga matematikus Eugène Charles Catalan tiszteletére nevezték el őket, bár Leonhard Euler ismerte őket. Az n-edik Catalan-szám Cn több egyenértékű módon is meghatározható, például: 1) Egy konvex (n+2)-szög partícióinak száma háromszögekre nem átfedő átlókkal. 2) Az n nem átfedő húr segítségével 2n pont összekapcsolásának száma egy körben, stb." },
-    { "term": "Sophie Germain prímszámok", "explanation": "A Sophie Germain prímszám egy olyan prímszám p, amelyre a 2p+1 szám is prímszám. A Sophie Germain prímszámhoz kapcsolódó 2p+1 számot biztonságos prímszámnak nevezzük. Például a 11 egy Sophie Germain prímszám, és a 2 × 11 + 1 = 23 a hozzá tartozó biztonságos prímszám." },
-    { "term": "Szimmetrikus számok", "explanation": "A szimmetrikus számok: 1) minden egyjegyű szám, 2) kétjegyű számok xx alakban, és 3) háromjegyű számok xyx alakban, ahol x és y számjegyek, és x nem lehet 0." }
-  ],
-  "prefixToLink": "További érdekes információk a mágikus számsorozatokról a Wikipédián és a weboldalon találhatók "
+  "viewTemplate": "A ládád X számot tartalmaz",
+  "updateTitle": "Keressen új számokat a Digitális Kincsesládádhoz"
 }
 
 id-ID
 {
-  "title": "Penjelasan Istilah",
-  "explanations": [
-    { "term": "Bilangan Prima", "explanation": "Bilangan prima adalah bilangan asli yang lebih besar dari 1 yang bukan merupakan hasil kali dari dua bilangan asli yang lebih kecil. Bilangan asli yang lebih besar dari 1 yang bukan bilangan prima disebut bilangan komposit." },
-    { "term": "Bilangan Prima Pythagoras", "explanation": "Bilangan prima Pythagoras adalah bilangan prima yang berbentuk 4n + 1. Bilangan prima Pythagoras adalah bilangan prima ganjil p yang 2 adalah akar primitif modulo p." },
-    { "term": "Bilangan Fibonacci", "explanation": "Deret di mana setiap bilangan adalah jumlah dari dua bilangan sebelumnya." },
-    { "term": "Bilangan Tribonacci", "explanation": "Deret bilangan asli yang dimulai dengan angka 0 satu kali dan angka 1 dua kali. Kemudian, jumlah dari tiga bilangan sebelumnya menghasilkan bilangan berikutnya: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bilangan Bell", "explanation": "Bilangan Bell adalah jumlah partisi tidak terurut dari himpunan n elemen, yang dilambangkan sebagai Bn, dengan asumsi bahwa B0=1. Dinamakan untuk menghormati Eric Bell, yang mempelajarinya pada tahun 1930-an." },
-    { "term": "Bilangan Catalan", "explanation": "Bilangan Catalan adalah deret numerik yang muncul dalam banyak masalah kombinatorik. Mereka dinamai untuk menghormati matematikawan Belgia Eugène Charles Catalan, meskipun mereka dikenal oleh Leonhard Euler. Bilangan Catalan ke-n Cn dapat didefinisikan dengan beberapa cara yang setara, seperti: 1) Jumlah partisi dari poligon konveks (n+2)-sisi menjadi segitiga menggunakan diagonal yang tidak tumpang tindih. 2) Jumlah cara menghubungkan 2n titik pada lingkaran dengan n akord yang tidak tumpang tindih, dll." },
-    { "term": "Bilangan Sophie Germain", "explanation": "Bilangan prima Sophie Germain adalah bilangan prima p yang bilangan 2p+1 juga merupakan bilangan prima. Bilangan 2p+1 yang terkait dengan bilangan prima Sophie Germain disebut bilangan prima aman. Misalnya, 11 adalah bilangan prima Sophie Germain, dan 2 × 11 + 1 = 23 adalah bilangan prima aman yang terkait." },
-    { "term": "Bilangan Simetris", "explanation": "Bilangan simetris adalah: 1) semua bilangan satu digit, 2) bilangan dua digit berbentuk xx, dan 3) bilangan tiga digit berbentuk xyx, di mana x dan y adalah digit, dan x tidak bisa 0." }
-  ],
-  "prefixToLink": "Anda dapat menemukan lebih banyak informasi menarik tentang deret bilangan ajaib di Wikipedia dan di situs web "
+  "viewTemplate": "Petimu berisi X angka",
+  "updateTitle": "Cari angka baru untuk Peti Harta Karun Digital Anda"
 }
 
 it-IT
 {
-  "title": "Spiegazione dei termini",
-  "explanations": [
-    { "term": "Numero primo", "explanation": "Un numero primo è un numero naturale maggiore di 1 che non è il prodotto di due numeri naturali più piccoli. Un numero naturale maggiore di 1 che non è primo si chiama numero composto." },
-    { "term": "Numero primo pitagorico", "explanation": "Un numero primo pitagorico è un numero primo della forma 4n + 1. I numeri primi pitagorici sono esattamente quei numeri primi dispari p per i quali 2 è una radice primitiva modulo p." },
-    { "term": "Numeri di Fibonacci", "explanation": "Una sequenza in cui ogni numero è la somma dei due numeri precedenti." },
-    { "term": "Numeri di Tribonacci", "explanation": "Una sequenza di numeri naturali che inizia con il numero 0 una volta e il numero 1 due volte. Successivamente, la somma dei tre numeri precedenti dà il numero successivo: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Numeri di Bell", "explanation": "Il numero di Bell è il numero di partizioni non ordinate di un insieme di n elementi, indicato come Bn, con l'assunzione che B0=1. Chiamato così in onore di Eric Bell, che li studiò negli anni '30." },
-    { "term": "Numeri di Catalan", "explanation": "I numeri di Catalan sono una sequenza numerica che appare in molti problemi combinatori. Sono chiamati così in onore del matematico belga Eugène Charles Catalan, sebbene fossero noti a Leonhard Euler. Il numero di Catalan n-esimo Cn può essere definito in diversi modi equivalenti, come ad esempio: 1) Il numero di partizioni di un poligono convesso (n+2)-lati in triangoli utilizzando diagonali non sovrapposte. 2) Il numero di modi per collegare 2n punti su un cerchio con n corde non sovrapposte, ecc." },
-    { "term": "Numeri di Sophie Germain", "explanation": "Un numero primo di Sophie Germain è un numero primo p tale che il numero 2p+1 è anche un numero primo. Il numero 2p+1 associato a un numero primo di Sophie Germain è chiamato numero primo sicuro. Ad esempio, 11 è un numero primo di Sophie Germain, e 2 × 11 + 1 = 23 è il numero primo sicuro associato." },
-    { "term": "Numeri simmetrici", "explanation": "I numeri simmetrici sono: 1) tutti i numeri a una cifra, 2) numeri a due cifre della forma xx, e 3) numeri a tre cifre della forma xyx, dove x e y sono cifre, e x non può essere 0." }
-  ],
-  "prefixToLink": "Puoi trovare ulteriori informazioni interessanti sulle sequenze numeriche magiche su Wikipedia e sul sito web "
+  "viewTemplate": "Il tuo forziere contiene X numeri",
+  "updateTitle": "Cerca nuovi numeri per il tuo Forziere del Tesoro Digitale"
 }
+
 ja-JP
 {
-  "title": "用語の説明",
-  "explanations": [
-    { "term": "素数", "explanation": "素数は、1より大きく、2つの小さな自然数の積ではない自然数です。1より大きく、素数でない自然数は合成数と呼ばれます。" },
-    { "term": "ピタゴラス素数", "explanation": "ピタゴラス素数は、4n + 1の形をした素数です。ピタゴラス素数は、2がpのモジュロの原始根である奇数の素数pです。" },
-    { "term": "フィボナッチ数", "explanation": "各数が前の2つの数の合計である数列。" },
-    { "term": "トリボナッチ数", "explanation": "自然数の数列で、0が1回、1が2回続きます。その後、前の3つの数の合計が次の数になります: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3。" },
-    { "term": "ベル数", "explanation": "ベル数は、n要素の集合の無秩序な分割の数であり、Bnと表され、B0=1と仮定されます。1930年代にエリック・ベルによって研究されました。" },
-    { "term": "カタラン数", "explanation": "カタラン数は、多くの組み合わせ問題に現れる数列です。ベルギーの数学者ユージン・チャールズ・カタランにちなんで名付けられましたが、レオンハルト・オイラーによって知られていました。n番目のカタラン数Cnは、いくつかの同等の方法で定義できます。例えば、1) 非交差対角線を使用して凸(n+2)-多角形を三角形に分割する数。2) 非交差弦を使用して円上の2n点をnで接続する方法の数など。" },
-    { "term": "ソフィー・ジェルマン素数", "explanation": "ソフィー・ジェルマン素数は、2p+1も素数である素数pです。ソフィー・ジェルマン素数に関連する2p+1の数は、安全な素数と呼ばれます。例えば、11はソフィー・ジェルマン素数であり、2 × 11 + 1 = 23は関連する安全な素数です。" },
-    { "term": "対称数", "explanation": "対称数は、1) すべての1桁の数、2) xxの形をした2桁の数、3) xyxの形をした3桁の数で、xとyは数字であり、xは0であってはなりません。" }
-  ],
-  "prefixToLink": "魔法の数列についての詳細は、Wikipediaおよびウェブサイトでご覧ください。"
+  "viewTemplate": "あなたのチェストには X 個の数字が含まれています",
+  "updateTitle": "デジタルトレジャーチェストの新しい番号を検索"
 }
 
 lv-LV
 {
-  "title": "Terminu skaidrojums",
-  "explanations": [
-    { "term": "Primskaitlis", "explanation": "Primskaitlis ir dabisks skaitlis, kas ir lielāks par 1 un nav divu mazāku dabisko skaitļu reizinājums. Dabisks skaitlis, kas ir lielāks par 1 un nav primskaitlis, tiek saukts par saliktu skaitli." },
-    { "term": "Pitagora primskaitlis", "explanation": "Pitagora primskaitlis ir primskaitlis, kas ir 4n + 1 formā. Pitagora primskaitļi ir tieši tie nepāra primskaitļi p, kuriem 2 ir primitīva sakne modulo p." },
-    { "term": "Fibonači skaitļi", "explanation": "Secība, kurā katrs skaitlis ir divu iepriekšējo skaitļu summa." },
-    { "term": "Tribonači skaitļi", "explanation": "Dabisko skaitļu secība, kas sākas ar skaitli 0 vienu reizi un skaitli 1 divas reizes. Pēc tam trīs iepriekšējo skaitļu summa veido nākamo skaitli: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bela skaitļi", "explanation": "Bela skaitlis ir n-elementu kopas nešķiroto sadalījumu skaits, ko apzīmē ar Bn, pieņemot, ka B0=1. Nosaukts par godu Ērikam Belam, kurš tos pētīja 20. gadsimta 30. gados." },
-    { "term": "Katalāna skaitļi", "explanation": "Katalāna skaitļi ir skaitļu secība, kas parādās daudzos kombinatorikas problēmās. Tie ir nosaukti par godu Beļģijas matemātiķim Eugēnam Šarlam Katalānam, lai gan tie bija zināmi Leonhardam Eileram. N-tā Katalāna skaitļa Cn var definēt vairākos ekvivalentos veidos, piemēram: 1) Konveksa (n+2)-daudzstūra sadalījumu trijstūros, izmantojot nešķērsojošas diagonāles. 2) Veidu skaits, kā savienot 2n punktus uz apļa, izmantojot n nešķērsojošas akordes, utt." },
-    { "term": "Sofijas Žermēnas skaitļi", "explanation": "Sofijas Žermēnas primskaitlis ir tāds primskaitlis p, ka skaitlis 2p+1 arī ir primskaitlis. Skaitlis 2p+1, kas saistīts ar Sofijas Žermēnas primskaitli, tiek saukts par drošu primskaitli. Piemēram, 11 ir Sofijas Žermēnas primskaitlis, un 2 × 11 + 1 = 23 ir saistītais drošais primskaitlis." },
-    { "term": "Simetriski skaitļi", "explanation": "Simetriski skaitļi ir: 1) visi vienciparu skaitļi, 2) divciparu skaitļi formā xx, un 3) trīsciparu skaitļi formā xyx, kur x un y ir cipari, un x nevar būt 0." }
-  ],
-  "prefixToLink": "Vairāk interesantas informācijas par maģiskajām skaitļu secībām var atrast Vikipēdijā un vietnē "
+  "viewTemplate": "Jūsu lāde satur X numurus",
+  "updateTitle": "Meklējiet jaunus numurus savam Digitālajam Dārgumu Lādei"
 }
 
 lt-LT
 {
-  "title": "Terminų paaiškinimas",
-  "explanations": [
-    { "term": "Pirminis skaičius", "explanation": "Pirminis skaičius yra natūralus skaičius, didesnis nei 1, kuris nėra dviejų mažesnių natūralių skaičių sandauga. Natūralus skaičius, didesnis nei 1, kuris nėra pirminis skaičius, vadinamas sudėtiniu skaičiumi." },
-    { "term": "Pitagoro pirminis skaičius", "explanation": "Pitagoro pirminis skaičius yra pirminis skaičius, kurio forma yra 4n + 1. Pitagoro pirminiai skaičiai yra būtent tie nelyginiai pirminiai skaičiai p, kuriems 2 yra primityvus šaknis modulo p." },
-    { "term": "Fibonacio skaičiai", "explanation": "Sekos, kurioje kiekvienas skaičius yra dviejų ankstesnių skaičių suma." },
-    { "term": "Tribonačio skaičiai", "explanation": "Natūralių skaičių seka, kuri prasideda skaičiumi 0 vieną kartą ir skaičiumi 1 du kartus. Vėliau trijų ankstesnių skaičių suma sudaro kitą skaičių: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Belo skaičiai", "explanation": "Belo skaičius yra n-elementų rinkinio neįrikiuotų padalijimų skaičius, žymimas Bn, su prielaida, kad B0=1. Pavadintas Eriko Belo garbei, kuris juos tyrinėjo 20-ojo amžiaus 30-aisiais." },
-    { "term": "Katalano skaičiai", "explanation": "Katalano skaičiai yra skaičių seka, kuri pasirodo daugelyje kombinatorikos problemų. Jie pavadinti Belgijos matematiko Eugène Charles Catalan garbei, nors juos žinojo Leonardas Eileris. N-tasis Katalano skaičius Cn gali būti apibrėžtas keliais lygiaverčiais būdais, pavyzdžiui: 1) Konveksinio (n+2)-daugiasienio padalijimų į trikampius skaičius, naudojant nesikertančias įstrižaines. 2) Būdų skaičius, kaip sujungti 2n taškus apskritime, naudojant n nesikertančias akordas ir kt." },
-    { "term": "Sophie Germain skaičiai", "explanation": "Sophie Germain pirminis skaičius yra toks pirminis skaičius p, kad skaičius 2p+1 taip pat yra pirminis skaičius. Skaičius 2p+1, susijęs su Sophie Germain pirminiu skaičiumi, vadinamas saugiu pirminiu skaičiumi. Pavyzdžiui, 11 yra Sophie Germain pirminis skaičius, o 2 × 11 + 1 = 23 yra susijęs saugus pirminis skaičius." },
-    { "term": "Simetriniai skaičiai", "explanation": "Simetriniai skaičiai yra: 1) visi vieno skaitmens skaičiai, 2) dviejų skaitmenų skaičiai formos xx, ir 3) trijų skaitmenų skaičiai formos xyx, kur x ir y yra skaitmenys, o x negali būti 0." }
-  ],
-  "prefixToLink": "Daugiau įdomios informacijos apie magiškas skaičių sekas rasite Vikipedijoje ir svetainėje "
+  "viewTemplate": "Jūsų skrynia turi X numerius",
+  "updateTitle": "Ieškokite naujų numerių savo Skaitmeninei Lobių Skryniai"
 }
 
 no-NO
 {
-  "title": "Forklaring av vilkår",
-  "explanations": [
-    { "term": "Primtall", "explanation": "Et primtall er et naturlig tall større enn 1 som ikke er et produkt av to mindre naturlige tall. Et naturlig tall større enn 1 som ikke er et primtall, kalles et sammensatt tall." },
-    { "term": "Pythagoreisk primtall", "explanation": "Et pythagoreisk primtall er et primtall av formen 4n + 1. Pythagoreiske primtall er nøyaktig de oddetallige primtallene p, hvor 2 er en primitiv rot modulo p." },
-    { "term": "Fibonacci-tall", "explanation": "En sekvens der hvert tall er summen av de to foregående tallene." },
-    { "term": "Tribonacci-tall", "explanation": "En sekvens av naturlige tall som begynner med tallet 0 én gang og tallet 1 to ganger. Deretter er summen av de tre foregående tallene det neste tallet: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bell-tall", "explanation": "Bell-tallet er antallet uordnede partisjoner av en n-element mengde, betegnet som Bn, med antagelsen at B0=1. Oppkalt etter Eric Bell, som studerte dem på 1930-tallet." },
-    { "term": "Catalan-tall", "explanation": "Catalan-tall er en tallsekvens som dukker opp i mange kombinatoriske problemer. De er oppkalt etter den belgiske matematikeren Eugène Charles Catalan, selv om de var kjent for Leonhard Euler. Det n-te Catalan-tallet Cn kan defineres på flere ekvivalente måter, for eksempel: 1) Antall partisjoner av en konveks (n+2)-polygon i trekanter ved hjelp av ikke-kryssende diagonaler. 2) Antall måter å koble 2n punkter på en sirkel ved hjelp av n ikke-kryssende akkorder, osv." },
-    { "term": "Sophie Germain-tall", "explanation": "Et Sophie Germain primtall er et slikt primtall p at tallet 2p+1 også er et primtall. Tallet 2p+1 assosiert med et Sophie Germain primtall kalles et sikkert primtall. For eksempel er 11 et Sophie Germain primtall, og 2 × 11 + 1 = 23 er det tilknyttede sikre primtallet." },
-    { "term": "Symmetriske tall", "explanation": "Symmetriske tall er: 1) alle ensifrede tall, 2) tosifrede tall av formen xx, og 3) tresifrede tall av formen xyx, hvor x og y er sifre, og x kan ikke være 0." }
-  ],
-  "prefixToLink": "Mer interessant informasjon om magiske tallsekvenser finner du på Wikipedia og på nettstedet "
+  "viewTemplate": "Kisten din inneholder X tall",
+  "updateTitle": "Søk etter nye tall til din Digitale Skattekiste"
 }
 
 nb-NO
 {
-  "title": "Forklaring av vilkår",
-  "explanations": [
-    { "term": "Primtall", "explanation": "Et primtall er et naturlig tall større enn 1 som ikke er et produkt av to mindre naturlige tall. Et naturlig tall større enn 1 som ikke er et primtall, kalles et sammensatt tall." },
-    { "term": "Pythagoreisk primtall", "explanation": "Et pythagoreisk primtall er et primtall av formen 4n + 1. Pythagoreiske primtall er nøyaktig de oddetallige primtallene p, hvor 2 er en primitiv rot modulo p." },
-    { "term": "Fibonacci-tall", "explanation": "En sekvens der hvert tall er summen av de to foregående tallene." },
-    { "term": "Tribonacci-tall", "explanation": "En sekvens av naturlige tall som begynner med tallet 0 én gang og tallet 1 to ganger. Deretter er summen av de tre foregående tallene det neste tallet: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bell-tall", "explanation": "Bell-tallet er antallet uordnede partisjoner av en n-element mengde, betegnet som Bn, med antagelsen at B0=1. Oppkalt etter Eric Bell, som studerte dem på 1930-tallet." },
-    { "term": "Catalan-tall", "explanation": "Catalan-tall er en tallsekvens som dukker opp i mange kombinatoriske problemer. De er oppkalt etter den belgiske matematikeren Eugène Charles Catalan, selv om de var kjent for Leonhard Euler. Det n-te Catalan-tallet Cn kan defineres på flere ekvivalente måter, for eksempel: 1) Antall partisjoner av en konveks (n+2)-polygon i trekanter ved hjelp av ikke-kryssende diagonaler. 2) Antall måter å koble 2n punkter på en sirkel ved hjelp av n ikke-kryssende akkorder, osv." },
-    { "term": "Sophie Germain-tall", "explanation": "Et Sophie Germain primtall er et slikt primtall p at tallet 2p+1 også er et primtall. Tallet 2p+1 assosiert med et Sophie Germain primtall kalles et sikkert primtall. For eksempel er 11 et Sophie Germain primtall, og 2 × 11 + 1 = 23 er det tilknyttede sikre primtallet." },
-    { "term": "Symmetriske tall", "explanation": "Symmetriske tall er: 1) alle ensifrede tall, 2) tosifrede tall av formen xx, og 3) tresifrede tall av formen xyx, hvor x og y er sifre, og x kan ikke være 0." }
-  ],
-  "prefixToLink": "Mer interessant informasjon om magiske tallsekvenser finner du på Wikipedia og på nettstedet "
+  "viewTemplate": "Kisten din inneholder X tall",
+  "updateTitle": "Søk etter nye tall til din Digitale Skattekiste"
 }
 
 fa-IR
 {
-  "title": "用語の説明",
-  "explanations": [
-    { "term": "素数", "explanation": "素数は、1より大きく、2つの小さな自然数の積ではない自然数です。1より大きく、素数でない自然数は合成数と呼ばれます。" },
-    { "term": "ピタゴラス素数", "explanation": "ピタゴラス素数は、4n + 1の形をした素数です。ピタゴラス素数は、2がpのモジュロの原始根である奇数の素数pです。" },
-    { "term": "フィボナッチ数", "explanation": "各数が前の2つの数の合計である数列。" },
-    { "term": "トリボナッチ数", "explanation": "自然数の数列で、0が1回、1が2回続きます。その後、前の3つの数の合計が次の数になります: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3。" },
-    { "term": "ベル数", "explanation": "ベル数は、n要素の集合の無秩序な分割の数であり、Bnと表され、B0=1と仮定されます。1930年代にエリック・ベルによって研究されました。" },
-    { "term": "カタラン数", "explanation": "カタラン数は、多くの組み合わせ問題に現れる数列です。ベルギーの数学者ユージン・チャールズ・カタランにちなんで名付けられましたが、レオンハルト・オイラーによって知られていました。n番目のカタラン数Cnは、いくつかの同等の方法で定義できます。例えば、1) 非交差対角線を使用して凸(n+2)-多角形を三角形に分割する数。2) 非交差弦を使用して円上の2n点をnで接続する方法の数など。" },
-    { "term": "ソフィー・ジェルマン素数", "explanation": "ソフィー・ジェルマン素数は、2p+1も素数である素数pです。ソフィー・ジェルマン素数に関連する2p+1の数は、安全な素数と呼ばれます。例えば、11はソフィー・ジェルマン素数であり、2 × 11 + 1 = 23は関連する安全な素数です。" },
-    { "term": "対称数", "explanation": "対称数は、1) すべての1桁の数、2) xxの形をした2桁の数、3) xyxの形をした3桁の数で、xとyは数字であり、xは0であってはなりません。" }
-  ],
-  "prefixToLink": "魔法の数列についての詳細は、Wikipediaおよびウェブサイトでご覧ください。"
-}
-
-lv-LV
-{
-  "title": "Terminu skaidrojums",
-  "explanations": [
-    { "term": "Primskaitlis", "explanation": "Primskaitlis ir dabisks skaitlis, kas ir lielāks par 1 un nav divu mazāku dabisko skaitļu reizinājums. Dabisks skaitlis, kas ir lielāks par 1 un nav primskaitlis, tiek saukts par saliktu skaitli." },
-    { "term": "Pitagora primskaitlis", "explanation": "Pitagora primskaitlis ir primskaitlis, kas ir 4n + 1 formā. Pitagora primskaitļi ir tieši tie nepāra primskaitļi p, kuriem 2 ir primitīva sakne modulo p." },
-    { "term": "Fibonači skaitļi", "explanation": "Secība, kurā katrs skaitlis ir divu iepriekšējo skaitļu summa." },
-    { "term": "Tribonači skaitļi", "explanation": "Dabisko skaitļu secība, kas sākas ar skaitli 0 vienu reizi un skaitli 1 divas reizes. Pēc tam trīs iepriekšējo skaitļu summa veido nākamo skaitli: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bela skaitļi", "explanation": "Bela skaitlis ir n-elementu kopas nešķiroto sadalījumu skaits, ko apzīmē ar Bn, pieņemot, ka B0=1. Nosaukts par godu Ērikam Belam, kurš tos pētīja 20. gadsimta 30. gados." },
-    { "term": "Katalāna skaitļi", "explanation": "Katalāna skaitļi ir skaitļu secība, kas parādās daudzos kombinatorikas problēmās. Tie ir nosaukti par godu Beļģijas matemātiķim Eugēnam Šarlam Katalānam, lai gan tie bija zināmi Leonhardam Eileram. N-tā Katalāna skaitļa Cn var definēt vairākos ekvivalentos veidos, piemēram: 1) Konveksa (n+2)-daudzstūra sadalījumu trijstūros, izmantojot nešķērsojošas diagonāles. 2) Veidu skaits, kā savienot 2n punktus uz apļa, izmantojot n nešķērsojošas akordes, utt." },
-    { "term": "Sofijas Žermēnas skaitļi", "explanation": "Sofijas Žermēnas primskaitlis ir tāds primskaitlis p, ka skaitlis 2p+1 arī ir primskaitlis. Skaitlis 2p+1, kas saistīts ar Sofijas Žermēnas primskaitli, tiek saukts par drošu primskaitli. Piemēram, 11 ir Sofijas Žermēnas primskaitlis, un 2 × 11 + 1 = 23 ir saistītais drošais primskaitlis." },
-    { "term": "Simetriski skaitļi", "explanation": "Simetriski skaitļi ir: 1) visi vienciparu skaitļi, 2) divciparu skaitļi formā xx, un 3) trīsciparu skaitļi formā xyx, kur x un y ir cipari, un x nevar būt 0." }
-  ],
-  "prefixToLink": "Vairāk interesantas informācijas par maģiskajām skaitļu secībām var atrast Vikipēdijā un vietnē "
-}
-
-lt-LT
-{
-  "title": "Terminų paaiškinimas",
-  "explanations": [
-    { "term": "Pirminis skaičius", "explanation": "Pirminis skaičius yra natūralus skaičius, didesnis nei 1, kuris nėra dviejų mažesnių natūralių skaičių sandauga. Natūralus skaičius, didesnis nei 1, kuris nėra pirminis skaičius, vadinamas sudėtiniu skaičiumi." },
-    { "term": "Pitagoro pirminis skaičius", "explanation": "Pitagoro pirminis skaičius yra pirminis skaičius, kurio forma yra 4n + 1. Pitagoro pirminiai skaičiai yra būtent tie nelyginiai pirminiai skaičiai p, kuriems 2 yra primityvus šaknis modulo p." },
-    { "term": "Fibonacio skaičiai", "explanation": "Sekos, kurioje kiekvienas skaičius yra dviejų ankstesnių skaičių suma." },
-    { "term": "Tribonačio skaičiai", "explanation": "Natūralių skaičių seka, kuri prasideda skaičiumi 0 vieną kartą ir skaičiumi 1 du kartus. Vėliau trijų ankstesnių skaičių suma sudaro kitą skaičių: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Belo skaičiai", "explanation": "Belo skaičius yra n-elementų rinkinio neįrikiuotų padalijimų skaičius, žymimas Bn, su prielaida, kad B0=1. Pavadintas Eriko Belo garbei, kuris juos tyrinėjo 20-ojo amžiaus 30-aisiais." },
-    { "term": "Katalano skaičiai", "explanation": "Katalano skaičiai yra skaičių seka, kuri pasirodo daugelyje kombinatorikos problemų. Jie pavadinti Belgijos matematiko Eugène Charles Catalan garbei, nors juos žinojo Leonardas Eileris. N-tasis Katalano skaičius Cn gali būti apibrėžtas keliais lygiaverčiais būdais, pavyzdžiui: 1) Konveksinio (n+2)-daugiasienio padalijimų į trikampius skaičius, naudojant nesikertančias įstrižaines. 2) Būdų skaičius, kaip sujungti 2n taškus apskritime, naudojant n nesikertančias akordas ir kt." },
-    { "term": "Sophie Germain skaičiai", "explanation": "Sophie Germain pirminis skaičius yra toks pirminis skaičius p, kad skaičius 2p+1 taip pat yra pirminis skaičius. Skaičius 2p+1, susijęs su Sophie Germain pirminiu skaičiumi, vadinamas saugiu pirminiu skaičiumi. Pavyzdžiui, 11 yra Sophie Germain pirminis skaičius, o 2 × 11 + 1 = 23 yra susijęs saugus pirminis skaičius." },
-    { "term": "Simetriniai skaičiai", "explanation": "Simetriniai skaičiai yra: 1) visi vieno skaitmens skaičiai, 2) dviejų skaitmenų skaičiai formos xx, ir 3) trijų skaitmenų skaičiai formos xyx, kur x ir y yra skaitmenys, o x negali būti 0." }
-  ],
-  "prefixToLink": "Daugiau įdomios informacijos apie magiškas skaičių sekas rasite Vikipedijoje ir svetainėje "
-}
-
-no-NO
-{
-  "title": "Forklaring av vilkår",
-  "explanations": [
-    { "term": "Primtall", "explanation": "Et primtall er et naturlig tall større enn 1 som ikke er et produkt av to mindre naturlige tall. Et naturlig tall større enn 1 som ikke er et primtall, kalles et sammensatt tall." },
-    { "term": "Pythagoreisk primtall", "explanation": "Et pythagoreisk primtall er et primtall av formen 4n + 1. Pythagoreiske primtall er nøyaktig de oddetallige primtallene p, hvor 2 er en primitiv rot modulo p." },
-    { "term": "Fibonacci-tall", "explanation": "En sekvens der hvert tall er summen av de to foregående tallene." },
-    { "term": "Tribonacci-tall", "explanation": "En sekvens av naturlige tall som begynner med tallet 0 én gang og tallet 1 to ganger. Deretter er summen av de tre foregående tallene det neste tallet: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bell-tall", "explanation": "Bell-tallet er antallet uordnede partisjoner av en n-element mengde, betegnet som Bn, med antagelsen at B0=1. Oppkalt etter Eric Bell, som studerte dem på 1930-tallet." },
-    { "term": "Catalan-tall", "explanation": "Catalan-tall er en tallsekvens som dukker opp i mange kombinatoriske problemer. De er oppkalt etter den belgiske matematikeren Eugène Charles Catalan, selv om de var kjent for Leonhard Euler. Det n-te Catalan-tallet Cn kan defineres på flere ekvivalente måter, for eksempel: 1) Antall partisjoner av en konveks (n+2)-polygon i trekanter ved hjelp av ikke-kryssende diagonaler. 2) Antall måter å koble 2n punkter på en sirkel ved hjelp av n ikke-kryssende akkorder, osv." },
-    { "term": "Sophie Germain-tall", "explanation": "Et Sophie Germain primtall er et slikt primtall p at tallet 2p+1 også er et primtall. Tallet 2p+1 assosiert med et Sophie Germain primtall kalles et sikkert primtall. For eksempel er 11 et Sophie Germain primtall, og 2 × 11 + 1 = 23 er det tilknyttede sikre primtallet." },
-    { "term": "Symmetriske tall", "explanation": "Symmetriske tall er: 1) alle ensifrede tall, 2) tosifrede tall av formen xx, og 3) tresifrede tall av formen xyx, hvor x og y er sifre, og x kan ikke være 0." }
-  ],
-  "prefixToLink": "Mer interessant informasjon om magiske tallsekvenser finner du på Wikipedia og på nettstedet "
-}
-
-nb-NO
-{
-  "title": "Forklaring av vilkår",
-  "explanations": [
-    { "term": "Primtall", "explanation": "Et primtall er et naturlig tall større enn 1 som ikke er et produkt av to mindre naturlige tall. Et naturlig tall større enn 1 som ikke er et primtall, kalles et sammensatt tall." },
-    { "term": "Pythagoreisk primtall", "explanation": "Et pythagoreisk primtall er et primtall av formen 4n + 1. Pythagoreiske primtall er nøyaktig de oddetallige primtallene p, hvor 2 er en primitiv rot modulo p." },
-    { "term": "Fibonacci-tall", "explanation": "En sekvens der hvert tall er summen av de to foregående tallene." },
-    { "term": "Tribonacci-tall", "explanation": "En sekvens av naturlige tall som begynner med tallet 0 én gang og tallet 1 to ganger. Deretter er summen av de tre foregående tallene det neste tallet: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bell-tall", "explanation": "Bell-tallet er antallet uordnede partisjoner av en n-element mengde, betegnet som Bn, med antagelsen at B0=1. Oppkalt etter Eric Bell, som studerte dem på 1930-tallet." },
-    { "term": "Catalan-tall", "explanation": "Catalan-tall er en tallsekvens som dukker opp i mange kombinatoriske problemer. De er oppkalt etter den belgiske matematikeren Eugène Charles Catalan, selv om de var kjent for Leonhard Euler. Det n-te Catalan-tallet Cn kan defineres på flere ekvivalente måter, for eksempel: 1) Antall partisjoner av en konveks (n+2)-polygon i trekanter ved hjelp av ikke-kryssende diagonaler. 2) Antall måter å koble 2n punkter på en sirkel ved hjelp av n ikke-kryssende akkorder, osv." },
-    { "term": "Sophie Germain-tall", "explanation": "Et Sophie Germain primtall er et slikt primtall p at tallet 2p+1 også er et primtall. Tallet 2p+1 assosiert med et Sophie Germain primtall kalles et sikkert primtall. For eksempel er 11 et Sophie Germain primtall, og 2 × 11 + 1 = 23 er det tilknyttede sikre primtallet." },
-    { "term": "Symmetriske tall", "explanation": "Symmetriske tall er: 1) alle ensifrede tall, 2) tosifrede tall av formen xx, og 3) tresifrede tall av formen xyx, hvor x og y er sifre, og x kan ikke være 0." }
-  ],
-  "prefixToLink": "Mer interessant informasjon om magiske tallsekvenser finner du på Wikipedia og på nettstedet "
-}
-
-fa-IR
-{
-  "title": "توضیح اصطلاحات",
-  "explanations": [
-    { "term": "عدد اول", "explanation": "عدد اول عدد طبیعی بزرگتر از 1 است که حاصل ضرب دو عدد طبیعی کوچکتر نیست. عدد طبیعی بزرگتر از 1 که عدد اول نیست، عدد مرکب نامیده می‌شود." },
-    { "term": "عدد اول فیثاغورثی", "explanation": "عدد اول فیثاغورثی عدد اولی به شکل 4n + 1 است. اعداد اول فیثاغورثی دقیقاً آن اعداد اول فرد p هستند که 2 ریشه اولیه مدول p است." },
-    { "term": "اعداد فیبوناچی", "explanation": "دنباله‌ای که در آن هر عدد مجموع دو عدد قبلی است." },
-    { "term": "اعداد تریبوناچی", "explanation": "دنباله‌ای از اعداد طبیعی که با عدد 0 یک بار و عدد 1 دو بار شروع می‌شود. سپس مجموع سه عدد قبلی عدد بعدی را می‌دهد: T0=0، T1=T2=1، Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "اعداد بل", "explanation": "عدد بل تعداد تمام تقسیمات نامرتب یک مجموعه n عضوی است که با Bn نشان داده می‌شود، با فرض اینکه B0=1. به نام اریک بل که آنها را در دهه 1930 مطالعه کرد." },
-    { "term": "اعداد کاتالان", "explanation": "اعداد کاتالان دنباله‌ای عددی هستند که در بسیاری از مسائل ترکیبی ظاهر می‌شوند. آنها به افتخار ریاضیدان بلژیکی اوژن چارلز کاتالان نامگذاری شده‌اند، اگرچه توسط لئونارد اویلر شناخته شده بودند. عدد n-ام کاتالان Cn می‌تواند به چندین روش معادل تعریف شود، مانند: 1) تعداد تقسیمات یک (n+2)-ضلعی محدب به مثلث‌ها با استفاده از قطرهای غیر متقاطع. 2) تعداد راه‌های اتصال 2n نقطه روی یک دایره با استفاده از n وتر غیر متقاطع، و غیره." },
-    { "term": "اعداد سوفی ژرمن", "explanation": "عدد اول سوفی ژرمن عدد اولی p است که عدد 2p+1 نیز عدد اول است. عدد 2p+1 مرتبط با عدد اول سوفی ژرمن عدد اول ایمن نامیده می‌شود. به عنوان مثال، 11 یک عدد اول سوفی ژرمن است و 2 × 11 + 1 = 23 عدد اول ایمن مرتبط است." },
-    { "term": "اعداد متقارن", "explanation": "اعداد متقارن عبارتند از: 1) همه اعداد یک رقمی، 2) اعداد دو رقمی به شکل xx، و 3) اعداد سه رقمی به شکل xyx، که در آن x و y ارقام هستند و x نمی‌تواند 0 باشد." }
-  ],
-  "prefixToLink": "برای اطلاعات بیشتر در مورد دنباله‌های عددی جادویی به ویکی‌پدیا و سایت مراجعه کنید "
+  "viewTemplate": "صندوق شما حاوی X عدد است",
+  "updateTitle": "به دنبال اعداد جدید برای صندوق گنج دیجیتال خود باشید"
 }
 
 pl-PL
 {
-  "title": "Wyjaśnienie terminów",
-  "explanations": [
-    { "term": "Liczba pierwsza", "explanation": "Liczba pierwsza to liczba naturalna większa od 1, która nie jest iloczynem dwóch mniejszych liczb naturalnych. Liczba naturalna większa od 1, która nie jest liczbą pierwszą, nazywana jest liczbą złożoną." },
-    { "term": "Liczba pierwsza Pitagorejska", "explanation": "Liczba pierwsza Pitagorejska to liczba pierwsza w postaci 4n + 1. Liczby pierwsze Pitagorejskie to dokładnie te nieparzyste liczby pierwsze p, dla których 2 jest pierwiastkiem pierwotnym modulo p." },
-    { "term": "Liczby Fibonacciego", "explanation": "Ciąg, w którym każda liczba jest sumą dwóch poprzednich liczb." },
-    { "term": "Liczby Tribonacciego", "explanation": "Ciąg liczb naturalnych, który zaczyna się od liczby 0 raz i liczby 1 dwa razy. Następnie suma trzech poprzednich liczb daje kolejną liczbę: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Liczby Bella", "explanation": "Liczba Bella to liczba wszystkich nieuporządkowanych podziałów zbioru n-elementowego, oznaczona jako Bn, z założeniem, że B0=1. Nazwana na cześć Erica Bella, który badał je w latach 30. XX wieku." },
-    { "term": "Liczby Catalana", "explanation": "Liczby Catalana to ciąg liczbowy, który pojawia się w wielu problemach kombinatorycznych. Nazwane na cześć belgijskiego matematyka Eugène'a Charlesa Catalana, choć były znane Leonardowi Eulerowi. n-ta liczba Catalana Cn może być zdefiniowana na kilka równoważnych sposobów, takich jak: 1) Liczba podziałów wypukłego (n+2)-kąta na trójkąty za pomocą nieprzecinających się przekątnych. 2) Liczba sposobów połączenia 2n punktów na okręgu za pomocą n nieprzecinających się akordów, itp." },
-    { "term": "Liczby Sophie Germain", "explanation": "Liczba pierwsza Sophie Germain to taka liczba pierwsza p, że liczba 2p+1 jest również liczbą pierwszą. Liczba 2p+1 związana z liczbą pierwszą Sophie Germain nazywana jest bezpieczną liczbą pierwszą. Na przykład 11 jest liczbą pierwszą Sophie Germain, a 2 × 11 + 1 = 23 jest związaną bezpieczną liczbą pierwszą." },
-    { "term": "Liczby symetryczne", "explanation": "Liczby symetryczne to: 1) wszystkie liczby jednocyfrowe, 2) liczby dwucyfrowe w postaci xx, oraz 3) liczby trzycyfrowe w postaci xyx, gdzie x i y są cyframi, a x nie może być 0." }
-  ],
-  "prefixToLink": "Więcej interesujących informacji o magicznych ciągach liczbowych znajdziesz na Wikipedii i na stronie "
+  "viewTemplate": "Twoja skrzynia zawiera X liczb",
+  "updateTitle": "Szukaj nowych liczb do swojej Cyfrowej Skrzyni Skarbów"
 }
 
 pt-PT
 {
-  "title": "Explicação de termos",
-  "explanations": [
-    { "term": "Número primo", "explanation": "Um número primo é um número natural maior que 1 que não é o produto de dois números naturais menores. Um número natural maior que 1 que não é primo é chamado de número composto." },
-    { "term": "Número primo pitagórico", "explanation": "Um número primo pitagórico é um número primo da forma 4n + 1. Os números primos pitagóricos são exatamente aqueles números primos ímpares p para os quais 2 é uma raiz primitiva módulo p." },
-    { "term": "Números de Fibonacci", "explanation": "Uma sequência em que cada número é a soma dos dois números anteriores." },
-    { "term": "Números de Tribonacci", "explanation": "Uma sequência de números naturais que começa com o número 0 uma vez e o número 1 duas vezes. Em seguida, a soma dos três números anteriores dá o próximo número: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Números de Bell", "explanation": "O número de Bell é o número de todas as partições não ordenadas de um conjunto de n elementos, denotado como Bn, com a suposição de que B0=1. Nomeado em homenagem a Eric Bell, que os estudou na década de 1930." },
-    { "term": "Números de Catalan", "explanation": "Os números de Catalan são uma sequência numérica que aparece em muitos problemas combinatórios. Eles são nomeados em homenagem ao matemático belga Eugène Charles Catalan, embora fossem conhecidos por Leonhard Euler. O n-ésimo número de Catalan Cn pode ser definido de várias maneiras equivalentes, como por exemplo: 1) O número de partições de um (n+2)-gono convexo em triângulos usando diagonais não sobrepostas. 2) O número de maneiras de conectar 2n pontos em um círculo usando n acordes não sobrepostos, etc." },
-    { "term": "Números de Sophie Germain", "explanation": "Um número primo de Sophie Germain é um número primo p tal que o número 2p+1 também é primo. O número 2p+1 associado a um número primo de Sophie Germain é chamado de número primo seguro. Por exemplo, 11 é um número primo de Sophie Germain, e 2 × 11 + 1 = 23 é o número primo seguro associado." },
-    { "term": "Números simétricos", "explanation": "Os números simétricos são: 1) todos os números de um dígito, 2) números de dois dígitos na forma xx, e 3) números de três dígitos na forma xyx, onde x e y são dígitos, e x não pode ser 0." }
-  ],
-  "prefixToLink": "Para mais informações interessantes sobre sequências numéricas mágicas, consulte a Wikipedia e o site "
+  "viewTemplate": "O seu baú contém X números",
+  "updateTitle": "Procure novos números para o seu Baú do Tesouro Digital"
 }
 
 pa-IN
 {
-  "title": "ਸ਼ਬਦਾਵਲੀ ਦੀ ਵਿਆਖਿਆ",
-  "explanations": [
-    { "term": "ਪ੍ਰਾਈਮ ਨੰਬਰ", "explanation": "ਪ੍ਰਾਈਮ ਨੰਬਰ ਇੱਕ ਕੁਦਰਤੀ ਨੰਬਰ ਹੈ ਜੋ 1 ਤੋਂ ਵੱਡਾ ਹੈ ਜੋ ਦੋ ਛੋਟੇ ਕੁਦਰਤੀ ਨੰਬਰਾਂ ਦਾ ਗੁਣਨਫਲ ਨਹੀਂ ਹੈ। ਇੱਕ ਕੁਦਰਤੀ ਨੰਬਰ ਜੋ 1 ਤੋਂ ਵੱਡਾ ਹੈ ਜੋ ਪ੍ਰਾਈਮ ਨੰਬਰ ਨਹੀਂ ਹੈ, ਉਸਨੂੰ ਸੰਯੁਕਤ ਨੰਬਰ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।" },
-    { "term": "ਪਾਈਥਾਗੋਰਸ ਪ੍ਰਾਈਮ ਨੰਬਰ", "explanation": "ਪਾਈਥਾਗੋਰਸ ਪ੍ਰਾਈਮ ਨੰਬਰ 4n + 1 ਦੇ ਰੂਪ ਦਾ ਪ੍ਰਾਈਮ ਨੰਬਰ ਹੈ। ਪਾਈਥਾਗੋਰਸ ਪ੍ਰਾਈਮ ਨੰਬਰ ਸਹੀ ਤੌਰ 'ਤੇ ਉਹ ਅਜੀਬ ਪ੍ਰਾਈਮ ਨੰਬਰ ਹਨ p ਜਿਨ੍ਹਾਂ ਲਈ 2 ਮੋਡੀਲੋ p ਦਾ ਪ੍ਰਮੁੱਖ ਜੜ੍ਹ ਹੈ।" },
-    { "term": "ਫਿਬੋਨਾਚੀ ਨੰਬਰ", "explanation": "ਇੱਕ ਲੜੀ ਜਿਸ ਵਿੱਚ ਹਰ ਨੰਬਰ ਪਿਛਲੇ ਦੋ ਨੰਬਰਾਂ ਦਾ ਜੋੜ ਹੁੰਦਾ ਹੈ।" },
-    { "term": "ਟ੍ਰਿਬੋਨਾਚੀ ਨੰਬਰ", "explanation": "ਕੁਦਰਤੀ ਨੰਬਰਾਂ ਦੀ ਇੱਕ ਲੜੀ ਜੋ ਇੱਕ ਵਾਰ 0 ਨੰਬਰ ਅਤੇ ਦੋ ਵਾਰ 1 ਨੰਬਰ ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ। ਫਿਰ ਪਿਛਲੇ ਤਿੰਨ ਨੰਬਰਾਂ ਦਾ ਜੋੜ ਅਗਲਾ ਨੰਬਰ ਦਿੰਦਾ ਹੈ: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "ਬੈਲ ਨੰਬਰ", "explanation": "ਬੈਲ ਨੰਬਰ n-ਤੱਤਾਂ ਵਾਲੇ ਸੈੱਟ ਦੇ ਸਾਰੇ ਬੇਤਰਤੀਬੇ ਵਿਭਾਜਨਾਂ ਦੀ ਗਿਣਤੀ ਹੈ, ਜਿਸਨੂੰ Bn ਦੇ ਤੌਰ 'ਤੇ ਦਰਸਾਇਆ ਜਾਂਦਾ ਹੈ, ਇਹ ਧਾਰਨਾ ਕਰਦੇ ਹੋਏ ਕਿ B0=1. ਇਹਨਾਂ ਦਾ ਅਧਿਐਨ ਕਰਨ ਵਾਲੇ ਐਰਿਕ ਬੈਲ ਦੇ ਨਾਮ 'ਤੇ ਰੱਖਿਆ ਗਿਆ।" },
-    { "term": "ਕੈਟਾਲਾਨ ਨੰਬਰ", "explanation": "ਕੈਟਾਲਾਨ ਨੰਬਰ ਇੱਕ ਅੰਕ ਲੜੀ ਹੈ ਜੋ ਬਹੁਤ ਸਾਰੇ ਸੰਯੋਜਕ ਸਮੱਸਿਆਵਾਂ ਵਿੱਚ ਪ੍ਰਗਟ ਹੁੰਦੀ ਹੈ। ਇਹਨਾਂ ਨੂੰ ਬੈਲਜੀਅਮ ਦੇ ਗਣਿਤਜੋਗ ਯੂਜੀਨ ਚਾਰਲਜ਼ ਕੈਟਾਲਾਨ ਦੇ ਸਨਮਾਨ ਵਿੱਚ ਨਾਮ ਦਿੱਤਾ ਗਿਆ ਹੈ, ਹਾਲਾਂਕਿ ਇਹ ਲਿਓਨਾਰਡ ਈਲਰ ਦੁਆਰਾ ਜਾਣੇ ਜਾਂਦੇ ਸਨ। n-ਵਾਂ ਕੈਟਾਲਾਨ ਨੰਬਰ Cn ਕਈ ਸਮਾਨ ਤਰੀਕਿਆਂ ਨਾਲ ਪਰਿਭਾਸ਼ਿਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ, ਜਿਵੇਂ ਕਿ: 1) ਗੈਰ-ਅਤੇਕਰਮਿਕ ਤੀਰਾਂ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਇੱਕ ਉਭਰਦੇ (n+2)-ਭੁਜਾ ਦਾ ਤਿਕੋਣ ਵਿੱਚ ਵਿਭਾਜਨ ਦੀ ਗਿਣਤੀ। 2) n ਗੈਰ-ਅਤੇਕਰਮਿਕ ਤੀਰਾਂ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਇੱਕ ਵਰਤੁੱਲ ਵਿੱਚ 2n ਬਿੰਦੂਆਂ ਨੂੰ ਜੋੜਨ ਦੇ ਤਰੀਕਿਆਂ ਦੀ ਗਿਣਤੀ, ਆਦਿ।" },
-    { "term": "ਸੋਫੀ ਜਰਮੈਨ ਨੰਬਰ", "explanation": "ਸੋਫੀ ਜਰਮੈਨ ਪ੍ਰਾਈਮ ਨੰਬਰ ਇੱਕ ਪ੍ਰਾਈਮ ਨੰਬਰ p ਹੈ ਜਿਸ ਵਿੱਚ 2p+1 ਨੰਬਰ ਵੀ ਪ੍ਰਾਈਮ ਹੈ। ਸੋਫੀ ਜਰਮੈਨ ਪ੍ਰਾਈਮ ਨੰਬਰ ਨਾਲ ਸੰਬੰਧਿਤ 2p+1 ਨੰਬਰ ਨੂੰ ਸੁਰੱਖਿਅਤ ਪ੍ਰਾਈਮ ਨੰਬਰ ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਉਦਾਹਰਣ ਲਈ, 11 ਇੱਕ ਸੋਫੀ ਜਰਮੈਨ ਪ੍ਰਾਈਮ ਨੰਬਰ ਹੈ, ਅਤੇ 2 × 11 + 1 = 23 ਸੰਬੰਧਤ ਸੁਰੱਖਿਅਤ ਪ੍ਰਾਈਮ ਨੰਬਰ ਹੈ।" },
-    { "term": "ਸਮਮਿਤੀ ਨੰਬਰ", "explanation": "ਸਮਮਿਤੀ ਨੰਬਰ ਹਨ: 1) ਸਾਰੇ ਇੱਕ ਅੰਕ ਵਾਲੇ ਨੰਬਰ, 2) xx ਦੇ ਰੂਪ ਦੇ ਦੋ ਅੰਕ ਵਾਲੇ ਨੰਬਰ, ਅਤੇ 3) xyx ਦੇ ਰੂਪ ਦੇ ਤਿੰਨ ਅੰਕ ਵਾਲੇ ਨੰਬਰ, ਜਿੱਥੇ x ਅਤੇ y ਅੰਕ ਹਨ, ਅਤੇ x 0 ਨਹੀਂ ਹੋ ਸਕਦਾ।" }
-  ],
-  "prefixToLink": "ਜਾਦੂਈ ਅੰਕ ਲੜੀਆਂ ਬਾਰੇ ਹੋਰ ਦਿਲਚਸਪ ਜਾਣਕਾਰੀ ਲਈ ਵਿਕੀਪੀਡੀਆ ਅਤੇ ਸਾਈਟ 'ਤੇ ਵੇਖੋ "
+  "viewTemplate": "ਤੁਹਾਡੀ ਛਾਤੀ ਵਿੱਚ X ਨੰਬਰ ਹਨ",
+  "updateTitle": "ਆਪਣੇ ਡਿਜ਼ੀਟਲ ਖਜ਼ਾਨੇ ਦੇ ਸੰਦ ਲਈ ਨਵੇਂ ਨੰਬਰ ਖੋਜੋ"
 }
 
 ro-RO
 {
-  "title": "Explicația termenilor",
-  "explanations": [
-    { "term": "Număr prim", "explanation": "Un număr prim este un număr natural mai mare decât 1 care nu este produsul a două numere naturale mai mici. Un număr natural mai mare decât 1 care nu este prim se numește număr compus." },
-    { "term": "Număr prim pitagoreic", "explanation": "Un număr prim pitagoreic este un număr prim de forma 4n + 1. Numerele prime pitagoreice sunt exact acele numere prime impare p pentru care 2 este o rădăcină primitivă modulo p." },
-    { "term": "Numerele Fibonacci", "explanation": "O secvență în care fiecare număr este suma celor două numere anterioare." },
-    { "term": "Numerele Tribonacci", "explanation": "O secvență de numere naturale care începe cu numărul 0 o dată și numărul 1 de două ori. Apoi, suma celor trei numere anterioare dă următorul număr: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Numerele Bell", "explanation": "Numărul Bell este numărul de partiții neordonate ale unui set de n elemente, denotat ca Bn, cu presupunerea că B0=1. Numit după Eric Bell, care le-a studiat în anii 1930." },
-    { "term": "Numerele Catalan", "explanation": "Numerele Catalan sunt o secvență numerică care apare în multe probleme combinatorice. Sunt numite în onoarea matematicianului belgian Eugène Charles Catalan, deși erau cunoscute de Leonhard Euler. Al n-lea număr Catalan Cn poate fi definit în mai multe moduri echivalente, cum ar fi: 1) Numărul de partiții ale unui (n+2)-gon convex în triunghiuri folosind diagonale neintersectate. 2) Numărul de moduri de a conecta 2n puncte pe un cerc folosind n corzi neintersectate, etc." },
-    { "term": "Numerele Sophie Germain", "explanation": "Un număr prim Sophie Germain este un număr prim p astfel încât numărul 2p+1 este de asemenea prim. Numărul 2p+1 asociat cu un număr prim Sophie Germain se numește număr prim sigur. De exemplu, 11 este un număr prim Sophie Germain, iar 2 × 11 + 1 = 23 este numărul prim sigur asociat." },
-    { "term": "Numere simetrice", "explanation": "Numerele simetrice sunt: 1) toate numerele de o cifră, 2) numerele de două cifre de forma xx și 3) numerele de trei cifre de forma xyx, unde x și y sunt cifre, iar x nu poate fi 0." }
-  ],
-  "prefixToLink": "Pentru mai multe informații interesante despre secvențele numerice magice, consultați Wikipedia și site-ul "
+  "viewTemplate": "Cufărul tău conține X numere",
+  "updateTitle": "Căutați numere noi pentru Cufărul tău Digital de Comori"
 }
 
 ru-RU
 {
-  "title": "Объяснение терминов",
-  "explanations": [
-    { "term": "Простое число", "explanation": "Простое число — это натуральное число больше 1, которое не является произведением двух меньших натуральных чисел. Натуральное число больше 1, которое не является простым, называется составным числом." },
-    { "term": "Пифагорово простое число", "explanation": "Пифагорово простое число — это простое число вида 4n + 1. Пифагоровы простые числа — это именно те нечетные простые числа p, для которых 2 является примитивным корнем по модулю p." },
-    { "term": "Числа Фибоначчи", "explanation": "Последовательность, в которой каждое число является суммой двух предыдущих." },
-    { "term": "Числа Трибоначчи", "explanation": "Последовательность натуральных чисел, которая начинается с числа 0 один раз и числа 1 дважды. Затем сумма трех предыдущих чисел дает следующее число: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Числа Белла", "explanation": "Число Белла — это количество неупорядоченных разбиений множества из n элементов, обозначаемое как Bn, при условии, что B0=1. Названо в честь Эрика Белла, который изучал их в 1930-х годах." },
-    { "term": "Числа Каталана", "explanation": "Числа Каталана — это числовая последовательность, которая встречается во многих комбинаторных задачах. Они названы в честь бельгийского математика Эжена Шарля Каталана, хотя они были известны Леонарду Эйлеру. n-е число Каталана Cn может быть определено несколькими эквивалентными способами, например: 1) Количество разбиений выпуклого (n+2)-угольника на треугольники с помощью непересекающихся диагоналей. 2) Количество способов соединить 2n точек на окружности с помощью n непересекающихся аккордов и т.д." },
-    { "term": "Числа Софи Жермен", "explanation": "Простое число Софи Жермен — это такое простое число p, что число 2p+1 также является простым. Число 2p+1, связанное с простым числом Софи Жермен, называется безопасным простым числом. Например, 11 — это простое число Софи Жермен, а 2 × 11 + 1 = 23 — это связанное безопасное простое число." },
-    { "term": "Симметричные числа", "explanation": "Симметричные числа — это: 1) все однозначные числа, 2) двузначные числа вида xx и 3) трехзначные числа вида xyx, где x и y — цифры, и x не может быть 0." }
-  ],
-  "prefixToLink": "Для получения дополнительной интересной информации о магических числовых последовательностях см. Википедию и сайт "
+  "viewTemplate": "Ваш сундук содержит X чисел",
+  "updateTitle": "Ищите новые числа для вашего Цифрового Сундука с Сокровищами"
 }
 
 sr-RS
 {
-  "title": "Објашњење термина",
-  "explanations": [
-    { "term": "Прост број", "explanation": "Прост број је природан број већи од 1 који није производ два мања природна броја. Природан број већи од 1 који није прост број назива се сложен број." },
-    { "term": "Питагорејски прост број", "explanation": "Питагорејски прост број је прост број облика 4n + 1. Питагорејски прост бројеви су управо они непарни прост бројеви p за које је 2 примитиван корен по модулу p." },
-    { "term": "Фибоначијеви бројеви", "explanation": "Низ у којем је сваки број збир два претходна броја." },
-    { "term": "Трибоначијеви бројеви", "explanation": "Низ природних бројева који почиње бројем 0 једном и бројем 1 два пута. Затим је збир три претходна броја следећи број: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Беллови бројеви", "explanation": "Беллов број је број неуређених партиција скупа од n елемената, означен као Bn, са претпоставком да је B0=1. Назван по Ерику Беллу, који их је проучавао 1930-их година." },
-    { "term": "Каталанови бројеви", "explanation": "Каталанови бројеви су нумерички низ који се појављује у многим комбинаторним проблемима. Названи су у част белгијског математичара Ежена Шарла Каталана, иако су били познати Леонарду Ојлеру. n-ти Каталанов број Cn може се дефинисати на неколико еквивалентних начина, као што су: 1) Број партиција конвексног (n+2)-гона на троуглове помоћу непоклапајућих дијагонала. 2) Број начина да се повеже 2n тачака на кругу помоћу n непоклапајућих акорда, итд." },
-    { "term": "Софи Жерменови бројеви", "explanation": "Прост број Софи Жермен је такав прост број p да је број 2p+1 такође прост. Број 2p+1 повезан са простим бројем Софи Жермен назива се сигуран прост број. На пример, 11 је прост број Софи Жермен, а 2 × 11 + 1 = 23 је повезан сигуран прост број." },
-    { "term": "Симетрични бројеви", "explanation": "Симетрични бројеви су: 1) сви једноцифрени бројеви, 2) двоцифрени бројеви облика xx и 3) троцифрени бројеви облика xyx, где су x и y цифре, а x не може бити 0." }
-  ],
-  "prefixToLink": "За више занимљивих информација о магичним бројевним низовима погледајте Википедију и сајт "
+  "viewTemplate": "Ваш сандук садржи X бројева",
+  "updateTitle": "Тражите нове бројеве за ваш Дигитални Сандук са Благом"
 }
 
 sk-SK
 {
-  "title": "Vysvetlenie pojmov",
-  "explanations": [
-    { "term": "Prvočíslo", "explanation": "Prvočíslo je prirodzené číslo väčšie ako 1, ktoré nie je súčinom dvoch menších prirodzených čísel. Prirodzené číslo väčšie ako 1, ktoré nie je prvočíslo, sa nazýva zložené číslo." },
-    { "term": "Pytagorovo prvočíslo", "explanation": "Pytagorovo prvočíslo je prvočíslo tvaru 4n + 1. Pytagorove prvočísla sú presne tie nepárne prvočísla p, pre ktoré je 2 primitívnym koreňom modulo p." },
-    { "term": "Fibonacciho čísla", "explanation": "Rad, v ktorom je každé číslo súčtom dvoch predchádzajúcich." },
-    { "term": "Tribonacciho čísla", "explanation": "Rad prirodzených čísel, ktorý začína číslom 0 raz a číslom 1 dvakrát. Následne súčet troch predchádzajúcich čísel vedie k nasledujúcemu číslu: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bellove čísla", "explanation": "Bellovo číslo je počet všetkých neusporiadaných rozdelení n-prvkového množstva, označených ako Bn, s predpokladom, že B0=1. Pomenované podľa Erica Bella, ktorý ich skúmal v 30. rokoch 20. storočia." },
-    { "term": "Catalanove čísla", "explanation": "Catalanove čísla sú číselný rad, ktorý sa objavuje v mnohých kombinatorických problémoch. Sú pomenované na počesť belgického matematika Eugèna Charlesa Catalana, hoci boli známe Leonardovi Eulerovi. n-té Catalanovo číslo Cn môže byť definované niekoľkými ekvivalentnými spôsobmi, ako napríklad: 1) Počet rozdelení konvexného (n+2)-uholníka na trojuholníky pomocou neprekrývajúcich sa diagonál. 2) Počet spôsobov, ako spojiť 2n bodov na kruhu pomocou n neprekrývajúcich sa akordov, atď." },
-    { "term": "Sophie Germainove čísla", "explanation": "Prvočíslo Sophie Germain je také prvočíslo p, že číslo 2p+1 je tiež prvočíslo. Číslo 2p+1 spojené s prvočíslom Sophie Germain sa nazýva bezpečné prvočíslo. Napríklad 11 je prvočíslo Sophie Germain, a 2 × 11 + 1 = 23 je spojené bezpečné prvočíslo." },
-    { "term": "Symetrické čísla", "explanation": "Symetrické čísla sú: 1) všetky jednočíselné čísla, 2) dvojčíselné čísla tvaru xx, a 3) trojčíselné čísla tvaru xyx, kde x, y sú číslice, a x nemôže byť 0." }
-  ],
-  "prefixToLink": "Viac zaujímavých informácií o magických číselných postupnostiach nájdete na Wikipédii a na stránke "
+  "viewTemplate": "Vaša truhlica obsahuje X čísel",
+  "updateTitle": "Hľadajte nové čísla pre svoju Digitálnu Truhlicu s Pokladom"
 }
 
 sl-SI
 {
-  "title": "Pojasnilo pojmov",
-  "explanations": [
-    { "term": "Praštevilka", "explanation": "Praštevilka je naravno število večje od 1, ki ni produkt dveh manjših naravnih števil. Naravno število večje od 1, ki ni praštevilo, se imenuje sestavljeno število." },
-    { "term": "Pitagorejsko praštevilo", "explanation": "Pitagorejsko praštevilo je praštevilo oblike 4n + 1. Pitagorejska praštevila so točno tista liha praštevila p, za katera je 2 primitivni koren modulo p." },
-    { "term": "Fibonaccijeva števila", "explanation": "Zaporedje, v katerem je vsako število vsota dveh prejšnjih." },
-    { "term": "Tribonaccijeva števila", "explanation": "Zaporedje naravnih števil, ki se začne s številom 0 enkrat in številom 1 dvakrat. Nato vsota treh prejšnjih števil vodi do naslednjega števila: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bellova števila", "explanation": "Bellovo število je število vseh neurejenih razdelitev n-elementnega množice, označenih kot Bn, s predpostavko, da je B0=1. Poimenovano po Ericu Bellu, ki jih je preučeval v 30. letih 20. stoletja." },
-    { "term": "Catalanova števila", "explanation": "Catalanova števila so številčni niz, ki se pojavlja v mnogih kombinatoričnih problemih. Poimenovana so v čast belgijskega matematika Eugèna Charlesa Catalana, čeprav so bila znana Leonardu Eulerju. n-to Catalanovo število Cn je mogoče definirati na več enakovrednih načinov, kot na primer: 1) Število razdelitev konveksnega (n+2)-kotnika na trikotnike z uporabo neprekrivajočih se diagonal. 2) Število načinov, kako povezati 2n točk na krogu z uporabo n neprekrivajočih se akordov, itd." },
-    { "term": "Sophie Germainova števila", "explanation": "Praštevilka Sophie Germain je takšno praštevilo p, da je število 2p+1 tudi praštevilo. Število 2p+1, povezano s praštevilko Sophie Germain, se imenuje varno praštevilo. Na primer, 11 je praštevilka Sophie Germain, in 2 × 11 + 1 = 23 je povezano varno praštevilo." },
-    { "term": "Simetrična števila", "explanation": "Simetrična števila so: 1) vsa enoštevilčna števila, 2) dvomestna števila oblike xx, in 3) trimestna števila oblike xyx, kjer sta x in y številki, in x ne more biti 0." }
-  ],
-  "prefixToLink": "Za več zanimivih informacij o magičnih številskih zaporedjih glejte Wikipedijo in spletno stran "
+  "viewTemplate": "Vaša skrinja vsebuje X številk",
+  "updateTitle": "Poiščite nove številke za svojo Digitalno Skrinjo z Zakladom"
 }
 
 es-ES
 {
-  "title": "Explicación de términos",
-  "explanations": [
-    { "term": "Número primo", "explanation": "Un número primo es un número natural mayor que 1 que no es el producto de dos números naturales más pequeños. Un número natural mayor que 1 que no es primo se llama número compuesto." },
-    { "term": "Número primo pitagórico", "explanation": "Un número primo pitagórico es un número primo de la forma 4n + 1. Los números primos pitagóricos son exactamente aquellos números primos impares p para los cuales 2 es una raíz primitiva módulo p." },
-    { "term": "Números de Fibonacci", "explanation": "Una secuencia en la que cada número es la suma de los dos anteriores." },
-    { "term": "Números de Tribonacci", "explanation": "Una secuencia de números naturales que comienza con el número 0 una vez y el número 1 dos veces. Luego, la suma de los tres números anteriores da el siguiente número: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Números de Bell", "explanation": "El número de Bell es el número de particiones no ordenadas de un conjunto de n elementos, denotado como Bn, con la suposición de que B0=1. Nombrado en honor a Eric Bell, quien los estudió en la década de 1930." },
-    { "term": "Números de Catalan", "explanation": "Los números de Catalan son una secuencia numérica que aparece en muchos problemas combinatorios. Llevan el nombre del matemático belga Eugène Charles Catalan, aunque eran conocidos por Leonhard Euler. El n-ésimo número de Catalan Cn puede definirse de varias maneras equivalentes, como por ejemplo: 1) El número de particiones de un (n+2)-gono convexo en triángulos mediante diagonales no superpuestas. 2) El número de formas de conectar 2n puntos en un círculo mediante n acordes no superpuestos, etc." },
-    { "term": "Números de Sophie Germain", "explanation": "Un número primo de Sophie Germain es un número primo p tal que el número 2p+1 también es primo. El número 2p+1 asociado con un número primo de Sophie Germain se llama número primo seguro. Por ejemplo, 11 es un número primo de Sophie Germain, y 2 × 11 + 1 = 23 es el número primo seguro asociado." },
-    { "term": "Números simétricos", "explanation": "Los números simétricos son: 1) todos los números de un solo dígito, 2) números de dos dígitos de la forma xx, y 3) números de tres dígitos de la forma xyx, donde x e y son dígitos, y x no puede ser 0." }
-  ],
-  "prefixToLink": "Puede encontrar más información interesante sobre secuencias numéricas mágicas en Wikipedia y en el sitio web "
+  "viewTemplate": "Tu cofre contiene X números",
+  "updateTitle": "Busca nuevos números para tu Cofre del Tesoro Digital"
 }
 
 sv-SE
 {
-  "title": "Förklaring av termer",
-  "explanations": [
-    { "term": "Primtal", "explanation": "Ett primtal är ett naturligt tal större än 1 som inte är produkten av två mindre naturliga tal. Ett naturligt tal större än 1 som inte är ett primtal kallas ett sammansatt tal." },
-    { "term": "Pythagoreiskt primtal", "explanation": "Ett pythagoreiskt primtal är ett primtal av formen 4n + 1. Pythagoreiska primtal är exakt de udda primtalen p för vilka 2 är en primitiv rot modulo p." },
-    { "term": "Fibonacci-tal", "explanation": "En sekvens där varje tal är summan av de två föregående." },
-    { "term": "Tribonacci-tal", "explanation": "En sekvens av naturliga tal som börjar med talet 0 en gång och talet 1 två gånger. Sedan är summan av de tre föregående talen det omedelbart följande talet: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Bell-tal", "explanation": "Bell-talet är antalet oordnade partitioner av en mängd med n element, betecknat som Bn, med antagandet att B0=1. Uppkallat efter Eric Bell, som studerade dem på 1930-talet." },
-    { "term": "Catalan-tal", "explanation": "Catalan-tal är en numerisk sekvens som förekommer i många kombinatoriska problem. De är uppkallade efter den belgiska matematikern Eugène Charles Catalan, även om de var kända för Leonhard Euler. Det n:te Catalan-talet Cn kan definieras på flera ekvivalenta sätt, till exempel: 1) Antalet partitioner av en konvex (n+2)-gon i trianglar med hjälp av icke-överlappande diagonaler. 2) Antalet sätt att ansluta 2n punkter på en cirkel med hjälp av n icke-överlappande ackord, etc." },
-    { "term": "Sophie Germain-tal", "explanation": "Ett Sophie Germain-primtal är ett sådant primtal p att talet 2p+1 också är ett primtal. Talet 2p+1 som är associerat med ett Sophie Germain-primtal kallas ett säkert primtal. Till exempel är 11 ett Sophie Germain-primtal, och 2 × 11 + 1 = 23 är det associerade säkra primtalet." },
-    { "term": "Symmetriska tal", "explanation": "Symmetriska tal är: 1) alla ensiffriga tal, 2) tvåsiffriga tal av formen xx, och 3) tresiffriga tal av formen xyx, där x och y är siffror, och x kan inte vara 0." }
-  ],
-  "prefixToLink": "För mer intressant information om magiska talföljder, se Wikipedia och webbplatsen "
+  "viewTemplate": "Din kista innehåller X nummer",
+  "updateTitle": "Sök efter nya nummer till din Digitala Skattkista"
 }
 
 th-TH
 {
-  "title": "คำอธิบายของคำศัพท์",
-  "explanations": [
-    { "term": "จำนวนเฉพาะ", "explanation": "จำนวนเฉพาะคือจำนวนธรรมชาติที่มากกว่า 1 ซึ่งไม่ใช่ผลคูณของจำนวนธรรมชาติที่เล็กกว่าสองจำนวน จำนวนธรรมชาติที่มากกว่า 1 ซึ่งไม่ใช่จำนวนเฉพาะเรียกว่าจำนวนประกอบ" },
-    { "term": "จำนวนเฉพาะแบบพีทาโกรัส", "explanation": "จำนวนเฉพาะแบบพีทาโกรัสคือจำนวนเฉพาะที่มีรูปแบบ 4n + 1 จำนวนเฉพาะแบบพีทาโกรัสคือจำนวนเฉพาะที่เป็นจำนวนคี่ p ซึ่ง 2 เป็นรากดั้งเดิมของ p" },
-    { "term": "จำนวนฟีโบนักชี", "explanation": "ลำดับที่แต่ละจำนวนเป็นผลรวมของสองจำนวนก่อนหน้า" },
-    { "term": "จำนวนทริโบนักชี", "explanation": "ลำดับของจำนวนธรรมชาติที่เริ่มต้นด้วยจำนวน 0 หนึ่งครั้งและจำนวน 1 สองครั้ง จากนั้นผลรวมของสามจำนวนก่อนหน้าจะเป็นจำนวนถัดไป: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3" },
-    { "term": "จำนวนเบลล์", "explanation": "จำนวนเบลล์คือจำนวนของการแบ่งส่วนที่ไม่เรียงลำดับของชุดของ n องค์ประกอบที่ระบุว่า Bn โดยมีสมมติฐานว่า B0=1 ตั้งชื่อตาม Eric Bell ผู้ศึกษาในทศวรรษที่ 1930" },
-    { "term": "จำนวนคาตาลัน", "explanation": "จำนวนคาตาลันเป็นลำดับตัวเลขที่ปรากฏในปัญหาการจัดกลุ่มหลายอย่าง ตั้งชื่อตามนักคณิตศาสตร์ชาวเบลเยียม Eugène Charles Catalan แม้ว่าจะเป็นที่รู้จักของ Leonhard Euler จำนวนคาตาลันที่ n สามารถกำหนดได้หลายวิธีที่เทียบเท่ากัน เช่น: 1) จำนวนการแบ่งส่วนของรูปหลายเหลี่ยม (n+2) ที่นูนเป็นสามเหลี่ยมโดยใช้เส้นทแยงมุมที่ไม่ทับซ้อนกัน 2) จำนวนวิธีในการเชื่อมต่อ 2n จุดบนวงกลมโดยใช้คอร์ดที่ไม่ทับซ้อนกัน n เป็นต้น" },
-    { "term": "จำนวนโซฟี เจอร์เมน", "explanation": "จำนวนเฉพาะของ Sophie Germain คือจำนวนเฉพาะ p ที่จำนวน 2p+1 ก็เป็นจำนวนเฉพาะเช่นกัน จำนวน 2p+1 ที่เกี่ยวข้องกับจำนวนเฉพาะของ Sophie Germain เรียกว่าจำนวนเฉพาะที่ปลอดภัย ตัวอย่างเช่น 11 เป็นจำนวนเฉพาะของ Sophie Germain และ 2 × 11 + 1 = 23 เป็นจำนวนเฉพาะที่ปลอดภัยที่เกี่ยวข้อง" },
-    { "term": "จำนวนสมมาตร", "explanation": "จำนวนสมมาตรคือ: 1) จำนวนหลักเดียวทั้งหมด 2) จำนวนสองหลักในรูปแบบ xx และ 3) จำนวนสามหลักในรูปแบบ xyx โดยที่ x และ y เป็นตัวเลข และ x ไม่สามารถเป็น 0 ได้" }
-  ],
-  "prefixToLink": "สำหรับข้อมูลที่น่าสนใจเพิ่มเติมเกี่ยวกับลำดับตัวเลขที่มีมนต์ขลัง โปรดดูที่ Wikipedia และเว็บไซต์ "
+  "viewTemplate": "หีบของคุณมี X หมายเลข",
+  "updateTitle": "ค้นหาหมายเลขใหม่สำหรับหีบสมบัติดิจิทัลของคุณ"
 }
 
 tr-TR
 {
-  "title": "Terimlerin Açıklaması",
-  "explanations": [
-    { "term": "Asal sayı", "explanation": "Asal sayı, 1'den büyük ve iki daha küçük doğal sayının çarpımı olmayan bir doğal sayıdır. 1'den büyük ve asal olmayan bir doğal sayıya bileşik sayı denir." },
-    { "term": "Pisagor asal sayısı", "explanation": "Pisagor asal sayısı, 4n + 1 biçiminde bir asal sayıdır. Pisagor asal sayıları, 2'nin p modülünde bir kök olduğu tek asal sayılar p'dir." },
-    { "term": "Fibonacci sayıları", "explanation": "Her sayının önceki iki sayının toplamı olduğu bir dizi." },
-    { "term": "Tribonacci sayıları", "explanation": "0 sayısı bir kez ve 1 sayısı iki kez başlayan doğal sayıların bir dizisi. Daha sonra, önceki üç sayının toplamı bir sonraki sayıya yol açar: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3" },
-    { "term": "Bell sayıları", "explanation": "Bell sayısı, Bn olarak belirtilen n elemanlı bir kümenin sırasız bölümlerinin sayısıdır ve B0=1 varsayımıyla. 1930'larda onları inceleyen Eric Bell'in adını almıştır." },
-    { "term": "Catalan sayıları", "explanation": "Catalan sayıları, birçok kombinatoryal problemde ortaya çıkan bir sayı dizisidir. Belçikalı matematikçi Eugène Charles Catalan'ın onuruna adlandırılmıştır, ancak Leonhard Euler tarafından biliniyordu. n'inci Catalan sayısı Cn, örneğin: 1) Bir konveks (n+2)-gonun üçgenlere bölünme sayısı, örtüşmeyen köşegenler kullanılarak. 2) 2n noktayı bir dairede n örtüşmeyen akor kullanarak bağlama yollarının sayısı, vb. gibi birkaç eşdeğer şekilde tanımlanabilir." },
-    { "term": "Sophie Germain sayıları", "explanation": "Sophie Germain asal sayısı, 2p+1 sayısının da asal olduğu bir asal sayı p'dir. Sophie Germain asal sayısı ile ilişkili 2p+1 sayısına güvenli asal sayı denir. Örneğin, 11 bir Sophie Germain asal sayısıdır ve 2 × 11 + 1 = 23 ilişkili güvenli asal sayıdır." },
-    { "term": "Simetrik sayılar", "explanation": "Simetrik sayılar şunlardır: 1) tüm tek basamaklı sayılar, 2) xx biçimindeki iki basamaklı sayılar ve 3) xyx biçimindeki üç basamaklı sayılar, burada x ve y rakamdır ve x 0 olamaz." }
-  ],
-  "prefixToLink": "Büyülü sayı dizileri hakkında daha fazla ilginç bilgi için Wikipedia ve web sitesine bakın "
+  "viewTemplate": "Sandığınızda X sayı var",
+  "updateTitle": "Dijital Hazine Sandığınız için yeni sayılar arayın"
 }
 
 uk-UA
 {
-  "title": "Пояснення термінів",
-  "explanations": [
-    { "term": "Просте число", "explanation": "Просте число - це натуральне число більше 1, яке не є добутком двох менших натуральних чисел. Натуральне число більше 1, яке не є простим, називається складеним числом." },
-    { "term": "Піфагорійське просте число", "explanation": "Піфагорійське просте число - це просте число форми 4n + 1. Піфагорійські прості числа - це саме ті непарні прості числа p, для яких 2 є примітивним коренем за модулем p." },
-    { "term": "Числа Фібоначчі", "explanation": "Послідовність, у якій кожне число є сумою двох попередніх." },
-    { "term": "Числа Трибоначчі", "explanation": "Послідовність натуральних чисел, яка починається з числа 0 один раз і числа 1 двічі. Потім сума трьох попередніх чисел дає наступне число: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3" },
-    { "term": "Числа Белла", "explanation": "Число Белла - це кількість неупорядкованих розбиттів множини з n елементів, позначених як Bn, за умови, що B0=1. Названо на честь Еріка Белла, який вивчав їх у 1930-х роках." },
-    { "term": "Числа Каталана", "explanation": "Числа Каталана - це числова послідовність, яка зустрічається у багатьох комбінаторних задачах. Вони названі на честь бельгійського математика Ежена Шарля Каталана, хоча вони були відомі Леонарду Ейлеру. n-те число Каталана Cn можна визначити кількома еквівалентними способами, наприклад: 1) Кількість розбиттів опуклого (n+2)-кутника на трикутники за допомогою неперетинаючихся діагоналей. 2) Кількість способів з'єднання 2n точок на колі за допомогою n неперетинаючихся акордів тощо." },
-    { "term": "Числа Софі Жермен", "explanation": "Просте число Софі Жермен - це таке просте число p, що число 2p+1 також є простим. Число 2p+1, пов'язане з простим числом Софі Жермен, називається безпечним простим числом. Наприклад, 11 - це просте число Софі Жермен, а 2 × 11 + 1 = 23 - це пов'язане безпечне просте число." },
-    { "term": "Симетричні числа", "explanation": "Симетричні числа - це: 1) всі однозначні числа, 2) двозначні числа форми xx, і 3) тризначні числа форми xyx, де x і y - цифри, і x не може бути 0." }
-  ],
-  "prefixToLink": "Для отримання додаткової цікавої інформації про магічні числові послідовності дивіться Вікіпедію та веб-сайт "
+  "viewTemplate": "Ваш скриня містить X чисел",
+  "updateTitle": "Шукайте нові числа для вашої Цифрової Скрині зі Скарбами"
 }
 
 vi-VN
 {
-  "title": "Giải thích các thuật ngữ",
-  "explanations": [
-    { "term": "Số nguyên tố", "explanation": "Số nguyên tố là một số tự nhiên lớn hơn 1 mà không phải là tích của hai số tự nhiên nhỏ hơn. Một số tự nhiên lớn hơn 1 mà không phải là số nguyên tố được gọi là số hợp." },
-    { "term": "Số nguyên tố Pythagoras", "explanation": "Số nguyên tố Pythagoras là một số nguyên tố có dạng 4n + 1. Các số nguyên tố Pythagoras chính là những số nguyên tố lẻ p mà 2 là căn nguyên thủy theo modulo p." },
-    { "term": "Số Fibonacci", "explanation": "Một dãy số trong đó mỗi số là tổng của hai số trước đó." },
-    { "term": "Số Tribonacci", "explanation": "Một dãy số tự nhiên bắt đầu với số 0 một lần và số 1 hai lần. Sau đó, tổng của ba số trước đó dẫn đến số tiếp theo: T0=0, T1=T2=1, Tn=Tn-1 + Tn-2 + Tn-3." },
-    { "term": "Số Bell", "explanation": "Số Bell là số lượng các phân hoạch không có thứ tự của một tập hợp n phần tử, được ký hiệu là Bn, với giả định rằng B0=1. Được đặt tên theo Eric Bell, người đã nghiên cứu chúng vào những năm 1930." },
-    { "term": "Số Catalan", "explanation": "Số Catalan là một dãy số xuất hiện trong nhiều bài toán tổ hợp. Chúng được đặt tên để vinh danh nhà toán học người Bỉ Eugène Charles Catalan, mặc dù chúng đã được biết đến bởi Leonhard Euler. Số Catalan thứ n Cn có thể được định nghĩa theo nhiều cách tương đương, chẳng hạn như: 1) Số lượng phân hoạch của một đa giác lồi (n+2) thành các tam giác bằng cách sử dụng các đường chéo không cắt nhau. 2) Số cách kết nối 2n điểm trên một vòng tròn bằng n dây cung không cắt nhau, v.v." },
-    { "term": "Số Sophie Germain", "explanation": "Số nguyên tố Sophie Germain là một số nguyên tố p sao cho số 2p+1 cũng là số nguyên tố. Số 2p+1 liên quan đến số nguyên tố Sophie Germain được gọi là số nguyên tố an toàn. Ví dụ, 11 là một số nguyên tố Sophie Germain, và 2 × 11 + 1 = 23 là số nguyên tố an toàn liên quan." },
-    { "term": "Số đối xứng", "explanation": "Số đối xứng là: 1) tất cả các số có một chữ số, 2) các số có hai chữ số dạng xx, và 3) các số có ba chữ số dạng xyx, trong đó x và y là các chữ số, và x không thể là 0." }
-  ],
-  "prefixToLink": "Để biết thêm thông tin thú vị về các dãy số ma thuật, hãy xem Wikipedia và trang web "
+  "viewTemplate": "Rương của bạn chứa X số",
+  "updateTitle": "Tìm kiếm số mới cho Rương Kho Báu Kỹ Thuật Số của bạn"
 }
