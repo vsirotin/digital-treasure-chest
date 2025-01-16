@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Kaikki esineet",
+    "list": "Kaikki hakutuloksen esineet ovat ainutlaatuisia."
+  },
+  "commonItems": {
+    "overview": "Yhteiset esineet",
+    "list": "Hakutulos sisältää esineitä, jotka ovat jo arkussa."
+  },
+  "uniqueItems": {
+    "overview": "Ainutlaatuiset esineet",
+    "list": "Hakutulos sisältää esineitä, jotka eivät ole arkussa."
+  },
+  "workpieces": {
+    "title": "Hakutulokset",
+    "tooManyItems": "Hakutulos kriteereillesi sisältää liian monta numeroa. Määritä kriteerisi hieman tarkemmin.",
+    "firstNumbersText": "Ensimmäiset numerot ovat",
+    "searchResultOkLength": "Hakutuloksesi on:",
+    "recomendationNewSearch": "Määritä kriteerisi toisella tavalla.",
+    "recomendationAdd": "Onnittelut! Voit lisätä valitut numerot arkkuun.",
+    "recomendationReplace": "Voit korvata vanhat esineet arkussa uusilla.",
+    "recomendationAddUnic": "Voit lisätä arkkuun ainutlaatuisia numeroita.",
+    "intersectionIsEmpty": "Hakutulos ei sisällä numeroita, jotka ovat jo arkussa.",
+    "intersectionIsNotEmpty": "Hakutulos sisältää seuraavat numerot, jotka ovat jo arkussa:",
+    "emptyResult": "Kriteerisi näyttävät olevan ristiriitaisia. Esineitä ei löytynyt. Yritä uudelleen muilla kriteereillä.",
+    "unicItemsExist": "Hakutuloksen esineet, jotka eivät ole arkussa:",
+    "unicItemsNotExist": "Kaikki hakutuloksen esineet ovat jo arkussa.",
+    "replaceItems": "Korvaa vanhat esineet arkuissa uusilla.",
+    "addItems": "Lisää uusia esineitä arkkuihin."
+  }
+}

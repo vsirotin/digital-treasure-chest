@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Todos os itens",
+    "list": "Todos os itens no resultado da pesquisa são únicos."
+  },
+  "commonItems": {
+    "overview": "Itens comuns",
+    "list": "O resultado da pesquisa contém itens que já estão no baú."
+  },
+  "uniqueItems": {
+    "overview": "Itens únicos",
+    "list": "O resultado da pesquisa contém itens que não estão no baú."
+  },
+  "workpieces": {
+    "title": "Resultados da pesquisa",
+    "tooManyItems": "O resultado da pesquisa para os seus critérios contém muitos números. Por favor, defina os seus critérios um pouco mais precisamente.",
+    "firstNumbersText": "Os primeiros números são",
+    "searchResultOkLength": "O seu resultado de pesquisa é:",
+    "recomendationNewSearch": "Por favor, defina os seus critérios de outra forma.",
+    "recomendationAdd": "Parabéns! Você pode adicionar os números selecionados ao baú.",
+    "recomendationReplace": "Você pode substituir os itens antigos no baú pelos novos.",
+    "recomendationAddUnic": "Você pode adicionar números únicos ao baú.",
+    "intersectionIsEmpty": "O resultado da pesquisa não contém números que já estão no baú.",
+    "intersectionIsNotEmpty": "O resultado da pesquisa contém os seguintes números que já estão no baú:",
+    "emptyResult": "Os seus critérios parecem ser contraditórios. Nenhum item encontrado. Por favor, tente novamente com outros critérios.",
+    "unicItemsExist": "Itens no resultado da pesquisa que não estão no baú:",
+    "unicItemsNotExist": "Todos os itens no resultado da pesquisa já estão no baú.",
+    "replaceItems": "Substitua os itens antigos nos baús pelos novos.",
+    "addItems": "Adicione novos itens aos baús."
+  }
+}

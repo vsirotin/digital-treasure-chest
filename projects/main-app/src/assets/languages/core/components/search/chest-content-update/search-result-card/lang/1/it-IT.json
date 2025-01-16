@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Tutti gli articoli",
+    "list": "Tutti gli articoli nel risultato della ricerca sono unici."
+  },
+  "commonItems": {
+    "overview": "Articoli comuni",
+    "list": "Il risultato della ricerca contiene articoli che sono già nel forziere."
+  },
+  "uniqueItems": {
+    "overview": "Articoli unici",
+    "list": "Il risultato della ricerca contiene articoli che non sono nel forziere."
+  },
+  "workpieces": {
+    "title": "Risultati della ricerca",
+    "tooManyItems": "Il risultato della ricerca per i tuoi criteri contiene troppi numeri. Si prega di definire i criteri in modo più preciso.",
+    "firstNumbersText": "I primi numeri sono",
+    "searchResultOkLength": "Il risultato della tua ricerca è:",
+    "recomendationNewSearch": "Si prega di definire i criteri in un altro modo.",
+    "recomendationAdd": "Congratulazioni! Puoi aggiungere i numeri selezionati al forziere.",
+    "recomendationReplace": "Puoi sostituire i vecchi articoli nel forziere con quelli nuovi.",
+    "recomendationAddUnic": "Puoi aggiungere numeri unici al forziere.",
+    "intersectionIsEmpty": "Il risultato della ricerca non contiene numeri che sono già nel forziere.",
+    "intersectionIsNotEmpty": "Il risultato della ricerca contiene i seguenti numeri che sono già nel forziere:",
+    "emptyResult": "I tuoi criteri sembrano essere contraddittori. Nessun articolo trovato. Si prega di riprovare con altri criteri.",
+    "unicItemsExist": "Articoli nel risultato della ricerca che non sono nel forziere:",
+    "unicItemsNotExist": "Tutti gli articoli nel risultato della ricerca sono già nel forziere.",
+    "replaceItems": "Sostituisci i vecchi articoli nei forzieri con quelli nuovi.",
+    "addItems": "Aggiungi nuovi articoli ai forzieri."
+  }
+}

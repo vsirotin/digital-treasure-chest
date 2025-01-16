@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Tất cả các mục",
+    "list": "Tất cả các mục trong kết quả tìm kiếm là duy nhất."
+  },
+  "commonItems": {
+    "overview": "Các mục chung",
+    "list": "Kết quả tìm kiếm chứa các mục đã có trong rương."
+  },
+  "uniqueItems": {
+    "overview": "Các mục duy nhất",
+    "list": "Kết quả tìm kiếm chứa các mục không có trong rương."
+  },
+  "workpieces": {
+    "title": "Kết quả tìm kiếm",
+    "tooManyItems": "Kết quả tìm kiếm cho tiêu chí của bạn chứa quá nhiều số. Vui lòng xác định tiêu chí của bạn chính xác hơn một chút.",
+    "firstNumbersText": "Các số đầu tiên là",
+    "searchResultOkLength": "Kết quả tìm kiếm của bạn là:",
+    "recomendationNewSearch": "Vui lòng xác định tiêu chí của bạn theo cách khác.",
+    "recomendationAdd": "Chúc mừng! Bạn có thể thêm các số đã chọn vào rương.",
+    "recomendationReplace": "Bạn có thể thay thế các mục cũ trong rương bằng các mục mới.",
+    "recomendationAddUnic": "Bạn có thể thêm các số duy nhất vào rương.",
+    "intersectionIsEmpty": "Kết quả tìm kiếm không chứa các số đã có trong rương.",
+    "intersectionIsNotEmpty": "Kết quả tìm kiếm chứa các số sau đã có trong rương:",
+    "emptyResult": "Tiêu chí của bạn có vẻ mâu thuẫn. Không tìm thấy mục nào. Vui lòng thử lại với các tiêu chí khác.",
+    "unicItemsExist": "Các mục trong kết quả tìm kiếm không có trong rương:",
+    "unicItemsNotExist": "Tất cả các mục trong kết quả tìm kiếm đã có trong rương.",
+    "replaceItems": "Thay thế các mục cũ trong rương bằng các mục mới.",
+    "addItems": "Thêm các mục mới vào rương."
+  }
+}

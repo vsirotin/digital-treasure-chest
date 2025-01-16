@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Visi vienumi",
+    "list": "Visi vienumi meklēšanas rezultātos ir unikāli."
+  },
+  "commonItems": {
+    "overview": "Kopīgie vienumi",
+    "list": "Meklēšanas rezultātos ir vienumi, kas jau ir krūtīs."
+  },
+  "uniqueItems": {
+    "overview": "Unikāli vienumi",
+    "list": "Meklēšanas rezultātos ir vienumi, kas nav krūtīs."
+  },
+  "workpieces": {
+    "title": "Meklēšanas rezultāti",
+    "tooManyItems": "Jūsu kritērijiem atbilstošais meklēšanas rezultāts satur pārāk daudz numuru. Lūdzu, precīzāk definējiet savus kritērijus.",
+    "firstNumbersText": "Pirmie numuri ir",
+    "searchResultOkLength": "Jūsu meklēšanas rezultāts ir:",
+    "recomendationNewSearch": "Lūdzu, definējiet savus kritērijus citā veidā.",
+    "recomendationAdd": "Apsveicam! Jūs varat pievienot izvēlētos numurus krūtīm.",
+    "recomendationReplace": "Jūs varat aizstāt vecos vienumus krūtīs ar jauniem.",
+    "recomendationAddUnic": "Jūs varat pievienot unikālus numurus krūtīm.",
+    "intersectionIsEmpty": "Meklēšanas rezultātos nav numuru, kas jau ir krūtīs.",
+    "intersectionIsNotEmpty": "Meklēšanas rezultātos ir šādi numuri, kas jau ir krūtīs:",
+    "emptyResult": "Jūsu kritēriji šķiet pretrunīgi. Nav atrasts neviens vienums. Lūdzu, mēģiniet vēlreiz ar citiem kritērijiem.",
+    "unicItemsExist": "Vienumi meklēšanas rezultātos, kas nav krūtīs:",
+    "unicItemsNotExist": "Visi meklēšanas rezultātos esošie vienumi jau ir krūtīs.",
+    "replaceItems": "Nomainiet vecos vienumus krūtīs ar jauniem.",
+    "addItems": "Pievienojiet jaunus vienumus krūtīm."
+  }
+}

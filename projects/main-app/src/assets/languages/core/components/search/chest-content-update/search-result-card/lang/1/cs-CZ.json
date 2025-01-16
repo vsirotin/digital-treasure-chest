@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Všechny položky",
+    "list": "Všechny položky ve výsledku hledání jsou jedinečné."
+  },
+  "commonItems": {
+    "overview": "Společné položky",
+    "list": "Výsledek hledání obsahuje položky, které jsou již v truhle."
+  },
+  "uniqueItems": {
+    "overview": "Jedinečné položky",
+    "list": "Výsledek hledání obsahuje položky, které nejsou v truhle."
+  },
+  "workpieces": {
+    "title": "Výsledky hledání",
+    "tooManyItems": "Výsledek hledání pro vaše kritéria obsahuje příliš mnoho čísel. Prosím, definujte svá kritéria trochu přesněji.",
+    "firstNumbersText": "První čísla jsou",
+    "searchResultOkLength": "Váš výsledek hledání je:",
+    "recomendationNewSearch": "Prosím, definujte svá kritéria jiným způsobem.",
+    "recomendationAdd": "Gratulujeme! Můžete přidat vybraná čísla do truhly.",
+    "recomendationReplace": "Můžete nahradit staré položky v truhle novými.",
+    "recomendationAddUnic": "Můžete přidat jedinečná čísla do truhly.",
+    "intersectionIsEmpty": "Výsledek hledání neobsahuje čísla, která jsou již v truhle.",
+    "intersectionIsNotEmpty": "Výsledek hledání obsahuje následující čísla, která jsou již v truhle:",
+    "emptyResult": "Vaše kritéria se zdají být protichůdná. Nebyly nalezeny žádné položky. Prosím, zkuste to znovu s jinými kritérii.",
+    "unicItemsExist": "Položky ve výsledku hledání, které nejsou v truhle:",
+    "unicItemsNotExist": "Všechny položky ve výsledku hledání jsou již v truhle.",
+    "replaceItems": "Nahraďte staré položky v truhlách novými.",
+    "addItems": "Přidejte nové položky do truhel."
+  }
+}

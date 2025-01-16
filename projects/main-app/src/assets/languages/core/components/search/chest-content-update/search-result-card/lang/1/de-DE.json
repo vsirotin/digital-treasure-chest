@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Alle Artikel",
+    "list": "Alle Artikel im Suchergebnis sind einzigartig."
+  },
+  "commonItems": {
+    "overview": "Gemeinsame Artikel",
+    "list": "Das Suchergebnis enthält Artikel, die bereits in der Truhe sind."
+  },
+  "uniqueItems": {
+    "overview": "Einzigartige Artikel",
+    "list": "Das Suchergebnis enthält Artikel, die nicht in der Truhe sind."
+  },
+  "workpieces": {
+    "title": "Suchergebnisse",
+    "tooManyItems": "Das Suchergebnis für Ihre Kriterien enthält zu viele Nummern. Bitte definieren Sie Ihre Kriterien etwas genauer.",
+    "firstNumbersText": "Die ersten Nummern sind",
+    "searchResultOkLength": "Ihr Suchergebnis ist:",
+    "recomendationNewSearch": "Bitte definieren Sie Ihre Kriterien auf andere Weise.",
+    "recomendationAdd": "Herzlichen Glückwunsch! Sie können die ausgewählten Nummern zur Truhe hinzufügen.",
+    "recomendationReplace": "Sie können die alten Artikel in der Truhe durch die neuen ersetzen.",
+    "recomendationAddUnic": "Sie können einzigartige Nummern zur Truhe hinzufügen.",
+    "intersectionIsEmpty": "Das Suchergebnis enthält keine Nummern, die bereits in der Truhe sind.",
+    "intersectionIsNotEmpty": "Das Suchergebnis enthält folgende Nummern, die bereits in der Truhe sind:",
+    "emptyResult": "Ihre Kriterien scheinen widersprüchlich zu sein. Keine Artikel gefunden. Bitte versuchen Sie es erneut mit anderen Kriterien.",
+    "unicItemsExist": "Artikel im Suchergebnis, die nicht in der Truhe sind:",
+    "unicItemsNotExist": "Alle Artikel im Suchergebnis sind bereits in der Truhe.",
+    "replaceItems": "Ersetzen Sie alte Artikel in den Truhen durch neue.",
+    "addItems": "Fügen Sie neue Artikel zu den Truhen hinzu."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "所有项目",
+    "list": "搜索结果中的所有项目都是唯一的。"
+  },
+  "commonItems": {
+    "overview": "常见项目",
+    "list": "搜索结果包含已经在箱子中的项目。"
+  },
+  "uniqueItems": {
+    "overview": "独特项目",
+    "list": "搜索结果包含不在箱子中的项目。"
+  },
+  "workpieces": {
+    "title": "搜索结果",
+    "tooManyItems": "您的条件搜索结果包含太多数字。请更精确地定义您的条件。",
+    "firstNumbersText": "第一个数字是",
+    "searchResultOkLength": "您的搜索结果是：",
+    "recomendationNewSearch": "请以其他方式定义您的条件。",
+    "recomendationAdd": "恭喜！您可以将选定的数字添加到箱子中。",
+    "recomendationReplace": "您可以用新项目替换箱子中的旧项目。",
+    "recomendationAddUnic": "您可以将唯一数字添加到箱子中。",
+    "intersectionIsEmpty": "搜索结果中没有已经在箱子中的数字。",
+    "intersectionIsNotEmpty": "搜索结果包含以下已经在箱子中的数字：",
+    "emptyResult": "您的条件似乎是矛盾的。未找到项目。请尝试使用其他条件。",
+    "unicItemsExist": "搜索结果中不在箱子中的项目：",
+    "unicItemsNotExist": "搜索结果中的所有项目已经在箱子中。",
+    "replaceItems": "用新项目替换箱子中的旧项目。",
+    "addItems": "将新项目添加到箱子中。"
+  }
+}

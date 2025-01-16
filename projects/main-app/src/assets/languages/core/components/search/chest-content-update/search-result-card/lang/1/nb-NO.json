@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Alle elementer",
+    "list": "Alle elementer i søkeresultatet er unike."
+  },
+  "commonItems": {
+    "overview": "Vanlige elementer",
+    "list": "Søkeresultatet inneholder elementer som allerede er i kisten."
+  },
+  "uniqueItems": {
+    "overview": "Unike elementer",
+    "list": "Søkeresultatet inneholder elementer som ikke er i kisten."
+  },
+  "workpieces": {
+    "title": "Søkeresultater",
+    "tooManyItems": "Søkeresultatet for dine kriterier inneholder for mange tall. Vennligst definer kriteriene dine litt mer presist.",
+    "firstNumbersText": "De første tallene er",
+    "searchResultOkLength": "Ditt søkeresultat er:",
+    "recomendationNewSearch": "Vennligst definer kriteriene dine på en annen måte.",
+    "recomendationAdd": "Gratulerer! Du kan legge til valgte tall i kisten.",
+    "recomendationReplace": "Du kan erstatte de gamle elementene i kisten med de nye.",
+    "recomendationAddUnic": "Du kan legge til unike tall i kisten.",
+    "intersectionIsEmpty": "Søkeresultatet inneholder ingen tall som allerede er i kisten.",
+    "intersectionIsNotEmpty": "Søkeresultatet inneholder følgende tall som allerede er i kisten:",
+    "emptyResult": "Kriteriene dine ser ut til å være motstridende. Ingen elementer funnet. Vennligst prøv igjen med andre kriterier.",
+    "unicItemsExist": "Elementer i søkeresultatet som ikke er i kisten:",
+    "unicItemsNotExist": "Alle elementer i søkeresultatet er allerede i kisten.",
+    "replaceItems": "Erstatt gamle elementer i kistene med nye.",
+    "addItems": "Legg til nye elementer i kistene."
+  }
+}

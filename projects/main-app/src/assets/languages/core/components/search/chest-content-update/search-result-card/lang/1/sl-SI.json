@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Vse postavke",
+    "list": "Vse postavke v rezultatu iskanja so edinstvene."
+  },
+  "commonItems": {
+    "overview": "Skupne postavke",
+    "list": "Rezultat iskanja vsebuje postavke, ki so že v skrinji."
+  },
+  "uniqueItems": {
+    "overview": "Edinstvene postavke",
+    "list": "Rezultat iskanja vsebuje postavke, ki niso v skrinji."
+  },
+  "workpieces": {
+    "title": "Rezultati iskanja",
+    "tooManyItems": "Rezultat iskanja za vaša merila vsebuje preveč številk. Prosimo, natančneje določite svoja merila.",
+    "firstNumbersText": "Prve številke so",
+    "searchResultOkLength": "Vaš rezultat iskanja je:",
+    "recomendationNewSearch": "Prosimo, določite svoja merila na drug način.",
+    "recomendationAdd": "Čestitamo! Izbrane številke lahko dodate v skrinjo.",
+    "recomendationReplace": "Stare postavke v skrinji lahko zamenjate z novimi.",
+    "recomendationAddUnic": "V skrinjo lahko dodate edinstvene številke.",
+    "intersectionIsEmpty": "Rezultat iskanja ne vsebuje številk, ki so že v skrinji.",
+    "intersectionIsNotEmpty": "Rezultat iskanja vsebuje naslednje številke, ki so že v skrinji:",
+    "emptyResult": "Vaša merila se zdijo protislovna. Ni bilo najdenih nobenih postavk. Poskusite znova z drugimi merili.",
+    "unicItemsExist": "Postavke v rezultatu iskanja, ki niso v skrinji:",
+    "unicItemsNotExist": "Vse postavke v rezultatu iskanja so že v skrinji.",
+    "replaceItems": "Zamenjajte stare postavke v skrinjah z novimi.",
+    "addItems": "Dodajte nove postavke v skrinje."
+  }
+}

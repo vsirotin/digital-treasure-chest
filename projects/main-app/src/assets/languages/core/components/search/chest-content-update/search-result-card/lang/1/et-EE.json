@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Kõik esemed",
+    "list": "Kõik otsingutulemuse esemed on unikaalsed."
+  },
+  "commonItems": {
+    "overview": "Ühised esemed",
+    "list": "Otsingutulemus sisaldab esemeid, mis on juba kirstus."
+  },
+  "uniqueItems": {
+    "overview": "Unikaalsed esemed",
+    "list": "Otsingutulemus sisaldab esemeid, mis ei ole kirstus."
+  },
+  "workpieces": {
+    "title": "Otsingutulemused",
+    "tooManyItems": "Teie kriteeriumide otsingutulemus sisaldab liiga palju numbreid. Palun määrake oma kriteeriumid veidi täpsemalt.",
+    "firstNumbersText": "Esimesed numbrid on",
+    "searchResultOkLength": "Teie otsingutulemus on:",
+    "recomendationNewSearch": "Palun määrake oma kriteeriumid teisel viisil.",
+    "recomendationAdd": "Palju õnne! Saate valitud numbrid kirstu lisada.",
+    "recomendationReplace": "Saate vanad esemed kirstus uute vastu vahetada.",
+    "recomendationAddUnic": "Saate lisada kirstu unikaalseid numbreid.",
+    "intersectionIsEmpty": "Otsingutulemus ei sisalda numbreid, mis on juba kirstus.",
+    "intersectionIsNotEmpty": "Otsingutulemus sisaldab järgmisi numbreid, mis on juba kirstus:",
+    "emptyResult": "Teie kriteeriumid tunduvad olevat vastuolulised. Ühtegi eset ei leitud. Palun proovige uuesti teiste kriteeriumidega.",
+    "unicItemsExist": "Otsingutulemuse esemed, mis ei ole kirstus:",
+    "unicItemsNotExist": "Kõik otsingutulemuse esemed on juba kirstus.",
+    "replaceItems": "Asendage vanad esemed kirstudes uutega.",
+    "addItems": "Lisage kirstudesse uusi esemeid."
+  }
+}

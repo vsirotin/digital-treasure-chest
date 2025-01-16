@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Minden elem",
+    "list": "A keresési eredményben szereplő összes elem egyedi."
+  },
+  "commonItems": {
+    "overview": "Gyakori elemek",
+    "list": "A keresési eredmény olyan elemeket tartalmaz, amelyek már a ládában vannak."
+  },
+  "uniqueItems": {
+    "overview": "Egyedi elemek",
+    "list": "A keresési eredmény olyan elemeket tartalmaz, amelyek nincsenek a ládában."
+  },
+  "workpieces": {
+    "title": "Keresési eredmények",
+    "tooManyItems": "A keresési eredmény túl sok számot tartalmaz. Kérjük, pontosítsa a kritériumait.",
+    "firstNumbersText": "Az első számok:",
+    "searchResultOkLength": "A keresési eredménye:",
+    "recomendationNewSearch": "Kérjük, határozza meg a kritériumait más módon.",
+    "recomendationAdd": "Gratulálunk! Hozzáadhatja a kiválasztott számokat a ládához.",
+    "recomendationReplace": "Kicserélheti a régi elemeket a ládában az újakkal.",
+    "recomendationAddUnic": "Hozzáadhat egyedi számokat a ládához.",
+    "intersectionIsEmpty": "A keresési eredmény nem tartalmaz olyan számokat, amelyek már a ládában vannak.",
+    "intersectionIsNotEmpty": "A keresési eredmény a következő számokat tartalmazza, amelyek már a ládában vannak:",
+    "emptyResult": "A kritériumai ellentmondásosnak tűnnek. Nem található elem. Kérjük, próbálja újra más kritériumokkal.",
+    "unicItemsExist": "A keresési eredményben szereplő elemek, amelyek nincsenek a ládában:",
+    "unicItemsNotExist": "A keresési eredményben szereplő összes elem már a ládában van.",
+    "replaceItems": "Cserélje ki a régi elemeket az újakkal a ládákban.",
+    "addItems": "Adjon hozzá új elemeket a ládákhoz."
+  }
+}

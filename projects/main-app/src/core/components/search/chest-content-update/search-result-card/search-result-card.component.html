@@ -1,6 +1,6 @@
 <mat-card appearance="outlined">
     <mat-card-header>
-      <mat-card-title>{{title}}</mat-card-title>
+      <mat-card-title>{{ui.workpieces.title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       @if(ui.allItems.overview.length > 0){
@@ -21,9 +21,9 @@
     </mat-card-content>
     <mat-card-footer class="search-result-card-footer">
       <div>
-        <button mat-raised-button (click)="buttonAdd()" [disabled]="!isButtonAddEnabled">{{addItems}}</button>
+        <button mat-raised-button (click)="buttonAdd()" [disabled]="!isButtonAddEnabled">{{btnAdd}}</button>
         <span class="button-spacer"></span>
-        <button mat-raised-button (click)="buttonReplace()" [disabled]="!isButtonReplaceEnabled">{{replaceItems}}</button>
+        <button mat-raised-button (click)="buttonReplace()" [disabled]="!isButtonReplaceEnabled">{{ui.workpieces.replaceItems}}</button>
       </div>
     </mat-card-footer>
   </mat-card>

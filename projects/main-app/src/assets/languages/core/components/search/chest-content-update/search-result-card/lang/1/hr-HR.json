@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Svi predmeti",
+    "list": "Svi predmeti u rezultatu pretraživanja su jedinstveni."
+  },
+  "commonItems": {
+    "overview": "Zajednički predmeti",
+    "list": "Rezultat pretraživanja sadrži predmete koji su već u sanduku."
+  },
+  "uniqueItems": {
+    "overview": "Jedinstveni predmeti",
+    "list": "Rezultat pretraživanja sadrži predmete koji nisu u sanduku."
+  },
+  "workpieces": {
+    "title": "Rezultati pretraživanja",
+    "tooManyItems": "Rezultat pretraživanja za vaše kriterije sadrži previše brojeva. Molimo definirajte svoje kriterije malo preciznije.",
+    "firstNumbersText": "Prvi brojevi su",
+    "searchResultOkLength": "Vaš rezultat pretraživanja je:",
+    "recomendationNewSearch": "Molimo definirajte svoje kriterije na drugi način.",
+    "recomendationAdd": "Čestitamo! Možete dodati odabrane brojeve u sanduk.",
+    "recomendationReplace": "Možete zamijeniti stare predmete u sanduku novima.",
+    "recomendationAddUnic": "Možete dodati jedinstvene brojeve u sanduk.",
+    "intersectionIsEmpty": "Rezultat pretraživanja ne sadrži brojeve koji su već u sanduku.",
+    "intersectionIsNotEmpty": "Rezultat pretraživanja sadrži sljedeće brojeve koji su već u sanduku:",
+    "emptyResult": "Čini se da su vaši kriteriji kontradiktorni. Nisu pronađeni predmeti. Molimo pokušajte ponovno s drugim kriterijima.",
+    "unicItemsExist": "Predmeti u rezultatu pretraživanja koji nisu u sanduku:",
+    "unicItemsNotExist": "Svi predmeti u rezultatu pretraživanja već su u sanduku.",
+    "replaceItems": "Zamijenite stare predmete u sanducima novima.",
+    "addItems": "Dodajte nove predmete u sanduke."
+  }
+}

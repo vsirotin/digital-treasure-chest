@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Tüm öğeler",
+    "list": "Arama sonucundaki tüm öğeler benzersizdir."
+  },
+  "commonItems": {
+    "overview": "Ortak öğeler",
+    "list": "Arama sonucu, sandıkta zaten bulunan öğeleri içerir."
+  },
+  "uniqueItems": {
+    "overview": "Benzersiz öğeler",
+    "list": "Arama sonucu, sandıkta bulunmayan öğeleri içerir."
+  },
+  "workpieces": {
+    "title": "Arama sonuçları",
+    "tooManyItems": "Kriterleriniz için arama sonucu çok fazla sayı içeriyor. Lütfen kriterlerinizi biraz daha kesin olarak tanımlayın.",
+    "firstNumbersText": "İlk sayılar",
+    "searchResultOkLength": "Arama sonucunuz:",
+    "recomendationNewSearch": "Lütfen kriterlerinizi başka bir şekilde tanımlayın.",
+    "recomendationAdd": "Tebrikler! Seçilen sayıları sandığa ekleyebilirsiniz.",
+    "recomendationReplace": "Sandıktaki eski öğeleri yenileriyle değiştirebilirsiniz.",
+    "recomendationAddUnic": "Sandığa benzersiz sayılar ekleyebilirsiniz.",
+    "intersectionIsEmpty": "Arama sonucu, sandıkta zaten bulunan sayıları içermez.",
+    "intersectionIsNotEmpty": "Arama sonucu, sandıkta zaten bulunan aşağıdaki sayıları içerir:",
+    "emptyResult": "Kriterleriniz çelişkili görünüyor. Hiçbir öğe bulunamadı. Lütfen başka kriterlerle tekrar deneyin.",
+    "unicItemsExist": "Arama sonucunda sandıkta bulunmayan öğeler:",
+    "unicItemsNotExist": "Arama sonucundaki tüm öğeler zaten sandıkta.",
+    "replaceItems": "Sandıklardaki eski öğeleri yenileriyle değiştirin.",
+    "addItems": "Sandıklara yeni öğeler ekleyin."
+  }
+}

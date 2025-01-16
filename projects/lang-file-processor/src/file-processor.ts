@@ -10,19 +10,19 @@ export class FileProcessor {
   private exampleObject? : Object
 
   constructor(listPath?: string) {
-    this.logger.setLogLevel(0);
+    this.logger.setLogLevel(1);
     this.logger.log('FileProcessor created. List path:', listPath);
     this.listPath = listPath;
   }
 
   public processFile(filePath: string, outputDir: string): void {
     if (!this.alyseSyntax(filePath)) {
-      this.logger.error('Syntax analysis failed.');
+      this.logger.error('ERROR 100: Syntax analysis failed.');
       return;
     }
 
     if (this.listPath && !this.compareLanguageCodes()) {
-      this.logger.error('Language code comparison failed.');
+      this.logger.error('ERROR 200: Language code comparison failed.');
       return;
     }
 
@@ -55,11 +55,11 @@ alyseSyntax(inputFilePath: string): boolean {
 
   let currentLangCode = '';
   let currentObjectLines: string[] = [];
-  let insideObject = false;
   let braceLevel = 0;
   let lineNumber = 0;
 
   for (const line of lines) {
+    
     lineNumber++;
     const trimmedLine = line.trim();
 
@@ -70,38 +70,53 @@ alyseSyntax(inputFilePath: string): boolean {
 
     // Check if the line is a language code
     if (/^[a-z]{2}-[A-Z]{2}$/.test(trimmedLine)) {
-      if (insideObject) {
-        this.logger.error(`Unexpected language code at line ${lineNumber} while parsing object.`);
+      if (braceLevel > 0) {
+        this.logger.error(`ERROR 1: Unexpected language code at line ${lineNumber} while parsing object.`);
         return false;
       }
       currentLangCode = trimmedLine;
       continue;
     }
 
-    // Check if the line starts an object
+    // Start of processing lines of JSON object
     if (trimmedLine.startsWith('{')) {
-      // if (insideObject) {
-      //   this.logger.error(`Unexpected '{' at line ${lineNumber} while already inside an object.`);
-      //   return false;
-      // }
       braceLevel++;
-      insideObject = true;
+      currentObjectLines.push(trimmedLine);
+      continue;
+    }
+
+    let hasStartBrace = trimmedLine.includes('{');
+    let hasEndBrace = trimmedLine.includes('}');
+
+    if(hasStartBrace && hasEndBrace){
+      currentObjectLines.push(trimmedLine);
+      continue
+    }
+
+    if(hasStartBrace && !hasEndBrace){
+      braceLevel++;
       currentObjectLines.push(trimmedLine);
       continue;
     }
 
     // Check if the line ends an object
-    if (trimmedLine.endsWith('}')) {
-      braceLevel--;
-      if((!insideObject) || (braceLevel < 0)) {
-        this.logger.error(`Unexpected '}' at line ${lineNumber} without starting an object.`);
+    if (hasEndBrace) {
+
+      if(braceLevel <= 0) {
+        this.logger.error(`ERROR 2: Unexpected '}' at line ${lineNumber} without starting an object.`);
         return false;
       }
+      braceLevel--;
       currentObjectLines.push(trimmedLine);
-      insideObject = false;
+
+      if (braceLevel > 0) {
+        continue;
+      }
+
 
       // Parse the object
       try {
+        this.logger.debug(`Parsing object after processing of a line ${lineNumber}: currentObjectLines: ${currentObjectLines}`);
         const currentObject = JSON.parse(currentObjectLines.join('\n'));
 
         // Save the first correct object as exampleObject
@@ -110,7 +125,7 @@ alyseSyntax(inputFilePath: string): boolean {
         } else {
           // Compare the structure of the current object with exampleObject
           if (JSON.stringify(Object.keys(currentObject)) !== JSON.stringify(Object.keys(this.exampleObject))) {
-            this.logger.error(`Object structure mismatch at line ${lineNumber}.`);
+            this.logger.error(`ERROR 3: Object structure mismatch at line ${lineNumber}.`);
             return false;
           }
         }
@@ -118,21 +133,22 @@ alyseSyntax(inputFilePath: string): boolean {
         // Save the correct pair in mapLangToObject
         this.mapLangToObject.set(currentLangCode, currentObject);
       } catch (error) {
-        this.logger.error(`Failed to parse object at line ${lineNumber}: Error ${error}`);
+        this.logger.error(`ERROR 4:  Failed to parse object at line ${lineNumber}: Error ${error}`);
         return false;
       }
 
       // Reset for the next object
       currentLangCode = '';
       currentObjectLines = [];
+      braceLevel = 0;
       continue;
     }
 
     // Collect lines inside an object
-    if (insideObject) {
+    if (braceLevel > 0) {
       currentObjectLines.push(trimmedLine);
     } else {
-      this.logger.error(`Unexpected line at ${lineNumber}: ${trimmedLine}`);
+      this.logger.error(`ERROR 5: Unexpected line at ${lineNumber}: ${trimmedLine}`);
       return false;
     }
   }
@@ -160,12 +176,12 @@ alyseSyntax(inputFilePath: string): boolean {
 
       for (const code of listLines) {
         if (!this.mapLangToObject.has(code)) {
-          this.logger.error(`Language code ${code} from list file not found in the input file.`);
+          this.logger.error(`ERROR 10: Language code ${code} from list file not found in the input file.`);
           return false;
         }
       }
     } catch (error) {
-      this.logger.error(`Failed to read or parse list file: ${this.listPath}`);
+      this.logger.error(`ERROR 11: Failed to read or parse list file: ${this.listPath}`);
       return false;
     }
   }

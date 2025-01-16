@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Alla föremål",
+    "list": "Alla föremål i sökresultatet är unika."
+  },
+  "commonItems": {
+    "overview": "Vanliga föremål",
+    "list": "Sökresultatet innehåller föremål som redan finns i kistan."
+  },
+  "uniqueItems": {
+    "overview": "Unika föremål",
+    "list": "Sökresultatet innehåller föremål som inte finns i kistan."
+  },
+  "workpieces": {
+    "title": "Sökresultat",
+    "tooManyItems": "Sökresultatet för dina kriterier innehåller för många nummer. Vänligen definiera dina kriterier lite mer exakt.",
+    "firstNumbersText": "De första numren är",
+    "searchResultOkLength": "Ditt sökresultat är:",
+    "recomendationNewSearch": "Vänligen definiera dina kriterier på ett annat sätt.",
+    "recomendationAdd": "Grattis! Du kan lägga till de valda numren i kistan.",
+    "recomendationReplace": "Du kan ersätta de gamla föremålen i kistan med de nya.",
+    "recomendationAddUnic": "Du kan lägga till unika nummer i kistan.",
+    "intersectionIsEmpty": "Sökresultatet innehåller inga nummer som redan finns i kistan.",
+    "intersectionIsNotEmpty": "Sökresultatet innehåller följande nummer som redan finns i kistan:",
+    "emptyResult": "Dina kriterier verkar vara motsägelsefulla. Inga föremål hittades. Försök igen med andra kriterier.",
+    "unicItemsExist": "Föremål i sökresultatet som inte finns i kistan:",
+    "unicItemsNotExist": "Alla föremål i sökresultatet finns redan i kistan.",
+    "replaceItems": "Ersätt gamla föremål i kistorna med nya.",
+    "addItems": "Lägg till nya föremål i kistorna."
+  }
+}

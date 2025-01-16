@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Semua item",
+    "list": "Semua item dalam hasil pencarian adalah unik."
+  },
+  "commonItems": {
+    "overview": "Item umum",
+    "list": "Hasil pencarian berisi item yang sudah ada di peti."
+  },
+  "uniqueItems": {
+    "overview": "Item unik",
+    "list": "Hasil pencarian berisi item yang tidak ada di peti."
+  },
+  "workpieces": {
+    "title": "Hasil pencarian",
+    "tooManyItems": "Hasil pencarian untuk kriteria Anda mengandung terlalu banyak angka. Harap tentukan kriteria Anda dengan lebih tepat.",
+    "firstNumbersText": "Angka pertama adalah",
+    "searchResultOkLength": "Hasil pencarian Anda adalah:",
+    "recomendationNewSearch": "Harap tentukan kriteria Anda dengan cara lain.",
+    "recomendationAdd": "Selamat! Anda dapat menambahkan angka yang dipilih ke Peti.",
+    "recomendationReplace": "Anda dapat mengganti item lama di peti dengan yang baru.",
+    "recomendationAddUnic": "Anda dapat menambahkan angka unik ke Peti.",
+    "intersectionIsEmpty": "Hasil pencarian tidak mengandung angka yang sudah ada di peti.",
+    "intersectionIsNotEmpty": "Hasil pencarian mengandung angka berikut yang sudah ada di peti:",
+    "emptyResult": "Kriteria Anda tampaknya bertentangan. Tidak ada item yang ditemukan. Silakan coba lagi dengan kriteria lain.",
+    "unicItemsExist": "Item dalam hasil pencarian yang tidak ada di peti:",
+    "unicItemsNotExist": "Semua item dalam hasil pencarian sudah ada di peti.",
+    "replaceItems": "Ganti item lama di peti dengan yang baru.",
+    "addItems": "Tambahkan item baru ke peti."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Tots els elements",
+    "list": "Tots els elements del resultat de la cerca són únics."
+  },
+  "commonItems": {
+    "overview": "Elements comuns",
+    "list": "El resultat de la cerca conté elements que ja estan al cofre."
+  },
+  "uniqueItems": {
+    "overview": "Elements únics",
+    "list": "El resultat de la cerca conté elements que no estan al cofre."
+  },
+  "workpieces": {
+    "title": "Resultats de la cerca",
+    "tooManyItems": "El resultat de la cerca per als vostres criteris conté massa números. Si us plau, definiu els vostres criteris una mica més precisament.",
+    "firstNumbersText": "Els primers números són",
+    "searchResultOkLength": "El vostre resultat de la cerca és:",
+    "recomendationNewSearch": "Si us plau, definiu els vostres criteris d'una altra manera.",
+    "recomendationAdd": "Felicitats! Podeu afegir els números seleccionats al cofre.",
+    "recomendationReplace": "Podeu substituir els elements antics del cofre pels nous.",
+    "recomendationAddUnic": "Podeu afegir números únics al cofre.",
+    "intersectionIsEmpty": "El resultat de la cerca no conté números que ja estan al cofre.",
+    "intersectionIsNotEmpty": "El resultat de la cerca conté els següents números que ja estan al cofre:",
+    "emptyResult": "Els vostres criteris semblen ser contradictoris. No s'han trobat elements. Si us plau, torneu a provar amb altres criteris.",
+    "unicItemsExist": "Elements en el resultat de la cerca que no estan al cofre:",
+    "unicItemsNotExist": "Tots els elements del resultat de la cerca ja estan al cofre.",
+    "replaceItems": "Substituïu els elements antics dels cofres pels nous.",
+    "addItems": "Afegiu nous elements als cofres."
+  }
+}

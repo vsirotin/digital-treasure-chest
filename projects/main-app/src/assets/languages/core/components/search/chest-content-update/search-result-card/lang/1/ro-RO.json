@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Toate articolele",
+    "list": "Toate articolele din rezultatul căutării sunt unice."
+  },
+  "commonItems": {
+    "overview": "Articole comune",
+    "list": "Rezultatul căutării conține articole care sunt deja în cufăr."
+  },
+  "uniqueItems": {
+    "overview": "Articole unice",
+    "list": "Rezultatul căutării conține articole care nu sunt în cufăr."
+  },
+  "workpieces": {
+    "title": "Rezultatele căutării",
+    "tooManyItems": "Rezultatul căutării pentru criteriile dvs. conține prea multe numere. Vă rugăm să definiți criteriile dvs. puțin mai precis.",
+    "firstNumbersText": "Primele numere sunt",
+    "searchResultOkLength": "Rezultatul căutării dvs. este:",
+    "recomendationNewSearch": "Vă rugăm să definiți criteriile dvs. în alt mod.",
+    "recomendationAdd": "Felicitări! Puteți adăuga numerele selectate în cufăr.",
+    "recomendationReplace": "Puteți înlocui articolele vechi din cufăr cu cele noi.",
+    "recomendationAddUnic": "Puteți adăuga numere unice în cufăr.",
+    "intersectionIsEmpty": "Rezultatul căutării nu conține numere care sunt deja în cufăr.",
+    "intersectionIsNotEmpty": "Rezultatul căutării conține următoarele numere care sunt deja în cufăr:",
+    "emptyResult": "Criteriile dvs. par a fi contradictorii. Nu s-au găsit articole. Vă rugăm să încercați din nou cu alte criterii.",
+    "unicItemsExist": "Articole în rezultatul căutării care nu sunt în cufăr:",
+    "unicItemsNotExist": "Toate articolele din rezultatul căutării sunt deja în cufăr.",
+    "replaceItems": "Înlocuiți articolele vechi din cufere cu cele noi.",
+    "addItems": "Adăugați articole noi în cufere."
+  }
+}

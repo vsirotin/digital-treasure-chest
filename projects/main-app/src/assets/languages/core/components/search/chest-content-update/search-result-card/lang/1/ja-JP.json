@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "すべてのアイテム",
+    "list": "検索結果のすべてのアイテムは一意です。"
+  },
+  "commonItems": {
+    "overview": "共通アイテム",
+    "list": "検索結果には、すでにチェストにあるアイテムが含まれています。"
+  },
+  "uniqueItems": {
+    "overview": "ユニークなアイテム",
+    "list": "検索結果には、チェストにないアイテムが含まれています。"
+  },
+  "workpieces": {
+    "title": "検索結果",
+    "tooManyItems": "あなたの基準に対する検索結果には、あまりにも多くの数字が含まれています。基準をもう少し正確に定義してください。",
+    "firstNumbersText": "最初の数字は",
+    "searchResultOkLength": "あなたの検索結果は：",
+    "recomendationNewSearch": "基準を別の方法で定義してください。",
+    "recomendationAdd": "おめでとうございます！選択した数字をチェストに追加できます。",
+    "recomendationReplace": "古いアイテムを新しいアイテムに置き換えることができます。",
+    "recomendationAddUnic": "ユニークな数字をチェストに追加できます。",
+    "intersectionIsEmpty": "検索結果には、すでにチェストにある数字は含まれていません。",
+    "intersectionIsNotEmpty": "検索結果には、すでにチェストにある次の数字が含まれています：",
+    "emptyResult": "基準が矛盾しているようです。アイテムが見つかりません。他の基準で再試行してください。",
+    "unicItemsExist": "検索結果に含まれているチェストにないアイテム：",
+    "unicItemsNotExist": "検索結果のすべてのアイテムはすでにチェストにあります。",
+    "replaceItems": "古いアイテムを新しいアイテムに置き換えます。",
+    "addItems": "新しいアイテムをチェストに追加します。"
+  }
+}

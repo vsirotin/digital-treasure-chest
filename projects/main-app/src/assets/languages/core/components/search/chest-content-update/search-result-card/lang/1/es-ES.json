@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Todos los artículos",
+    "list": "Todos los artículos en el resultado de la búsqueda son únicos."
+  },
+  "commonItems": {
+    "overview": "Artículos comunes",
+    "list": "El resultado de la búsqueda contiene artículos que ya están en el cofre."
+  },
+  "uniqueItems": {
+    "overview": "Artículos únicos",
+    "list": "El resultado de la búsqueda contiene artículos que no están en el cofre."
+  },
+  "workpieces": {
+    "title": "Resultados de búsqueda",
+    "tooManyItems": "El resultado de la búsqueda para sus criterios contiene demasiados números. Por favor, defina sus criterios un poco más precisamente.",
+    "firstNumbersText": "Los primeros números son",
+    "searchResultOkLength": "Su resultado de búsqueda es:",
+    "recomendationNewSearch": "Por favor, defina sus criterios de otra manera.",
+    "recomendationAdd": "¡Felicidades! Puede agregar los números seleccionados al cofre.",
+    "recomendationReplace": "Puede reemplazar los artículos antiguos en el cofre con los nuevos.",
+    "recomendationAddUnic": "Puede agregar números únicos al cofre.",
+    "intersectionIsEmpty": "El resultado de la búsqueda no contiene números que ya están en el cofre.",
+    "intersectionIsNotEmpty": "El resultado de la búsqueda contiene los siguientes números que ya están en el cofre:",
+    "emptyResult": "Sus criterios parecen ser contradictorios. No se encontraron artículos. Por favor, intente nuevamente con otros criterios.",
+    "unicItemsExist": "Artículos en el resultado de la búsqueda que no están en el cofre:",
+    "unicItemsNotExist": "Todos los artículos en el resultado de la búsqueda ya están en el cofre.",
+    "replaceItems": "Reemplace los artículos antiguos en los cofres con los nuevos.",
+    "addItems": "Agregue nuevos artículos a los cofres."
+  }
+}

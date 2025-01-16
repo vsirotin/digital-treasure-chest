@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Alle items",
+    "list": "Alle items in het zoekresultaat zijn uniek."
+  },
+  "commonItems": {
+    "overview": "Gemeenschappelijke items",
+    "list": "Het zoekresultaat bevat items die al in de kist zitten."
+  },
+  "uniqueItems": {
+    "overview": "Unieke items",
+    "list": "Het zoekresultaat bevat items die niet in de kist zitten."
+  },
+  "workpieces": {
+    "title": "Zoekresultaten",
+    "tooManyItems": "Het zoekresultaat voor uw criteria bevat te veel nummers. Definieer uw criteria iets nauwkeuriger.",
+    "firstNumbersText": "De eerste nummers zijn",
+    "searchResultOkLength": "Uw zoekresultaat is:",
+    "recomendationNewSearch": "Definieer uw criteria op een andere manier.",
+    "recomendationAdd": "Gefeliciteerd! U kunt geselecteerde nummers aan de kist toevoegen.",
+    "recomendationReplace": "U kunt de oude items in de kist vervangen door de nieuwe.",
+    "recomendationAddUnic": "U kunt unieke nummers aan de kist toevoegen.",
+    "intersectionIsEmpty": "Het zoekresultaat bevat geen nummers die al in de kist zitten.",
+    "intersectionIsNotEmpty": "Het zoekresultaat bevat de volgende nummers die al in de kist zitten:",
+    "emptyResult": "Uw criteria lijken tegenstrijdig te zijn. Geen items gevonden. Probeer het opnieuw met andere criteria.",
+    "unicItemsExist": "Items in het zoekresultaat die niet in de kist zitten:",
+    "unicItemsNotExist": "Alle items in het zoekresultaat zitten al in de kist.",
+    "replaceItems": "Vervang oude items in de kisten door nieuwe.",
+    "addItems": "Voeg nieuwe items toe aan de kisten."
+  }
+}

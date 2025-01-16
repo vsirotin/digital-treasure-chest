@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Wszystkie przedmioty",
+    "list": "Wszystkie przedmioty w wynikach wyszukiwania są unikalne."
+  },
+  "commonItems": {
+    "overview": "Wspólne przedmioty",
+    "list": "Wynik wyszukiwania zawiera przedmioty, które już są w skrzyni."
+  },
+  "uniqueItems": {
+    "overview": "Unikalne przedmioty",
+    "list": "Wynik wyszukiwania zawiera przedmioty, które nie są w skrzyni."
+  },
+  "workpieces": {
+    "title": "Wyniki wyszukiwania",
+    "tooManyItems": "Wynik wyszukiwania dla twoich kryteriów zawiera zbyt wiele liczb. Proszę zdefiniować swoje kryteria trochę dokładniej.",
+    "firstNumbersText": "Pierwsze liczby to",
+    "searchResultOkLength": "Twój wynik wyszukiwania to:",
+    "recomendationNewSearch": "Proszę zdefiniować swoje kryteria w inny sposób.",
+    "recomendationAdd": "Gratulacje! Możesz dodać wybrane liczby do skrzyni.",
+    "recomendationReplace": "Możesz zastąpić stare przedmioty w skrzyni nowymi.",
+    "recomendationAddUnic": "Możesz dodać unikalne liczby do skrzyni.",
+    "intersectionIsEmpty": "Wynik wyszukiwania nie zawiera liczb, które już są w skrzyni.",
+    "intersectionIsNotEmpty": "Wynik wyszukiwania zawiera następujące liczby, które już są w skrzyni:",
+    "emptyResult": "Twoje kryteria wydają się być sprzeczne. Nie znaleziono żadnych przedmiotów. Proszę spróbować ponownie z innymi kryteriami.",
+    "unicItemsExist": "Przedmioty w wynikach wyszukiwania, które nie są w skrzyni:",
+    "unicItemsNotExist": "Wszystkie przedmioty w wynikach wyszukiwania już są w skrzyni.",
+    "replaceItems": "Zastąp stare przedmioty w skrzyniach nowymi.",
+    "addItems": "Dodaj nowe przedmioty do skrzyń."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Tous les articles",
+    "list": "Tous les articles du résultat de la recherche sont uniques."
+  },
+  "commonItems": {
+    "overview": "Articles communs",
+    "list": "Le résultat de la recherche contient des articles qui sont déjà dans le coffre."
+  },
+  "uniqueItems": {
+    "overview": "Articles uniques",
+    "list": "Le résultat de la recherche contient des articles qui ne sont pas dans le coffre."
+  },
+  "workpieces": {
+    "title": "Résultats de recherche",
+    "tooManyItems": "Le résultat de la recherche pour vos critères contient trop de numéros. Veuillez définir vos critères un peu plus précisément.",
+    "firstNumbersText": "Les premiers numéros sont",
+    "searchResultOkLength": "Votre résultat de recherche est :",
+    "recomendationNewSearch": "Veuillez définir vos critères d'une autre manière.",
+    "recomendationAdd": "Félicitations ! Vous pouvez ajouter les numéros sélectionnés au coffre.",
+    "recomendationReplace": "Vous pouvez remplacer les anciens articles dans le coffre par les nouveaux.",
+    "recomendationAddUnic": "Vous pouvez ajouter des numéros uniques au coffre.",
+    "intersectionIsEmpty": "Le résultat de la recherche ne contient aucun numéro qui est déjà dans le coffre.",
+    "intersectionIsNotEmpty": "Le résultat de la recherche contient les numéros suivants qui sont déjà dans le coffre :",
+    "emptyResult": "Vos critères semblent être contradictoires. Aucun article trouvé. Veuillez réessayer avec d'autres critères.",
+    "unicItemsExist": "Articles dans le résultat de la recherche qui ne sont pas dans le coffre :",
+    "unicItemsNotExist": "Tous les articles du résultat de la recherche sont déjà dans le coffre.",
+    "replaceItems": "Remplacez les anciens articles dans les coffres par des nouveaux.",
+    "addItems": "Ajoutez de nouveaux articles aux coffres."
+  }
+}

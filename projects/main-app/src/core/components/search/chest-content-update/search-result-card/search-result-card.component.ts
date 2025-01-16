@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges, ChangeDetectorRef} from '@angular/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
 import { Chest } from '../../../../../shared/classes/chest';
@@ -13,51 +13,20 @@ import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/loc
   templateUrl: './search-result-card.component.html',
   styleUrl: './search-result-card.component.css'
 })
-export class SerachResultCardComponent implements OnChanges {
+
+
+  export class SerachResultCardComponent implements OnChanges, ILocalizationClient<ISearchResultCard> {
 
   @Input() searchResult: number[] = [];
    
-  ui: ISearchResultCard = {
-  allItems:  {
-    overview: 'All items',
-    list: 'All items in the search result are unique.'
-  },
-  commonItems: {
-    overview: 'Common items',
-    list: 'The search result contains items that are already in the chest.'
-  },
-  uniqueItems: {    
-    overview: 'Unique items',
-    list: 'The search result contains items that are not in the chest.'
-  },
-  
-  workpieces:   {
-    title : 'Search results',
-    tooManyItems: 'The search result for your criteria contains too many numbers. Please define your criteria a little more precisely.',
-    firstNumbersText: 'The first numbers are',
-    searchResultOkLength: 'Your search result is:',
-
-    recomendationNewSearch: 'Please define your criteria in other way.',
-    recomendationAdd: 'Congratulations! You can add selected numbers to Chest.',
-    recomendationReplace: 'You can replace the old items in the chest with the new ones.',
-    recomendationAddUnic: 'You can add unic numbers to Chest.',
-
-    intersectionIsEmpty: 'The search result contains no numbers that are already in the chest.',
-    intersectionIsNotEmpty: 'The search result contains following numbers that are already in the chest:',
-    emptyResult: 'Your criteria seems to be contradictory. No items found. Please try again with other criteria.',
-    unicItemsExist: 'Items in search result that are not in the chest:',
-    unicItemsNotExist: 'All items in the search result are already in the chest.',
-    
-    replaceItems :'Replace old items in chests with new ones.',
-    addItems : 'Add new items to chests.'
-  }
-};
+  ui: ISearchResultCard = (uiDefault as any).default;
 
   recomendation: string = '';
 
-  title = this.ui.workpieces.title;  
-  addItems = this.ui.workpieces.addItems;
-  replaceItems = this.ui.workpieces.replaceItems;
+  title: string;  
+  addItems: string; 
+  replaceItems: string; 
+  btnAdd: string = "AAA";
 
   isButtonAddEnabled = false;
   isButtonReplaceEnabled = false;
@@ -67,16 +36,34 @@ export class SerachResultCardComponent implements OnChanges {
   unicElemntsInSearchResult: number[] = [];
   commonElemntsInSearchResult: number[] = [];
 
+  private localizer: ILocalizer;
+
+  constructor(private changeDetectorRef: ChangeDetectorRef) {
+    this.title = this.ui.workpieces.title;  
+    this.addItems = this.ui.workpieces.addItems;
+    this.replaceItems = this.ui.workpieces.replaceItems;
+    this.localizer = LocalizerFactory.createLocalizer<ISearchResultCard>("assets/languages/core/components/search/chest-content-update/search-result-card/lang", 1, this.ui, this);
+  }
+
+
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['searchResult']) {
       this.isButtonAddEnabled = false;
       this.isButtonReplaceEnabled = false;
       this.updateContent();
+      this.changeDetectorRef.markForCheck(); // Mark for check
     }
+  }
+
+  updateLocalization(data: ISearchResultCard): void {
+    this.ui = data;
+    this.updateContent();
+    this.changeDetectorRef.markForCheck(); // Mark for check
   }
 
   private updateContent(): void {
 
+    this.btnAdd = this.ui.workpieces.addItems;
     this.ui.allItems.overview = '';
     this.ui.allItems.list = '';
     this.ui.commonItems.overview = '';

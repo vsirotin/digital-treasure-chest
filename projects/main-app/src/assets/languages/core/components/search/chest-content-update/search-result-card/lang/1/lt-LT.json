@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Visi elementai",
+    "list": "Visi elementai paieškos rezultatuose yra unikalūs."
+  },
+  "commonItems": {
+    "overview": "Bendri elementai",
+    "list": "Paieškos rezultatuose yra elementų, kurie jau yra krūtinėje."
+  },
+  "uniqueItems": {
+    "overview": "Unikalūs elementai",
+    "list": "Paieškos rezultatuose yra elementų, kurių nėra krūtinėje."
+  },
+  "workpieces": {
+    "title": "Paieškos rezultatai",
+    "tooManyItems": "Jūsų kriterijams atitinkantis paieškos rezultatas turi per daug skaičių. Prašome tiksliau apibrėžti savo kriterijus.",
+    "firstNumbersText": "Pirmieji skaičiai yra",
+    "searchResultOkLength": "Jūsų paieškos rezultatas yra:",
+    "recomendationNewSearch": "Prašome apibrėžti savo kriterijus kitu būdu.",
+    "recomendationAdd": "Sveikiname! Galite pridėti pasirinktus skaičius prie krūtinės.",
+    "recomendationReplace": "Galite pakeisti senus elementus krūtinėje naujais.",
+    "recomendationAddUnic": "Galite pridėti unikalius skaičius prie krūtinės.",
+    "intersectionIsEmpty": "Paieškos rezultatuose nėra skaičių, kurie jau yra krūtinėje.",
+    "intersectionIsNotEmpty": "Paieškos rezultatuose yra šie skaičiai, kurie jau yra krūtinėje:",
+    "emptyResult": "Jūsų kriterijai atrodo prieštaringi. Nerasta jokių elementų. Prašome bandyti dar kartą su kitais kriterijais.",
+    "unicItemsExist": "Elementai paieškos rezultatuose, kurių nėra krūtinėje:",
+    "unicItemsNotExist": "Visi paieškos rezultatuose esantys elementai jau yra krūtinėje.",
+    "replaceItems": "Pakeiskite senus elementus krūtinėje naujais.",
+    "addItems": "Pridėkite naujus elementus prie krūtinės."
+  }
+}

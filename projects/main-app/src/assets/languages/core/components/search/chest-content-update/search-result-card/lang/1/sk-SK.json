@@ -1,0 +1,31 @@
+{
+  "allItems": {
+    "overview": "Všetky položky",
+    "list": "Všetky položky vo výsledku vyhľadávania sú jedinečné."
+  },
+  "commonItems": {
+    "overview": "Spoločné položky",
+    "list": "Výsledok vyhľadávania obsahuje položky, ktoré sú už v truhlici."
+  },
+  "uniqueItems": {
+    "overview": "Jedinečné položky",
+    "list": "Výsledok vyhľadávania obsahuje položky, ktoré nie sú v truhlici."
+  },
+  "workpieces": {
+    "title": "Výsledky vyhľadávania",
+    "tooManyItems": "Výsledok vyhľadávania pre vaše kritériá obsahuje príliš veľa čísel. Prosím, definujte svoje kritériá trochu presnejšie.",
+    "firstNumbersText": "Prvé čísla sú",
+    "searchResultOkLength": "Váš výsledok vyhľadávania je:",
+    "recomendationNewSearch": "Prosím, definujte svoje kritériá iným spôsobom.",
+    "recomendationAdd": "Gratulujeme! Môžete pridať vybrané čísla do truhlice.",
+    "recomendationReplace": "Môžete nahradiť staré položky v truhlici novými.",
+    "recomendationAddUnic": "Môžete pridať jedinečné čísla do truhlice.",
+    "intersectionIsEmpty": "Výsledok vyhľadávania neobsahuje žiadne čísla, ktoré sú už v truhlici.",
+    "intersectionIsNotEmpty": "Výsledok vyhľadávania obsahuje nasledujúce čísla, ktoré sú už v truhlici:",
+    "emptyResult": "Vaše kritériá sa zdajú byť protichodné. Nenašli sa žiadne položky. Skúste to prosím znova s inými kritériami.",
+    "unicItemsExist": "Položky vo výsledku vyhľadávania, ktoré nie sú v truhlici:",
+    "unicItemsNotExist": "Všetky položky vo výsledku vyhľadávania sú už v truhlici.",
+    "replaceItems": "Vymeňte staré položky v truhliciach za nové.",
+    "addItems": "Pridajte nové položky do truhlic."
+  }
+}
