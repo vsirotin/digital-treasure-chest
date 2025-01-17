@@ -2,7 +2,6 @@ import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { KeeperMasterDataKeyValueAsync } from "../keeper-master-data-key-value-async";
 import { LocalStorageAdapterWithVersionsAndCategories } from "../specific-adapters/local-storage-adapter/local-storage-adapter-for-number-and-categories";
 import { HTTPKeyValueRepositoryReader } from "../specific-readers/reader-http";
-import { ReaderDefault } from "../specific-readers/reader-default";
 
 
 /*
@@ -26,6 +25,11 @@ export class KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion
         this.loggger.log(" created for ", componentCoordinate, " v.", componentVersion);
     }
 
+    /**
+     * Search the data in local storage and if it is not found, search in the HTTP repository.
+     * @param key key for searching the data
+     * @returns Promise with the data
+     */
     override async findAsync(key: string): Promise<T | undefined> {
         let res = await super.findAsync(key);
         if (res == undefined) {

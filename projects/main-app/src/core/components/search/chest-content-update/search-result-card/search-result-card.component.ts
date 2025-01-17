@@ -37,6 +37,7 @@ import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/loc
   commonElemntsInSearchResult: number[] = [];
 
   private localizer: ILocalizer;
+  private chest: Chest = Chest.instance;
 
   constructor(private changeDetectorRef: ChangeDetectorRef) {
     this.title = this.ui.workpieces.title;  
@@ -94,7 +95,7 @@ import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/loc
     this.ui.allItems.overview = this.ui.allItems.list = this.ui.workpieces.searchResultOkLength;
     this.ui.allItems.list = this.searchResult.join(', ');
     
-    if(Chest.getItems().length == 0) {
+    if(this.chest.getItems().length == 0) {
       this.recomendation = this.ui.workpieces.recomendationAdd;
       this.isButtonAddEnabled = true;
       return;
@@ -121,7 +122,7 @@ import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/loc
 
     this.isButtonReplaceEnabled = true;
       
-    if(this.unicElemntsInSearchResult.length <= Chest.getFreeCapacity()) {
+    if(this.unicElemntsInSearchResult.length <= this.chest.getFreeCapacity()) {
       this.recomendation = this.ui.workpieces.recomendationAddUnic;
       this.isButtonAddEnabled = true;
       return;
@@ -131,15 +132,15 @@ import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/loc
   }
 
   buttonAdd(): void {
-    Chest.addItems(this.searchResult);
+    this.chest.addItems(this.searchResult);
   }
 
   buttonReplace(): void {
-    Chest.replaceCurrentItemsWithNew(this.searchResult);
+    this.chest.replaceCurrentItemsWithNew(this.searchResult);
   }
 
   private findUnicElementsInSearchResult():void {
-    const s1 = new Set(Chest.getItems());
+    const s1 = new Set(this.chest.getItems());
     const s2 = new Set(this.searchResult);
     const is = new Set([...s1].filter(x => s2.has(x)));
     this.intersection =  Array.from(s2).sort((a, b) => a - b);

@@ -1,3 +1,6 @@
+/**
+ * Says if a keeper master data is async or not.
+ */
 export interface IKeeperMasterData<T> {
     isAsync: boolean;
 }

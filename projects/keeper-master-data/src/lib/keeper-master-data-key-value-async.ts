@@ -4,9 +4,8 @@ import { RepositoryAdapter, IRepositoryReader, RepositoryAdapterSync, Repository
 import { UntypedFormBuilder } from "@angular/forms";
 
 /*
-    Implementation of IKeeperMasterDataKeyValue with key-value based data model.
+    Aynchrone implementation of KeeperMasterData with key-value based data model.
 */
-
 export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
     /*
         Constructor.

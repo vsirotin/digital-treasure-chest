@@ -11,7 +11,7 @@ export interface IRepositoryReader<T>{
     readonly isAsync: boolean;
 }
 /*
-    API for a synchronesly repository reader.
+    API (abstract class) for a synchronesly repository reader.
 */
 export abstract class RepositoryReaderSync<T> implements IRepositoryReader<T> {
     /*
@@ -25,7 +25,7 @@ export abstract class RepositoryReaderSync<T> implements IRepositoryReader<T> {
 }
 
 /*
-    API for asynchronesly repository reader.
+    API (abstarct class) for asynchronesly repository reader.
 */
 export abstract class RepositoryReaderAsync<T> implements IRepositoryReader<T> {
     /*
@@ -40,7 +40,7 @@ export abstract class RepositoryReaderAsync<T> implements IRepositoryReader<T> {
 }
 
 /*
-    API for a repository writer.
+    API (abstarct class) for a repository writer.
 */
 export interface IRepositoryWiter<T>{
 
@@ -51,7 +51,7 @@ export interface IRepositoryWiter<T>{
     readonly isAsync: boolean;
 }
 /*
-    API for a writable repository reader.
+    API (abstarct class) for a writable repository reader.
 */
 export abstract class RepositoryWriterSync<T> implements IRepositoryWiter<T> {
 
@@ -66,7 +66,7 @@ export abstract class RepositoryWriterSync<T> implements IRepositoryWiter<T> {
 }
 
 /*
-    API for an asynchronesly repository writer.
+    API (abstarct class) for an asynchronesly repository writer.
 */
 
 export abstract class RepositoryWriterAsync<T> implements IRepositoryWiter<T> {
@@ -89,7 +89,7 @@ export interface RepositoryAdapter<T>  {
     readonly isAsync: boolean;
 }
 /*
-    API for a synchronesly repository adapter.
+    API (abstarct class) for a synchronesly repository adapter.
 */
 export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
 
@@ -126,7 +126,7 @@ export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
     abstract removeValueForkeySync(key: string): void;
 }
 /*
-    API for an asynchronesly repository adapter.
+    API (abstarct class) for an asynchronesly repository adapter.
 */
 export abstract class RepositoryAdapterAsync<T> implements RepositoryAdapter<T> {
 

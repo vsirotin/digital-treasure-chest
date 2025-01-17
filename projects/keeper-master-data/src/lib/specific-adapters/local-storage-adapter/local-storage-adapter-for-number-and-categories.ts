@@ -18,6 +18,10 @@ export class LocalStorageAdapterWithVersionsAndCategories extends RepositoryAdap
     }
 
 
+    /*
+        Remove an object from repository by key synchronesly.
+        @param key Key
+    */
     override removeValueForkeySync(key: string): void {
         this.logger1.log("removeValueForkeySync: key=", key);
         localStorage.removeItem(generateStorageKey(key, this.prefix));
@@ -26,10 +30,16 @@ export class LocalStorageAdapterWithVersionsAndCategories extends RepositoryAdap
     
 }
 
+/**
+    Generate a key for local storage based on the key and the prefix.
+*/
 function generateStorageKey(key: string, prefix: string): string {
     return prefix + "-" + key;
 }
 
+/**
+ * Implementation of LocalStorageReader for local storage based key-value repository with versions and categories.
+ */
 export class LocalStorageReaderWithVersionsAndCategories<T> extends LocalStorageReader<T> {
     private prefix: string;
     private logger1: ILogger = LoggerFactory.getLogger("LocalStorageReaderWithVersionsAndCategories");
@@ -40,6 +50,11 @@ export class LocalStorageReaderWithVersionsAndCategories<T> extends LocalStorage
         this.logger1.log(" created for prefix=", this.prefix);
     }
 
+    /*
+        Read an object from repository by key synchronesly.
+        @param key Key
+        @returns Object or undefined
+    */
     override readSync(key: string): T | undefined {
         const generatedKey = generateStorageKey(key, this.prefix);
         const result = super.readSync(generatedKey);
@@ -50,6 +65,9 @@ export class LocalStorageReaderWithVersionsAndCategories<T> extends LocalStorage
 
 }
 
+/**
+ * Implementation of LocalStorageWriter for local storage based key-value repository with versions and categories.
+ */
 export class LocalStorageWriterWithVersionsAndCategories<T> extends LocalStorageWriter<T> {
     private prefix: string;
     private logger2: ILogger = LoggerFactory.getLogger("LocalStorageWriterWithVersionsAndCategories");
@@ -59,6 +77,12 @@ export class LocalStorageWriterWithVersionsAndCategories<T> extends LocalStorage
         this.prefix = categories.join("-") + "-v-" + version;
         this.logger2.log(" created for prefix=", this.prefix);
     }
+
+    /**
+     * Save an object to repository by key synchronesly.
+     * @param key key
+     * @param data data to be saved
+     */
 
     override saveSync(key: string, data: T): void {
         const generatedKey = generateStorageKey(key, this.prefix);

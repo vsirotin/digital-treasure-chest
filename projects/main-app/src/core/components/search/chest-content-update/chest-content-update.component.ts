@@ -39,6 +39,7 @@ export class ChetContentUpdateComponent implements ILocalizationClient<ISearchUI
   criteriaMap: ISearchEntry[];
 
   private localizer: ILocalizer;
+  private chest: Chest = Chest.instance;
 
   constructor() {
     this.localizer = LocalizerFactory.createLocalizer<ISearchUI>("assets/languages/core/components/search/chest-content-update/lang", 1, this.ui, this);
@@ -46,7 +47,7 @@ export class ChetContentUpdateComponent implements ILocalizationClient<ISearchUI
     this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
     this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
     
-    Chest.chestChanged$.subscribe((items: number[]) => {
+    this.chest.chestChanged$.subscribe((items: number[]) => {
       this.searchResultCardIsVisible = false;
     });
   }

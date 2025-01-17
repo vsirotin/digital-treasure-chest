@@ -1,51 +1,55 @@
 import { getMatFormFieldMissingControlError } from "@angular/material/form-field";
+import { LocalStorageAdapter } from "@vsirotin/keeper-master-data";
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { BehaviorSubject, Observable, Subject } from "rxjs";
 
 export class Chest {
 
-    static chestChanged$ = new Subject<number[]>();
-    private static logger: ILogger = LoggerFactory.getLogger("shared/classes/Chest");
-
+    static instance: Chest = new Chest();
     static maxCapacity: number = 10;
-    private static items: Set<number> = new Set<number>([]);
 
-    private constructor(){}
+    chestChanged$ = new Subject<number[]>();
+    private logger: ILogger = LoggerFactory.getLogger("shared/classes/Chest");
 
-    static getItems(): number[] {
+    private adapter: LocalStorageAdapter<number[]> = new LocalStorageAdapter<number[]>("chest", []);
+    
+    private items: Set<number> = new Set<number>([]);
+
+    private constructor(){
+
+    }
+
+    getItems(): number[] {
         return Array.from(this.items).sort((a, b) => a - b);
     }
 
-    static getFreeCapacity(): number {
-        return this.maxCapacity - this.items.size;
+    getFreeCapacity(): number {
+        return Chest.maxCapacity - this.items.size;
     }
 
-    static addItems(items: number[]): void {
-        if(Chest.getFreeCapacity() >= items.length) {
-            items.forEach(item => Chest.items.add(item));
+    addItems(items: number[]): void {
+        if(this.getFreeCapacity() >= items.length) {
+            items.forEach(item => this.items.add(item));
         } 
-        Chest.notifyNewState()
+        this.notifyNewState()
     }
 
-    static removeItems(items: number[]): void {
-        items.forEach(item => Chest.items.delete(item));
-        Chest.notifyNewState();
+    removeItems(items: number[]): void {
+        items.forEach(item => this.items.delete(item));
+        this.notifyNewState();
     }
 
-    static replaceCurrentItemsWithNew(items: number[]): void {
-        Chest.items.clear();
-        Chest.addItems(items);
-        Chest.notifyNewState();
+    replaceCurrentItemsWithNew(items: number[]): void {
+        this.items.clear();
+        this.addItems(items);
+        this.notifyNewState();
 
     }
 
 
-    private static notifyNewState() {
+    notifyNewState() {
         const newState = Array.from(this.items).sort((a, b) => a - b);
-        Chest.chestChanged$.next(newState);
-        Chest.logger.log(`New chest state: ${Array.from(this.items)}`);
+        this.chestChanged$.next(newState);
+        this.logger.log(`New chest state: ${Array.from(this.items)}`);
     }
-
-
-
 }
