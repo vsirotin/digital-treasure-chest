@@ -20,11 +20,12 @@ export class ReportComponent implements ILocalizationClient<IReportUI> {
 
   baseHref: string = environment.baseHref;
   private localizer: ILocalizer;
+  private chest: Chest = Chest.instance;
 
   constructor() { 
     this.localizer = LocalizerFactory.createLocalizer<IReportUI>("assets/languages/core/components/report/lang", 1, this.ui, this);
-    this.updateNumbers(Chest.getItems());
-    Chest.chestChanged$.subscribe((items: number[]) => {
+    this.updateNumbers(this.chest.getItems());
+    this.chest.chestChanged$.subscribe((items: number[]) => {
       this.updateNumbers(items);
     });
   }

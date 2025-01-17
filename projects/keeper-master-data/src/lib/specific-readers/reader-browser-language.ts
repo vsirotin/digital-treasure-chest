@@ -3,7 +3,7 @@ import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { RepositoryReaderSync } from "../i-repository-adapters";
 
 /**
- * Reads prefrable user's language in given browser.
+ * Reads prefrable user's language in current browser.
  */
 export class ReaderBrowserLanguage extends RepositoryReaderSync<string> {
 
@@ -15,7 +15,7 @@ export class ReaderBrowserLanguage extends RepositoryReaderSync<string> {
     }
 
     /**
-    * Reads prefrable user's language in given browser.
+    * Reads prefrable user's language in current browser.
     */
     override readSync(_: string): string  {
         const lang = navigator.language;

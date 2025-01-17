@@ -26,6 +26,7 @@ export class ChetContentViewComponent implements ILocalizationClient<IChetViewUI
   criteriaMap: ISearchEntry[];
 
   private localizer: ILocalizer;
+  private chest: Chest = Chest.instance
 
   constructor() { 
 
@@ -34,7 +35,7 @@ export class ChetContentViewComponent implements ILocalizationClient<IChetViewUI
     this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
     this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
    
-    Chest.chestChanged$.subscribe((items: number[]) => {
+    this.chest.chestChanged$.subscribe((items: number[]) => {
       this.listNumbersInTreasure = items;
       this.isClearButtonEnabled = items.length > 0;
     });
@@ -103,7 +104,7 @@ export class ChetContentViewComponent implements ILocalizationClient<IChetViewUI
   }
 
   clearChest() {
-    Chest.replaceCurrentItemsWithNew([]);
+    this.chest.replaceCurrentItemsWithNew([]);
   }
 
   generatePropertyString(criteria: string): string {

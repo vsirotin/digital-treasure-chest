@@ -2,7 +2,7 @@ import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { KeeperMasterDataSync } from "./i-keyed-keeper-master-data";
 import { RepositoryAdapterSync, RepositoryReaderSync, RepositoryWriterAsync, RepositoryWriterSync } from "./i-repository-adapters";
 /*
-    Implementation of IKeeperMasterDataKeyValue with key-value based data model.
+    Synchrone implementation of IKeeperMasterDataKeyValue with key-value based data model.
 */
 export class KeeperMasterDataKeyValueSync<T> extends KeeperMasterDataSync<T> {
 

@@ -2,7 +2,7 @@ import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { RepositoryAdapterSync, RepositoryReaderSync, RepositoryWriterSync } from "../../i-repository-adapters";
 
 /*
-    Implementation of RepositoryAdapter for local storage based key-value repository.
+    Implementation of Repository Reader for local storage based key-value repository.
 */
 export class LocalStorageReader<T> implements RepositoryReaderSync<T> {
     private logger: ILogger = LoggerFactory.getLogger("LocalStorageReader");
@@ -34,7 +34,7 @@ export class LocalStorageReader<T> implements RepositoryReaderSync<T> {
 }
 
 /*
-    Implementation of RepositoryWriter for local storage based key-value repository.
+    Implementation of Repository Writer for local storage based key-value repository.
 */
 export class LocalStorageWriter<T> implements RepositoryWriterSync<T> {
     private logger: ILogger = LoggerFactory.getLogger("LocalStorageWriter");
@@ -62,9 +62,10 @@ export class LocalStorageWriter<T> implements RepositoryWriterSync<T> {
 }
 
 /*
-    Implementation of RepositoryAdapter for local storage based key-value repository.
+    Internal implementation of RepositoryAdapter for local storage based key-value repository.
+    Not recomended to use directly. Use LocalStorageAdapter instead.
 */
-export class LocalStorageAdapter<T> extends RepositoryAdapterSync<T> {
+export class LocalStorageAdapterSync<T> extends RepositoryAdapterSync<T> {
 
     private logger1: ILogger = LoggerFactory.getLogger("LocalStorageAdapter");
 
@@ -73,8 +74,58 @@ export class LocalStorageAdapter<T> extends RepositoryAdapterSync<T> {
         this.logger1.log(" created");
     }
 
+    /*
+        Remove an object from repository by key synchronesly.
+        @param key Key
+    */
     override removeValueForkeySync(key: string): void {
         this.logger1.log("In removeValueForkeySync key=", key);
         localStorage.removeItem(key);
+    }
+}
+
+/*
+    Implementation of Repository Adapter for local storage based key-value repository.
+*/
+export class LocalStorageAdapter<T>  {
+
+    private logger: ILogger = LoggerFactory.getLogger("LocalStorageAdapter");
+
+    private implementation: LocalStorageAdapterSync<T> = new LocalStorageAdapterSync<T>();
+
+    constructor(private key: string, private defaultValue: T) {
+        this.logger.log(" created");
+    }
+
+    /**
+     * Read the value of the key given in the constructor
+     * @returns the value of the key
+     */
+    readValue(): T {
+        this.logger.log("In read key=", this.key);
+        const res = this.implementation.readSync(this.key);
+        if (res === undefined) {
+            this.logger.log("In read 1 key=", this.key, " res=undefined");
+            return this.defaultValue;
+        }
+        this.logger.log("In read 2 key=", this.key, " res=", res);
+        return res;
+    }
+
+    /**
+     * Save the value of the key given in the constructor
+     * @param value the value to be saved
+     */
+    saveValue(value: T): void {
+        this.logger.log("In save key=", this.key, " value=", value);
+        this.implementation.saveSync(this.key, value);
+    }
+
+    /**
+     * Remove the value of the key given in the constructor
+     */
+    removeValue(): void {
+        this.logger.log("In remove key=", this.key);
+        this.implementation.removeValueForkeySync(this.key);    
     }
 }

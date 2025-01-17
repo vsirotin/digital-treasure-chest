@@ -1,20 +1,18 @@
 import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { ReaderDefault } from "../specific-readers/reader-default";
 import { KeeperMasterDataKeyValueSync } from "../keeper-master-data-key-value-sync";
-import { LocalStorageAdapter } from "../specific-adapters/local-storage-adapter/local-storage-adapter";
+import { LocalStorageAdapterSync } from "../specific-adapters/local-storage-adapter/local-storage-adapter";
 import { ReaderBrowserLanguage } from "../specific-readers/reader-browser-language";
 
 
 /*
-    Keeper of KeeperMasterData for browser local storage with HTTP reader.
-    This keeper holds data in local storage. 
-    By finding it looks for the data in local storage and if it is not found it tries to find it in the HTTP repository.
+    Keeper of information about the current user language.
 */
 export class KeeperCurrentUserLanguage  {
 
     private loggger: ILogger = LoggerFactory.getLogger("KeeperCurrentUserLanguage");
     private keeperImpl: KeeperMasterDataKeyValueSync<string>;
-    private adapter: LocalStorageAdapter<string> = new LocalStorageAdapter<string>();
+    private adapter: LocalStorageAdapterSync<string> = new LocalStorageAdapterSync<string>();
 
     /**
      * Create a keeper master data with key-value based data model.
@@ -30,14 +28,25 @@ export class KeeperCurrentUserLanguage  {
         this.loggger.log(" created for ", key, " defaultData", defaultLanguageTag);
     }
 
+    /**
+     * Read the current language of the user from local storage.
+     * @returns the current language of the user
+     */
     readCurrentLang(): string   {
         return this.keeperImpl.findSync(this.key) as string;
     }
 
+    /**
+     * Write the current language of the user in local storage.
+     * @param lang the language to be saved
+     */
     writeCurrentLang(lang: string): void {
         this.keeperImpl.saveSync(this.key, lang);
     }
 
+    /**
+     * Remove the current language of the user from local storage.
+     */
     removeCurrentLang(): void {
         this.adapter.removeValueForkeySync(this.key);
     }

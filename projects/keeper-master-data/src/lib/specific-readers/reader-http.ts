@@ -2,7 +2,7 @@ import { ILogger, LoggerFactory } from "@vsirotin/log4ts";
 import { RepositoryReaderAsync } from "../i-repository-adapters";
 
 /*
-    Implementation of IReadOnlyRepositoryAdapter for HTTP-based key-value repository.
+    Implementation of Reader for HTTP-based key-value repository.
 */
 export class HTTPKeyValueRepositoryReader  extends RepositoryReaderAsync<Object> {
 

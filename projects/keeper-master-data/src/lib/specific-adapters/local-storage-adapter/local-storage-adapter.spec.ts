@@ -4,15 +4,16 @@ describe ('LocalStorageAdapter...', () => {
 
     let key: string;
     let adapter: LocalStorageAdapter<string>;
+    let defaultValue = "defaultValue";
 
     beforeEach(() => {
         key = "keyForTest";
-        adapter = new LocalStorageAdapter<string>();
+        defaultValue = "defaultValue";
+        adapter = new LocalStorageAdapter<string>(key, defaultValue);
         
     });
 
     afterEach(() => {
-        const value = localStorage.getItem(key);
         localStorage.removeItem(key);
     });
 
@@ -22,28 +23,35 @@ describe ('LocalStorageAdapter...', () => {
 
     it('should save and read string value', () => {
         const value = "valueForTest1";
-        adapter.saveSync(key, value);
-        expect(adapter.readSync(key)).toEqual(value);
+        adapter.saveValue(value);
+        expect(adapter.readValue()).toEqual(value);
     });
 
     it('should save and read object value', () => {
-        const value = {a: 1, b: "blabla"};
-        const adapter1 = new LocalStorageAdapter<{a: number, b: string}>();
-        adapter1.saveSync(key, value);
-        expect(adapter1.readSync(key)).toEqual(value);
+        const defaultValue = {a: 1, b: "blabla"};
+        const adapter1 = new LocalStorageAdapter<{a: number, b: string}>(key, defaultValue);
+        const value = {a: 1, b: "ax ox ax"};
+        adapter1.saveValue(value);
+        expect(adapter1.readValue()).toEqual(value);
+    });
+
+    it('should save and read object default value', () => {
+        const defaultValue = {a: 1, b: "blabla"};
+        const adapter1 = new LocalStorageAdapter<{a: number, b: string}>(key, defaultValue);
+        expect(adapter1.readValue()).toEqual(defaultValue);
     });
 
     it('should save value with in local storage', () => {
         const value = 'valueForTest2';
-        adapter.saveSync(key, value);
+        adapter.saveValue(value);
         expect(localStorage.getItem(key)).toEqual(value);
     });
 
     it('should remove value from local storage', () => {
         const value = "valueForTest3";
-        adapter.saveSync(key, value);
+        adapter.saveValue(value);
         expect(localStorage.getItem(key)).toEqual(value);
-        adapter.removeValueForkeySync(key);
+        adapter.removeValue();
         expect(localStorage.getItem(key)).toBeNull();
     });
 

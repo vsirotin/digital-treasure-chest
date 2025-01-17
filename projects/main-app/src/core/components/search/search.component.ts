@@ -34,11 +34,12 @@ export class SearchComponent implements ILocalizationClient<ISerachUI> {
   viewTitle: string = "";
 
   private localizer: ILocalizer;
+  private chest: Chest = Chest.instance;
 
   constructor() { 
     this.localizer = LocalizerFactory.createLocalizer<ISerachUI>("assets/languages/core/components/search/lang", 1, this.ui, this);
     this.updateViewTitle();
-    Chest.chestChanged$.subscribe((items: number[]) => {
+    this.chest.chestChanged$.subscribe((items: number[]) => {
       this.chetNumbers = items;
       this.updateViewTitle();
       if(items.length > 0) {
