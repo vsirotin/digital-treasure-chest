@@ -6,4 +6,6 @@ Before the needed information for a component in a specific natural language is 
 
 # Release Notes #
 
-1.0.3 Rebuild because new dependencies.
+## 1.0.3 Rebuild because new dependencies.
+
+## 1.0.4 Update of dependencies. Correction of deployment unit.

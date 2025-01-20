@@ -1,11 +1,11 @@
 {
   "name": "@vsirotin/localizer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0",
     "@vsirotin/log4ts": "^1.0.1",
-    "@vsirotin/keeper-master-data": "^2.0.1"
+    "@vsirotin/keeper-master-data": "^2.0.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"

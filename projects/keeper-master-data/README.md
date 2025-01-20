@@ -72,3 +72,5 @@ Major change
 
 1. The Specification of LocalStorageAdapter has been changed. This has been made less error-prone. 
 2. Documentation improvement. 
+
+## 2.0.2 Correction of deployment unit.
