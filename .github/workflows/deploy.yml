@@ -39,7 +39,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Configure npm authentication
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
@@ -53,8 +53,11 @@ jobs:
       - name: Verify Installed Packages
         run: npm list @vsirotin/localizer  
 
+      - name: List Installed Packages
+        run: npm list  
+
       - name: Build Angular App
-        run: npm run build main-app -- --configuration production
+        run: npm run build main-app -- --configuration production --verbose
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
