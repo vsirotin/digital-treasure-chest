@@ -50,6 +50,9 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Verify Installed Packages
+        run: npm list @vsirotin/localizer  
+
       - name: Build Angular App
         run: npm run build main-app -- --configuration production
 
