@@ -31,7 +31,37 @@ It contains some predefined readers, writers, adapters (combination of reader an
 - Keeper for user language
 
 ---
-Code examples please see in GitHub repository of project.
+
+Let's look at a typical web application situation. 
+For our components, master data is assigned that changes relatively rarely.  This cause, as well as a possibly bad connection, is the reason why it is worthwhile to store the master data locally (in the browser's LocalStorage). 
+For this we can use an existing class from our library:
+
+```JavaScript
+    keeper = new KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion(componentCoordinate, componentVersion);
+
+ ...
+    let result = await keeper.findAsync(key);           
+```
+Let's look at how this class is built internally:
+```JavaScript
+  
+    export class KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion<T> extends KeeperMasterDataKeyValueAsync<T> {
+
+    
+    constructor(componentCoordinate: string, componentVersion: number) {
+        super(new LocalStorageAdapterWithVersionsAndCategories(componentVersion, componentCoordinate), 
+        [new HTTPKeyValueRepositoryReader(componentCoordinate + "/" + componentVersion + "/")]);
+    }
+
+}
+```
+
+It is the chain of an adapter and a “half-adapter” (reader).
+
+You can build your own keepers based on this model. 
+
+---
+Other code examples please see in GitHub repository of project.
 
 ---
 # Relese Notes #
