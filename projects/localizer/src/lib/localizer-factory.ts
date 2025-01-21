@@ -17,5 +17,9 @@ export class LocalizerFactory {
       intialItems, 
       client);
   }
+
+  static getCurrentLanguageCode(): string {
+    return LocalizerFactory.languageChangeNotificator.getCurrentLanguageCode();
+  }
 }
 
