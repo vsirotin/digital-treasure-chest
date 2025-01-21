@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0",
-    "@vsirotin/log4ts": "^1.0.1"
+    "@vsirotin/log4ts": "^2.0.1"
   },
   "dependencies": {
     "tslib": "^2.3.0"

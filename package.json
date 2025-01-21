@@ -22,7 +22,7 @@
     "@angular/router": "^17.2.0",
     "@vsirotin/keeper-master-data": "^2.0.2",
     "@vsirotin/localizer": "^1.0.4",
-    "@vsirotin/log4ts": "^1.0.1",
+    "@vsirotin/log4ts": "^2.0.1",
     "rxjs": "~7.8.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

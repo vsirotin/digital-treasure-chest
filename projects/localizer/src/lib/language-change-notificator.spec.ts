@@ -1,6 +1,6 @@
 import { LanguageChangeNotificator } from './language-change-notificator';
 
-describe('LanguageSelectionNotificationService', () => {
+describe('LanguageChangeNotificator', () => {
   let service: LanguageChangeNotificator;
 
   beforeEach(() => {

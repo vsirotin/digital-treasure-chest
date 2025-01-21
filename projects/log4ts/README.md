@@ -1,6 +1,6 @@
 # Log4ts
 
-The Log4ts library makes it easy and more convenient than console.log etc. to output data about the operation of your TypeScript (e.g. Angular) application to the browser console, dynamically managing this output in real time.
+The Log4ts library makes it easy and more convenient than console.log etc. to output data about the operation of your TypeScript (e.g. Angular or Node.js) application to the browser console, dynamically managing this output in real time.
 In addition, using it allows you to easily build extensions, for example to redirect log data output to a file or forward it to another server.
 
 ## Requirements
@@ -32,18 +32,16 @@ So, the first rule is that instead of calling the functions of this object, just
 this.logger.error(...)
 ```
 
-Of course, it must be declared before doing this. In our case, we should do it using the ILogger interface:
+Of course, it must be created before doing this. In our case, we should do it using the ILogger interface:
 ```
-logger : ILogger
+logger = LoggerFactory.getLogger('MyClass');
 ```
-
-This will allow you to replace one implementation with another later, if necessary, without rewriting the body of your class. 
-
-Of course, in order for this to work, you need to have a class that implements the ILogger interface and bind an instance of that class to our logger element. The "main" class of our library, Log4ts, is well suited for this purpose. 
+The parameter in this call means the id by which your logger will be searched for among its factory-created counterparts. In big application it is recomended (but not necessary) to use the path to your class in the project directory with source code for this purpose:
 
 ```
-logger = new Log4ts() 
+logger = LoggerFactory.getLogger('shared/classes/MyClass');
 ```
+
 
 Unlike similar console calls, after the above method of creation, our class will output only calls from error and warn, and ignore the rest, for example debug. This solution seems to me more pragmatic if your project has many classes with built-in logging.
 But sometimes, especially at the development stage, you need to log not only information about errors and warnings, but also other information.
@@ -59,27 +57,16 @@ What other information? - Log4ts provides the following levels of logging based 
 
 **4** and more - all calls are ignored. 
 
-To change the logging level on the fly, you need to call the setLogLevel(...) class function. For example, to disable logging completely:
+To change the logging level on the fly, you need to call the setLogLevel(...) class function. For example, to enable output of all logging calls:
 ```
 logger.setLogLevel(0);
 ```
 
-But you can set the logging level already when creating an instance of the class: 
-```
-logger = new Log4ts(0);
-```
-It is convenient to change the logging level by changing a line in the source text at the development stage. This cannot be done at the operation stage. Besides, at this stage you would like to be able to change the logging level for individual classes or groups of classes. 
+Next, using text filters, you can dynamically switch the logging level in your classes. 
 
-To achieve this, you will need to change the way you create loggers in your project's classes, namely by using a factory: 
+For example, the example below allows you to turn off logging for all loggers with 'shared/classes/M' in ID, also our defined above class:
 ```
-logger = LoggerFactory.getLogger('x/y/z');
-```
-
-The text parameter in this call means the id by which your logger will be searched for among its factory-created counterparts. It is easiest (but not necessary) to use the path to your class in the project directory with source code for this purpose. 
-
-Next, using text filters, you can dynamically switch the logging level in your classes. For example, the example below allows you to turn off logging for all loggers in all directories ending in b/c (in case you chose the recommended approach to setting logger IDs above):
-```
-LoggerFactory.setLogLevel('*b/c', 0);
+LoggerFactory.setLogLevel('*'shared/classes/M*', 0);
 ```
 The asterisks in the search string can be at the beginning or end of the search pattern. 
 
@@ -95,5 +82,9 @@ The table below shows the different uses of the lookup pattern (listed in the fi
 You can find out further details of the library usage if you look through the texts of the library's tests in the file yourself: 
 https://github.com/vsirotin/communist-web-shop/blob/be1c3b21234f83c3e54d816d9ae0c40b1c38e8a9/projects/log4ts/src/lib/logger.spec.ts
 
-*I should note that Log4ts is the first, relatively finished part of the project. So don't be surprised by the relative emptiness of its other components.*  
+In big web application you probably need to develop some UI component to manage loggin in runtime (e.g. to support of end users). The application  https://github.com/vsirotin/communist-web-shop/blob/70a8bf069c2cfd4626b9de43e36aea35b6eda570/projects/main-app shows an example of such UI (component https://github.com/vsirotin/communist-web-shop/blob/5947b666295c010415b5742ede6c5e3850d72006/projects/main-app/src/shared/components/log-setting)
 
+# Release Notes # 
+
+## 2.0.1 # 
+Interface consolidation and documentation improvement.
