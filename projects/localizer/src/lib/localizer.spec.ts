@@ -29,6 +29,12 @@ describe('Localizer...', () => {
 
   let subsciption1: Subscription;
 
+  let defaultNavigationLanguage: string;
+
+  beforeAll(() => {
+    defaultNavigationLanguage = navigator.language;
+  });
+
   afterEach(() => {
     localStorage.clear();
     localizationClient?.destuctor();
@@ -37,6 +43,8 @@ describe('Localizer...', () => {
     if(subsciption1) {
       subsciption1.unsubscribe();
     }
+
+    LocalizerFactory.languageChangeNotificator.selectionChanged(defaultNavigationLanguage);
   });
 
 it('client should be created', () => {

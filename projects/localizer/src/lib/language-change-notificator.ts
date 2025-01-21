@@ -2,9 +2,25 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { KeeperCurrentUserLanguage } from '@vsirotin/keeper-master-data';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 
+/**
+ * Interface for language change notificator.
+ */
 export interface ILanguageChangeNotificator {
+  /**
+   * Observable for language change.
+   */
   selectionChanged$: Observable<ILanguageDescription>;
+
+  /**
+   * Set new language code.
+   * @param ietfTag New language code (ietf tag).
+   */
   selectionChanged(ietfTag: string|null|undefined): void;
+
+  /**
+   * Get current language code (ietf tag).
+   */
+  getCurrentLanguageCode(): string;
 }
 
 export interface ILanguageDescription {
@@ -13,8 +29,8 @@ export interface ILanguageDescription {
   ietfTag: string;
 }
 
-export const DEFAULT_LANG_TAG = "en-US";
-export const DEFAULT_LANG_DESCRIPTION: ILanguageDescription = { "enName": "English", "originalName": "English", "ietfTag": DEFAULT_LANG_TAG };
+const DEFAULT_LANG_TAG = "en-US";
+const DEFAULT_LANG_DESCRIPTION: ILanguageDescription = { "enName": "English", "originalName": "English", "ietfTag": DEFAULT_LANG_TAG };
 
 export const SupportedLanguages: Array<ILanguageDescription> = [
   { "enName": "Arabic", "originalName": "العربية", "ietfTag": "ar-SA" },
@@ -65,6 +81,7 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
   private subject: BehaviorSubject<ILanguageDescription>;
   selectionChanged$ : Observable<ILanguageDescription>;
   private logger: ILogger = LoggerFactory.getLogger("LanguageChangeNotificator");
+  private defaultLanguageDescription = DEFAULT_LANG_DESCRIPTION;
 
   constructor() {
     const keepedLangTag = this.keeperCurrentLanguageTag.readCurrentLang();
@@ -74,27 +91,69 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
     this.selectionChanged$ = this.subject.asObservable();
     this.logger.log(" created. Current language is: ",currentLanguageDescription.enName);
   }
+  getCurrentLanguageCode(): string {
+    let currentLanguage = this.keeperCurrentLanguageTag.readCurrentLang();
+    this.logger.log("In getCurrentLanguageCode 1 current language: ", currentLanguage);
+    if(currentLanguage == null) {
+      if((navigator != null) && (navigator.language != null)) {
+        currentLanguage = navigator.language;
+        if(this.isLanguageSupported(currentLanguage)) {
+
+        this.keeperCurrentLanguageTag.writeCurrentLang(currentLanguage);
+        this.logger.log("In getCurrentLanguageCode 2 current language is null. Setting current language to navigator language: ", currentLanguage);
+        return currentLanguage;
+        }
+      }
+      this.logger.warn("In getCurrentLanguageCode 3 current language is null. Returning default language.");
+      currentLanguage = this.getDefaultLanguageTag();
+    }
+    this.logger.log("In getCurrentLanguageCode 4 returning current language: ", currentLanguage);
+    return currentLanguage;
+  }
 
   selectionChanged(ietfTag: string|null|undefined): void {
     this.logger.log("selectionChanged called with ietfTag: ", ietfTag);
     const selectedLanguage = this.getLanguageDescriptionForIetfTag(ietfTag);
-    this.keeperCurrentLanguageTag.writeCurrentLang(selectedLanguage.ietfTag);
+    if(this.isLanguageSupported(ietfTag)) {
+      this.logger.log("selectionChanged 1 selected language is supported and saved: ", selectedLanguage.enName);
+      this.keeperCurrentLanguageTag.writeCurrentLang(selectedLanguage.ietfTag);
+    }
+    //If language not supported, default language will be notificated.
     this.subject.next(selectedLanguage);
   }
 
   private getLanguageDescriptionForIetfTag(ietfTag: string|null|undefined ): ILanguageDescription {
-    let res = DEFAULT_LANG_DESCRIPTION;
-    if ((ietfTag == null) || (ietfTag == undefined)) {
-      this.logger.warn("In getLanguageDescriptionForIetfTag  language tag is null or undefined. Returning default language.");
+    let res = this.defaultLanguageDescription;
+    if (ietfTag == null) {
+      this.logger.warn("In getLanguageDescriptionForIetfTag 1 language tag ",
+        ietfTag, " is null or undefined. Returning default language description .", res);
       return res;
     }
     let res1 = SupportedLanguages.filter((lang) => lang.ietfTag == ietfTag)[0];
-    if (res1 == undefined)  {
-      this.logger.warn("In getLanguageDescriptionForIetfTag result of filtering is undefined. Returning default language.");
+    if (res1 == null)  {
+      this.logger.warn("In getLanguageDescriptionForIetfTag 2 result of filtering for ietfTag ", 
+          ietfTag, " is null or undefined. Returning default language description.", res);
       return res;
     }
-    this.logger.log("In getLanguageDescriptionForIetfTag returning language: ", res1.enName);
+    this.logger.log("In getLanguageDescriptionForIetfTag 3 returning language: ", res1.enName);
     return res1;
+  }
+
+  isLanguageSupported(ietfTag: string|null|undefined): boolean {
+    let res = SupportedLanguages.filter((lang) => lang.ietfTag == ietfTag);
+    return res.length > 0;
+  }
+
+  getDefaultLanguageDescription(): ILanguageDescription {
+    return this.defaultLanguageDescription;
+  }
+
+  getDefaultLanguageTag(): string {
+    return this.defaultLanguageDescription.ietfTag;
+  }
+
+  setDefaultLanguageDescription(lang: ILanguageDescription): void {
+    this.defaultLanguageDescription = lang;
   }
 
 }
