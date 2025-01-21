@@ -48,10 +48,7 @@ jobs:
         run: npm cache clean --force
 
       - name: Install Dependencies
-        run: npm install
-
-      - name: Verify Installed Packages
-        run: npm list @vsirotin/localizer  
+        run: npm install --force
 
       - name: List Installed Packages
         run: npm list  
