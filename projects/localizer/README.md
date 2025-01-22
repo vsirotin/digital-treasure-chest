@@ -9,7 +9,7 @@
 
 **Localizer** (this TypeScript library) supports localization  in web applications.
 
-How it works in the case of 30 mostly used in Internet languages, you can see in [demo application](https://vsirotin.github.io/digital-treasure-chest/). Its code you can see [hear](https://github.com/vsirotin/communist-web-shop/blob/70a8bf069c2cfd4626b9de43e36aea35b6eda570/projects/main-app).
+How it works in the case of 30 mostly used in Internet languages, you can see in [demo application](https://vsirotin.github.io/digital-treasure-chest/). Its code you can see [here](https://github.com/vsirotin/communist-web-shop/blob/70a8bf069c2cfd4626b9de43e36aea35b6eda570/projects/main-app).
 
 ## Architectural Overview of Localizer
 
