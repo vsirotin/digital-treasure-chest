@@ -1,10 +1,10 @@
 
     <div class="scrollable-container" [ngStyle]="{'background-image': 'url(' + baseHref + 'assets/images/certificate.png)'}"> 
-        @if (!numbersIsEmpty){
+        @if (!numbersIsEmpty){            
             <p class="common-text centered-header">{{ui.sertificate}}</p>
             <p class="centered-text1 common-text">{{ui.line1}}</p>
             <p class="centered-text2 common-text">{{ui.line2}}</p>
-            <p class="centered-text3 common-text">{{ui.line3}}</p>
+            <p class="common-text">{{ui.line3}}</p>
             <p class="common-text numbers">{{numbers}}</p>
             <p class="common-text sigtanture">{{ui.signature}}</p>
         }@else {

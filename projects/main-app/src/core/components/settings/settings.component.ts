@@ -61,6 +61,7 @@ export class SettingsComponent implements  OnDestroy, ILocalizationClient<UIItem
       (languageDescription: ILanguageDescription) => {
         this.langOrigin = languageDescription.originalName;
         this.langEn = languageDescription.enName;
+        this.accordion?.closeAll();
     }); 
   }
 

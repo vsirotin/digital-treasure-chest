@@ -4,7 +4,7 @@
   </mat-card-header>
   <mat-accordion class="settings-headers-align" multi>
     <mat-expansion-panel>
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header #languagePanel>
         <mat-panel-title>
           <mat-icon>language</mat-icon>
           {{ui.language}}:
@@ -31,7 +31,7 @@
     </mat-expansion-panel>
   </mat-accordion>
   <mat-card-footer>
-    <p>{{version}}</p>
+    <p class="version">{{version}}</p>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   </mat-card-footer>
 </mat-card>
