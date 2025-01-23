@@ -46,7 +46,7 @@ interface IUIMainLanguageRelevantItems {
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
-export class MainComponent implements OnInit, OnDestroy, ILocalizationClient<IMainUI> {
+export class MainComponent implements  OnDestroy, ILocalizationClient<IMainUI> {
   @ViewChild('snav') snav!: MatSidenavModule;
 
   private subscriptionBtnClicked: Subscription;
@@ -74,6 +74,7 @@ export class MainComponent implements OnInit, OnDestroy, ILocalizationClient<IMa
    private titleService: Title) {
     this.localizer = LocalizerFactory.createLocalizer<IMainUI>(MAIN_SOURCE_DIR, 1, this.ui, this);
     this.logger.log("Start of constructor");
+    this.logger.setLogLevel(0);
 
     this.titleService.setTitle(this.ui.title); 
 
@@ -92,12 +93,13 @@ export class MainComponent implements OnInit, OnDestroy, ILocalizationClient<IMa
     this.titleService.setTitle(this.ui.title); 
   }
 
-  async ngOnInit() {
-    this.logger.debug("Start of ngOnInit");
-    this.logger.debug("End of ngOnInit");
-    const isLargeScreen = this.breakpointObserver.isMatched('(min-width: 600px)');
-    this.logger.log("ngOnInit", "isLargeScreen=", isLargeScreen);
-    this.isShowing = isLargeScreen;
+  ngAfterViewInit() {
+    // Ensure the sidenav is opened after initialization
+    setTimeout(() => {
+      const isLargeScreen = this.breakpointObserver.isMatched('(min-width: 600px)');
+      this.logger.log("ngAfterViewInit ", "isLargeScreen=", isLargeScreen);
+      this.isShowing = isLargeScreen;
+    }, 1);
   }
 
   selectMenuItem(id: string) {
