@@ -34,12 +34,18 @@ export class ChetContentViewComponent implements ILocalizationClient<IChetViewUI
 
     this.criteriaPrefix = this.numberPropertiesNameHolder.getCriteriaPrefix();
     this.criteriaMap = this.numberPropertiesNameHolder.getCriteriaIndexedList();
+
+    this.updateView(this.chest.getItems());
    
     this.chest.chestChanged$.subscribe((items: number[]) => {
-      this.listNumbersInTreasure = items;
-      this.isClearButtonEnabled = items.length > 0;
+      this.updateView(items);
     });
   }
+  private updateView(items: number[]) {
+    this.listNumbersInTreasure = items;
+    this.isClearButtonEnabled = items.length > 0;
+  }
+
   updateLocalization(data: IChetViewUI): void {
     this.ui = data;
 

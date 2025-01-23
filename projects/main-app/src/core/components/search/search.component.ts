@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewChild, OnInit } from '@angular/core';
 import { MatAccordion, MatExpansionModule, MatExpansionPanel} from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
@@ -25,8 +25,9 @@ import { ILocalizationClient, ILocalizer, LocalizerFactory } from '@vsirotin/loc
   styleUrl: './search.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchComponent implements ILocalizationClient<ISerachUI> {
+export class SearchComponent implements ILocalizationClient<ISerachUI>, OnInit {
   @ViewChild('viewPanel') viewPanel!: MatExpansionPanel;
+  @ViewChild('updatePanel')  updatePanel!: MatExpansionPanel;
 
   ui: ISerachUI = (uiDefault as any).default;
 
@@ -38,15 +39,38 @@ export class SearchComponent implements ILocalizationClient<ISerachUI> {
 
   constructor() { 
     this.localizer = LocalizerFactory.createLocalizer<ISerachUI>("assets/languages/core/components/search/lang", 1, this.ui, this);
+    this.chetNumbers = this.chest.getItems();;
     this.updateViewTitle();
     this.chest.chestChanged$.subscribe((items: number[]) => {
-      this.chetNumbers = items;
+      
       this.updateViewTitle();
-      if(items.length > 0) {
-        this.viewPanel.open();
-      }
+      this.chetNumbers = items;
+      this.updatePanels();
     });
+
+    const items = this.chest.getItems();
+    //this.updatePanels(items);
   }
+
+    ngOnInit() {
+    //  this.updatePanels();
+    }
+
+  ngAfterViewInit() {
+      // Ensure the sidenav is opened after initialization
+      setTimeout(() => {
+        this.updatePanels();
+      }, 1);
+    }  
+
+  private updatePanels() {
+    if (this.chetNumbers.length > 0) {
+      this.viewPanel.open();
+    } 
+    this.updatePanel.open();
+    
+  }
+
   updateLocalization(data: ISerachUI): void {
     this.ui = data;
     this.updateViewTitle();

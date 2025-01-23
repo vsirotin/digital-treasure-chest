@@ -55,7 +55,10 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "scripts": [
+                "pre-build.js"
+              ]
             }
           },
           "defaultConfiguration": "production"
