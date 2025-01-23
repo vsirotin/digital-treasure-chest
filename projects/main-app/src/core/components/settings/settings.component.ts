@@ -11,6 +11,7 @@ import { LogSettingComponent } from "../../../shared/components/log-setting/log-
 import { LocalizerFactory, ILocalizer, ILocalizationClient, ILanguageDescription } from '@vsirotin/localizer';
 import { Subscription } from 'rxjs';
 import * as uiItems from '../../../assets/languages/features/components/settings/lang/1/en-US.json';
+import * as versionInfo from '../../../version.json'
 
 export const SETTINGS_SOURCE_DIR = "assets/languages/features/components/settings/lang";
 
@@ -50,6 +51,7 @@ export class SettingsComponent implements  OnDestroy, ILocalizationClient<UIItem
 
   ui: UIItems = (uiItems as any).default;
   subscription: Subscription;
+  version: string = "v " + versionInfo.version + " - " + versionInfo.buildDate;
 
   constructor( ) {
     this.logger.debug("Start of SettingsComponent.constructor");  

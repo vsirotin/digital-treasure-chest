@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "prebuild:main-app:development": "node pre-build.js",
+    "build:main-app:development": "ng build main-app --configuration development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -40,6 +42,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^17.3.0",
+    "ts-unused-exports": "^11.0.1",
     "typescript": "^5.4.5"
   }
 }
