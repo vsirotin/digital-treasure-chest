@@ -1,5 +1,13 @@
 # Keeper for Master Data
 
+[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
+
+[![npm](https://img.shields.io/npm/v/@vsirotin/keeper-master-data?sort=semver&logo=npm)](https://www.npmjs.com/package/@vsirotin/keeper-master-data)
+[![npm type definitions](https://img.shields.io/npm/types/v-github-icon?logo=typescript)](https://github.com/vinayakkulkarni/v-github-icon/blob/main/package.json)
+
+[![npm](https://img.shields.io/npm/dt/@vsirotin/keeper-master-data?logo=npm)](http://npm-stat.com/charts.html?package=@vsirotin/keeper-master-data)
+[![npm](https://img.shields.io/npm/dw/@vsirotin/keeper-master-data?logo=npm)](http://npm-stat.com/charts.html?package=@vsirotin/keeper-master-data)
+
 ## Description ##
 This TypeScript library supports the use and management of master data in web applications.
 

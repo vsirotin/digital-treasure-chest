@@ -1,7 +1,16 @@
 # Log4ts
 
+[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
+
+[![npm](https://img.shields.io/npm/v/@vsirotin/log4ts?sort=semver&logo=npm)](https://www.npmjs.com/package/@vsirotin/log4ts)
+[![npm type definitions](https://img.shields.io/npm/types/v-github-icon?logo=typescript)](https://github.com/vinayakkulkarni/v-github-icon/blob/main/package.json)
+
+[![npm](https://img.shields.io/npm/dt/@vsirotin/log4ts?logo=npm)](http://npm-stat.com/charts.html?package=@vsirotin/log4ts)
+[![npm](https://img.shields.io/npm/dw/@vsirotin/log4ts?logo=npm)](http://npm-stat.com/charts.html?package=@vsirotin/log4ts)
+
+
 The Log4ts library makes it easy and more convenient than console.log etc. to output data about the operation of your TypeScript (e.g. Angular or Node.js) application to the browser console, dynamically managing this output in real time.
-In addition, using it allows you to easily build extensions, for example to redirect log data output to a file or forward it to another server.
+
 
 ## Requirements
 
