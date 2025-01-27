@@ -16,7 +16,7 @@ Thirdly, a demonstration of the master data management library.
 
 You can see how this idea turned out [here](https://vsirotin.github.io/digital-treasure-chest/).
 
-All projects are written on [![npm type definitions](https://img.shields.io/npm/types/v-github-icon?logo=typescript)](https://github.com/vinayakkulkarni/v-github-icon/blob/main/package.json) and can be used and are licensed under the [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0).
+All projects are written on [![npm type definitions](https://img.shields.io/npm/types/v-github-icon?logo=typescript)](https://github.com/vinayakkulkarni/v-github-icon/blob/main/package.json) and are licensed under the [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0).
 
 This project contains already published projects and subprojects, and subprojects in development. 
 

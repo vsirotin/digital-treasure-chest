@@ -74,7 +74,6 @@ export class MainComponent implements  OnDestroy, ILocalizationClient<IMainUI> {
    private titleService: Title) {
     this.localizer = LocalizerFactory.createLocalizer<IMainUI>(MAIN_SOURCE_DIR, 1, this.ui, this);
     this.logger.log("Start of constructor");
-    this.logger.setLogLevel(0);
 
     this.titleService.setTitle(this.ui.title); 
 

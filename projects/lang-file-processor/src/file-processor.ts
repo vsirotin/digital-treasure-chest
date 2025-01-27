@@ -5,24 +5,23 @@ import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 
 export class FileProcessor {
   private listPath?: string;
-  private logger: ILogger = LoggerFactory.getLogger('FileProcessor');
+  private logger: ILogger = LoggerFactory.getLogger('eu.sirotin.lfp.FileProcessor');
   private mapLangToObject = new Map<string, Object>();
   private exampleObject? : Object
 
   constructor(listPath?: string) {
-    this.logger.setLogLevel(1);
-    this.logger.log('FileProcessor created. List path:', listPath);
+    this.logger.log('constructor: FileProcessor created. List path:', listPath);
     this.listPath = listPath;
   }
 
   public processFile(filePath: string, outputDir: string): void {
     if (!this.alyseSyntax(filePath)) {
-      this.logger.error('ERROR 100: Syntax analysis failed.');
+      this.logger.error('In processFile. ERROR 100: Syntax analysis failed.');
       return;
     }
 
     if (this.listPath && !this.compareLanguageCodes()) {
-      this.logger.error('ERROR 200: Language code comparison failed.');
+      this.logger.error('In processFile. ERROR 200: Language code comparison failed.');
       return;
     }
 

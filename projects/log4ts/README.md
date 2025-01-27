@@ -9,30 +9,21 @@
 [![npm](https://img.shields.io/npm/dw/@vsirotin/log4ts?logo=npm)](http://npm-stat.com/charts.html?package=@vsirotin/log4ts)
 
 
-The Log4ts library makes it easy and more convenient than console.log etc. to output data about the operation of your TypeScript (e.g. Angular or Node.js) application to the browser console, dynamically managing this output in real time.
+The Log4ts library is inspiared by famous logging library Log4J. It makes it easy and more convenient than browser's console a output data about the operation of your TypeScript (e.g. Angular or Node.js) application to the browser console and enables dynamically managing this output in real time.
 
 
 ## Requirements
 
-The creators of the TypeScript language, like the creators of most other programming languages, did not think about the fact that users of their language would need to search for errors, improve and debug TypeScript-written programs with the help of logging. That's why TypeScript at birth was given only the console.log function and its sisters to output errors, warnings, and other information from JavaScript.
+The creators of the TypeScript language, like the creators of most other programming languages, did not think about the fact that users of their language would need to search for errors, improve and debug TypeScript-written programs with the help of logging. That's why TypeScript at birth was given only the console functions to output errors, warnings, and other information from JavaScript.
 
 This may be sufficient in relatively simple applications, but in complex applications, and even more so in enterpreise applications running both in the browser and on the server, it turns out to be insufficient.
 
 Naive use of these features presents a dilemma. If a developer used them extensively in his code, he will end up with so many lines in his console that it will be extremely difficult to deal with them. If the use of console functions is minimized, they will certainly be insufficient in finding some problems.
 
-The solution to this problem has long been found in other programming languages, for example, in Java, but not at the level of the language itself, but at the level of external libraries. And the solution is obvious: you should be able to manage the output of logging functions in real time. 
+The solution to this problem has long been found in other programming languages, for example, in Java, but not at the level of the language itself, but at the level of external libraries (e.g. Log4J). And the solution is obvious: you should be able to manage the output of logging functions in runtime. 
 
-It would be desirable to avoid the problems that Java went through in its development when many competing and incompatible logging systems were created. If you use foreign libraries with different logging systems in your project, you get an additional headache on the spot. 
+## How to use it?
 
-The Java development community finally solved this problem by agreeing on an interface that all future logging libraries must support.
-
-And the last important requirement that I tried to realize in the described library is that simple things should be simple, and more complicated things should be ... as simple as possible. 
-
-It would seem to be an obvious requirement. But I have experienced more than once that before you can use the simplest function of this or that library, you somehow have to perform a lot of strange rituals. 
-
-## How to use it
-
-How are the above requirements implemented specifically? How to use the library?
 
 If you've programmed in TypeScript or JavaScript before, you've probably already used the functions of the console object built into JavaScript, for example - console.error(...) and know about the logging levels it provides (error, warning, log, debug).
 So, the first rule is that instead of calling the functions of this object, just put functions with the same names from a member of your class, let's call it logger. 
@@ -41,22 +32,32 @@ So, the first rule is that instead of calling the functions of this object, just
 this.logger.error(...)
 ```
 
+## How to create it?
+
 Of course, it must be created before doing this. In our case, we should do it using the ILogger interface:
 ```
 logger = LoggerFactory.getLogger('MyClass');
 ```
-The parameter in this call means the id by which your logger will be searched for among its factory-created counterparts. In big application it is recomended (but not necessary) to use the path to your class in the project directory with source code for this purpose:
+The parameter in this call means the id by which your logger will be searched for among its factory-created counterparts. In big application it is recomended (but not necessary) to use common naiming convention:
+
+DOMEN.PROJECT.CLASS(COMPONENT).
+
+like:
 
 ```
-logger = LoggerFactory.getLogger('shared/classes/MyClass');
+logger = LoggerFactory.getLogger('com.example.my-project.MyClass');
 ```
 
+## How to configure it by development?
 
-Unlike similar console calls, after the above method of creation, our class will output only calls from error and warn, and ignore the rest, for example debug. This solution seems to me more pragmatic if your project has many classes with built-in logging.
+Unlike similar console calls, after the above method of creation, our class will by default output only calls from error and warn, and ignore the rest, for example log or debug. 
+
+This solution seems to me more pragmatic if your project has many classes with built-in logging.
+
 But sometimes, especially at the development stage, you need to log not only information about errors and warnings, but also other information.
 What other information? - Log4ts provides the following levels of logging based on their severity:
 
-**0** or negative number - all information from all class function calls (error, warn, log and debug) is output,
+**0** or negative number - all information types (error, warn, log and debug) is output,
 
 **1** - only error, warn and log,
 
@@ -73,27 +74,90 @@ logger.setLogLevel(0);
 
 Next, using text filters, you can dynamically switch the logging level in your classes. 
 
-For example, the example below allows you to turn off logging for all loggers with 'shared/classes/M' in ID, also our defined above class:
+For example, the example below allows you to turn off logging for all loggers with 'com.example.my-project.M' in ID, also our defined above class:
 ```
-LoggerFactory.setLogLevel('*'shared/classes/M*', 0);
+LoggerFactory.setLogLevel('*com.example.my-project.M*', 0);
 ```
 The asterisks in the search string can be at the beginning or end of the search pattern. 
 
-The table below shows the different uses of the lookup pattern (listed in the first row of the table) for the three identifiers listed in the first column of the table. 
+The table below shows the different uses of the searched sub-pathes (listed in the first row of the table) for the three identifiers listed in the left column of the table. 
 
-| path  | *b/c | a* | *b* | e/b/c | x/y/z | * |
-|-------|------|----|-----|-------|-------|---|
-| a/b/c | +    | +  | +   |   -   | -     | + |
-| a/d/c | -    | +  | +   |   -   | -     | + |
-| e/b/c | +    | -  | +   |   +   | -     | + |
+| sub-path  | *b/c | a* | *b* | e/b/c | x/y/z | * |
+|-----------|------|----|-----|-------|-------|---|
+| a/b/c     | +    | +  | +   |   -   | -     | + |
+| a/d/c     | -    | +  | +   |   -   | -     | + |
+| e/b/c     | +    | -  | +   |   +   | -     | + |
 
 
-You can find out further details of the library usage if you look through the texts of the library's tests in the file yourself: 
-https://github.com/vsirotin/communist-web-shop/blob/be1c3b21234f83c3e54d816d9ae0c40b1c38e8a9/projects/log4ts/src/lib/logger.spec.ts
+You cam also to set a some log level in all loggers of your projects like:
 
-In big web application you probably need to develop some UI component to manage loggin in runtime (e.g. to support of end users). The application  https://github.com/vsirotin/communist-web-shop/blob/70a8bf069c2cfd4626b9de43e36aea35b6eda570/projects/main-app shows an example of such UI (component https://github.com/vsirotin/communist-web-shop/blob/5947b666295c010415b5742ede6c5e3850d72006/projects/main-app/src/shared/components/log-setting)
+```javascript
+LoggerFactory.setLogLevelsByAllLoggers(1);
+```
+and reset default level (2) with
 
-# Release Notes # 
+```javascript
+LoggerFactory.recetDefaults();
+```
 
-## 2.0.1 # 
+In some special cases, such as when debugging a project, where multiple logging approaches are shared, you may want to destroy all loggers from Log4ts until the end of the session. This can be done by calling
+
+```javascript
+LoggerFactory.clearAllLoggers();
+```
+
+
+You can find out further details of the library usage if you look through the texts of the library's tests [for Logger](https://github.com/vsirotin/communist-web-shop/blob/be1c3b21234f83c3e54d816d9ae0c40b1c38e8a9/projects/log4ts/src/lib/logger.spec.ts) and [for Loggerfactory](https://github.com/vsirotin/communist-web-shop/blob/be1c3b21234f83c3e54d816d9ae0c40b1c38e8a9/projects/log4ts/src/lib/logger.spec.ts) 
+
+## How to configure it in production (runtime)?
+
+To manage loggers in runtime (e.g. for end-user support purposes), you need to be able to call LoggerFactory functions from some of your UI components. 
+
+The [demo-application](https://vsirotin.github.io/digital-treasure-chest/) shows [an example of such UI component](https://github.com/vsirotin/communist-web-shop/blob/5947b666295c010415b5742ede6c5e3850d72006/projects/main-app/src/shared/components/log-setting)
+
+## Best Practices
+
+Especially when creating libraries and shared components, given that logging can be done from many components at once, I recommend that for better readability and understandability of logs, you use classical name conventions by creating the loggers:
+
+DOMAIN.PROJECT.CLASS(COMPONENT). 
+
+In the present implementation the displaying the address of the logging point is unusefull, since the output is ultimately done by calling browser console functions.  Therefore, we recommend specifying the logging point explicitly by specifying the name of the function being logged.
+
+If your function contains several logger calls with the same level, it is recommended to distinguish these calls either by introductory texts or with some numbers.
+
+Here is an example of how to create a logger by considering the naming convention, specifying the function being logged, and distinguishing between loggers within the same function:
+
+```javascript
+export class FileProcessor {
+...
+  private logger: ILogger = LoggerFactory.getLogger('eu.sirotin.lfp.FileProcessor');
+...
+
+  constructor(listPath?: string) {
+    ...
+    this.logger.log('constructor: FileProcessor created. List path:', listPath);
+
+  }
+
+  public processFile(filePath: string, outputDir: string): void {
+    if (!this.alyseSyntax(filePath)) {
+      this.logger.error('In processFile. ERROR 100: Syntax analysis failed.');
+      return;
+    }
+    ...
+
+    if (this.listPath && !this.compareLanguageCodes()) {
+      this.logger.error('In processFile. ERROR 200: Language code comparison failed.');
+      return;
+    }
+...
+  }
+```  
+
+## Release Notes # 
+
+### 2.0.1 
 Interface consolidation and documentation improvement.
+
+### 2.0.2
+Testing and documentation improvenment. 
