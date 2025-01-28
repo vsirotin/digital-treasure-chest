@@ -15,7 +15,7 @@ export class FileProcessor {
   }
 
   public processFile(filePath: string, outputDir: string): void {
-    if (!this.alyseSyntax(filePath)) {
+    if (!this.analyzeLanguageFileSyntax(filePath)) {
       this.logger.error('In processFile. ERROR 100: Syntax analysis failed.');
       return;
     }
@@ -48,7 +48,8 @@ export class FileProcessor {
  * 
  * @param inputFilePath - The path to the input file.
  */
-alyseSyntax(inputFilePath: string): boolean {
+analyzeLanguageFileSyntax(inputFilePath: string): boolean {
+  this.logger.log(`analyzeLanguageFileSyntax: Start of analyzing syntax of the input file: ${inputFilePath}`);
   const inputFileContent = fs.readFileSync(inputFilePath, 'utf-8');
   const lines = inputFileContent.split('\n');
 
@@ -70,7 +71,7 @@ alyseSyntax(inputFilePath: string): boolean {
     // Check if the line is a language code
     if (/^[a-z]{2}-[A-Z]{2}$/.test(trimmedLine)) {
       if (braceLevel > 0) {
-        this.logger.error(`ERROR 1: Unexpected language code at line ${lineNumber} while parsing object.`);
+        this.logger.error(`analyzeLanguageFileSyntax: ERROR 1: Unexpected language code at line ${lineNumber} while parsing object.`);
         return false;
       }
       currentLangCode = trimmedLine;
@@ -102,7 +103,7 @@ alyseSyntax(inputFilePath: string): boolean {
     if (hasEndBrace) {
 
       if(braceLevel <= 0) {
-        this.logger.error(`ERROR 2: Unexpected '}' at line ${lineNumber} without starting an object.`);
+        this.logger.error(`analyzeLanguageFileSyntax. ERROR 2: Unexpected '}' at line ${lineNumber} without starting an object.`);
         return false;
       }
       braceLevel--;
@@ -115,7 +116,7 @@ alyseSyntax(inputFilePath: string): boolean {
 
       // Parse the object
       try {
-        this.logger.debug(`Parsing object after processing of a line ${lineNumber}: currentObjectLines: ${currentObjectLines}`);
+        this.logger.debug(`analyzeLanguageFileSyntax. Parsing object after processing of a line ${lineNumber}: currentObjectLines: ${currentObjectLines}`);
         const currentObject = JSON.parse(currentObjectLines.join('\n'));
 
         // Save the first correct object as exampleObject
@@ -124,7 +125,7 @@ alyseSyntax(inputFilePath: string): boolean {
         } else {
           // Compare the structure of the current object with exampleObject
           if (JSON.stringify(Object.keys(currentObject)) !== JSON.stringify(Object.keys(this.exampleObject))) {
-            this.logger.error(`ERROR 3: Object structure mismatch at line ${lineNumber}.`);
+            this.logger.error(`analyzeLanguageFileSyntax. ERROR 3: Object structure mismatch at line ${lineNumber}.`);
             return false;
           }
         }
@@ -132,7 +133,7 @@ alyseSyntax(inputFilePath: string): boolean {
         // Save the correct pair in mapLangToObject
         this.mapLangToObject.set(currentLangCode, currentObject);
       } catch (error) {
-        this.logger.error(`ERROR 4:  Failed to parse object at line ${lineNumber}: Error ${error}`);
+        this.logger.error(`analyzeLanguageFileSyntax. ERROR 4:  Failed to parse object at line ${lineNumber}: Error ${error}`);
         return false;
       }
 
@@ -147,7 +148,7 @@ alyseSyntax(inputFilePath: string): boolean {
     if (braceLevel > 0) {
       currentObjectLines.push(trimmedLine);
     } else {
-      this.logger.error(`ERROR 5: Unexpected line at ${lineNumber}: ${trimmedLine}`);
+      this.logger.error(`analyzeLanguageFileSyntax. ERROR 5: Unexpected line at ${lineNumber}: ${trimmedLine}`);
       return false;
     }
   }
@@ -155,7 +156,7 @@ alyseSyntax(inputFilePath: string): boolean {
   
 
   // Log the result of processing
-  this.logger.log(`Processed ${lineNumber} lines and found ${this.mapLangToObject.size} objects.`);
+  this.logger.log(`analyzeLanguageFileSyntax: Processed ${lineNumber} lines and found ${this.mapLangToObject.size} objects.`);
 
   return true;
 }
@@ -168,6 +169,7 @@ alyseSyntax(inputFilePath: string): boolean {
  */ 
   compareLanguageCodes(): boolean {
     // If listPath is set, read and validate language codes from the list file
+  this.logger.log(`compareLanguageCodes: Start of comparing language codes from the input file with the list file: ${this.listPath}`);  
   if (this.listPath) {
     try {
       const listFileContent = fs.readFileSync(this.listPath, 'utf-8');
@@ -175,12 +177,12 @@ alyseSyntax(inputFilePath: string): boolean {
 
       for (const code of listLines) {
         if (!this.mapLangToObject.has(code)) {
-          this.logger.error(`ERROR 10: Language code ${code} from list file not found in the input file.`);
+          this.logger.error(`compareLanguageCodes: ERROR 10: Language code ${code} from list file not found in the input file.`);
           return false;
         }
       }
     } catch (error) {
-      this.logger.error(`ERROR 11: Failed to read or parse list file: ${this.listPath}`);
+      this.logger.error(`compareLanguageCodes: ERROR 11: Failed to read or parse list file: ${this.listPath}`);
       return false;
     }
   }
@@ -193,11 +195,11 @@ alyseSyntax(inputFilePath: string): boolean {
    * Each object is written into a separate file named as language-code.json.
    */
   writeOutputFiles(outputDir: string): void {
-    this.logger.log(`Start of writing ${this.mapLangToObject.size} output files to ${outputDir}.`);
+    this.logger.log(`writeOutputFiles: Start of writing ${this.mapLangToObject.size} output files to ${outputDir}.`);
     for (const [langCode, object] of this.mapLangToObject) {
       const outputFilePath = path.join(outputDir, `${langCode}.json`);
       fs.writeFileSync(outputFilePath, JSON.stringify(object, null, 2));
     }
-    this.logger.log('All output files have been written.');
+    this.logger.log('writeOutputFiles: All output files have been written.');
   }
 }
