@@ -140,7 +140,7 @@ export class FileProcessor {
   }
 
   public processFile(filePath: string, outputDir: string): void {
-    if (!this.alyseSyntax(filePath)) {
+    if (!this.analyzeLanguageFileSyntax(filePath)) {
       this.logger.error('In processFile. ERROR 100: Syntax analysis failed.');
       return;
     }
