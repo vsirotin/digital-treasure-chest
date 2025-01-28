@@ -80,7 +80,7 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
   private keeperCurrentLanguageTag: KeeperCurrentUserLanguage= new KeeperCurrentUserLanguage("CurrentLanguage", DEFAULT_LANG_DESCRIPTION.ietfTag);
   private subject: BehaviorSubject<ILanguageDescription>;
   selectionChanged$ : Observable<ILanguageDescription>;
-  private logger: ILogger = LoggerFactory.getLogger("LanguageChangeNotificator");
+  private logger: ILogger = LoggerFactory.getLogger("eu.sirotin.localizer.LanguageChangeNotificator");
   private defaultLanguageDescription = DEFAULT_LANG_DESCRIPTION;
 
   constructor() {
@@ -89,7 +89,7 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
 
     this.subject = new BehaviorSubject<ILanguageDescription>(currentLanguageDescription);
     this.selectionChanged$ = this.subject.asObservable();
-    this.logger.log(" created. Current language is: ",currentLanguageDescription.enName);
+    this.logger.log("constructor: created. Current language is: ",currentLanguageDescription.enName);
   }
   getCurrentLanguageCode(): string {
     let currentLanguage = this.keeperCurrentLanguageTag.readCurrentLang();
@@ -112,10 +112,10 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
   }
 
   selectionChanged(ietfTag: string|null|undefined): void {
-    this.logger.log("selectionChanged called with ietfTag: ", ietfTag);
+    this.logger.log("selectionChanged: called with ietfTag: ", ietfTag);
     const selectedLanguage = this.getLanguageDescriptionForIetfTag(ietfTag);
     if(this.isLanguageSupported(ietfTag)) {
-      this.logger.log("selectionChanged 1 selected language is supported and saved: ", selectedLanguage.enName);
+      this.logger.log("selectionChanged: 1 selected language is supported and saved: ", selectedLanguage.enName);
       this.keeperCurrentLanguageTag.writeCurrentLang(selectedLanguage.ietfTag);
     }
     //If language not supported, default language will be notificated.

@@ -57,7 +57,7 @@ export class Localizer<T> implements ILocalizer {
 
     this.keeperMasterData = new KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion<T>(
       componentCooordinate, componentVersion, startLanguageRelevantItems)
-    this.logger = LoggerFactory.getLogger("Localizer for " + componentCooordinate + " v." + componentVersion);
+    this.logger = LoggerFactory.getLogger("eu.sirotin.localizer.Localizer for " + componentCooordinate + " v." + componentVersion);
 
     this.logger.debug("before subscription");
     this.subscription = languageChangeNotificator.selectionChanged$

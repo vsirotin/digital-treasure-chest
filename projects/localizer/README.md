@@ -155,3 +155,8 @@ Update of dependencies. Correction of deployment unit.
 
 
  3. Documentation improvement 
+
+ ## 1.1.2 
+ 1. Internal refactoring
+ 2. Documentation improvenment.
+ 3. Dependency updating.
