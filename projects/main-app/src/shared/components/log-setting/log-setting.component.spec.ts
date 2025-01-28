@@ -48,7 +48,7 @@ describe('LogSettingComponent', () => {
     textInput = await loader.getHarness(MatInputHarness);
 
     loggerComponent = component.logger;
-    loggerTestScript = LoggerFactory.getLogger("shared/components/log-setting/log-setting.component.spec.ts");
+    loggerTestScript = LoggerFactory.getLogger("eu.sirotin.demo-app.shared/components/log-setting/log-setting.component.spec.ts");
 
   });
 

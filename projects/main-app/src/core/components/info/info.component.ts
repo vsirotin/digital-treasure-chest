@@ -15,7 +15,7 @@ export class InfoComponent implements ILocalizationClient<IUIInfoComponent> {
 
 
   ui: IUIInfoComponent = (uiInfo as any).default;
-  logger: ILogger = LoggerFactory.getLogger("InfoComponent");
+  logger: ILogger = LoggerFactory.getLogger("eu.sirotin.demo-app.InfoComponent");
 
   localizer: ILocalizer;
 
@@ -26,7 +26,7 @@ export class InfoComponent implements ILocalizationClient<IUIInfoComponent> {
 
   updateLocalization(data: IUIInfoComponent): void {
     this.ui = data;
-    this.logger.log("Localization data updated", data);
+    this.logger.log("updateLocalization: Localization data updated", data);
   }
 }
 

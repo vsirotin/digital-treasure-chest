@@ -1,6 +1,6 @@
-import { ChangeDetectorRef, Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { MediaMatcher, BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { MediaMatcher, BreakpointObserver} from '@angular/cdk/layout';
 import { MatButtonModule}  from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
@@ -51,7 +51,7 @@ export class MainComponent implements  OnDestroy, ILocalizationClient<IMainUI> {
 
   private subscriptionBtnClicked: Subscription;
 
-  logger : ILogger = LoggerFactory.getLogger("MainComponent");
+  logger : ILogger = LoggerFactory.getLogger("eu.sirotin.demo-app.MainComponent");
 
   showFiller = false;
 
@@ -73,7 +73,7 @@ export class MainComponent implements  OnDestroy, ILocalizationClient<IMainUI> {
    private cdr: ChangeDetectorRef,
    private titleService: Title) {
     this.localizer = LocalizerFactory.createLocalizer<IMainUI>(MAIN_SOURCE_DIR, 1, this.ui, this);
-    this.logger.log("Start of constructor");
+    this.logger.log("constructor: Start of constructor");
 
     this.titleService.setTitle(this.ui.title); 
 
@@ -86,8 +86,10 @@ export class MainComponent implements  OnDestroy, ILocalizationClient<IMainUI> {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    this.logger.log("constructor: End of constructor");
   }
   updateLocalization(data: IMainUI): void {
+    this.logger.log("updateLocalization: Localization data updated", data);
     this.ui  = data;
     this.titleService.setTitle(this.ui.title); 
   }

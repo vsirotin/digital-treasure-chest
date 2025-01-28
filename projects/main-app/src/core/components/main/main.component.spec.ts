@@ -20,7 +20,7 @@
 
 //   beforeEach(async () => {
 //     localStorage.clear();
-//     let logger: ILogger = LoggerFactory.getLogger("MainComponentTest");
+//     let logger: ILogger = LoggerFactory.getLogger("eu.sirotin.demo-app.MainComponentTest");
 //     let localizer1 = new Localizer(MAIN_SOURCE_DIR, 1, logger);
 //     langSelectNotificationService = Localizer.languageChangeNotificator;
 

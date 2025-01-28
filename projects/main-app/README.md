@@ -13,5 +13,10 @@ Thirdly, a demonstration of the master data management library.
 
 You can see how this idea turned out [here](https://vsirotin.github.io/digital-treasure-chest/).
 
-
+ ## Release Notes
+ 
+ ### 1.0.1 
+ 1. Internal refactoring
+ 2. Documentation improvenment.
+ 3. Dependency updating.
 
