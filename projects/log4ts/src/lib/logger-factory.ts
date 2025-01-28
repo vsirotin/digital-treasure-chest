@@ -98,6 +98,12 @@ const DEFAULT_LOG_LEVEL = 2;
         });
     }
 
+    /** 
+      * Check if the path contains the source path.
+      * @param sourcePath The source path.
+      * @param path The path to check.
+      * @returns {boolean} True if the path contains the source path.
+    */
     private static containsPath(sourcePath: string, path: string): boolean {
         const cFirst = sourcePath.charAt(0);
         if((cFirst == '*') && (sourcePath.length == 1)){

@@ -11,7 +11,7 @@ import { HTTPKeyValueRepositoryReader } from "../specific-readers/reader-http";
 */
 export class KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion<T> extends KeeperMasterDataKeyValueAsync<T> {
 
-    loggger: ILogger = LoggerFactory.getLogger("KeeperMasterDataBrowserLocalStoreHtppDEfaultForComponentWithVersion");
+    loggger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.KeeperMasterDataBrowserLocalStoreHtppDEfaultForComponentWithVersion");
 
     /**
      * Create a keeper master data with key-value based data model.
@@ -22,7 +22,7 @@ export class KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion
     constructor(componentCoordinate: string, componentVersion: number, private defaultData: T) {
         super(new LocalStorageAdapterWithVersionsAndCategories(componentVersion, componentCoordinate), 
         [new HTTPKeyValueRepositoryReader(componentCoordinate + "/" + componentVersion + "/")]);
-        this.loggger.log(" created for ", componentCoordinate, " v.", componentVersion);
+        this.loggger.log("constructor. created for ", componentCoordinate, " v.", componentVersion);
     }
 
     /**
@@ -33,7 +33,7 @@ export class KeeperMasterDataBrowserLocalStoreHtppDefaultForComponentWithVersion
     override async findAsync(key: string): Promise<T | undefined> {
         let res = await super.findAsync(key);
         if (res == undefined) {
-            this.loggger.log("Data not found in local storage, returns default.");
+            this.loggger.log("findAsync: Data not found in local storage, returns default.");
             res = Promise.resolve(this.defaultData) as Awaited<T>;
         }
         return res;

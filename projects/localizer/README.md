@@ -1,6 +1,14 @@
 # Localizer
 
+[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 
+[![npm](https://img.shields.io/npm/v/@vsirotin/localizer?sort=semver&logo=npm)](https://www.npmjs.com/package/@vsirotin/localizer)
+[![npm type definitions](https://img.shields.io/npm/types/v-github-icon?logo=typescript)](https://github.com/vinayakkulkarni/v-github-icon/blob/main/package.json)
+
+[![npm](https://img.shields.io/npm/dt/@vsirotin/localizer?logo=npm)](http://npm-stat.com/charts.html?package=@vsirotin/localizer)
+[![npm](https://img.shields.io/npm/dw/@vsirotin/localizer?logo=npm)](http://npm-stat.com/charts.html?package=@vsirotin/keeper-master-data)
+
+ 
 ## Introduction
 
 **Internationalization (i18n)** involves designing and developing a software product, application, or document content so that it can be easily adapted to various cultures, regions, and languages without requiring engineering changes. It ensures that the application is flexible enough to handle different languages, scripts, and cultural norms. In short, i18n is about making an application ready for localization.
@@ -147,3 +155,8 @@ Update of dependencies. Correction of deployment unit.
 
 
  3. Documentation improvement 
+
+ ## 1.1.2 
+ 1. Internal refactoring
+ 2. Documentation improvenment.
+ 3. Dependency updating.

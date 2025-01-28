@@ -10,7 +10,7 @@ import { ReaderBrowserLanguage } from "../specific-readers/reader-browser-langua
 */
 export class KeeperCurrentUserLanguage  {
 
-    private loggger: ILogger = LoggerFactory.getLogger("KeeperCurrentUserLanguage");
+    private loggger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.KeeperCurrentUserLanguage");
     private keeperImpl: KeeperMasterDataKeyValueSync<string>;
     private adapter: LocalStorageAdapterSync<string> = new LocalStorageAdapterSync<string>();
 
@@ -25,7 +25,7 @@ export class KeeperCurrentUserLanguage  {
             [new ReaderBrowserLanguage(),
             new ReaderDefault<string>(defaultLanguageTag)
         ]);
-        this.loggger.log(" created for ", key, " defaultData", defaultLanguageTag);
+        this.loggger.log("constructor: created for ", key, " defaultData", defaultLanguageTag);
     }
 
     /**

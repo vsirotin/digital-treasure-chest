@@ -114,7 +114,6 @@ export class ChetContentViewComponent implements ILocalizationClient<IChetViewUI
   }
 
   generatePropertyString(criteria: string): string {
-    //return NumberPropertiesNameHolder.criteriaPrefix + " " + criteria;
     return criteria;
   }
 

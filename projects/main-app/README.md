@@ -1,21 +1,22 @@
 # Digital Treasure Chest
 
-This application is designed to fulfill the author's childhood dream - to give the people of Earth a store where all products will always be free and never run out.
+Programming up another “Hello World!” was not interesting to me. 
+So I decided instead to fulfill one dream of my childhood: to create a “communist” store for mankind. A store where all goods would be absolutely free and never run out. 
 
-I did this using the example of a store that trades in numbers.
+From a technical point of view, this app is an example of using my libraries. 
 
-At the same time, this application tests libraries from my freely available collection of TypeScript libraries.
+First of all, it is localization of a small demo application into 30 most popular national languages on the Internet. Of course, I don't know that many languages myself, so the translation was done with the help of AI. But I hope that the translation is done well.
 
-Short overview of libraries from this project:
+Secondly - demonstration of using the logging library.
 
-| Library Name          | Description                                                                                      |
-|-----------------------|--------------------------------------------------------------------------------------------------|
-| Logger                | A simple logger for TypeScript, similar to Log4J, but with very restricted functionality.        |
-| KeeperMasterData      | Supports the use and management of master data in web applications.                             |
-| Localizer             | Supports localization in web applications by providing terms and texts in various languages.    |
-| BrowserLocalStorage   | A facade on native browser mechanisms for storing and retrieving data locally.                  |
+Thirdly, a demonstration of the master data management library.  
 
-**Attention!** The application is not ready for use. Work in progress!
+You can see how this idea turned out [here](https://vsirotin.github.io/digital-treasure-chest/).
 
-
+ ## Release Notes
+ 
+ ### 1.0.1 
+ 1. Internal refactoring
+ 2. Documentation improvenment.
+ 3. Dependency updating.
 

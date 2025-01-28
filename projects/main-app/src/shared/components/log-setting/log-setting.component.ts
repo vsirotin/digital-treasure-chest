@@ -51,7 +51,7 @@ export class LogSettingComponent {
   fileNameTemplate = this.initialFileNameTemplate;
   selectedLogLevel = this.initialLogLevel
 
-  logger: ILogger = LoggerFactory.getLogger("shared/components/log-setting/log-setting.component.ts");
+  logger: ILogger = LoggerFactory.getLogger("eu.sirotin.demo-app.shared/components/log-setting/log-setting.component.ts");
 
   logLevels : { key: string, value: string }[] = Array.from(DEFAULT_LOG_LEVEL, ([key, value]) => ({ key, value }));
 

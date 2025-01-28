@@ -6,6 +6,7 @@ import { RepositoryAdapter, IRepositoryReader, RepositoryAdapterSync, Repository
     Aynchrone implementation of KeeperMasterData with key-value based data model.
 */
 export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
+    private logger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.KeeperMasterDataKeyValueAsync");
     /*
         Constructor.
         @param repositoryAdapter Adapter for repository, can be async or sync
@@ -13,11 +14,9 @@ export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
         @param logger Logger
     */
     constructor(protected repositoryAdapter: RepositoryAdapter<T>,
-        protected readers: IRepositoryReader<T>[] = [],
-        private logger: ILogger = LoggerFactory.getLogger("KeeperMasterDataKeyValueAsync")) {
+        protected readers: IRepositoryReader<T>[] = []) {
         super();
-        this.logger = LoggerFactory.getLogger("KeeperMasterDataKeyValueAsync");
-        this.logger.log("KeeperMasterDataKeyValueAsync created");
+        this.logger.log("constructor:  created");
     }
 
     /*
@@ -55,10 +54,10 @@ export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
         } else {
             const adapterSync = this.repositoryAdapter as RepositoryAdapterSync<T>;
             const resSync = adapterSync.readSync(key);
-            this.logger.log("In findAsync 2.1 key=", key, " resSync=", resSync);
+            this.logger.log("In findAsync 2 key=", key, " resSync=", resSync);
             if (resSync) {
                 result = Promise.resolve(resSync) as Awaited<T>;
-                this.logger.log("In findAsync 2 key=", key, " result=", result);
+                this.logger.log("In findAsync 3 key=", key, " result=", result);
                 return result;
             }
         }
@@ -94,7 +93,7 @@ export class KeeperMasterDataKeyValueAsync<T> extends KeeperMasterDataAsync<T> {
         }
         
 
-        this.logger.log("In findAsync 3 key=", key, " result undefined");
+        this.logger.log("In findAsync 4 key=", key, " result undefined");
         return undefined;
     }
 

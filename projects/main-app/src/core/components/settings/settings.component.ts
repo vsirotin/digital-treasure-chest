@@ -42,7 +42,7 @@ interface UIItems {
 export class SettingsComponent implements  OnDestroy, ILocalizationClient<UIItems>  {
   @ViewChild(MatAccordion) accordion?: MatAccordion;
 
-  logger: ILogger = LoggerFactory.getLogger("SettingsComponent");
+  logger: ILogger = LoggerFactory.getLogger("eu.sirotin.demo-app.SettingsComponent");
 
   private localizer: ILocalizer
 

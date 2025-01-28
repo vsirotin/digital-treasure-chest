@@ -7,11 +7,11 @@ import { RepositoryReaderSync } from "../i-repository-adapters";
  */
 export class ReaderBrowserLanguage extends RepositoryReaderSync<string> {
 
-    loggger: ILogger = LoggerFactory.getLogger("ReaderBrowserLanguage");
+    loggger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.ReaderBrowserLanguage");
 
     constructor() {
         super();
-        this.loggger.log(" created");
+        this.loggger.log("constructor: created");
     }
 
     /**
@@ -19,7 +19,7 @@ export class ReaderBrowserLanguage extends RepositoryReaderSync<string> {
     */
     override readSync(_: string): string  {
         const lang = navigator.language;
-        this.loggger.log("readSync lang= ", lang);
+        this.loggger.log("readSync: lang= ", lang);
         return lang;
     }
 }

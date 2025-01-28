@@ -5,6 +5,7 @@ import { RepositoryAdapterSync, RepositoryReaderSync, RepositoryWriterAsync, Rep
     Synchrone implementation of IKeeperMasterDataKeyValue with key-value based data model.
 */
 export class KeeperMasterDataKeyValueSync<T> extends KeeperMasterDataSync<T> {
+    private logger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.KeeperMasterDataKeyValueSync");
 
     /*
         Constructor.
@@ -13,10 +14,9 @@ export class KeeperMasterDataKeyValueSync<T> extends KeeperMasterDataSync<T> {
         @param logger Logger
     */
     constructor(protected repositoryAdapter: RepositoryAdapterSync<T>, 
-        protected readers: RepositoryReaderSync<T>[] = [],
-        private logger: ILogger = LoggerFactory.getLogger("KeeperMasterDataKeyValueSync")) {
+        protected readers: RepositoryReaderSync<T>[] = []) {
         super();
-        this.logger.log("KeyedKeeperMasterData created");
+        this.logger.log("constructor: created");
     }
 
     /*

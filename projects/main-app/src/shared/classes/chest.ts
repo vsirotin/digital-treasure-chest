@@ -8,7 +8,7 @@ export class Chest {
     static maxCapacity: number = 10;
 
     chestChanged$ = new Subject<number[]>();
-    private logger: ILogger = LoggerFactory.getLogger("shared/classes/Chest");
+    private logger: ILogger = LoggerFactory.getLogger("eu.sirotin.demo-app.shared/classes/Chest");
 
     private adapter: LocalStorageAdapter<number[]> = new LocalStorageAdapter<number[]>("digital-chest", []);
     

@@ -8,13 +8,13 @@ import { LocalStorageReader, LocalStorageWriter } from "./local-storage-adapter"
 export class LocalStorageAdapterWithVersionsAndCategories extends RepositoryAdapterSync<string> {
     private prefix: string;
 
-    private logger1: ILogger = LoggerFactory.getLogger("LocalStorageAdapterWithVersionsAndCategories");
+    private logger1: ILogger = LoggerFactory.getLogger("eu.sirotin.kms.LocalStorageAdapterWithVersionsAndCategories");
 
     constructor(private version: number, ...categories: string[]) {
         super(new LocalStorageReaderWithVersionsAndCategories(version, ...categories), 
         new LocalStorageWriterWithVersionsAndCategories(version, ...categories));
         this.prefix = categories.join("-") + "-v-" + version;
-        this.logger1.log(" created");
+        this.logger1.log("constructor: Instance created");
     }
 
 
@@ -42,12 +42,12 @@ function generateStorageKey(key: string, prefix: string): string {
  */
 export class LocalStorageReaderWithVersionsAndCategories<T> extends LocalStorageReader<T> {
     private prefix: string;
-    private logger1: ILogger = LoggerFactory.getLogger("LocalStorageReaderWithVersionsAndCategories");
+    private logger1: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.LocalStorageReaderWithVersionsAndCategories");
 
     constructor(private version: number, ...categories: string[]) {
         super();
         this.prefix = categories.join("-") + "-v-" + version;
-        this.logger1.log(" created for prefix=", this.prefix);
+        this.logger1.log("constructor: Instance created for prefix=", this.prefix);
     }
 
     /*
@@ -70,7 +70,7 @@ export class LocalStorageReaderWithVersionsAndCategories<T> extends LocalStorage
  */
 export class LocalStorageWriterWithVersionsAndCategories<T> extends LocalStorageWriter<T> {
     private prefix: string;
-    private logger2: ILogger = LoggerFactory.getLogger("LocalStorageWriterWithVersionsAndCategories");
+    private logger2: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.LocalStorageWriterWithVersionsAndCategories");
 
     constructor(private version: number, ...categories: string[]) {
         super();
