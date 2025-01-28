@@ -11,7 +11,16 @@
 ## Description ##
 This TypeScript library supports the use and management of master data in web applications.
 
-Master data, contrary to business data, will rarely change. 
+## Master Data vs. Business Data
+
+**Master data**, contrary to business data, will rarely change. 
+
+**Master Data** includes the fundamental entities and attributes that remain relatively stable over time. 
+
+**Business Data** encompasses the dynamic information related to business activities and transactions.
+
+
+## Introduction
 
 Upon request for a specific part of the master data, the library tries to find it in local storage. If not found, it will be requested from a given web resource, saved locally, and then returned to the caller. 
 
@@ -23,7 +32,8 @@ Synchronous and asynchronous resources can be used as external resources.
 ## Using ##
 
 The library allows you to develop your own tools.
-It contains some predefined readers, writers, adapters (combination of reader and writer) and keepers (a chain of adapters):
+
+It contains also some predefined readers, writers, adapters (combination of reader and writer) and keepers (a chain of adapters):
 
 ### Readers: ###
 - Http - Reader
@@ -84,5 +94,8 @@ Major change
 ## 2.0.2 
 Correction of deployment unit.
 
-## 2.0.3 
-Dependencies update
+## 3.0.1 
+ 1. Signatur by constructors KeeperMasterDataKeyValueAsync and KeeperMasterDataKeyValueSync changed.
+ 2. Internal refactoring
+ 3. Documentation improvenment.
+ 4. Dependency updating.

@@ -11,7 +11,7 @@ import { HTTPKeyValueRepositoryReader } from "../specific-readers/reader-http";
 */
 export class KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion<T> extends KeeperMasterDataKeyValueAsync<T> {
 
-    loggger: ILogger = LoggerFactory.getLogger("KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion");
+    loggger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion");
 
     /**
      * Create a keeper master data with key-value based data model.
@@ -22,7 +22,7 @@ export class KeeperMasterDataBrowserLocalStoreHtppForComponentWithVersion<T> ext
     constructor(componentCoordinate: string, componentVersion: number) {
         super(new LocalStorageAdapterWithVersionsAndCategories(componentVersion, componentCoordinate), 
         [new HTTPKeyValueRepositoryReader(componentCoordinate + "/" + componentVersion + "/")]);
-        this.loggger.log(" created for " + componentCoordinate + " v." + componentVersion);
+        this.loggger.log("constructor: created for " + componentCoordinate + " v." + componentVersion);
     }
 
 }

@@ -5,7 +5,7 @@ import { RepositoryAdapterSync, RepositoryReaderSync, RepositoryWriterSync } fro
     Implementation of Repository Reader for local storage based key-value repository.
 */
 export class LocalStorageReader<T> implements RepositoryReaderSync<T> {
-    private logger: ILogger = LoggerFactory.getLogger("LocalStorageReader");
+    private logger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.LocalStorageReader");
     
     /*
         Read an object from repository by key synchronesly.
@@ -37,7 +37,7 @@ export class LocalStorageReader<T> implements RepositoryReaderSync<T> {
     Implementation of Repository Writer for local storage based key-value repository.
 */
 export class LocalStorageWriter<T> implements RepositoryWriterSync<T> {
-    private logger: ILogger = LoggerFactory.getLogger("LocalStorageWriter");
+    private logger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.LocalStorageWriter");
 
     /*
         Save an object to repository by key synchronesly.
@@ -67,11 +67,11 @@ export class LocalStorageWriter<T> implements RepositoryWriterSync<T> {
 */
 export class LocalStorageAdapterSync<T> extends RepositoryAdapterSync<T> {
 
-    private logger1: ILogger = LoggerFactory.getLogger("LocalStorageAdapter");
+    private logger1: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.LocalStorageAdapter");
 
     constructor() {
         super(new LocalStorageReader<T>(), new LocalStorageWriter<T>());
-        this.logger1.log(" created");
+        this.logger1.log("constructor: created");
     }
 
     /*
@@ -89,12 +89,12 @@ export class LocalStorageAdapterSync<T> extends RepositoryAdapterSync<T> {
 */
 export class LocalStorageAdapter<T>  {
 
-    private logger: ILogger = LoggerFactory.getLogger("LocalStorageAdapter");
+    private logger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.LocalStorageAdapter");
 
     private implementation: LocalStorageAdapterSync<T> = new LocalStorageAdapterSync<T>();
 
     constructor(private key: string, private defaultValue: T) {
-        this.logger.log(" created");
+        this.logger.log("constructor: created");
     }
 
     /**

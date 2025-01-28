@@ -6,11 +6,11 @@ import { RepositoryReaderSync } from "../i-repository-adapters";
  */
 export class ReaderDefault<T> extends RepositoryReaderSync<T> {
 
-    loggger: ILogger = LoggerFactory.getLogger("ReaderDefault");
+    loggger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.ReaderDefault");
 
     constructor(private defaultData: T) {
         super();
-        this.loggger.log(" created for ", defaultData);
+        this.loggger.log("constructor: created for ", defaultData);
     }
 
     /**

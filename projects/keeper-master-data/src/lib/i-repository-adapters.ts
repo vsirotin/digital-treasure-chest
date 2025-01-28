@@ -93,7 +93,7 @@ export interface RepositoryAdapter<T>  {
 */
 export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
 
-    private logger: ILogger = LoggerFactory.getLogger("RepositoryAdapterSync");
+    private logger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.RepositoryAdapterSync");
 
     constructor(private reader: RepositoryReaderSync<T>, private writer: RepositoryWriterSync<T>) {};
     readonly isAsync: boolean = false;
@@ -130,7 +130,7 @@ export abstract class RepositoryAdapterSync<T> implements RepositoryAdapter<T> {
 */
 export abstract class RepositoryAdapterAsync<T> implements RepositoryAdapter<T> {
 
-    private logger: ILogger = LoggerFactory.getLogger("RepositoryAdapterAsync");
+    private logger: ILogger = LoggerFactory.getLogger("eu.sirotin.kmd.RepositoryAdapterAsync");
 
     constructor(private reader: RepositoryReaderAsync<T>, private writer: RepositoryWriterAsync<T>) {};
 
