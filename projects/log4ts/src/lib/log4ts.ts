@@ -21,7 +21,7 @@ export class Log4ts extends BaseLogger {
    * 2 - Only warning and error messages are logged. (Default)
    * 3 - Only error messages are logged.
    * 4 or greater - No messages are logged.
-   * @param path The path of the source file, inside that logger works or some unic name.
+   * @param path The path of the source file, inside that logger works or some ID.
    */
   constructor(private logLevel : number = 2, readonly path: string = "") { 
     super();

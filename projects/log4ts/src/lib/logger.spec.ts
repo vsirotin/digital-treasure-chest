@@ -346,7 +346,7 @@ describe('Log4ts', () => {
   it('by changing of log level with factory  in runtime correct behaviour', () => {
     // The table below means:
     // Rows: path by logger creation
-    // Collumns: path by setLogLevel. It set log lvel by all loggers with path that mathc to searchPath.
+    // Collumns: path by setLogLevel. It set log lvel by all loggers with path that match to searchPath.
     // Cell: '+' logger make output after setLogger, '-' not.
     //--------------------------------------------
     // path |*b/c | a* | *b* | e/b/c | x/y/z | * |

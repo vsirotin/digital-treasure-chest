@@ -29,7 +29,7 @@ const DEFAULT_PATH_POSTFIX = ': ';
      * 
      * The log output will be generated as string <path><defaultPathPostfix><message> .
      */
-    private static defaultLogLeevl: number = DEFAULT_LOG_LEVEL;
+    private static defaultLogLevel: number = DEFAULT_LOG_LEVEL;
 
     /**
      * Get or creates a new logger for given source path.
@@ -39,7 +39,7 @@ const DEFAULT_PATH_POSTFIX = ': ';
     static getLogger(path: string): ILogger {
       let logger = LoggerFactory.loggers.get(path);
       if(logger == null){
-        logger = new Log4ts(LoggerFactory.defaultLogLeevl, path);
+        logger = new Log4ts(LoggerFactory.defaultLogLevel, path);
         LoggerFactory.loggers.set(path, logger);
       }
       return logger;
@@ -55,7 +55,7 @@ const DEFAULT_PATH_POSTFIX = ': ';
      * 4 or greater - No messages are logged.
      */
     static setLogLevelsByAllLoggers(logLevel: number){
-      LoggerFactory.defaultLogLeevl = logLevel;
+      LoggerFactory.defaultLogLevel = logLevel;
       LoggerFactory.loggers.forEach((logger, path) => {
             logger.setLogLevel(logLevel);
         });
@@ -110,11 +110,11 @@ const DEFAULT_PATH_POSTFIX = ': ';
      * @returns {number} The default log level.
      */
     static getDefaultLogLevel(): number{
-        return LoggerFactory.defaultLogLeevl;
+        return LoggerFactory.defaultLogLevel;
     }
 
     /**
-     * Set the log level for all loggers with path that mathc to searchPath.
+     * Set the log level for all loggers with path that match to searchPath.
      * @param searchPath Search path. Can contain * at the begining or at the end.
      * if * at the begining, then searchPath is a substring of path.
      * if * at the end, then path starts with searchPath.
