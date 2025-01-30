@@ -20,3 +20,7 @@ You can see how this idea turned out [here](https://vsirotin.github.io/digital-t
  2. Documentation improvenment.
  3. Dependency updating.
 
+ ### 1.0.2
+
+ 1. Dependency updating.
+

@@ -160,3 +160,7 @@ Update of dependencies. Correction of deployment unit.
  1. Internal refactoring
  2. Documentation improvenment.
  3. Dependency updating.
+
+## 1.1.3
+
+1. Dependency updating.

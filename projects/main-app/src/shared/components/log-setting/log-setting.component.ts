@@ -111,7 +111,7 @@ export class LogSettingComponent {
     this.logger.log("start of onReset");
     this.resetInitialValues();
     this.updateButtons();
-    LoggerFactory.recetDefaults();
+    LoggerFactory.setDefaultLoggerConfig();
   }
   
   private resetInitialValues() {

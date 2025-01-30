@@ -99,3 +99,6 @@ Correction of deployment unit.
  2. Internal refactoring
  3. Documentation improvenment.
  4. Dependency updating.
+
+ ## 3.0.2 
+ 1. Dependency updating.
