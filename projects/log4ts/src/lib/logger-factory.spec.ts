@@ -34,7 +34,7 @@ describe('LoggerFactory', () => {
   it('should reset the default log level and path postfix', () => {
     LoggerFactory.setLogLevelsByAllLoggers(1);
     LoggerFactory.defaultPathPostfix = '- ';
-    LoggerFactory.recetDefaults();
+    LoggerFactory.setDefaultLoggerConfig();
     logger = LoggerFactory.getLogger('test/path');
     expect(logger.getLogLevel()).toBe(2); // Default log level is 2
     expect(LoggerFactory.defaultPathPostfix).toBe(': ');
@@ -69,4 +69,41 @@ describe('LoggerFactory', () => {
     expect(LoggerFactory['containsPath']('e/b/c', 'e/b/c')).toBe(true);
     expect(LoggerFactory['containsPath']('x/y/z', 'a/b/c')).toBe(false);
   });
+  
+  describe('Special setting functions...', () => {
+
+    let logger1: ILogger;
+    let logger2: ILogger;
+
+    beforeEach(() => {
+      logger1 = LoggerFactory.getLogger('test/path1');
+      logger2 = LoggerFactory.getLogger('test/path2');
+    });
+
+    it('should set log level to only errors for all loggers', () => {
+      LoggerFactory.setErrorLevelByAllLoggers();
+      expect(logger1.getLogLevel()).toBe(3);
+      expect(logger2.getLogLevel()).toBe(3);
+    });
+
+    it('should set log level to warnings and errors for all loggers', () => {
+      LoggerFactory.setDefaultLevelByAllLoggers();
+      expect(logger1.getLogLevel()).toBe(2);
+      expect(logger2.getLogLevel()).toBe(2);
+    });
+
+    it('should set log level to all types of logging for all loggers', () => {
+      LoggerFactory.setAllLevelsByAllLoggers();
+      expect(logger1.getLogLevel()).toBe(0);
+      expect(logger2.getLogLevel()).toBe(0);
+    });
+
+    it('should set log level to no logging for all loggers', () => {
+      LoggerFactory.setNoLoggingByAllLoggers();
+      expect(logger1.getLogLevel()).toBe(4);
+      expect(logger2.getLogLevel()).toBe(4);
+    });
+  });
+
+  
 });

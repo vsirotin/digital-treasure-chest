@@ -2,16 +2,19 @@ import { ILogger } from "./i-logger";
 import { Log4ts } from "./log4ts";
 
 const DEFAULT_LOG_LEVEL = 2;
+const DEFAULT_PATH_POSTFIX = ': ';
 
   /**
    * LoggerFactory creats and configures loggers.
   */ 
   export class LoggerFactory {
 
+   
+
     /**
      * The default path postfix. Used by generating log output.
      */
-    public static defaultPathPostfix: string = ': ';
+    public static defaultPathPostfix: string = DEFAULT_PATH_POSTFIX;
 
     private static loggers: Map<string, ILogger> = new Map<string, ILogger>();
 
@@ -59,18 +62,46 @@ const DEFAULT_LOG_LEVEL = 2;
     }
 
     /**
-     * Reset the default log level to 3 and default path postfix to ': '.
+     * Sets the log level for logging of only errors by all loggers.
      */
-    static recetDefaults(){
+    static setErrorLevelByAllLoggers(): void {
+      LoggerFactory.setLogLevelsByAllLoggers(3);
+    }
+
+    /**
+     * Sets the log level for logging of only warnings and errors by all loggers.
+     */
+    static setDefaultLevelByAllLoggers(): void {
+      LoggerFactory.setLogLevelsByAllLoggers(2);
+    }
+
+    /**
+     * Sets the log level for types of logging by all loggers.
+     */
+    static setAllLevelsByAllLoggers(): void {
+      LoggerFactory.setLogLevelsByAllLoggers(0);
+    }
+
+    /**
+     * Sets mode where no log output happens by all loggers.
+     */
+    static setNoLoggingByAllLoggers(): void {
+      LoggerFactory.setLogLevelsByAllLoggers(4);
+    }
+
+    /**
+     * Reset the default log level to 2 and default path postfix to ': '.
+     */
+    static setDefaultLoggerConfig(){
       LoggerFactory.setLogLevelsByAllLoggers(DEFAULT_LOG_LEVEL);
-      LoggerFactory.defaultPathPostfix = ': ';
+      LoggerFactory.defaultPathPostfix = DEFAULT_PATH_POSTFIX;
     }
 
     /**
      * Clear all loggers.
      */
     static clearAllLoggers(){
-      LoggerFactory.recetDefaults()
+      LoggerFactory.setDefaultLoggerConfig()
       LoggerFactory.loggers.clear();
     }
 

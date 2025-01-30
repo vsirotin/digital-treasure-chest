@@ -375,7 +375,7 @@ describe('Log4ts', () => {
     loggerEBC.warn('test');
     expect(consoleSpyWarn).toHaveBeenCalled();
     resetConsoleSpyies();
-    LoggerFactory.recetDefaults();
+    LoggerFactory.setDefaultLoggerConfig();
 
     // Collumn 3 in test table above
     LoggerFactory.setLogLevel('a*', 0);
@@ -386,7 +386,7 @@ describe('Log4ts', () => {
     loggerEBC.warn('test');
     expect(consoleSpyWarn).toHaveBeenCalled();
     resetConsoleSpyies();
-    LoggerFactory.recetDefaults();
+    LoggerFactory.setDefaultLoggerConfig();
 
     // Collumn 4 in test table above
     LoggerFactory.setLogLevel('*b*', 0);
@@ -397,7 +397,7 @@ describe('Log4ts', () => {
     loggerEBC.warn('test');
     expect(consoleSpyWarn).toHaveBeenCalled();
     resetConsoleSpyies();
-    LoggerFactory.recetDefaults();
+    LoggerFactory.setDefaultLoggerConfig();
 
     // Collumn 5 in test table above
     LoggerFactory.setLogLevel('e/b/c', 0);
@@ -408,7 +408,7 @@ describe('Log4ts', () => {
     loggerEBC.warn('test');
     expect(consoleSpyWarn).toHaveBeenCalled();
     resetConsoleSpyies();
-    LoggerFactory.recetDefaults();
+    LoggerFactory.setDefaultLoggerConfig();
 
 
     // Collumn 5 in test table above
@@ -420,7 +420,7 @@ describe('Log4ts', () => {
     loggerEBC.warn('test');
     expect(consoleSpyWarn).toHaveBeenCalled();
     resetConsoleSpyies();
-    LoggerFactory.recetDefaults();
+    LoggerFactory.setDefaultLoggerConfig();
   });
 
   describe('By using two loggers...', () => {
