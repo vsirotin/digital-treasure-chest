@@ -11,12 +11,32 @@
 
 The Log4ts library is inspiared by famous logging library Log4J. It makes it easy and more convenient than browser's console a output data about the operation of your TypeScript (e.g. Angular or Node.js) application to the browser console and enables dynamically managing this output in real time.
 
+One more thing is important to note. Although the library is inspired by the ideas of Log4J, it does not replicate its giant capabilities, but is a very lightweight add-on over the browser console, allowing you to manage the output on the fly.
+
+## Area of application and typical Use Cases
+
+It is important to note: the library is designed primarily to work in the browser. In server applications, in heavyweight applications on Node.JS, it is better to use other logging libraries.
+
+The library can be useful both for developers and support staff.
+
+### A typical Use Case in development. 
+
+A developer is looking for a bug and has some class or package “under suspicion”. He configures logging so that only messages from these sources are displayed.  
+
+### A typical Use Case in production: 
+A user reports a problem with an application. The support person decides that the problem is in the client side (which runs in the browser). He asks the user to enable logging, open the console tab in the browser and repeat the operation where the error occurs, copy the output from the console and send it to support. 
+
+Again - while instructing the user on logging settings, he may advise him to enable logging of only the “suspicious” class or package, thus making the logging output observable. 
+
+You can see how this can work in our [demo application](https://vsirotin.github.io/digital-treasure-chest/). 
+Open a console window in your browser, and in the app, go to settings and select logging mode under “Logging”. Then work with searching for numbers. 
+
 
 ## Requirements
 
 The creators of the TypeScript language, like the creators of most other programming languages, did not think about the fact that users of their language would need to search for errors, improve and debug TypeScript-written programs with the help of logging. That's why TypeScript at birth was given only the console functions to output errors, warnings, and other information from JavaScript.
 
-This may be sufficient in relatively simple applications, but in complex applications, and even more so in enterpreise applications running both in the browser and on the server, it turns out to be insufficient.
+This may be sufficient in relatively simple applications, but in complex applications, and even more so in enterpreise applications running both in the browser, it turns out to be insufficient.
 
 Naive use of these features presents a dilemma. If a developer used them extensively in his code, he will end up with so many lines in his console that it will be extremely difficult to deal with them. If the use of console functions is minimized, they will certainly be insufficient in finding some problems.
 
@@ -72,6 +92,15 @@ To change the logging level on the fly, you need to call the setLogLevel(...) cl
 logger.setLogLevel(0);
 ```
 
+However, you don't have to remember which parameter value corresponds to what. There are convenient functions for this purpose: 
+- **setErrorLevel** - displays only errors.
+- **setDefaultLevel** - displays errors and warnings.
+- **setAllLevels** - displays all messages.
+- **setNoLogging** - disables all messages.
+
+These functions control the behavior of an individual logger. Static **LoggerFactory** functions with similar names (**setErrorLevelByAllLoggers, setDefaultLevelByAllLoggers, setAllLevelsByAllLoggers, setNoLoggingByAllLoggers**) perform the same settings, but for all loggers created to this point.
+
+
 Next, using text filters, you can dynamically switch the logging level in your classes. 
 
 For example, the example below allows you to turn off logging for all loggers with 'com.example.my-project.M' in ID, also our defined above class:
@@ -85,26 +114,9 @@ The table below shows the different uses of the searched sub-pathes (listed in t
 | sub-path  | *b/c | a* | *b* | e/b/c | x/y/z | * |
 |-----------|------|----|-----|-------|-------|---|
 | a/b/c     | +    | +  | +   |   -   | -     | + |
-| a/d/c     | -    | +  | +   |   -   | -     | + |
+| a/d/c     | -    | +  | -   |   -   | -     | + |
 | e/b/c     | +    | -  | +   |   +   | -     | + |
 
-
-You cam also to set a some log level in all loggers of your projects like:
-
-```javascript
-LoggerFactory.setLogLevelsByAllLoggers(1);
-```
-and reset default level (2) with
-
-```javascript
-LoggerFactory.recetDefaults();
-```
-
-In some special cases, such as when debugging a project, where multiple logging approaches are shared, you may want to destroy all loggers from Log4ts until the end of the session. This can be done by calling
-
-```javascript
-LoggerFactory.clearAllLoggers();
-```
 
 
 You can find out further details of the library usage if you look through the texts of the library's tests [for Logger](https://github.com/vsirotin/communist-web-shop/blob/be1c3b21234f83c3e54d816d9ae0c40b1c38e8a9/projects/log4ts/src/lib/logger.spec.ts) and [for Loggerfactory](https://github.com/vsirotin/communist-web-shop/blob/be1c3b21234f83c3e54d816d9ae0c40b1c38e8a9/projects/log4ts/src/lib/logger.spec.ts) 
@@ -161,3 +173,14 @@ Interface consolidation and documentation improvement.
 
 ### 2.0.2
 Testing and documentation improvenment. 
+
+### 3.0.0
+
+1. Class LoggerFactory.
+
+    - New functions added: setErrorLevelByAllLoggers, setDefaultLevelByAllLoggers, setAllLevelsByAllLoggers, setNoLoggingByAllLoggers
+    - Function recetDefaults in class LoggerFactory renamed in setDefaultLoggerConfig
+
+2. Interface ILogger and its implementation extended with functions:  setErrorLevel, setDefaultLevel, setAllLevels, setNoLogging 
+
+3. Tests and documentation updated.
