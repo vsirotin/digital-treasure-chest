@@ -49,4 +49,63 @@ export interface ILogger extends ILoggerInfo {
   * 4 or greater - No messages are logged.
   */
   setLogLevel(logLevel: number): void;
+
+  /**
+   * Sets the log level for logging of only errors.
+   */
+  setErrorLevel(): void;
+
+  /**
+   * Sets the log level for logging of only warnings and errors.
+   */
+  setDefaultLevel(): void;
+
+  /**
+   * Sets the log level for types of logging.
+   */
+  setAllLevels(): void;
+
+  /**
+   * Sets mode where no log output happens.
+   */
+  setNoLogging(): void;
 }
+
+export abstract class BaseLogger implements ILogger {
+  abstract warn(...args: any[]): void;
+  abstract error(...args: any[]): void;
+  abstract debug(...args: any[]): void;
+  abstract log(...args: any[]): void;
+  abstract getLogLevel(): number;
+  abstract setLogLevel(logLevel: number): void;
+
+  /**
+   * Sets the log level for logging of only errors.
+   */
+  setErrorLevel(): void {
+    this.setLogLevel(3);
+  }
+
+  /**
+   * Sets the log level for logging of only warnings and errors.
+   */
+  setDefaultLevel(): void {
+    this.setLogLevel(2);
+  }
+
+  /**
+   * Sets the log level for types of logging.
+   */
+  setAllLevels(): void {
+    this.setLogLevel(0);
+  }
+
+  /**
+   * Sets mode where no log output happens.
+   */
+  setNoLogging(): void {
+    this.setLogLevel(4);
+  }
+}
+
+

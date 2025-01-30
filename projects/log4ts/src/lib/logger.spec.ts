@@ -446,6 +446,57 @@ describe('Log4ts', () => {
       expect(logger1.getLogLevel()).toBe(3);
       expect(logger2.getLogLevel()).toBe(2); 
     });
+  });
+
+  describe('By level setting without numbers...', () => {  
+
+    it('should set log level to only errors', () => {
+      logger1.setErrorLevel();
+      logger1.debug('test');
+      expect(consoleSpyDebug).not.toHaveBeenCalled();
+      logger1.log('test');
+      expect(consoleSpyLog).not.toHaveBeenCalled();
+      logger1.warn('test');
+      expect(consoleSpyWarn).not.toHaveBeenCalled();
+      logger1.error('test');
+      expect(consoleSpyError).toHaveBeenCalled();
+    });
+  
+    it('should set log level to warnings and errors', () => {
+      logger1.setDefaultLevel();
+      logger1.debug('test');
+      expect(consoleSpyDebug).not.toHaveBeenCalled();
+      logger1.log('test');
+      expect(consoleSpyLog).not.toHaveBeenCalled();
+      logger1.warn('test');
+      expect(consoleSpyWarn).toHaveBeenCalled();
+      logger1.error('test');
+      expect(consoleSpyError).toHaveBeenCalled();
+    });
+  
+    it('should set log level to all types of logging', () => {
+      logger1.setAllLevels();
+      logger1.debug('test');
+      expect(consoleSpyDebug).toHaveBeenCalled();
+      logger1.log('test');
+      expect(consoleSpyLog).toHaveBeenCalled();
+      logger1.warn('test');
+      expect(consoleSpyWarn).toHaveBeenCalled();
+      logger1.error('test');
+      expect(consoleSpyError).toHaveBeenCalled();
+    });
+
+    it('should set log level to no logging', () => {
+      logger1.setNoLogging();
+      logger1.debug('test');
+      expect(consoleSpyDebug).not.toHaveBeenCalled();
+      logger1.log('test');
+      expect(consoleSpyLog).not.toHaveBeenCalled();
+      logger1.warn('test');
+      expect(consoleSpyWarn).not.toHaveBeenCalled();
+      logger1.error('test');
+      expect(consoleSpyError).not.toHaveBeenCalled();
+    });
 
   });
 });

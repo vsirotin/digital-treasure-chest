@@ -1,5 +1,4 @@
-import { ILogger } from "./i-logger";
-import { ILoggerInfo } from "./i-logger-info";
+import { BaseLogger } from "./i-logger";
 import { LoggerFactory } from "./logger-factory";
 
 /**
@@ -11,7 +10,7 @@ import { LoggerFactory } from "./logger-factory";
 * warn() - Use to log warnings: unexpected situations, but not errors. After this situation application should work correctly.
 * error() - Use to log errors: unexpected situations, when application can't work correctly.
 */
-export class Log4ts implements ILogger, ILoggerInfo {
+export class Log4ts extends BaseLogger {
 
   /**
    * Creates a new instance of the Log4ts class.
@@ -24,11 +23,9 @@ export class Log4ts implements ILogger, ILoggerInfo {
    * 4 or greater - No messages are logged.
    * @param path The path of the source file, inside that logger works or some unic name.
    */
-  constructor(private logLevel : number = 2, readonly path: string = "") { }
-
-  //second constructor with only log logLevel parameter:
-
-
+  constructor(private logLevel : number = 2, readonly path: string = "") { 
+    super();
+  }
 
   /**
    * Sets the log level.
