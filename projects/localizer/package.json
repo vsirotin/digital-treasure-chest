@@ -1,9 +1,9 @@
 {
   "name": "@vsirotin/localizer",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "peerDependencies": {
     "@vsirotin/log4ts": "^3.0.0",
-    "@vsirotin/keeper-master-data": "^3.1.0"
+    "@vsirotin/keeper-master-data": "^3.1.1"
   },
   "dependencies": {
     "tslib": "^2.3.0"

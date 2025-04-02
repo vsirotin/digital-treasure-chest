@@ -170,3 +170,7 @@ Update of dependencies. Correction of deployment unit.
 2. Extension of class LocalizerFactory with the metod isCurentLanguageSaved(): boolean
 3. Dependency updating.
 4. Documentation improvement.
+
+## 1.2.1 
+1. Dependency updating.
+2. Correction of build process.
