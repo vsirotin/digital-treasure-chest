@@ -33,7 +33,9 @@ export class KeeperCurrentUserLanguage  {
      * @returns the current language of the user
      */
     readCurrentLang(): string   {
-        return this.keeperImpl.findSync(this.key) as string;
+        const res = this.keeperImpl.findSync(this.key) as string;
+        this.loggger.log("readCurrentLang: read ", res, " for key ", this.key);
+        return res;
     }
 
     /**
@@ -42,6 +44,7 @@ export class KeeperCurrentUserLanguage  {
      */
     writeCurrentLang(lang: string): void {
         this.keeperImpl.saveSync(this.key, lang);
+        this.loggger.log("writeCurrentLang: saved ", lang, " for key ", this.key);
     }
 
     /**
@@ -49,6 +52,17 @@ export class KeeperCurrentUserLanguage  {
      */
     removeCurrentLang(): void {
         this.adapter.removeValueForkeySync(this.key);
+        this.loggger.log("removeCurrentLang: removed for key ", this.key);
+    }
+
+    /**
+     * Checks if the current language of the user is saved in local storage.
+     * @returns true if the current language is saved, false otherwise
+     */
+    isCurrentLangSaved(): boolean {
+        const res = this.adapter.readSync(this.key) != null;
+        this.loggger.log("isCurrentLangSaved: ", res, " for key ", this.key);
+        return res
     }
 
 }

@@ -44,5 +44,16 @@ describe ("KeeperCurrentUserLanguage..."    , () => {
         expect(result).toEqual(value);
     });
 
+    it('should return false by isCurrentLangSaved by default', () => {
+        const result = keeper.isCurrentLangSaved();
+        expect(result).toEqual(false);
+    });
+
+    it('should return true by isCurrentLangSaved after first reqest', () => {
+        const value = keeper.readCurrentLang();
+        const result = keeper.isCurrentLangSaved();
+        expect(result).toEqual(true);
+    });
+
     
 });
