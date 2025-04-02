@@ -104,6 +104,9 @@ Correction of deployment unit.
  1. Dependency updating.
 
  ## 3.1.0
- 1. Class KeeperCurrentUserLanguage extended with a method isCurrentLangSaved(): boolean that checks if the current language of the user is saved in local storage and returns true if the current language is saved, false otherwise-
+ 1. Class KeeperCurrentUserLanguage extended with a method isCurrentLangSaved(): boolean that checks if the current language of the user is saved in local storage and returns true if the current language is saved, false otherwise.
+
+ # 3.1.1
+ 1. Correction in build units.
 
      
