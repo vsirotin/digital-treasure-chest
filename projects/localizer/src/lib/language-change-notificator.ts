@@ -3,35 +3,58 @@ import { KeeperCurrentUserLanguage } from '@vsirotin/keeper-master-data';
 import { ILogger, LoggerFactory } from '@vsirotin/log4ts';
 
 /**
- * Interface for language change notificator.
+ * Interface for a language change notification service.
+ * This interface defines the methods for managing and observing changes in the selected language.
  */
-export interface ILanguageChangeNotificator {
+export interface ILanguageChangeNotificator {  
   /**
-   * Observable for language change.
+   * Checks if the current language is saved in persistent storage.
+   * @returns `true` if the current language is saved, `false` otherwise.
+   */
+  isCurentLanguageSaved(): boolean;
+  /**
+   * An observable that emits the language description whenever the selected language changes.
    */
   selectionChanged$: Observable<ILanguageDescription>;
 
   /**
-   * Set new language code.
-   * @param ietfTag New language code (ietf tag).
+   * Sets the new language code and notifies subscribers about the change.
+   * @param ietfTag The new language code (IETF language tag), e.g., "en-US", "de-DE".
+   *                Can be null or undefined, in which case the default language will be used.
    */
   selectionChanged(ietfTag: string|null|undefined): void;
 
   /**
-   * Get current language code (ietf tag).
+   * Gets the current language code (IETF language tag).
+   * @returns The current language code, e.g., "en-US", "de-DE".
    */
   getCurrentLanguageCode(): string;
 }
 
+/**
+ * Interface for describing a language.
+ */
 export interface ILanguageDescription {
+  /**
+   * The English name of the language.
+   */
   enName: string;
+  /**
+   * The original name of the language (in the language itself).
+   */
   originalName: string;
+  /**
+   * The IETF language tag for the language, e.g., "en-US", "de-DE".
+   */
   ietfTag: string;
 }
 
 const DEFAULT_LANG_TAG = "en-US";
 const DEFAULT_LANG_DESCRIPTION: ILanguageDescription = { "enName": "English", "originalName": "English", "ietfTag": DEFAULT_LANG_TAG };
 
+/**
+ * An array of supported languages with their descriptions.
+ */
 export const SupportedLanguages: Array<ILanguageDescription> = [
   { "enName": "Arabic", "originalName": "العربية", "ietfTag": "ar-SA" },
   { "enName": "Bengali", "originalName": "বাংলা", "ietfTag": "bn-BD" },
@@ -75,14 +98,24 @@ export const SupportedLanguages: Array<ILanguageDescription> = [
   { "enName": "Vietnamese", "originalName": "Tiếng Việt", "ietfTag": "vi-VN" }
 ];
 
+/**
+ * A service that manages language changes and notifies subscribers about them.
+ */
 export class LanguageChangeNotificator implements ILanguageChangeNotificator{
 
   private keeperCurrentLanguageTag: KeeperCurrentUserLanguage= new KeeperCurrentUserLanguage("CurrentLanguage", DEFAULT_LANG_DESCRIPTION.ietfTag);
   private subject: BehaviorSubject<ILanguageDescription>;
+   /**
+   * An observable that emits the language description whenever the selected language changes.
+   */
   selectionChanged$ : Observable<ILanguageDescription>;
   private logger: ILogger = LoggerFactory.getLogger("eu.sirotin.localizer.LanguageChangeNotificator");
   private defaultLanguageDescription = DEFAULT_LANG_DESCRIPTION;
 
+   /**
+   * Creates an instance of LanguageChangeNotificator.
+   * Initializes the current language based on the saved language or the browser's language.
+   */
   constructor() {
     const keepedLangTag = this.keeperCurrentLanguageTag.readCurrentLang();
     let currentLanguageDescription = this.getLanguageDescriptionForIetfTag(keepedLangTag);
@@ -91,6 +124,13 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
     this.selectionChanged$ = this.subject.asObservable();
     this.logger.log("constructor: created. Current language is: ",currentLanguageDescription.enName);
   }
+
+    /**
+   * Gets the current language code (IETF language tag).
+   * If no language is saved, it tries to get the browser's language.
+   * If the browser's language is not supported, it returns the default language.
+   * @returns The current language code, e.g., "en-US", "de-DE".
+   */
   getCurrentLanguageCode(): string {
     let currentLanguage = this.keeperCurrentLanguageTag.readCurrentLang();
     this.logger.log("In getCurrentLanguageCode 1 current language: ", currentLanguage);
@@ -111,6 +151,13 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
     return currentLanguage;
   }
 
+    /**
+   * Sets the new language code and notifies subscribers about the change.
+   * If the language is supported, it will be saved.
+   * If the language is not supported, the default language will be used and notified.
+   * @param ietfTag The new language code (IETF language tag), e.g., "en-US", "de-DE".
+   *                Can be null or undefined, in which case the default language will be used.
+   */
   selectionChanged(ietfTag: string|null|undefined): void {
     this.logger.log("selectionChanged: called with ietfTag: ", ietfTag);
     const selectedLanguage = this.getLanguageDescriptionForIetfTag(ietfTag);
@@ -122,6 +169,13 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
     this.subject.next(selectedLanguage);
   }
 
+
+   /**
+   * Gets the language description for a given IETF language tag.
+   * If the tag is null, undefined, or not supported, it returns the default language description.
+   * @param ietfTag The IETF language tag to look up.
+   * @returns The language description for the given tag, or the default language description if not found.
+   */
   private getLanguageDescriptionForIetfTag(ietfTag: string|null|undefined ): ILanguageDescription {
     let res = this.defaultLanguageDescription;
     if (ietfTag == null) {
@@ -139,23 +193,49 @@ export class LanguageChangeNotificator implements ILanguageChangeNotificator{
     return res1;
   }
 
+  /**
+   * Checks if a given language tag is supported.
+   * @param ietfTag The IETF language tag to check.
+   * @returns `true` if the language is supported, `false` otherwise.
+   */
   isLanguageSupported(ietfTag: string|null|undefined): boolean {
     let res = SupportedLanguages.filter((lang) => lang.ietfTag == ietfTag);
     return res.length > 0;
   }
 
+  /**
+   * Gets the default language description.
+   * @returns The default language description.
+   */
   getDefaultLanguageDescription(): ILanguageDescription {
     return this.defaultLanguageDescription;
   }
 
+  /**
+   * Gets the default language tag.
+   * @returns The default language tag.
+   */
   getDefaultLanguageTag(): string {
     return this.defaultLanguageDescription.ietfTag;
   }
 
+  /**
+   * Sets a new default language description.
+   * @param lang The new default language description.
+   */
   setDefaultLanguageDescription(lang: ILanguageDescription): void {
     this.defaultLanguageDescription = lang;
   }
 
+  /**
+   * Checks if the current language is saved in persistent storage.
+   * @returns true if the current language is saved, false otherwise.
+   */
+  isCurentLanguageSaved(): boolean {
+    let res = this.keeperCurrentLanguageTag.isCurrentLangSaved();
+    this.logger.log("In isCurentLanguageSaved res: ", res);
+    return res;
+  }
 }
 
 

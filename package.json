@@ -22,7 +22,7 @@
     "@angular/platform-browser": "^17.2.0",
     "@angular/platform-browser-dynamic": "^17.2.0",
     "@angular/router": "^17.2.0",
-    "@vsirotin/keeper-master-data": "^3.0.2",
+    "@vsirotin/keeper-master-data": "^3.1.0",
     "@vsirotin/localizer": "^1.1.3",
     "@vsirotin/log4ts": "^3.0.0",
     "rxjs": "~7.8.1",

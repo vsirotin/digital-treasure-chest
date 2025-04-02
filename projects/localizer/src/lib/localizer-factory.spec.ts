@@ -37,7 +37,7 @@ describe('LocalizerFactory', () => {
     expect(localizer).toBeInstanceOf(Localizer);
   });
 
-  it('should make easy using a language specif formating', () => {
+  it('should make easy using a language specific formating', () => {
 
     LocalizerFactory.languageChangeNotificator.selectionChanged('de-DE');
     let currenrLang = LocalizerFactory.getCurrentLanguageCode();
@@ -56,5 +56,22 @@ describe('LocalizerFactory', () => {
     
   });
 
+  it('should return the current language code', () => {
+    const langCode = LocalizerFactory.getCurrentLanguageCode();
+    expect(langCode.length).toEqual(5);
+    expect(langCode).toMatch(/^[a-z]{2}-[A-Z]{2}$/);
+  });
+
+  it('should isCurentLanguageSaved return false by default', () => {
+    localStorage.clear();
+    const isSaved = LocalizerFactory.isCurentLanguageSaved();
+    expect(isSaved).toBeFalse();
+  });
+
+  it('should isCurentLanguageSaved return true after first request', () => {
+    LocalizerFactory.getCurrentLanguageCode();
+    const isSaved = LocalizerFactory.isCurentLanguageSaved();
+    expect(isSaved).toBeTrue();
+  });
 
 });

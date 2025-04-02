@@ -1,3 +1,4 @@
+import { LoggerFactory } from '@vsirotin/log4ts';
 import { ILanguageDescription, LanguageChangeNotificator } from './language-change-notificator';
 
 describe('LanguageChangeNotificator', () => {
@@ -9,11 +10,13 @@ describe('LanguageChangeNotificator', () => {
   let defaultLanguageDescription: ILanguageDescription = expectedDefaultLanguageDescription;  
 
   beforeAll(() => {
+    LoggerFactory.setAllLevelsByAllLoggers();
     languageChangeNotificator = new LanguageChangeNotificator();
 
     defaultLanguageDescription = languageChangeNotificator.getDefaultLanguageDescription();
   });
   beforeEach(() => {
+    localStorage.clear();
     languageChangeNotificator = new LanguageChangeNotificator();
     languageChangeNotificator.setDefaultLanguageDescription(defaultLanguageDescription);
     
@@ -21,6 +24,7 @@ describe('LanguageChangeNotificator', () => {
 
   afterEach(() => {
     languageChangeNotificator.selectionChanged(languageChangeNotificator.getDefaultLanguageTag());
+    localStorage.clear();
   });
 
 
@@ -29,7 +33,9 @@ describe('LanguageChangeNotificator', () => {
   });
 
   it('should return current language code', () => {
-    expect(languageChangeNotificator.getCurrentLanguageCode()).toBe(languageChangeNotificator.getDefaultLanguageTag());
+    const currentLanguage = languageChangeNotificator.getCurrentLanguageCode();
+    expect(currentLanguage.length).toEqual(5); // e.g. en-US
+    expect(currentLanguage).toMatch(/^[a-z]{2}-[A-Z]{2}$/); // Check format
   });
 
   it('should change returned language after new language set', () => {
@@ -61,5 +67,15 @@ describe('LanguageChangeNotificator', () => {
     languageChangeNotificator.setDefaultLanguageDescription(newDefaultLanguageDescription);
     expect(languageChangeNotificator.getDefaultLanguageDescription()).toEqual(newDefaultLanguageDescription);
     expect(languageChangeNotificator.getDefaultLanguageTag()).toBe(newDefaultLanguageDescription.ietfTag);
+  });
+
+  it('should return false for isCurentLanguageSaved when no language is saved', () => {
+    localStorage.clear();
+    expect(languageChangeNotificator.isCurentLanguageSaved()).toBeFalse();
+  });
+
+  it('should return true for isCurentLanguageSaved after first setting of some language', () => {
+    languageChangeNotificator.selectionChanged('en-US');
+    expect(languageChangeNotificator.isCurentLanguageSaved()).toBeTrue();
   });
 });

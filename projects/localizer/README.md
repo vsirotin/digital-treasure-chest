@@ -164,3 +164,9 @@ Update of dependencies. Correction of deployment unit.
 ## 1.1.3
 
 1. Dependency updating.
+
+## 1.2.0
+1. Extension of class LanguageChangeNotificator with the method isCurentLanguageSaved(): boolean
+2. Extension of class LocalizerFactory with the metod isCurentLanguageSaved(): boolean
+3. Dependency updating.
+4. Documentation improvement.
